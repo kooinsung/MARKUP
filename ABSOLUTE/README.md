@@ -6,11 +6,11 @@
 
 1. publishing
   * pc 
-    - https://kooinsung.github.io/ABSOLUTE/web/front/path
+    - https://kooinsung.github.io/MARKUP/ABSOLUTE/web/front/path
   * mobile
-    - https://kooinsung.github.io/ABSOLUTE/web/mob/path
+    - https://kooinsung.github.io/MARKUP/ABSOLUTE/web/mob/path
   * admin
-    - https://kooinsung.github.io/ABSOLUTE/admin/path
+    - https://kooinsung.github.io/MARKUP/ABSOLUTE/admin/path
 
 2. real
   * pc
