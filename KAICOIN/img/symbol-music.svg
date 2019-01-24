@@ -1,0 +1,119 @@
+<svg width="880" height="476" viewBox="0 0 880 476" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>img_music</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="matrix(4 0 0 4 -41856 2056)">
+<g id="img_music" filter="url(#filter0_d)">
+<g id="Group 7.3">
+<g id="Group 5.1">
+<g id="Vector 2">
+<use xlink:href="#path0_stroke" transform="translate(10636 -501)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse 5">
+<use xlink:href="#path1_fill" transform="matrix(1 0 0 -1 10615 -442)" fill="#2496CD"/>
+<mask id="mask0_outline_ins">
+<use xlink:href="#path1_fill" fill="white" transform="matrix(1 0 0 -1 10615 -442)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path2_stroke_2x" transform="matrix(1 0 0 -1 10615 -442)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Ellipse 5.1">
+<use xlink:href="#path1_fill" transform="matrix(1 0 0 -1 10651 -442)" fill="#2496CD"/>
+<mask id="mask1_outline_ins">
+<use xlink:href="#path1_fill" fill="white" transform="matrix(1 0 0 -1 10651 -442)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path2_stroke_2x" transform="matrix(1 0 0 -1 10651 -442)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Vector 3.1">
+<use xlink:href="#path3_stroke" transform="translate(10636.2 -493.49)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<g id="Group 7.5">
+<g id="Group 5.1">
+<g id="Vector 2">
+<use xlink:href="#path0_stroke" transform="translate(10498 -463)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse 5">
+<use xlink:href="#path1_fill" transform="matrix(1 0 0 -1 10477 -404)" fill="#2496CD"/>
+<mask id="mask2_outline_ins">
+<use xlink:href="#path1_fill" fill="white" transform="matrix(1 0 0 -1 10477 -404)"/>
+</mask>
+<g mask="url(#mask2_outline_ins)">
+<use xlink:href="#path2_stroke_2x" transform="matrix(1 0 0 -1 10477 -404)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Ellipse 5.1">
+<use xlink:href="#path1_fill" transform="matrix(1 0 0 -1 10513 -404)" fill="#2496CD"/>
+<mask id="mask3_outline_ins">
+<use xlink:href="#path1_fill" fill="white" transform="matrix(1 0 0 -1 10513 -404)"/>
+</mask>
+<g mask="url(#mask3_outline_ins)">
+<use xlink:href="#path2_stroke_2x" transform="matrix(1 0 0 -1 10513 -404)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="Vector 3.1">
+<use xlink:href="#path3_stroke" transform="translate(10498.2 -455.49)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<g id="Group 7.2">
+<g id="Group 5.1">
+<g id="Vector 2">
+<use xlink:href="#path4_stroke" transform="translate(10594 -494.947)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse 5">
+<use xlink:href="#path5_fill" transform="matrix(1 0 0 -1 10572 -434)" fill="#2496CD"/>
+<mask id="mask4_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="matrix(1 0 0 -1 10572 -434)"/>
+</mask>
+<g mask="url(#mask4_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="matrix(1 0 0 -1 10572 -434)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Group 7.4">
+<g id="Group 5.1">
+<g id="Vector 2">
+<use xlink:href="#path7_stroke" transform="translate(10563 -513)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse 5">
+<use xlink:href="#path5_fill" transform="matrix(1 0 0 -1 10541 -456.053)" fill="#2496CD"/>
+<mask id="mask5_outline_ins">
+<use xlink:href="#path5_fill" fill="white" transform="matrix(1 0 0 -1 10541 -456.053)"/>
+</mask>
+<g mask="url(#mask5_outline_ins)">
+<use xlink:href="#path6_stroke_2x" transform="matrix(1 0 0 -1 10541 -456.053)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<g id="#">
+<use xlink:href="#path8_fill" transform="translate(10464 -514)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="10464" y="-514" width="220" height="119" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="4" dy="4"/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<path id="path0_stroke" d="M 2 44L 2 2L -2 2L -2 44L 2 44ZM 2 2L 34 2L 34 -2L 2 -2L 2 2ZM 34 2L 34 44L 38 44L 38 2L 34 2ZM 34 2L 38 2C 38 -0.20914 36.2091 -2 34 -2L 34 2ZM 2 2L 2 -2C -0.209139 -2 -2 -0.209139 -2 2L 2 2Z"/>
+<path id="path1_fill" d="M 23.5149 12C 23.5149 18.6274 18.2509 24 11.7574 24C 5.26399 24 0 18.6274 0 12C 0 5.37258 5.26399 0 11.7574 0C 18.2509 0 23.5149 5.37258 23.5149 12Z"/>
+<path id="path2_stroke_2x" d="M 19.5149 12C 19.5149 16.4957 15.9651 20 11.7574 20L 11.7574 28C 20.5366 28 27.5149 20.7592 27.5149 12L 19.5149 12ZM 11.7574 20C 7.54974 20 4 16.4957 4 12L -4 12C -4 20.7592 2.97824 28 11.7574 28L 11.7574 20ZM 4 12C 4 7.50433 7.54974 4 11.7574 4L 11.7574 -4C 2.97824 -4 -4 3.24084 -4 12L 4 12ZM 11.7574 4C 15.9651 4 19.5149 7.50433 19.5149 12L 27.5149 12C 27.5149 3.24084 20.5366 -4 11.7574 -4L 11.7574 4Z"/>
+<path id="path3_stroke" d="M 0 2L 34.7799 2L 34.7799 -2L 0 -2L 0 2Z"/>
+<path id="path4_stroke" d="M 2 49.4465L 2 8.50083L -2 8.50083L -2 49.4465L 2 49.4465ZM 2 8.50083L 11.4147 27.4016L 14.9951 25.6181L 5.58041 6.71738L 2 8.50083ZM 2 8.50083C 2 8.48155 2.00159 8.47066 2.00225 8.46692C 2.0029 8.46321 2.00301 8.46431 2.0013 8.46897C 1.9996 8.47358 1.99689 8.47958 1.99304 8.48612C 1.98924 8.49257 1.98518 8.49814 1.98138 8.50259C 1.97378 8.51151 1.96981 8.51307 1.97366 8.51077C 1.97555 8.50965 1.97887 8.50788 1.98364 8.50597C 1.98842 8.50405 1.99396 8.50225 2 8.50083C 2.00604 8.49941 2.0118 8.49854 2.01693 8.49813C 2.02205 8.49772 2.02582 8.49782 2.02801 8.49799C 2.03248 8.49832 2.02823 8.49869 2.01745 8.4941C 2.01207 8.49181 2.00595 8.48864 1.99967 8.48456C 1.99331 8.48042 1.98821 8.47626 1.98463 8.47289C 1.98102 8.46948 1.98063 8.46845 1.98287 8.47148C 1.98512 8.47454 1.9914 8.48357 2 8.50083L 5.58041 6.71738C 3.697 2.93632 -2 4.27666 -2 8.50083L 2 8.50083Z"/>
+<path id="path5_fill" d="M 24 12C 24 18.6274 18.6274 24 12 24C 5.37258 24 0 18.6274 0 12C 0 5.37258 5.37258 0 12 0C 18.6274 0 24 5.37258 24 12Z"/>
+<path id="path6_stroke_2x" d="M 20 12C 20 16.4183 16.4183 20 12 20L 12 28C 20.8366 28 28 20.8366 28 12L 20 12ZM 12 20C 7.58172 20 4 16.4183 4 12L -4 12C -4 20.8366 3.16344 28 12 28L 12 20ZM 4 12C 4 7.58172 7.58172 4 12 4L 12 -4C 3.16344 -4 -4 3.16344 -4 12L 4 12ZM 12 4C 16.4183 4 20 7.58172 20 12L 28 12C 28 3.16344 20.8366 -4 12 -4L 12 4Z"/>
+<path id="path7_stroke" d="M 2 45.4465L 2 0L -2 0L -2 45.4465L 2 45.4465Z"/>
+<path id="path8_fill" d="M 21.72 41.52L 21.72 45L 17.2 45L 16.08 53.04L 12.88 53.04L 14 45L 8.76 45L 7.68 53.04L 4.44 53.04L 5.56 45L 1.6 45L 1.6 41.52L 6.04 41.52L 6.88 35.52L 2.84 35.52L 2.84 32.04L 7.4 32.04L 8.48 24.2L 11.68 24.2L 10.6 32.04L 15.8 32.04L 16.88 24.2L 20.12 24.2L 19 32.04L 22.96 32.04L 22.96 35.52L 18.52 35.52L 17.68 41.52L 21.72 41.52ZM 15.32 35.52L 10.08 35.52L 9.24 41.52L 14.48 41.52L 15.32 35.52Z"/>
+</defs>
+</svg>

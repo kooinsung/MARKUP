@@ -1,0 +1,41 @@
+<svg width="4248" height="2584" viewBox="0 0 4248 2584" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 8</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="matrix(4 0 0 4 -29260 -9560)">
+<g id="Group 8">
+<g id="Rectangle 6.9">
+<use xlink:href="#path0_fill" transform="matrix(0.5 0.866025 -0.866025 0.5 8334.96 2372.63)" fill="url(#paint0_linear)" fill-opacity="0.1"/>
+</g>
+<g id="Rectangle 6.8">
+<use xlink:href="#path1_fill" transform="matrix(0.5 0.866026 -0.866025 0.5 8127.27 2809)" fill="url(#paint1_linear)" fill-opacity="0.1"/>
+</g>
+<g id="Rectangle 6.10">
+<use xlink:href="#path2_fill" transform="matrix(0.5 0.866025 -0.866025 0.5 7625.52 2568)" fill="url(#paint2_linear)" fill-opacity="0.1"/>
+</g>
+<g id="Rectangle 6.11">
+<use xlink:href="#path2_fill" transform="matrix(0.5 0.866025 -0.866025 0.5 8346.52 2521)" fill="url(#paint3_linear)" fill-opacity="0.1"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.81707e-15 1196.94 -95 7.32912e-14 95 -7.32912e-14)">
+<stop offset="0" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0.2"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.81707e-15 95 -95 5.81707e-15 95 -5.81707e-15)">
+<stop offset="0" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0.2"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.81707e-15 374.718 -95 2.29449e-14 95 -2.29449e-14)">
+<stop offset="0" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0.2"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(5.81707e-15 374.718 -95 2.29449e-14 95 -2.29449e-14)">
+<stop offset="0" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#FFFFFF" stop-opacity="0.2"/>
+</linearGradient>
+<path id="path0_fill" d="M 0 47.5C 0 21.2665 21.2665 0 47.5 0C 73.7335 0 95 21.2665 95 47.5L 95 1149.44C 95 1175.67 73.7335 1196.94 47.5 1196.94C 21.2665 1196.94 0 1175.67 0 1149.44L 0 47.5Z"/>
+<path id="path1_fill" d="M 0 47.5C 0 21.2665 21.2665 0 47.5 0C 73.7335 0 95 21.2665 95 47.5C 95 73.7335 73.7335 95 47.5 95C 21.2665 95 0 73.7335 0 47.5Z"/>
+<path id="path2_fill" d="M 0 47.5C 0 21.2665 21.2665 0 47.5 0C 73.7335 0 95 21.2665 95 47.5L 95 327.218C 95 353.452 73.7335 374.718 47.5 374.718C 21.2665 374.718 0 353.452 0 327.218L 0 47.5Z"/>
+</defs>
+</svg>
