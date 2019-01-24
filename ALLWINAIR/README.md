@@ -32,7 +32,7 @@ ALLWIN AIR 마크업 가이드는 유연하고 지속 가능한 코드 작성을
 
 1. publishing
     * pc
-        - https://kooinsung.github.io/ALLWINAIR/html/path.html
+        - https://kooinsung.github.io/ALLWINAIR/MARKUP/html/path.html
         
 2. real
     * pc
