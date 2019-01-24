@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>팀스퀘어 | 회원 상세</title>
+<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="../css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="../css/plugins/chosen/chosen.css" rel="stylesheet">
+<link href="../css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+<link href="../css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+<link href="../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+<link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+<link href="../js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+<link href="../css/animate.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="wrapper">
+<nav class="navbar-default navbar-static-side" role="navigation">
+	<div class="sidebar-collapse">
+		<ul class="nav metismenu" id="side-menu">
+			<li class="nav-header">
+				<div class="dropdown profile-element"> <span> <img alt="image" class="img-circle" src="../img/logo_s.png" /> </span> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">TEAMSQUARE</strong> </span> <!--span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span--> </a> 
+					<!--ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul--> 
+				</div>
+				<!--div class="logo-element">
+                        IN+
+                    </div--> 
+			</li>
+			<li> <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Dashboard</span><span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse">
+					<li><a href="member_total.html">회원 통계</a></li>
+					<li><a href="sns_total.html">SNS회원 통계</a></li>
+					<li><a href="page_total.html">페이지통계</a></li>
+					<li><a href="all_total.html">전체현황</a></li>
+				</ul>
+			</li>
+			<li class="active"> <a href="#"><i class="fa fa-child"></i> <span class="nav-label">회원 관리</span><span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse">
+					<li class="active"><a href="member_list.html">회원 현황 보기</a></li>
+					<li><a href="monitering1.html">모니터링 관리</a></li>
+				</ul>
+			</li>
+			<li> <a href="#"><i class="fa fa-cubes"></i> <span class="nav-label">배너관리</span><span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse">
+					<li><a href="banner_list.html">배너 현황 보기</a></li>
+				</ul>
+			</li>
+			<li> <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-label">게시판관리</span><span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse">
+					<li><a href="notice.html">공지사항</a></li>
+				</ul>
+			</li>
+			<li> <a href="push.html"><i class="fa fa-microphone"></i> <span class="nav-label">푸시 관리</span></a> </li>
+			<li> <a href="#"><i class="fa fa-search"></i> <span class="nav-label">검색어 관리</span><span class="fa arrow"></span></a>
+				<ul class="nav nav-second-level collapse">
+					<li><a href="keyword.html">검색어 현황보기</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</nav>
+<div id="page-wrapper" class="gray-bg">
+	<div class="row border-bottom">
+		<nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+			<div class="navbar-header"> <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a> 
+				<!--form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form--> 
+			</div>
+			<ul class="nav navbar-top-links navbar-right">
+				<li> <span class="m-r-sm text-muted welcome-message">TEAMSQUARE Admin</span> </li>
+				<!--li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="../img/a7.jpg">
+                                </a>
+                                <div>
+                                    <small class="pull-right">46h ago</small>
+                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="../img/a4.jpg">
+                                </a>
+                                <div>
+                                    <small class="pull-right text-navy">5h ago</small>
+                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="../img/profile.jpg">
+                                </a>
+                                <div>
+                                    <small class="pull-right">23h ago</small>
+                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="mailbox.html">
+                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li--> 
+				<!--li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="mailbox.html">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="profile.html">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="grid_options.html">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="notifications.html">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li-->
+				
+				<li> <a href="login.html"> <i class="fa fa-sign-out"></i> Log out </a> </li>
+				<!--li>
+                    <a class="right-sidebar-toggle">
+                        <i class="fa fa-tasks"></i>
+                    </a>
+                </li-->
+			</ul>
+		</nav>
+	</div>
+	<div class="wrapper wrapper-content">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<div class="row">
+							<div class=" text-center">
+								<h2 class="font-bold no-margins"> 포리너 (lifeislive77@naver.com) </h2>
+								<br/>
+								<img src="../img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+								<div class="btn-customer">
+									<button type="button" class="btn btn-block btn-outline btn-primary">SNS 타임라인 가기</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<div class="table-responsive">
+							<table class="table table-bordered m-b-none">
+								<colgroup>
+								<col style="width:20%;">
+								<col style="width:;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th class="gray">회원구분</th>
+										<td>파워메이트 (15/11/01~15/11/31)</td>
+									</tr>
+									<tr>
+										<th class="gray">팔로워</th>
+										<td>47명</td>
+									</tr>
+									<tr>
+										<th class="gray">작성퀘스트</th>
+										<td>1522</td>
+									</tr>
+									<tr>
+										<th class="gray">공유 횟수</th>
+										<td>1528회 (퍼오기00/공유하기OO)</td>
+									</tr>
+									<tr>
+										<th class="gray">작성퀘스트 기회에요</th>
+										<td>1522회</td>
+									</tr>
+									<tr>
+										<th class="gray">기회에요 클릭</th>
+										<td>1522회</td>
+									</tr>
+									<tr>
+										<th class="gray">활동 댓글 수</th>
+										<td>1522회</td>
+									</tr>
+									<tr>
+										<th class="gray">이용 정지 여부</th>
+										<td>이용 정지 중  (2015/10/20 ~ 2015/11/20)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<div class="table-responsive">
+						<form id="modMember" name="modMember" method="post">
+							<div class="control-group">
+								<label class="control-label" for="basicinput">닉네임</label>
+								<div class="controls">
+									<input id="nickName" name="nickName" type="text" placeholder="닉네임 설정" class="span2" value="NohSu">
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="control-group">
+								<label class="control-label" for="basicinput">성별</label>
+								<div class="controls">
+									<label>
+										<input type="checkbox" id="gender" name="gender" value="M" checked="">
+										남자 </label>
+									<label>
+										<input type="checkbox" id="gender" name="gender" value="F">
+										여자 </label>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="control-group">
+								<label class="control-label" for="basicinput">생년월일</label>
+								<div class="controls">
+									<select name="years" id="birthYear">
+										<option value="2016">2016년</option>
+										<option value="2015">2015년</option>
+										<option value="2014">2014년</option>
+										<option value="2013">2013년</option>
+										<option value="2012">2012년</option>
+										<option value="2011">2011년</option>
+										<option value="2010">2010년</option>
+										<option value="2009">2009년</option>
+										<option value="2008">2008년</option>
+										<option value="2007">2007년</option>
+										<option value="2006">2006년</option>
+										<option value="2005">2005년</option>
+										<option value="2004">2004년</option>
+										<option value="2003">2003년</option>
+										<option value="2002">2002년</option>
+										<option value="2001">2001년</option>
+										<option value="2000">2000년</option>
+										<option value="1999">1999년</option>
+										<option value="1998">1998년</option>
+										<option value="1997">1997년</option>
+										<option value="1996">1996년</option>
+										<option value="1995">1995년</option>
+										<option value="1994">1994년</option>
+										<option value="1993" selected="">1993년</option>
+										<option value="1992">1992년</option>
+										<option value="1991">1991년</option>
+										<option value="1990">1990년</option>
+										<option value="1989">1989년</option>
+										<option value="1988">1988년</option>
+										<option value="1987">1987년</option>
+										<option value="1986">1986년</option>
+										<option value="1985">1985년</option>
+										<option value="1984">1984년</option>
+										<option value="1983">1983년</option>
+										<option value="1982">1982년</option>
+										<option value="1981">1981년</option>
+										<option value="1980">1980년</option>
+										<option value="1979">1979년</option>
+										<option value="1978">1978년</option>
+										<option value="1977">1977년</option>
+										<option value="1976">1976년</option>
+										<option value="1975">1975년</option>
+										<option value="1974">1974년</option>
+										<option value="1973">1973년</option>
+										<option value="1972">1972년</option>
+										<option value="1971">1971년</option>
+										<option value="1970">1970년</option>
+										<option value="1969">1969년</option>
+										<option value="1968">1968년</option>
+										<option value="1967">1967년</option>
+										<option value="1966">1966년</option>
+										<option value="1965">1965년</option>
+										<option value="1964">1964년</option>
+										<option value="1963">1963년</option>
+										<option value="1962">1962년</option>
+										<option value="1961">1961년</option>
+										<option value="1960">1960년</option>
+										<option value="1959">1959년</option>
+										<option value="1958">1958년</option>
+										<option value="1957">1957년</option>
+										<option value="1956">1956년</option>
+										<option value="1955">1955년</option>
+										<option value="1954">1954년</option>
+										<option value="1953">1953년</option>
+										<option value="1952">1952년</option>
+										<option value="1951">1951년</option>
+										<option value="1950">1950년</option>
+										<option value="1949">1949년</option>
+										<option value="1948">1948년</option>
+										<option value="1947">1947년</option>
+										<option value="1946">1946년</option>
+										<option value="1945">1945년</option>
+										<option value="1944">1944년</option>
+										<option value="1943">1943년</option>
+										<option value="1942">1942년</option>
+										<option value="1941">1941년</option>
+									</select>
+									<select name="month" id="birthMonth">
+										<option value="1">1월</option>
+										<option value="2">2월</option>
+										<option value="3">3월</option>
+										<option value="4">4월</option>
+										<option value="5">5월</option>
+										<option value="6" selected="">6월</option>
+										<option value="7">7월</option>
+										<option value="8">8월</option>
+										<option value="9">9월</option>
+										<option value="10">10월</option>
+										<option value="11">11월</option>
+										<option value="12">12월</option>
+									</select>
+									<select name="day" id="birthDay">
+										<option value="1">1일</option>
+										<option value="2" selected="">2일</option>
+										<option value="3">3일</option>
+										<option value="4">4일</option>
+										<option value="5">5일</option>
+										<option value="6">6일</option>
+										<option value="7">7일</option>
+										<option value="8">8일</option>
+										<option value="9">9일</option>
+										<option value="10">10일</option>
+										<option value="11">11일</option>
+										<option value="12">12일</option>
+										<option value="13">13일</option>
+										<option value="14">14일</option>
+										<option value="15">15일</option>
+										<option value="16">16일</option>
+										<option value="17">17일</option>
+										<option value="18">18일</option>
+										<option value="19">19일</option>
+										<option value="20">20일</option>
+										<option value="21">21일</option>
+										<option value="22">22일</option>
+										<option value="23">23일</option>
+										<option value="24">24일</option>
+										<option value="25">25일</option>
+										<option value="26">26일</option>
+										<option value="27">27일</option>
+										<option value="28">28일</option>
+										<option value="29">29일</option>
+										<option value="30">30일</option>
+										<option value="31">31일</option>
+									</select>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="control-group">
+								<label class="control-label" for="basicinput">지역</label>
+								<div class="controls">
+									<select name="region" id="region" class="span2">
+										<option value="1" selected="">전국</option>
+										<option value="2">서울</option>
+										<option value="3">경기</option>
+										<option value="4">인천</option>
+										<option value="5">대전</option>
+										<option value="6">대구</option>
+										<option value="7">부산</option>
+										<option value="8">광주</option>
+										<option value="9">울산</option>
+										<option value="10">강원</option>
+										<option value="11">충북</option>
+										<option value="12">충남</option>
+										<option value="13">전북</option>
+										<option value="14">전남</option>
+										<option value="15">경북</option>
+										<option value="16">경남</option>
+										<option value="17">제주</option>
+										<option value="18">해외</option>
+									</select>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="control-group">
+								<label class="control-label">전문분야</label>
+								<div class="controls"> 음악&amp;문화 &gt; 문화기획<br>
+									음악&amp;문화 &gt; 작곡<br>
+									음악&amp;문화 &gt; 작사<br>
+									음악&amp;문화 &gt; 연주 </div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="control-group">
+								<label class="control-label">뉴스레터</label>
+								팀스퀘어에서는 각 분야의 퀘스트 정보, 팀 정보를 선별하여 제공합니다.
+								<div class="controls">
+									<label>
+										<input type="checkbox">
+										팀스퀘어에서 제공하는 뉴스레터를 받아 보겠습니다. </label>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="control-group">
+								<label class="control-label">퀘스트 공지사항</label>
+								참여 하시는 퀘스트의 공지사항을 받아 보시겠습니까? 퀘스트 참여를 위해 아래 사항을 선택해주세요. (한개 이상 필수선택)
+								<div class="controls">
+									<label>
+										<input type="checkbox" id="isMailing" name="isMailing" value="1">
+										이메일 </label>
+									<label>
+										<input type="checkbox" id="isSMS" name="isSMS" value="1" checked="">
+										SMS </label>
+								</div>
+							</div>
+							<div class="hr-line-dashed"></div>
+							<div class="control-group">
+								<label class="control-label" for="basicinput">기존 비밀번호를 수정하시겠습니까?</label>
+								<br>
+								<div class="controls"> 신규 비밀번호 :
+									<input data-title="A tooltip for the input" id="newPw" name="newPw" type="text" placeholder="새로운 비밀번호 입력" data-original-title="" class="">
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									비밀번호 확인 :
+									<input data-title="A tooltip for the input" id="rePw" name="rePw" type="text" placeholder="비밀번호 재입력" data-original-title="" class="span2">
+								</div>
+							</div>
+							<div class="control-group" style="border-bottom:1px solid #CCC; padding:20px 0;">
+								<div class="controls" style="text-align:center;">
+									<button type="button" class="btn btn-primary" onclick="modifySubmit();">수정하기</button>
+								</div>
+							</div>
+							
+							<div class="control-group m-t-lg">
+								<label class="control-label" for="basicinput" onclick="confirmLeaveMember();">회원탈퇴</label>
+								<br>
+								<div class="controls"> 팀스퀘어 회원 탈퇴를 하실 수 있습니다. </div>
+							</div>
+							<div class="control-group">
+								<div class="controls" style="text-align:center;"> <a href="#" class="btn btn-danger" onclick="retire()">탈퇴하기</a> </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="pull-right"> . </div>
+		<div> <strong>© 2016 TEAMSQUARE, inc.</strong> </div>
+	</div>
+</div>
+<script src="../js/jquery-2.1.1.js"></script> 
+<script src="../js/bootstrap.min.js"></script> 
+<script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script> 
+<script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script> 
+<script src="../js/plugins/chosen/chosen.jquery.js"></script> 
+<script src="../js/plugins/jsKnob/jquery.knob.js"></script> 
+<script src="../js/plugins/jasny/jasny-bootstrap.min.js"></script> 
+<script src="../js/plugins/datapicker/bootstrap-datepicker.js"></script> 
+<script src="../js/plugins/daterangepicker/daterangepicker.js"></script> 
+<script src="../js/plugins/iCheck/icheck.min.js"></script> 
+<script src="../js/plugins/flot/jquery.flot.js"></script> 
+<script src="../js/plugins/flot/jquery.flot.tooltip.min.js"></script> 
+<script src="../js/plugins/flot/jquery.flot.spline.js"></script> 
+<script src="../js/plugins/flot/jquery.flot.resize.js"></script> 
+<script src="../js/plugins/flot/jquery.flot.pie.js"></script> 
+<script src="../js/plugins/flot/jquery.flot.symbol.js"></script> 
+<script src="../js/plugins/flot/jquery.flot.time.js"></script> 
+<script src="../js/plugins/peity/jquery.peity.min.js"></script> 
+<script src="../js/demo/peity-demo.js"></script> 
+<script src="../js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script> 
+<script src="../js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> 
+<script src="../js/plugins/easypiechart/jquery.easypiechart.js"></script> 
+<script src="../js/plugins/sparkline/jquery.sparkline.min.js"></script> 
+<script src="../js/plugins/morris/raphael-2.1.0.min.js"></script> 
+<script src="../js/plugins/morris/morris.js"></script> 
+<script src="../js/inspinia.js"></script> 
+<script src="../js/plugins/pace/pace.min.js"></script> 
+<script>
+        $(document).ready(function() {
+        });
+    </script>
+</body>
+</html>

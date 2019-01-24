@@ -1,0 +1,2854 @@
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>팀스퀘어</title>
+
+    <link rel="stylesheet" type="text/css" href="../../Content/common.css">
+
+    <link rel="stylesheet" type="text/css" href="../../Content/teamsquare.v2.css">
+
+    <script type="text/javascript" src="../../Scripts/jquery-1.8.3.min.js"></script>
+
+    <script type="text/javascript" src="../../Scripts/jquery.plugin.js"></script>
+
+    <script type="text/javascript" src="../../Scripts/jquery.ui.widget.js"></script>
+
+    <script type="text/javascript" src="../../Scripts/jquery.iframe-transport.js"></script>
+
+    <script type="text/javascript" src="../../Scripts/jquery.fileupload.js"></script>
+
+    <script type="text/javascript" src="../../Scripts/kakao.min.js"></script>
+
+    <script type="text/javascript" src="../../Scripts/teamsquare.v2.js"></script>
+
+    
+
+    <!--[if lt IE 9]>
+
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+
+    <![endif]-->
+
+    
+
+<script>
+
+
+
+    var meNickname = '';
+
+    var meMemberIdx = 0;
+
+    var pageName = 'QUEST';
+
+
+
+    function shareFacebookToTimeline() {
+
+        var url = "https://www.facebook.com/dialog/share?";
+
+        url += "app_id=1082654071823836";
+
+        //url += "&display=popup";
+
+        url += "&href=" + jQuery(location).attr('protocol') + '//' + jQuery(location).attr('host') + '/snsquest/teammateview?memberIdx=' + meMemberIdx;
+
+        url += "&redirect_uri=" + window.location;
+
+        window.location = encodeURI(url);
+
+        window.location = url;
+
+    }
+
+
+
+    function shareKakaoToTimeline() {
+
+        // https://developers.kakao.com/docs/js-reference#kakao_link 참조...
+
+        var param = {};
+
+        param.label = meNickname + '님의 타임라인으로 초대합니다.';
+
+        var webButton = {};
+
+        webButton.text = meNickname + '님의 타임라인으로 이동';
+
+        webButton.url = jQuery(location).attr('protocol') + '//' + jQuery(location).attr('host') + '/snsquest/teammateview?memberIdx=' + meMemberIdx;
+
+        param.webButton = webButton;
+
+        var webLink = {};
+
+        webLink.text = "팀스퀘어 홈페이지로 이동";
+
+        webLink.url = jQuery(location).attr('protocol') + '//' + jQuery(location).attr('host') + '/snsquest/questhome';
+
+        param.webLink = webLink;
+
+        param.fail = function () {
+
+            alert('해당 기기에서는 지원하지 않습니다.');
+
+        };
+
+        console.log(JSON.stringify(param));
+
+        try {
+
+            Kakao.Link.sendTalkLink(param);
+
+        } catch (e) {
+
+            alert('해당 기기에서는 지원하지 않습니다.');
+
+        }
+
+    }
+
+
+
+    function shareQuestForMyFollow(questIdx) {
+
+        var targetMembers = [];
+
+        $('.followItems input:checkbox').each(function () {
+
+            if ($(this).val() != 0) {
+
+                if ($(this).is(":checked")) {
+
+                    targetMembers.push(parseInt($(this).val()));
+
+                }
+
+            }
+
+        });
+
+
+
+        if (targetMembers.length == 0) {
+
+            alert("공유 할 팔로워가 지정되지 않았습니다.");
+
+            return;
+
+        }
+
+
+
+        var param = {};
+
+        param.questIdx = questIdx;
+
+        param.targetMemberIdx = targetMembers;
+
+        param.message = $('#txtShareMessage').val();
+
+        $.ajax({
+
+            url: '/snsmate/SendShare',
+
+            type: 'post',
+
+            data: param,
+
+            dataType: 'json',
+
+            success: function (data) {
+
+                console.log(JSON.stringify(data));
+
+                if (data.IsSuccess) {
+
+                    alert("팔로워들에게 공유하였습니다.");
+
+                    isShareExcute = true;
+
+                    hideModal('share');
+
+                } else {
+
+                    alert(data.Message);
+
+                }
+
+            },
+
+            error: function (jqXHR, textStatus, errorThrown) {
+
+                alert("code:" + jqXHR.status + "\n" + "message:" + jqXHR.responseText + "\n" + "error:" + errorThrown);
+
+            }
+
+        });
+
+    }
+
+
+
+</script>
+
+</head>
+
+<body style="visibility:visible;">  
+
+    <div id="wrap" class="wrap">
+
+        <header id="header" class="header">
+
+            <div class="headerIn">
+
+                    <h1><a id="pageName" href="javascript:void()"></a></h1>
+
+                <button type="button" id="btnSrch" class="icons btnSrch"><span class="blind">search</span></button>
+
+                <button type="button" class="icons btnAlram" onclick="javascript:btnAlramClick();"><span class="blind">alram</span></button>
+
+                <!-- <button type="button" class="icons btnAlram active"><span class="blind">alram</span></button> 알림 메세지 있을때 active 클래스 추가 -->
+
+                <button type="button" id="btnMenu" class="icons btnMenu"><span class="blind">menu</span></button>
+
+            </div>
+
+        </header>
+
+
+
+
+
+        <!-- 메뉴 -->
+
+        <div class="menuLayer">
+
+            <div class="menuLayerIn">
+
+                <div class="depth1">
+
+                    <ul id="ulMenu">
+
+                        <li>
+
+                            <a href="/snsquest/questhome" class="menus menu1">
+
+                                <span>홈</span>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/snsquest/questlist" class="menus menu2">
+
+                                <span>퀘스트</span>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="javascript:showQuestWriteView();" class="menus menu3">
+
+                                <span>퀘스트 작성</span>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/snsmate/recomteammate" class="menus menu4">
+
+                                <span>추천 팀메이트</span>
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                                <a href="javascript:goLogin('해당 메뉴 사용을 위해서는 로그인이 필요합니다.')" class="menus menu5">
+
+                                    <span>타임라인</span>
+
+                                </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="depth2">
+
+                    <ul>
+
+                        <li>
+
+                            <a href="/snscommon/terms">이용약관 <i class="icons iconMenuArrow"></i></a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/snscommon/customercenter">고객센터 <i class="icons iconMenuArrow"></i></a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/snscommon/privacy">개인정보 취급방침 <i class="icons iconMenuArrow"></i></a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/snscommon/NoticesList">공지사항 <i class="icons iconMenuArrow"></i></a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="javascript:alert('서비스안내');">서비스 안내 <i class="icons iconMenuArrow"></i></a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="/snsmember/login">로그인 <i class="icons iconMenuArrow"></i></a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <ul class="btnLayerClose">
+
+                    <li><button type="button" class="icons iconLayerClose"><span class="blind">close</span></button></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- //메뉴 -->
+
+
+
+        <!-- 검색 -->
+
+        <div class="srchLayer">
+
+            <!-- 검색 인풋 -->
+
+            <div class="hiddenItem srchTop">
+
+                <button type="button" class="btnSrchLayerClose"><span class="blind">search close</span></button>
+
+                <div class="inputMix">
+
+                    <span class="inputs"><input id="txtSearchKeyword" type="text" placeholder="검색어를 입력하세요." /></span>
+
+                    <button type="button" class="icons btnSrchConts" onclick="searchBtnClick()" ><span class="blind">search contents</span></button>
+
+                </div>
+
+            </div>
+
+            <!-- //검색 인풋 -->
+
+
+
+            <div class="hiddenItem srchLayerIn">
+
+                <!-- 데이터 없을때 -->
+
+                
+
+                <!-- //추천검색어 -->
+
+                <!-- 검색 탭 -->
+
+                <div class="hiddenItem srchTabs">
+
+                    <ul class="tabs">
+
+                        <li><a href="javascript:void(0)" class="active">닉네임</a></li>
+
+                        <li><a href="javascript:void(0)">분류별 퀘스트</a></li>
+
+                        <li><a href="javascript:void(0)">보상별 퀘스트</a></li>
+
+                        <li><a href="javascript:void(0)">태그</a></li>
+
+                    </ul>
+
+
+
+                    <div class="srchTabConts">
+
+                        <!-- 닉네임별 -->
+
+                        <div>
+
+                            <div class="nickname">
+
+                                <ul id="searchNickNameList">
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                        <!-- //닉네임별 -->
+
+                        <!-- 분류별 퀘스트 -->
+
+                        <div style="display:none">
+
+                            <div class="srchQuestList">
+
+                                <div class="srchQuestListIn">
+
+                                    <ul>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate0"></i> 전체</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate1"></i> 소셜/공익</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate2"></i> 예술/디자인	</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate3"></i> 영상/사진/음악</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate4"></i> 문화/공연/전시</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate5"></i> IT/제조/기술</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate6"></i> 마케팅/광고/홍보</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate7"></i> 인문/출판/작문</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate8"></i> 패션/뷰티/생활</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- //분류별 퀘스트 -->
+
+                        <!-- 보상별 퀘스트 -->
+
+                        <div style="display:none">
+
+                            <div class="srchQuestList">
+
+                                <div class="srchQuestListIn">
+
+                                    <ul>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate9"></i> 금전</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate10"></i> 네트워크</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                        <li>
+
+                                            <a href="">
+
+                                                <span class="cateItem2"><i class="cates2 iconCate11"></i> 경험</span>
+
+                                                <em class="num">999</em>
+
+                                                <i class="icons iconMenuArrow"></i>
+
+                                            </a>
+
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- //보상별 퀘스트 -->
+
+                        <!-- 태그 -->
+
+                        <div style="display:none">
+
+                            <div class="srchQuestList">
+
+                                <div class="srchQuestListIn">
+
+                                    <ul id="searchTagList">
+
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- //태그 -->
+
+                    </div>
+
+                </div>
+
+                <!-- //검색 탭 -->
+
+
+
+                <div class="hiddenItem btnSrchLayerClose"><button type="button" class="icons iconLayerClose"><span class="blind">close</span></button></div>
+
+            </div>
+
+        </div>
+
+        <!-- //검색 -->
+
+        
+
+
+
+        
+
+
+
+
+
+<script>
+
+
+
+    var questOrderType = 2; // 퀘스트 정렬 타입. 1이면 인기순, 2이면 최신순
+
+    var selectedQuestNo = 0;
+
+
+
+    function getQuestListByOrderType(dom, orderType) {
+
+        var temp = $('.questTabs a');
+
+        $('.questTabs a').removeClass('active');
+
+        $(dom).addClass('active');
+
+        temp = $(dom);
+
+        questOrderType = orderType;
+
+        getQuestList();
+
+    }
+
+
+
+    function getQuestList() {
+
+
+
+        if (selectedQuestNo != 0) {
+
+            questDetailView(selectedQuestNo, 'questlist', 0)    
+
+            selectedQuestNo = 0;
+
+        }
+
+
+
+        $('.questTabs a').removeClass('active');
+
+        if (questOrderType == 1) {
+
+            $('#questListType1Mark').addClass('active');
+
+        } else {
+
+            $('#questListType2Mark').addClass('active');
+
+        }
+
+
+
+        $('#questList').html("<div></div>");
+
+        $('#loadingStatus').css({ 'display': 'block' });
+
+
+
+        var categoryCodes = [];
+
+        var categoryNames = "";
+
+        if ($('#cateAll').is(":checked")) {
+
+            categoryNames = '"전체 카테고리""';
+
+        } else {
+
+            $('.questCate input:checkbox').each(function () {
+
+                if ($(this).val() != 0) {
+
+                    if ($(this).is(":checked")) {
+
+                        categoryCodes.push($(this).val());
+
+                        categoryNames += ('"' + $(this).parent().find('em').html() + '",');
+
+                    }
+
+                }
+
+            });
+
+        }
+
+        categoryNames = categoryNames.substr(0, categoryNames.length - 1);
+
+        if (questOrderType == 2) {
+
+            $('#categoryNames').html('<em>' + categoryNames + '</em>의 최신순 퀘스트 입니다.');
+
+        } else {
+
+            $('#categoryNames').html('<em>' + categoryNames + '</em>의 인기순 퀘스트 입니다.');
+
+        }
+
+
+
+        if (categoryCodes.length == 0 && !$('#cateAll').is(":checked")) {
+
+            $('#loadingStatus').css({ 'display': 'none' });
+
+            $('#questList').html("");
+
+            return;
+
+        }
+
+
+
+        var param = {};
+
+        param.pQueryType = questOrderType;
+
+        param.pCategoryCodes = categoryCodes;
+
+
+
+        $.ajax({
+
+            url: '/snsquest/GetQuestList' + '?temp=' + new Date().getTime(),
+
+            type: 'post',
+
+            dataType: 'html',
+
+            data: param,
+
+            success: function (data) {
+
+                $('#loadingStatus').css({ 'display': 'none' });
+
+                $('#questList').html(data);
+
+            },
+
+            error: function (jqXHR, textStatus, errorThrown) {
+
+                $('#loadingStatus').css({ 'display': 'none' });
+
+                alert("code:" + jqXHR.status + "\n" + "message:" + jqXHR.responseText + "\n" + "error:" + errorThrown);
+
+                $('#container').html("code:" + jqXHR.status + "\n" + "message:" + jqXHR.responseText + "\n" + "error:" + errorThrown);
+
+            }
+
+        });
+
+    }
+
+
+
+    function categorySelect(dom) {
+
+        if ($(dom).val() == 0) {
+
+            if ($(dom).is(":checked")) {
+
+                $('.questCate input:checkbox').attr('checked', true);
+
+            } else {
+
+                $('.questCate input:checkbox').attr('checked', false);
+
+            }
+
+        } else {
+
+            $('#cateAll').attr('checked', false);
+
+        }
+
+        getQuestList();
+
+    }
+
+
+
+    // 첨부파일 다운로드
+
+    function fileDownload(questIdx, attachedFileIndex) {
+
+        //alert('파일 인덱스 : ' + fileIdx);
+
+        location.href = "/snsquest/FileDownload?questIdx=" + questIdx + "&attachedFileIndex=" + attachedFileIndex;
+
+    }
+
+
+
+    // 기회에요 클릭
+
+    function addOppotunityCall(questIdx) {
+
+        addOppotunity(questIdx, function (oResult) {
+
+            if (oResult) {
+
+                var numDom = $('li[name=btnHeart' + questIdx + ']');
+
+                var num = parseInt(numDom.text());
+
+                num++;
+
+                numDom.html('<i class="icons iconHeart"></i> ' + num);
+
+            }
+
+            questDetailView(questIdx, 'questlist', 0);
+
+        });
+
+    }
+
+
+
+    // 쿠키에서 마지막으로 검색한 카테고리를 가져옴
+
+    function setSelectedCategory() {
+
+        var selectedCategory = '0';
+
+        var selectedCategoryArr = selectedCategory.split(',');
+
+        if (selectedCategoryArr.length == 1 && selectedCategoryArr[0] == '0') {
+
+            $('.questCate input:checkbox').attr('checked', true);
+
+        }
+
+        else {
+
+            $('.questCate input:checkbox').attr('checked', false);
+
+            $('.questCate input:checkbox').each(function () {
+
+                for (var i = 0; i < selectedCategoryArr.length; i++) {
+
+                    if ($(this).val() == selectedCategoryArr[i]) {
+
+                        $(this).attr('checked', true);
+
+                    }
+
+                }
+
+            });
+
+        }
+
+    }
+
+
+
+    $(document).ready(function () {
+
+        setSelectedCategory();
+
+        getQuestList();
+
+    });
+
+
+
+</script>
+
+
+
+<!-- container -->
+
+<section id="container" class="container">
+
+	<!-- 퀘스트 -->
+
+	<div class="quest">
+
+		<div class="questIn">
+
+			<!-- 분류 -->
+
+			<div class="questCate">
+
+				<strong>분류선택</strong>
+
+				<button type="button" class="btnViewCate">분류선택 <i class="icons iconCateArrow"></i></button>
+
+				<div>
+
+					<ul>
+
+						<li>
+
+							<input type="checkbox" id="cateAll" onclick="categorySelect(this)" value="0" checked="checked"/>
+
+                            <label for="cateAll">
+
+                                <span class="questCates cateAll"></span>
+
+                                <em>전체</em>
+
+                            </label>
+
+						</li>
+
+						<li>
+
+							<input type="checkbox" id="cate1" onclick="categorySelect(this)" value="100" checked="checked"/><label for="cate1"><span class="questCates cate1"></span><em>소셜/공익</em></label>
+
+						</li>
+
+                        <li>
+
+							<input type="checkbox" id="cate5" onclick="categorySelect(this)" value="200" checked="checked"/><label for="cate5"><span class="questCates cate5"></span><em>IT/제조/기술</em></label>
+
+						</li>
+
+						<li>
+
+							<input type="checkbox" id="cate2" onclick="categorySelect(this)" value="300" checked="checked"/><label for="cate2"><span class="questCates cate2"></span><em>예술/디자인</em></label>
+
+						</li>
+
+						<li>
+
+							<input type="checkbox" id="cate3" onclick="categorySelect(this)" value="400" checked="checked"/><label for="cate3"><span class="questCates cate3"></span><em>영상/사진/음악</em></label>
+
+						</li>
+
+                        <li>
+
+							<input type="checkbox" id="cate8" onclick="categorySelect(this)" value="500" checked="checked"/><label for="cate8" ><span class="questCates cate8"></span><em>패션/뷰티/생활</em></label>
+
+						</li>
+
+                        <li>
+
+							<input type="checkbox" id="cate7" onclick="categorySelect(this)" value="600" checked="checked"/><label for="cate7"><span class="questCates cate7"></span><em>인문/출판/작문</em></label>
+
+						</li>
+
+						<li>
+
+							<input type="checkbox" id="cate4" onclick="categorySelect(this)" value="700" checked="checked"/><label for="cate4"><span class="questCates cate4"></span><em>문화/공연/전시</em></label>
+
+						</li>
+
+						<li>
+
+							<input type="checkbox" id="cate6" onclick="categorySelect(this)" value="800" checked="checked"/><label for="cate6"><span class="questCates cate6"></span><em>마케팅/광고/홍보</em></label>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<!-- //분류 -->
+
+
+
+			<!-- 퀘스트 리스트 -->
+
+			<div class="questList">
+
+				<div class="questListIn">
+
+					<div class="questTabs">
+
+						<ul>
+
+							<li><a id="questListType2Mark" href="javascript:void(0)" class="active" onclick="getQuestListByOrderType(this, 2)"><i class="icons iconLastest"></i> 최신 순</a></li>
+
+                            <li><a id="questListType1Mark" href="javascript:void(0)" onclick="getQuestListByOrderType(this, 1)"><i class="icons iconPopular"></i> 인기 순</a></li>
+
+						</ul>
+
+					</div>
+
+
+
+					<div class="lists">
+
+						<p id="categoryNames"><em>“소셜/공익”, “예술/디자인”</em>에서 인기있는 퀘스트 입니다.</p>
+
+                        <p id="loadingStatus" style="display:none;">로딩중...</p>
+
+						<ul id="questList">
+
+						</ul>
+
+						<div class="btnListMore" style="display:none;"><a href="javascript:getQuestList();">더보기</a></div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- //퀘스트 리스트 -->
+
+		</div>
+
+	</div>
+
+	<!-- //퀘스트 -->
+
+</section>
+
+<!-- //container -->
+
+
+
+
+
+        <!-- 작성 버튼 -->
+
+        <div class="btnFixWrite" onclick="showQuestWriteView(this);"><a href="javascript:" class="icons iconFixWrite"><span class="blind">작성</span></a></div>
+
+        <!-- //작성 버튼 -->
+
+        <!-- footer -->
+
+        <footer id="footer" class="footer">
+
+            <div class="footerIn">
+
+                <h1><a href=""><em>ⓒ </em>TEAMSQUARE Inc.</a></h1>
+
+                <ul class="sns">
+
+                    <li><a href="" class="icons iconBlog"><span class="blind">blog</span></a></li>
+
+                    <li><a href="" class="icons iconIns"><span class="blind">instagram</span></a></li>
+
+                    <li><a href="" class="icons iconFb"><span class="blind">facebook</span></a></li>
+
+                </ul>
+
+            </div>
+
+        </footer>
+
+        <!-- //footer -->
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 자기소개 팝업 -->
+
+<div class="layer small" id="introduce">
+
+	<div class="layerIn">
+
+		<div class="introduceTxt">
+
+			컴공과 학생이어요 <br/>
+
+			아직은 잘 모르는데 그래도 
+
+			취업도 해야 하고 그러니..
+
+			여러가지 정보를 퍼 나릅니당<br/>
+
+			우리 정보 교환 같은거 많이 
+
+			해 보아용 
+
+		</div>
+
+		<button type="button" class="icons btnModaClose" onclick="hideModal('introduce');"><span class="blind">close</span></button>
+
+	</div>
+
+</div>
+
+<!-- //자기소개 팝업 -->
+
+
+
+
+
+<!-- 친구초대 팝업 -->
+
+<div class="layer small" id="friendShare">
+
+	<div class="layerIn">
+
+		<div class="shareBox">
+
+			<div class="row">
+
+				<span class="shareTit">내 타임라인 친구 초대하기</span>
+
+				<ul class="snsList">
+
+					<li><button type="button" class="iconSns btnFb" onclick="shareFacebookToTimeline()"><span class="blind">facebook</span></button></li>
+
+					<li><button type="button" class="iconSns btnKt" onclick="shareKakaoToTimeline()"><span class="blind">kakao talk</span></button></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<button type="button" class="icons btnModaClose" onclick="hideModal('friendShare');"><span class="blind">close</span></button>
+
+	</div>
+
+</div>
+
+<!-- //친구초대 팝업 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 퀘스트 작성 -->
+
+<div class="questWriteLayer" style="display:none">
+
+    <div id="questWriteLayerLoadingbar" class="layerHeader" style="display:none;"><div class="layerHeaderIn"><img width="100px" height="100" src="../../images/ajax_loader.gif" alt=""></div></div>
+
+    <div id="questWriteLayerIn" class="questWriteLayerIn">
+
+	    <div class="layerHeader">
+
+		    <div class="layerHeaderIn">
+
+			    <strong><a href="javascript:void(0)" id="questWriteLayerTitle">퀘스트 작성</a></strong>
+
+			    <button type="button" class="icons btnPageClose" onclick="hideQuestWriteView()"><span class="blind">close </span></button>
+
+		    </div>
+
+	    </div>
+
+	    <div class="questWrite">
+
+		    <div class="questWriteIn">
+
+			    <!-- 분류 선택-->
+
+			    <div class="cateSel">
+
+				    <div class="cateSelTop">
+
+					    <span>분류</span>
+
+					    <div class="btnCateSel"><button type="button" id="btnCateSel">분류를 선택해주세요 <i class="icons iconArrow"></i></button></div>
+
+				    </div>
+
+				    <ul>
+
+					    <li><div class="in"><input type="radio" name="cateSel" id="selCate1" value="100"/> <label for="selCate1"><span class="cateItem4"><i class="cates4 iconCate1"></i> 소셜/공익</span></label></div></li>
+
+                        <li><div class="in"><input type="radio" name="cateSel" id="selCate5" value="200"/> <label for="selCate5"><span class="cateItem4"><i class="cates4 iconCate5"></i> IT/제조/기술</span></label></div></li>
+
+					    <li><div class="in"><input type="radio" name="cateSel" id="selCate2" value="300"/> <label for="selCate2"><span class="cateItem4"><i class="cates4 iconCate2"></i> 예술/디자인</span></label></div></li>
+
+					    <li><div class="in"><input type="radio" name="cateSel" id="selCate3" value="400"/> <label for="selCate3"><span class="cateItem4"><i class="cates4 iconCate3"></i> 영상/사진/음악</span></label></div></li>
+
+                        <li><div class="in"><input type="radio" name="cateSel" id="selCate8" value="500"/> <label for="selCate8"><span class="cateItem4"><i class="cates4 iconCate8"></i> 패션/뷰티/생활</span></label></div></li>
+
+                        <li><div class="in"><input type="radio" name="cateSel" id="selCate7" value="600"/> <label for="selCate7"><span class="cateItem4"><i class="cates4 iconCate7"></i> 인문/출판/작문</span></label></div></li>					    
+
+                        <li><div class="in"><input type="radio" name="cateSel" id="selCate4" value="700"/> <label for="selCate4"><span class="cateItem4"><i class="cates4 iconCate4"></i> 문화/공연/전시</span></label></div></li>
+
+					    <li><div class="in"><input type="radio" name="cateSel" id="selCate6" value="800"/> <label for="selCate6"><span class="cateItem4"><i class="cates4 iconCate6"></i> 마케팅/광고/홍보</span></label></div></li>					    
+
+				    </ul>
+
+			    </div>
+
+			    <!-- //분류 선택-->
+
+
+
+			    <!-- 퀘스트 내용 작성 -->
+
+			    <div class="writeBox">
+
+				    <span class="textarea">
+
+					    <textarea id="txtTextContent" placeholder="어떤 기회를 가지고 계세요?"></textarea>
+
+				    </span>
+
+			    </div>
+
+			    <!-- //퀘스트 내용 작성 -->
+
+
+
+			    <div class="addFiles">
+
+				    <!-- 퀘스트 사진 -->
+
+				    <div id="divAddBoxPic" class="addFileBox questPic" style="display:none">
+
+					    <div id="addImageStatus" class="questWriteTop">
+
+						    업로드할 사진 <em>0</em>/0
+
+					    </div>
+
+					    <div class="addLists addImg">
+
+						    <ul id="addImageList">
+
+                                <li class="nan">
+
+								    <div class="in"><input id="btnUploadImageFile" type="file" class="jfilestyle" data-input="false"><img src="../../images/sns/bg_inputFile.png" alt=""></div>
+
+							    </li>
+
+						    </ul>
+
+					    </div>
+
+				    </div>
+
+				    <!-- //퀘스트 사진 -->
+
+
+
+				    <!-- 퀘스트 파일 -->
+
+				    <div id="divAddBoxFile" class="addFileBox questFile" style="display:none">
+
+					    <div id="addQuestFileStatus" class="questWriteTop">
+
+						    업로드할 파일 <em>0</em>/0
+
+					    </div>
+
+					    <div class="addLists addFile">
+
+						    <ul id="addFileList">
+
+						    </ul>
+
+					    </div>
+
+					    <div class="btnAddFile customer">
+
+                            <input id="btnUploadFile" type="file" class="jfilestyle" data-input="false" data-buttonText="<i class='icons iconFileAdds'></i> 파일추가">
+
+					    </div>
+
+				    </div>
+
+				    <!-- //퀘스트 파일 -->
+
+
+
+				    <!-- 퀘스트 지역 -->
+
+				    <div id="divAddBoxRegion" class="addFileBox questPosition" style="display:none">
+
+					    <div class="questWriteTop">
+
+						    지역
+
+					    </div>
+
+					    <div class="addLists addPosition">
+
+						    <ul id="addRegionList">
+
+						    </ul>
+
+					    </div>
+
+				    </div>
+
+				    <!-- //퀘스트 지역 -->
+
+
+
+				    <!-- 파일 첨부 버튼 -->
+
+				    <div class="addbtms">
+
+					    <ul>
+
+						    <li><button id="btnShowImageView" type="button" id="pic" class="icons btnPicBig" onclick="showImageView(this)"><span class="blind">picture</span></button></li>
+
+						    <li><button id="btnShowFileView" type="button" id="file" class="icons btnFileBig" onclick="showFileView(this)"><span class="blind">file</span></button></li>
+
+						    <li><button id="btnShowRegionView" type="button" id="pos" class="icons btnPositionBig" onclick="showRegionView(this)"><span class="blind">position</span></button></li>
+
+						    <!-- 선택될 시
+
+						    <li><button type="button" id="pic" class="icons btnPicBig active"><span class="blind">picture</span></button></li>
+
+						    <li><button type="button" id="link" class="icons btnLinkBig active"><span class="blind">link</span></button></li>
+
+						    <li><button type="button" id="file" class="icons btnFileBig active"><span class="blind">file</span></button></li>
+
+						    <li><button type="button" id="pos" class="icons btnPositionBig active"><span class="blind">position</span></button></li>
+
+						    -->
+
+					    </ul>
+
+					    <div>
+
+						    @닉네임 #해시태그
+
+					    </div>
+
+				    </div>
+
+				    <!-- //파일 첨부 버튼 -->
+
+			    </div>
+
+
+
+			    <!-- 퀘스트 기대보상 -->
+
+			    <div class="questReward">
+
+				    <span class="tit">이 퀘스트에 대한 기대보상</span>
+
+				    <div class="rewardTabs">
+
+					    <ul>
+
+						    <li class="active"><button type="button"><span class="cateItem5"><i class="cates5 iconCate9"></i> 금전</span></button></li>
+
+						    <li><button type="button"><span class="cateItem5"><i class="cates5 iconCate10"></i> 네트워크</span></button></li>
+
+						    <li><button type="button"><span class="cateItem5"><i class="cates5 iconCate11"></i> 경험</span></button></li>
+
+					    </ul>
+
+				    </div>
+
+				    <div class="rewardWrite">
+
+					    <div style="display:block;">
+
+						    <textarea placeholder="금전 보상혜택 상세 내용을 15자 이내 작성해 주세요."></textarea>
+
+					    </div>
+
+					    <div>
+
+						    <textarea placeholder="네트워크 보상혜택 상세 내용을 15자 이내 작성해 주세요."></textarea>
+
+					    </div>
+
+					    <div>
+
+						    <textarea placeholder="경험 보상혜택 상세 내용을 15자 이내 작성해 주세요."></textarea>
+
+					    </div>
+
+				    </div>
+
+				    <div class="checks">
+
+					    <input id="noFollow" type="checkbox"/> <label for="noFollow"><i class="icons iconCheck"></i>팔로워들에게 공유하지 않음</label>
+
+				    </div>
+
+			    </div>
+
+			    <!-- //퀘스트 기대보상 -->
+
+
+
+			    <!-- 버튼 -->
+
+			    <div class="btns">
+
+				    <ul>
+
+					    <li><a href="javascript:hideQuestWriteView()" class="btnCancel">취소</a></li>
+
+					    <li><a id="btnAddQuest" href="javascript:btnAddQuestClick()" class="btnEnter">확인</a></li>
+
+				    </ul>
+
+			    </div>
+
+			    <!-- 버튼 -->
+
+		    </div>
+
+	    </div>
+
+    </div>
+
+</div>
+
+<!-- //퀘스트 작성 -->
+
+
+
+<!-- 지역 선택 팝업 -->
+
+<div class="layer small" id="areaSelect">
+
+	<div class="layerIn">
+
+		<div class="areaSelect">
+
+			<p>지역선택</p>
+
+			<span class="selects">
+
+				<select id="region1">
+
+				</select>
+
+			</span>
+
+			<span class="selects">
+
+				<select id="region2">
+
+                    <option value='0'>선택</option>
+
+				</select>
+
+			</span>
+
+			<a href="javascript:selectQuestWriteRegionClick()">확인</a>
+
+		</div>
+
+		<button type="button" class="icons btnModaClose" onclick="hideModal('areaSelect');"><span class="blind">close</span></button>
+
+	</div>
+
+</div>
+
+<!-- //지역 선택 팝업 -->
+
+
+
+<!-- 퀘스트 상세보기 -->
+
+<div class="questViewLayer" style="display:none;">
+
+</div>
+
+<!-- //퀘스트 상세보기 -->
+
+
+
+<!-- 상세 수정 유틸 팝업 -->
+
+<div class="layer small" id="detailMod">
+
+	<div class="layerIn">
+
+		<div class="commentBtns">
+
+			<button id="btnQuestDetailLayerModify" type="button" onclick="modifyQuest()">글 수정</button>
+
+			<button id="btnQuestDetailLayerDelete" type="button" onclick="deleteQuest()">글 삭제</button>
+
+		</div>
+
+		<button type="button" class="icons btnModaClose" onclick="hideModal('detailMod');"><span class="blind">close</span></button>
+
+	</div>
+
+</div>
+
+<!-- //상세 수정 유틸 팝업 -->
+
+
+
+<!-- 댓글 제어 팝업 -->
+
+<div class="layer small" id="commentSetting">
+
+	<div class="layerIn">
+
+		<div class="commentBtns">
+
+			<button type="button" onclick="modifyComment()">댓글 수정</button>
+
+			<button type="button" onclick="deleteComment()">댓글 삭제</button>
+
+		</div>
+
+		<button type="button" class="icons btnModaClose" onclick="hideModal('commentSetting');"><span class="blind">close</span></button>
+
+	</div>
+
+</div>
+
+<!-- //댓글 제어 팝업 -->
+
+
+
+<!-- 신고하기 팝업 -->
+
+<div class="layer small" id="claimPopup">
+
+	<div class="layerIn">
+
+		<div class="commentBtns">
+
+			<button type="button" onclick="addClaim()">신고하기</button>
+
+		</div>
+
+		<button type="button" class="icons btnModaClose" onclick="hideModal('claimPopup');"><span class="blind">close</span></button>
+
+	</div>
+
+</div>
+
+<!-- //신고하기 팝업 -->
+
+
+
+<!-- share 팝업 -->
+
+<div class="layer" id="share">
+
+</div>
+
+<!-- //share 팝업 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+    Kakao.init('632ef73a3f6245847f65520853ec3056');
+
+
+
+    var memberGrade = 0;
+
+    var timelineOwnerIdx = 0;
+
+    var currentImageCount = 0; // 현재 이미지 파일 카운트
+
+    var currentFileCount = 0; // 현재 첨부 파일 카운트
+
+    var uploadImageList = new Array(); // DB에 저장될 이미지 파일 리스트 // FileName, FileType, Path
+
+    var uploadFileList = new Array();
+
+    var uploadFileInfoList = new Array(); // DB에 저장될 첨부 파일 리스트 // FileName, FileType, Path
+
+    var region1 = '';
+
+    var region2 = '';
+
+
+
+    var deletedFileList = new Array();
+
+    var questWriteMode = 1; // 1: 신규 추가, 2: 수정
+
+
+
+    var scrollYPos = 0; // 스크롤 Y 위치
+
+    var tempYScroll = 0;
+
+
+
+    var selectedQuestIdx; // 수정이나 삭제를 위해 선택된 퀘스트 고유 번호
+
+
+
+    function goLogin(msg) {
+
+        if(msg != undefined) {
+
+            alert(msg);
+
+        }
+
+        window.location = '/snsmember/login';
+
+    }
+
+
+
+    // 로그아웃 처리
+
+    function logout() {
+
+        $.ajax({
+
+            url: '/snsmember/logout',
+
+            type: 'get',
+
+            dataType: 'json',
+
+            success: function (data) {
+
+                console.log(JSON.stringify(data));
+
+                if (data.IsSuccess) {
+
+                    window.location = jQuery(location).attr('href');
+
+                } else {
+
+                    alert('로그아웃 실패');
+
+                }
+
+            },
+
+            error: function (jqXHR, textStatus, errorThrown) {
+
+                alert("code:" + jqXHR.status + "\n" + "message:" + jqXHR.responseText + "\n" + "error:" + errorThrown);
+
+            }
+
+        });
+
+    }
+
+
+
+    // 기회에요 클릭
+
+    function addOppotunityCall(questIdx) {
+
+        addOppotunity(questIdx, function (oResult) {
+
+            if (oResult) {
+
+                var numDom = $('li[name=btnHeart' + questIdx + ']');
+
+                var num = parseInt(numDom.text());
+
+                num++;
+
+                numDom.html('<i class="icons iconHeart"></i> ' + num);
+
+            } else {
+
+                if(memberGrade == 0) {
+
+                    alert('기회에요를 추가하려면 로그인이 필요합니다.');
+
+                    window.location = "/snsmember/login";
+
+                    return;
+
+                } else {
+
+                    alert('이미 기회에요를 추가하였습니다.');
+
+                }
+
+            }
+
+            //questDetailView(questIdx);
+
+        });
+
+    }
+
+
+
+    //////////////////////////////////////////////////////////////
+
+    ///// 퀘스트 작성 관련 시작
+
+    //////////////////////////////////////////////////////////////
+
+    // 퀘스트 작성 팝업 보기
+
+    function showQuestWriteView(dom) {
+
+        if(memberGrade == 0) {
+
+            goLogin('해당 메뉴 사용을 위해서는 로그인이 필요합니다.');
+
+            return;
+
+        } else if(memberGrade == 1) {
+
+            alert('퀘스트 작성을 위해 추가 정보 기입 화면으로 이동합니다.');
+
+            window.location = '/snsmember/userinfo1';
+
+            return;
+
+        }
+
+
+
+        var h = $(window).height();
+
+        if(dom != undefined) {
+
+            $(dom).fadeOut();
+
+        }
+
+            
+
+        // 퀘스트 작성 팝업 초기화
+
+        $('#questWriteLayerTitle').html('퀘스트 작성');
+
+        currentImageCount = 0;
+
+        $('#addImageStatus').html('업로드할 사진 <em>' + 0 + '</em>/' + currentImageCount);
+
+        $('.pic').remove();
+
+        currentFileCount = 0;
+
+        $('#addFileList').children().remove();
+
+        $('#addQuestFileStatus').html('업로드할 파일 <em>' + 0 + '</em>/' + currentFileCount);
+
+        $('#addRegionList').children().remove();
+
+        uploadFileList = new Array();
+
+        uploadImageList = new Array();
+
+        uploadFileInfoList = new Array();
+
+        deletedFileList = new Array();
+
+
+
+        $($('.rewardWrite > div')).find('textarea').val("");
+
+        $('.rewardTabs li').removeClass('active');
+
+        $($('.rewardTabs li')[0]).addClass('active');
+
+        $('.rewardWrite > div').css('display', 'none');
+
+        $($('.rewardWrite > div')[0]).css('display', 'block');
+
+
+
+        $("#btnShowImageView").removeClass('active');
+
+        $('#divAddBoxPic').css({'display': 'none'});
+
+        $("#btnShowFileView").removeClass('active');
+
+        $('#divAddBoxFile').css({'display': 'none'});
+
+        $('#divAddBoxRegion').css({'display': 'none'});
+
+        $("#txtTextContent").val("");
+
+        $("input:radio[name='cateSel']").attr('checked',false);
+
+        $('#noFollow').attr('checked',false);
+
+
+
+        //$("#btnCateSel").html('분류를 선택해주세요 ' + '<i class="icons iconArrow"></i>');
+
+        //$("#btnCateSel").parent().parent().siblings('ul').slideUp('fast');
+
+        //$("#btnCateSel").data("show","yes");
+
+
+
+        $("#btnCateSel").html('분류를 선택해주세요 ' + '<i class="icons iconArrow active"></i>');
+
+        $("#btnCateSel").parent().parent().siblings('ul').slideDown('fast');
+
+        $("#btnCateSel").data("show","no");
+
+
+
+
+
+        var selectedQuestCategoryCode = '';
+
+        if (selectedQuestCategoryCode != null && selectedQuestCategoryCode.trim().length > 0)
+
+            $("input[name='cateSel']:radio[value='" + selectedQuestCategoryCode + "']").attr('checked', true);
+
+
+
+        $('html, body').css({'overflow':'hidden','':'', 'height':h})
+
+        $('.questWriteLayer').css('overflow-y','scroll');
+
+        $('.questWriteLayer').fadeIn();
+
+
+
+        $("#region1 option:eq(0)").attr("selected", "selected");
+
+        $("#region2").empty();
+
+        $("#region2").append("<option value='0'>선택</option>");
+
+        region1 = '';
+
+        region2 = '';
+
+
+
+        questWriteMode = 1;
+
+    }
+
+
+
+    // 퀘스트 작성 팝업 닫기
+
+    function hideQuestWriteView() {
+
+        var w = $(window).width();
+
+        if(w > 640) $('.btnFixWrite').fadeIn();
+
+        else $('.btnFixWrite').fadeOut();
+
+        $('html, body').css({'overflow':'visible', 'height':'auto'})
+
+        $('.questWriteLayer, .questViewLayer').fadeOut();
+
+        $(window).scrollTop(scrollYPos);
+
+    }
+
+
+
+    // 알람 버튼 클릭
+
+    function btnAlramClick() {
+
+        if(memberGrade == 0) {
+
+            goLogin('해당 메뉴 사용을 위해서는 로그인이 필요합니다.');
+
+            return;
+
+        } else {
+
+            window.location = '/snscommon/AlramList';
+
+        }
+
+    }
+
+
+
+    // 추가한 파일 삭제
+
+    function fileDelete(dom, fileName, fileSize) {
+
+        for (var i=0; i<uploadFileList.length; i++) {
+
+            if(uploadFileList[i].files[0].name == fileName && uploadFileList[i].files[0].size == fileSize) {
+
+                uploadFileList.splice(i, 1);
+
+                $(dom).parent().remove();
+
+                currentFileCount--;
+
+                $('#addQuestFileStatus').html('업로드할 파일 <em>' + 0 + '</em>/' + currentFileCount);
+
+                return;
+
+            }
+
+        }
+
+    }
+
+
+
+    // 기존 퀘스트에 존재하는 첨부 파일 삭제
+
+    function fileDeleteFromServer(dom, questAttachFileIdx) {
+
+        $(dom).parent().remove();
+
+        deletedFileList.push(questAttachFileIdx);
+
+    }
+
+
+
+    // 추가한 이미지 삭제
+
+    function imageFileDelete(dom, imageFilePath) {
+
+        for (var i=0; i<uploadImageList.length; i++) {
+
+            if(uploadImageList[i].Path == imageFilePath) {
+
+                uploadImageList.splice(i, 1);
+
+                $(dom).remove();
+
+                currentImageCount--;
+
+                $('#addImageStatus').html('업로드할 사진 <em>' + 0 + '</em>/' + currentImageCount);
+
+                return;
+
+            }
+
+        }
+
+    }
+
+
+
+    // 기존 퀘스트에 존재하는 첨부 이미지 삭제
+
+    function imageFileDeleteFromServer(dom, questAttachFileIdx) {
+
+        $(dom).remove();
+
+        deletedFileList.push(questAttachFileIdx);
+
+    }
+
+
+
+    // 사진 선택 폼 노출/숨김
+
+    function showImageView(dom) {
+
+        if($(dom).hasClass('active')) {
+
+            $(dom).removeClass('active');
+
+            $('#divAddBoxPic').css({'display': 'none'});
+
+        } else {
+
+            $(dom).addClass('active');
+
+            $('#divAddBoxPic').fadeIn();
+
+        }
+
+    }
+
+
+
+    // 파일 선택 폼 노출/숨김
+
+    function showFileView(dom) {
+
+        if($(dom).hasClass('active')) {
+
+            $(dom).removeClass('active');
+
+            $('#divAddBoxFile').css({'display': 'none'});
+
+        } else {
+
+            $(dom).addClass('active');
+
+            $('#divAddBoxFile').fadeIn();
+
+        }
+
+    }
+
+
+
+    // 지역 선택 폼 노출/숨김
+
+    function showRegionView(dom) {
+
+        showModal('areaSelect');
+
+    }
+
+
+
+    // 지역 선택 확인 버튼 클릭
+
+    function selectQuestWriteRegionClick() {
+
+        if ($('#region1 option:selected').val() == "0" || $('#region2 option:selected').val() == "0") {
+
+            alert('지역을 선택해야 합니다.');
+
+            return;
+
+        }
+
+
+
+        region1 = $('#region1 option:selected').val();
+
+        region2 = $('#region2 option:selected').val();
+
+
+
+        hideModal('areaSelect');
+
+        var elmentHtml = '<li><a href="javascript:void(0)"><i class="icons iconAddPosition2"></i> ';
+
+        elmentHtml += (region1 + " " + region2);
+
+        elmentHtml += '</a> <button onclick="deleteRegion(this)" type="button" class="icons btnAddDel">';
+
+        elmentHtml += '<span class="blind">delete</span></button></li>';
+
+        $('#addRegionList').html(elmentHtml);
+
+        $('#divAddBoxRegion').fadeIn();
+
+    }
+
+        
+
+    // 지역 정보 삭제
+
+    function deleteRegion(dom) {
+
+        $(dom).parent().remove();
+
+        if ($('#addRegionList').children().length == 0) {
+
+            region1 = '';
+
+            region2 = '';
+
+            $('#divAddBoxRegion').css({'display': 'none'});
+
+        }
+
+    }
+
+
+
+    // 퀘스트 추가
+
+    var uploadFileCursor = 0;
+
+    var isSubmit = false; // true 면 현재 서버 저장 중...
+
+    function btnAddQuestClick() {
+
+        if(isSubmit == true) {
+
+            return;
+
+        }
+
+
+
+        isSubmit = true;
+
+        $('#btnAddQuest').html('저장중...');
+
+
+
+        var categoryValue = $("input:radio[name='cateSel']:checked").val();
+
+        if (categoryValue == undefined) {
+
+            alert('분류를 선택해야 합니다.');
+
+            isSubmit = false;
+
+            $('#btnAddQuest').html('확인');
+
+            return;
+
+        }
+
+
+
+        var questContent = $("#txtTextContent").val();
+
+        if (questContent.trim().length == 0) {
+
+            alert('퀘스트 내용을 입력해야 합니다.');
+
+            isSubmit = false;
+
+            $('#btnAddQuest').html('확인');
+
+            return;
+
+        }
+
+
+
+        var tabIndex = $('.rewardTabs li').index($('.rewardTabs .active'));
+
+        var rewardContent = $($('.rewardWrite > div')[tabIndex]).find('textarea').val();
+
+        if (rewardContent.trim().length == 0) {
+
+            alert('보상 내용을 입력해야 합니다.');
+
+            isSubmit = false;
+
+            $('#btnAddQuest').html('확인');
+
+            return;
+
+        }
+
+
+
+        if (uploadImageList.length > 0) {
+
+            $('#divAddBoxPic').fadeIn();
+
+            $('#addImageStatus').html('업로드할 사진 <em>' + currentImageCount + '</em>/' + currentImageCount);
+
+        }
+
+
+
+        if (uploadFileList.length > 0) {
+
+            $('#divAddBoxFile').fadeIn();
+
+            uploadFileCursor = 0;
+
+            uploadFileList[uploadFileCursor].submit();
+
+        } else {
+
+            btnAddQuestToServer();
+
+        }
+
+    }
+
+
+
+    // 퀘스트 정보 서버 저장. 파일은 모두 서버에 저장되었음
+
+    function btnAddQuestToServer() {
+
+        var categoryCode = $("input:radio[name='cateSel']:checked").val();
+
+        var content = $("#txtTextContent").val();
+
+        var rewardType = $('.rewardTabs li').index($('.rewardTabs .active'));
+
+        var rewardContent = $($('.rewardWrite > div')[rewardType]).find('textarea').val();
+
+        var noFollow = $('#noFollow').is(":checked");
+
+
+
+        var param = {};
+
+        param.categoryCode = categoryCode;
+
+        param.content = content;
+
+        param.rewardType = rewardType + 1;
+
+        param.rewardContent = rewardContent;
+
+        param.noFollow = noFollow == true ? 1 : 0;
+
+        param.imageFiles = uploadImageList;
+
+        param.files = uploadFileInfoList;
+
+
+
+        if ($('#addRegionList').children().length > 0) {
+
+            param.region1 = region1;
+
+            param.region2 = region2;
+
+        } else {
+
+            param.region1 = '';
+
+            param.region2 = '';
+
+        }
+
+
+
+        param.deletedFiles = deletedFileList;
+
+        param.questIdx = selectedQuestIdx;
+
+
+
+        if(questWriteMode == 1) { // 추가 
+
+            $.ajax({
+
+                url: '../snsquest/AddQuest',
+
+                type: 'post',
+
+                data: param,
+
+                dataType: 'json',
+
+                success: function (data) {
+
+                    console.log(JSON.stringify(data));
+
+                    if (data.IsSuccess) {
+
+                        alert("저장 완료");
+
+                        $('#btnAddQuest').html('확인');
+
+                        isSubmit = false;
+
+                        hideQuestWriteView();
+
+                        window.location = '/snsquest/questlist';
+
+                    } else {
+
+                        alert(data.Message);
+
+                        $('#btnAddQuest').html('확인');
+
+                        isSubmit = false;
+
+                    }
+
+                },
+
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                    alert("code:" + jqXHR.status + "\n" + "message:" + jqXHR.responseText + "\n" + "error:" + errorThrown);
+
+                    $('#btnAddQuest').html('확인');
+
+                    isSubmit = false;
+
+                }
+
+            });
+
+        } else { // 수정
+
+            $.ajax({
+
+                url: '../snsquest/ModifyQuest',
+
+                type: 'post',
+
+                data: param,
+
+                dataType: 'json',
+
+                success: function (data) {
+
+                    console.log(JSON.stringify(data));
+
+                    if (data.IsSuccess) {
+
+                        alert("수정 완료");
+
+                        $('#btnAddQuest').html('확인');
+
+                        isSubmit = false;
+
+                        hideQuestWriteView();
+
+                        window.location = '/snsquest/questlist';
+
+                    } else {
+
+                        alert(data.Message);
+
+                        $('#btnAddQuest').html('확인');
+
+                        isSubmit = false;
+
+                    }
+
+                },
+
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                    alert("code:" + jqXHR.status + "\n" + "message:" + jqXHR.responseText + "\n" + "error:" + errorThrown);
+
+                    $('#btnAddQuest').html('확인');
+
+                    isSubmit = false;
+
+                }
+
+            });
+
+        }
+
+    }
+
+
+
+    function getRegion2(key) {
+
+        commonGetRegion2(key, function (data) {
+
+            $("#region2").empty();
+
+            for (var i = 0; i < data.length; i++) {
+
+                $("#region2").append("<option value='" + data[i] + "'>" + data[i] + "</option>");
+
+            }
+
+        });
+
+    }
+
+    //////////////////////////////////////////////////////////////
+
+    ///// 퀘스트 작성 관련 끝
+
+    //////////////////////////////////////////////////////////////
+
+
+
+
+
+    $(document).ready(function() {
+
+
+
+        if (pageName == 'MAIN') {
+
+            $("body").addClass('main');
+
+            $('#ulMenu li').eq(0).addClass('active');
+
+        } else if(pageName == "QUEST") {
+
+            $("body").addClass('sub simple');
+
+            $('#pageName').html('퀘스트');
+
+            $('#ulMenu li').eq(1).addClass('active');
+
+        } else if(pageName == "TEAMMATE") {
+
+            $("body").addClass('sub simple');
+
+            $('#pageName').html('팀메이트');
+
+            $('#ulMenu li').eq(3).addClass('active');
+
+        } else if(pageName == "TIMELINE") {
+
+            $("body").addClass('sub simple');
+
+            $('#pageName').html('타임라인');
+
+            $('#ulMenu li').eq(4).addClass('active');
+
+        } else if(pageName == "TIMELINE_OTHER") {
+
+            $("body").addClass('sub simple');
+
+        } else {
+
+            $("body").addClass('main');
+
+        }
+
+        //$("body").css('visibility','visible');
+
+
+
+        $('#btnUploadImageFile').fileupload({
+
+            url : '/snsquest/UploadImageFile', 
+
+            dataType: 'json',
+
+            //replaceFileInput: false,
+
+            add: function(e, data){
+
+                var uploadFile = data.files[0];
+
+                var isValid = true;
+
+                if (!(/png|jpe?g|gif/i).test(uploadFile.name)) {
+
+                    alert('png, jpg, gif 파일만 업로드 첨부 가능합니다.');
+
+                    isValid = false;
+
+                }
+
+                if (uploadFile.size > 1024 * 1024 * 2) {
+
+                    alert('파일 용량은 2메가를 초과할 수 없습니다.');
+
+                    isValid = false;
+
+                }
+
+                if (isValid) {
+
+                    currentImageCount++;
+
+                    $('#addImageList > li:last-child').before('<li class="pic" id="picLoading"><div class="in"><img src="../../images/ajax_loader.gif" alt=""></div></li>');
+
+                    data.submit();
+
+                }
+
+            }, progressall: function(e,data) {
+
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+
+                if(progress < 100) {
+
+                    $('#addImageStatus').html('업로드할 사진 <em>' + 0 + '</em>/' + currentImageCount + ' 업로드중...' + progress + '%');
+
+                } else {
+
+                    $('#addImageStatus').html('업로드할 사진 <em>' + 0 + '</em>/' + currentImageCount);
+
+                }
+
+            }, done: function (e, data) {
+
+                console.log(JSON.stringify(data.result));
+
+                if (data.result.IsSuccess) {
+
+                    $('#picLoading').remove();
+
+
+
+                    var imgDom = '<li class="pic" onclick="imageFileDelete(this, \'' + data.result.Result.Path + '\')"><div class="in"><button type="button" ><i class="icons iconPicDelete">';
+
+                    imgDom += '</i><img src="' + data.result.Result.Path + '" width="39" height="39" alt=""></button></div></li>';
+
+
+
+                    $('#addImageList > li:last-child').before(imgDom);
+
+                    uploadImageList.push(data.result.Result);
+
+                } else {
+
+                    alert(data.result.Message);
+
+                }
+
+            }, fail: function(e, data){
+
+                // data.errorThrown
+
+                // data.textStatus;
+
+                // data.jqXHR;
+
+                alert(JSON.stringify(data));
+
+            }
+
+        });
+
+
+
+        $('#btnUploadFile').fileupload({
+
+            url : '/snsquest/UploadFile', 
+
+            dataType: 'json',
+
+            //replaceFileInput: false,
+
+            add: function(e, data){
+
+                var uploadFile = data.files[0];
+
+                var isValid = true;
+
+                if (uploadFile.size > 1024 * 1024 * 10) { // 10mb
+
+                    alert('파일 용량은 10메가를 초과할 수 없습니다.');
+
+                    return;
+
+                }
+
+                for (var i=0; i<uploadFileList.length; i++) {
+
+                    if(uploadFileList[i].files[0].name == uploadFile.name && uploadFileList[i].files[0].size == uploadFile.size) {
+
+                        alert(uploadFileList[i].files[0].name + ' 파일은 이미 추가되어 있습니다.');
+
+                        return;
+
+                    }
+
+                }
+
+
+
+                var sizeText;
+
+                if (uploadFile.size > 1024 * 1024) {
+
+                    sizeText = (uploadFile.size / 1024 / 1024).toFixed(2) + ' MByte'
+
+                } else if (uploadFile.size > 1024) {
+
+                    sizeText = (uploadFile.size / 1024).toFixed(2) + ' KByte'
+
+                } else if (uploadFile.size > 1024) {
+
+                    sizeText = uploadFile.size + ' Byte'
+
+                }
+
+                currentFileCount++;
+
+                $('#addQuestFileStatus').html('업로드할 파일 <em>' + 0 + '</em>/' + currentFileCount);
+
+                var elmentHtml = '<li><a href="javascript:void(0)"><i class="icons iconAddFile2"></i> ' + uploadFile.name + ' ( ' + sizeText + ' )</a> ';
+
+                elmentHtml += '<button type="button" class="icons btnAddDel" ';
+
+                elmentHtml += 'onclick="fileDelete(this, \'' + uploadFile.name + '\',' + uploadFile.size + ')"><span class="blind">delete</span></button></li>';
+
+                $('#addFileList').append(elmentHtml);
+
+                uploadFileList.push(data);
+
+            }, progressall: function(e,data) {
+
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+
+                $('#addQuestFileStatus').html('업로드할 파일 <em>' + (uploadFileCursor+1) + '</em>/' + currentFileCount + ' - ( ' + uploadFileList[uploadFileCursor].files[0].name + ' 업로드중...' + progress + '% )');
+
+            }, done: function (e, data) {
+
+                console.log(JSON.stringify(data));
+
+                if (data.result.IsSuccess) {
+
+                    uploadFileInfoList.push(data.result.Result);
+
+                    if (uploadFileCursor < uploadFileList.length - 1) {
+
+                        uploadFileList[++uploadFileCursor].submit();
+
+                    } else {
+
+                        $('#addQuestFileStatus').html('업로드할 파일 <em>' + (uploadFileCursor+1) + '</em>/' + currentFileCount);
+
+                        btnAddQuestToServer();
+
+                    }
+
+                } else {
+
+                    alert(data.result.Message);
+
+                    $('#btnAddQuest').html('확인');
+
+                    isSubmit = false;
+
+                }
+
+            }, fail: function(e, data){
+
+                // data.errorThrown
+
+                // data.textStatus;
+
+                // data.jqXHR;
+
+                alert(JSON.stringify(data));
+
+                $('#btnAddQuest').html('확인');
+
+                isSubmit = false;
+
+            }
+
+        });
+
+
+
+        commonGetRegion1(function (data) {
+
+            $("#region1").empty();
+
+            $("#region1").append("<option value='0'>선택</option>");
+
+            for (var i = 0; i < data.length; i++) {
+
+                $("#region1").append("<option value='" + data[i] + "'>" + data[i] + "</option>");
+
+            }
+
+        });
+
+
+
+        $("#region1").change(function () {
+
+            if ($(this).val() == "0") {
+
+                $("#region2").empty();
+
+                $("#region2").append("<option value='0'>선택</option>");
+
+                return;
+
+            }
+
+            getRegion2($(this).val());
+
+        });
+
+
+
+    });
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

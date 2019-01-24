@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>팀스퀘어 | 캠페인 관리</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="../css/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet">
+    <link href="../css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="../css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="../css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="../css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="../js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="../img/logo_s.png" />
+                             </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">TEAMSQUARE</strong>
+                             </span> <!--span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span--> </a>
+                        <!--ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="profile.html">Profile</a></li>
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="mailbox.html">Mailbox</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login.html">Logout</a></li>
+                        </ul-->
+                    </div>
+                    <!--div class="logo-element">
+                        IN+
+                    </div-->
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Dashboard</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="member_total.html">회원 통계</a></li>
+                        <li><a href="sns_total.html">SNS회원 통계</a></li>
+                        <li><a href="page_total.html">페이지통계</a></li>
+                        <li><a href="all_total.html">전체현황</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-child"></i> <span class="nav-label">회원 관리</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li ><a href="member_list.html">회원 현황 보기</a></li>
+                        <li><a href="monitering1.html">모니터링 관리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-cubes"></i> <span class="nav-label">캠페인관리</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li class="active"><a href="campaign_list.html">캠페인 현황 보기</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-label">게시판관리</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="notice.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="push.html"><i class="fa fa-microphone"></i> <span class="nav-label">푸시 관리</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-search"></i> <span class="nav-label">검색어 관리</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="keyword.html">검색어 현황보기</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <!--form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form-->
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">TEAMSQUARE Admin</span>
+                </li>
+                <!--li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="../img/a7.jpg">
+                                </a>
+                                <div>
+                                    <small class="pull-right">46h ago</small>
+                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="../img/a4.jpg">
+                                </a>
+                                <div>
+                                    <small class="pull-right text-navy">5h ago</small>
+                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="../img/profile.jpg">
+                                </a>
+                                <div>
+                                    <small class="pull-right">23h ago</small>
+                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="mailbox.html">
+                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li-->
+                <!--li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="mailbox.html">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="profile.html">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="grid_options.html">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="notifications.html">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li-->
+
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+                <!--li>
+                    <a class="right-sidebar-toggle">
+                        <i class="fa fa-tasks"></i>
+                    </a>
+                </li-->
+            </ul>
+
+        </nav>
+        </div>
+        <div class="wrapper wrapper-content">
+	      <div class="row">
+	          <div class="col-lg-12">
+		          <div class="ibox float-e-margins">
+		              <div class="ibox-content">
+			              <div class="row">
+
+                       <div class="form-group overlow-h">
+                           <div class="col-sm-12 ">
+			                      <div class="radio radio-inline">
+			                          <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked="">
+			                          <label for="inlineRadio1"> 1주(7일)</label>
+			                      </div>
+			                      <div class="radio radio-inline">
+			                          <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+			                          <label for="inlineRadio2"> 1개월(30일)</label>
+			                      </div>
+			                      <div class="radio radio-inline">
+			                          <input type="radio" id="inlineRadio3" value="option2" name="radioInline">
+			                          <label for="inlineRadio3"> 3개월(90일)</label>
+			                      </div>
+			                      <div class="col-sm-12 p-n">
+				                      <div class="radio ">
+				                          <input type="radio" id="inlineRadio4" value="option2" name="radioInline">
+				                          <label for="inlineRadio4"> 직접선택</label>
+				                      </div>
+					                   <div class="" id="data_1">
+					                       <div class="input-daterange input-group" id="datepicker">
+					                           <input type="text" class="input-sm form-control" name="start" value="05/14/2014"/>
+					                           <span class="input-group-addon">to</span>
+					                           <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
+					                       </div>
+					                   </div>
+			                      </div>
+                           </div>
+                       </div>
+                       <div class="form-group overlow-h ">
+                           <div class="col-sm-12">
+														<input type="text" placeholder="캠페인명" class="form-control">
+                           </div>
+                       </div>
+
+											 <div class="btn-customer">
+												<a class="btn btn-primary btn-rounded btn-block" href="#">검 색</a>
+											 </div>
+
+	                  </div>
+		              </div>
+		          </div>
+	          </div>
+	      </div>
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+									<h5>총  신고건수  -   퀘스트 : 1528건   댓글; 2598건</h5>
+									<div class="ibox-tools">
+										<button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal7">캠페인 등록</button>
+									</div>
+							</div>
+							<div class="ibox-content">
+								<div class="table-responsive">
+									<table class="table table-bordered m-b-none">
+											<thead>
+											<tr>
+													<th rowspan="2">캠페인명</th>
+													<th rowspan="2">시작/종료일</th>
+													<th colspan="3">노출타켓</th>
+													<th rowspan="2">관심분야</th>
+													<th rowspan="2">캠페인 등록시<br/>유효 타겟수</th>
+													<th rowspan="2">전체<br/>유입인원 수</th>
+											</tr>
+											<tr>
+													<th>연령</th>
+													<th>지역</th>
+													<th>성별</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+													<td><a href="">슈퍼끼어로 1탄</a></td>
+													<td>15/10/15 ~ 15/11/15</td>
+													<td>10대/20대</td>
+													<td>전체</td>
+													<td>전체</td>
+													<td>소셜/공익예술/디자인</td>
+													<td>1.000명</td>
+													<td>154</td>
+											</tr>
+											<tr>
+													<td><a href="">슈퍼끼어로 1탄</a></td>
+													<td>15/10/15 ~ 15/11/15</td>
+													<td>10대/20대</td>
+													<td>전체</td>
+													<td>전체</td>
+													<td>소셜/공익예술/디자인</td>
+													<td>1.000명</td>
+													<td>154</td>
+											</tr>
+											<tr>
+													<td><a href="">슈퍼끼어로 1탄</a></td>
+													<td>15/10/15 ~ 15/11/15</td>
+													<td>10대/20대</td>
+													<td>전체</td>
+													<td>전체</td>
+													<td>소셜/공익예술/디자인</td>
+													<td>1.000명</td>
+													<td>154</td>
+											</tr>
+											<tr>
+													<td><a href="">슈퍼끼어로 1탄</a></td>
+													<td>15/10/15 ~ 15/11/15</td>
+													<td>10대/20대</td>
+													<td>전체</td>
+													<td>전체</td>
+													<td>소셜/공익예술/디자인</td>
+													<td>1.000명</td>
+													<td>154</td>
+											</tr>
+											<tr>
+													<td><a href="">슈퍼끼어로 1탄</a></td>
+													<td>15/10/15 ~ 15/11/15</td>
+													<td>10대/20대</td>
+													<td>전체</td>
+													<td>전체</td>
+													<td>소셜/공익예술/디자인</td>
+													<td>1.000명</td>
+													<td>154</td>
+											</tr>
+											</tbody>
+									</table>
+								</div>
+								<br/>
+								<div class="text-center">
+										<div class="btn-group">
+												<button class="btn btn-white" type="button"><i class="fa fa-chevron-left"></i></button>
+												<button class="btn btn-white">1</button>
+												<button class="btn btn-white  active">2</button>
+												<button class="btn btn-white">3</button>
+												<button class="btn btn-white">4</button>
+												<button class="btn btn-white">5</button>
+												<button class="btn btn-white">6</button>
+												<button class="btn btn-white">7</button>
+												<button class="btn btn-white" type="button"><i class="fa fa-chevron-right"></i> </button>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+        <div class="footer">
+            <div class="pull-right">
+                .
+            </div>
+            <div>
+                <strong>© 2016 TEAMSQUARE, inc.</strong> 
+            </div>
+        </div>
+    </div>
+
+		<div class="modal inmodal fade" id="myModal7" tabindex="-1" role="dialog"  aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+								<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title">캠페인 등록</h4>
+								</div>
+								<div class="modal-body">
+									<form role="form">
+										<div class="form-group"><label>캠페인명</label> <input type="text" placeholder="" class="form-control"></div>
+										<div class="form-group">
+											<label>기간 </label>
+											<div class="radio ">
+													<input type="radio" id="noShow" value="option1" name="campaignSel" checked="">
+													<label for="noShow"> 비공개</label>
+											</div>
+										</div>
+										<div class="form-group">
+												<input type="radio" id="noShow2" value="option2" name="campaignSel">
+												<label for="noShow2"> 직접선택</label>
+											 <div class="" id="data_3">
+													 <div class="input-daterange input-group" id="datepicker">
+															 <input type="text" class="input-sm form-control" name="start" value="05/14/2014"/>
+															 <span class="input-group-addon">to</span>
+															 <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
+													 </div>
+											 </div>
+										</div>
+										<div class="form-group">
+											<label>타켓</label>
+											<select class="form-control m-b" name="account">
+													<option>지역</option>
+											</select>
+											<p>
+												<label class="checkbox-inline i-checks"> <input type="radio" name="sex">남자</label>
+												<label class="checkbox-inline i-checks"> <input type="radio" name="sex">여자</label>
+											</p>
+											<p>
+												<label class="checkbox-inline i-checks"> <input type="radio" name="age">20대이하</label>
+												<label class="checkbox-inline i-checks"> <input type="radio" name="age">20대</label>
+												<label class="checkbox-inline i-checks"> <input type="radio" name="age">30대</label>
+												<label class="checkbox-inline i-checks"> <input type="radio" name="age">40대</label>
+												<label class="checkbox-inline i-checks"> <input type="radio" name="age">40대이상</label>
+											</p>
+										</div>
+										<div class="form-group">
+											<label>관심분야</label>
+											<select class="form-control m-b" name="account">
+													<option>전체</option>
+											</select>
+										</div>
+										<p class="text-right">(유효타겟 수 :   *****명)</p>
+									</form>
+								</div>
+
+								<div class="modal-footer">
+										<button type="button" class="btn btn-primary">확인</button>
+								</div>
+						</div>
+				</div>
+		</div>
+
+    <script src="../js/jquery-2.1.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="../js/plugins/jsKnob/jquery.knob.js"></script>
+    <script src="../js/plugins/jasny/jasny-bootstrap.min.js"></script> 
+    <script src="../js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script src="../js/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../js/plugins/iCheck/icheck.min.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="../js/plugins/flot/jquery.flot.time.js"></script>
+    <script src="../js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="../js/demo/peity-demo.js"></script>
+    <script src="../js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../js/plugins/easypiechart/jquery.easypiechart.js"></script>
+    <script src="../js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="../js/plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="../js/plugins/morris/morris.js"></script>
+    <script src="../js/inspinia.js"></script>
+    <script src="../js/plugins/pace/pace.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#data_1 .input-daterange').datepicker({
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+            $('#data_2 .input-daterange').datepicker({
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+            $('#data_3 .input-daterange').datepicker({
+                keyboardNavigation: false,
+                forceParse: false,
+                autoclose: true
+            });
+						$('.i-checks').iCheck({
+								checkboxClass: 'icheckbox_square-green',
+								radioClass: 'iradio_square-green',
+						});
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>팀스퀘어</title>
+<link rel="stylesheet" type="text/css" href="../../Content/common.css">
+<link rel="stylesheet" type="text/css" href="../../Content/teamsquare.v2.css">
+<script src="../../Scripts/jquery-1.8.3.min.js"></script>
+<script src="../../Scripts/jquery.plugin.js"></script>
+<script src="../../Scripts/teamsquare.v2.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</script>
+</head>
+<body class="sub simple">
+
+	<div id="wrap" class="wrap">
+
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="headerIn">
+				<h1><a href="">퀘스트</a></h1>
+				<button type="button" id="btnSrch" class="icons btnSrch"><span class="blind">search</span></button>
+				<button type="button" class="icons btnAlram"><span class="blind">alram</span></button>
+				<!-- <button type="button" class="icons btnAlram active"><span class="blind">alram</span></button> 알림 메세지 있을때 active 클래스 추가 -->
+				<button type="button" id="btnMenu" class="icons btnMenu"><span class="blind">menu</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- 메뉴 -->
+		<div class="menuLayer">
+			<div class="menuLayerIn">
+				<div class="depth1">
+					<ul>
+						<li  class="active">
+							<a href="" class="menus menu1">
+								<span>스퀘어</span>
+							</a>
+						</li>
+						<li>
+							<a href=""  class="menus menu2">
+								<span>퀘스트</span>
+							</a>
+						</li>
+						<li id="btnWrite">
+							<a href=""  class="menus menu3">
+								<span>퀘스트 작성</span>
+							</a>
+						</li>
+						<li>
+							<a href=""  class="menus menu4">
+								<span>팀메이트</span>
+							</a>
+						</li>
+						<li>
+							<a href=""  class="menus menu5">
+								<span>타임라인</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="depth2">
+					<ul>
+						<li>
+							<a href="">이용약관 <i class="icons iconMenuArrow"></i></a>
+						</li>
+						<li>
+							<a href="">고객센터 <i class="icons iconMenuArrow"></i></a>
+						</li>
+						<li>
+							<a href="">개인정보 취급방침 <i class="icons iconMenuArrow"></i></a>
+						</li>
+						<li>
+							<a href="">공지사항 <i class="icons iconMenuArrow"></i></a>
+						</li>
+						<li>
+							<a href="">서비스 안내 <i class="icons iconMenuArrow"></i></a>
+						</li>
+						<li>
+							<a href="">로그아웃 <i class="icons iconMenuArrow"></i></a>
+						</li>
+					</ul>
+				</div>
+				<ul class="btnLayerClose">
+					<li><button type="button" class="icons iconLayerClose"><span class="blind">close</span></button></li>
+				</ul>
+			</div>
+		</div>
+		<!-- //메뉴 -->
+
+		<!-- 검색 -->
+		<div class="srchLayer">
+			<!-- 검색 인풋 -->
+			<div class="hiddenItem srchTop">
+				<button type="button" class="btnSrchLayerClose"><span class="blind">search close</span></button>
+				<div class="inputMix">
+					<span class="inputs"><input type="text" placeholder="검색어를 입력하세요."/></span>
+					<button type="button" class="icons btnSrchConts"><span class="blind">search contents</span></button>
+				</div>
+			</div>
+			<!-- //검색 인풋 -->
+
+			<div class="hiddenItem srchLayerIn">
+				<!-- 추천검색어 -->
+				<div class="srchKeyWord">
+					<div class="srchKeyWordIn">
+						<strong>추천 검색어</strong>
+						<div class="keyWordList">
+							<ul>
+								<li>
+									<a href="">사노피 캠페인 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">취업 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">팀스퀘어 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">아르바이트 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">보상 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">상품품 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">공모전 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">인턴 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">취업 <i class="icons iconMenuArrow"></i></a>
+								</li>
+								<li>
+									<a href="">상금 <i class="icons iconMenuArrow"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //추천검색어 -->
+
+				<!-- 검색 탭 -->
+				<div class="hiddenItem srchTabs">
+					<ul class="tabs" >
+						<li><a href="" class="active">닉네임</a></li>
+						<li><a href="" >분류별 퀘스트</a></li>
+						<li><a href="" >보상별 퀘스트</a></li>
+						<li><a href="" >태그</a></li>
+					</ul>
+
+					<div class="srchTabConts">
+						<!-- 닉네임별 -->
+						<div>
+							<div class="nickname">
+								<ul id="nickname">
+									<li>
+										<ul>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+												</div>
+												<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+												</div>
+												<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+												</div>
+												<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+												</div>
+												<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+												</div>
+											</li>
+											<li>
+												<div class="in">
+													<a href="">
+														<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+														<div class="right">
+															<strong class="name">Alexa Garrkrdskf</strong>
+															<p class="txts">소셜미디어 최고 팀메이트를 꿈꾸며!!</p>
+														</div>
+													</a>
+													<button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button>
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<script type="text/javascript">
+									$(function(){
+
+									});
+								</script>
+							</div>
+						</div>
+						<!-- //닉네임별 -->
+
+						<!-- 분류별 퀘스트 -->
+						<div style="display:none">
+							<div class="srchQuestList">
+								<div class="srchQuestListIn">
+									<ul>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate0"></i> 전체</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate1"></i> 소셜/공익</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate2"></i> 예술/디자인	</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate3"></i> 영상/사진/음악</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate4"></i> 문화/공연/전시</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate5"></i> IT/제조/기술</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate6"></i> 마케팅/광고/홍보</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate7"></i> 인문/출판/작문</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate8"></i> 패션/뷰티/생활</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //분류별 퀘스트 -->
+
+						<!-- 보상별 퀘스트 -->
+						<div style="display:none">
+							<div class="srchQuestList">
+								<div class="srchQuestListIn">
+									<ul>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate9"></i> 금전</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate10"></i> 네트워크</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"><i class="cates2 iconCate11"></i> 경험</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //보상별 퀘스트 -->
+
+						<!-- 태그 -->
+						<div style="display:none">
+							<div class="srchQuestList">
+								<div class="srchQuestListIn">
+									<ul>
+										<li>
+											<a href="">
+												<span class="cateItem2"># 공모전</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"># 디자인공모전</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"># 공모전</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<span class="cateItem2"># 디자인공모전</span>
+												<em class="num">999</em>
+												<i class="icons iconMenuArrow"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- //태그 -->
+					</div>
+				</div>
+				<!-- //검색 탭 -->
+
+				<div class="hiddenItem btnSrchLayerClose"><button type="button" class="icons iconLayerClose"><span class="blind">close</span></button></div>
+			</div>
+		</div>
+		<!-- //검색 -->
+
+		<!-- container -->
+		<section id="container" class="container">
+			<!-- 퀘스트 -->
+			<div class="quest">
+				<div class="questIn">
+					<!-- 분류 -->
+					<div class="questCate">
+						<strong>분류선택</strong>
+						<button type="button" class="btnViewCate">분류선택 <i class="icons iconCateArrow"></i></button>
+						<div>
+							<ul>
+								<li class="">
+									<input type="checkbox" id="cateAll"/><label for="cateAll"><span class="questCates cateAll"></span><em>전체</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate1"/><label for="cate1"><span class="questCates cate1"></span><em>소셜/공익</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate2"/><label for="cate2"><span class="questCates cate2"></span><em>예술/디자인</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate3"/><label for="cate3"><span class="questCates cate3"></span><em>영상/사진/음악</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate4"/><label for="cate4"><span class="questCates cate4"></span><em>문화/공연/전시</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate5"/><label for="cate5"><span class="questCates cate5"></span><em>IT/제조/기술</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate6"/><label for="cate6"><span class="questCates cate6"></span><em>마케팅/광고/홍보</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate7"/><label for="cate7"><span class="questCates cate7"></span><em>인문/출판/작문</em></label>
+								</li>
+								<li>
+									<input type="checkbox" id="cate8"/><label for="cate8" ><span class="questCates cate8"></span><em>패션/뷰티/생활</em></label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //분류 -->
+
+					<!-- 퀘스트 리스트 -->
+					<div class="questList">
+						<div class="questListIn">
+							<div class="questTabs">
+								<ul>
+									<li><a href="" class="active"><i class="icons iconPopular"></i> 인기 순</a></li>
+									<li><a href=""><i class="icons iconLastest"></i> 최신 순</a></li>
+								</ul>
+							</div>
+
+							<div class="lists">
+								<p><em>“소셜/공익”, “예술/디자인”</em>에서 인기있는 퀘스트 입니다</p>
+								<ul>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+												<p class="photo">
+													<img src="http://teamsquare.com/images/quest/img_today02_151207.png" alt=""><img src="../../images/sns/img_dummy2.png" alt=""><img src="http://teamsquare.com/images/quest/img_today02_151207.png" alt=""><img src="../../images/sns/img_dummy2.png" alt="">
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconNetwork"></i> 네트워트</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconExp"></i> 경험 많이</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<div class="in">
+												<div class="infos">
+													<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+													<div class="user">
+														<strong class="name">Lily Richards</strong>
+														<span class="cateItem"><i class="cates iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+													</div>
+												</div>
+												<p class="ellipsis txts">
+													경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황 경기도 교육청 ‘인턴모집’ 파트너 구해요 현재 2015년 남은 공모전 현황
+												</p>
+											</div>
+											<div class="infoIcons">
+												<ul>
+													<li><i class="icons iconHeart"></i> 999</li>
+													<li><i class="icons iconComment"></i> 999</li>
+													<li><i class="icons iconMoney"></i> 상금 천만원</li>
+													<li><i class="icons iconShare"></i> 999</li>
+												</ul>
+											</div>
+										</a>
+									</li>
+								</ul>
+								<div class="listLoading"><img src="../../images/sns/loading.gif" width="47" height="40" alt="로딩"/></div>
+								<div class="btnListMore"><a href="">더보기</a></div>
+							</div>
+						</div>
+					</div>
+					<!-- //퀘스트 리스트 -->
+				</div>
+			</div>
+			<!-- //퀘스트 -->
+		</section>
+		<!-- //container -->
+
+		<!-- 작성 버튼 -->
+		<div class="btnFixWrite"><a href="" class="icons iconFixWrite"><span class="blind">작성</span></a></div>
+		<!-- //작성 버튼 -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footerIn">
+				<h1><a href=""><em>ⓒ </em>TEAMSQUARE Inc.</a></h1>
+				<ul class="sns">
+					<li><a href="" class="icons iconBlog"><span class="blind">blog</span></a></li>
+					<li><a href="" class="icons iconIns"><span class="blind">instagram</span></a></li>
+					<li><a href="" class="icons iconFb"><span class="blind">facebook</span></a></li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+	</div>
+
+<!-- 자기소개 팝업 -->
+<div class="layer small" id="introduce">
+	<div class="layerIn">
+		<div class="introduceTxt">
+			컴공과 학생이어요 <br/>
+			아직은 잘 모르는데 그래도 
+			취업도 해야 하고 그러니..
+			여러가지 정보를 퍼 나릅니당<br/>
+			우리 정보 교환 같은거 많이 
+			해 보아용 
+		</div>
+		<button type="button" class="icons btnModaClose" onclick="hideModal('introduce');"><span class="blind">close</span></button>
+	</div>
+</div>
+<!-- //자기소개 팝업 -->
+
+<!-- 상세 수정 유틸 팝업 -->
+<div class="layer small" id="detailMod">
+	<div class="layerIn">
+		<div class="commentBtns">
+			<button type="button">글 수정</button>
+			<button type="button">글 삭제</button>
+			<button type="button" onclick="showModal('sendReport');">신고하기</button>
+		</div>
+		<button type="button" class="icons btnModaClose" onclick="hideModal('detailMod');"><span class="blind">close</span></button>
+	</div>
+</div>
+<!-- //상세 수정 유틸 팝업 -->
+
+<!-- 댓글 수정 팝업 -->
+<div class="layer small" id="commentSetting">
+	<div class="layerIn">
+		<div class="commentBtns">
+			<button type="button">댓글 수정</button>
+			<button type="button">댓글 삭제</button>
+			<button type="button" onclick="showModal('sendReport');">신고하기</button>
+		</div>
+		<button type="button" class="icons btnModaClose" onclick="hideModal('commentSetting');"><span class="blind">close</span></button>
+	</div>
+</div>
+<!-- //댓글 수정 팝업 -->
+
+<!-- 신고하기 팝업 -->
+<div class="layer small" id="sendReport">
+	<div class="layerIn">
+		<div class="commentBtns">
+			<button type="button" class="title">신고하기</button>
+			<button type="button">음란물을 포함하고 있습니다.</button>
+			<button type="button">비속어 포함하고 있습니다.</button>
+			<button type="button">광고성 문구를 포함하고 있습니다.</button>
+			<button type="button">이 글은 게시되기에 적절하지 않습니다.</button>
+		</div>
+		<button type="button" class="icons btnModaClose" onclick="hideModal('sendReport');"><span class="blind">close</span></button>
+	</div>
+</div>
+<!-- //신고하기 팝업 -->
+
+<!-- share 팝업 -->
+<div class="layer" id="share">
+	<div class="layerIn">
+		<div class="shareBox">
+			<!-- 160420 삭제
+			<div class="row">
+				<span class="shareTit inline">내 타임라인에 담기</span>
+				<ul class="snsList">
+					<li><button type="button" class="iconSns btnMyTimeLine"><span class="blind">my timeline</span></button></li>
+				</ul>
+			</div>
+			-->
+			<div class="row">
+				<span class="shareTit inline">SNS 공유하기</span>
+				<ul class="snsList">
+					<li><button type="button" class="iconSns btnFb"><span class="blind">facebook</span></button></li>
+					<li><button type="button" class="iconSns btnKt"><span class="blind">kakao talk</span></button></li>
+					<li><button type="button" class="iconSns btnLine"><span class="blind">line</span></button></li>
+					<li><button type="button" class="iconSns btnLink"><span class="blind">link</span></button></li>
+				</ul>
+			</div>
+			<div class="row">
+				<span class="shareTit inline">URL</span>
+				<ul class="shareUrl">
+					<li>http://teamsquare.com/123456789</li>
+				</ul>
+			</div>
+			<div class="row">
+				<span class="shareTit">내 팔로워 공유 <em>25 팔로워</em></span> 
+				<p class="followSrch"><button type="button"><span class="blind">follow search</span></button><span><input type="text" placeholder="메시지를 보낼 팔로워의 닉네임을 검색하세요"/></span></p>
+				<div class="followListBox">
+					<ul id="followList" class="followItems">
+						
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia NelsonAmelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia Nelson</em>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div>
+										<input type="checkbox" id=""/>
+										<label for="">
+											<span class="iconChecked"><img src="../../images/sns/bg_check.png" alt=""></span>
+											<span class="thumb"><img src="../../images/sns/img_dummy.jpg" alt=""></span>
+											<em>Amelia Nelson</em>
+										</label>
+									</div>
+								</li>
+							
+					</ul>
+					<!-- 20160226 수정 -->
+					<script type="text/javascript">
+						$(function(){
+								$('.followItems li').each(function(index){
+									$(this).find('input').attr('id','follow' + index);
+									$(this).find('label').attr('for','follow' + index);
+								});
+						});
+					</script>
+					<!-- //20160226 수정 -->
+				</div>
+				<div class="sendMsg">
+					<div class="inputMix">
+						<span class="inputs"><input type="text" placeholder="10자 이내 메시지를 보내주세요"></span>
+						<button type="button" class="btnShareEnter">확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button type="button" class="icons btnModaClose" onclick="hideModal('share');"><span class="blind">close</span></button>
+	</div>
+</div>
+<!-- //share 팝업 -->
+
+<!-- 친구초대 팝업 -->
+<div class="layer small" id="friendShare">
+	<div class="layerIn">
+		<div class="shareBox">
+			<div class="row">
+				<span class="shareTit">내 타임라인 친구 초대하기</span>
+				<ul class="snsList">
+					<li><button type="button" class="iconSns btnFb"><span class="blind">facebook</span></button></li>
+					<li><button type="button" class="iconSns btnKt"><span class="blind">kakao talk</span></button></li>
+					<li><button type="button" class="iconSns btnLine"><span class="blind">line</span></button></li>
+					<li><button type="button" class="iconSns btnLink"><span class="blind">link</span></button></li>
+				</ul>
+			</div>
+		</div>
+		<button type="button" class="icons btnModaClose" onclick="hideModal('friendShare');"><span class="blind">close</span></button>
+	</div>
+</div>
+<!-- //친구초대 팝업 -->
+
+<!-- 지역 선택 팝업 -->
+<div class="layer small" id="areaSelect">
+	<div class="layerIn">
+		<div class="areaSelect">
+			<p>지역선택</p>
+			<span class="selects">
+				<select name="" id="">
+					<option value="">시도</option>
+				</select>
+			</span>
+			<span class="selects">
+				<select name="" id="">
+					<option value="">구군</option>
+				</select>
+			</span>
+			<a href="">확인</a>
+		</div>
+		<button type="button" class="icons btnModaClose" onclick="hideModal('areaSelect');"><span class="blind">close</span></button>
+	</div>
+</div>
+<!-- //지역 선택 팝업 -->
+
+<!-- 퀘스트 작성 -->
+<div class="questWriteLayer" style="display:none">
+	<div class="questWriteLayerIn">
+		<div class="layerHeader">
+			<div class="layerHeaderIn">
+				<strong><a href="">퀘스트 작성</a></strong>
+				<button type="button" class="icons btnPageClose" ><span class="blind">close </span></button>
+			</div>
+		</div>
+		<div class="questWrite">
+			<div class="questWriteIn">
+				<!-- 분류 선택-->
+				<div class="cateSel">
+					<div class="cateSelTop">
+						<span>분류</span>
+						<div class="btnCateSel"><button type="button" id="btnCateSel">분류를 선택해주세요 <i class="icons iconArrow"></i></button></div>
+					</div>
+					<ul>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate1"/> <label for="selCate1"><span class="cateItem4"><i class="cates4 iconCate1"></i> 소셜/공익</span></label></div></li>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate2"/> <label for="selCate2"><span class="cateItem4"><i class="cates4 iconCate2"></i> 예술/디자인</span></label></div></li>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate3"/> <label for="selCate3"><span class="cateItem4"><i class="cates4 iconCate3"></i> 영상/사진/음악</span></label></div></li>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate4"/> <label for="selCate4"><span class="cateItem4"><i class="cates4 iconCate4"></i> 문화/공연/전시</span></label></div></li>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate5"/> <label for="selCate5"><span class="cateItem4"><i class="cates4 iconCate5"></i> IT/제조/기술</span></label></div></li>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate6"/> <label for="selCate6"><span class="cateItem4"><i class="cates4 iconCate6"></i> 마케팅/광고/홍보</span></label></div></li>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate7"/> <label for="selCate7"><span class="cateItem4"><i class="cates4 iconCate7"></i> 인문/출판/작문</span></label></div></li>
+						<li><div class="in"><input type="radio" name="cateSel" id="selCate8"/> <label for="selCate8"><span class="cateItem4"><i class="cates4 iconCate8"></i> 패션/뷰티/생활</span></label></div></li>
+					</ul>
+				</div>
+				<!-- //분류 선택-->
+
+				<!-- 퀘스트 내용 작성 -->
+				<div class="writeBox">
+					<span class="textarea">
+						<textarea name="" id="" placeholder="어떤 기회를 가지고 계세요?"></textarea>
+					</span>
+				</div>
+				<!-- //퀘스트 내용 작성 -->
+
+				<div class="addFiles">
+					<!-- 퀘스트 사진 -->
+					<div class="addFileBox questPic">
+						<div class="questWriteTop">
+							사진 <em>2</em>/5
+						</div>
+						<div class="addLists addImg">
+							<ul>
+								<li class="pic">
+									<div class="in"><button type="button"><i class="icons iconPicDelete"></i><img src="http://teamsquare.com/images/quest/img_today02_151207.png" alt=""></button></div>
+								</li>
+								<li class="pic">
+									<div class="in"><button type="button"><i class="icons iconPicDelete"></i><img src="../../images/sns/img_dummy3.png" alt=""></button></div>
+								</li>
+								<li class="pic">
+									<div class="in"><button type="button"><i class="icons iconPicDelete"></i><img src="../../images/sns/img_dummy3.png" alt=""></button></div>
+								</li>
+								<li class="pic">
+									<div class="in"><button type="button"><i class="icons iconPicDelete"></i><img src="../../images/sns/img_dummy3.png" alt=""></button></div>
+								</li>
+								<li class="nan">
+									<div class="in"><input type="file" class="" data-input="false"><img src="../../images/sns/bg_inputFile2.png" alt=""></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //퀘스트 사진 -->
+
+					<!-- 퀘스트 링크 -->
+					<div class="addFileBox questFile">
+						<div class="questWriteTop">
+							파일 <em>2</em>/5
+						</div>
+						<div class="addLists addFile">
+							<ul>
+								<li><a href=""><i class="icons iconAddFile2"></i> 행사소개.ppt</a> <button type="button" class="icons btnAddDel"><span class="blind">delete</span></button></li>
+								<li><a href=""><i class="icons iconAddFile2"></i> 행사안내.hwp</a> <button type="button" class="icons btnAddDel"><span class="blind">delete</span></button></li>
+							</ul>
+						</div>
+						<div class="btnAddFile customer"><input type="file" class="jfilestyle" data-input="false" data-buttonText="<i class='icons iconFileAdds'></i> 파일추가"></div>
+					</div>
+					<!-- //퀘스트 링크 -->
+
+					<!-- 퀘스트 지역 -->
+					<div class="addFileBox questPosition">
+						<div class="questWriteTop">
+							지역
+						</div>
+						<div class="addLists addPosition">
+							<ul>
+								<li><a href=""><i class="icons iconAddPosition2"></i> 서울특별시 서초구 방배동</a> <button type="button" class="icons btnAddDel"><span class="blind">delete</span></button></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //퀘스트 지역 -->
+
+					<!-- 파일 첨부 버튼 -->
+					<div class="addbtms">
+						<ul>
+							<li><button type="button" id="pic" class="icons btnPicBig"><span class="blind">picture</span></button></li>
+							<li><button type="button" id="file" class="icons btnFileBig"><span class="blind">file</span></button></li>
+							<li><button type="button" id="pos" class="icons btnPositionBig" onclick="showModal('areaSelect');"><span class="blind">position</span></button></li>
+							<!-- 선택될 시
+							<li><button type="button" id="pic" class="icons btnPicBig active"><span class="blind">picture</span></button></li>
+							<li><button type="button" id="file" class="icons btnFileBig active"><span class="blind">file</span></button></li>
+							<li><button type="button" id="pos" class="icons btnPositionBig active"><span class="blind">position</span></button></li>
+							-->
+						</ul>
+						<div>
+							@닉네임 #해시태그
+						</div>
+					</div>
+					<!-- //파일 첨부 버튼 -->
+				</div>
+
+				<!-- 퀘스트 기대보상 -->
+				<div class="questReward">
+					<span class="tit">이 퀘스트에 대한 기대보상</span>
+					<div class="rewardTabs">
+						<ul>
+							<li class="active"><button type="button"><span class="cateItem5"><i class="cates5 iconCate9"></i> 금전</span></button></li>
+							<li><button type="button"><span class="cateItem5"><i class="cates5 iconCate10"></i> 네트워크</span></button></li>
+							<li><button type="button"><span class="cateItem5"><i class="cates5 iconCate11"></i> 경험</span></button></li>
+						</ul>
+					</div>
+					<div class="rewardWrite">
+						<div style="display:block;">
+							<textarea name="" id="" placeholder="보상혜택 상세 내용을 15자 이내 작성해 주세요."></textarea>
+						</div>
+						<div>
+							<textarea name="" id="" placeholder="보상혜택 상세 내용을 15자 이내 작성해 주세요."></textarea>
+						</div>
+						<div>
+							<textarea name="" id="" placeholder="보상혜택 상세 내용을 15자 이내 작성해 주세요."></textarea>
+						</div>
+					</div>
+					<div class="checks">
+						<input type="checkbox" id="noFollow"/> <label for="noFollow"><i class="icons iconCheck"></i>팔로워들에게 공유하지 않음</label>
+					</div>
+				</div>
+				<!-- //퀘스트 기대보상 -->
+
+				<!-- 버튼 -->
+				<div class="btns">
+					<ul>
+						<li><a href="" class="btnCancel">취소</a></li>
+						<li><a href="" class="btnEnter">확인</a></li>
+					</ul>
+				</div>
+				<!-- 버튼 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //퀘스트 작성 -->
+
+<!-- 퀘스트 상세보기 -->
+<div class="questViewLayer" style="display:none">
+	<div class="questViewLayerIn">
+		<div class="layerHeader">
+			<div class="layerHeaderIn">
+				<strong><a href="">퀘스트 상세보기</a></strong>
+				<button type="button" class="icons btnShares" onclick="showModal('detailMod');"><span class="blind">share</span></button>
+				<button type="button" class="icons btnPageClose" ><span class="blind">close </span></button>
+			</div>
+		</div>
+		<div class="questView">
+			<div class="questViewIn">
+				<!-- 작성자 정보 -->
+				<div class="writerInfos">
+					<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+					<div class="user">
+						<strong class="name"><a href="teammate_view.html">Lily Richards</a></strong>
+						<span class="cateItem3"><i class="cates3 iconCate5"></i> IT/제조/기술</span><span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+					</div>
+					<button type="button" class="commonItem follow"><i class="icons iconFollow"></i>팔로우</button>
+					<!-- button type="button" class="commonItem unfollow"><i class="icons iconUnFollow"></i>팔로우</button-->
+				</div>
+				<!-- //작성자 정보 -->
+
+				<!-- 퀘스트 상세 내용 -->
+				<div class="writerQuest">
+					<div class="row">
+						경기도청에서 대학생 대상 팀플<br/>
+						경진대회 한대염.... 
+						<a href="#" class="at">@언니</a 그루그루, 예려니들한테 이야기 했는데.. URL 들어가 보세욤 <br/>
+						URL 들어가 보세욤    http://www.gg.or.kr<br>
+						<span class="hash">#특정단어</span> <span class="hash">#특정단어</span><br/><br/>
+						<img src="../../images/sns/img_dummy2.png" alt=""><br/>
+						<img src="../../images/sns/img_dummy2.png" alt="">
+						<ul class="adds">
+							<li><a href=""><i class="icons iconAddLink"></i> www.teamsquare.com</a></li>
+							<li><a href=""><i class="icons iconAddLink"></i> www.naver.com</a></li>
+						</ul>
+						<ul class="adds">
+							<li><a href=""><i class="icons iconAddFile"></i> 행사소개.ppt</a></li>
+							<li><a href=""><i class="icons iconAddFile"></i> 행사안내.hwp</a></li>
+						</ul>
+						<ul class="adds">
+							<li><a href=""><i class="icons iconAddPosition"></i> 서울시 서초구 방배동</a></li>
+						</ul>
+					</div>
+					<div class="row row2">
+						<ul class="infoIcons">
+							<li class="solo"><i class="icons iconMoney3"></i> 상금 천만원</li>
+							<li class="gray"><i class="icons iconHeart4"></i> 999</li>
+							<li class="red"><i class="icons iconHeart5"></i> 999</li>
+							<li class="blue"><i class="icons iconSave"></i> 담기</li>
+							<li class="purple" onclick="showModal('share');"><i class="icons iconShare5"></i> 999</li>
+						</ul>
+					</div>
+					<div class="row commentForm">
+						<p class="inputs"><input type="text" placeholder="댓글을 남겨주세요."/></p>
+						<button type="button" class="btnCommentWrite">확인</button>
+					</div>
+					<div class="row comment">
+						<div class="commentTit"><i class="icons iconComment"></i> 댓글 <em>5</em></div>
+						<ul class="commentList">
+							<li>
+								<div class="in">
+									<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+									<div class="user">
+										<strong class="name">Hadi Altaf ( Shafi )</strong>
+										<p class="txt">That's really awesome. Please have a look at my new designed Mobile App.</p>
+										<div class="commentMod">
+											<p><textarea name="" id="">That's really awesome. Please have a look at my new designed Mobile App.</textarea></p>
+											<button type="button" class="btnCancelSmall">취소</button> <button type="button" class="btnSaveSmall">저장</button>
+										</div>
+									</div>
+									<div class="etc">
+										<span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+										<button type="button" class="icons btnModComment" onclick="showModal('commentSetting');"></button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="in">
+									<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+									<div class="user">
+										<strong class="name">Hadi Altaf ( Shafi )</strong>
+										<p class="txt">That's really awesome. Please have a look at my new designed Mobile App.</p>
+										<div class="commentMod">
+											<p><textarea name="" id="">That's really awesome. Please have a look at my new designed Mobile App.</textarea></p>
+											<button type="button" class="btnCancelSmall">취소</button> <button type="button" class="btnSaveSmall">저장</button>
+										</div>
+									</div>
+									<div class="etc">
+										<span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+										<button type="button" class="icons btnModComment" onclick="showModal('commentSetting');"></button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="in">
+									<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+									<div class="user">
+										<strong class="name">Hadi Altaf ( Shafi )</strong>
+										<p class="txt">That's really awesome. Please have a look at my new designed Mobile App.</p>
+										<div class="commentMod">
+											<p><textarea name="" id="">That's really awesome. Please have a look at my new designed Mobile App.</textarea></p>
+											<button type="button" class="btnCancelSmall">취소</button> <button type="button" class="btnSaveSmall">저장</button>
+										</div>
+									</div>
+									<div class="etc">
+										<span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+										<button type="button" class="icons btnModComment" onclick="showModal('commentSetting');"></button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="in">
+									<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+									<div class="user">
+										<strong class="name">Hadi Altaf ( Shafi )</strong>
+										<p class="txt">That's really awesome. Please have a look at my new designed Mobile App.</p>
+										<div class="commentMod">
+											<p><textarea name="" id="">That's really awesome. Please have a look at my new designed Mobile App.</textarea></p>
+											<button type="button" class="btnCancelSmall">취소</button> <button type="button" class="btnSaveSmall">저장</button>
+										</div>
+									</div>
+									<div class="etc">
+										<span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+										<button type="button" class="icons btnModComment" onclick="showModal('commentSetting');"></button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="in">
+									<div class="thumb"><span><i class="icons iconPlusWhite"></i><img src="../../images/sns/img_dummy.png" alt=""></span></div>
+									<div class="user">
+										<strong class="name">Hadi Altaf ( Shafi )</strong>
+										<p class="txt">That's really awesome. Please have a look at my new designed Mobile App.</p>
+										<div class="commentMod">
+											<p><textarea name="" id="">That's really awesome. Please have a look at my new designed Mobile App.</textarea></p>
+											<button type="button" class="btnCancelSmall">취소</button> <button type="button" class="btnSaveSmall">저장</button>
+										</div>
+									</div>
+									<div class="etc">
+										<span class="commonItem"><i class="icons iconTimer"></i> 오늘 오전 11:00</span>
+										<button type="button" class="icons btnModComment" onclick="showModal('commentSetting');"></button>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //퀘스트 상세 내용 -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- //퀘스트 상세보기 -->
+</body>
+</html>
