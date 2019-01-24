@@ -6,10 +6,10 @@
 
 1. publishing
     * pc
-        - https://kooinsung.github.io/11st-SELLERZONE/pc/html/seller/sellerC_v2/
+        - https://kooinsung.github.io/MARKUP/SELLERZONE/pc/html/seller/sellerC_v2/
   
     * mobile
-        - https://kooinsung.github.io/11st-SELLERZONE/m/html/sellercenter/
+        - https://kooinsung.github.io/MARKUP/SELLERZONE/m/html/sellercenter/
 
 2. real
     * pc
