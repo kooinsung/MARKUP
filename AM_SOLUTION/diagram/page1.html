@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title></title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/hyosung_sys.css">
+	<script src="../js/jquery-2.0.2.min.js"></script>
+	<script src="../js/jquery.plugin.js"></script>
+	<script src="../js/hyosung_sys.js"></script>
+</head>
+<body class="rwd">
+<div class="wrap">
+	<!-- header -->
+	<div class="header">
+		<div class="row1">
+			<h1 class="logo"><a href="">효성 AM Solution</a></h1>
+			<div class="util">
+				<span class="user">홍길동님 환영합니다.</span>
+				<a href="" class="alram"><em>3</em></a>
+				<a href="" class="logout">로그아웃</a>
+			</div>
+		</div>
+
+		<!-- 웹 메뉴 -->
+		<div class="row2">
+			<div class="inner">
+				<div class="gnb">
+					<ul>
+						<li class="g1">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>계통도분석</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">설비별라이프사이클관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비별 현황 확인</a></li>
+											<li><a href="">- 이력 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비계층구성정보관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비 기본정보 관리</a></li>
+											<li><a href="">- 부품 기본정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">부품이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">도면관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 도면이력</a></li>
+											<li><a href="">- 도면관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">제고관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 재고현황</a></li>
+											<li><a href="">- 재고관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g2">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>Health Index</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">Summury</a>
+									</li>
+									<li>
+										<a href="" class="depth2">설비별 상세정보</a>
+									</li>
+									<li>
+										<a href="" class="depth2">H.I. Trend</a>
+									</li>
+									<li>
+										<a href="" class="depth2">그룹별 상세점수</a>
+									</li>
+									<li>
+										<a href="" class="depth2">상세데이터 모니터링</a>
+									</li>
+									<li>
+										<a href="" class="depth2">진단결과</a>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g3">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>유지보수전략</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">설비별라이프사이클관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비별 현황 확인</a></li>
+											<li><a href="">- 이력 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비계층구성정보관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비 기본정보 관리</a></li>
+											<li><a href="">- 부품 기본정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">부품이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">도면관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 도면이력</a></li>
+											<li><a href="">- 도면관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">제고관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 재고현황</a></li>
+											<li><a href="">- 재고관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g4">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>자산관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">설비별라이프사이클관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비별 현황 확인</a></li>
+											<li><a href="">- 이력 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비계층구성정보관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비 기본정보 관리</a></li>
+											<li><a href="">- 부품 기본정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">부품이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">도면관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 도면이력</a></li>
+											<li><a href="">- 도면관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">제고관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 재고현황</a></li>
+											<li><a href="">- 재고관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g5">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>작업관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">유지보수스케줄</a>
+										<ul class="depth2List">
+											<li><a href="">- 고객사별 현황 확인</a></li>
+											<li><a href="">- 스케줄 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">작업지시서관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 작업지시서 작성</a></li>
+											<li><a href="">- 작업지시서 관리</a></li>
+											<li><a href="">- 작업지시서 처리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">작업결과서관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 작업결과서 작성</a></li>
+											<li><a href="">- 작업결과서 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">에방진단리포팅</a>
+										<ul class="depth2List">
+											<li><a href="">- 예방진단 필요 체크</a></li>
+											<li><a href="">- 사용자역할설정</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">예측알람서비스</a>
+										<ul class="depth2List">
+											<li><a href="">- 예측알람 옵션 설정</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g6">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>고객관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">고객사관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 고객사 관리</a></li>
+											<li><a href="">- 변전소 관리</a></li>
+											<li><a href="">- 설비/부품 관리</a></li>
+											<li><a href="">- 구매정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">유지보수예상비용</a>
+										<ul class="depth2List">
+											<li><a href="">- 예상비용 계산</a></li>
+											<li><a href="">- 설비단가 관리</a></li>
+											<li><a href="">- 설비기사 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">견적서작성</a>
+										<ul class="depth2List">
+											<li><a href="">- 견적서 작성</a></li>
+											<li><a href="">- 견적서 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">구매프로세스</a>
+										<ul class="depth2List">
+											<li><a href="">- 구매요청서 작성</a></li>
+											<li><a href="">- 구매요청서 관리</a></li>
+											<li><a href="">- 구매요청서 처리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">기초코드관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 공통코드그룹관리</a></li>
+											<li><a href="">- 공통코드관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">생산요청</a>
+										<ul class="depth2List">
+											<li><a href="">- 생산요청서 작성</a></li>
+											<li><a href="">- 생산요청서 관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g7">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>시스템관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">메뉴관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 메뉴리스트</a></li>
+											<li><a href="">- 메뉴생성</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">사용자관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 운영자관리</a></li>
+											<li><a href="">- 고객사사용자관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">권한관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 권한관리</a></li>
+											<li><a href="">- 사용자권한관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">역할(롤)관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 역할(롤)관리</a></li>
+											<li><a href="">- 사용자역할설정</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">기초코드관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 공통코드그룹관리</a></li>
+											<li><a href="">- 공통코드관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">공지사항관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 공지사항</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">접속통계</a>
+										<ul class="depth2List">
+											<li><a href="">- 로그정보</a></li>
+											<li><a href="">- 접속현황</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //웹 메뉴 -->
+
+		<!-- 모바일 메뉴 -->
+		<button type="button" class="btnMobToggle">mobile menu</button>
+		<div class="row3">
+			<div class="util">
+				<span class="user">홍길동님 환영합니다.</span>
+				<a href="" class="logout">로그아웃</a>
+			</div>
+			<div class="gnb">
+				<ul>
+					<li class="g1">
+						<!-- depth1 -->
+						<a href="" class="depth1"><em class="icoMenu"></em>계통도분석</a>
+						<!-- //depth1 -->
+
+						<!-- gnbDepths -->
+						<div class="gnbDepths" style="">
+							<ul>
+								<li>
+									<a href="" class="depth2">설비별라이프사이클관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 설비별 현황 확인</a></li>
+										<li><a href="">- 이력 확인</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">설비계층구성정보관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 설비 기본정보 관리</a></li>
+										<li><a href="">- 부품 기본정보 관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">설비이력관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 유지보수 이력</a></li>
+										<li><a href="">- 정기점검 이력</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">부품이력관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 유지보수 이력</a></li>
+										<li><a href="">- 정기점검 이력</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">도면관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 도면이력</a></li>
+										<li><a href="">- 도면관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">제고관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 재고현황</a></li>
+										<li><a href="">- 재고관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //gnbDepths -->
+					</li>
+					<li class="g2">
+						<!-- depth1 -->
+						<a href="" class="depth1"><em class="icoMenu"></em>Health Index</a>
+						<!-- //depth1 -->
+
+						<!-- gnbDepths -->
+						<div class="gnbDepths" style="">
+							<ul>
+								<li>
+									<a href="" class="depth2">Summury</a>
+								</li>
+								<li>
+									<a href="" class="depth2">설비별 상세정보</a>
+								</li>
+								<li>
+									<a href="" class="depth2">H.I. Trend</a>
+								</li>
+								<li>
+									<a href="" class="depth2">그룹별 상세점수</a>
+								</li>
+								<li>
+									<a href="" class="depth2">상세데이터 모니터링</a>
+								</li>
+								<li>
+									<a href="" class="depth2">진단결과</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //gnbDepths -->
+					</li>
+					<li class="g3">
+						<!-- depth1 -->
+						<a href="" class="depth1"><em class="icoMenu"></em>유지보수전략</a>
+						<!-- //depth1 -->
+
+						<!-- gnbDepths -->
+						<div class="gnbDepths" style="">
+							<ul>
+								<li>
+									<a href="" class="depth2">설비별라이프사이클관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 설비별 현황 확인</a></li>
+										<li><a href="">- 이력 확인</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">설비계층구성정보관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 설비 기본정보 관리</a></li>
+										<li><a href="">- 부품 기본정보 관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">설비이력관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 유지보수 이력</a></li>
+										<li><a href="">- 정기점검 이력</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">부품이력관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 유지보수 이력</a></li>
+										<li><a href="">- 정기점검 이력</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">도면관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 도면이력</a></li>
+										<li><a href="">- 도면관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">제고관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 재고현황</a></li>
+										<li><a href="">- 재고관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //gnbDepths -->
+					</li>
+					<li class="g4">
+						<!-- depth1 -->
+						<a href="" class="depth1"><em class="icoMenu"></em>자산관리</a>
+						<!-- //depth1 -->
+
+						<!-- gnbDepths -->
+						<div class="gnbDepths" style="">
+							<ul>
+								<li>
+									<a href="" class="depth2">설비별라이프사이클관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 설비별 현황 확인</a></li>
+										<li><a href="">- 이력 확인</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">설비계층구성정보관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 설비 기본정보 관리</a></li>
+										<li><a href="">- 부품 기본정보 관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">설비이력관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 유지보수 이력</a></li>
+										<li><a href="">- 정기점검 이력</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">부품이력관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 유지보수 이력</a></li>
+										<li><a href="">- 정기점검 이력</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">도면관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 도면이력</a></li>
+										<li><a href="">- 도면관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">제고관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 재고현황</a></li>
+										<li><a href="">- 재고관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //gnbDepths -->
+					</li>
+					<li class="g5">
+						<!-- depth1 -->
+						<a href="" class="depth1"><em class="icoMenu"></em>작업관리</a>
+						<!-- //depth1 -->
+
+						<!-- gnbDepths -->
+						<div class="gnbDepths" style="">
+							<ul>
+								<li>
+									<a href="" class="depth2">유지보수스케줄</a>
+									<ul class="depth2List">
+										<li><a href="">- 고객사별 현황 확인</a></li>
+										<li><a href="">- 스케줄 확인</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">작업지시서관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 작업지시서 작성</a></li>
+										<li><a href="">- 작업지시서 관리</a></li>
+										<li><a href="">- 작업지시서 처리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">작업결과서관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 작업결과서 작성</a></li>
+										<li><a href="">- 작업결과서 확인</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">에방진단리포팅</a>
+									<ul class="depth2List">
+										<li><a href="">- 예방진단 필요 체크</a></li>
+										<li><a href="">- 사용자역할설정</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">예측알람서비스</a>
+									<ul class="depth2List">
+										<li><a href="">- 예측알람 옵션 설정</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //gnbDepths -->
+					</li>
+					<li class="g6">
+						<!-- depth1 -->
+						<a href="" class="depth1"><em class="icoMenu"></em>고객관리</a>
+						<!-- //depth1 -->
+
+						<!-- gnbDepths -->
+						<div class="gnbDepths" style="">
+							<ul>
+								<li>
+									<a href="" class="depth2">고객사관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 고객사 관리</a></li>
+										<li><a href="">- 변전소 관리</a></li>
+										<li><a href="">- 설비/부품 관리</a></li>
+										<li><a href="">- 구매정보 관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">유지보수예상비용</a>
+									<ul class="depth2List">
+										<li><a href="">- 예상비용 계산</a></li>
+										<li><a href="">- 설비단가 관리</a></li>
+										<li><a href="">- 설비기사 관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">견적서작성</a>
+									<ul class="depth2List">
+										<li><a href="">- 견적서 작성</a></li>
+										<li><a href="">- 견적서 관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">구매프로세스</a>
+									<ul class="depth2List">
+										<li><a href="">- 구매요청서 작성</a></li>
+										<li><a href="">- 구매요청서 관리</a></li>
+										<li><a href="">- 구매요청서 처리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">기초코드관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 공통코드그룹관리</a></li>
+										<li><a href="">- 공통코드관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">생산요청</a>
+									<ul class="depth2List">
+										<li><a href="">- 생산요청서 작성</a></li>
+										<li><a href="">- 생산요청서 관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //gnbDepths -->
+					</li>
+					<li class="g7">
+						<!-- depth1 -->
+						<a href="" class="depth1"><em class="icoMenu"></em>시스템관리</a>
+						<!-- //depth1 -->
+
+						<!-- gnbDepths -->
+						<div class="gnbDepths" style="">
+							<ul>
+								<li>
+									<a href="" class="depth2">메뉴관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 메뉴리스트</a></li>
+										<li><a href="">- 메뉴생성</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">사용자관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 운영자관리</a></li>
+										<li><a href="">- 고객사사용자관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">권한관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 권한관리</a></li>
+										<li><a href="">- 사용자권한관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">역할(롤)관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 역할(롤)관리</a></li>
+										<li><a href="">- 사용자역할설정</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">기초코드관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 공통코드그룹관리</a></li>
+										<li><a href="">- 공통코드관리</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">공지사항관리</a>
+									<ul class="depth2List">
+										<li><a href="">- 공지사항</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="" class="depth2">접속통계</a>
+									<ul class="depth2List">
+										<li><a href="">- 로그정보</a></li>
+										<li><a href="">- 접속현황</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //gnbDepths -->
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="btnMobClose">close</button>
+		</div>
+		<!-- //모바일 메뉴 -->
+	</div>
+	<!-- //header -->
+
+	<!-- content -->
+	<div class="container">
+		<div class="content">
+			<!-- location -->
+			<div class="location">
+				<a href="" class="home">home</a> <em class="bar">></em>
+				<a href="">계통도분석</a> <em class="bar">></em>
+				<a href=""><strong>Polymer</strong></a>
+			</div>
+			<!-- //location -->
+
+			<!-- tab -->
+			<div class="tabs">
+				<ul>
+					<li class="active">
+						<a href="">Polymer</a>
+					</li>
+					<li>
+						<a href="">FCC</a>
+					</li>
+					<li>
+						<a href="">NAC</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //tab -->
+
+			<div class="diagramIndex">
+				<div class="lineCol first">
+					<div class="lineColIn">
+						<div class="titBox">
+							<strong>전체</strong>
+							<ul class="btnLines">
+								<li><a href="" class="active">전체</a></li>
+								<li><a href="">A계통</a></li>
+								<li><a href="">B계통</a></li>
+								<li><a href="">C계통</a></li>
+								<li><a href="">D계통</a></li>
+							</ul>
+						</div>
+						<div class="conts pd10">
+							<!-- table -->
+							<table class="listTb2">
+								<colgroup>
+									<col style="width:50%">
+									<col style="width:50%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th colspan="2">Polymer S/S</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="left">변전소 고장 [f/year]</td>
+										<td class="bleft">1</td>
+									</tr>
+									<tr>
+										<td class="left">ENS system [MHn]</td>
+										<td class="bleft"></td>
+									</tr>
+									<tr>
+										<td class="left">정전비용 [\]</td>
+										<td class="bleft"></td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- //table -->
+						</div>
+					</div>
+				</div>
+				<div class="lineCol second">
+					<div class="lineColIn">
+						<div class="titBox">
+							<strong>자산기본정보</strong>
+							<ul class="btnLines long">
+								<li><a href="" class="active">정전비용</a></li>
+								<li><a href="">고장률</a></li>
+								<li><a href="">ENS</a></li>
+							</ul>
+						</div>
+						<div class="conts pd10">
+							<div class="scrollGraphs">
+								<img src="../img/img_dummy9.png" alt="" >
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="lineCol third">
+					<div class="lineColIn">
+						<div class="titBox">
+							<strong>변전소상태정보</strong>
+						</div>
+						<div class="conts pd10">
+							<div class="scrollGraphs">
+								<img src="../img/img_dummy8.png" alt="" >
+
+								<ul class="items">
+									<li style="top:220px;left:305px;">
+										<a href="javascript:;" class="dot"><em></em></a>
+										<div class="itemLayer">
+											<!-- table -->
+											<table>
+												<colgroup>
+													<col style="width:50%">
+													<col style="width:50%">
+												</colgroup>
+												<thead>
+													<tr>
+														<th colspan="2">부하점별</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="left">연평균부하량</td>
+														<td class="bleft">1</td>
+													</tr>
+													<tr>
+														<td class="left">고장률</td>
+														<td class="bleft"></td>
+													</tr>
+													<tr>
+														<td class="left">ENS</td>
+														<td class="bleft"></td>
+													</tr>
+													<tr>
+														<td class="left" colspan="2">정전비용</td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- //table -->
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="inner">
+			<ul>
+				<li>(04144) 서울특별시 마포구 마포대로 119 (공덕동)</li>
+				<li>Tel : 02-707-7000</li>
+				<li>시스템장애문의 : 02-707-7000</li>
+				<li>팩스 : 02-707-7000</li>
+			</ul>
+			<p>COPYRIGHT© 2011 HYOSUNG. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

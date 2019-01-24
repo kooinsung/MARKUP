@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title></title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/hyosung_sys.css">
+	<script src="../js/jquery-2.0.2.min.js"></script>
+	<script src="../js/jquery.plugin.js"></script>
+	<script src="../js/hyosung_sys.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<div class="header">
+		<div class="row1">
+			<h1 class="logo"><a href="">효성 AM Solution</a></h1>
+			<div class="util">
+				<span class="user">홍길동님 환영합니다.</span>
+				<a href="" class="alram"><em>3</em></a>
+				<a href="" class="logout">로그아웃</a>
+			</div>
+		</div>
+
+		<div class="row2">
+			<div class="inner">
+				<div class="gnb">
+					<ul>
+						<li class="g1">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>계통도분석</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">설비별라이프사이클관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비별 현황 확인</a></li>
+											<li><a href="">- 이력 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비계층구성정보관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비 기본정보 관리</a></li>
+											<li><a href="">- 부품 기본정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">부품이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">도면관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 도면이력</a></li>
+											<li><a href="">- 도면관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">제고관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 재고현황</a></li>
+											<li><a href="">- 재고관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g2">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>Health Index</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">Summury</a>
+									</li>
+									<li>
+										<a href="" class="depth2">설비별 상세정보</a>
+									</li>
+									<li>
+										<a href="" class="depth2">H.I. Trend</a>
+									</li>
+									<li>
+										<a href="" class="depth2">그룹별 상세점수</a>
+									</li>
+									<li>
+										<a href="" class="depth2">상세데이터 모니터링</a>
+									</li>
+									<li>
+										<a href="" class="depth2">진단결과</a>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g3">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>유지보수전략</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">설비별라이프사이클관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비별 현황 확인</a></li>
+											<li><a href="">- 이력 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비계층구성정보관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비 기본정보 관리</a></li>
+											<li><a href="">- 부품 기본정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">부품이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">도면관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 도면이력</a></li>
+											<li><a href="">- 도면관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">제고관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 재고현황</a></li>
+											<li><a href="">- 재고관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g4">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>자산관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">설비별라이프사이클관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비별 현황 확인</a></li>
+											<li><a href="">- 이력 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비계층구성정보관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 설비 기본정보 관리</a></li>
+											<li><a href="">- 부품 기본정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">설비이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">부품이력관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 유지보수 이력</a></li>
+											<li><a href="">- 정기점검 이력</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">도면관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 도면이력</a></li>
+											<li><a href="">- 도면관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">제고관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 재고현황</a></li>
+											<li><a href="">- 재고관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g5">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>작업관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">유지보수스케줄</a>
+										<ul class="depth2List">
+											<li><a href="">- 고객사별 현황 확인</a></li>
+											<li><a href="">- 스케줄 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">작업지시서관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 작업지시서 작성</a></li>
+											<li><a href="">- 작업지시서 관리</a></li>
+											<li><a href="">- 작업지시서 처리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">작업결과서관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 작업결과서 작성</a></li>
+											<li><a href="">- 작업결과서 확인</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">에방진단리포팅</a>
+										<ul class="depth2List">
+											<li><a href="">- 예방진단 필요 체크</a></li>
+											<li><a href="">- 사용자역할설정</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">예측알람서비스</a>
+										<ul class="depth2List">
+											<li><a href="">- 예측알람 옵션 설정</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g6">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>고객관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">고객사관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 고객사 관리</a></li>
+											<li><a href="">- 변전소 관리</a></li>
+											<li><a href="">- 설비/부품 관리</a></li>
+											<li><a href="">- 구매정보 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">유지보수예상비용</a>
+										<ul class="depth2List">
+											<li><a href="">- 예상비용 계산</a></li>
+											<li><a href="">- 설비단가 관리</a></li>
+											<li><a href="">- 설비기사 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">견적서작성</a>
+										<ul class="depth2List">
+											<li><a href="">- 견적서 작성</a></li>
+											<li><a href="">- 견적서 관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">구매프로세스</a>
+										<ul class="depth2List">
+											<li><a href="">- 구매요청서 작성</a></li>
+											<li><a href="">- 구매요청서 관리</a></li>
+											<li><a href="">- 구매요청서 처리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">기초코드관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 공통코드그룹관리</a></li>
+											<li><a href="">- 공통코드관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">생산요청</a>
+										<ul class="depth2List">
+											<li><a href="">- 생산요청서 작성</a></li>
+											<li><a href="">- 생산요청서 관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+						<li class="g7">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>시스템관리</a>
+							<!-- //depth1 -->
+
+							<!-- gnbDepths -->
+							<div class="gnbDepths" style="">
+								<ul>
+									<li>
+										<a href="" class="depth2">메뉴관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 메뉴리스트</a></li>
+											<li><a href="">- 메뉴생성</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">사용자관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 운영자관리</a></li>
+											<li><a href="">- 고객사사용자관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">권한관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 권한관리</a></li>
+											<li><a href="">- 사용자권한관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">역할(롤)관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 역할(롤)관리</a></li>
+											<li><a href="">- 사용자역할설정</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">기초코드관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 공통코드그룹관리</a></li>
+											<li><a href="">- 공통코드관리</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">공지사항관리</a>
+										<ul class="depth2List">
+											<li><a href="">- 공지사항</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="" class="depth2">접속통계</a>
+										<ul class="depth2List">
+											<li><a href="">- 로그정보</a></li>
+											<li><a href="">- 접속현황</a></li>
+										</ul>
+									</li>
+								</ul>
+								<span class="arrow"></span>
+							</div>
+							<!-- //gnbDepths -->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- content -->
+	<div class="container">
+		<div class="content">
+			<!-- location -->
+			<div class="location">
+				<a href="" class="home">home</a> <em class="bar">></em>
+				<a href="">고객사 관리</a> <em class="bar">></em>
+				<a href=""><strong>고객사 관리</strong></a>
+			</div>
+			<!-- //location -->
+
+			<!-- title -->
+			<h2 class="h2">고객사 관리</h2>
+			<!-- //title -->
+
+			<!-- regist -->
+			<div class="regist">
+				<!-- table -->
+				<table class="registTb1">
+					<colgroup>
+						<col style="width:172px">
+						<col style="width:468px">
+						<col style="width:172px">
+						<col style="width:468px">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><em class="star">*</em> 설비 운영 담당자</th>
+							<td><span class="inputs inline" ><input type="text" style="width:268px;"/></span></td>
+							<th>AMS 사용</th>
+							<td>
+								<ul class="radios">
+									<li><input type="radio" id="amsUse_yes" checked="checked" name="amsUse"><label for="amsUse_yes">사용함</label></li>
+									<li><input type="radio" id="amsUse_no" name="ams"><label for="amsUse_no">사용안함</label></li>
+								</ul>
+							</td>
+						</tr>
+
+						<tr>
+							<th>생산제품 유형</th>
+							<td colspan="3"><span class="inputs inline" ><input type="text" style="width:268px;"/></span></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->
+
+				<!-- table -->
+				<table class="listTb1 mt25">
+					<colgroup>
+						<col style="width:285px">
+						<col style="width:150px">
+						<col style="width:413px">
+						<col style="width:211px">
+						<col style="width:180px">
+						<col style="width:41px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>이름</th>
+							<th>부서명</th>
+							<th>이메일</th>
+							<th>전화번호(유선)</th>
+							<th>전화번호(휴대폰)</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+						<tr>
+							<td>담당자명3</td>
+							<td>SK인사3팀</td>
+							<td>leeminsochol1010@naver.com</td>
+							<td>02-2345-0989</td>
+							<td>010-2345-0989</td>
+							<td><button type="button" class="btnDel">delete</button></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->
+			</div>
+
+			<div class="tbBtm">
+				<!-- paging -->
+				<div class="paging">
+					<span>
+						<a href="" class="start">start</a>
+						<a href="" class="prev">prev</a>
+					</span>
+					<ol>
+						<li><a href="" class="active">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">7</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">9</a></li>
+						<li><a href="">10</a></li>
+					</ol>
+					<span>
+						<a href="" class="next">next</a>
+						<a href="" class="end">end</a>
+					</span>
+				</div>
+				<!-- paging -->
+				<div class="btns">
+					<a href="" class="btn short">확인</a><a href="" class="btn short2">취소</a>
+				</div>
+			</div>
+			<!-- //regist -->
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="inner">
+			<ul>
+				<li>(04144) 서울특별시 마포구 마포대로 119 (공덕동)</li>
+				<li>Tel : 02-707-7000</li>
+				<li>시스템장애문의 : 02-707-7000</li>
+				<li>팩스 : 02-707-7000</li>
+			</ul>
+			<p>COPYRIGHT© 2011 HYOSUNG. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

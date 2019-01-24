@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title></title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/hyosung_sys.css">
+	<script src="js/jquery-2.0.2.min.js"></script>
+	<script src="js/jquery.plugin.js"></script>
+	<script src="js/hyosung_sys.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<div class="header">
+		<div class="row1">
+			<h1 class="logo"><a href="">SK 에너지</a></h1>
+			<div class="util">
+				<span class="user">홍길동님 환영합니다.</span>
+				<a href="" class="alram"><em>3</em></a>
+				<a href="" class="logout">로그아웃</a>
+			</div>
+		</div>
+
+		<div class="row2">
+			<div class="inner">
+				<div class="gnb">
+					<ul>
+						<li class="g8">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>점검결과</a>
+							<!-- //depth1 -->
+						</li>
+						<li class="g9">
+							<!-- depth1 -->
+							<a href="" class="depth1"><em class="icoMenu"></em>자료실</a>
+							<!-- //depth1 -->
+						</li>
+						<li class="g10">
+							<!-- depth1 -->
+							<a href="" class="depth1 "><em class="icoMenu"></em>점검관리</a>
+							<!-- //depth1 -->
+						</li>
+						<li class="g7">
+							<!-- depth1 -->
+							<a href="" class="depth1 active"><em class="icoMenu"></em>시스템관리</a>
+							<!-- //depth1 -->
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- content -->
+	<div class="container">
+		<div class="content">
+			<!-- location -->
+			<div class="location">
+				<a href="" class="home">home</a> <em class="bar">></em>
+				<a href="">시스템관리</a> <em class="bar">></em>
+				<a href=""><strong>시스템관리</strong></a>
+			</div>
+			<!-- //location -->
+
+			<!-- title -->
+			<h2 class="h2">시스템관리</h2>
+			<!-- //title -->
+
+			<!-- regist -->
+			<div class="regist">
+				<!-- table -->
+				<table class="registTb1">
+					<colgroup>
+						<col style="width:172px">
+						<col style="width:468px">
+						<col style="width:172px">
+						<col style="width:468px">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><em class="star">*</em> 이름</th>
+							<td>
+								<span class="selects inline" style="width:170px;">
+									<select name="" id="">
+										<option value="">선택하세요</option>
+									</select>
+								</span>
+							</td>
+							<th><em class="star">*</em> 직급</th>
+							<td><span class="inputs inline" ><input type="text" style="width:158px;"/></span></td>
+						</tr>
+
+						<tr>
+							<th><em class="star">*</em> 아이디</th>
+							<td><span class="inputs inline" ><input type="text" style="width:158px;"/></span></td>
+							<th><em class="star">*</em> 팀명</th>
+							<td><span class="inputs inline" ><input type="text" style="width:158px;"/></span></td>
+						</tr>
+
+						<tr>
+							<th><em class="star">*</em> 비밀번호</th>
+							<td><span class="inputs inline" ><input type="text" style="width:158px;"/></span><span class="tip">(영문자, 숫자로만 구성이 가능합니다.)</span></td>
+							<th><em class="star">*</em> 담당업무</th>
+							<td><span class="inputs inline" ><input type="text" style="width:158px;"/></span></td>
+						</tr>
+
+						<tr>
+							<th><em class="star">*</em> 이메일</th>
+							<td><span class="inputs inline" ><input type="text" style="width:158px;"/></span><span class="tip">(최소4글자 이상으로 설정해야 합니다.)</span></td>
+							<th><em class="star">*</em> 사용여부</th>
+							<td>
+								<ul class="radios">
+									<li><input type="radio" id="yes" checked="checked" name="use"><label for="yes">수신</label></li>
+									<li><input type="radio" id="no" name="use"><label for="no">미수신</label></li>
+								</ul>
+							</td>
+						</tr>
+
+						<tr>
+							<th><em class="star">*</em> 전화번호(유선)</th>
+							<td>
+								<span class="inputs inline" ><input type="text" style="width:68px;"/></span>
+								<em class="bar">-</em>
+								<span class="inputs inline" ><input type="text" style="width:68px;"/></span>
+								<em class="bar">-</em>
+								<span class="inputs inline" ><input type="text" style="width:68px;"/></span>
+							</td>
+							<th rowspan="2"><em class="star">*</em> 메뉴별접근제한</th>
+							<td rowspan="2" class="middle">
+								<span class="selects inline" style="width:170px;">
+									<select name="" id="">
+										<option value="">DEFAULT</option>
+									</select>
+								</span>
+							</td>
+						</tr>
+
+						<tr>
+							<th><em class="star">*</em> 전화번호(휴대폰)</th>
+							<td>
+								<span class="inputs inline" ><input type="text" style="width:68px;"/></span>
+								<em class="bar">-</em>
+								<span class="inputs inline" ><input type="text" style="width:68px;"/></span>
+								<em class="bar">-</em>
+								<span class="inputs inline" ><input type="text" style="width:68px;"/></span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //table -->
+			</div>
+
+			<div class="tbBtm">
+				<div class="btns">
+					<a href="" class="btn short">확인</a><a href="" class="btn short2">취소</a>
+				</div>
+			</div>
+			<!-- //regist -->
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="inner">
+			<ul>
+				<li>(04144) 서울특별시 마포구 마포대로 119 (공덕동)</li>
+				<li>Tel : 02-707-7000</li>
+				<li>시스템장애문의 : 02-707-7000</li>
+				<li>팩스 : 02-707-7000</li>
+			</ul>
+			<p>COPYRIGHT© 2011 HYOSUNG. ALL RIGHTS RESERVED.</p>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+
+<!-- 메뉴별접근제한 -->
+<div class="layer big" id="menuAuth">
+	<h1>메뉴별접근제한</h1>
+	<div class="layerIn">
+		<div class="layerBody">
+			<!-- table -->
+			<table class="listTb1">
+				<colgroup>
+					<col style="width:57px">
+					<col style="width:298px">
+					<col style="width:653px">
+					<col style="width:196px">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>선택</th>
+						<th>화면이름</th>
+						<th>설명</th>
+						<th>권한여부</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel1" checked="checked" name="popsel"><label for="popsel1">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse1-1" checked="checked" name="authUse1"><label for="authUse1-1">수신</label></li>
+								<li><input type="radio" id="authUse1-2" name="authUse1"><label for="authUse1-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel2" checked="checked" name="popsel"><label for="popsel2">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse2-1" checked="checked" name="authUse2"><label for="authUse2-1">수신</label></li>
+								<li><input type="radio" id="authUse2-2" name="authUse2"><label for="authUse2-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel3" checked="checked" name="popsel"><label for="popsel3">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse3-1" checked="checked" name="authUse3"><label for="authUse3-1">수신</label></li>
+								<li><input type="radio" id="authUse3-2" name="authUse3"><label for="authUse3-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel4" checked="checked" name="popsel"><label for="popsel4">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse4-1" checked="checked" name="authUse4"><label for="authUse4-1">수신</label></li>
+								<li><input type="radio" id="authUse4-2" name="authUse4"><label for="authUse4-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel5" checked="checked" name="popsel"><label for="popsel5">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse5-1" checked="checked" name="authUse5"><label for="authUse5-1">수신</label></li>
+								<li><input type="radio" id="authUse5-2" name="authUse5"><label for="authUse5-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel6" checked="checked" name="popsel"><label for="popsel6">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse6-1" checked="checked" name="authUse6"><label for="authUse6-1">수신</label></li>
+								<li><input type="radio" id="authUse6-2" name="authUse6"><label for="authUse6-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel7" checked="checked" name="popsel"><label for="popsel7">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse7-1" checked="checked" name="authUse7"><label for="authUse7-1">수신</label></li>
+								<li><input type="radio" id="authUse7-2" name="authUse7"><label for="authUse7-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel8" checked="checked" name="popsel"><label for="popsel8">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse8-1" checked="checked" name="authUse8"><label for="authUse8-1">수신</label></li>
+								<li><input type="radio" id="authUse8-2" name="authUse8"><label for="authUse8-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel9" checked="checked" name="popsel"><label for="popsel9">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse9-1" checked="checked" name="authUse9"><label for="authUse9-1">수신</label></li>
+								<li><input type="radio" id="authUse9-2" name="authUse9"><label for="authUse9-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul class="checks">
+								<li><input type="checkbox" id="popsel10" checked="checked" name="popsel"><label for="popsel10">&nbsp;</label></li>
+							</ul>
+						</td>
+						<td>로그인페이지</td>
+						<td>로그인 페이지 접근 제한 롤</td>
+						<td>
+							<ul class="radios">
+								<li><input type="radio" id="authUse10-1" checked="checked" name="authUse10"><label for="authUse10-1">수신</label></li>
+								<li><input type="radio" id="authUse10-2" name="authUse10"><label for="authUse10-2">미수신</label></li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- //table -->
+			<div class="tbBtm">
+				<!-- paging -->
+				<div class="paging">
+					<span>
+						<a href="" class="start">start</a>
+						<a href="" class="prev">prev</a>
+					</span>
+					<ol>
+						<li><a href="" class="active">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href="">6</a></li>
+						<li><a href="">7</a></li>
+						<li><a href="">8</a></li>
+						<li><a href="">9</a></li>
+						<li><a href="">10</a></li>
+					</ol>
+					<span>
+						<a href="" class="next">next</a>
+						<a href="" class="end">end</a>
+					</span>
+				</div>
+				<!-- paging -->
+			</div>
+		</div>
+	</div>
+	<button type="button" class="close" onclick="hyosungUI.layer.close('menuAuth');return false;">close</button>
+</div>
+<!-- //메뉴별접근제한 -->
+
+<script type="text/javascript">
+	$(function(){
+		 hyosungUI.layer.open('menuAuth');
+	});
+</script>
+</body>
+</html>

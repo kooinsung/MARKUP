@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densityDpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>효성 시스템 IA</title>
+	<style>
+		/* reset */
+		html, body, div, span, amediaet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		    font-size:100%;
+		    vertical-align:baseline;
+		    background:transparent;
+		}
+		
+		body{height:100%;font-family: /*'AppleSDGothicNeo-Light',*/'Roboto','Droid Sans','Malgun Gothic','Helvetica','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림',sans-serif;-webkit-text-size-adjust: none;}
+		body *{	text-shadow: none;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;line-height:0;}
+		ol,ul,li{list-style: none;}
+		table{border-collapse: collapse;border-spacing: 0;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:0;}
+		input,textarea,select,td,th{vertical-align:middle;}
+		hr{display:none;}
+		a{margin:0;padding:0;border:0;background:transparent;text-decoration:none;font-size:100%;color:#000}
+		a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;}
+		em,address{font-style:normal;}
+		fieldset{border:0; vertical-align:top;}
+		button{display:inline-block; font-size:0;margin:0; padding:0; border:none; background:none; text-align:center; vertical-align:middle; white-space:nowrap; cursor:pointer;}
+		.clear{clear:both;}
+		.blind{position:absolute;top:-99999em;left:-99999em;display:block;width:1px;height:1px}
+		
+		.wrap{margin:10px 5px;}
+		.wrap h1{padding-bottom: 10px;border-bottom: 1px solid #888;text-align: center;font-size: 24px;margin-bottom:10px;font-weight:bold;}
+		table.pageList { font:11px/16px Dotum; width:100%; background-color:#999; margin:0 0 30px;text-align:center;}
+		table.pageList th { border-left:1px solid #adb1b3; background-color:#676767; padding:5px;text-align:center; color:#fff; font-size:12px;}
+		table.pageList th:first-child{border-left:0;}
+		table.pageList td { border-bottom:1px solid #adb1b3;border-left:1px solid #adb1b3; padding:5px; vertical-align:top; background-color:#fff;vertical-align:middle;text-align:left;padding-left:10px;}
+		table.pageList td:first-child{border-left:0;text-align:left;padding-left:15px;}
+		table.pageList td.cate{padding-left:5px;background:#ddd;}
+		table.pageList td a:link, a:visited { font-weight:bold; color:#0072dc; text-decoration: none; font-size:12px; }
+		table.pageList td a:hover, a:active { font-weight:bold; color:#0072dc; text-decoration: underline; font-size:12px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<h1>효성 시스템</h1>	
+		
+		<table cellspacing="0" cellpadding="0"  id="tbList1" class="pageList">
+			<colgroup>
+				<col width="" />
+				<col width="" />
+				<col width="" class="third"/>
+			</colgroup>
+			<thead>
+			<tr>
+				<th>카테고리</th>
+				<th>파일명</th>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td colspan="2" class="cate">● 메인</td>
+				</tr>
+				<tr>
+					<td>메인</td>
+					<td>
+						<a href="index.html" target="_blank">index.html(메뉴 7개일 경우)</a><br>
+						<a href="index2.html" target="_blank">index.html(메뉴 6개일 경우)</a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" class="cate">● 로그인</td>
+				</tr>
+				<tr>
+					<td>메인</td>
+					<td><a href="login.html" target="_blank">login.html</a></td>
+				</tr>
+				<tr>
+					<td colspan="2" class="cate">● 서비스 관리</td>
+				</tr>
+				<tr>
+					<td>고객사 사용자 관리</td>
+					<td><a href="service/page1.html" target="_blank">page1.html</a></td>
+				</tr>
+				<tr>
+					<td>고객사 사용자 등록</td>
+					<td><a href="service/page2.html" target="_blank">page2.html</a></td>
+				</tr>
+				<tr>
+					<td>롤 관리</td>
+					<td><a href="service/page3.html" target="_blank">page3.html</a></td>
+				</tr>
+				<tr>
+					<td>롤 등록</td>
+					<td><a href="service/page4.html" target="_blank">page4.html</a></td>
+				</tr>
+				<tr>
+					<td>분류 코드 관리</td>
+					<td><a href="service/page5.html" target="_blank">page5.html</a></td>
+				</tr>
+				<tr>
+					<td>분류 코드 등록</td>
+					<td><a href="service/page6.html" target="_blank">page6.html</a></td>
+				</tr>
+				<tr>
+					<td>공통 코드 관리</td>
+					<td><a href="service/page7.html" target="_blank">page7.html</a></td>
+				</tr>
+				<tr>
+					<td>공통 코드 등록</td>
+					<td><a href="service/page8.html" target="_blank">page8.html</a></td>
+				</tr>
+				<tr>
+					<td>상세 코드 관리</td>
+					<td><a href="service/page9.html" target="_blank">page9.html</a></td>
+				</tr>
+				<tr>
+					<td>상세 코드 등록</td>
+					<td><a href="service/page10.html" target="_blank">page10.html</a></td>
+				</tr>
+				<tr>
+					<td>공지사항 관리</td>
+					<td><a href="service/page11.html" target="_blank">page11.html</a></td>
+				</tr>
+				<tr>
+					<td>공지사항 등록</td>
+					<td><a href="service/page12.html" target="_blank">page12.html</a></td>
+				</tr>
+				<tr>
+					<td>공지사항 상세</td>
+					<td><a href="service/page13.html" target="_blank">page13.html</a></td>
+				</tr>
+				<tr>
+					<td>접속로그</td>
+					<td><a href="service/page14.html" target="_blank">page14.html</a></td>
+				</tr>
+				<tr>
+					<td>웹로그</td>
+					<td><a href="service/page15.html" target="_blank">page15.html</a></td>
+				</tr>
+				<tr>
+					<td>송/수신로그</td>
+					<td><a href="service/page16.html" target="_blank">page16.html</a></td>
+				</tr>
+				<tr>
+					<td>개인정보조회로그</td>
+					<td><a href="service/page17.html" target="_blank">page17.html</a></td>
+				</tr>
+				<tr>
+					<td>접속현황</td>
+					<td><a href="service/page18.html" target="_blank">page18.html</a></td>
+				</tr>
+
+				<tr>
+					<td colspan="2" class="cate">● 고객사 관리</td>
+				</tr>
+				<tr>
+					<td>고객사 관리</td>
+					<td>
+						<a href="client/page1.html" target="_blank">page1.html</a><br>
+						<a href="client/page2.html" target="_blank">page2.html</a><br>
+						<a href="client/page3.html" target="_blank">page3.html</a><br>
+						<a href="client/page4.html" target="_blank">page4.html</a><br>
+						<a href="client/page5.html" target="_blank">page5.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>견적서 관리</td>
+					<td><a href="client/page6.html" target="_blank">page6.html</a></td>
+				</tr>
+				<tr>
+					<td>견적서 작성</td>
+					<td>
+						<a href="client/page7.html" target="_blank">page7.html</a><br>
+						<a href="client/page8.html" target="_blank">page8.html(가,나,다,라,마 항목)</a><br>
+						<a href="client/page9.html" target="_blank">page9.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>견적서</td>
+					<td>
+						<a href="client/page10.html" target="_blank">page10.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>견적서 내역서</td>
+					<td>
+						<a href="client/page12.html" target="_blank">page12.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>자재비 단가 관리</td>
+					<td>
+						<a href="client/page13.html" target="_blank">page13.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>노임 단가 관리</td>
+					<td>
+						<a href="client/page14.html" target="_blank">page14.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>직접 인건비 관리</td>
+					<td>
+						<a href="client/page15.html" target="_blank">page15.html</a><br>
+						<a href="client/page16.html" target="_blank">page16.html</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" class="cate">● 자산 관리</td>
+				</tr>
+				<tr>
+					<td>자산관리 메인</td>
+					<td>
+						<a href="assets/page1.html" target="_blank">page1.html</a><br>
+						<a href="assets/page2.html" target="_blank">page2.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>자산 기본정보</td>
+					<td>
+						<a href="assets/page3.html" target="_blank">page3.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>점검내역</td>
+					<td>
+						<a href="assets/page4.html" target="_blank">page4.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>자료실</td>
+					<td>
+						<a href="assets/page5.html" target="_blank">page5.html</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" class="cate">● 유지보수전략</td>
+				</tr>
+				<tr>
+					<td>유지보수 스케쥴링</td>
+					<td>
+						<a href="maintenance/page1.html" target="_blank">page1.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>유지보수 유지보수 목표설정</td>
+					<td>
+						<a href="maintenance/page2.html" target="_blank">page2.html</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" class="cate">● 계통도분석</td>
+				</tr>
+				<tr>
+					<td>계통도분석</td>
+					<td>
+						<a href="diagram/page1.html" target="_blank">page1.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>노드별 상세내역</td>
+					<td>
+						<a href="diagram/page2.html" target="_blank">page2.html</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" class="cate">● Health Index</td>
+				</tr>
+				<tr>
+					<td>summery</td>
+					<td>
+						<a href="health/page1.html" target="_blank">page1.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>상황별 상세정보</td>
+					<td>
+						<a href="health/page2.html" target="_blank">page2.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>H.I. Trend </td>
+					<td>
+						<a href="health/page3.html" target="_blank">page3.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>그룹별 상세점수</td>
+					<td>
+						<a href="health/page4.html" target="_blank">page4.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>상세테이더 모니터링</td>
+					<td>
+						<a href="health/page5.html" target="_blank">page5.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>진단결과</td>
+					<td>
+						<a href="health/page6.html" target="_blank">page6.html</a>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" class="cate">● 작업관리</td>
+				</tr>
+				<tr>
+					<td>작업지시서</td>
+					<td>
+						<a href="work/page1.html" target="_blank">page1.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>작업지시서 관리</td>
+					<td>
+						<a href="work/page2.html" target="_blank">page2.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>장비선택</td>
+					<td>
+						<a href="work/page3.html" target="_blank">page3.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>전력용 변압기 점검 절차서</td>
+					<td>
+						<a href="work/page4.html" target="_blank">page4.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Check Sheet (본체 내부 정밀점검)</td>
+					<td>
+						<a href="work/page5.html" target="_blank">page5.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>변압기 관리</td>
+					<td>
+						<a href="work/page6.html" target="_blank">page6.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>롤등록</td>
+					<td>
+						<a href="work/page7.html" target="_blank">page7.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>견적서</td>
+					<td>
+						<a href="work/page8.html" target="_blank">page8.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>총괄 내역서</td>
+					<td>
+						<a href="work/page9.html" target="_blank">page9.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>총괄 내역서</td>
+					<td>
+						<a href="work/page10.html" target="_blank">page10.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>GIS 견적 내역서</td>
+					<td>
+						<a href="work/page11.html" target="_blank">page11.html</a>
+					</td>
+				</tr>
+				<tr>
+					<td>GIS 견적 내역서</td>
+					<td>
+						<a href="work/page11.html" target="_blank">page11.html</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>		
+	</div>	
+</body>
+</html>
