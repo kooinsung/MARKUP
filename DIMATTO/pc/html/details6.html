@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1500" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>dimatto</title>
+	<link type="text/css" rel="stylesheet" href="../css/common.css">
+	<link type="text/css" rel="stylesheet" href="../css/dimatto.v1.css">
+	<script type="text/javascript" src="../js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../js/dimatto.v1.js"></script>
+</head>
+
+<body>
+<div class="dmt-wrap">
+	<!-- skip -->
+	<div class="dmt-skinNav">
+		<a href="#dmt-content">Skip to navigation</a>
+	</div>
+	<!-- //skip -->
+
+	<!-- header -->
+	<div class="dmt-header">
+		<div class="dmt-inner">
+			<!-- logo -->
+			<h1 class="dmt-logo"><a href="index.html" class="dmt-sp">dimatto</a></h1>
+			<!-- //logo -->
+
+			<!-- gnb -->
+			<div class="dmt-gnb">
+				<ul>
+					<li class="dmt-depth1"><a href="brand.html">BRAND</a></li>
+					<li class="dmt-depth1"><a href="style.html">STYLE PICK</a></li>
+					<li class="dmt-depth1"><a href="collection.html">COLLECTION</a></li>
+					<li class="dmt-depth1"><a href="now1.html">NOW</a></li>
+				</ul>
+			</div>
+			<!-- //gnb -->
+
+			<!-- util -->
+			<div class="dmt-lang">
+				<ul>
+					<li><a href="../../../en/pc/html/index.html">ENGLISH</a></li>
+					<li><a href="../../../cn/pc/html/index.html">CHINESE</a></li>
+				</ul>
+			</div>
+			<!-- //util -->
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- content -->
+	<div id="dmt-content" class="dmt-content">
+		<div class="dmt-details">
+			<!-- share -->
+			<!--div class="dmt-sns">
+				<ul>
+					<li class="dmt-msg"><a href="" class="dmt-sp">msg</a></li>
+					<li class="dmt-fb"><a href="" class="dmt-sp">facebook</a></li>
+					<li class="dmt-talk"><a href="" class="dmt-sp">kakaotalk</a></li>
+					<li class="dmt-ins"><a href="" class="dmt-sp">instagram</a></li>
+					<li class="dmt-tw"><a href="" class="dmt-sp">twitter</a></li>
+					<li class="dmt-url"><a href="" class="dmt-sp">URL</a></li>
+				</ul>
+			</div!-->
+			<!-- //share -->
+
+			<div class="dmt-detailViews">
+				<div class="dmt-prdsTit">
+					플라워 자수 스카쟌<br />
+					골지 라운드 티<br />
+					메탈 프리츠 스커트
+				</div>
+				<div class="owl-carousel">
+					<img src="../img/details/06/dmt-shop-big-1.png" alt="" style="width:716px;"/>
+					<img src="../img/details/06/dmt-shop-big-2.png" alt="" style="width:716px;"/>
+					<img src="../img/details/06/dmt-shop-big-3.png" alt="" style="width:716px;"/>
+					<img src="../img/details/06/dmt-shop-big-4.png" alt="" style="width:716px;"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- footer -->
+	<div class="dmt-footer">
+		<div class="dmt-footerIn">
+			<div class="dmt-fInfo">
+				DCG Inc.<em class="bar">|</em>대표 : 오승범<em class="bar">|</em>사업자등록번호 : No. 431-88-00293<br>
+				서울 종로구 종로328(창신동330-1) 동대문 빌딩8,9층<br>
+				고객센터 : <strong class="tel">+82-708-7474</strong><em class="bar">|</em>E-mail : <strong class="mail">help@dcgworld.com</strong><br>
+				통신판매업신고번호 : 2016-서울종로-0690
+			</div>
+			<p class="dmt-copyright">Copyright©2016 DCG All rights reserved.</p>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(".owl-carousel").owlCarousel({items: 1});
+		dimattoUI.details.init();
+		$(window).resize(dimattoUI.details.init);
+	});
+</script>
+</body>
+</html>
