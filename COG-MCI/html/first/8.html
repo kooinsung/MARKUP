@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=768, minimal-ui, maximum-scale=1">
+<meta name="format-detection" content="telephone=no" >
+<link rel="apple-touch-icon-precomposed" href="" >
+<link rel="shortcut icon" href="" >
+<title>온라인 인지 훈련</title>
+<link type="text/css" rel="stylesheet" href="../../css/ui.css">
+</head>
+<body>
+<div class="wrap">
+	<div class="training_template">
+		<h1 class="tit"><img src="../../img/first/img_txt6.png" height="51" alt="속담 찾기"></h1>
+		<div class="in_box">
+			<div class="training3">
+				<p class="summery">속담의 빈칸에 알맞은 말을 오른쪽에서 찾아 보세요.</p>
+				<div class="qa_box">
+					<div class="questions">
+						<ul>
+							<li>□ □ □ 에 옷 젖는줄 모른다</li>
+							<li>가지 많은 □ □ 에 바람 잘 날 없다</li>
+							<li>금강산도 □ □ □</li>
+							<li>똥 묻은 □ 가 겨 묻은 □ 나무란다</li>
+							<li>못된 □ □ □ 엉덩이에 뿔난다</li>
+							<li>□ □ 가서 숭늉 찾기</li>
+							<li>서당개 삼년이면 □ □ 을 읊는다</li>
+							<li>오얏나무 아래에서 □ 을 고쳐 쓰지 마라</li>
+							<li>소 팔아 □ 산다</li>
+							<li>□ □ □ □ 도 저 싫으면 그만이다</li>
+						</ul>
+					</div>
+
+					<div class="answers">
+						<ul>
+							<li>
+								<a href="" data-answer="no">장맛비</a>
+								<a href="" data-answer="yes">가랑비</a>
+								<a href="" data-answer="no">소나기</a>
+								<a href="" data-answer="no">이슬비</a>
+							</li>
+							<li>
+								<a href="" data-answer="yes">나무</a>
+								<a href="" data-answer="no">가정</a>
+								<a href="" data-answer="no">나라</a>
+								<a href="" data-answer="no">가게</a>
+							</li>
+							<li>
+								<a href="" data-answer="no">식사중</a>
+								<a href="" data-answer="no">나랏산</a>
+								<a href="" data-answer="yes">식후경</a>
+								<a href="" data-answer="no">멋있다</a>
+							</li>
+							<li>
+								<a href="" data-answer="no">소</a>
+								<a href="" data-answer="yes">개</a>
+								<a href="" data-answer="no">말</a>
+								<a href="" data-answer="no">쥐</a>
+							</li>
+							<li>
+								<a href="" data-answer="yes">송아지</a>
+								<a href="" data-answer="no">망아지</a>
+								<a href="" data-answer="no">강아지</a>
+							</li>
+							<li>
+								<a href="" data-answer="no">소풍</a>
+								<a href="" data-answer="no">뒷간</a>
+								<a href="" data-answer="yes">우물</a>
+								<a href="" data-answer="no">서당</a>
+							</li>
+							<li>
+								<a href="" data-answer="no">시조</a>
+								<a href="" data-answer="no">세월</a>
+								<a href="" data-answer="no">풍류</a>
+								<a href="" data-answer="yes">풍월</a>
+							</li>
+							<li>
+								<a href="" data-answer="no">신</a>
+								<a href="" data-answer="yes">갓</a>
+								<a href="" data-answer="no">옷</a>
+								<a href="" data-answer="no">버선</a>
+							</li>
+							<li>
+								<a href="" data-answer="no">개</a>
+								<a href="" data-answer="no">돼지</a>
+								<a href="" data-answer="yes">닭</a>
+								<a href="" data-answer="no">말</a>
+							</li>
+							<li>
+								<a href="" data-answer="yes">평안감사</a>
+								<a href="" data-answer="no">함흥차사</a>
+								<a href="" data-answer="no">대통령</a>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</div>	
+		</div>
+		<div class="countdown">
+			<span id="timer"></span>
+		</div>
+		<div class="bts"> 
+			<a href="7.html" class="prev"><img src="../../img/common/bt_prev.png" height="65" alt="이전"></a>
+			<a href="9.html" class="next"><img src="../../img/common/bt_next.png" height="65" alt="다음"></a>
+		</div>
+	</div>
+</div>
+
+<!-- 클리어 팝업 -->
+<div class="layers" id="all_clear" style="display:none;">
+	<div class="layer_inner">
+		<p class="txt"><img src="../../img/common/img_pop-txt1.png" alt="모두 찾으셨군요!" height="40"></p>
+		<button type="button" class="bt_next" onclick="location.href='9.html'">다음페이지</button>
+	</div>	
+</div>	
+<!-- //클리어 팝업 -->
+
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.plugin.js?1"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#timer").countdowntimer({
+			minutes : 10,
+			displayFormat : "MS"
+		});
+
+		$('.answers li').each(function(){
+			$(this).find('a').click(function(){
+				var questionType = $(this).data("answer");
+					if(questionType == "yes"){
+						$(this).addClass('yes');
+						if($('.question.yes').length >= 4){
+							UI.layer.open('all_clear');
+						}
+						console.log("정답");
+					}else if(questionType == "no"){
+						$(this).addClass('no');
+					}
+				return false;
+			});
+		});
+	});
+</script>
+</body>
+</html>

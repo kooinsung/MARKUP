@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Memory Game</title>
+        <meta name="description" content="An old school memory game using jquery" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+        <script type="text/javascript">
+        var boxopened = "";
+        var imgopened = "";
+        var count = 0;
+        var found =  0;
+
+        function randomFromTo(from, to){
+            return Math.floor(Math.random() * (to - from + 1) + from);
+        }
+
+        function shuffle() {
+            var children = $("#boxcard").children();
+            var child = $("#boxcard li:first-child");
+
+            var array_img = new Array();
+
+            for (i=0; i<children.length; i++) {
+                array_img[i] = $("#"+child.attr("id")+" img").attr("src");
+                child = child.next();
+            }
+
+            var child = $("#boxcard li:first-child");
+
+            for (z=0; z<children.length; z++) {
+                randIndex = randomFromTo(0, array_img.length - 1);
+
+                // set new image
+                $("#"+child.attr("id")+" img").attr("src", array_img[randIndex]);
+                array_img.splice(randIndex, 1);
+
+                child = child.next();
+            }
+        }
+
+        function resetGame() {
+            shuffle();
+            $("img").hide().removeClass("opacity");
+            count = 0;
+            boxopened = "";
+            imgopened = "";
+            found = 0;
+            return false;
+        }
+
+        $(document).ready(function() {
+            $("img").hide();
+            $("#boxcard li").click(openCard);
+
+            shuffle();
+
+            function openCard() {
+
+                id = $(this).attr("id");
+
+                if ($("#"+id+" img").is(":hidden")) {
+                    $("#boxcard li").unbind("click", openCard);
+
+                    $("#"+id+" img").fadeIn('fast');
+
+                    if (imgopened == "") {
+                        boxopened = id;
+                        imgopened = $("#"+id+" img").attr("src");
+                        setTimeout(function() {
+                            $("#boxcard li").bind("click", openCard)
+                        }, 300);
+                    } else {
+                        currentopened = $("#"+id+" img").attr("src");
+                        if (imgopened != currentopened) {
+                            // close again
+                            setTimeout(function() {
+                                $("#"+id+" img").fadeOut('fast');
+                                $("#"+boxopened+" img").fadeOut('fast');
+                                boxopened = "";
+                                imgopened = "";
+                            }, 400);
+                        } else {
+                            // found
+                            found++;
+                            boxopened = "";
+                            imgopened = "";
+                        }
+
+                        setTimeout(function() {
+                            $("#boxcard li").bind("click", openCard)
+                        }, 400);
+                    }
+
+
+                    count++;
+
+                    if (found == 6) {
+                        alert("end");
+                    }
+                }
+            }
+        });
+        </script>
+        <style type="text/css">
+            #boxcard {
+                margin: 0 auto;
+                width: 680px;
+                z-index: 1;
+            }
+
+            #boxcard li {
+                float: left;
+                width: 152px;
+                height: 215px;
+                background: url("https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/card-back.png") no-repeat 0 0;
+                cursor: pointer;
+                z-index: 2;
+            }
+
+            #boxcard li img {
+                border: none;
+                z-index: 3;
+				height: 215px;
+				margin-left: 1px;
+				width: 150px;
+            }
+
+            .opacity {
+                opacity: .6;
+                filter: alpha(opacity=60);
+            }
+
+            #boxbutton {
+                text-align: center;
+                padding: 20px;
+            }
+          
+
+        </style>
+
+    </head>
+    <body>
+        <div id="boxcard">
+		<ul>
+            <li id="card1"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/01.png"" /></li>
+            <li id="card2"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/02.png"" /></li>
+            <li id="card3"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/03.png"" /></li>
+            <li id="card4"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/04.png"" /></li>
+            <li id="card5"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/05.png"" /></li>
+            <li id="card6"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/06.png"" /></li>
+            <li id="card7"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/01.png"" /></li>
+            <li id="card8"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/02.png"" /></li>
+            <li id="card9"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/03.png"" /></li>
+            <li id="card10"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/04.png"" /></li>
+            <li id="card11"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/05.png"" /></li>
+            <li id="card12"><img src="https://www.boatingsafetymag.com/boatingsafety/sites/boatingsafetymag.com.boatingsafety/assets/jquery_memory_game/img/06.png"" /></li>
+			</ul>
+        </div>
+    </body>
+</html>

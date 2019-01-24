@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=768, minimal-ui, maximum-scale=1">
+<meta name="format-detection" content="telephone=no" >
+<link rel="apple-touch-icon-precomposed" href="" >
+<link rel="shortcut icon" href="" >
+<title>온라인 인지 훈련</title>
+<link type="text/css" rel="stylesheet" href="../../css/ui.css">
+</head>
+<body>
+<div class="wrap">
+	<div class="training_template">
+		<h1 class="tit"><img src="../../img/first/img_txt4.png" height="51" alt="고추장 만들기"></h1>
+		<div class="in_box">
+			<div class="training1">
+				<p class="summery">고추장 만들기를 말씀해 보시면서 순서대로 놓아주세요.<br>&nbsp;</p>
+
+				<div class="gochujang_list">
+					<ul class="random_items">
+						<li data-id="1">엿기름을 미지근한 물에 불려 잘 주무른 후 체에 걸러 준비해 준다.</li>
+						<li data-id="2">체에 거른 엿기름 물에 찹쌀가루를 넣고 살짝 데운뒤 삭힌다.</li>
+						<li data-id="3">삭힌 엿기름 물이 맑아지면 센불에서 한번 끓이고 뚜껑을 열고 조려준다.</li>
+						<li data-id="4">2시간 정도 졸인 엿기름물을 식힌 후 고추가루와 메주가루를 넣는다.</li>
+						<li data-id="5">물엿과 소금물을 넣고 뭉치지 않도록 잘 저어준다.</li>
+						<li data-id="6">완성된 고추장을 항아리에 넣고, 소금으로 잘 덮어주고 뚜껑을 닫는다.</li>
+					</ul>
+				</div>	
+			</div>	
+		</div>
+		<div class="countdown">
+			<span id="timer"></span>
+		</div>
+		<div class="bts"> 
+			<a href="3.html" class="prev"><img src="../../img/common/bt_prev.png" height="65" alt="이전"></a>
+			<a href="5.html" class="next"><img src="../../img/common/bt_next.png" height="65" alt="다음"></a>
+		</div>
+	</div>
+</div>
+
+<!-- 클리어 팝업 -->
+<div class="layers" id="all_clear" style="display:none;">
+	<div class="layer_inner">
+		<p class="txt"><img src="../../img/common/img_pop-txt1.png" alt="모두 찾으셨군요!" height="40"></p>
+		<button type="button" class="bt_next" onclick="location.href='5.html'">다음페이지</button>
+	</div>	
+</div>	
+<!-- //클리어 팝업 -->
+
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.plugin.js?1"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#timer").countdowntimer({
+			minutes : 6,
+			displayFormat : "MS"
+		});
+
+		var parent = $(".random_items");
+		var li = parent.children();
+		while (li.length) {
+			parent.append(li.splice(Math.floor(Math.random() * li.length), 1)[0]);
+		}
+
+		var container = $('.gochujang_list');
+		container.sortable({
+			items : "[data-id]",
+			update : function() {
+				var oldIndex = [1,2,3,4,5,6];
+				var postData2 = container.sortable('toArray', {
+					attribute: 'data-id'
+				});
+				console.log(oldIndex + "/" +  postData2);
+				if(oldIndex.toString() === postData2.toString()){
+					UI.layer.open('all_clear');
+				}
+			}
+		});
+	});
+</script>
+</body>
+</html>

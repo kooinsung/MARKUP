@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=768, minimal-ui, maximum-scale=1">
+<meta name="format-detection" content="telephone=no" >
+<link rel="apple-touch-icon-precomposed" href="" >
+<link rel="shortcut icon" href="" >
+<title>온라인 인지 훈련</title>
+<link type="text/css" rel="stylesheet" href="../../css/ui.css?1">
+</head>
+<body>
+<div class="wrap">
+	<div class="training_template">
+		<h1 class="tit"><img src="../../img/first/img_txt4.png" height="51" alt="고추장 만들기"></h1>
+		<div class="in_box">
+			
+		</div>
+		<div class="countdown">
+			<span id="timer"></span>
+		</div>
+		<div class="bts"> 
+			<a href="4.html" class="prev"><img src="../../img/common/bt_prev.png" height="65" alt="이전"></a>
+			<a href="6.html" class="next"><img src="../../img/common/bt_next.png" height="65" alt="다음"></a>
+		</div>
+	</div>
+</div>
+
+<!-- 클리어 팝업 -->
+<div class="layers" id="all_clear" style="display:none;">
+	<div class="layer_inner">
+		<p class="txt"><img src="../../img/common/img_pop-txt1.png" alt="모두 찾으셨군요!" height="40"></p>
+		<button type="button" class="bt_next" onclick="location.href='6.html'">다음페이지</button>
+	</div>	
+</div>	
+<!-- //클리어 팝업 -->
+
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.plugin.js?1"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#timer").countdowntimer({
+			minutes : 5,
+			displayFormat : "MS"
+		});
+
+		$('.gochujang_list li').each(function(){
+			$(this).find('a').click(function(){
+				var questionType = $(this).data("question");
+					if(questionType == "yes"){
+						$(this).addClass('yes');
+						if($('.question.yes').length >= 5){
+							UI.layer.open('all_clear');
+						}
+						console.log("정답");
+					}else if(questionType == "not"){
+						$(this).addClass('not');
+					}
+				return false;
+			});
+		});
+	});
+</script>
+</body>
+</html>

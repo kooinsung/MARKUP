@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" >
+<meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=768, minimal-ui, maximum-scale=1">
+<meta name="format-detection" content="telephone=no" >
+<link rel="apple-touch-icon-precomposed" href="" >
+<link rel="shortcut icon" href="" >
+<title>온라인 인지 훈련</title>
+<link type="text/css" rel="stylesheet" href="../../css/ui.css?1">
+</head>
+<body>
+<div class="wrap">
+	<div class="training_template">
+		<h1 class="tit"><img src="../../img/first/img_txt7.png" height="51" alt="속담 찾기 복습"></h1>
+		<div class="in_box">
+			<div class="training3">
+				<p class="summery">속담을 말씀 해 보세요.</p>
+				<div class="qa_box">
+					<div class="questions_re">
+						<ul>
+							<li>ㄱㄹㅂ에 옷 젖는줄 모른다</li>
+							<li>가지 많은 ㄴㅁ에 바람 잘 날 없다</li>
+							<li>금강산도 ㅅㅎㄱ</li>
+							<li>똥 묻은 ㄱ가 겨 묻은 ㄱ나무란다</li>
+							<li>못된 ㅅㅇㅈ 엉덩이에 뿔난다</li>
+							<li>ㅇㅁ 가서 숭늉 찾기</li>
+							<li>서당개 삼년이면 ㅍㅇ을 읊는다</li>
+							<li>오얏나무 아래에서 ㄱ을 고쳐 쓰지 마라</li>
+							<li>소 팔아 ㄷ 산다</li>
+							<li>ㅍㅇㄱㅅ도 저 싫으면 그만이다</li>
+						</ul>
+					</div>
+
+				</div>	
+			</div>	
+		</div>
+		<div class="countdown">
+			<span id="timer"></span>
+		</div>
+		<div class="bts"> 
+			<a href="8.html" class="prev"><img src="../../img/common/bt_prev.png" height="65" alt="이전"></a>
+			<a href="../state.html" class="next bt_last"><img src="../../img/common/bt_next.png" height="65" alt="다음"></a>
+		</div>
+	</div>
+</div>
+
+<!-- 클리어 팝업 -->
+<div class="layers" id="all_clear" style="display:none;">
+	<div class="layer_inner">
+		<p class="txt"><img src="../../img/common/img_pop-txt1.png" alt="모두 찾으셨군요!" height="40"></p>
+		<button type="button" class="bt_next" onclick="location.href='.html'">다음페이지</button>
+	</div>	
+</div>	
+<!-- //클리어 팝업 -->
+
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.plugin.js?1"></script>
+<script type="text/javascript" src="../../js/ui.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#timer").countdowntimer({
+			minutes : 4,
+			displayFormat : "MS"
+		});
+
+		$('.bt_last').click(function(){
+			alert("꼭 복습하시고 다음시간에 또 뵈어요");
+			location.href='../state.html?state=before';
+			return false;
+		});
+	});
+</script>
+</body>
+</html>
