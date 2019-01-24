@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>삼양옵틱스 - 회원가입</title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <link rel="shortcut icon" href="../../asset/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../../asset/images/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="../../asset/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../asset/images/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="../../asset/images/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="../../asset/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../asset/css/sy.common.css">
+    <link rel="stylesheet" href="../../asset/css/sy.ui.css">
+    <link rel="stylesheet" href="../../asset/css/sy.ui.hyuna.css">
+    <!--[if lt IE 9]>
+    <script src="../../asset/js/html5shiv.min.js"></script>
+    <link rel="stylesheet" href="../../asset/css/sy.old.css">
+    <![endif]-->
+</head>
+<body>
+<div style="padding:30px;text-align:center;">
+    <button style="font-size:20px;" onclick="SYUI.layer.open('login');return false;">로그인</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('find-id');return false;">아이디 찾기</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-reset');return false;">비밀번호 초기화</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-change');return false;">비밀번호 변경 안내</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('email-success');return false;">이메일 발송 완료</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-change');return false;">ID변경</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('error-msg');return false;">오류 메시지</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('email-auth');return false;">이메일 인증하기</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('email-safe');return false;">이메일 보호</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('account-auth');return false;">계정인증</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-srch-nan');return false;">아이디 찾기 - 일치 회원 정보 X</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-srch-success');return false;">아이디 찾기 - 완료</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-srch-nan2');return false;">아이디 찾기 - 정보 존재 X</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-srch');return false;">비밀번호 찾기</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-srch-nan');return false;">비밀번호 찾기 - 일치 회원 정보 X</button>
+</div>
+
+<!-- 비밀번호 변경 안내 -->
+<div class="sy-layer find-user" id="pw-change">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <article class="find-inner">
+        <div class="find-form">
+            <p class="t1 tit">비밀번호 변경 안내</p>
+
+            <p class="noti-txt"><strong>홍길동</strong>님께서는 비밀번호를 변경 하신지 <br><strong>3</strong>개월이 지났습니다.</p>
+
+            <label for="" class="tit-label">삼양 옵틱스 홈페이지의 안전한 사용 및 개인정보보호를 위해<br>비밀번호를 변경하시기 바랍니다.</label>
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="password" value="aaaaaaaa" placeholder="현재 비밀번호">
+					</span>
+                <span class="input ">
+						<input type="password" value="" placeholder="변경 비밀번호">
+					</span>
+                <span class="input ">
+						<input type="password" value="" placeholder="변경 비밀번호 확인">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">비밀번호 변경하기</a><a href="" class="bt-full gray">다음에
+                변경하기</a></div>
+        </div>
+    </article>
+    <button type="button" class="layer-close" onclick="SYUI.layer.close('pw-change');return false;">close</button>
+</div>
+<!-- //비밀번호 변경 안내 -->
+
+<!-- 비밀번호 초기화 -->
+<div class="sy-layer find-user" id="pw-reset">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <article class="find-inner">
+        <div class="find-tabs">
+            <ul>
+                <li><a href="">Find ID</a></li>
+                <li><a href="" class="selected">Password Reset</a></li>
+            </ul>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">Password를 잊으셨나요 ?<br>아래 정보를 입력해 주세요.</p>
+
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="text" value="홍길동" placeholder="이름">
+					</span>
+                <div class="date">
+						<span class="input">
+							<input type="text" value="" placeholder="년">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="월">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="일">
+						</span>
+                </div>
+                <span class="input">
+						<input type="text" value="" placeholder="휴대폰 번호 (-를 제외한 숫자를 입력해 주세요)">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">Password 찾기</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">휴대폰 인증</p>
+
+            <label for="" class="tit-label">본인 인증 정보를 입력해 주세요.</label>
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="text" value="홍길동" placeholder="이름">
+					</span>
+                <span class="input">
+						<input type="text" value="" placeholder="휴대폰 번호 (-를 제외한 숫자를 입력해 주세요)">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">다음</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">인증 코드 받기</p>
+
+            <div class="find-code">
+                입력하신 <strong>01012345678</strong> 번호로 인증 코드를 보내 드리겠습니다. <br>
+                표준 요금이 부과됩니다.
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">보내기</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">코드 입력</p>
+
+            <div class="find-code">
+                6자리 인증 코드가 포함된 문자 메시지를 방금<br><strong>01012345678</strong>번으로 전송했습니다.
+            </div>
+            <span class="input">
+					<input type="text" value="" placeholder="코드입력">
+				</span>
+
+            <div class="find-bts"><a href="" class="bt-full black">다음</a></div>
+
+            <div class="find-util">
+                <p>코드를 받지 못하셨나요?</p>
+                <a href="">다시 전송하기</a>
+            </div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">아래 정보를 확인하십시오.</p>
+
+            <div class="find-result">
+                <p class="result-num">1개의 ID를 찾았습니다.</p>
+                <span class="result-input"><input type="text" value="beb******@naver.com"></span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">로그인하기</a></div>
+
+            <div class="find-util">
+                <p>찾으신 ID의 비밀번호를 재설정하고 싶으시면 아래 링크를 클릭해주세요.</p>
+                <a href="">비밀번호 재설정</a>
+            </div>
+        </div>
+    </article>
+    <button type="button" class="layer-close" onclick="SYUI.layer.close('pw-reset');return false;">close</button>
+</div>
+<!-- //비밀번호 초기화 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer find-user" id="find-id">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <article class="find-inner">
+        <div class="find-tabs">
+            <ul>
+                <li><a href="" class="selected">Find ID</a></li>
+                <li><a href="">Password Reset</a></li>
+            </ul>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">ID를 잊으셨나요 ?<br>아래 정보를 입력해 주세요.</p>
+
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="text" value="홍길동" placeholder="이름">
+					</span>
+                <div class="date">
+						<span class="input">
+							<input type="text" value="" placeholder="년">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="월">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="일">
+						</span>
+                </div>
+                <span class="input">
+						<input type="text" value="" placeholder="휴대폰 번호 (-를 제외한 숫자를 입력해 주세요)">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">ID 찾기</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">아래 정보를 확인하십시오.</p>
+
+            <div class="find-result">
+                <p class="result-num">1개의 ID를 찾았습니다.</p>
+                <span class="result-input"><input type="text" value="beb******@naver.com"></span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">로그인하기</a></div>
+
+            <div class="find-util">
+                <p>그래도 ID가 기억나지 않을 경우, 본인인증을 통해 ID찾기를 진행해 주세요.</p>
+                <a href="">본인 인증</a>
+
+                <br><br><br>
+
+                <p>신규계정 생성을 희망하시는 경우, 아래 버튼을 클릭해 주세요.</p>
+                <a href="">계정 생성</a>
+            </div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1 fail">실패</p>
+
+            <p class="t2">죄송합니다. 일치하는 정보가 없습니다.<br>귀하의 정보가 올바른지 확인 후 다시 시도하십시오.</p>
+
+            <div class="find-bts"><a href="" class="bt-full black">다시시도</a></div>
+
+            <div class="find-util">
+                <p>그래도 ID가 기억나지 않을 경우, 본인인증을 통해 ID찾기를 진행해 주세요.</p>
+                <a href="">본인 인증</a>
+
+                <br><br><br>
+
+                <p>신규계정 생성을 희망하시는 경우, 아래 버튼을 클릭해 주세요.</p>
+                <a href="">계정 생성</a>
+            </div>
+        </div>
+    </article>
+    <button type="button" class="layer-close" onclick="SYUI.layer.close('find-id');return false;">close</button>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 로그인 -->
+<div class="sy-layer login" id="login">
+    <article class="login-inner">
+        <div class="login-visual">
+            <a href=""><img src="../../asset/images/img_login-visual1.jpg" alt=""></a>
+        </div>
+        <div class="login-form">
+            <h2>Log in</h2>
+
+            <div class="login-inputs">
+					<span class="input active">
+						<input type="text" value="error@groupidd.com" placeholder="아이디 또는 이메일 주소">
+					</span>
+                <span class="input ">
+						<input type="password" value="" placeholder="비밀번호">
+					</span>
+                <span class="check"><input type="checkbox" id="id-save" name="id-save"><label
+                        for="id-save">ID 기억하기</label></span>
+            </div>
+
+            <div class="bot">
+                <img src="../../asset/images/img_bot.jpg" alt="">
+            </div>
+            <p class="error-msg">잘못된 ID, 비밀번호 또는 보안코드가 입력되었습니다.<br>다시 시도해 주세요.</p>
+
+            <div class="login-bts">
+                <div class="bt-link">
+                    <a href="" class="bt-full black">LOGIN</a><a href="" class="bt-fb">Login with Facebook</a>
+                </div>
+                <div class="txt-link">
+                    <a href="">ID 찾기 및 비밀번호 재설정</a><a href="">회원가입</a>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="layer-close" onclick="SYUI.layer.close('login');return false;">close</button>
+    </article>
+</div>
+<!-- //로그인 -->
+
+<!-- 이메일 발송 완료 -->
+<div class="sy-layer join-popup-box" id="email-success">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">이메일 발송 완료</h3>
+    <p class="con">회원가입을 위한 마지막 단계입니다.<br>
+        아래의 이메일 주소로 받은 링크로 이동하세요.</p>
+    <div class="email">hongildong@naver.com</div>
+    <br>
+    <div class="btn"><a href="" class="bt-full black">계정인증</a></div>
+    <ul class="ask">
+        <li>이메일을 찾을 수 없나요?<span><a href="">인증메일 재발송</a></span></li>
+        <li>이메일을 주소를 잘못 입력하셨나요?<span><a href="">이메일 주소변경</a></span></li>
+    </ul>
+</div>
+<!-- //이메일 발송 완료 -->
+
+<!-- ID변경 -->
+<div class="sy-layer join-popup-box" id="id-change">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">ID변경</h3>
+    <p class="con">새 이메일 주소를 입력하세요.<br>
+        이메일 주소를 변경한 후에 다시 로그인해야 합니다.</p>
+    <div class="email-now">현재 이메일 주소 :hongildong@naver.com</div>
+    <div class="email">새 이메일 주소 : <input type="text" value=""></div>
+    <br>
+    <div class="btn"><a href="" class="bt-full black">이메일 주소변경</a></div>
+</div>
+<!-- //ID변경 -->
+
+<!-- 오류 메시지[403] -->
+<div class="sy-layer join-popup-box" id="error-msg">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <div class="error_icon" alt="error icon"></div>
+    <h3 class="page-h3">오류 메시지[403]</h3>
+    <p class="con">죄송합니다. 잘못된 접근으로 요청이 거부되었습니다.<br>
+        질문이 있다면 관리자에게 문의하시기 바랍니다.</p>
+    <div class="btn"><a href="" class="bt-full black">메인으로 이동</a></div>
+</div>
+<!-- //오류 메시지[403] -->
+
+<!-- 이메일 인증하기 -->
+<div class="sy-layer join-popup-box" id="email-auth">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">이메일 인증하기</h3>
+    <p class="con">안녕하세요 고객님,<br>
+        <span>고객님께서는 hongildong@naver.com을 삼양옵틱스 ID로 등록하셨습니다.<br>
+			인증 완료 버튼을 클릭하시면, 삼양옵틱스 인증이 완료됩니다.</span></p>
+
+    <div class="btn"><a href="" class="bt-full black">계정인증</a></div>
+    <div class="con2">
+        <p>삼양옵틱스 계정에 가입한 적이 없으신가요?<br>
+            다른 사용자가 실수로 메일을 잘못 입력했을 수도 있습니다.<br>
+            삼양옵틱스 계정에 가입한 적이 없으시면, 아래 메일 오용 신고 링크를 클릭해주세요.</p>
+        <span class="mymail"><a href="">제 메일을 보호하고 싶습니다.</a></span>
+        <p class="name">- 삼양옵틱스 관리자 -</p>
+    </div>
+    <div class="notic">
+        <p>참고 : 이 메일은 발신 전용이므로 회신하실 수 없습니다.<br>
+            궁금하신 사항은 다음 웹사이트로 문의해 주시기 바랍니다.
+            <span><a href="">웹사이트 바로가기 ></a></span></p>
+    </div>
+</div>
+<!-- //이메일 인증하기 -->
+
+<!-- 이메일 보호하기 -->
+<div class="sy-layer join-popup-box" id="email-safe">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">이메일 보호</h3>
+    <p class="con">아래 계정이 고객님 이메일로 가입한 것을 확인하였습니다.<br>
+        이 계정 사용을 중지하시려면,<br>
+        아래 ‘계정 차단하기’ 버튼을 클릭해 주세요.</p>
+
+    <div class="email">hongildong@naver.com</div>
+    <br>
+    <div class="btn"><a href="" class="bt-full black">계정 차단하기</a></div>
+</div>
+<!-- //이메일 보호하기 -->
+
+<!-- 계정인증 -->
+<div class="sy-layer join-popup-box" id="account-auth">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">계정인증</h3>
+    <p class="con">축하합니다!<br>
+        회원님의 계정이 인증되었습니다.<br>
+        삼양옵틱스의 다양한 서비스를 만나보세요!</p>
+
+    <div class="btn"><a href="" class="bt-full black">로그인하기</a></div>
+    <div class="btn"><a href="" class="bt-full red">메인이동</a></div>
+</div>
+<!-- //계정인증 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer join-popup-box" id="id-srch-nan">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">아이디 찾기</h3>
+    <p class="con">일치하는 회원 정보가 없습니다.</p>
+    <div class="btn"><a href="" class="bt-full black">ID 찾기</a></div>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer join-popup-box" id="id-srch-success">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">아이디 찾기</h3>
+    <p class="con">요청하신 아이디는 <span class="red">bebe***</span> 으로 확인 되었습니다.</p>
+    <div class="btn"><a href="" class="bt-full black">확인</a></div>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer join-popup-box" id="id-srch-nan2">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">아이디 찾기</h3>
+    <p class="con">입력하신 정보와 일치하는 정보가 존재하지 않습니다.<br>
+        다시 한번 확인해 주세요.</p>
+    <div class="btn"><a href="" class="bt-full black">확인</a></div>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 비밀번호 찾기 -->
+<div class="sy-layer join-popup-box" id="pw-srch">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">비밀번호 찾기</h3>
+    <p class="con">비밀번호 재설정을 위한<br>
+        Email이 사용자의 계정으로 전송되었습니다.</p>
+    <div class="email">새 이메일 주소 :hongildong@naver.com</div>
+    <div class="con3">
+        <p>받으신 이메일을 확인하시고 안내에 따라 비밀번호를 재설정하세요.<br>
+            만약 메일을 받지 못하셨다면, 스팸 메일함을 확인해주세요.</p>
+    </div>
+    <div class="btn"><a href="" class="bt-full black">확인</a></div>
+    <div class="con2">
+        <p>이메일을 찾을 수 없나요?</p>
+        <p><span><a href="">인증 메일 재발송</a></span></p>
+    </div>
+</div>
+<!-- //비밀번호 찾기 -->
+
+<!-- 비밀번호 찾기 -->
+<div class="sy-layer join-popup-box" id="pw-srch-nan">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">비밀번호 찾기</h3>
+    <p class="con">입력하신 정보와 일치하는 정보가 존재하지 않습니다.<br>
+        다시 한번 확인해 주세요.</p>
+    <div class="btn"><a href="" class="bt-full black">확인</a></div>
+</div>
+<!-- //비밀번호 찾기 -->
+
+
+<script src="../../asset/js/jquery-1.11.2.min.js"></script>
+<script src="../../asset/js/sy.plugin.js"></script>
+<script src="../../asset/js/sy.ui.js"></script>
+<script>
+    $(document).ready(function () {
+        //SYUI.layer.open('pw-change');
+    });
+</script>
+</body>
+</html>

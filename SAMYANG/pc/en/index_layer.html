@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>삼양옵틱스 - 메인</title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <link rel="shortcut icon" href="../asset/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../asset/images/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="../asset/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../asset/images/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="../asset/images/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="../asset/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../asset/css/sy.common.css">
+    <link rel="stylesheet" href="../asset/css/sy.ui.css">
+    <!--[if lt IE 9]>
+    <script src="../asset/js/html5shiv.min.js"></script>
+    <link rel="stylesheet" href="../asset/css/sy.old.css">
+    <![endif]-->
+</head>
+<body>
+<div class="sy-wrap">
+    <!-- 점검팝업 -->
+    <div class="site-check">
+        <div class="inner">
+            <div class="logo"><a href="">SAMYANG</a></div>
+            <h3 class="page-h3">WE ARE LAUNCHING<br>A BRAND NEW CORPORATE WEBSITE.</h3>
+            <p class="txt">
+                During the renewal process,<br>
+                our website will be temporarily unavailable<br>
+                during the following hours.
+                <br><br>
+                <strong>June 1, 2018, 10:00-17:00 GMT+9 (7 hours)</strong>
+                <br><br>
+                We apologize for any inconvenience caused<br>
+                by this and hope that you enjoy our new website.
+                <br><br>
+                Thank you.
+                <br><br>
+            </p>
+        </div>
+    </div>
+    <!-- //점검팝업 -->
+</div>
+
+<script src="../asset/js/jquery-1.11.2.min.js"></script>
+<script src="../asset/js/sy.plugin.js"></script>
+<script src="../asset/js/sy.ui.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#fullpage').fullpage({
+            anchors: ['keyVisual', 'product', 'contest', 'story', 'support', 'footer'],
+            menu: '#fix-menu',
+            onLeave: function (index, nextIndex, direction) {
+                if (nextIndex == 2 || nextIndex == 3 || nextIndex == 4 || nextIndex == 5 || nextIndex == 6) {
+                    $('.sy-header').addClass("small");
+                } else {
+                    $('.sy-header').removeClass("small");
+                }
+            }
+        });
+
+        //visual
+        var mainVisual = $('.key-visual-slider');
+
+        mainVisual.on('init', function (event, slick) {
+            $(this).find('.slick-slide[data-slick-index="0"]').addClass('up');
+
+        });
+
+        mainVisual.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            $('.visual-s-bt button').hide();
+            $('.visual-s-bt .down').show();
+            $(this).find('.slick-slide[data-slick-index="' + currentSlide + '"]').addClass('up');
+            $(this).find('.slick-slide[data-slick-index="' + nextSlide + '"]').removeClass('up');
+        });
+
+        mainVisual.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            //$(this).find('.slick-slide[data-slick-index="'+nextSlide+'"]').addClass('up');
+            $(this).find('.slick-slide[data-slick-index="' + currentSlide + '"]').removeClass('up');
+        });
+
+        mainVisual.slick({
+            autoplay: true,
+            autoplaySpeed: 5000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            draggable: false,
+            pauseOnDotsHover: true,
+            accessibility: false,
+        });
+
+        $('.visual-s-bt .up').click(function () {
+            $(this).hide();
+            $('.visual-s-bt .down').show();
+            $(this).closest('.slick-slide').addClass('up');
+            return false;
+        });
+
+        $('.visual-s-bt .down').click(function () {
+            $(this).hide();
+            $('.visual-s-bt .up').show();
+            $(this).closest('.slick-slide').removeClass('up');
+            return false;
+        });
+
+        //product
+        var mainPr = $('.main-prd-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: true,
+            dots: false,
+            draggable: false,
+        });
+
+        //contest
+        var mainContest = $('.main-contest-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: true,
+            dots: false,
+            variableWidth: true,
+            infinite: false
+        });
+
+        mainContest.on('wheel', (function (e) {
+            e.preventDefault();
+            if (e.originalEvent.deltaY < 0) {
+                $(this).slick('slickPrev');
+            } else {
+                $(this).slick('slickNext');
+            }
+        }));
+
+
+    });
+</script>
+</body>
+</html>

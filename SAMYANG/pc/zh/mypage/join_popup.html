@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>삼양옵틱스 - 회원가입</title>
+    <meta name="title" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:url" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+    <link rel="shortcut icon" href="../../asset/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="../../asset/images/favicon-16.png" sizes="16x16">
+    <link rel="icon" href="../../asset/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../asset/images/favicon-48.png" sizes="48x48">
+    <link rel="icon" href="../../asset/images/favicon-64.png" sizes="64x64">
+    <link rel="icon" href="../../asset/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../asset/css/sy.common.css">
+    <link rel="stylesheet" href="../../asset/css/sy.ui.css">
+    <link rel="stylesheet" href="../../asset/css/sy.ui.hyuna.css">
+    <!--[if lt IE 9]>
+    <script src="../../asset/js/html5shiv.min.js"></script>
+    <link rel="stylesheet" href="../../asset/css/sy.old.css">
+    <![endif]-->
+</head>
+<body>
+<div style="padding:30px;text-align:center;">
+    <button style="font-size:20px;" onclick="SYUI.layer.open('login');return false;">로그인</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('find-id');return false;">아이디 찾기</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-reset');return false;">비밀번호 초기화</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-change');return false;">비밀번호 변경 안내</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('email-success');return false;">이메일 발송 완료</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-change');return false;">ID변경</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('error-msg');return false;">오류 메시지</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('email-auth');return false;">이메일 인증하기</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('email-safe');return false;">이메일 보호</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('account-auth');return false;">계정인증</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-srch-nan');return false;">아이디 찾기 - 일치 회원 정보 X</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-srch-success');return false;">아이디 찾기 - 완료</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('id-srch-nan2');return false;">아이디 찾기 - 정보 존재 X</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-srch');return false;">비밀번호 찾기</button>
+    <br><br>
+    <button style="font-size:20px;" onclick="SYUI.layer.open('pw-srch-nan');return false;">비밀번호 찾기 - 일치 회원 정보 X</button>
+</div>
+
+<!-- 비밀번호 변경 안내 -->
+<div class="sy-layer find-user" id="pw-change">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <article class="find-inner">
+        <div class="find-form">
+            <p class="t1 tit">密码重置向导</p>
+
+            <p class="noti-txt"><strong>Gildong Hong</strong>用户已有3个月以上未修改密码。</p>
+
+            <label for="" class="tit-label">为保证您安全使用三阳光学公司网站以及确保您的个人信息安全，建议您修改密码。</label>
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="password" value="aaaaaaaa" placeholder="请输入当前密码">
+					</span>
+                <span class="input ">
+						<input type="password" value="" placeholder="请输入新的密码">
+					</span>
+                <span class="input ">
+						<input type="password" value="" placeholder="请再次输入新的密码">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">修改密码</a><a href="" class="bt-full gray">下次再说</a>
+            </div>
+        </div>
+    </article>
+    <button type="button" class="layer-close" onclick="SYUI.layer.close('pw-change');return false;">close</button>
+</div>
+<!-- //비밀번호 변경 안내 -->
+
+<!-- 비밀번호 초기화 -->
+<div class="sy-layer find-user" id="pw-reset">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <article class="find-inner">
+        <div class="find-tabs">
+            <ul>
+                <li><a href="">Find ID</a></li>
+                <li><a href="" class="selected">Password Reset</a></li>
+            </ul>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">是否忘记密码？<br>请输入下列信息。</p>
+
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="text" value="" placeholder="姓名">
+					</span>
+                <div class="date">
+						<span class="input">
+							<input type="text" value="" placeholder="年">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="月">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="日">
+						</span>
+                </div>
+                <span class="input">
+						<input type="text" value="" placeholder="手机号码（请去掉“-”符号，仅输入数字。）">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">找回ID</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">手机实名验证</p>
+
+            <label for="" class="tit-label">请输入身份验证信息。</label>
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="text" value="" placeholder="姓名">
+					</span>
+                <span class="input">
+						<input type="text" value="" placeholder="手机号码（请去掉“-”符号，仅输入数字。）">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">下一步</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">领取验证码</p>
+
+            <div class="find-code">
+                将向您输入的电话号码01012345678发送验证码。<br>短信将收取基本费用。
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">发送</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">输入验证码</p>
+
+            <div class="find-code">
+                已向您的手机01012345678发送了6位验证码短信。
+            </div>
+            <span class="input">
+					<input type="text" value="" placeholder="输入验证码">
+				</span>
+
+            <div class="find-bts"><a href="" class="bt-full black">下一步</a></div>
+
+            <div class="find-util">
+                <p>还没收到短信验证码？</p>
+                <a href="">重新发送</a>
+            </div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">请确认下列信息。</p>
+
+            <div class="find-result">
+                <p class="result-num">已找到1个ID。</p>
+                <span class="result-input"><input type="text" value="beb******@naver.com"></span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">前往登录界面</a></div>
+
+            <div class="find-util">
+                <p>若您想重新设置该ID的密码，请点击下面的按钮。</p>
+                <a href="">重新设置密码</a>
+            </div>
+        </div>
+    </article>
+    <button type="button" class="layer-close" onclick="SYUI.layer.close('pw-reset');return false;">close</button>
+</div>
+<!-- //비밀번호 초기화 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer find-user" id="find-id">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <article class="find-inner">
+        <div class="find-tabs">
+            <ul>
+                <li><a href="" class="selected">Find ID</a></li>
+                <li><a href="">Password Reset</a></li>
+            </ul>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">是否忘记ID？<br>请输入下列信息。</p>
+
+            <div class="find-inputs">
+					<span class="input active">
+						<input type="text" value="" placeholder="姓名">
+					</span>
+                <div class="date">
+						<span class="input">
+							<input type="text" value="" placeholder="年">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="月">
+						</span>
+                    <span class="input">
+							<input type="text" value="" placeholder="日">
+						</span>
+                </div>
+                <span class="input">
+						<input type="text" value="" placeholder="手机号码（请去掉“-”符号，仅输入数字。）">
+					</span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">找回ID</a></div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1">请确认下列信息。</p>
+
+            <div class="find-result">
+                <p class="result-num">已找到1个ID。</p>
+                <span class="result-input"><input type="text" value="beb******@naver.com"></span>
+            </div>
+
+            <div class="find-bts"><a href="" class="bt-full black">前往登录界面</a></div>
+
+            <div class="find-util">
+                <p>若还是想不起ID，请通过身份验证找回ID。</p>
+                <a href="">身份验证</a>
+
+                <br><br><br>
+
+                <p>若想注册新的账号，请点击下面的按钮。</p>
+                <a href="">注册账号</a>
+            </div>
+        </div>
+
+        <div class="find-form">
+            <p class="t1 fail">失败</p>
+
+            <p class="t2">很抱歉！未找到匹配的信息。<br>请先确认您输入的信息是否正确，然后再重新尝试。</p>
+
+            <div class="find-bts"><a href="" class="bt-full black">重新尝试</a></div>
+
+            <div class="find-util">
+                <p>若还是想不起ID，请通过身份验证找回ID。</p>
+                <a href="">身份验证</a>
+
+                <br><br><br>
+
+                <p>若想注册新的账号，请点击下面的按钮。</p>
+                <a href="">注册账号</a>
+            </div>
+        </div>
+    </article>
+    <button type="button" class="layer-close" onclick="SYUI.layer.close('find-id');return false;">close</button>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 로그인 -->
+<div class="sy-layer login" id="login">
+    <article class="login-inner">
+        <div class="login-visual">
+            <a href=""><img src="../../asset/images/img_login-visual1.jpg" alt=""></a>
+        </div>
+        <div class="login-form">
+            <h2>Log in</h2>
+
+            <div class="login-inputs">
+					<span class="input active">
+						<input type="text" value="error@groupidd.com" placeholder="ID或邮箱地址">
+					</span>
+                <span class="input ">
+						<input type="password" value="" placeholder="密码">
+					</span>
+                <span class="check"><input type="checkbox" id="id-save" name="id-save"><label for="id-save">记住ID</label></span>
+            </div>
+
+            <div class="bot">
+                <img src="../../asset/images/img_bot.jpg" alt="">
+            </div>
+            <p class="error-msg">输入的ID、密码或安全码错误。<br>请重新尝试。</p>
+
+            <div class="login-bts">
+                <div class="bt-link">
+                    <a href="" class="bt-full black">LOGIN</a><a href="" class="bt-fb">Login with Facebook</a>
+                </div>
+                <div class="txt-link">
+                    <a href="">找回ID及重置密码</a><a href="">注册会员</a>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="layer-close" onclick="SYUI.layer.close('login');return false;">close</button>
+    </article>
+</div>
+<!-- //로그인 -->
+
+<!-- 이메일 발송 완료 -->
+<div class="sy-layer join-popup-box" id="email-success">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">邮件发送完毕</h3>
+    <p class="con">注册会员的最后一个步骤。<br>
+        请打开下面的邮箱地址收到的邮件并点击链接。</p>
+    <div class="email">hongildong@naver.com</div>
+    <br>
+    <div class="btn"><a href="" class="bt-full black">验证账号</a></div>
+    <ul class="ask">
+        <li>未找到邮件？<span><a href="">重新发送验证邮件</a></span></li>
+        <li>输入了错误的邮箱地址？<span><a href="">变更邮箱地址</a></span></li>
+    </ul>
+</div>
+<!-- //이메일 발송 완료 -->
+
+<!-- ID변경 -->
+<div class="sy-layer join-popup-box" id="id-change">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">变更ID</h3>
+    <p class="con">请输入新的邮箱地址。<br>
+        变更邮箱地址后，需要重新登录。</p>
+    <div class="email-now">当前邮箱地址 : hongildong@naver.com</div>
+    <div class="email">新的邮箱地址 : hongildong@naver.com</div>
+    <br>
+    <div class="btn"><a href="" class="bt-full black">变更邮箱地址</a></div>
+</div>
+<!-- //ID변경 -->
+
+<!-- 오류 메시지[403] -->
+<div class="sy-layer join-popup-box" id="error-msg">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <div class="error_icon" alt="error icon"></div>
+    <h3 class="page-h3">错误信息 [403]</h3>
+    <p class="con">很抱歉！您的登录路径有误，被服务器拒绝。<br>
+        若遇到问题请咨询管理员。</p>
+    <div class="btn"><a href="" class="bt-full black">返回主页</a></div>
+</div>
+<!-- //오류 메시지[403] -->
+
+<!-- 이메일 인증하기 -->
+<div class="sy-layer join-popup-box" id="email-auth">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">验证邮箱地址</h3>
+    <p class="con">尊敬的用户，您好！<br>
+        <span>您已注册邮箱地址hongildong@naver.com为 三阳光学公司网站ID。<br>点击验证按钮即可完成三阳光学公司网站注册账号验证。</span></p>
+
+    <div class="btn"><a href="" class="bt-full black">验证账号</a></div>
+    <div class="con2">
+        <p>您从未注册过三阳光学公司网站账号？<br>
+            也有可能是他人误用您的邮箱注册了账号。 若您从未注册过三阳光学公司网站账号， br>
+            请点击下面的链接进行误用举报。</p>
+        <span class="mymail"><a href="">我要保护我的邮箱</a></span>
+        <p class="name">- 三阳光学管理员 -</p>
+    </div>
+    <div class="notic">
+        <p>注意：此邮件为发信专用，无法回信。若遇到任何问题，<br>
+            请进入下面的网站咨询。
+            <span><a href="">前往网站 ></a></span></p>
+    </div>
+</div>
+<!-- //이메일 인증하기 -->
+
+<!-- 이메일 보호하기 -->
+<div class="sy-layer join-popup-box" id="email-safe">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">保护邮箱</h3>
+    <p class="con">已发现下面的账号以您的邮箱注册。<br>
+        若要禁用该账号，请点击下面的“禁用账号”。</p>
+
+    <div class="email">hongildong@naver.com</div>
+    <br>
+    <div class="btn"><a href="" class="bt-full black">禁用账号</a></div>
+</div>
+<!-- //이메일 보호하기 -->
+
+<!-- 계정인증 -->
+<div class="sy-layer join-popup-box" id="account-auth">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">계정인증</h3>
+    <p class="con">축하합니다!<br>
+        회원님의 계정이 인증되었습니다.<br>
+        삼양옵틱스의 다양한 서비스를 만나보세요!</p>
+
+    <div class="btn"><a href="" class="bt-full black">로그인하기</a></div>
+    <div class="btn"><a href="" class="bt-full red">메인이동</a></div>
+</div>
+<!-- //계정인증 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer join-popup-box" id="id-srch-nan">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">找回ID</h3>
+    <p class="con">未找到匹配的会员信息。</p>
+    <div class="btn"><a href="" class="bt-full black">找回ID</a></div>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer join-popup-box" id="id-srch-success">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">确认ID</h3>
+    <p class="con">按照您输入的信息找到的ID为 <span class="red">bebe***</span></p>
+    <div class="btn"><a href="" class="bt-full black">确认</a></div>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 아이디 찾기 -->
+<div class="sy-layer join-popup-box" id="id-srch-nan2">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">确认ID</h3>
+    <p class="con">未找到与您输入的内容 匹配的会员信息。<br>
+        请再次确认。</p>
+    <div class="btn"><a href="" class="bt-full black">确认</a></div>
+</div>
+<!-- //아이디 찾기 -->
+
+<!-- 비밀번호 찾기 -->
+<div class="sy-layer join-popup-box" id="pw-srch">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">找回密码</h3>
+    <p class="con">已向您的邮箱地址发送一份密码重置邮件。</p>
+    <div class="email">hongildong@naver.com</div>
+    <div class="con3">
+        <p>请查收邮件并按照向导重新设置密码。若没有收到邮件，<br>
+            请查看垃圾邮件箱。</p>
+    </div>
+    <div class="btn"><a href="" class="bt-full black">确认</a></div>
+    <div class="con2">
+        <p>未找到邮件？</p>
+        <p><span><a href="">重新发送验证邮件</a></span></p>
+    </div>
+</div>
+<!-- //비밀번호 찾기 -->
+
+<!-- 비밀번호 찾기 -->
+<div class="sy-layer join-popup-box" id="pw-srch-nan">
+    <div class="logo"><a href="">SAMYANG</a></div>
+    <h3 class="page-h3">找回密码</h3>
+    <p class="con">未找到与您输入的内容 匹配的会员信息。<br>
+        请再次确认。</p>
+    <div class="btn"><a href="" class="bt-full black">确认</a></div>
+</div>
+<!-- //비밀번호 찾기 -->
+
+
+<script src="../../asset/js/jquery-1.11.2.min.js"></script>
+<script src="../../asset/js/sy.plugin.js"></script>
+<script src="../../asset/js/sy.ui.js"></script>
+<script>
+    $(document).ready(function () {
+        //SYUI.layer.open('pw-change');
+    });
+</script>
+</body>
+</html>
