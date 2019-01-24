@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TOZ SPACE SERVICE GROUP</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" >
+	<meta name="Description" content="">
+	<meta name="Keywords" content="">
+	<link type="text/css" rel="stylesheet" href="../../../asset/css/common_m.css">
+	<link type="text/css" rel="stylesheet" href="../../../asset/css/toz_m.css">
+	<script type="text/javascript" src="../../../asset/js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="../../../asset/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../../../asset/js/ui_m.js"></script>
+</head>
+<body class="sub">
+	<!-- 회원가입 -->
+	<div class="memberships">
+		<div class="inner">
+			<h1 class="logo">TOZ - SPACE SERVICEGROUP</h1>
+			<p class="t1">TOZ 통합회원가입을 위한 정보를 입력해주세요.</p>
+			<fieldset>
+				<legend>회원가입</legend>
+				<div class="policy_chk">
+					<div class="all_chk"><span class="checks"><input type="checkbox" id="all_chk" ><label for="all_chk">전체동의</label></span></div>
+					<ul>
+						<li class="policy_item"><span class="checks"><input type="checkbox" id="policy_item1" ><label for="policy_item1">서비스 이용약관 동의<em>(필수)</em> <a href="">[내용보기]</a></label></span></li>
+						<li class="policy_item"><span class="checks"><input type="checkbox" id="policy_item2" ><label for="policy_item2">개인정보 취급방침 동의<em>(필수)</em>  <a href="">[내용보기]</a></label></span></li>
+						<li class="policy_item"><span class="checks"><input type="checkbox" id="policy_item3" ><label for="policy_item3">TOZ Magazine 등 TOZ에서 발송하는 이메일수신동의<em>(선택)</em></label></span></li>
+					</ul>
+				</div>
+
+				<div class="join_info">
+					<label for="user_mail" class="memship_inputs mix">
+						<span class="inputs hidden required"><input type="text" id="user_mail" placeholder="이메일"></span>
+						<button type="button" class="bt_type1">중복확인</button>
+						<p class="validate">이미 가입된 이메일주소 입니다.</p>
+					</label>
+					<label for="user_pw" class="memship_inputs">
+						<span class="inputs hidden required"><input type="password" id="user_pw" placeholder="비밀번호"></span>
+						<p class="validate">6~12자 영문 대/소문자, 숫자 조합 (특수문자 제외)</p>
+					</label>
+					<label for="user_pw_re" class="memship_inputs">
+						<span class="inputs hidden required"><input type="password" id="user_pw_re" placeholder="비밀번호 확인"></span>
+						<p class="validate">입력된 비밀번호가 다릅니다.</p>
+					</label>
+				</div>
+
+				<div class="join_info">
+					<label for="user_name" class="memship_inputs">
+						<span class="inputs hidden required"><input type="text" id="user_name" placeholder="이름"></span>
+						<p class="validate">이름을 입력해주세요.</p>
+					</label>
+					<div class="b_day">
+						<div class="col">
+							<label for="user_b_day1" class="memship_inputs">
+								<span class="inputs hidden required"><input type="text" id="user_b_day1" placeholder="생년 4자리" pattern="[0-9]*" max="9999"></span>
+							</label>
+						</div>
+						<div class="col">
+							<label for="user_b_day2" class="memship_selects">
+								<span class="selects">
+									<select name="" id="user_b_day2">
+										<option value="월">월</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</span>
+							</label>
+						</div>
+						<div class="col">
+							<label for="user_b_day3" class="memship_inputs">
+								<span class="inputs hidden"><input type="text" id="user_b_day3" placeholder="일" pattern="[0-9]*" max="9999"></span>
+							</label>
+						</div>
+						<p class="validate">생년월일을 입력해주세요.</p>
+					</div>
+					<div class="auth">
+						<label for="user_auth2" class="memship_inputs mix">
+							<span class="inputs num_type hidden"><input type="text" id="user_auth2" placeholder="휴대전화" pattern="[0-9]*" max="9999"></span>
+							<button type="button" class="bt_type1">인증번호발송</button>
+							<p class="validate">휴대전화 번호를 입력해주세요.</p>
+						</label>
+					</div>
+					<label for="user_auth3" class="memship_inputs mix">
+						<span class="inputs num_type hidden"><input type="text" id="user_auth3" placeholder="인증번호입력" pattern="[0-9]*" max="9999"></span>
+						<button type="button" class="bt_type1">인증완료</button>
+						<p class="validate">인증시간 00:00 남았습니다.</p>
+					</label>
+				</div>
+			</fieldset>
+
+			<div class="bts">
+				<a href="" class="bt_type3">회원가입</a>
+			</div>
+		</div>
+		<!--button type="button" class="close"><span class="blind">닫기</span></button-->
+	</div>
+	<!-- //회원가입 -->
+
+<script type="text/javascript">
+	$(function(){
+	});
+</script>
+</body>
+</html>

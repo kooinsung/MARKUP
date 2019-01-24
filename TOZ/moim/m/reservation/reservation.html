@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>MOIM TOZ</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no" >
+	<meta name="Description" content="">
+	<meta name="Keywords" content="">
+	<link type="text/css" rel="stylesheet" href="../../../asset/css/common_m.css">
+	<link type="text/css" rel="stylesheet" href="../../../asset/css/moim_m.css">
+	<script type="text/javascript" src="../../../asset/js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="../../../asset/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../../../asset/js/ui_m.js"></script>
+</head>
+<body class="sub">
+<!-- skip navigation -->
+<div class="skip_navi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<!--// skip navigation -->
+
+<div class="wrap">
+	<!-- header -->
+	<header id="header" class="header">
+		<h1 class="logo">
+			<a href=""><span class="blind">MOIM TOZ</span></a>
+		</h1>
+
+		<button type="button" class="bt_familysite"><span class="blind">family site</span></button>
+		<div class="layer_familysite">
+			<ul>
+				<li><a href="" class="f1"><span class="blind">STUDY TOZ</span></a></li>
+				<li><a href="" class="f2"><span class="blind">WORK TOZ</span></a></li>
+				<li><a href="" class="f3"><span class="blind">TOZ</span></a></li>
+			</ul>
+		</div>
+
+		<button type="button" class="bt_menu-show"><span class="blind">메뉴 활성화</span></button>
+
+		<button type="button" class="bt_srch-show"><span class="blind">검색 활성화</span></button>
+		<div class="layer_srch">
+			<span class="srch_input"><input type="text" placeholder="지점명 또는 키워드를 입력해주세요."></span>
+			<button type="button" class="bt_srch"><span class="blind">검색</span></button>
+			<button type="button" class="close"><span class="blind">닫기</span></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- 메뉴 -->
+	<section class="side_menu" id="side_menu">
+		<h1 class="logo">
+			<a href=""><span class="blind">MOIM TOZ</span></a>
+		</h1>
+
+		<div class="inner">
+			<div class="util_menu">
+				<ul>
+					<li><a href="">로그인</a></li>
+					<li><a href="">마이토즈</a></li>
+					<li><a href="">로그아웃</a></li>
+				</ul>
+			</div>
+
+			<div class="use_status">
+				<dl>
+					<dt>이용예정</dt>
+					<dd><a href="">1</a></dd>
+				</dl>
+				<dl>
+					<dt>이용중</dt>
+					<dd><a href="">2</a></dd>
+				</dl>
+				<dl>
+					<dt>이용완료</dt>
+					<dd><a href="">10</a></dd>
+				</dl>
+				<dl>
+					<dt>취소/환불</dt>
+					<dd><a href="">0</a></dd>
+				</dl>
+			</div>
+
+			<nav class="menu ">
+				<ul>
+					<li><a href="" class="depth1">지점찾기</a></li>
+					<li><a href="" class="depth1">공간찾기</a></li>
+					<li>
+						<a href="" class="depth1 sub">MOIMTOZ 소개</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="">MOIMTOZ 소개</a></li>
+								<li><a href="">이용방법</a></li>
+								<li><a href="">할인안내</a></li>
+
+							</ul>
+						</div>
+					</li>
+					<li><a href="" class="depth1">기업대상 서비스</a></li>
+					<li><a href="" class="depth1">이벤트</a></li>
+					<li>
+						<a href="" class="depth1 sub">고객센터</a>
+						<div class="depth2">
+							<ul>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">자주하는 질문</a></li>
+								<li><a href="">이메일 문의</a></li>
+								<li><a href="">사업제휴</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="etc_menu">
+				<ul>
+					<li><a href="">회사소개</a></li>
+					<li><a href="">TOZ Membership</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<button type="button" class="close"><span class="blind">닫기</span></button>
+	</section>
+	<!-- //메뉴 -->
+
+	<!-- content -->
+	<div class="container">
+		<section id="content" class="content">
+			<!-- 타이틀 -->
+			<div class="tits tits2">
+				<h2 class="h2"> MOIMTOZ 홍대점 <span>모임공간 최대 3인</span></h2>
+			</div>
+			<!-- //타이틀 -->
+
+			<!-- 예약하기 -->
+			<div class="details">
+				<div class="type2">
+					<!-- 내용 -->
+					<div class="row line">
+						<h4 class="h4">예약날짜</h4>
+						<span class="inputs cal srch_inputs"><input type="text" placeholder="" value="2017.06.08" readonly="readonly"></span>
+						<div class="layer_srching" style="display:none">
+							<strong class="layer_tit">날짜</strong>
+							<div class="layer_ins">
+								<div class="reservation_date" id="reservation_date">
+								</div>
+								<button type="button" class="bt_type1">적용</button>
+							</div>
+							<button type="button" class="close"><span class="blind">닫기</span></button>
+						</div>
+					</div>
+
+					<div class="row line">
+						<h4 class="h4">예약시간</h4>
+						<span class="inputs time srch_inputs"><input type="text" placeholder="" value="00:00" readonly="readonly"></span>
+						<div class="layer_srching" style="display:none;">
+							<strong class="layer_tit">시간</strong>
+							<div class="layer_ins time_ins">
+								<div class="reservation_time">
+									<div class="time_tbs">
+										<div class="time_views">
+											<div class="ins">
+												<dl class="time_item">
+													<dt class="hours">1</dt>
+													<dd class="minutes">
+														<ol>
+															<li class="is_selected">
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">2</dt>
+													<dd class="minutes">
+														<ol>
+															<li class="is_selected">
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_selected">
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">3</dt>
+													<dd class="minutes">
+														<ol>
+															<li>
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">4</dt>
+													<dd class="minutes">
+														<ol>
+															<li class="is_not">
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_not">
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_not">
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_not">
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_not">
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li class="is_not">
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">5</dt>
+													<dd class="minutes">
+														<ol>
+															<li>
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">6</dt>
+													<dd class="minutes">
+														<ol>
+															<li>
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">7</dt>
+													<dd class="minutes">
+														<ol>
+															<li>
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">8</dt>
+													<dd class="minutes">
+														<ol>
+															<li>
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">9</dt>
+													<dd class="minutes">
+														<ol>
+															<li>
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+												<dl class="time_item">
+													<dt class="hours">10</dt>
+													<dd class="minutes">
+														<ol>
+															<li>
+																<a href="">
+																	<em>10</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>20</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>30</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>40</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<a href="">
+																	<em>50</em>
+																	<span></span>
+																</a>
+															</li>
+															<li>
+																<em></em>
+																<span></span>
+															</li>
+														</ol>
+													</dd>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<div class="time_infos">
+										<div class="hint">
+											<ul>
+												<li class="is_ok">예약가능</li>
+												<li class="is_not">예약불가</li>
+												<li class="is_selected">선택</li>
+											</ul>
+										</div>
+									</div>
+									<div class="bts two">
+										<span><a href="" class="bt_type2">취소</a></span>
+										<span><a href="" class="bt_type1">선택</a></span>
+									</div>
+								</div>
+							</div>
+							<button type="button" class="close"><span class="blind">닫기</span></button>
+						</div>
+					</div>
+
+					<div class="row line">
+						<h4 class="h4">장비대여</h4>
+						<div class="opt_sels">
+							<div class="col">
+								<span class="selects">
+									<select name="" id="op1">
+										<option value="">노트북</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+									</select>
+								</span>
+								<em>10,000원 / 시간(1개)</em>
+							</div>
+							<div class="col">
+								<span class="selects">
+									<select name="" id="op1">
+										<option value="">빔 프로젝터</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+									</select>
+								</span>
+								<em>10,000원 / 시간(1개)</em>
+							</div>
+							<div class="col">
+								<span class="selects">
+									<select name="" id="op1">
+										<option value="">모니터</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+									</select>
+								</span>
+								<em>무료</em>
+							</div>
+							<div class="col">
+								<span class="selects">
+									<select name="" id="op1">
+										<option value="">CDP/카세트</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+									</select>
+								</span>
+								<em>무료</em>
+							</div>
+							<div class="col">
+								<span class="selects">
+									<select name="" id="op1">
+										<option value="">스피커</option>
+										<option value="">01</option>
+										<option value="">02</option>
+										<option value="">03</option>
+										<option value="">04</option>
+									</select>
+								</span>
+								<em>무료</em>
+							</div>
+						</div>
+					</div>
+
+					<div class="row line">
+						<h4 class="h4">할인혜택</h4>
+						<div class="sale">
+							<ul>
+								<li class="sale_item"><span class="radios"><input type="radio" name="sale_item" id="sale_item1" checked="checked"><label for="sale_item1">얼리버드 - 10%</label></span></li>
+								<li class="sale_item"><span class="radios"><input type="radio" name="sale_item" id="sale_item2" ><label for="sale_item2">학생 - 10%</label></span></li>
+							</ul>
+							<p class="tip">학생할인으로 결제하실 경우 지점에서 학생증, 재학증명서 등의 증빙문서를 제시해야 합니다.</p>
+						</div>
+					</div>
+
+					<div class="row line">
+						<h4 class="h4">기타 요청사항</h4>
+						<div class="etc">
+							<p>대형부스 책상배치 선택</p>
+							<ul>
+								<li class="etc_item">
+									<div>
+										<img src="../../../images/m/common/img_etc1.jpg" alt="">
+										<span class="radios"><input type="radio" name="etc_item" id="etc_item1"><label for="etc_item1">일반배치</label></span>
+									</div>
+								</li>
+								<li class="etc_item">
+									<div>
+										<img src="../../../images/m/common/img_etc2.jpg" alt="">
+										<span class="radios"><input type="radio" name="etc_item" id="etc_item2"><label for="etc_item2">ㄷ자형 배치</label></span>
+									</div>
+								</li>
+								<li class="etc_item">
+									<div>
+										<img src="../../../images/m/common/img_etc3.jpg" alt="">
+										<span class="radios"><input type="radio" name="etc_item" id="etc_item3"><label for="etc_item3">ㅁ자형 배치</label></span>
+									</div>
+								</li>
+								<li class="etc_item">
+									<div>
+										<img src="../../../images/m/common/img_etc4.jpg" alt="">
+										<span class="radios"><input type="radio" name="etc_item" id="etc_item4"><label for="etc_item4">기타요청</label></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="request_txts">
+							<h4 class="h4">요청사항 입력</h4>
+							<span class="textarea">
+								<textarea name="" id=""></textarea>
+							</span>
+						</div>
+					</div>
+
+					<div class="row line">
+						<h4 class="h4">이용 시 유의사항</h4>
+						<ul class="txt_type1">
+							<li>- 부스에서는 흡연을 하실 수 없습니다.</li>
+							<li>- 학생할인으로 결제하실 경우 지점에서 학생증, 재학증명서 등의 증빙문서를 제시해야 합니다.</li>
+							<li>- 건물내 지하 유료주차장 (도장 확인 후 2시간 무료, 10분당 1000원)</li>
+							<li>- 주중,토요일 9시 ~ 23시까지 운영, 이후 시간 차단기 작동</li>
+						</ul>
+					</div>
+
+					<div class="row line">
+						<h4 class="h4">환불규정</h4>
+						<div class="return_rule">
+							<ul class="txt_type1">
+								<li><span>- 이용 10일전</span> <strong>총 이용금액의 100% 환불</strong></li>
+								<li><span>- 이용 9일전</span> <strong>총 이용금액의 90% 환불</strong></li>
+								<li><span>- 이용 8일전</span> <strong>총 이용금액의 80% 환불</strong></li>
+								<li><span>- 이용 7일전</span> <strong>총 이용금액의 70% 환불</strong></li>
+								<li><span>- 이용 6일전</span> <strong>총 이용금액의 60% 환불</strong></li>
+							</ul>
+							<ul class="txt_type1">
+								<li><span>- 이용 5일전</span> <strong>총 이용금액의 60% 환불</strong></li>
+								<li><span>- 이용 4일전</span> <strong>총 이용금액의 50% 환불</strong></li>
+								<li><span>- 이용 3일전</span> <strong>총 이용금액의 40% 환불</strong></li>
+								<li><span>- 이용 2일전</span> <strong>총 이용금액의 30% 환불</strong></li>
+								<li><span>- 이용 1일전</span> <strong>총 이용금액의 20% 환불</strong></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //내용 -->
+
+					<!-- 사이드 -->
+					<div class="side_cols ">
+						<div class="col3">
+							<strong class="pay_tit">결제 예정금액</strong>
+							<div class="pay_info_group">
+								<dl class="txt2">
+									<dt>이용금액</dt>
+									<dd>60,000원 </dd>
+								</dl>
+							</div>
+
+							<!--div class="pay_info_group">
+								<strong class="tit">예약정보</strong>
+								<dl class="txt1">
+									<dt>예약날짜</dt>
+									<dd>2017년 1월 29일 (수)</dd>
+								</dl>
+								<dl class="txt1">
+									<dt>예약시간</dt>
+									<dd>13:00 ~ 15:30 (2시간 30분)</dd>
+								</dl>
+								<dl class="txt1">
+									<dt>모임명</dt>
+									<dd>황태자의 동생 팬들의 모임</dd>
+								</dl>
+								<dl class="txt1">
+									<dt>이용금액</dt>
+									<dd>60,000원 </dd>
+								</dl>
+							</div-->
+
+							<div class="pay_info_group">
+								<strong class="tit">추가옵션</strong>
+								<dl class="txt2">
+									<dt>노트북 1개</dt>
+									<dd>25,000원</dd>
+								</dl>
+								<dl class="txt2">
+									<dt>CDP 1개</dt>
+									<dd>무료</dd>
+								</dl>
+							</div>
+
+							<div class="pay_info_group sale">
+								<strong class="tit">할인적용</strong>
+								<dl class="txt2">
+									<dt>얼리버드(10%)</dt>
+									<dd>-2,500원</dd>
+								</dl>
+							</div>
+
+							<div class="pay_info_group">
+								<strong class="tit">기타요청사항</strong>
+								<dl class="txt2">
+									<dt>책상배치 (ㄷ자형 배치)</dt>
+									<dd>-2,500원</dd>
+								</dl>
+							</div>
+
+							<div class="totals">
+								<strong class="price">20,000</strong><em class="won">원</em>
+								<span class="pay_tip">(할인 미적용, 부가세포함)</span>
+							</div>
+
+							<div class="bts two"> 
+								<a href="" class="gray">이전</a>
+								<a href="" class="red">다음단계</a>
+							</div>
+						</div>
+					</div>
+					<!-- //사이드 -->
+
+					<div class="fix_bts">
+						<span><a href="" class="bt_type2">이전</a></span>
+						<span><a href="" class="bt_type3">다음단계</a></span>
+					</div>
+				</div>
+			</div>
+			<!-- //예약하기 -->
+		</section>
+	</div>
+	<!-- //content -->
+
+	<!-- footer -->
+	<footer id="footer" class="footer">
+		<h1 class="f_logo">
+			<a href=""><span class="blind">Space changes us better</span></a>
+		</h1>
+
+		<nav class="f_menu">
+			<ul>
+				<li><a href="">로그인</a></li>
+				<li><a href="">회사소개</a></li>
+				<li><a href="">프랜차이즈</a></li>
+				<li><a href="">개인정보보호정책</a></li>
+				<li><a href="">이용약관</a></li>
+			</ul>
+		</nav>
+
+		<div class="f_info">
+			서울 마포구 성암로 179 17층 (주)피투피시스템즈<br>대표전화 : 02-312-1317 &nbsp;&nbsp;&nbsp; FAX : 02-363-1026   
+		</div>
+
+		<p class="f_copyright">COPYRIGHTS©2017 P2PSYSTEMS CORP. <br>ALL RIGHTS RESERVED.</p>
+
+		<button type="button" class="bt_top">top</button>
+	</footer>
+	<!-- //footer -->
+</div>
+
+<script type="text/javascript">
+	$(function(){
+	});
+</script>
+</body>
+</html>

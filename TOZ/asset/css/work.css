@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+/* header */
+.header .row{position:relative;width:1180px;height:80px;margin:0 auto;padding:16px 0 0 0;}
+.header .logo{width:152px;}
+.header .logo a{display:block;}
+.header .logo .l1{margin-bottom:19px;width:119px;height:16px;background:url('../../images/pc/work/img_h1-logo1.png') center center no-repeat;}
+.header .logo .l2{width:152px;height:22px;background:url('../../images/pc/work/img_h1-logo2.png') center center no-repeat;}
+.header .depths2.m6 ul{margin-left:290px;}
+.header .srch_layer{position:absolute;bottom:0;right:15px;z-index:1;width:1000px;background:#fff;overflow:hidden;display:none;}
+.header .srch_layer .ins{margin-left:640px;height:44px;border-bottom:1px solid #222;}
+
+/* footer */
+.footer .f_contact{position:absolute;top:32px;right:0;overflow:hidden;}
+.footer .f_contact li{font-size:13px;color:#222;float:left;height:32px;line-height:32px;text-align:center;margin-left:8px;}
+.footer .f_contact li.tel{background:#d7d7d7;width:184px;}
+.footer .f_contact li.kakao{background:#ffcc00;width:220px;}
+.footer .f_contact span{font-family: 'Nunito Sans';font-weight:600;}
+
+/* 메인 */
+.top_banner{height:88px;}
+.top_banner a{display:block;height:88px;text-indent:-9999px;}
+.main .sec_tit{display:block;color:#000;font-size:25px;font-weight:400;}
+.main_visuals {position:relative;z-index:50;}
+.main_visuals .visual_item{height:412px;}
+.main_visuals .visual_txts{width:1180px;position:absolute;top:130px;left:50%;margin-left:-590px;z-index:60;}
+.main_visuals .visual_txts p{font-size:42px;color:#fff;font-weight:300;margin-bottom:30px;}
+.main_visuals .visual_txts a{display:inline-block;margin-right:10px;width:146px;height:34px;line-height:37px;text-align:center;border:1px solid #fff;color:#fff;font-family: 'Nunito Sans';font-weight:700;font-size:13px;}
+.main_visuals .bx-pager {display:none;}
+.main_visuals .bx-controls-direction a{z-index:60;font-size:11px;color:#fff;font-family: 'Nunito Sans';font-weight:700;text-transform: uppercase;position:absolute;top:50%;height:40px;line-height:40px;margin-top:-20px;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.main_visuals .bx-controls-direction a:hover{background-color:rgba(0,0,0,1);}
+.main_visuals .bx-prev{left:0;background:rgba(0,0,0,.4) url('../../images/pc/common/ico_left-arrow.png') 16px center no-repeat;width:57px;padding-left:55px;}
+.main_visuals .bx-next{right:0;background:rgba(0,0,0,.4) url('../../images/pc/common/ico_right-arrow.png') 64px center no-repeat;width:89px;padding-left:23px;}
+.main_info1 {max-width:1180px;margin:0 auto;padding:70px 0;overflow:hidden;border-bottom:1px solid #e8e8e8;text-align:center;}
+.main_info1 .sec_tit {position:relative;padding-top:20px;margin-bottom:30px;}
+.main_info1 .sec_tit:before{content:'';display:block;width:64px;height:2px;background:#000;position:absolute;top:0;left:50%;margin-left:-32px;}
+.main_info1 .sec_tit span{font-family: 'Nunito Sans';font-weight:700;}
+.main_info1 .t1{font-size:13px;color:#666;line-height:180%;}
+.main_info1 .bt_view{font-size:13px;color:#222;display:inline-block;border-bottom:1px solid #999;margin:30px 0 110px 0;}
+.main_info1 .links{overflow:hidden;}
+.main_info1 .links li{display:inline-block;margin:0 20px;text-align:center;}
+.main_info1 .links a{display:block;padding-top:65px;}
+.main_info1 .links .l1{background:url(../../images/pc/work/img_main-icon1.png) center top no-repeat;}
+.main_info1 .links .l2{background:url(../../images/pc/work/img_main-icon2.png) center 10px no-repeat;}
+.main_info1 .links .l3{background:url(../../images/pc/work/img_main-icon3.png) center 10px no-repeat;}
+.main_info1 .links .l4{background:url(../../images/pc/work/img_main-icon4.png) center 10px no-repeat;}
+.main_info1 .links .l5{background:url(../../images/pc/work/img_main-icon5.png) center 10px no-repeat;}
+.main_info1 .links .l6{background:url(../../images/pc/work/img_main-icon6.png) center 10px no-repeat;}
+.main_info1 .links strong{display:block;font-weight:400;font-size:15px;color:#222;margin:30px 0 0 0;}
+.main_info2{width:1180px;margin:0 auto;;overflow:hidden;padding:70px 0;border-bottom:1px solid #e8e8e8;}
+.main_info2 .sec_tit {margin-bottom:20px;}
+.main_info2 ul{overflow:hidden;width:1200px;margin-left:-10px;}
+.main_info2 li{margin:0 10px;float:left;}
+.main_info2 strong{display:block;font-size:17px;color:#000;font-weight:400;margin-top:10px;}
+.main_info2 p{line-height:150%;font-size:13px;color:#666;margin-top:5px;}
+.main_info3{width:1180px;margin:0 auto;;overflow:hidden;padding:70px 0 30px 0;border-bottom:1px solid #e8e8e8;}
+.main_info3 .sec_tit {margin-bottom:20px;}
+.main_info3 ul{overflow:hidden;width:1200px;margin-left:-10px;}
+.main_info3 li{margin:0 10px 40px 10px;float:left;}
+.main_info3 strong{display:block;font-size:17px;color:#000;font-weight:400;margin-top:10px;}
+.main_info3 p{margin-top:5px;}
+.main_info4{width:1180px;margin:0 auto;;overflow:hidden;padding:70px 0;border-bottom:1px solid #e8e8e8;}
+.main_info4 .sec_tit {margin-bottom:20px;}
+.main_info4 ul{overflow:hidden;width:1200px;margin-left:-10px;}
+.main_info4 li{margin:0 10px 40px 10px;float:left;}
+.main_info4 strong{display:block;font-size:17px;color:#000;font-weight:400;margin-top:10px;}
+.main_info4 .bts{width:580px;margin:0 auto;}
+.main_info4 .bts a{height:48px;line-height:48px;font-size:17px;}
+.main_info5{position:relative;max-width:1180px;margin:0 auto 70px auto;padding:70px 0 0 0;overflow:hidden;}
+.main_info5:after{content:""; display:block; clear:both;}
+.main_info5 .sec_tit{margin-bottom:20px;}
+.main_info5 .col{position:relative;width:570px;}
+.main_info5 .main_noti{width:520px;float:left;border-bottom:1px solid #222;}
+.main_info5 .main_noti .lists li{padding-bottom:24px;}
+.main_info5 .main_noti .lists li:first-child{padding-top:3px;}
+.main_info5 .main_noti .lists a{display:block;position:relative;font-size:15px;color:#222;}
+.main_info5 .main_noti .noti_txt{font-size:15px;color:#222;width:490px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.main_info5 .main_noti .noti_date{position:absolute;top:0;right:0;color:#666;font-size:13px;font-family: 'Nunito Sans';font-weight:400;}
+.main_info5 .main_noti .lists a:hover .noti_txt{text-decoration:underline;}
+.main_info5 .more{position:absolute;top:0;right:0;font-size:13px;color:#666;font-family: 'Nunito Sans';font-weight:400;background:url('../../images/pc/common/ico_more-arrow.png') right center no-repeat;padding-right:10px;display:inline-block;}
+.main_info5 .main_consult{float:right;}
+.main_info5 .main_consult .sec_tit{margin-bottom:5px;}
+.main_info5 .main_consult .t1{font-size:13px;color:#666;margin-bottom:10px;}
+.main_info5 .main_consult .t2{font-size:13px;color:#666;line-height:150%;margin:5px 0 0 30px;}
+.main_info5 .main_consult .row{position:relative;overflow:hidden;margin-top:10px;}
+.main_info5 .main_consult .col{width:50%;float:left;}
+.main_info5 .main_consult .col.first .inputs{margin-right:10px;}
+.main_info5 .main_consult .col.second .inputs, .main_info5 .main_consult .col.second .selects{margin-left:10px;}
+.main_info5 .main_consult .inputs{height:45px;}
+.main_info5 .main_consult .inputs input{height:45px;font-size:15px;}
+.main_info5 .main_consult .selects{height:45px;}
+.main_info5 .main_consult .selects select{height:45px;font-size:15px;}
+.main_info5 .main_consult .textareas{margin-top:10px;border:1px solid #222;padding:10px;display:block;}
+.main_info5 .main_consult .textareas textarea{height:60px;font-size:15px;width:100%;border:0;margin:0;background:none;padding:0;}
+.main_info5 .main_consult .checks{margin-top:5px;}
+.main_info5 .main_consult .checks a{border-bottom:1px solid #222;}
+.main_info5 .main_consult button{position:absolute;top:5px;right:0;width:120px;height:40px;line-height:40px;text-align:center;color:#fff;font-size:15px;background:#222;}
+.main_info5 .main_consult ::-webkit-input-placeholder {font-size:15px !important;}
+.main_info5 .main_consult ::-moz-placeholder {font-size:15px !important;}
+.main_info5 .main_consult :-ms-input-placeholder {font-size:15px !important;}
+.main_info5 .main_consult :-moz-placeholder {font-size:15px !important;}
+
+/* 상세 */
+.details .bt_tooltip{width:16px;height:16px;line-height:16px;border-radius:16px;text-align:center;background:#222;font-size:10px;color:#fff;font-family: 'Nunito Sans';font-weight:600;margin-top:-1px;margin-left:3px;}
+.details .tooltip{display:none;position:absolute;z-index:10;margin:18px 0 0 -37px;width:214px;height:43px;line-height:150%;padding:13px 0 0 10px;color:#666;text-align:left;font-size:13px;background:url('../../images/pc/common/bg_tooltip2.png') center center no-repeat;}
+.details .tooltip.active{display:inline-block;}
+.details .detail_visual dl{overflow: visible;position:relative;border-top:1px solid #cac7be;padding:12px 0;}
+.details .detail_visual dl:first-child{border-top:0;}
+.details .detail_visual dt{position:relative;font-size:13px;color:#222;width:70px;position:absolute;top:13px;left:0;padding-left:10px;}
+.details .detail_visual dt:after{content:':';position:absolute;top:0;right:0;}
+.details .detail_visual dd{font-size:13px;color:#222;margin-left:90px;line-height:150%;}
+
+/* 고객센터 */
+.email_consult .t1{background:url('../../images/pc/work/img_email.jpg') center center no-repeat;}
+.email_consult .half .choice2 .selects, .email_consult .half .choice2 .inputs{margin-right:10px;}
+.email_consult .comment{margin:15px auto 15px auto;}
+.email_consult .policy_txt {margin:0;}
+.email_consult .policy_txt p{margin-top:5px;}
+
+/* 공간소개 */
+.room_info {margin-top:-50px;}
+.room_info .h3{font-size:30px;color:#222;font-weight:400;}
+.room_info .t1{font-size:15px;color:#666;line-height:150%;margin:10px 0 30px 0;}
+.room_info .t1 span{color:#da0e36;}
+.room_info .row{width:1180px;margin:0 auto;text-align:center;padding:70px 0 0 0;}
+.room_info .thumb{font-size:0;display:block;}
+.room_info .links2{text-align:left;overflow:hidden;border:1px solid #d5d5d5;border-left:0;border-bottom:0;}
+.room_info .links2 li{width:33.33%;float:left;overflow:hidden;}
+.room_info .links2 a{border-bottom:1px solid #d5d5d5;border-left:1px solid #d5d5d5;display:block;font-size:17px;color:#222;padding:0 30px;height:58px;line-height:58px;background:url('../../images/pc/work/img_room-info-arrow3.png') 355px center no-repeat;}
+.room_info .links2 span{font-size:12px;color:#222;margin-left:5px;font-family: 'Nunito Sans';font-weight:400;}
+.room_info .row1{height:520px;background:url('../../images/pc/work/img_room-info1.jpg') center center no-repeat;overflow:hidden;}
+.room_info .row1 .ins{width:962px;margin:100px auto 0 auto;}
+.room_info .row1 .list{display:inline-block;overflow:hidden;border:1px solid #fff;}
+.room_info .row1 .list li{width:238px;height:216px;float:left;border:1px solid #fff;text-align:center;}
+.room_info .row1 .list a{display:block;height:100%;overflow:hidden;background:url('../../images/pc/work/img_room-info-arrow1.png') center 187px no-repeat;}
+.room_info .row1 .list span{position:relative;font-size:11px;color:#fff;font-family: 'Nunito Sans';font-weight:400;display:block;margin-top:30px;padding-bottom:10px;}
+.room_info .row1 .list span:after{content:'';display:block;width:20px;height:1px;background:rgba(255,255,255,.3);position:absolute;bottom:0;left:50%;margin-left:-10px;}
+.room_info .row1 .list strong{font-size:21px;color:#fff;font-weight:400;display:block;margin:10px 0 30px 0;}
+.room_info .row1 .list p{font-size:13px;color:#fff;font-weight:300;line-height:150%;}
+.room_info .row1 .tips{margin-top:20px;}
+.room_info .row1 .tips li{font-size:13px;color:#a6a6a6;line-height:200%;}
+.room_info .row1 .tips strong{color:#fff;font-weight:400;border-bottom:1px solid #878585}
+.room_info .row2 .default_tabs2 li{width:169px;}
+.room_info .row2 .default_tabs2 li:first-child{width:170px;}
+.room_info .row2 .studios li{position:relative;text-align:left;border:1px solid #d5d5d5;border-top:0;padding:50px;display:none;}
+.room_info .row2 .studios li:first-child{display:block;}
+.room_info .row2 .studios .ins{position:relative;padding-top:80px;border-top:1px solid #d5d5d5;margin-top:80px;}
+.room_info .row2 .studios .ins:first-child{border-top:0;padding-top:0;margin-top:0;}
+.room_info .row2 .studios .tit{position:relative;font-size:25px;color:#222;font-weight:400;display:inline-block;padding:5px 0 10px 0;}
+.room_info .row2 .studios .tit:after{content:'';display:block;width:30px;height:2px;background:#000;position:absolute;bottom:0;left:0;}
+.room_info .row2 .studios .summery{font-size:15px;color:#666;line-height:150%;margin:25px 500px 45px 0;}
+.room_info .row2 .studios .store{font-size:17px;color:#222;display:block;margin-right:450px;}
+.room_info .row2 .studios .go{margin-top:10px;margin-right:5px;font-size:15px;color:#000;display:inline-block;padding-left:20px;width:88px;height:46px;line-height:46px;border:1px solid #666;background:url('../../images/pc/work/img_room-info-arrow2.png') 94px center no-repeat;}
+.room_info .row2 .studios .thumb{position:absolute;top:80px;right:0;}
+.room_info .row2 .studios .ins:first-child .thumb{top:0px;}
+.room_info .row3 .links{text-align:left;overflow:hidden;border:1px solid #d5d5d5;border-top:0;}
+.room_info .row3 .links li{width:50%;float:left;overflow:hidden;}
+.room_info .row3 .links li:first-child a{border-right:1px solid #d5d5d5;}
+.room_info .row3 .links a{display:block;padding:20px 30px 30px 30px;background:url('../../images/pc/work/img_room-info-arrow3.png') 555px 30px no-repeat;}
+.room_info .row3 .links strong{font-size:19px;color:#222;font-weight:400;}
+.room_info .row3 .links p{font-size:15px;color:#666;line-height:150%;margin-top:5px;}
+.room_info .row5 .tip{font-size:13px;color:#666;margin:10px 0 25px 0;text-align:left;}
+.room_info .row5 .tb1 tbody td{border-bottom:1px solid #d5d5d5;text-align:center;line-height:150%;padding:16px 15px 17px 15px;}
+.room_info .row5 .tb1 tbody td.default{color:#666;}
+.room_info .row6{padding:0;margin-top:130px;overflow:hidden;font-size:0;}
+.room_info .row6 .tel{width:392px;border:1px solid #d5d5d5;float:left;padding:90px 0 70px 0;}
+.room_info .row6 .tel .nums{position:relative;font-size:23px;color:#222;margin:15px 0 40px 0;padding-bottom:50px;}
+.room_info .row6 .tel .nums:after{content:'';display:block;width:40px;height:2px;background:#222;position:absolute;bottom:0;left:50%;margin-left:-20px;}
+.room_info .row6 .tel .nums strong{display:block;margin-top:10px;font-size:36px;color:#222;font-family: 'Nunito Sans';font-weight:700}
+.room_info .row6 .tel .kakao{text-align:left;width:180px;margin:0 auto;line-height:29px;font-size:17px;color:#222;background:url('../../images/pc/work/img_room-info3.jpg') left center no-repeat;padding-left:40px;}
+.room_info .row6 .consult{padding:40px 0 0 50px;width:735px;float:left;text-align:left;border-top:1px solid #d5d5d5;}
+.room_info .row6 .consult .tit{display:block;color:#000;font-size:25px;font-weight:400;margin-bottom:10px;}
+.room_info .row6 .consult .ct1{font-size:13px;color:#666;margin-bottom:10px;}
+.room_info .row6 .consult .ct2{font-size:13px;color:#666;line-height:150%;margin:5px 0 0 30px;}
+.room_info .row6 .consult .in_row{position:relative;overflow:hidden;margin-top:10px;}
+.room_info .row6 .consult .col{width:50%;float:left;}
+.room_info .row6 .consult .col.first .inputs{margin-right:10px;}
+.room_info .row6 .consult .col.second .inputs, .room_info .row6 .consult .col.second .selects{margin-left:10px;}
+.room_info .row6 .consult .inputs{height:48px;}
+.room_info .row6 .consult .inputs input{height:48px;}
+.room_info .row6 .consult .selects{height:48px;}
+.room_info .row6 .consult .selects select{height:48px;}
+.room_info .row6 .consult .textareas{margin-top:10px;padding:10px;display:block;border:1px solid #222;}
+.room_info .row6 .consult .textareas textarea{height:65px;font-size:15px;width:100%;border:0;margin:0;background:none;padding:0;}
+.room_info .row6 .consult .checks{margin-top:5px;}
+.room_info .row6 .consult button{position:absolute;top:5px;right:0;width:200px;height:48px;line-height:48px;text-align:center;color:#fff;font-size:17px;background:#222;}
+
+/* 무료체험예약 */
+.free_details{position:relative;width:1180px;margin:0 auto;overflow:hidden;}
+.free_details .img{float:left;width:560px;}
+.free_details .forms{float:right;width:560px;padding-left:60px;}
+.free_details .t1{font-size:23px;color:#222;line-height:140%;margin-top:5px;}
+.free_details .t1 span{color:#db133a;}
+.free_details .tips {margin:20px 0 20px 0;}
+.free_details .tips li{font-size:15px;color:#666;line-height:150%;}
+.free_details .booth{display:block;width:168px;height:46px;line-height:46px;text-align:center;font-size:15px;color:#000;text-align:center;border:1px solid #666;}
+.free_details .booker label{display:block;margin-top:20px;}
+.free_details .booker .inputs{height:48px;}
+.free_details .booker .inputs input{height:48px;}
+.free_details .booker .selects {height:48px;}
+.free_details .booker .selects select{height:48px;}
+.free_details .booker .phone{overflow:hidden;}
+.free_details .policy_txt{margin:20px 0 10px 0;}
+.free_details .policy_txt strong{font-size:15px;color:#222;font-weight:400;}
+.free_details .policy_txt p{font-size:12px;color:#666;margin:10px 0 5px 0;}
+.free_details .policy_txt li{font-size:12px;color:#666;line-height:170%;}
+.free_details .bts{margin-top:50px;}
+
+/* work토즈 소개 */
+.work_introduce .intro_vusial {position:relative;height:440px;text-align:center;}
+.work_introduce .row1{padding:70px 0;width:1180px;margin:0 auto;border-bottom:1px solid #d5d5d5}
+.work_introduce .row1 .t1{font-size:30px;color:#222;line-height:130%;}
+.work_introduce .row1 .t2{font-size:15px;color:#666;line-height:150%;margin-top:30px;}
+.work_introduce .row2{width:1180px;margin:70px auto 0 auto;}
+.work_introduce .row2 .tit{font-size:23px;color:#222;margin-bottom:15px;}
+.work_introduce .row2 .list{width:1200px;margin:0 0 50px -10px;overflow:hidden;font-size:0;}
+.work_introduce .row2 .list li{margin:0 10px 30px 10px;float:left;}
+.work_introduce .row2 .list .thumb{display:block;margin-bottom:10px;}
+.work_introduce .row2 .list strong{font-size:17px;color:#000;font-weight:400;}
+.work_introduce .row2 .list p{font-size:13px;color:#666;line-height:150%;margin-top:5px;}
+.work_introduce .infos{font-size:0;overflow:hidden;}
+.work_introduce .infos .col1{width:50%;float:left;}
+.work_introduce .infos .col2{width:50%;float:right;}
+.work_introduce .infos .col2 dl{margin-left:20px;}
+.work_introduce .infos dl{margin-bottom:60px;}
+.work_introduce .infos dt{font-size:23px;color:#222;margin-bottom:15px;}
+.work_introduce .infos dd{font-size:15px;color:#666;line-height:170%;}
+.work_introduce .infos dd span{margin-left:95px;}
+.work_introduce .infos .tips{clear:both;}
+.work_introduce .infos .tips li{font-size:15px;color:#666;line-height:170%;}

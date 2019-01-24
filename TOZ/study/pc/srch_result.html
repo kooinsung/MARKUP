@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>STUYDY TOZ</title>
+	<link type="text/css" rel="stylesheet" href="../../asset/css/common.css">
+	<link type="text/css" rel="stylesheet" href="../../asset/css/study.css">
+	<script type="text/javascript" src="../../asset/js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="../../asset/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../../asset/js/ui.js"></script>
+	<!--[if lt IE 9]>
+		<link type="text/css" rel="stylesheet" href="../../asset/css/old.css">  
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body class="sub">
+<!-- skip navigation -->
+<div class="skip_navi">
+	<a href="#content">본문 바로가기</a>
+</div>
+<!--// skip navigation -->
+
+<div class="wrap">
+	<!-- header -->
+	<div id="header" class="header">
+		<div class="row">
+			<h1 class="logo">
+				<a href="" class="l1"><span class="blind">TOZ SPACE SERVICEGROUP</span></a>
+				<a href="" class="l2"><span class="blind">STUDY TOZ</span></a>
+			</h1>
+
+			<!-- 유틸 -->
+			<div class="h_util">
+				<ul>
+					<li>
+						<a href="" class="toggle">TOZ 공간서비스</a>
+						<div class="util_layer" >
+							<ul>
+								<li><a href="">MOIM TOZ</a></li>
+								<li><a href="">WORK TOZ</a></li>
+								<li><a href="">TOZ</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="">로그인</a></li>
+					<li><a href="">MY TOZ</a></li>
+				</ul>
+			</div>
+			<!-- //유틸 -->
+
+			<!-- 메뉴 -->
+			<div class="gnb">
+				<ul>
+					<li>
+						<a href=""class="depths1">지점찾기</a>
+					</li>
+					<li >
+						<a href="#m2_depth2" class="depths1">이용안내</a>
+						<div id="m2_depth2" class="depths2 m2">
+							<ul>
+								<li><a href="">이용방법</a></li>
+								<li><a href="">요금제</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href=""class="depths1">무료체험예약</a>
+					</li>
+					<li>
+						<a href=""class="depths1">STUDYTOZ 소개</a>
+					</li>
+					<li>
+						<a href="#m5_depth2"class="depths1">STUDYTOZ 라이프</a>
+						<div id="m5_depth2" class="depths2 m5">
+							<ul>
+								<li><a href="">이벤트</a></li>
+								<li><a href="">STUDYTOZ 사람들</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#m6_depth2"class="depths1">고객센터</a>
+						<div id="m6_depth2" class="depths2 m6">
+							<ul>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">자주하는 질문</a></li>
+								<li><a href="">이메일 문의</a></li>
+								<li><a href="">스터디카드 내역확인</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#m7_depth2"class="depths1">프랜차이즈</a>
+						<div id="m7_depth2" class="depths2 m7">
+							<ul>
+								<li><a href="">STUDYTOZ 투자매력</a></li>
+								<li><a href="">가맹점 개설절차</a></li>
+								<li><a href="">가맹점 인테리어</a></li>
+								<li><a href="">가맹점 본사지원</a></li>
+								<li><a href="">가맹상담 신청</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //메뉴 -->
+
+			<!-- 전체 검색 -->
+			<div class="srch">
+				<div class="srch_layer">
+					<div class="ins"> 
+						<span class="srch_input"><input type="text" placeholder="지점명 또는 키워드를 입력하세요." title="검색어 입력"></span>
+						<button type="button" title="검색" class="bt_srch"><span class="blind">검색</span></button>
+						<button type="button" title="검색 닫힘" class="bt_close"><span class="blind">검색 닫힘</span></button>
+					</div>
+				</div>
+				<button type="button" title="검색 열림" class="bt_srch-show"><span class="blind">검색 열림</span></button>
+			</div>
+			<!-- //전체 검색 -->
+		</div>
+	</div>
+	<!-- //header -->
+
+	<!-- content -->
+	<div class="container">
+		<div id="content" class="content">
+			<!-- 제목 -->
+			<div class="tit2">
+				강남역
+			</div>
+			<!-- //제목 -->
+
+			<!-- 공간 검색 폼 -->
+			<div class="srching">
+				<div class="opts">
+					<fieldset >
+						<legend>스터디룸 검색</legend>
+						<div class="row">
+							<!-- 지역 -->
+							<label for="srching_pos" class="srching_input srching_pos">
+								<span class="inputs"><input type="text" placeholder="모든지역" value="" id="srching_pos" ><button type="button" class="val_del"><span class="blind">value delete</span></button></span>
+							</label>
+							<!--div class="srching_layer pos" style="display:none;">
+								<div class="pos_group">
+									<strong class="pos_tit">서울</strong>
+									<div class="cols">
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p1"><label for="p1">강남역</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p2"><label for="p2">대학로/혜화</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p3"><label for="p3">선릉</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p4"><label for="p4">신촌</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p5"><label for="p5">역삼</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p6"><label for="p6">홍대입구</label></li>
+										</ul>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p7"><label for="p7">건대입구</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p8"><label for="p8">삼성역</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p9"><label for="p9">신논현</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p10"><label for="p10">압구정</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p11"><label for="p11">잠실</label></li>
+										</ul>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p12"><label for="p12">교대입구</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p13"><label for="p13">서울대입구</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p14"><label for="p14">신반포</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p15"><label for="p15">양재</label></li>
+											<li><input type="checkbox" name="pos_chk" id="p16"><label for="p16">종로</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="pos_group">
+									<div class="cols2">
+										<strong class="pos_tit">경기</strong>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p17"><label for="p17">분당서현</label></li>
+										</ul>
+									</div>
+									<div class="cols2">
+										<strong class="pos_tit">세종</strong>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p18"><label for="p18">세종시</label></li>
+										</ul>
+									</div>
+									<div class="cols2">
+										<strong class="pos_tit">광주</strong>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p19"><label for="p19">충장로</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="pos_group">
+									<div class="cols2">
+										<strong class="pos_tit">부산</strong>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p20"><label for="p20">경성대/부경대</label></li>
+										</ul>
+									</div>
+									<div class="cols2">
+										<strong class="pos_tit">&nbsp;</strong>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p21"><label for="p21">부산대</label></li>
+										</ul>
+									</div>
+									<div class="cols2">
+										<strong class="pos_tit">&nbsp;</strong>
+										<ul>
+											<li><input type="checkbox" name="pos_chk" id="p22"><label for="p22">서면</label></li>
+										</ul>
+									</div>
+								</div>
+								<button type="button" class="bt_apply long" >적용</button>
+							</div-->
+							<!-- //지역 -->
+
+							<!-- 날짜 -->
+							<label for="srching_date" class="srching_input srching_date">
+								<span class="inputs"><input type="text" placeholder="모든날짜" id="srching_date" readonly="readonly"><button type="button" class="val_del" ><span class="blind">value delete</span></button></span>
+							</label>
+							<!-- //날짜 -->
+
+							<!-- 시간 -->
+							<label for="srching_time" class="srching_input srching_time">
+								<span class="inputs"><input type="text" placeholder="모든시간" id="srching_time" readonly="readonly"><button type="button" class="val_del"><span class="blind">value delete</span></button></span>
+							</label>
+							<div class="srching_layer time" style="display:none;">
+								<span class="times_input"><input type="text" placeholder="00"></span>
+								<em class="ico">:</em>
+								<span class="times_input"><input type="text" placeholder="00"></span>
+								<em class="ico wave">~</em>
+								<span class="times_input"><input type="text" placeholder="00"></span>
+								<em class="ico">:</em>
+								<span class="times_input"><input type="text" placeholder="00"></span>
+								<button type="button" class="bt_apply" >적용</button>
+							</div>
+							<!-- //시간 -->
+
+							<!-- 인원 -->
+							<label for="srching_mem" class="srching_input srching_mem">
+								<span class="inputs"><input type="text" placeholder="모든인원" id="srching_mem" readonly="readonly"><button type="button" class="val_del" ><span class="blind">value delete</span></button></span>
+							</label>
+							<div class="srching_layer mem" style="display:none;">
+								<div class="mems_input">
+									<button type="button" class="bt_down"><span class="blind">인원 삭제</span></button><input type="text"><button type="button" class="bt_up"><span class="blind">인원 삭제</span></button>
+								</div>
+								<button type="button" class="bt_apply">적용</button>
+							</div>
+							<!-- //인원 -->
+						</div>
+
+						<div class="row">
+							<!-- 공간유형 -->
+							<div class="srching_drops srching_type">
+								<button type="button" class="target">공간유형<em class="num">5</em></button>
+								<button type="button" class="val_del"><span class="blind">value delete</span></button>
+							</div>
+							<div class="srching_layer type" style="display:none;">
+								<ul class="in_list">
+									<li><span class="checks"><input type="checkbox" id="st1-1" ><label for="st1-1">독립형 공간</label></span></li>
+									<li><span class="checks"><input type="checkbox" id="st1-2" ><label for="st1-2">반 독립형 공간</label></span></li>
+									<li><span class="checks"><input type="checkbox" id="st1-3" ><label for="st1-3">개방형 공간</label></span></li>
+								</ul>
+								<div class="in_bts">
+									<button type="button" class="bt_cancel" >취소</button>
+									<button type="button" class="bt_apply">적용</button>
+								</div>
+							</div>
+							<!-- //공간유형 -->
+
+							<!-- 이용기준 -->
+							<div class="srching_drops srching_standard">
+								<button type="button" class="target">이용기준<em class="num">5</em></button>
+								<button type="button" class="val_del"><span class="blind">value delete</span></button>
+							</div>
+							<div class="srching_layer standard"  style="display:none;" >
+								<ul class="in_list">
+									<li><span class="checks"><input type="checkbox" id="ss1-1" ><label for="ss1-1">시간제 이용</label></span></li>
+									<li><span class="checks"><input type="checkbox" id="ss1-2" ><label for="ss1-2">일 단위 이용</label></span></li>
+									<li><span class="checks"><input type="checkbox" id="ss1-3" ><label for="ss1-3">주 단위 이용</label></span></li>
+									<li><span class="checks"><input type="checkbox" id="ss1-4" ><label for="ss1-4">월 단위 이용</label></span></li>
+								</ul>
+								<div class="in_bts">
+									<button type="button" class="bt_cancel" >취소</button>
+									<button type="button" class="bt_apply">적용</button>
+								</div>
+							</div>
+							<!-- //이용기준 -->
+
+							<!-- 상세필터 -->
+							<div class="srching_drops srching_filter">
+								<button type="button" class="target">상세필터<em class="num">5</em></button>
+								<button type="button" class="val_del"><span class="blind">value delete</span></button>
+							</div>
+							<div class="srching_layer filter" style="display:none;">
+								<div class="filter_group first">
+									<strong class="filter_tit">지점 서비스</strong>
+									<ul>
+										<li><span class="checks"><input type="checkbox" id="sf1-1" ><label for="sf1-1">주차시설</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-2" ><label for="sf1-2">무료음료</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-3" ><label for="sf1-3">공용 프린터, 팩스, 스캐너</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-4" ><label for="sf1-4">간식판매</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-5" ><label for="sf1-5">카페운영</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-6" ><label for="sf1-6">학습성향진단</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-7" ><label for="sf1-7">컨시어지 서비스</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-8" ><label for="sf1-8">전문 매니저 상주</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-9" ><label for="sf1-9">다중보안시스템</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-10" ><label for="sf1-10">휴식, 손님 응대공간</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-11" ><label for="sf1-11">신문, 잡지, 도서 무료구독</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-12" ><label for="sf1-12">법률, 세무, 회계 컨설팅 주선</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-13" ><label for="sf1-12">카펫 클린 서비스</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-14" ><label for="sf1-14">우편물 발송대행</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-15" ><label for="sf1-15">견적서, 세금계산서 발급</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf1-16" ><label for="sf1-16">조식제공</label></span></li>
+									</ul>
+								</div>
+								<div class="filter_group">
+									<strong class="filter_tit">공간 시설</strong>
+									<ul>
+										<li><span class="checks"><input type="checkbox" id="sf2-1" ><label for="sf2-1">유/무선인터넷</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-2" ><label for="sf2-2">화이트보드</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-3" ><label for="sf2-3">유리보드</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-4" ><label for="sf2-4">프로젝터</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-5" ><label for="sf2-5">TV 모니터</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-6" ><label for="sf2-6">레이저포인터</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-7" ><label for="sf2-7">PC</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-8" ><label for="sf2-8">노트북</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-9" ><label for="sf2-9">마이크</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-10" ><label for="sf2-10">스피커</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-11" ><label for="sf2-11">멀티탭</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-12" ><label for="sf2-12">각종 케이블</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-13" ><label for="sf2-13">개별 냉난방</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-14" ><label for="sf2-14">중앙 냉난방</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-15" ><label for="sf2-15">산소발생기</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-16" ><label for="sf2-16">백색소음기</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-17" ><label for="sf2-17">책상/의자</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-18" ><label for="sf2-18">쇼파</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-19" ><label for="sf2-19">모션테이블</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-20" ><label for="sf2-20">강연대</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-21" ><label for="sf2-21">스탠드</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-22" ><label for="sf2-22">서랍장</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-23" ><label for="sf2-23">사물함</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-24" ><label for="sf2-24">테라스</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-25" ><label for="sf2-25">전면거울</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-26" ><label for="sf2-26">방음시설</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-27" ><label for="sf2-27">식사가능</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-28" ><label for="sf2-28">창문</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-29" ><label for="sf2-29">높은 조도</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-30" ><label for="sf2-30">낮은 조도</label></span></li>
+										<li><span class="checks"><input type="checkbox" id="sf2-31" ><label for="sf2-31">현수막 부착가능</label></span></li>
+									</ul>
+								</div>
+								<div class="in_bts">
+									<button type="button" class="bt_cancel" >취소</button>
+									<button type="button" class="bt_apply">적용</button>
+								</div>
+							</div>
+							<!-- //상세필터 -->
+						</div>
+					<fieldset>
+				</div>
+			</div>
+			<!-- //공간 검색 폼 -->
+
+			<!-- 공간 검색 리스트 -->
+			<div class="result_groups">
+				<div class="group">
+					<div class="ls_result">
+						<p class="total">총 <strong>300</strong>개의 공간이 있습니다.</p>
+						<div class="list">
+							<ul>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy2.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy3.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy4.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy2.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy3.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy4.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+							</ul>
+							<button type="button" class="bt_list-more">더보기</button>
+						</div>
+					</div>
+				</div>
+				<div class="group">
+					<div class="ls_result">
+						<p class="total">총 <strong>300</strong>개의 공간이 있습니다.</p>
+						<div class="list">
+							<ul>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy2.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy3.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy4.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy2.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy3.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+								<li class="list_item">
+									<a href="" class="thumb"><img src="../../images/pc/common/img_dummy4.gif" alt=""></a>
+									<strong class="name">MOIMTOZ 신반포센터</strong>
+									<ul class="option">
+										<li>오픈형</li>
+										<li>1인전용</li>
+									</ul>
+									<p class="info"><strong>2,500원</strong> / 1시간(기본)</p>
+									<a href="" class="bt_direct">바로예약</a>
+								</li>
+							</ul>
+							<button type="button" class="bt_list-more">더보기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //공간 검색 리스트 -->
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- footer -->
+	<div id="footer" class="footer">
+		<div class="row">
+			<p class="f_logo"><a href=""><span class="blind">TOZ Space changes us better</span></a></p>
+
+			<div class="f_menu">
+				<ul>
+					<li><a href="">회사소개</a></li>
+					<li><a href="">채용안내</a></li>
+					<li><a href="">가맹안내</a></li>
+					<li><a href="">제휴문의</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+					<li><a href="">이용약관</a></li>
+				</ul>
+			</div>
+
+			<div class="f_sns">
+				<ul>
+					<li><a href=""><img src="../../images/pc/study/ico_f-sns1.jpg" alt=""></a></li>
+					<li><a href=""><img src="../../images/pc/study/ico_f-sns2.jpg" alt=""></a></li>
+				</ul>
+			</div>
+
+			<div class="family_site">
+				<ul>
+					<li><a href="">TOZ</a></li>
+					<li><a href=""target="_blank">STUDYTOZ</a></li>
+					<li><a href="" target="_blank">MOIMTOZ</a></li>
+					<li><a href=""target="_blank">WORKTOZ</a></li>
+					<li><a href=""target="_blank">TOZ MEMBERSHIP</a></li>
+				</ul>
+			</div>
+
+			<div class="f_infos">
+				<ul>
+					<li>서울 마포구 성암로 179 17층 (주)피투피시스템즈</li>
+					<li>대표전화 : 02-312-1317</li>
+					<li>FAX : 02-363-1026   </li>
+				</ul>
+			</div>
+			<p class="copyright">COPYRIGHTS©2017 P2PSYSTEMS CORP. ALL RIGHTS RESERVED.</p>
+
+			<button type="button" class="bt_top">top</button>
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+
+<script type="text/javascript">
+	$(function(){
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* header */
+.header .logo{width:101px;height:16px;display:block;margin:18px auto 0 auto;}
+.header .logo a{display:block;height:100%;background:url('../../images/m/moim/img_logo.png') center center no-repeat;background-size:101px 16px;}
+.layer_familysite .f1{background:url('../../images/m/common/img_familysite1.png') center center no-repeat;background-size:109px 16px;}
+.layer_familysite .f2{background:url('../../images/m/common/img_familysite3.png') center center no-repeat;background-size:108px 16px;}
+.layer_familysite .f3{background:url('../../images/m/common/img_familysite4.png') center center no-repeat;background-size:52px 19px;}
+
+/* 메뉴 */
+.side_menu .logo{width:101px;height:16px;display:block;margin:18px 0 25px 20px;}
+.side_menu .logo a{display:block;height:100%;background:url('../../images/m/moim/img_logo.png') center center no-repeat;background-size:101px 16px;}
+
+/* 메인 */
+.main_visual {position:relative;overflow:hidden;margin-bottom:30px;font-size:0;}
+.main_visual a{display:block;}
+.main_visual img{width:100%;}
+.main_visual .slider_pagination{z-index:50;position:absolute;bottom:35px;left:20px;text-align:center;height:10px;}
+.main_visual .slider_pagination .swiper-pagination-bullet{display:inline-block;vertical-align:top;width:10px;height:10px;margin:0 3px;border-radius:10px;background:#c3c5c8;opacity:1;transition:0.5s;-webkit-transition:0.5s;}
+.main_visual .slider_pagination .swiper-pagination-bullet-active{width:10px;height:10px;background:#000;}
+.main_spaces{margin:0;}
+.main_spaces .bts{margin:0 20px;}
+.main_spaces .items{margin:0 20px;padding-bottom:50px;}
+.main_spaces .items:last-child{border-bottom:1px solid #d9d9d9;}
+.main_spaces li{margin-top:40px;}
+.main_spaces a{display:block;font-size:0;}
+.main_spaces img{width:100%;}
+.main_spaces p{font-size:14px;color:#000;margin-top:15px;font-weight: 300;}
+.main_banner {position:relative;font-size:0;padding-bottom:15px;margin:0 0 50px 0;}
+.main_banner .swiper-container{overflow:visible;}
+.main_banner a{display:block;}
+.main_banner img{width:100%;}
+.main_banner .slider_pagination{z-index:50;position:absolute;bottom:-15px;left:0;text-align:center;width:100%;height:8px;}
+.main_banner .slider_pagination .swiper-pagination-bullet{display:inline-block;vertical-align:top;width:8px;height:8px;margin:0 3px;border-radius:8px;background:#b2b2b2;opacity:1;transition:0.5s;-webkit-transition:0.5s;}
+.main_banner .slider_pagination .swiper-pagination-bullet-active{width:8px;height:8px;background:#000;}
+.main_evt {position:relative;font-size:0;padding:0 0 15px 0;margin:40px 0 0 0;}
+.main_evt .h2{display:block;font-size:21px;color:#000;margin:0 20px 10px 20px;}
+.main_evt .swiper-container{overflow:visible;}
+.main_evt a{display:block;margin:0 20px;}
+.main_evt img{width:100%;}
+.main_evt .slider_pagination{z-index:50;position:absolute;bottom:-15px;left:0;text-align:center;width:100%;height:8px;}
+.main_evt .slider_pagination .swiper-pagination-bullet{display:inline-block;vertical-align:top;width:8px;height:8px;margin:0 3px;border-radius:8px;background:#b2b2b2;opacity:1;transition:0.5s;-webkit-transition:0.5s;}
+.main_evt .slider_pagination .swiper-pagination-bullet-active{width:8px;height:8px;background:#000;}
+.main_noti {position:relative;font-size:0;padding-top:40px;margin:40px 20px 0 20px;border-top:1px solid #d9d9d9;}
+.main_noti .h2{display:block;font-size:21px;color:#000;margin-bottom:10px;}
+.main_noti ul{border-top:1px solid #bcbcbc}
+.main_noti li{border-bottom:1px solid #bcbcbc}
+.main_noti a{position:relative;display:block;height:60px;line-height:60px;padding-right:20px;font-size:14px;color:#222;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp:1;-webkit-box-orient: vertical;word-wrap:break-word;}
+.main_noti a:after{content: '';position:absolute;top:50%;right:5px;margin-top:-7px;display:inline-block;width:14px;height:14px;border:1px solid #181819;border-width:1px 1px 0 0;transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+
+/* MOIMTOZ 소개 */
+.moim_introduce{margin:30px 20px 0 20px;}
+.moim_introduce .intro_row1 {text-align:center}
+.moim_introduce .intro_row1 .t1{font-size:18px;color:#222;line-height:150%;}
+.moim_introduce .intro_row1 .t2{font-size:12px;color:#666;line-height:150%;margin-top:20px;}
+.moim_introduce .intro_row2{border-bottom:1px solid #e5e5e5;padding-bottom:50px;}
+.moim_introduce .intro_row2 li{text-align:center;margin-top:40px;}
+.moim_introduce .intro_row2 img{width:100%;}
+.moim_introduce .intro_row2 strong{display:block;font-size:14px;color:#000;font-weight:400;margin:10px 0 5px 0;}
+.moim_introduce .intro_row2 p{font-size:12px;color:#666;}
+.moim_introduce .intro_row3{margin:50px 0 0 0;text-align:center;}
+.moim_introduce .intro_row3 .t1{font-size:12px;color:#666;line-height:150%;}
+.moim_introduce .intro_row3 ul{overflow:hidden;}
+.moim_introduce .intro_row3 li{text-align:center;padding-top:70px;margin-top:35px;}
+.moim_introduce .intro_row3 li.rs1{background:url('../../images/m/moim/ico_intro1.png') center top no-repeat;background-size:68px 62px;}
+.moim_introduce .intro_row3 li.rs2{background:url('../../images/m/moim/ico_intro2.png') center top no-repeat;background-size:70px 54px;}
+.moim_introduce .intro_row3 li.rs3{background:url('../../images/m/moim/ico_intro3.png') center top no-repeat;background-size:64px 64px;}
+.moim_introduce .intro_row3 li strong{font-size:14px;color:#222;font-weight:400;}
+.moim_introduce .intro_row3 li p{font-size:12px;color:#666;line-height:150%;margin-top:10px;}
+.moim_introduce .use_row {text-align:center;}
+.moim_introduce .use_row .t1{font-size:18px;color:#222;margin-bottom:40px;line-height:150%;}
+.moim_introduce .use_row li{position:relative;border-top:1px solid #e5e5e5;overflow:hidden;text-align:left;padding:50px 0;}
+.moim_introduce .use_row li:first-child{border-top:0;padding-top:0;}
+.moim_introduce .use_row li:last-child{padding-bottom:0;}
+.moim_introduce .use_row .thumb img{width:100%;}
+.moim_introduce .use_row .txts{margin-top:10px;}
+.moim_introduce .use_row .txts strong{font-size:15px;color:#000;font-weight:normal;}
+.moim_introduce .use_row .txts p{font-size:12px;color:#666;line-height:150%;margin-top:5px;}
+
+/* 기업대상서비스 */
+.moim_service{margin:30px 20px 0 20px;}
+.moim_service .intro_ment{text-align:center;}
+.moim_service .intro_ment .txts{height:150px;margin-bottom:15px;background:url('../../images/m/moim/img_service.jpg') center center no-repeat;overflow:hidden;vertical-align:middle;display: flex;justify-content: center;align-items: center;}
+.moim_service .intro_ment .t1{font-size:14px;color:#fff;line-height:150%;}
+.moim_service .intro_ment .t2{font-size:12px;color:#666;line-height:150%;}
+.moim_service .online{;margin-top:40px;text-align:center;}
+.moim_service .online ul{overflow:hidden;}
+.moim_service .online .online_item{box-sizing: border-box;border:1px solid #d5d5d5;margin-top:10px;}
+.moim_service .online .online_item:first-child{margin-top:0;}
+.moim_service .online .in{position:relative;margin:30px 25px;}
+.moim_service .online .t1{font-size:12px;color:#222;}
+.moim_service .online .t2{font-size:20px;color:#222;display:block;font-weight:400;margin:10px 0 20px 0;}
+.moim_service .online .t3{text-align:left;min-height:80px;margin-bottom:20px;}
+.moim_service .online .t3 li{font-size:12px;color:#767676;padding:3px 0;}
+.moim_service .online button{width:100%;height:45px;line-height:45px;font-size:15px;background:#222;color:#fff;}
+.moim_service .online_form .t1{text-align:center;font-size:18px;color:#222;}
+.moim_service .online_form .t2{text-align:center;font-size:12px;color:#666;line-height:150%;margin-top:10px;}
+.moim_service .online_form fieldset{margin-top:15px;overflow:hidden;}
+.moim_service .online_form label{display:block;margin-top:15px;}
+.moim_service .online_form .textarea{display:block;border:1px solid #222;padding:10px;}
+.moim_service .online_form .textarea textarea{width:100%;height:100px;border:0;background:0;padding:0;margin:0;}
+.moim_service .online_form .bts{margin-top:30px;}
+.moim_service .online_form .file{margin-top:15px;}
+.moim_service .online_form .bt_file{width:119px;height:39px;line-height:39px;text-align:center;border:1px solid #666;text-align:center;font-size:14px;color:#222;}
+.moim_service .online_form .file_name{margin-left:10px;font-size:13px;color:#666;line-height:39px;display:inline-block;}
+
+/* 고객센터 */
+.email_consult .t1{background:url('../../images/m/moim/img_email.jpg') center center no-repeat;background-size:cover;}
+.email_consult .t3{background:url('../../images/m/moim/img_cooperation.jpg') center center no-repeat;background-size:cover;}
+

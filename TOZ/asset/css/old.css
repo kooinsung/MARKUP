@@ -1,0 +1,15 @@
+@charset "utf-8";
+@import url('common.css');
+
+.inputs input{height:auto;padding:15px 0 8px 0;}
+.srching_layer .mems_input input{height:auto;padding:15px 0 8px 0;}
+.checks{position:relative;}
+.checks input{opacity:1;position:absolute;top:3px;left:0;}
+.checks label{height:20px;display:inline-block;padding:0;margin:0;margin-left:-10px;}
+.checks input[type=checkbox]+label{background:none;}
+.checks input[type=checkbox]:checked+label{background:none;}
+.radios{position:relative;}
+.radios input{opacity:1;position:absolute;top:3px;left:0;}
+.radios label{height:20px;display:inline-block;padding:0;margin:0;margin-left:-10px;}
+.radios input[type=radio]+label{background:none;}
+.radios input[type=radio]:checked+label{background:none;}

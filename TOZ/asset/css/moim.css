@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* header */
+.header .row{position:relative;width:1180px;height:80px;margin:0 auto;padding:16px 0 0 0;}
+.header .logo{width:139px;}
+.header .logo a{display:block;}
+.header .logo .l1{margin-bottom:19px;width:119px;height:16px;background:url('../../images/pc/moim/img_h1-logo1.png') center center no-repeat;}
+.header .logo .l2{width:139px;height:22px;background:url('../../images/pc/moim/img_h1-logo2.png') center center no-repeat;}
+.header .depths2.m3 ul{margin-left:233px;}
+.header .depths2.m6 ul{margin-left:323px;}
+.header .srch_layer{position:absolute;bottom:0;right:15px;z-index:1;width:1000px;background:#fff;overflow:hidden;display:none;}
+.header .srch_layer .ins{margin-left:640px;height:44px;border-bottom:1px solid #222;}
+
+/* 메인 */
+.main .sec_tit{display:block;color:#000;font-size:25px;font-weight:400;}
+.main_visuals {position:relative;z-index:50;margin-bottom:60px}
+.main_visuals .visual_item{height:500px;}
+.main_visuals .visual_item a{display:block;height:500px;text-indent:-9999px;}
+.main_visuals .bx-pager {display:none;}
+.main_visuals .bx-controls-direction a{z-index:60;font-size:11px;color:#fff;font-family: 'Nunito Sans';font-weight:700;text-transform: uppercase;position:absolute;top:50%;height:40px;line-height:40px;margin-top:-20px;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.main_visuals .bx-controls-direction a:hover{background-color:rgba(0,0,0,1);}
+.main_visuals .bx-prev{left:0;background:rgba(0,0,0,.4) url('../../images/pc/common/ico_left-arrow.png') 16px center no-repeat;width:57px;padding-left:55px;}
+.main_visuals .bx-next{right:0;background:rgba(0,0,0,.4) url('../../images/pc/common/ico_right-arrow.png') 64px center no-repeat;width:89px;padding-left:23px;}
+.main_spaces{width:1200px;margin:60px 0 0 -10px;overflow:hidden;}
+.main_spaces li{float:left;margin:0 10px 60px 10px;}
+.main_spaces a{display:block;font-size:0;}
+.main_spaces p{font-size:18px;margin-top:25px;}
+.main_info1 {max-width:1180px;margin:0 auto;padding:70px 0;overflow:hidden;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;}
+.main_info1 .sec_tit{margin-bottom:50px;}
+.main_info1 li{text-align:center;float:left;width:33.33%;}
+.main_info1 li a{display:block;padding-top:90px;}
+.main_info1 li.rs1 a{background:url('../../images/pc/moim/ico_main-info1.png') center top no-repeat;}
+.main_info1 li.rs2 a{background:url('../../images/pc/moim/ico_main-info2.png') center top no-repeat;}
+.main_info1 li.rs3 a{background:url('../../images/pc/moim/ico_main-info3.png') center top no-repeat;}
+.main_info1 li strong{font-size:19px;color:#222;font-weight:400;}
+.main_info1 li p{font-size:13px;color:#666;line-height:150%;margin-top:20px;}
+.main_info2 {max-width:1180px;margin:0 auto;padding:70px 0;margin-bottom:70px;overflow:hidden;border-bottom:1px solid #e8e8e8;}
+.main_info2 .sec_tit{margin-bottom:20px;}
+.main_info2 ul{width:1200px;margin-left:-10px;}
+.main_info2 li{text-align:left;float:left;margin:0 10px;}
+.main_info3{position:relative;max-width:1180px;margin:0 auto;}
+.main_info3:after{content:""; display:block; clear:both;}
+.main_info3 .sec_tit{margin-bottom:20px !important;}
+.main_info3 .col{position:relative;width:570px;}
+.main_info3 .main_noti{float:left;border-bottom:1px solid #222;}
+.main_info3 .main_noti .lists li{padding-bottom:24px;}
+.main_info3 .main_noti .lists li:first-child{padding-top:3px;}
+.main_info3 .main_noti .lists a{display:block;position:relative;font-size:15px;color:#222;}
+.main_info3 .main_noti .noti_txt{font-size:15px;color:#222;width:490px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal}
+.main_info3 .main_noti .noti_date{position:absolute;top:0;right:0;color:#666;font-size:13px;font-family: 'Nunito Sans';font-weight:400;}
+.main_info3 .main_noti .lists a:hover .noti_txt{text-decoration:underline;}
+.main_info3 .main_evt{float:right;}
+.main_info3 .bx-pager{text-align:center;font-size:0;z-index:60;position:absolute;bottom:-22px;left:0;width:100%;height:10px;}
+.main_info3 .bx-pager-item{display:inline-block;width:10px;height:10px;border-radius:10px;margin:0 3px;}
+.main_info3 .bx-pager-item a{background:#bcbcbc;display:block;width:10px;height:10px;border-radius:10px;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.main_info3 .bx-pager-item a.active{background:#000}
+.main_info3 .main_evt .bx-controls-direction{display:none;}
+.main_info3 .more{position:absolute;top:0;right:0;font-size:13px;color:#666;font-family: 'Nunito Sans';font-weight:400;background:url('../../images/pc/moim/ico_more-arrow.png') right center no-repeat;padding-right:10px;display:inline-block;}
+
+/* 고객센터 */
+.email_consult .t1{background:url('../../images/pc/moim/img_email.jpg') center center no-repeat;}
+.email_consult .t3{background:url('../../images/pc/moim/img_cooperation.jpg') center center no-repeat;}
+.email_consult .policy_txt{margin: 15px 0;}
+.email_consult .policy_txt p{margin-top:10px;}
+
+/* 장기예약신청 */
+.long_apply_form {width:1180px;margin:0 auto;}
+.long_apply_form .t1{font-size:30px;color:#222;}
+.long_apply_form .t2{font-size:17px;color:#222;margin:40px 0 10px 0;}
+.long_apply_form .t3{font-size:15px;color:#666;line-height:150%;margin-bottom:70px;}
+.long_apply_form .bts{width:580px;margin:30px auto 0 auto;}
+.long_apply_form .store .selects{width:430px;}
+.long_apply_form .long_items ul{overflow:hidden;}
+.long_apply_form .long_items li{float:left;}
+.long_apply_form .long_items .period li{margin-right:50px;}
+.long_apply_form .long_items .week li{margin-right:60px;}
+.long_apply_form .long_items .rental li{margin-right:50px;}
+.long_apply_form .times{overflow:hidden;}
+.long_apply_form .times .selects{float:left;width:200px;}
+.long_apply_form .times .ico{float:left;display:inline-block;width:30px;text-align:center;line-height:53px;}
+.long_apply_form .times .wave{width:40px;}
+.long_apply_form .num_people .inputs{width:430px;}
+.long_apply_form .num_people .inputs em{line-height:53px;position:absolute;top:0;right:0;font-size:17px;color:#222;}
+
+/* MOIM토즈 소개 */
+.moim_introduce{width:1180px;margin:0 auto;}
+.moim_introduce .intro_row1 {text-align:center}
+.moim_introduce .intro_row1 .t1{font-size:30px;color:#222;}
+.moim_introduce .intro_row1 .t2{font-size:15px;color:#666;line-height:150%;margin-top:20px;}
+.moim_introduce .intro_row2{margin:50px 0 0 0;border-bottom:1px solid #e5e5e5;padding-bottom:70px;}
+.moim_introduce .intro_row2 ul{width:1200px;overflow:hidden;margin-left:-10px;}
+.moim_introduce .intro_row2 li{margin:0 10px;text-align:center;float:left;}
+.moim_introduce .intro_row2 strong{display:block;font-size:17px;color:#000;font-weight:400;margin:15px 0 10px 0;}
+.moim_introduce .intro_row2 p{font-size:13px;color:#666;}
+.moim_introduce .intro_row3{margin:70px 0 0 0;text-align:center;}
+.moim_introduce .intro_row3 .t1{font-size:15px;color:#666;}
+.moim_introduce .intro_row3 ul{overflow:hidden;margin-top:55px;}
+.moim_introduce .intro_row3 li{text-align:center;float:left;width:33.33%;padding-top:80px}
+.moim_introduce .intro_row3 li.rs1{background:url('../../images/pc/moim/ico_main-info1.png') center top no-repeat;}
+.moim_introduce .intro_row3 li.rs2{background:url('../../images/pc/moim/ico_main-info2.png') center top no-repeat;}
+.moim_introduce .intro_row3 li.rs3{background:url('../../images/pc/moim/ico_main-info3.png') center top no-repeat;}
+.moim_introduce .intro_row3 li strong{font-size:19px;color:#222;font-weight:400;}
+.moim_introduce .intro_row3 li p{font-size:14px;color:#666;line-height:150%;margin-top:10px;}
+.moim_introduce .use_row {text-align:center;}
+.moim_introduce .use_row .t1{font-size:30px;color:#222;margin-bottom:40px;}
+.moim_introduce .use_row li{position:relative;border-top:1px solid #e5e5e5;overflow:hidden;text-align:left;padding:30px 10px 30px 80px;}
+.moim_introduce .use_row li:first-child{border-top:0;}
+.moim_introduce .use_row .thumb{float:left;margin-right:90px;}
+.moim_introduce .use_row .txts{margin-top:30px;}
+.moim_introduce .use_row .txts.txts2{margin-top:15px;}
+.moim_introduce .use_row .txts strong{font-size:21px;color:#000;font-weight:normal;}
+.moim_introduce .use_row .txts p{font-size:15px;color:#666;line-height:150%;margin-top:10px;}
+.gift_money .t1{font-size:25px;color:#222;margin-bottom:40px;line-height:150%;}
+.gift_money .row{margin-top:50px;}
+.gift_money .row h3{display:block;font-size:23px;color:#222;margin-bottom:10px;}
+.gift_money .row p{font-size:15px;color:#666;line-height:150%;}
+.gift_money .row li{font-size:15px;color:#666;line-height:150%;}
+.gift_money .row ol{margin-left:15px;}
+
+/* 기업대상서비스 */
+.moim_service{width:1180px;margin:0 auto;}
+.moim_service .intro_ment{height:240px;background:url('../../images/pc/moim/img_service.jpg') center center no-repeat;overflow:hidden;}
+.moim_service .intro_ment .txts{border-left:1px solid #fff;margin:78px 0 0 70px;padding-left:28px;}
+.moim_service .intro_ment .t1{font-size:21px;color:#fff;line-height:140%;margin-bottom:15px;}
+.moim_service .intro_ment .t2{font-size:15px;color:#fff;}
+.moim_service .online{border:1px solid #d5d5d5;margin-top:50px;}
+.moim_service .online ul{overflow:hidden;}
+.moim_service .online .online_item{width:50%;float:left;box-sizing: border-box;}
+.moim_service .online .online_item:first-child{border-right:1px solid #d5d5d5;}
+.moim_service .online .in{position:relative;height:180px;margin:50px 50px 35px 50px;}
+.moim_service .online .t1{font-size:15px;color:#222;}
+.moim_service .online .t2{font-size:30px;color:#222;display:block;font-weight:400;margin:10px 0 20px 0;}
+.moim_service .online .t3 li{font-size:15px;color:#767676;padding:3px 0;}
+.moim_service .online button{position:absolute;bottom:0;right:0;width:140px;height:48px;line-height:48px;font-size:17px;background:#222;color:#fff;}
