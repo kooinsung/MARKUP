@@ -6,16 +6,16 @@
 
 1. publishing
     * pc
-        - https://kooinsung.github.io/SAMYANG/pc/ko/path
-        - https://kooinsung.github.io/SAMYANG/pc/en/path
-        - https://kooinsung.github.io/SAMYANG/pc/ja/path
-        - https://kooinsung.github.io/SAMYANG/pc/zh/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/pc/ko/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/pc/en/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/pc/ja/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/pc/zh/path
   
     * mobile
-        - https://kooinsung.github.io/SAMYANG/m/ko/path
-        - https://kooinsung.github.io/SAMYANG/m/en/path
-        - https://kooinsung.github.io/SAMYANG/m/ja/path
-        - https://kooinsung.github.io/SAMYANG/m/zh/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/m/ko/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/m/en/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/m/ja/path
+        - https://kooinsung.github.io/MARKUP/SAMYANG/m/zh/path
 
 2. real
     * pc
