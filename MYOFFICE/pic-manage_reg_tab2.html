@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>마이오피스코리아</title>
+	<link type="text/css" rel="stylesheet" href="css/myoffice.css">
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="js/myoffice.js?1"></script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<div class="wrap">
+	<!-- 좌측 -->
+	<div class="left_container">
+		<!-- 메뉴 토글 -->
+		<!--button type="button" class="bt_menu-toggle">menu</button-->
+		<!-- //메뉴 토글 -->
+
+		<!-- 로고 -->
+		<h1 class="logo"><a href="">MYOFFICE</a></h1>
+		<!-- //로고 -->
+
+		<!-- lnb -->
+		<div class="lnb">
+			<ul>
+				<li>
+					<a href="" class="m1">홈</a>
+				</li>
+				<li>
+					<a href="" class="m2">회사관리</a>
+				</li>
+				<li>
+					<a href="" class="m3 active">사진관리</a>
+				</li>
+				<li>
+					<a href="" class="m4">홈페이지관리</a>
+				</li>
+				<li>
+					<a href="" class="m5">쪽지함</a>
+				</li>
+				<li>
+					<a href="" class="m6">회원사컨텐츠</a>
+				</li>
+				<li>
+					<a href="" class="m7">관리자쪽지</a>
+				</li>
+			</ul>
+		</div>
+		<!-- //lnb -->
+		
+		<!-- 회사 정보 -->
+		<div class="company_info">
+			<p>(주) 홍길동부동산오피스 Corp<br>대표전화 : 1688-3389</p>
+		</div>
+		<!-- //회사 정보 -->
+	</div>
+	<!-- //좌측 -->
+
+	<!-- 유틸 -->
+	<div class="util_bar">
+		<div class="inner">
+			<!-- 타이틀 -->
+			<h2 class="tit">사진관리(전체)</h2>
+			<!-- //타이틀 -->
+
+			<!-- 검색 -->
+			<div class="srch">
+				<button type="button" class="bt_srch">search</button>
+				<span class="srch_input"><input type="input" value="" placeholder="컨텐츠 검색"/></span>
+			</div>
+			<!-- //검색 -->
+
+			<!-- 쪽지 -->
+			<div class="memos">
+				<button type="button" class="bt_memo"><em class="num">99</em></button>
+				<div class="in_layer">
+					<div class="tits">
+						쪽지 <em class="date">2017.04.06</em>
+					</div>
+					<div class="lists">
+						<ul>
+							<li>
+								<a href="">
+									<span class="thumb"><img src="img/img_userdefault.png" alt=""></span>
+									<div class="infos">
+										<strong class="name">홍길동<em class="user_type ut1">(개인)</em></strong>
+										<span class="date">03.24</span>
+										<p class="ellipsis texts">매매거래가 완료될때까지 공개됩니다. 블라 블라 블라 블라블라 블라블라 블라블라 블라블라 블라</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span class="thumb"><img src="img/img_userdefault.png" alt=""></span>
+									<div class="infos">
+										<strong class="name">홍길동<em class="user_type ut1">(개인)</em></strong>
+										<span class="date">03.24</span>
+										<p class="ellipsis texts">매매거래가 완료될때까지 공개됩니다.</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span class="thumb"><img src="img/img_userdefault.png" alt=""></span>
+									<div class="infos">
+										<strong class="name">홍길동<em class="user_type ut2">(전문가)</em></strong>
+										<span class="date">03.24</span>
+										<p class="ellipsis texts">매매거래가 완료될때까지 공개됩니다.</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span class="thumb"><img src="img/img_userdefault.png" alt=""></span>
+									<div class="infos">
+										<strong class="name">홍길동<em class="user_type ut1">(개인)</em></strong>
+										<span class="date">03.24</span>
+										<p class="ellipsis texts">매매거래가 완료될때까지 공개됩니다.</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span class="thumb"><img src="img/img_userdefault.png" alt=""></span>
+									<div class="infos">
+										<strong class="name">홍길동<em class="user_type ut2">(전문가)</em></strong>
+										<span class="date">03.24</span>
+										<p class="ellipsis texts">매매거래가 완료될때까지 공개됩니다.</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //쪽지 -->
+
+			<!-- 전문가 컨텐츠 메뉴 -->
+			<div class="c_menus">
+				<button type="button" class="bt_conts">전문가용 컨텐츠</button>
+				<div class="in_layer">
+					<div class="tits">
+						컨텐츠 전문가용 
+					</div>
+					<div class="lists">
+						<ul>
+							<li class="cm1">
+								<a href="">
+									<span>부동산</span>
+								</a>
+							</li>
+							<li class="cm2">
+								<a href="">
+									<span>건축</span>
+								</a>
+							</li>
+							<li class="cm3">
+								<a href="">
+									<span>인테리어</span>
+								</a>
+							</li>
+							<li class="cm4">
+								<a href="">
+									<span>전문시공</span>
+								</a>
+							</li>
+							<li class="cm5">
+								<a href="">
+									<span>건축자재</span>
+								</a>
+							</li>
+							<li class="cm6">
+								<a href="">
+									<span>회원사</span>
+								</a>
+							</li>
+							<li class="cm7">
+								<a href="">
+									<span>이용안내</span>
+								</a>
+							</li>
+							<li class="cm8">
+								<a href="">
+									<span>업체찾기</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //전문가 컨텐츠 메뉴 -->
+
+			<!-- 마이 메뉴 -->
+			<div class="my_menus">
+				<button type="button" class="bt_my"><img src="img/@temp1.png" alt=""></button>
+				<div class="in_layer">
+					<div class="lists">
+						<ul class="group">
+							<li class="bt_setting"><a href="">환경설정</a></li>
+						</ul>
+						<ul class="group np">
+							<li class="bt_sns"><a href="">SNS 관리</a></li>
+							<li class="bt_note"><a href="">쪽지함</a></li>
+							<li class="bt_invite">
+								<a href="">초대</a>
+								<div class="invite_layer">
+									<span class="st">SMS 초대</span>
+									<span class="input solo"><input type="text" value="http://myoffice.co.kr"></span>
+									<div class="input_mix">
+										<span class="select">
+											<select name="" id="">
+												<option value="">010</option>
+											</select>
+										</span>
+										<em class="bar">-</em>
+										<span class="input"><input type="text" value=""></span>
+										<em class="bar">-</em>
+										<span class="input"><input type="text" value=""></span>
+									</div>
+									<button type="button" class="bt_send">SMS보내기</button>
+									<br>
+									<span class="st">SNS 초대</span>
+									<ul class="sns">
+										<li class="bt_kakao"><a href="">카카오톡</a></li>
+										<li class="bt_line"><a href="">라인</a></li>
+										<li class="bt_fb"><a href="">페이스북</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<ul class="group">
+							<li class="bt_zzim"><a href="">찜한사진</a></li>
+							<li class="bt_report"><a href="">업무일지</a></li>
+						</ul>
+						<ul class="group">
+							<li class="bt_logout"><a href="">로그아웃</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //마이 메뉴 -->
+		</div>
+	</div>
+	<!-- //유틸 -->
+
+	<!-- 우측 -->
+	<div class="right_container">
+		<!-- 컨텐츠 -->
+		<div class="content">
+			<!-- 사진관리 -->
+			<div class="subs">
+				<!-- 서브 유틸 -->
+				<div class="top_rows">
+					<h2>사진등록</h2>
+					<div class="bts">
+						<a href="" class="bt_use-info">이용안내</a>
+						<a href="" class="bt_lists">목록</a>
+					</div>
+				</div>
+				<!-- //서브 유틸 -->
+
+				<!-- 이용안내 -->
+				<div class="use_infos">
+					<div class="tabs type1">
+						<ul>
+							<li class="on"><a href="">아이콘 / 버튼</a></li>
+							<li><a href="">FAQ</a></li>
+						</ul>
+					</div>
+					<div class="tabs_conts">
+						<div>
+							<ul class="info_ico">
+								<li>
+									<span><em class="labels approve">승인</em></span>
+									<p>승인 : 승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. </p>
+								</li>
+								<li>
+									<span><em class="labels holding">보류</em></span>
+									<p>보류 : 확인이되지 않거나 어쩌구저쩌구 하는 사진입니다. 승인된 사진을 말합니다. </p>
+								</li>
+								<li>
+									<span><em class="labels ready">준비중</em></span>
+									<p>준비중  : 준비중인 사진 입니다. 어쩌구저쩌구 하는 사진입니다. 승인된 사진을 말합니다. </p>
+								</li>
+								<li>
+									<span><em class="labels dday">만료일</em></span>
+									<p>만료일 : 컨설팅 또는 위임날짜의 만료일을 말합니다. 승인된 사진을 말합니다. </p>
+								</li>
+								<li>
+									<span><em class="labels click">클릭수</em></span>
+									<p>클릭수 : 클릭한 개수를 말합니다. 개인전용과 전문가용 모두 합한 개수입니다. 승인된 사진을 말합니다. </p>
+								</li>
+								<li>
+									<span><em class="labels sum">금액</em></span>
+									<p>금액 : 판매자에게 주는 수수료입니다. 승인된 사진을 말합니다.</p>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<ul class="faq">
+								<li>
+									<a href="" class="question">승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. </a>
+									<p class="answer">답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. </p>
+								</li>
+								<li>
+									<a href="" class="question">승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. </a>
+									<p class="answer">답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. </p>
+								</li>
+								<li>
+									<a href="" class="question">승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. </a>
+									<p class="answer">답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. </p>
+								</li>
+								<li>
+									<a href="" class="question">승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. </a>
+									<p class="answer">답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. </p>
+								</li>
+								<li>
+									<a href="" class="question">승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. 승인된 사진을 말합니다. </a>
+									<p class="answer">답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. 답변 입니다. 답변입니다. </p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tel">
+						<span>문의 : 1688-3398 </span>
+					</div>
+				</div>
+				<!-- //이용안내 -->
+				
+				<!-- 사진 등록 -->
+				<div class="pic_reg">
+					<!-- 팁 -->
+					<div class="tips">
+						<ul>
+							<li>등록물건은 위임받은물건 또는 단독 컨설팅, 분양계약 물건만 등록할수있습니다.</li>
+							<li>부가세 발행이 가능해야 합니다. </li>
+							<li>공인중계사, 컨설팅, 분양 등 사업자 서류심사 후 등록된 회원사만 이용 할 수 있습니다.</li>
+							<li>부동산계정 회원사(전문가) 누구나 매매 가능합니다.</li>
+						</ul>
+					</div>
+					<!-- //팁 -->
+
+					<!-- 등록 탭 -->
+					<div class="tabs type1">
+						<ul>
+							<li><a href="pic-manage_reg_tab1.html">개요 / 현황</a></li>
+							<li class="on"><a href="pic-manage_reg_tab2.html">갤러리</a></li>
+						</ul>
+					</div>
+					<!-- //등록 탭 -->
+
+					<!-- 등록 컨텐츠 -->
+					<div class="pic_reg_tab_conts">
+						<!-- 개요 / 현황 -->
+						<div class="pic_reg_forms" style="display:none;">
+							<table>
+								<colgroup>
+									<col style="width:20%;">
+									<col style="width:30%;">
+									<col style="width:20%;">
+									<col style="width:30%;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>구분</th>
+										<td>전원주택매매</td>
+										<th class="bl">제목</th>
+										<td><span class="inputs"><input type="text" value="전원주택매매"></span></td>
+									</tr>
+									<tr>
+										<th>지역(주소)</th>
+										<td colspan="3" class="addr">
+											<span class="inputs"><input type="text" value="" placeholder="주소작성 필수"></span>
+											<div class="public_check">
+												<span class="checks"><input type="checkbox" checked="checked" id="public" name="public_type"><label for="public">공개</label></span>
+												<span class="checks"><input type="checkbox" id="not_public" name="public_type"><label for="not_public">비공개</label></span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>개요</th>
+										<td colspan="3" class="summary">
+											<span class="textarea"><textarea name="" id="" placeholder="내용을 작성합니다. (20줄 이상)"></textarea></span>
+										</td>
+									</tr>
+									<tr>
+										<th>위임날짜</th>
+										<td colspan="3" class="date">
+											<span class="inputs inline"><input type="text" id="start"></span><em class="txt">부터</em>
+											<span class="inputs inline"><input type="text" id="end"></span><em class="txt">까지</em>
+										</td>
+									</tr>
+									<tr>
+										<th>옵션선택</th>
+										<td colspan="3" class="opts">
+											<div class="tabs type2">
+												<ul>
+													<li class="on"><a href="">토목</a></li>
+													<li><a href="">건축</a></li>
+													<li><a href="">조경</a></li>
+												</ul>
+											</div>
+											<div class="opt_lists">
+												<div class="lists">
+													<ul>
+														<li><span class="checks"><input type="checkbox" id="op1-1" ><label for="op1-1">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-2" ><label for="op1-2">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-3" ><label for="op1-3">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-4" ><label for="op1-4">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-5" ><label for="op1-5">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-6" ><label for="op1-6">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-7" ><label for="op1-7">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-8" ><label for="op1-8">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-9" ><label for="op1-9">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op1-10" ><label for="op1-10">텍스트</label></span></li>
+													</ul>
+												</div>
+												<div class="lists">
+													<ul>
+														<li><span class="checks"><input type="checkbox" id="op2-1" ><label for="op2-1">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-2" ><label for="op2-2">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-3" ><label for="op2-3">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-4" ><label for="op2-4">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-5" ><label for="op2-5">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-6" ><label for="op2-6">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-7" ><label for="op2-7">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-8" ><label for="op2-8">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-9" ><label for="op2-9">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op2-10" ><label for="op2-10">텍스트</label></span></li>
+													</ul>
+												</div>
+												<div class="lists">
+													<ul>
+														<li><span class="checks"><input type="checkbox" id="op3-1" ><label for="op3-1">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-2" ><label for="op3-2">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-3" ><label for="op3-3">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-4" ><label for="op3-4">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-5" ><label for="op3-5">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-6" ><label for="op3-6">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-7" ><label for="op3-7">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-8" ><label for="op3-8">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-9" ><label for="op3-9">텍스트</label></span></li>
+														<li><span class="checks"><input type="checkbox" id="op3-10" ><label for="op3-10">텍스트</label></span></li>
+													</ul>
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th>분할도 / 지적도</th>
+										<td colspan="3" class="img">
+											<div class="mix_add"><span class="inputs"><input type="text" placeholder="이미지를 등록하세요."></span><button type="button">파일첨부</button></div><button type="button" class="bt_td-add">add</button>
+										</td>
+									</tr>
+									<tr class="add_tr">
+										<th><span class="inputs"><input type="text" placeholder="소제목"></span></th>
+										<td colspan="3" class="img">
+											<div class="mix_add"><span class="inputs"><input type="text" placeholder="이미지를 등록하세요."></span><button type="button">파일첨부</button></div><button type="button" class="bt_td-add">add</button>
+										</td>
+									</tr>
+									<tr>
+										<th>매매가 / 수수료</th>
+										<td colspan="3" class="price">
+											<div>매매가 <span class="inputs inline"><input type="text" placeholder="0원" value="999,999,999원"></span></div>
+											<div>수수료 <span class="inputs inline"><input type="text" placeholder="0원"></span></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="bt_upload">
+								<a href="" onclick="myofficeUI.layer.open('img_upload');return false;">이미지 업로드</a>
+							</div>
+						</div>
+						<!-- //개요 / 현황 -->
+						<!-- 갤러리 -->
+						<div class="pic_reg_forms">
+							<div class="gals">
+								<div class="gals_lists">
+									<div class="new_array">
+										<div class="tits">
+											<strong>사진배열 시키기 </strong>
+											<a href="">배열 저장하기</a>
+										</div>
+										<ul>
+											<li class="na1"><a href="" class="active"></a></li> <!-- 클릭시 active 클래스 -->
+											<li class="na2"><a href=""></a></li>
+											<li class="na3"><a href=""></a></li>
+											<li class="na4"><a href=""></a></li>
+											<li class="na5"><a href=""></a></li>
+											<li class="na6"><a href=""></a></li>
+											<li class="na7"><a href=""></a></li>
+											<li class="na8"><a href=""></a></li>
+											<li class="na9"><a href=""></a></li>
+											<li class="na10"><a href=""></a></li>
+											<li class="na11"></li> <!-- 이미지 없을때는 a링크 삭제 -->
+											<li class="na12"></li> <!-- 이미지 없을때는 a링크 삭제 -->
+											<li class="na13"></li> <!-- 이미지 없을때는 a링크 삭제 -->
+											<li class="na14"></li> <!-- 이미지 없을때는 a링크 삭제 -->
+										</ul>
+									</div>
+									<div class="current_array">
+										<div class="tits">
+											<strong>현재 등록 이미지 배열</strong>
+											<a href="">목록보기</a>
+										</div>
+										<ul>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li><a href=""><img src="img/@temp7.png" alt=""></a></li>
+											<li></li>
+											<li></li>
+											<li></li>
+											<li></li>
+										</ul>
+									</div>
+								</div>
+								<div class="bt_upload">
+									<a href="" >완료 등록</a>
+								</div>
+							</div>
+						</div>
+						<!-- //갤러리 -->
+					</div>
+					<!-- //등록 컨텐츠 -->
+				</div>
+				<!-- //사진 등록 -->
+			</div>
+			<!-- //사진관리 -->
+		</div>
+		<!-- //컨텐츠 -->
+	</div>
+	<!-- //우측 -->
+</div>
+
+<!-- 이미지 업로드 레이어 -->
+<div class="layer big" id="img_upload">
+	<div class="layer_tit">
+		<strong>이미지 업로드</strong>
+	</div>
+	<div class="layer_body"> 
+		<p class="upload_tip">JPG, GIF, PNG, BMP 이미지 파일을 올릴 수 있습니다.한 장당 10MB, 1회 50MB까지 올리기 가능합니다.<br>1개의 프로젝트 사진 최대 14장을 등록할수있습니다.</p>
+		<div class="upload_lists">
+			<ul>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+			</ul>
+		</div>
+		<div class="btns">
+			<a href="">확인</a>
+		</div>
+	</div>
+	<button type="button" class="close" onclick="myofficeUI.layer.close('img_upload');">close</button>
+</div>
+<!-- //이미지 업로드 레이어 -->
+<script type="text/javascript">
+	$(function(){
+	});
+</script>
+</body>
+</html>

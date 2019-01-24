@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+	<title>마이오피스코리아</title>
+	<link type="text/css" rel="stylesheet" href="css/myoffice.css">
+	<script type="text/javascript" src="js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="js/myoffice.js?1"></script>
+</head>
+
+<body>
+<div class="wrap">
+	<!-- header -->
+	<div class="header">
+		<a href="" class="back">back</a>
+		<h1>사원추가</h1>
+	</div>
+	<!-- //header -->
+
+	<!-- content -->
+	<div class="container pb100">
+		<div class="content">
+
+			<!-- 사원 -->
+			<div class="employees">
+				<div class="regs">
+					<p class="noti">대표사원 의 경우  사원추가, 수정, 삭재, 권한위임등이 가능합니다. <br>사원아이디와 비밀번호는 사원이 직접 수정할수있습니다. </p>
+					<div class="reg_tbs">
+						<table>
+							<colgroup>
+								<col style="width:104px">
+								<col style="">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>사원아이디</th>
+									<td>
+										<div class="in">
+											<span class="inputs"><input type="text" placeholder="사원아이디"></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>사원비밀번호</th>
+									<td>
+										<div class="in">
+											<span class="inputs"><input type="password" placeholder="사원비밀번호"></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2" class="th_toggle"><a href="">부서를 선택하세요 </a></th>
+								</tr>
+								<tr>
+									<td colspan="2" class="td_toggle_view">
+										<ul class="sel_list">
+											<li><span class="radios"><input type="radio" id="part_sel1" name="part_sel"><label for="part_sel1">마케팅팀</label></span></li>
+											<li><span class="radios"><input type="radio" id="part_sel2" name="part_sel"><label for="part_sel2">홍보팀</label></span></li>
+											<li><span class="radios"><input type="radio" id="part_sel3" name="part_sel"><label for="part_sel3">시공팀</label></span></li>
+											<li><span class="radios"><input type="radio" id="part_sel4" name="part_sel"><label for="part_sel4">마케팅팀</label></span></li>
+											<li><span class="radios"><input type="radio" id="part_sel5" name="part_sel"><label for="part_sel5">홍보팀</label></span></li>
+											<li><a href="" class="add">부서추가</a></li>
+										</ul>
+										<p class="input_mix"><span class="inputs"><input type="text"></span><button type="button">입력</button></p>
+										<button type="button" class="close">닫기</button>
+									</td>
+								</tr>
+								<tr>
+									<th colspan="2" class="th_toggle"><a href="">직급을 선택하세요 </a></th>
+								</tr>
+								<tr>
+									<td colspan="2" class="td_toggle_view">
+										<ul class="sel_list">
+											<li><span class="radios"><input type="radio" id="rank_sel1" name="rank_sel"><label for="rank_sel1">사장</label></span></li>
+											<li><span class="radios"><input type="radio" id="rank_sel2" name="rank_sel"><label for="rank_sel2">과장</label></span></li>
+											<li><span class="radios"><input type="radio" id="rank_sel3" name="rank_sel"><label for="rank_sel3">대리</label></span></li>
+											<li><span class="radios"><input type="radio" id="rank_sel4" name="rank_sel"><label for="rank_sel4">본부장</label></span></li>
+											<li><span class="radios"><input type="radio" id="rank_sel5" name="rank_sel"><label for="rank_sel5">이사</label></span></li>
+											<li><a href="" class="add">직급추가</a></li>
+										</ul>
+										<button type="button" class="close">닫기</button>
+									</td>
+								</tr>
+								<tr>
+									<th>이름</th>
+									<td>
+										<div class="in">
+											<span class="inputs"><input type="text" placeholder="홍길동"></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>연락처</th>
+									<td>
+										<div class="in">
+											<span class="inputs"><input type="text" placeholder="수정가능"></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>사진변경</th>
+									<td>
+										<div class="in">
+											<div class="mix_add mr0">
+												<span class="inputs"><input type="text" ></span><button type="button" class="bt_file">파일첨부</button>
+											</div>
+											<p class="tips">* 본인사진이 아닌경우에는 삭재될수있습니다.</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<a href="" class="bt_upload">등록</a>
+					</div>
+					<p class="noti">등록하시면 담당사원에게 계정(아이디,비밀번호)정보가 문자 전송됩니다.  </p>
+				</div>
+			</div>
+			<!-- //사원 -->
+		</div>
+	</div>
+	<!-- //content -->
+
+	<!-- 하단 메뉴 -->
+	<div class="fix_menu">
+		<ul>
+			<li><a href="" class="active">부서추가등록</a></li>
+			<li><a href="">사원추가등록</a></li>
+			<li><a href="">조직도등록</a></li>
+		</ul>
+	</div>
+	<!-- //하단 메뉴 -->
+
+	<!-- 위로 이동 -->
+	<a href="" class="bt_tops">top</a>
+	<!-- //위로 이동 -->
+
+	<!-- footer -->
+	<!--div class="footer">
+		<p>주식회사 홍길동부동산오피스 Corp</p>
+		<p>대표전화 : 1688-3398</p>
+	</div-->
+	<!-- //footer -->
+</div>
+
+<script type="text/javascript">
+	$(function(){
+	});
+</script>
+</body>
+</html>
