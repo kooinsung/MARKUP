@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>와드</title>
+<link rel="stylesheet" href="css/haktong.css?1234" />
+<script src="js/lib/jquery-2.0.2.min.js"></script>
+<script src="js/lib/jquery.plugin.js"></script>
+<script src="js/haktong.js?1234"></script>
+</head>
+<body>
+<div id="wrap" class="wrap">
+	<!-- header -->
+	<div class="header">
+		<h1>와드</h1>
+		<button type="button" class="bt_menu"><span class="lines"></span></button>
+	</div>
+	<!-- //header -->
+	
+	<!-- lnb -->
+	<div class="lnb" style="">
+		<div class="in">
+			<div class="search_form">
+				<button type="button">search</button>
+				<span><input type="text"/></span>
+			</div>
+			<div class="lists">
+				<ul>
+					<li class="l1"><a href="" >메뉴1</a></li>
+					<li class="l2"><a href="">메뉴2</a></li>
+					<li class="l3"><a href="">메뉴3</a></li>
+					<li class="l4"><a href="">메뉴4</a></li>
+					<li class="l5"><a href="">메뉴5</a></li>
+					<li class="l6"><a href="">메뉴6</a></li>
+				</ul>
+			</div>
+			<button type="button" class="bt_menu-close">close</button>
+		</div>
+	</div>
+	<!-- //lnb -->
+	
+	<!-- content -->
+	<div class="container">
+		<!-- 학원 리뷰 작성 -->
+		<div class="review_write">
+			<h2 class="checker tit">리뷰 작성</h2>
+			<div class="checker tips">
+				<p>
+					HACPLACE에서 좋은 학원과 좋은 선생님을 찾을 수 있도록 여러분의 소중한 경험을 남겨주세요.<br>작성하신 리뷰는 익명으로 저장되며 작성자의 개인정보는 어디에도 노출되지 않습니다.<br><br>
+					리뷰 작성은 객관적인 사실과 실제 경험을 바탕으로 작성해 주세요.<br>
+					비방, 욕설, 허위사실이 포함된 리뷰는 등록되지 않습니다.<br><br>
+				</p>
+				<em>리뷰 작성은 객관적인 사실과 실제 경험을 바탕으로 작성해 주세요.<br>비방, 욕설, 허위사실이 포함된 리뷰는 등록되지 않습니다.</em>
+			</div>
+			
+			<div class="write_forms">
+				<div class="checker row3">
+					<div class="col">
+						<span class="input"><input type="radio" name="lect" checked id="lect1"/><label for="lect1">현강</label></span>
+					</div>
+					<div class="col">
+						<span class="input"><input type="radio" name="lect" id="lect2"/><label for="lect2">인강</label></span>
+					</div>
+				</div>
+				<div class="row2">
+					<div class="checker form_box">
+						<strong>선생님을 한 줄로 평가한다면?</strong>
+						<span class="textarea">
+							<textarea placeholder="내용을 입력해 주세요."></textarea>
+						</span>
+					</div>
+					<div class="checker form_box">
+						<strong>장점<em>*</em></strong>
+						<span class="textarea">
+							<textarea placeholder="내용을 입력해 주세요."></textarea>
+						</span>
+					</div>
+					<div class="checker form_box">
+						<strong>단점<em>*</em></strong>
+						<span class="textarea">
+							<textarea placeholder="내용을 입력해 주세요."></textarea>
+						</span>
+					</div>
+					<div class="checker star_points">
+						<div class="star_box">
+							<strong>강의 내용과 강의력</strong>
+							<div class="stars">
+								<input type="radio" class="rating-input" id="s1-1" name="rating1" />
+								<label for="s1-1" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s1-2" name="rating1" />
+								<label for="s1-2" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s1-3" name="rating1" />
+								<label for="s1-3" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s1-4" name="rating1" />
+								<label for="s1-4" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s1-5" name="rating1" />
+								<label for="s1-5" class="rating-star"></label>
+							</div>
+							<span class="num">5.0</span>
+						</div>
+						<div class="star_box">
+							<strong>강의 교재 및 문제 품질</strong>
+							<div class="stars">
+								<input type="radio" class="rating-input" id="s2-1" name="rating2" />
+								<label for="s2-1" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s2-2" name="rating2" />
+								<label for="s2-2" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s2-3" name="rating2" />
+								<label for="s2-3" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s2-4" name="rating2" />
+								<label for="s2-4" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s2-5" name="rating2" />
+								<label for="s2-5" class="rating-star"></label>
+							</div>
+							<span class="num">5.0</span>
+						</div>
+						<div class="star_box">
+							<strong>강의 준비와 분위기 및 자세</strong>
+							<div class="stars">
+								<input type="radio" class="rating-input" id="s3-1" name="rating3" />
+								<label for="s3-1" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s3-2" name="rating3" />
+								<label for="s3-2" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s3-3" name="rating3" />
+								<label for="s3-3" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s3-4" name="rating3" />
+								<label for="s3-4" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s3-5" name="rating3" />
+								<label for="s3-5" class="rating-star"></label>
+							</div>
+							<span class="num">5.0</span>
+						</div>
+						<div class="star_box">
+							<strong>상담 및 학습관리</strong>
+							<div class="stars">
+								<input type="radio" class="rating-input" id="s4-1" name="rating4" />
+								<label for="s4-1" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s4-2" name="rating4" />
+								<label for="s4-2" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s4-3" name="rating4" />
+								<label for="s4-3" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s4-4" name="rating4" />
+								<label for="s4-4" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s4-5" name="rating4" />
+								<label for="s4-5" class="rating-star"></label>
+							</div>
+							<span class="num">5.0</span>
+						</div>
+						<div class="star_box">
+							<strong>실제 성적 향상 정도</strong>
+							<div class="stars">
+								<input type="radio" class="rating-input" id="s5-1" name="rating5" />
+								<label for="s5-1" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s5-2" name="rating5" />
+								<label for="s5-2" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s5-3" name="rating5" />
+								<label for="s5-3" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s5-4" name="rating5" />
+								<label for="s5-4" class="rating-star"></label>
+							
+								<input type="radio" class="rating-input" id="s5-5" name="rating5" />
+								<label for="s5-5" class="rating-star"></label>
+							</div>
+							<span class="num">5.0</span>
+						</div>
+					</div>
+					<div class="checker form_box">
+						<strong>기타의견</strong>
+						<span class="textarea">
+							<textarea placeholder="기타의견이 있으시다면 내용을 입력해 주세요."></textarea>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //학원 리뷰 작성 -->
+	</div>
+	<!-- //content -->
+	
+	<!-- 등록하기 -->
+	<div class="fix_register">
+		<a href="">등록하기</a>
+	</div>
+	<!-- //등록하기 -->	
+</div><!-- Latest compiled and minified CSS -->
+
+</body>
+</html>
