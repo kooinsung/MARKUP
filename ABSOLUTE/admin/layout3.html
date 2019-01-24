@@ -1,0 +1,475 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>매일유업 관리자</title>
+	<!--[if !(IE 8)]><!--><link rel="stylesheet" type="text/css" href="styles/font.css"><!--<![endif]-->
+	<link media="all" rel="stylesheet" type="text/css" href="styles/font-awesome.css">
+	<link media="all" rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css">
+	<link media="all" rel="stylesheet" type="text/css" href="styles/jquery-ui.theme.css">
+	<link media="all" rel="stylesheet" type="text/css" href="styles/common.css">
+	<link media="all" rel="stylesheet" type="text/css" href="styles/default.css">
+	<link media="all" rel="stylesheet" type="text/css" href="styles/device.css">
+	<!--[if IE 8]><link media="all" rel="stylesheet" type="text/css" href="styles/ie8.css"><![endif]-->
+	<!--[if IE 9]><link media="all" rel="stylesheet" type="text/css" href="styles/ie9.css"><![endif]-->
+	<script type="text/javascript" src="plugins/jquery.1.11.1.min.js"></script>
+	<script type="text/javascript" src="plugins/jquery-ui.1.11.2.min.js"></script>
+	<script type="text/javascript" src="plugins/jquery-migrate.1.2.1.min.js"></script>
+	<script type="text/javascript" src="plugins/jquery.treetable.3.2.0.custom.min.js"></script>
+	<!--[if lte IE 8]><script src="pl ugins/excanvas.min.js"></script><![endif]-->
+	<script type="text/javascript" src="plugins/chart.min.js"></script>
+</head>
+<body>
+<div class="page a3-01 a4-01">
+	<div class="header">
+		<div class="section">
+			<div class="r">
+				<div class="c q1">
+					<div class="site">
+						<h1 class="domain"><a href=""><img src="images/common/img_absolute.png" alt="Absolute"></a></h1>
+						<h2 class="subdomain"></h2>
+					</div>
+				</div>
+				<!--// .c -->
+				<div class="c q2">
+					<div class="task">
+						<div class="r">
+							<span class="c user"><span class="id">관리자</span><span class="label">님</span></span>
+							<span class="c log"><span class="label">최근접속</span><span class="date">2016-08-11</span><span class="time">11:14</span></span>
+							<span class="c buttons"><a href="" class="button">로그아웃</a></span>
+						</div>
+					</div>
+				</div>
+				<!--// .c -->
+			</div>
+			<!--// .r -->
+		</div>
+		<!--// .section -->
+		<div class="nonsection">
+			<div class="gnb">
+				<div class="a3">
+					<ul>
+						<li class="q1 current">
+							<a href="" target="_top">관리기능설정</a>
+						</li>
+						<li class="q2">
+							<a href="" target="_top">메인관리</a>
+						</li>
+						<li class="q3">
+							<a href="" target="_top">제품관리</a>
+						</li>
+						<li class="q4">
+							<a href="" target="_top">뉴스&이벤트관리</a>
+						</li>
+						<li class="q5">
+							<a href="" target="_top">[앱솔루트] 회원관리</a>
+						</li>
+						<li class="q6">
+							<a href="" target="_top">[앱솔루트] 솔루션통계</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--// .gnb -->
+		</div>
+		<!--// .nonsection -->
+		
+	</div>
+	<!--// .header -->
+	<div class="body">
+		<div class="section">
+			<div class="r">
+				<div class="c q1">
+					<div class="lnb">
+						<div class="a3">
+							<ul>
+								<li class="q1 current">
+									<a href="">관리기능설정</a>
+									<div class="a4">
+										<ul>
+											<li class="q1 current">
+												<a href="">비밀번호변경</a>
+											</li>
+											<li class="q2">
+												<a href="/cmsm/membermanagelist.do">관리자권한관리</a>
+												<div class="a5">
+													<ul>
+														<li class="q1">
+															<a href="/cmsm/membermanagelist.do">관리자계정관리</a>
+														</li>
+														<li class="q2">
+															<a href="/cmsm/prmgrouplist.do">권한관리</a>
+														</li>
+														<li class="q3">
+															<a href="/cmsm/prmbypersonlist.do">관리자별권한관리</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+											<li class="q3">
+												<a href="/cmsm/systemloginpolicyconfig.do">로그인정책설정관리</a>
+												<div class="a5">
+													<ul>
+														<li class="q1">
+															<a href="/cmsm/systemloginpolicyconfig.do">로그인정책설정</a>
+														</li>
+														<li class="q2">
+															<a href="/cmsm/systemloginhistorylist.do">로그인기록내역</a>
+														</li>
+														<li class="q3">
+															<a href="/cmsm/systemloginmanagementcmsm.do">관리자로그인제한관리</a>
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="q2">
+									<a href="/cmsm/mainbannerlist.do">메인관리</a>
+									<div class="a4">
+										<ul>
+											<li class="q1">
+												<a href="/cmsm/mainbannerlist.do">배너관리</a>
+											</li>
+											<li class="q2">
+												<a href="/cmsm/mainbannerlistCN.do">[앱솔루트]메인배너관리</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="q3">
+									<a href="/cmsm/productlist.do">제품관리</a>
+									<div class="a4">
+										<ul>
+											<li class="q1">
+												<a href="/cmsm/productlist.do">수출제품 관리</a>												
+											</li>
+											<li class="q2">
+												<a href="/cmsm/productcategorylist.do">제품 카테고리 관리</a>
+											</li>	
+										</ul>
+									</div>
+								</li>
+								<li class="q4">
+									<a href="/cmsm/noticeboardlist.do">뉴스&이벤트관리</a>
+									<div class="a4">
+										<ul>
+											<li class="q1">
+												<a href="/cmsm/noticeboardlist.do">뉴스관리</a>
+											</li>
+											<li class="q2">
+												<a href="/cmsm/eventlist.do">이벤트관리</a>
+											</li>
+											<li class="q3">
+												<a href="/cmsm/prmovielist.do">동영상관리</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="q4">
+									<a href="/cmsm/customerinquirylist.do">고객문의조회</a>
+									<div class="a4">
+										<ul>
+											<li class="q1">
+												<a href="/cmsm/customerinquirylist.do">고객문의조회</a>
+											</li>
+											<li class="q2">
+												<a href="/cmsm/csemaillist.do">CS담당자관리</a>
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--// .lnb -->
+				</div>
+				<!--// .c -->
+				<div class="c q2">
+					<div class="main">
+						<div class="title">
+							<h1>제품관리</h1>
+							<h2>수출제품 관리</h2>
+						</div>
+						<div class="desc mt10">
+							<p>수출제품을 관리 관리합니다.</p>
+						</div>
+						<div class="contents">
+							<div class="table grid p100 bt1 mt15">
+								<table>
+									<caption class="default"></caption>
+									<colgroup>
+										<col class="col p8">
+										<col class="col p12">
+										<col class="col">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row" colspan="2">카테고리(产品分类)*</th>
+											<td>
+												<div class="fields">
+													<span class="field p100">
+													<select name="c_pkid">
+														<option value="">카테고리선택</option>
+														
+														<option value="4" selected>幼儿食品</option>
+														
+														<option value="1" >发酵乳</option>
+														
+														<option value="2" >牛奶</option>
+														
+														<option value="3" >咖啡/饮料</option>
+														
+													</select>
+													</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" colspan="2">제품명*</th>
+											<td>
+												<div class="fields">
+													<span class="field p100"><input type="text" name="p_name" maxlength="120" value="爱思诺金典名作"></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" colspan="2">순서*</th>
+											<td>
+												<span class="field"><input type="text" name="p_order" maxlength="5" onkeypress="OnlyNumber();" onkeyup="OnlyNumberNew();" value="1"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="4">제품<br>이미지*</th>
+											<th scope="row">웹 메인</th>
+											<td>
+												<span class="field">
+													<input type="file" name="uploadFile1" onkeydown="fileWriteNot();"> (최적화 이미지 사이즈 170*210)
+													
+												</span>
+
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">웹 서브</th>
+											<td>
+												<span class="field">
+													<input type="file" name="uploadFile2" onkeydown="fileWriteNot();"> (최적화 이미지 사이즈 318*318)
+													
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">모바일 메인</th>
+											<td>
+												<span class="field">
+													<input type="file" name="uploadFile3" onkeydown="fileWriteNot();"> (최적화 이미지 사이즈 160*160)
+													
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">모바일 서브</th>
+											<td>
+												<span class="field">
+													<input type="file" name="uploadFile4" onkeydown="fileWriteNot();"> (최적화 이미지 사이즈 618*618)
+													
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="2">제품<br>리플렛*</th>
+											<th scope="row">웹</th>
+											<td>
+												<span class="field">
+													<input type="file" name="uploadFile5" onkeydown="fileWriteNot();">
+													
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">모바일</th>
+											<td>
+												<span class="field">
+													<input type="file" name="uploadFile6" onkeydown="fileWriteNot();">
+													
+												</span>
+											</td>
+										</tr>	
+										<tr>
+											<th scope="row" colspan="3">제품정보</th>
+										</tr>	
+
+									</tbody>
+								</table>
+							</div>
+							<div class="bbs editor">
+								에디터
+							</div>
+							<div class="table grid p100">
+								<table>
+									<caption class="default"></caption>
+									<colgroup>
+										<col class="col p8">
+										<col class="col p12">
+										<col class="col">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row" colspan="2">구매링크</th>
+											<td>
+												<div class="fields">
+													<span class="field p100"><input type="text" name="p_url" maxlength="250" value=""></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" colspan="2">한국제품보기링크</th>
+											<td>
+												<div class="fields">
+													<span class="field p100"><input type="text" name="p_url_kor" maxlength="250" value=""></span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="7">유통<br>정보</th>
+											<th scope="row">용량(净含量)</th>
+											<td>
+												<span class="field p100"><input type="text" name="p_info1" maxlength="120" value="800g, 400g"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">식품/축산물유형(产品类型)</th>
+											<td>
+												<span class="field p100"><input type="text" name="p_info2" maxlength="120" value="乳基粉婴幼儿配方食品"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">업소명 및 소재지(制造商)</th>
+											<td>
+												<span class="field p100"><input type="text" name="p_info3" maxlength="120" value="每日乳业(株)平泽工厂"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">판매상 정보(经销商)</th>
+											<td>
+												<span class="field p100"><input type="text" name="p_info4" maxlength="120" value="山东每怡国际贸易有限公司"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">주소 및 연락처(地址及电话)</th>
+											<td>
+												<span class="field p100"><input type="text" name="p_info5" maxlength="120" value="中国山东省烟台高新技术产业开发区经七路6号"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">유통기한(保质期)</th>
+											<td>
+												<span class="field p100"><input type="text" name="p_info6" maxlength="120" value="1095日"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">제품등록번호(注册编号)</th>
+
+											<td>
+												<span class="field p100"><input type="text" name="p_info7" maxlength="120" value="No 6410000-004-1981-0002"></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row" rowspan="4">게시<br>여부</th>
+											<th scope="row">웹 메인</th>
+											<td>
+												<span class="field"><input type="radio" name="view_yn1" value="Y" ></span>
+												<span class="field mw6"><label>게시</label></span>
+												<span class="field"><input type="radio" name="view_yn1" value="N" checked></span>
+												<span class="field mw6"><label>비게시</label></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">웹 서브</th>
+											<td>
+												<span class="field"><input type="radio" name="view_yn2" value="Y" ></span>
+												<span class="field mw6"><label>게시</label></span>
+												<span class="field"><input type="radio" name="view_yn2" value="N" checked></span>
+												<span class="field mw6"><label>비게시</label></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">모바일 메인</th>
+											<td>
+												<span class="field"><input type="radio" name="view_yn3" value="Y" ></span>
+												<span class="field mw6"><label>게시</label></span>
+												<span class="field"><input type="radio" name="view_yn3" value="N" checked></span>
+												<span class="field mw6"><label>비게시</label></span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">모바일 서브</th>
+											<td>
+												<span class="field"><input type="radio" name="view_yn4" value="Y" ></span>
+												<span class="field mw6"><label>게시</label></span>
+												<span class="field"><input type="radio" name="view_yn4" value="N" checked></span>
+												<span class="field mw6"><label>비게시</label></span>
+											</td>
+										</tr>										
+									</tbody>
+								</table>
+							</div>
+
+							<div class="buttons mt15">
+								<div class="r">
+									<div class="c fl">
+									</div>
+									<div class="c fr">
+										<div class="buttons tar">
+											<a href="javascript:void(0);" onclick="saveContent();" class="button h24 strong">저장</a>
+											<a href="javascript:void(0);" onclick="document.form01.reset()" class="button h24 strong">취소</a>
+											<a href="productlist.do?searchField=&searchType=&searchValue=&currentPage=1" class="button h24 strong">목록</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--// .main -->
+				</div>
+				<!--// .c -->
+			</div>
+			<!--// .r -->
+		</div>
+		<!--// .section -->
+	</div>
+	<!--// .body -->
+	<div class="footer">
+		<div class="section">
+			<div class="r">
+				<div class="c q1">
+					<div class="site">
+						<h1 class="domain"><a ><img src="images/common/img_footerlogo.png" alt="매일유업"></a></h1>
+						<h2 class="subdomain"></h2>
+					</div>
+				</div>
+				<!--// .c -->
+				<div class="c q2">
+					<div class="info">
+						<div class="copyright">
+							<span class="q1">COPYRIGHT BY MAEIL DAIRIES CO,.LTD. ALL RIGHTS RESERVED.</span>
+							<span class="q2">TEL 1588-1539</span>
+						</div>
+					</div>
+				</div>
+				<!--// .c -->
+			</div>
+			<!--// .r -->
+		</div>
+		<!--// .section -->
+		<iframe name="hiddenForm" frameborder="0" style="width:0px;height:0px;"></iframe>
+	</div>
+	<!--// .footer -->
+</div>
+<!--// .page -->
+</body>
+</html>

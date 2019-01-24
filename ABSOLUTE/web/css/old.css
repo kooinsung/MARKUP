@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.checks input[type="checkbox"]{display:inline;width:auto;height:auto;}
+.checks input[type="checkbox"] + label{display:inline;height:auto;line-height:auto;margin:0;padding:0;background:none;}
+.checks input[type="checkbox"]:checked + label{background:none}
+.radios input[type="radio"] {display:inline;width:auto;height:auto;}
+.radios input[type="radio"] + label{display:inline;height:auto;line-height:auto;margin:0;padding:0;background:none;}
+.radios input[type="radio"]:checked + label{background:none}
+.selects select{height:auto;background:none;padding:6px 0 6px 0;}
+.content.util .utilSrch1 .radios input[type="radio"]{margin-left:450px}

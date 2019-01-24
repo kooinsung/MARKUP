@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title></title>
+	<link rel="stylesheet" href="../../css/common_m.css">
+	<link rel="stylesheet" href="../../css/default_m.css">
+	<script src="../../js/jquery-1.8.3.min.js"></script>
+	<script src="../../js/jquery.plugin.js"></script>
+	<script src="../../js/common_m.js"></script>
+	<script src="../../js/default_m.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- authentic // -->
+	<div class="layer" id="layerAuthentic">
+		<div class="layerIn">
+			<div class="layerTop">
+				<h1>정품인증조회</h1>
+			</div>
+			<div class="layerBody">
+				<p class="st"><span>이 제품은 한국 매일유업의 정품이 맞습니다.</span></p>
+				<div class="layerRolling">
+					<ul id="layerRolling">
+						<li><img src="../../images/img_dummy7.png" alt="" /></li>
+						<li><img src="../../images/img_dummy7.png" alt="" /></li>
+						<li><img src="../../images/img_dummy7.png" alt="" /></li>
+						<li><img src="../../images/img_dummy7.png" alt="" /></li>
+					</ul>
+				</div>
+				<table>
+					<tbody>
+						<tr>
+							<th>제품명</th>
+							<td>애사락 금전명작 1단계</td>
+						</tr>
+						<tr>
+							<th>적용연령</th>
+							<td>0~6개월</td>
+						</tr>
+						<tr>
+							<th>생산공장</th>
+							<td>한국 매일유업 주식회사</td>
+						</tr>
+						<tr>
+							<th>기업 사이트</th>
+							<td><a href="">http://cn.maeil.com </a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<button type="button" class="btnLayerClose" onclick="Absolute.layer.hide('layerAuthentic');return false;">close</button>
+		</div>
+	</div>
+	<!-- // authentic -->
+	<script type="text/javascript">
+		$(function(){
+			$('#layerRolling').bxSlider();
+		});
+	</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+.visual{position:relative;}
+.visual img{width:100%;}
+.visual .bx-prev, .visual .bx-next{display:none;}
+.visual .bx-pager{position:absolute;bottom:5%;z-index:100;width:100%;text-align:center;font-size:0;}
+.visual .bx-pager div{display:inline-block;margin:0 3px;}
+.visual .bx-pager div a{font-size:0;display:inline-block;width:11px;height:11px;background:url('../images/m/icon_visual1.png') center center no-repeat;background-size:11px 11px;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.visual .bx-pager div a.active{width:31px;height:11px;background:url('../images/m/icon_visual2.png') center center no-repeat;background-size:31px 11px;}
+
+.mainRow1{margin:0 10px;padding:50px 0;}
+.mainRow1 .rowTop{text-align:center;margin-bottom:30px;}
+.mainRow1 .rowTop span{position:relative;display:inline-block;font-size:25px;color:#545351;line-height:150%;vertical-align:top;padding:15px 0;margin-right:20px;margin-top:20px;}
+.mainRow1 .rowTop span:after{content:'';display:inline-block;position:absolute;top:0;left:50%;margin-left:-20px;width:45px;height:1px;background:#767574;}
+.mainRow1 .rowTop span:before{content:'';display:inline-block;position:absolute;bottom:0;left:50%;margin-left:-20px;width:45px;height:1px;background:#767574;}
+.mainRow1 .rowTop img{width:71px;}
+.mainRow1 li{position:relative;border-top:1px solid #d4d4d4;}
+.mainRow1 li:first-child{border-top:0;}
+.mainRow1 li p{display:block;padding:10px 0;color:#4d4646;font-weight:700;font-size:16px;margin:0 100px 0 0;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;padding-left:35px}
+.mainRow1 li span{position:absolute;top:10px;right:0;display:inline-block;background:#624333;color:#fff;text-align:center;width:90px;height:25px;line-height:25px;border-radius:25px;}
+.mainRow1 li:nth-child(1) p{background:url('../images/m/icon_pink1.png') 3px center no-repeat;background-size:26px 22px;}
+.mainRow1 li:nth-child(2) p{background:url('../images/m/icon_pink2.png') 3px center no-repeat;background-size:23px 28px;}
+.mainRow1 li:nth-child(3) p{background:url('../images/m/icon_pink3.png') 3px center no-repeat;background-size:22px 28px;}
+.mainRow1 li:nth-child(4) p{background:url('../images/m/icon_pink4.png') 3px center no-repeat;background-size:28px 28px;}
+.mainRow1 li:nth-child(5) p{background:url('../images/m/icon_pink5.png') 3px center no-repeat;background-size:27px 24px;}
+.mainRow2{background:#b59168;text-align:center;}
+.mainRow2 a{display:block;padding:15px 0;color:transparent;background:url('../images/m/img_lablogo.png') center center no-repeat;background-size:195px 37px;}
+.mainRow3 {border-bottom:1px solid #dbd7d3;}
+.mainRow3 ul{font-size:0;}
+.mainRow3 li{display:inline-block;width:50%;text-align:center;}
+.mainRow3 li:first-child img{width:65px;}
+.mainRow3 li:first-child div{border-right:1px solid #dbd7d3;}
+.mainRow3 li:last-child img{width:54px;}
+.mainRow3 div{padding:20px 0;}
+.mainRow3 strong{display:block;font-size:15px;color:#75573f;font-weight:700;margin-bottom:10px;}
+.mainRow4{height:505px;}
+.mainRow4 .prdRolling{position:relative;}
+.mainRow4 .bx-viewport li{text-align:center;}
+.mainRow4 img{max-width:360px;width:100%;}
+.mainRow4 .bx-prev{color:transparent;width:20px;height:32px;display:inline-block;position:absolute;top:225px;left:10px;background:url('../images/m/btn_prev.png') center center no-repeat;background-size:20px 32px;}
+.mainRow4 .bx-next{color:transparent;width:20px;height:32px;display:inline-block;position:absolute;top:225px;right:10px;background:url('../images/m/btn_next.png') center center no-repeat;background-size:20px 32px;}
+.mainRow4 .bx-pager{position:absolute;top:35px;z-index:100;width:100%;text-align:center;font-size:0;}
+.mainRow4 .bx-pager div{display:inline-block;margin:0 5px;}
+.mainRow4 .bx-pager div a{font-size:0;display:inline-block;width:9px;height:9px;border-radius:9px;background:#c9b195;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.mainRow4 .bx-pager div a.active{background:#503214;}
+@media all and (max-width:320px) {
+}

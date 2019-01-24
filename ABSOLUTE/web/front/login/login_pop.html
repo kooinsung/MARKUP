@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title></title>
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/default.css">
+	<script src="../../js/jquery-1.8.3.min.js"></script>
+	<script src="../../js/jquery.plugin.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/default.js"></script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="../../css/old.css">
+	<![endif]-->
+</head>
+<body>
+<div class="wrap">
+	<!-- login // -->
+	<div class="layerLogin" id="layerLogin">
+		<h1>登录</h1>
+		<div class="row1">	
+			<strong class="stit"><span>账号登录</span></strong>
+			<div class="loginForm">
+				<ul>
+					<li><input type="text" placeholder="邮箱"/></li>
+					<li class="mix">
+						<input type="password" placeholder="登录密码"/>
+						<span class="saveCheck"><input type="checkbox" id="save"/> <label for="save"> 记住我</label></span>
+					</li>
+				</ul>
+			</div>
+			<ul class="btnShorts">
+				<li><a href="" class="gray">忘记密码？</a></li>
+				<li><a href="" class="yellow">注册</a></li>
+			</ul>
+			<ul class="btnLongs">
+				<li><a href="">登录</a></li>
+			</ul>
+		</div>
+		<div class="row2">
+			<ul>
+				<li><a href="" class="sns1"><em>新浪微博 登录</em></a></li>
+				<li><a href="" class="sns2"><em>微信 登录</em></a></li>
+				<li><a href="" class="sns3"><em>淘宝网 登录</em></a></li>
+			</ul>
+		</div>
+		<button type="button" class="btnLayerClose" onclick="Absolute.layer.hide('layerLogin'); return false;"><img src="../../images/icon_layerClose.png" alt="layer close"/></button>
+	</div>
+	<!-- // login -->
+</div>
+</body>
+</html>

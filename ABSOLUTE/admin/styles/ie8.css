@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+select,
+input[type="text"],
+input[type="password"],
+input[type=file],
+textarea{border:1px solid #A9A9A9;}
+
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type=file]:focus,
+textarea:focus{border-color:#999999;}
+
+select{
+	height:23px;
+	font-family:Dotum, Gulim, sans-serif;
+	padding:2px;
+}
+
+.ui-watermark-label{font-family:Dotum, Gulim, sans-serif !important;}
