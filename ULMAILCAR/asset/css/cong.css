@@ -1,0 +1,262 @@
+@charset "utf-8";
+@import url('common.css');
+
+.btm_bar{font-size:15px;color:#fff;font-weight:bold;background:#2d9be0;height:50px;line-height:50px;text-align:center;}
+
+/* 메인 */
+.m .main_row1{padding:95px 0 0 0;height:285px;background:url('../../img/bg_main.png') center center no-repeat;background-size:cover;text-align:center;}
+.m .main_row1 .t1{font-size:24px;color:#fff;font-weight:bold;text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.15);}
+.m .main_row1 .t2{font-size:43px;color:#fff;font-weight:bold;text-shadow:0px 3px 0px rgba(0, 0, 0, 0.15);}
+.m .main_row1 .t2 span{color:#ffe400;}
+.m .main_row1 .t3{font-size:12px;color:#fff;line-height:170%;margin:20px 0 30px 0;}
+.m .main_row1 .t3 span{text-decoration:underline;}
+.m .main_row1 a{position:relative;display:block;width:155px;height:45px;line-height:45px;border-radius:45px;padding-left:22px;text-align:left;margin:0 auto;border:3px solid #fff;font-size:16px;color:#fff;font-weight:bold;}
+.m .main_row1 a:after{content:'';position:absolute;top:50%;right:20px;display:inline-block;margin:-10px 0 0 0;width:21px;height:21px;background:url('../../img/ico_cycle-arrow.png') left center no-repeat;background-size:21px 21px;}
+.m .main_row2{text-align:center;overflow:hidden;}
+.m .main_row2 p{font-size:12px;color:#455666;font-weight:bold;margin-top:20px}
+.m .main_row2 .store{font-size:0;text-align:center;margin:15px 0;}
+.m .main_row2 .store a{display:inline-block;width:136px;height:42px;text-indent:-9999px;margin:0 5px;}
+.m .main_row2 .store a.google{background:url('../../img/img_googleplay.png') center center no-repeat;background-size:136px 42px;}
+.m .main_row2 .store a.apple{background:url('../../img/img_appstore.png') center center no-repeat;background-size:136px 42px;}
+.m .main_row3{text-align:center;background:#343f4a;padding-top:40px;}
+.m .main_row3 .t1{font-size:13px;color:#fff;font-weight:bold;margin-bottom:5px;}
+.m .main_row3 .t2{font-size:25px;color:#fff;font-weight:bold;margin-bottom:20px;}
+.m .main_row3 .t2 span{color:#2abdf0}
+.m .main_row3 ul{position:relative;display:inline-block;font-size:0;}
+.m .main_row3 li{position:relative;display:inline-block;width:69px;padding:0 5px;}
+.m .main_row3 li:before{content:'';position:absolute;top:10px;left:-7px;display:inline-block;width:13px;height:13px;background:url('../../img/ico_cycle-arrow3.png') 0 0 no-repeat;background-size:13px 13px;}
+.m .main_row3 li:first-child:before{display:none;}
+.m .main_row3 li span{display:block;font-size:12px;color:#fff;font-weight:bold;margin-bottom:15px;}
+.m .main_row3 li img{max-width:100%;}
+.m .main_row4{text-align:center;padding-top:40px;}
+.m .main_row4 .t1{font-size:13px;color:#455666;font-weight:bold;margin-bottom:5px;}
+.m .main_row4 .t2{font-size:25px;color:#455666;font-weight:bold;margin-bottom:30px;}
+.m .main_row4 .t2 span{color:#2d9be0}
+.m .main_row4 li{margin-bottom:60px;padding-top:125px;}
+.m .main_row4 li.l1{background:url('../../img/img_main-row3-1.png') center top no-repeat;background-size:113px 102px;}
+.m .main_row4 li.l2{background:url('../../img/img_main-row3-2.png') center top no-repeat;background-size:161px 102px;}
+.m .main_row4 li.l3{background:url('../../img/img_main-row3-3.png') center top no-repeat;background-size:120px 102px;}
+.m .main_row4 li.l4{background:url('../../img/img_main-row3-4.png') center top no-repeat;background-size:123px 102px;}
+.m .main_row4 li strong{font-size:18px;color:#455666;font-weight:bold;}
+.m .main_row4 li p{font-size:12px;color:#7a8599;margin-top:10px;line-height:170%;}
+.m .main_row5{background:#f1f5f8;text-align:center;padding:15px 0;}
+.m .main_row5 a{display:block;}
+.m .main_row5 span{text-align:left;background:url('../../img/img_m-favicon.png') 0 0 no-repeat;background-size:32px 32px;padding-left:48px;display:inline-block;font-size:12px;color:#455666;font-weight:bold;}
+.pc .main_row1{overflow:hidden;padding:0 0 0 0;height:560px;background:url('../../img/bg_main_pc.png') center center no-repeat;text-align:center;}
+.pc .main_row1 .t1{font-size:60px;color:#fff;font-weight:bold;text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.15);margin-top:190px;}
+.pc .main_row1 .t1 span{color:#ffe400;}
+.pc .main_row1 .t1 em{font-style: italic;font-weight: bold;}
+.pc .main_row1 .t3{font-size:20px;color:#fff;line-height:170%;margin:20px 0 45px 0;}
+.pc .main_row1 .t3 span{border-bottom:1px solid #e8f4fc;font-weight:bold;}
+.pc .main_row1 a{position:relative;display:block;width:316px;height:90px;line-height:90px;border-radius:90px;padding-left:55px;text-align:left;margin:0 auto;border:5px solid #fff;font-size:32px;color:#fff;font-weight:bold;}
+.pc .main_row1 a:hover{background:rgba(255,255,255,.2);}
+.pc .main_row1 a:after{content:'';position:absolute;top:0;right:40px;display:inline-block;width:42px;height:90px;background:url('../../img/ico_cycle-arrow.png') left center no-repeat;}
+.pc .main_row2{overflow:hidden;width:1080px;margin:0 auto;overflow:hidden;padding:34px 0;}
+.pc .main_row2 p{height:75px;line-height:75px;float:left;padding-left:95px;font-size:24px;color:#455666;font-weight:bold;background:url('../../img/img_m-favicon2.png') left center no-repeat;}
+.pc .main_row2 .store{font-size:0;float:right;}
+.pc .main_row2 .store a{display:inline-block;width:236px;height:75px;text-indent:-9999px;margin:0 5px;}
+.pc .main_row2 .store a.google{background:url('../../img/img_googleplay3.png') center center no-repeat;}
+.pc .main_row2 .store a.apple{background:url('../../img/img_appstore3.png') center center no-repeat;}
+.pc .main_row3{text-align:center;background:#343f4a;margin:0 auto;padding-top:90px;}
+.pc .main_row3 .t1{font-size:24px;color:#fff;font-weight:bold;margin-bottom:10px;}
+.pc .main_row3 .t2{font-size:50px;color:#fff;font-weight:bold;margin-bottom:70px;}
+.pc .main_row3 .t2 span{color:#2abdf0}
+.pc .main_row3 .t2 em{font-style: italic;font-weight: bold;}
+.pc .main_row3 ul{position:relative;display:inline-block;font-size:0;}
+.pc .main_row3 ul:before{content:'';display:block;width:100%;height:1px;background:#434f5b;position:absolute;top:27px;left:0;}
+.pc .main_row3 li{position:relative;display:inline-block;width:199px;padding:0 35px;}
+.pc .main_row3 li:before{content:'';position:absolute;top:10px;left:-18px;display:inline-block;width:34px;height:34px;background:url('../../img/ico_cycle-arrow4.png') 0 0 no-repeat;}
+.pc .main_row3 li:first-child:before{display:none;}
+.pc .main_row3 li span{display:inline-block;font-size:20px;color:#fff;font-weight:bold;margin-bottom:35px;background:#343f4a;padding:0 5px;}
+.pc .main_row4{text-align:center;padding-top:90px;}
+.pc .main_row4 .t1{font-size:24px;color:#455666;font-weight:bold;margin-bottom:5px;}
+.pc .main_row4 .t2{font-size:50px;color:#455666;font-weight:bold;margin-bottom:80px;}
+.pc .main_row4 .t2 span{color:#2d9be0}
+.pc .main_row4 .t2 em{font-style: italic;font-weight: bold;}
+.pc .main_row4 ul{font-size:0;width:980px;margin:0 auto;}
+.pc .main_row4 li{display:inline-block;width:50%;padding-top:259px;margin-bottom:80px;}
+.pc .main_row4 li.l1{background:url('../../img/img_main-row3-1_pc.png') center top no-repeat;}
+.pc .main_row4 li.l2{background:url('../../img/img_main-row3-2_pc.png') center top no-repeat;}
+.pc .main_row4 li.l3{background:url('../../img/img_main-row3-3_pc.png') center top no-repeat;}
+.pc .main_row4 li.l4{background:url('../../img/img_main-row3-4_pc.png') center top no-repeat;}
+.pc .main_row4 li strong{font-size:36px;color:#455666;font-weight:bold;}
+.pc .main_row4 li p{font-size:17px;color:#7a8599;margin-top:10px;line-height:170%;}
+.pc .main_row5{background:#f1f5f8;text-align:center;padding:20px 0;}
+.pc .main_row5 a{display:block;}
+.pc .main_row5 span{height:63px;line-height:63px;text-align:left;background:url('../../img/img_m-favicon.png') 0 0 no-repeat;padding-left:90px;display:inline-block;font-size:20px;color:#455666;font-weight:bold;}
+
+/* 견적받기 */
+.reg_form{margin:0 15px;}
+.reg_form .inputs.km:after{content:'km';position:absolute;top:0;right:15px;font-size:12px;color:#7a8599;line-height:43px;}
+.reg_form .pic_reg{margin:20px 0 25px 0;}
+.reg_form .pic_reg .tit{font-size:12px;color:#7a8599;margin-right:10px;}
+.reg_form .pic_reg .tit em{font-size:10px;}
+.reg_form .pic_reg .pic_ok{font-size:12px;color:#ec4e4e;font-weight:bold;}
+.reg_form .bt_pic-reg{text-align:left;position:relative;background:#455666;padding-left:10px;width:57px;height:26px;border-radius:26px;color:#fff;font-weight:bold;font-size:12px;}
+.reg_form .bt_pic-reg:after{content:'';display:inline-block;position:absolute;top:50%;right:7px;width:12px;height:12px;margin-top:-6px;background:url('../../img/ico_plus.png') center center no-repeat;background-size:11px 11px;}
+.pic_list {font-size:0;text-align:center;}
+.pic_list button{position:relative;overflow:hidden;margin:0 3px;text-align:center;background:#f1f5f6;width:55px;height:55px;border:1px solid #e5ebec;border-radius:5px;font-size:12px;color:#b5bbc6;text-align:center;}
+.pic_list button:after{content:'';display:block;width:12px;height:12px;margin:3px auto 0 auto;background:url('../../img/ico_plus2.png') center center no-repeat;background-size:11px 11px;}
+.pic_list button.add img{position:absolute;top:0;left:0;width:100%;height:100%;}
+.area_list li{border-top:1px solid #e5ebec;text-align:left;}
+.area_list li:first-child{border-top:0;}
+.area_list input{opacity:0;position:absolute;}
+.area_list input[type=radio]+label{position:relative;padding-left:15px;height:50px;line-height:50px;color:#455666;font-size:14px;cursor:pointer;display:block;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.area_list input[type=radio]:checked+label{font-weight:bold;}
+
+/* 차량상태 */
+.state_form{margin:0 15px;}
+.state_form .accident_list{position:relative;text-align:right;}
+.state_form .accident_list .tit{font-size:12px;color:#7a8599;line-height:40px;position:absolute;top:0;left:0;text-indent:15px;}
+.state_form .accident_list .col{margin-left:20px;}
+.state_form .tips {margin:10px 0 30px 0;}
+.state_form .tips li{font-size:11px;color:#7a8599;line-height:170%;}
+.state_form .tips li.danger{color:#e94848;font-weight:bold;}
+
+/* 견적신쳥완료 */
+.apply_success{text-align:center;margin:0 15px;}
+.apply_success .t1{font-size:19px;color:#363942;font-weight:bold;}
+.apply_success .t2{font-size:13px;color:#455666;font-weight:bold;line-height:150%;margin:10px 0 20px 0;}
+.apply_success .t2 span{text-decoration:underline;}
+.apply_success .tips {margin-bottom:30px;}
+.apply_success .tips ul{text-align:left;display:inline-block;}
+.apply_success .tips li{padding-left:20px;font-size:11px;color:#7a8599;line-height:170%;margin:5px 0;background:url('../../img/ico_check-blt.png') left 2px no-repeat;background-size:14px 14px;}
+.apply_success .bt_enter{position:relative;display:inline-block;border-radius:45px;padding:7px 55px 7px 30px;text-align:center;margin:0 auto 40px auto;line-height:100%;border:3px solid #2d9be0;font-size:16px;color:#2d9be0;font-weight:bold;-webkit-box-shadow: 2px 3px 0px 0px rgba(237,237,237,1);-moz-box-shadow: 2px 3px 0px 0px rgba(237,237,237,1);box-shadow: 2px 3px 0px 0px rgba(237,237,237,1);}
+.apply_success .bt_enter span{font-size:12px;display:block;font-weight:400;}
+.apply_success .bt_enter strong{font-size:15px;font-weight:bold;}
+.apply_success .bt_enter:after{content:'';position:absolute;top:50%;right:20px;display:inline-block;margin:-10px 0 0 0;width:21px;height:21px;background:url('../../img/ico_cycle-arrow2.png') left center no-repeat;background-size:21px 21px;}
+.apply_success .sample{margin-bottom:30px;text-align:center;}
+.apply_success .sample img{max-width:100%;}
+
+/* 딜러리스트 */
+.dealer_lists .util{border-bottom:1px solid #e5ebec;padding:0 15px;overflow:hidden;line-height:45px;}
+.dealer_lists .total{font-size:14px;color:#455666;font-weight:bold;float:left;}
+.dealer_lists .total em{font-size:17px;color:#2d9be0;font-weight:bold;position:relative;top:2px;}
+.dealer_lists .sort{font-size:12px;color:#7a8599;float:right;}
+.dealer_lists li{position:relative;border-bottom:1px solid #e5ebec;min-height:40px;padding:15px 0;display:block;text-align:left;}
+.dealer_lists .thumb{position:absolute;top:15px;left:15px;display:inline-block;width:40px;height:40px;overflow:hidden;border-radius:40px;}
+.dealer_lists .thumb img{width:40px;height:40px;overflow:hidden;}
+.dealer_lists .infos{position:relative;margin:0 60px 0 68px;border-right:1px solid #e5ebec;}
+.dealer_lists .name{font-size:14px;color:#455666}
+.dealer_lists .txt{font-size:11px;color:#7a8599;margin:3px 110px 0 0;}
+.dealer_lists .price{position:absolute;top:-2px;right:17px;line-height:40px;font-size:11px;color:#363942;font-weight:bold;}
+.dealer_lists .price strong{letter-spacing:-1px;font-size:19px;font-weight:bold;position:relative;top:3px;margin-right:3px;}
+.dealer_lists .bt_choice{font-size:14px;color:#2d9be0;font-weight:bold;position:absolute;top:15px;right:0;width:64px;height:40px;line-height:40px;text-align:center;}
+.dealer_lists .no_list{text-align:center;border-bottom:1px solid #e5ebec;padding:100px 0 50px 0 ;background:url('../../img/ico_srch.png') center 53px no-repeat;background-size:31px 31px;}
+.dealer_lists .no_list .t1{font-size:12px;color:#7a8599;font-weight:bold;margin:5px 0;}
+.dealer_lists .no_list .t2{font-size:10px;color:#7a8599;}
+.dealer_lists .selected{position:absolute;top:13px;left:40px;z-index:10;display:inline-block;width:17px;height:17px;text-indent:-9999px;}
+.dealer_lists .more{font-size:12px;color:#7a8599;margin:15px auto 0 auto;display:block;border:1px solid #e5ebec;width:122px;height:30px;line-height:30px;border-radius:5px;}
+.dealer_lists li.first .thumb{background:#32404d;border:2px solid #32404d;width:38px;height:38px;}
+.dealer_lists li.first .selected{background:url('../../img/img_end1.png') center center no-repeat;background-size:17px 17px;}
+.dealer_lists li.first .bt_choice{color:#8696a0;line-height:18px;font-size:11px;padding-top:3px;}
+.dealer_lists li.chk .thumb{background:#e94848;border:2px solid #e94848;width:38px;height:38px;}
+.dealer_lists li.chk .selected{background:url('../../img/img_end2.png') center center no-repeat;background-size:17px 17px;}
+.dealer_lists li.chk .bt_choice{color:#e94848;}
+
+/* 딜러상세 */
+.dealer_views .row1{position:relative;border-bottom:1px solid #2d9be0;min-height:40px;padding:15px 0;display:block;text-align:left;}
+.dealer_views .row1 .infos{position:relative;margin:0 60px 0 15px;border-right:1px solid #e5ebec;}
+.dealer_views .row1 .name{font-size:14px;color:#455666}
+.dealer_views .row1 .txt{font-size:11px;color:#7a8599;margin:3px 110px 0 0;}
+.dealer_views .row1 .price{position:absolute;top:-2px;right:17px;line-height:40px;font-size:11px;color:#363942;font-weight:bold;}
+.dealer_views .row1 .price strong{letter-spacing:-1px;font-size:19px;font-weight:bold;position:relative;top:3px;margin-right:3px;}
+.dealer_views .row1 .bt_choice{font-size:14px;color:#2d9be0;font-weight:bold;position:absolute;top:15px;right:0;width:64px;height:40px;line-height:40px;text-align:center;}
+.dealer_views.first .bt_choice{color:#8696a0;line-height:18px;font-size:11px;padding-top:3px;}
+.dealer_views.chk .bt_choice{color:#e94848;}
+.dealer_views .ments{line-height:150%;font-size:12px;color:#7a8599;text-align:center;padding:30px 15px;}
+.dealer_views .num_list{font-size:0;border-top:1px solid #e5ebec;border-bottom:2px solid #e5ebec;}
+.dealer_views .num_list dl{position:relative;display:inline-block;width:50%;overflow:hidden;line-height:22px;height:22px;margin:15px 0;}
+.dealer_views .num_list dt{font-size:12px;color:#455666;font-weight:bold;float:left;padding-left:15px;}
+.dealer_views .num_list dd{font-size:12px;color:#2d9be0;float:right;padding-right:15px;}
+.dealer_views .num_list dl:last-child dt{border-left:1px solid #e5ebec;}
+.dealer_views .review {background:#f1f5f6;padding-bottom:30px;}
+.dealer_views .review .util{overflow:hidden;padding:15px;}
+.dealer_views .review .tit{font-weight:bold;color:#455666;font-size:12px;float:left;}
+.dealer_views .review .num{font-size:12px;color:#2d9be0;float:right;}
+.dealer_views .review .no_review{text-align:center;padding:30px 0;}
+.dealer_views .review .no_review p{font-size:12px;color:#7a8599;padding-top:60px;background:url('../../img/img_no-review.png') center top no-repeat;background-size:38px 40px;}
+.dealer_views .review li{position:relative;border-bottom:1px solid #e5ebec;padding:15px 15px;}
+.dealer_views .review li .thumb{position:absolute;top:15px;left:15px;display:inline-block;width:25px;height:25px;overflow:hidden;border-radius:25px;}
+.dealer_views .review li .thumb img{width:25px;height:25px;}
+.dealer_views .review li .thumb.default img{width:26px;height:19px;}
+.dealer_views .review li .txts{margin:0 0 0 35px;}
+.dealer_views .review li .t1{font-size:12px;color:#363942;}
+.dealer_views .review li .t2{margin:5px 0 0 0;font-size:12px;color:#7a8599;background:url('../../img/ico_re-arrow.png') left top no-repeat;background-size:11px 11px;padding-left:15px;}
+
+/* 견적진행중 */
+.pic_regs{background:#f1f5f6;text-align:center;padding:23px 0 18px 0;border-bottom:1px solid #e5ebec;}
+.pic_regs .t1{font-size:12px;color:#455666;}
+.pic_regs .bt_reg{position:relative;font-weight:bold;font-size:13px;color:#455666;}
+.pic_regs .bt_reg:after{content:'';position:relative;top:1px;margin:0 0 0 3px;display:inline-block;width:12px;height:12px;background:url('../../img/ico_plus3.png') right center no-repeat;background-size:11px 11px;}
+.pic_regs .no_pics{margin:15px 0;}
+.pic_regs .pics{font-size:0;margin:15px 0;}
+.pic_regs .pics li{background:#fff;margin:0 3px;width:82px;height:61px;line-height:61px;font-size:12px;color:#b5bbc6;border-radius:5px;overflow:hidden;border:1px solid #e5ebec;display:inline-block;}
+.pic_regs .pics img{width:82px;height:61px;}
+.pic_regs .time{position:relative;text-align:left;display:inline-block;padding:0 15px 0 40px;margin:0 auto;height:35px;line-height:35px;border-radius:35px;font-size:14px;color:#fff;font-weight:bold;}
+.pic_regs.ing .time{background:#2d9be0 url('../../img/ico_time.png') 15px center no-repeat;background-size:16px 16px;}
+.pic_regs.standby .time{background:#24b073 url('../../img/ico_time2.png') 15px center no-repeat;background-size:16px 16px;}
+.pic_regs.end .time{background:#e94848 url('../../img/ico_time3.png') 15px center no-repeat;background-size:16px 16px;}
+.pic_regs.end .t1{color:#b5bbc6;}
+.pic_regs.end .bt_reg{color:#b5bbc6;}
+.pic_regs.end .bt_reg:after{content:'';position:relative;top:1px;margin:0 0 0 3px;display:inline-block;width:12px;height:12px;background:url('../../img/ico_plus2.png') right center no-repeat;background-size:11px 11px;}
+.bt_tel{margin:20px 15px;}
+.bt_tel a{position:relative;display:block;background:#32404d;height:45px;line-height:45px;text-align:center;font-size:13px;color:#fff;font-weight:bold;border-radius:5px;}
+.bt_tel a:after{content:'';margin-left:5px;position:relative;top:2px;display:inline-block;width:12px;height:13px;background:url('../../img/ico_tel.png') center center no-repeat;background-size:12px 13px;}
+.car_opts{margin:0 15px;padding:0 0 30px 0;}
+.car_opts strong{display:block;margin:10px 0;font-size:13px;color:#363942;font-weight:bold;}
+.car_opts dl{position:relative;margin:5px 0;}
+.car_opts dt{position:absolute;top:0;left:0;display:inline-block;width:80px;font-size:12px;color:#7a8599;height:25px;padding-left:5px;}
+.car_opts dt:before{content:'';display:inline-block;width:2px;height:2px;background:#7a8599;position:absolute;top:50%;left:0;margin-top:-1px;}
+.car_opts dd{font-size:12px;color:#455666;margin:0 0 0 80px;min-height:25px;}
+.bt_view{border:2px solid #2d9be0;font-size:11px;color:#2d9be0;text-align:center;position:relative;top:-2px;display:inline-block;height:20px;line-height:20px;padding:0 10px;border-radius:20px;font-weight:bold;}
+
+/* 랜딩 */
+.m.landing .container{background:#2d9be0;}
+.landingtxt1{text-align:center;padding:20px 10px 0 10px;}
+.landingtxt1 p{font-size:22px;color:#fff;font-weight:bold;margin-bottom:5px;}
+.landingtxt1 p em{font-style: italic;font-weight: bold;}
+.landingtxt1 img{width:134px;}
+.landingtxt2 {font-size:0;padding:0 15px;margin:15px 0;}
+.landingtxt2 .col{display:inline-block;width:50%;vertical-align:top;}
+.landingtxt2 dl{overflow:hidden;}
+.landingtxt2 dt{position:relative;font-size:12px;color:#a3dcff;float:left;line-height:20px;padding-left:7px;}
+.landingtxt2 dt:before{content:'';position:absolute;top:50%;left:0;margin-top:-2px;display:inline-block;width:4px;height:4px;background:#a3dcff;border-radius:4px;}
+.landingtxt2 dd{font-size:12px;color:#a3dcff;float:right;}
+.landingtxt2 dd strong{font-size:15px;color:#fff;font-weight:bold;letter-spacing:-1px;margin-right:3px;}
+.landingtxt2 .col:first-child dl{margin-right:5px;}
+.landingtxt2 .col:last-child dl{margin-left:5px;}
+.landingtxt3 {margin:0 15px;padding:20px 0;}
+.landingtxt3 ul{font-size:0;text-align:center;}
+.landingtxt3 li{position:relative;text-align:center;font-size:12px;color:#fff;font-weight:bold;display:inline-block;width:33.33%;line-height:150%;}
+.landingtxt3 li:after{content:'';position:absolute;top:50%;right:-6px;margin-top:-13px;display:inline-block;width:12px;height:25px;background:url('../../img/ico_step-arrow.png') center center no-repeat;background-size:12px 25px;}
+.landingtxt3 li:last-child:after{display:none;}
+.landingbts{text-align:center;padding-bottom:20px;}
+.landingbts .bt_simple{position:relative;display:inline-block;font-size:19px;color:#fff;font-weight:bold;border:3px solid #fff;padding:0 30px;height:45px;line-height:45px;border-radius:45px;}
+.landingbts .bt_simple:after{content:'';margin-left:8px;position:relative;top:4px;display:inline-block;width:21px;height:21px;background:url('../../img/ico_cycle-arrow5.png') center center no-repeat;background-size:21px 21px;}
+.landing_cards {position:relative;overflow:hidden;padding-bottom:10px;}
+.landing_cards .swiper-container{overflow:visible;}
+.landing_cards .item{position:relative;background:#fff;border-radius:7px;margin:0 15px;padding:30px;overflow:hidden;text-align:center;border:2px solid #217fc5;-webkit-box-shadow: 0px 2px 0px 1px rgba(0,0,0,0.1);box-shadow: 0px 2px 0px 1px rgba(0,0,0,0.1);}
+.landing_cards .item_ins{display:inline-block;position:relative;padding-left:120px;}
+.landing_cards .item .thumb_area{position:absolute;top:50%;left:0;margin-top:-50px;}
+.landing_cards .item .label{display:inline-block;position:absolute;top:-5px;right:-5px;width:47px;height:47px;background:url('../../img/img_success.png') center center no-repeat;background-size:47px 47px;text-indent:-9999px;}
+.landing_cards .item .img{display:inline-block;width:100px;height:100px;border-radius:100px;overflow:hidden;vertical-align:top;}
+.landing_cards .item .img img{width:100px;height:100px;}
+.landing_cards .item .rank{display:inline-block;vertical-align:top;text-align:left;}
+.landing_cards .item .rank dl{overflow:hidden;width:125px;border-bottom:1px solid #e3eaef;display:inline-block;padding-right:5px;}
+.landing_cards .item .rank dt{display:inline-block;font-size:12px;color:#455666;line-height:25px;vertical-align:top;margin-right:20px;}
+.landing_cards .item .rank dd{display:inline-block;font-size:17px;color:#455666;line-height:25px;vertical-align:top;text-align:left;}
+.landing_cards .item .rank li:first-child dd{font-weight:bold;}
+.landing_cards .item .best_review{clear:both;text-align:left;margin-top:20px;}
+.landing_cards .item .best_review strong{font-size:13px;color:#363942}
+.landing_cards .item .best_review p{margin:5px 0 0 0;font-size:12px;color:#7a8599;background:url('../../img/ico_re-arrow.png') left 5px no-repeat;background-size:11px 11px;padding-left:15px;}
+.landing_cards .swiper-pagination {position:absolute;bottom:5px;left:0;width:100%;z-index:10;text-align:center;}
+.landing_cards .swiper-pagination-bullet{display:inline-block;width:7px;height:7px;border-radius:7px;background:#d8e2e9;margin:0 4px;}
+.landing_cards .swiper-pagination-bullet-active{background:#455666;}
+.landing_footer{background:#32404d;text-align:center;font-size:12px;color:#7e8f9e;font-weight:bold;height:55px;line-height:55px;}
+.landing_footer a{color:#fff;}
+
+@media all and (max-width:320px) { 
+	.landing_cards .item{padding:30px 20px;}
+	.landing_cards .item .thumb_area{margin-right:10px;}
+}

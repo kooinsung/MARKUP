@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>얼마일카</title>
+	<link type="text/css" rel="stylesheet" href="asset/css/cong.css?1">
+	<script type="text/javascript" src="asset/js/jquery-2.0.2.min.js"></script>
+	<script type="text/javascript" src="asset/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="asset/js/cong.js"></script>
+</head>
+<body class="m sub"> <!-- 20170703 수정 -->
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+				<h1 class="t1">내 차 견적 받기</h1>
+				<p class="t2">비교견적 받으면 내 차 몸값이 확실히 올라갑니다.</p>
+				<a href="" class="back">back</a>
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<!-- 스텝 -->
+			<div class="steps">
+				<ul>
+					<li class="st1 ">
+						<strong>차량정보</strong>
+					</li>
+					<li class="st2 active">
+						<strong>차량상태</strong>
+					</li>
+					<li class="st3 ">
+						<strong>견적받기</strong>
+					</li>
+				</ul>
+			</div>
+			<!-- //스텝 -->
+
+			<!-- 상태입력 -->
+			<div class="state_form">
+				<div class="input_cols">
+					<div class="col">
+						<span class="inputs"><input type="text" placeholder="색상"></span>
+					</div>
+				</div>
+				<div class="accident_list">
+					<strong class="tit">사고여부</strong>
+					<div class="radio_cols inline">
+						<div class="col">
+							<span class="radios"><input type="radio" name="accident_check" id="accident1" checked="checked"><label for="accident1">무사고</label></span>
+						</div>
+						<div class="col">
+							<span class="radios"><input type="radio" name="accident_check" id="accident2"><label for="accident2">사고</label></span>
+						</div>
+						<div class="col">
+							<span class="radios"><input type="radio" name="accident_check" id="accident3"><label for="accident3">모름</label></span>
+						</div>
+					</div>
+				</div>
+				<span class="textarea">
+					<label for="add_infos">
+						<strong>추가정보</strong>
+						예: 스타일 패키지 추가했고,<br>
+						경미한 접촉사고로 운전석 앞 휀다, 문 교환이 있었어요.<br>
+						외관은 뒤 크렁크, 범퍼 도색해야 해요.
+					</label>
+					<textarea name="" id="add_infos"></textarea>
+				</span>
+				<div class="input_cols">
+					<div class="col">
+						<span class="inputs"><input type="text" placeholder="휴대폰번호(-제외)" pattern="[0-9]*" max="9999"></span>
+					</div>
+				</div>
+				<ul class="tips">
+					<li>* 연락처는 공개되지 않으며, 견적안내 회신용으로만 사용됩니다.</li>
+					<li class="danger">* 연락처가 정확하지 않을 시 견적안내가 불가능합니다.</li>
+				</ul>
+			</div>
+			<!-- //상태입력 -->
+
+			<div class="btm_bar">
+				견적 받기
+			</div>
+		</div>
+		<!-- //content -->
+		
+		<!-- footer -->
+		<div class="footer">
+			<p class="t2">얼마일카 <strong>앱 다운로드</strong>하고 더 간편하게 이용해보세요.	</p>
+			<ul class="store">
+				<li><a href="" class="google">img</a></li>
+				<li><a href="" class="apple">앱스토어</a></li>
+			</ul>
+			<p class="tel">대표전화 1577-8983</p>
+			<p class="time">평일 10시~18시</p>
+		</div>
+		<!-- //footer -->	
+	</div>
+<script type="text/javascript">
+	$(function(){
+	});
+</script>
+</body>
+</html>
