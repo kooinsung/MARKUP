@@ -1,0 +1,1325 @@
+@charset "utf-8";
+
+/* layout */
+.wrap{width:100%;overflow:hidden;}
+.header{width:100%;position:fixed;top:0;width:100%;background:#262b35;z-index:99;}
+.container{width:100%;height:100%;background:#eee;padding:167px 0 100px 0;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.main .container{padding:100px 0 0 0;background:#fff;}
+.footer{width:100%;background:#272b36;padding:30px 0 40px 0;}
+
+/* header */
+.headerInner{position:relative;width:980px;height:100px;padding:0 10px;margin:0 auto;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.headerInner h1{position:absolute;top:32px;left:10px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.headerInner h1 img{-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.headerInner .iconMenu{display:none;width:26px;height:22px;position:absolute;top:18px;/*right:125px;*/ right:100px;}
+.gnb{position:absolute;top:43px;left:262px;}
+.gnb li{float:left;margin-left:35px}
+.gnb li:first-child{margin-left:0;}
+.gnb a{font-size:16px; font-weight:400;color:#fff;letter-spacing:-1px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.gnb a:hover{color:#888;}
+.gnb a.active{color:#888;}
+.util{position:absolute;top:33px;right:10px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.util li{float:left;margin-left:1px;}
+.util li a{font-weight:400;padding: 5px 12px 3px 12px;}
+.util .btnQuestion {display:none;}/*이용방법*/
+.util .btnQuestion i{width:25px;height:25px;}
+.util .btnQuestion a{padding:0;margin:3px 30px 0 0;}
+.afterLogin{/*width:274px;*/width:214px;position:absolute;top:37px;right:10px;}
+.afterLogin .btnQuestion{line-height:0;position:relative;top:-1px;max-width:24px;float:left;margin:3px 30px 0 0; display:none;/*이용방법*/}
+.afterLogin .btnQuestion i{width:25px;height:25px;}
+.afterLogin .btnQuestion a{padding:0;margin:0;}
+.afterLogin .msg{line-height:0;position:relative;top:2px;max-width:70px;float:left;}
+.afterLogin .msg .nums {color:#fff;}
+.afterLogin .msg .nums i{width:17px;height:24px;line-height:24px;margin-right:10px;}
+.afterLogin .msg .nums span{text-align:center;margin:0;padding:0;color:#fff;height:24px;line-height:24px;}
+.afterLogin .msg .nums .iconNone{width:25px;}
+.afterLogin .msg .nums .iconBe{width:43px;}
+.afterLogin .msgLayer{border:1px solid #000;width:358px;position:absolute;top:35px;right:0;line-height:100%;background:#fff;}
+.afterLogin .msgLayer ul{height:335px;overflow-y:auto;-webkit-overflow-scrolling:touch;}
+.afterLogin .msgLayer li{position:relative;padding:15px 20px 15px 17px;border-bottom:1px solid #e2e2e2;line-height:1;display:block;background:url('/images/common/icon_clamp.png') 95% center no-repeat;}
+.afterLogin .msgLayer li.active{background:#efefef url('/images/common/icon_clamp.png') 95% center no-repeat;}
+.afterLogin .msgLayer li:hover{background:#efefef url('/images/common/icon_clamp.png') 95% center no-repeat;}
+.afterLogin .msgLayer a{color:#333;}
+.afterLogin .msgLayer i{position:absolute;margin-top: 4px;width:27px;height:28px;}
+.afterLogin .msgLayer .txt{margin-left:40px;display:inline-block;}
+.afterLogin .msgLayer .txt em{display:inline-block;color:#666;font-weight:normal;font-size:12px;}
+.afterLogin .msgLayer .txt p{width:260px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;margin-top:5px;}
+.afterLogin .myMenu{position:relative;width:120px;float:right;height:28px;line-height:28px;}
+.afterLogin .myMenu .thumb{height:28px;display:inline-block;}
+.afterLogin .myMenu .thumb img{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box; border:1px solid ##262b35; border-radius:28px;}
+.afterLogin .myMenu .thumb.active img{border:2px solid #0099cc;}
+.afterLogin .myMenu .userID{color:#fff;vertical-align:top;height:28px;background:url('/images/common/icon_arrow.png') right center no-repeat;}
+.afterLogin .myMenu .userID em{display:inline-block;margin:0 7px 0 5px;width:75px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.afterLogin .myLayer{border:1px solid #000;width:172px;position:absolute;top:37px;right:0;line-height:100%;background:#fff;}
+.afterLogin .myLayer li{position:relative;border-bottom:1px solid #e2e2e2;line-height:1;display:block;}
+.afterLogin .myLayer li.active{background:#efefef;}
+.afterLogin .myLayer li:hover{background:#efefef;}
+.afterLogin .myLayer a{width:100%;color:#666;padding:15px 20px 15px 17px;}
+
+/* login/pw search */
+.login{width:100%;max-width:380px;margin:0 auto;}
+.loginInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;}
+.loginInner .line{width:100%;height:8px;background:url('/images/common/img_or.png') center 0 no-repeat;font-size:0;line-height:0;margin:50px 0;}
+.loginInner input[type="submit"]{margin-top:20px;}
+.loginInner a{color:#666;}
+.loginInner .idSave{font-size:12px;}
+.pwSrch input[type="submit"]{margin-top:10px;}
+.fb a{display:inline-block;width:100%;border:1px solid #284487;background:#3f68a9 url('/images/common/bg_fb.png') 0 center no-repeat;color:#fff;font-size:18px;text-align:center;padding:13px 0;}
+
+/* main */
+.visual{position:relative;}
+.visual .bx-viewport, .bx-wrapper{position:relative;width:100%;height:100% !important;top:0;left:0;}
+.visual .bx-wrapper .bx-viewport{border: none !important;}
+.visual .mainVisual li{text-align:center;background-repeat: no-repeat;background-position: top center;height: 100% !important;text-align:center;}
+.visual .mainVisual li img{width:100%;max-width:740px;}
+.visual .bx-wrapper .bx-controls{width:100%;max-width:780px;margin:0 auto;text-align:center;}
+.visual .bx-wrapper .bx-pager {height:15px;padding:10px 0 0 10px;margin-right:20px;display:inline-block;*zoom:1;*display:inline;}
+.visual .bx-wrapper .bx-pager .bx-pager-item,.bx-wrapper .bx-controls-auto .bx-controls-auto-item {display: inline-block;	*zoom: 1;*display: inline;vertical-align: top;}
+.visual .bx-wrapper .bx-pager.bx-default-pager a {background:url('/images/common/sprites.png') -234px -44px no-repeat;font-size:0;display: block;width: 15px;height: 15px;margin: 0 3px;outline: 0;}
+.visual .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {background:url('/images/common/sprites.png') -234px 0 no-repeat;}
+.visual .bx-wrapper .bx-controls-auto {height:15px;padding:10px 10px 0 0;display:inline-block;*zoom:1;*display:inline;}
+.visual .bx-wrapper .bx-controls-auto .bx-start {background:url('/images/common/sprites.png') -234px -132px no-repeat;font-size:0;display: block;width: 15px;height: 15px;margin: 0 3px;outline: 0;}
+.visual .bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active {background-position: -234px -220px;}
+.visual .bx-wrapper .bx-controls-auto .bx-stop {background:url('/images/common/sprites.png') -234px -88px no-repeat;font-size:0;display: block;width: 15px;height: 15px;margin: 0 3px;outline: 0;}
+.visual .bx-wrapper .bx-controls-auto .bx-stop:hover,.bx-wrapper .bx-controls-auto .bx-stop.active {background-position: -234px -176px;}
+.todays{width:100%;max-width:740px;margin:70px auto;}
+.todaysInner{max-width:980px;margin:0 auto;padding:0 10px;}
+.todays .tit{display:block;margin-bottom:15px;font-size:22px;color:#333; font-weight:100;}
+.todays .box{position:relative;}
+.todays .box img{border:1px solid #cdcdcd;}
+.todays .box .team{position:absolute; bottom:0; padding-bottom:25px; width:100%; text-align:center;}
+.todays .box .team .teamPic {margin:0 auto;}
+.todays .box .team .teamPic img { width:80px; height:80px; border:#fff 2px solid; border-radius:80px;}
+.todays .box .team .teamName { font-size:18px; color:#fff; padding-top:10px;}
+.todays .box .QP{position:absolute; bottom:0; padding-bottom:25px; width:100%; text-align:center;}
+.todays .box .QP .QPPic {margin:0 auto;}
+.todays .box .QP .QPPic img { width:80px; height:80px; border:#fff 2px solid; border-radius:84px;}
+.todays .box .QP .QPName { font-size:18px; color:#fff; padding-top:10px;}
+
+.todays ul{font-size:0;overflow:hidden;text-align: center;}
+.todays li{vertical-align:top;display:inline-block;*zoom:1;*display:inline;width:50%;max-width:370px;text-align:center;font-size:0;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.todays li .banner{width:100%;font-size:0;}
+.todays li.team .inner{padding-right:30px;}
+.todays li.team .txt{position:absolute;top:10%;left:0;z-index:9;width:100%;text-align:left;color:#fff;font-size:15px;line-height:150%;}
+.todays li.team .txtInner{display:block;margin:0 auto;max-width:250px;margin:0 auto;}
+.todays li.team .txt p{width:100%;text-align:center;}
+.todays li.team .txt i{width:27px;height:22px;}
+.todays li.quest .inner{padding-left:30px;}
+.recomQuestList{background:#eee;padding:50px 0 35px 0;}
+.mainQuest{padding:50px 10px 50px 10px;max-width:980px;margin:0 auto;}
+.recomQuestInner{max-width:970px;margin:0 auto;padding:0 10px;}
+.recomQuestList .titArea{text-align:center;display:block;margin-bottom:20px;}
+.recomQuestList .titArea strong{font-size:26px; font-weight:100;}
+.recomQuestList .titArea p{color:#666; padding:5px 0 10px;}
+.recomQuestInner .bxslider > li{display:block;border:1px solid #ccc;background:#fff;font-size:0;overflow:hidden;text-align:left;padding-bottom:10px;} 
+.recomQuestInner .thumb a img{width:100%;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s; height:auto;}
+.recomQuestInner .cates{font-size:12px;padding:0 10px;color:#777;}
+.recomQuestInner .cates .colorBox{padding:0 5px;margin-right:5px;font-size:12px;}
+.recomQuestInner .tit{padding:0 10px;margin:10px 0 10px 0;height:37px;overflow:hidden;}
+.recomQuestInner .tit a{font-size:16px;color:#333;display:inline-block;height:100%;}
+.recomQuestInner .qp{padding:0 10px;margin:0 0 15px 0;height:15px;overflow:hidden;font-size:13px;color:#666; font-weight:100;}
+.recomQuestInner .info{position:relative;margin:-10px 0 0 0;padding:5px 0 0 0;background:url('/images/common/img_clampbar.png') center top no-repeat;}
+.recomQuestInner .infoInner{background:#fff;padding-top:10px;}
+.recomQuestInner .infoInner i{width:17px;height:17px;margin-right:5px;}
+.recomQuestInner .infoInner li{border-top:1px solid #f1f1f1;padding:8px 10px;}
+.recomQuestInner .infoInner li span{display:inline-block;width:49%;font-size:12px;}
+.recomQuestInner .infoInner li em{position:relative;top:2px;}
+.recomQuestInner .infoInner li em.countDown{color:#ef402a;}
+.recomQuestInner .gage{background:#f1f1f1;height:5px;}
+.recomQuestInner .gageInner{height:5px;display:inline-block;}
+.recomQuestInner .gageInner.color01{background:#19a3c7;}
+.recomQuestInner .gageInner.color02{background:#ef402a;}
+.recomQuestInner .bx-wrapper .bx-pager {height:15px;padding-top:10px;text-align:center;}
+.recomQuestInner .bx-wrapper .bx-pager .bx-pager-item,.bx-wrapper .bx-controls-auto .bx-controls-auto-item {display: inline-block;	*zoom: 1;*display: inline;vertical-align: top;}
+.recomQuestInner .bx-wrapper .bx-pager.bx-default-pager a {background:url('/images/common/sprites.png') -234px -44px no-repeat;font-size:0;display: block;width: 15px;height: 15px;margin: 0 3px;outline: 0;}
+.recomQuestInner .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active {background:url('/images/common/sprites.png') -234px 0 no-repeat;}
+
+.mainQuest .titArea{text-align:center;display:block;margin-bottom:20px;}
+.mainQuest .titArea strong{font-size:26px; font-weight:100;}
+.mainQuest .titArea p{color:#666; padding:5px 0 10px;}
+.mainQuest > ul {overflow:hidden;}
+.mainQuest > ul > li{width:25%;float:left;background:#fff;font-size:0;overflow:hidden;text-align:left;margin-bottom:30px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.mainQuest > ul > li .inner{border:1px solid #ccc;margin:0 5px;}
+.mainQuest > ul > li:first-child{margin-left:0;}
+.mainQuest > ul > li.color01 .topBar{height:5px;background:#007aff;}
+.mainQuest > ul > li.color02 .topBar{height:5px;background:#00afdc;}
+.mainQuest > ul > li.color03 .topBar{height:5px;background:#2bd396;}
+.mainQuest > ul > li.color04 .topBar{height:5px;background:#7dda25;}
+.mainQuest > ul > li.color05 .topBar{height:5px;background:#b6e50d;}
+.mainQuest > ul > li.color06 .topBar{height:5px;background:#ffd446;}
+.mainQuest > ul > li.color07 .topBar{height:5px;background:#ff8100;}
+.mainQuest > ul > li.color08 .topBar{height:5px;background:#f3381b;}
+.mainQuest > ul > li.color09 .topBar{height:5px;background:#e0289b;}
+.mainQuest > ul > li.color10 .topBar{height:5px;background:#ae26d9;}
+.mainQuest > ul > li.color11 .topBar{height:5px;background:#7d00ff;}
+.mainQuest > ul > li.color12 .topBar{height:5px;background:#4434f1;}
+.mainQuest .cates{font-size:12px;padding:0 10px;color:#666;}
+.mainQuest .cates .colorBox{padding:0 5px;margin-right:5px;font-size:12px;}
+.mainQuest .tit{padding:0 10px;margin:10px 0 10px 0;height:37px;overflow:hidden;}
+.mainQuest .tit a{font-size:16px;color:#333;display:inline-block;height:100%;}
+.mainQuest .qp{padding:0 10px;margin:0 0 15px 0;height:15px;overflow:hidden;font-size:13px;color:#666; font-weight:100;}
+.mainQuest > ul > li.color01 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#007aff url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color02 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#00afdc url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color03 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#2bd396 url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color04 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#7dda25 url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color05 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#b6e50d url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color06 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#ffd446 url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color07 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#ff8100 url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color08 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#f3381b url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color09 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#e0289b url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color10 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#ae26d9 url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color11 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#7d00ff url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest > ul > li.color12 .info{position:relative;margin:0 0 0 0;padding:5px 0 0 0;background:#4434f1 url('/images/common/img_clampbar.png') center top no-repeat;}
+.mainQuest .infoInner{background:#fff;padding-top:10px;}
+.mainQuest .infoInner i{width:17px;height:17px;margin-right:5px;}
+.mainQuest .infoInner li{border-top:1px solid #f1f1f1;padding:8px 10px;}
+.mainQuest .infoInner li span{display:inline-block;width:49%;font-size:12px;}
+.mainQuest .infoInner li em{position:relative;top:2px;}
+.mainQuest .infoInner li em.countDown{color:#ef402a;}
+.mainQuest .btnAll{text-align:center;width:234px;margin:0 auto;}
+.mainQuest .btnAll a{font-size:18px;border:1px solid #ccc;display:block;color:#666;padding:15px 0;width:100%;}
+
+/* join */
+.join{width:100%;max-width:504px;margin:0 auto;}
+.joinInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;}
+.joinInner .line{width:100%;height:8px;background:url('/images/common/img_or.png') center 0 no-repeat;font-size:0;line-height:0;margin:50px 0;}
+.joinInner .default{margin:5px 0 10px 0;}
+.joinInner .purpose{margin:20px 0 15px 0;}
+.joinInner strong{display:block;margin-bottom:5px;font-weight:normal;}
+.joinInner input[type="submit"]{margin-top:30px;}
+.joinInner .label{margin-top:20px;display:block;}
+
+/* modify */
+.myModify{width:100%;max-width:1000px;margin:0 auto;font-family: 'Nanum Barun Gothic';}
+.modifyInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;overflow:hidden;}
+.modifyInner .alarm{border:1px solid #50b6d0;font-size:18px;color:#2593bd;margin-bottom:20px;padding:20px 20px 20px 40px;text-indent:-20px;background:#e3f1f5;vertical-align:middle;line-height:130%;}
+.modifyInner .alarm .iconI{width:17px;height:19px;}
+.modifyForm{position:relative;}
+.modifyForm .leftInfo{border:1px solid #ccc;width:194px;background:#fff;padding:20px;position:absolute;top:0;left:0;overflow:hidden;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.modifyForm .leftInfo .nickName{font-size:24px;font-weight:normal;}
+.modifyForm .leftInfo .pic{width:196px;height:196px;margin:20px 0 10px 0;overflow:hidden;}
+.modifyForm .leftInfo .pic img{width:193px;height:193px;background:#e5e5e5;overflow:hidden;border-radius: 100px;behavior: url(../../common/js/border-radius.htc);border:1px solid #ddd;}
+
+.modifyForm .leftInfo .fileUpload {position:relative; overflow:hidden;}
+.modifyForm .leftInfo .fileUpload .btnChange{width:194px;height:28px;line-height:28px;border:1px solid #d2d2d2;color:#747474;font-size:14px;}
+.modifyForm .leftInfo .fileUpload input {top: 0px; position:absolute !important;}
+.modifyForm .leftInfo .fileUpload div input {display:none;}
+.modifyForm .leftInfo .fileUpload div label {width:194px; height:28px;filter:alpha(opacity=0);opacity:0;cursor:pointer; padding:0px;top: 0px; left:0px; position:absolute;}
+
+
+.modifyForm .rightInfo{margin-left:248px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.modifyForm .rightInfo .info{border:1px solid #ccc;background:#fff;padding:20px;margin-bottom:20px;}
+.modifyForm .rightInfo .info .tit{display:block;font-size:20px;}
+.modifyForm .rightInfo .info02 .tit{margin-bottom:19px;}
+.modifyForm .rightInfo .sTit{display:block;font-size:16px;margin-bottom:7px;font-weight:700;}
+.modifyForm .rightInfo .txt{margin:5px 0 25px 0;line-height:150%;font-size:14px;}
+.modifyForm .rightInfo .qpTxt{margin-bottom:20px;}
+.modifyForm .rightInfo .default input{padding:9px 0;}
+.modifyForm .rightInfo .selectBtns a{margin-left:10px;}
+.modifyForm .rightInfo .phoneAuth{width:100%;overflow:hidden;}
+.modifyForm .rightInfo .authMsg{color:#0099cc;}
+.modifyForm .rightInfo .nameInput{width:100%;max-width:297px;margin-bottom:25px;}
+.modifyForm .rightInfo .numberInput{width:48px;display:inline-block;vertical-align:top;padding: 0 10px;margin-bottom:25px;}
+.modifyForm .rightInfo .authNumberInput{width:100%;max-width:297px;}
+.modifyForm .rightInfo .btnAuth{vertical-align:top !important;margin-left:10px;}
+.modifyForm .rightInfo .selectSex{font-size:12px;margin-bottom:25px;}
+.modifyForm .rightInfo .selectSex label{position:relative;top:2px;margin-right:20px}
+.modifyForm .rightInfo .bDay{margin-bottom:25px;}
+.modifyForm .rightInfo .bDay .sbHolder{margin-right:10px;}
+.modifyForm .rightInfo .bar{display:inline-block;vertical-align:top;height: 38px;line-height: 38px;margin:0 5px;}
+.modifyForm .rightInfo .btnOut{text-align:center;}
+.modifyForm .rightInfo .btnOut button{font-size:18px;padding:10px 45px 9px 45px;}
+.modifyForm .rightInfo .addConcern{border:1px solid #ccc;padding:5px;margin-bottom:15px;}
+.modifyForm .rightInfo .addConcern ul{overflow:hidden;}
+.modifyForm .rightInfo .addConcern li{float:left;background:#e5e5e5;padding:5px;margin:5px;}
+.modifyForm .rightInfo .addConcern li.first{background:#d2e9ee;}
+.modifyForm .rightInfo .addConcern li button{margin-left:5px;}
+.modifyForm .rightInfo .addConcern li i{width:9px;height:9px;}
+.modifyForm .rightInfo .addConcern .defaultTxt{padding:5px;margin:5px;background:none;}
+.modifyForm .rightInfo .fieldList {margin-bottom:25px;}
+.modifyForm .rightInfo .fieldList i{width:15px;height:15px;margin-right:5px;}
+.modifyForm .rightInfo .fieldList > ul > li{margin-bottom:8px;}
+.modifyForm .rightInfo .fieldList .fields{display:none;border:1px solid #f1f1f1;padding:10px;overflow:hidden;margin:10px 0 15px 0;}
+.modifyForm .rightInfo .fieldList .fields li{float:left;width:33%;}
+.modifyForm .rightInfo .newsLetter{font-size:14px;margin-bottom:25px;}
+.modifyForm .rightInfo .newsLetter span {padding:2px 0 5px 0; display:block; color:#999;}
+.modifyForm .rightInfo .notice{font-size:14px;}
+.modifyForm .rightInfo .notice span {padding:2px 0 5px 0;  display:block; color:#999;}
+.modifyForm .rightInfo .pwModify{margin-top:50px;padding:50px 0 0 0;border-top:1px solid #e4e4e4}
+.modifyForm .rightInfo .pwModify .sTit{margin-bottom:15px;}
+.modifyForm .rightInfo .pwModify ul{overflow:hidden;}
+.modifyForm .rightInfo .pwModify li{float:left;width:33%;max-width:188px;}
+.modifyForm .rightInfo .pwModify li.center{margin:0 40px;}
+.modifyForm .rightInfo .pwModify li label{display:block;font-size:14px;margin-bottom:7px;font-weight:bold;}
+.modifyForm .rightInfo .pwModify .btnSave{text-align:center;margin-top:40px;}
+.modifyForm .rightInfo .pwModify button{font-size: 18px;padding: 10px 45px 9px 45px;}
+.compnayPaper{margin:20px 0 0 0;}
+.compnayPaper p{margin:10px 0 15px 0;}
+.qpInfo{margin:20px 0 ;}
+.qpInfo textarea{height:100px;}
+
+/* team page */
+.subTeamPage .container{padding-top:140px;}
+.teamPage{width:100%;max-width:1000px;margin:0 auto;font-family: 'Nanum Barun Gothic';}
+.teamPageInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;overflow:hidden; min-height:740px;}
+.teamInfo{position:absolute;top:0;right:10px;overflow:hidden;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamInfo h4{position:relative;}
+.teamInfo h4 span {width:150px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; display:block;}
+.teamInfo h4 button{width:18px;height:18px;margin:0;position:absolute;top:0;}
+.teamInfo h4 .btnEdit{right:0;}
+.teamInfo h4 .btnaddMem{right:25px;}
+.teamInfo .btnSubmit, .teamInfo .btnApply, .teamInfo .btnShare, .teamInfo .btnOutputSubmit, .teamInfo .btnOutputDown, .teamInfo .btnEnd{display:block;font-size:18px;margin-bottom:10px}
+.teamInfo .btnSubmit a, .teamInfo .btnApply a, .teamInfo .btnShare a, .teamInfo .btnOutputSubmit a, .teamInfo .btnOutputDown a, .teamInfo .btnEnd a{display:block;}
+.teamInfo .btnMoreTeam{width:100%;display:none;}
+.teamInfo .btnMoreTeam button{width:100%;height:20px;}
+.teamInfo .teamInfoInner{border:1px solid #ccc;width:196px;background:#fff;margin-bottom:10px;padding:20px 20px 0 20px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamInfo .teamThumb{display:inline-block;border:1px solid #ccc;font-size:0;margin:5px 0 20px 0;width:193px;height:193px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamInfo .teamThumb img{width:100%; height:193px;}
+.teamInfo .userThumb{display:inline-block;font-size:0;margin:5px 0 20px 0;width:193px;height:193px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamInfo .userThumb img{border:1px solid #ccc;width:100%;border-radius:193px;}
+.teamInfo .teamInfoList, .teamInfo .userInfoList, .teamInfo .questInfoList{width:100%;display:block;}
+.teamInfo .teamInfoList li, .teamInfo .userInfoList li, .teamInfo .questInfoList li{display:block;position:relative;vertical-align:top;padding:10px 0 10px 25px;overflow:hidden;border-bottom:1px solid #f1f1f1;}
+.teamInfo .teamInfoList li i, .teamInfo .userInfoList li i, .teamInfo .questInfoList li i{width:17px;height:17px;position:absolute;top:10px;left:0;}
+.teamInfo .teamInfoList li .tit, .teamInfo .userInfoList li .tit, .teamInfo .questInfoList li .tit{float:left;}
+.teamInfo .teamInfoList li .txt, .teamInfo .userInfoList li .txt{float:right; line-height:130%;}
+.teamInfo .teamMember {margin-top:20px;overflow:hidden;}
+.teamInfo .teamMember ul{overflow:hidden;display:block;width: 210px;}
+.teamInfo .teamMember li{vertical-align:top;display:inline-block;*display:inline;*zoom:1;width:50px;height:50px;line-height:45px;text-align:center;margin:0 18px 20px 0;}
+.teamInfo .teamMember li img{border-radius:48px;overflow:hidden;behavior: url(../../common/js/border-radius.htc);border:1px solid #ddd;background:#e5e5e5;}
+.teamInfo .teamMember li:first-child img{border:1px solid #999;}
+.teamInfo .teamMember li.noMember{border-radius:48px;width:50px;height:50px;line-height:45px;text-align:center;margin:0 18px 20px 0;border:1px solid #ddd;background:#e5e5e5;}
+.teamInfo .teamMember li.noMember img{border:0;}
+.teamInfo .teamMember li a{display:inline-block;width:100%;height:100%;}
+.teamPageInner .teamConts{display:block;margin-right:248px;}
+.teamPageInner .teamTab{padding:10px 0 20px 0;}
+.teamPageInner .teamTab a{display:inline-block;font-size:16px;font-weight:700;color:#999;margin-right:30px;padding-bottom:5px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamPageInner .teamTab a.active{color:#2593bd;border-bottom:2px solid #2593bd;}
+.teamPageInner .teamTab a.active .iconStory{background-position:0px -515px !important;}
+.teamPageInner .teamTab a.active .iconProfile{background-position:0px -593px !important;}
+.teamPageInner .teamTab a i{width:20px;height:20px;margin-right:7px;position:relative;top:-1px;}
+.teamPageInner .writeBox{position:relative;border:1px solid #ccc;background:#fff;}
+.teamPageInner .writeBox{overflow:hidden;}
+.teamPageInner .writeBox ul{float:left;}
+.teamPageInner .writeBox li{float:left;}
+.teamPageInner .writeBox button{width:68px;height:68px;border-right:1px solid #e5e5e5;}
+.teamPageInner .writeBox .iconSrch{float:right;}
+.teamPageInner .writeBox .srchArea{position:absolute;top:0;left:0;width:100%;display:none;}
+.teamPageInner .writeBox .srchArea .default{margin:0;border:0;}
+.teamPageInner .writeBox .srchArea input{padding:23px 0;}
+.teamPageInner .writeBox .srchArea button{position:absolute;right:15px;top:25px;width:18px;height:18px;border:0;}
+.teamPageInner .writeLayer{position:relative;margin:10px 0 20px 0;padding-top:9px;display:none;}
+.teamPageInner .writeLayer > ul > li{padding:20px;border:1px solid #ccc;background:#fff;display:none;}
+.teamPageInner .writeLayer > ul > li .iconTabArrow{position:absolute;top:1px;width:17px;height:9px;display:inline-block;}
+.teamPageInner .writeLayer > ul > li.write01 .iconTabArrow{left:27px;}
+.teamPageInner .writeLayer > ul > li.write02 .iconTabArrow{left:93px;}
+.teamPageInner .writeLayer > ul > li.write03 .iconTabArrow{left:162px;}
+.teamPageInner .writeLayer > ul > li.write04 .iconTabArrow{left:228px;}
+.teamPageInner .writeLayer li .writeLayerInner{margin-bottom:20px; display:block;max-width:690px;/*border:1px solid #e3e3e3;padding:10px*/}
+.teamPageInner .writeLayer li .writeLayerInner textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.teamPageInner .writeLayer li .writeLayerInner.editerArea{border:1px solid #e3e3e3;}
+.teamPageInner .writeLayer li .writeLayerInner.editerArea span{display:block;max-width:690px;padding:10px}
+.teamPageInner .writeLayer li .writeLayerInner.imgArea ul{overflow:hidden;margin-left:-10px;}
+.teamPageInner .writeLayer li .writeLayerInner.imgArea li{position:relative;width:98px;height:98px;overflow:hidden;border:1px solid #e3e3e3;margin:0;padding:0;display:inline-block;*zoom:1;*display:inline;margin:0 10px 20px 10px;vertical-align:top;}
+.teamPageInner .writeLayer li .writeLayerInner.imgArea li img{width:100%;}
+.teamPageInner .writeLayer li .writeLayerInner.imgArea .btnImgDel{width:14px;height:14px;position:absolute;top:5px;right:0;}
+.teamPageInner .writeLayer li .writeLayerInner.imgArea span{display:block;max-width:690px;border:1px solid #e3e3e3;padding:10px}
+.teamPageInner .writeLayer li .writeLayerInner.imgArea textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.teamPageInner .writeLayer li .writeLayerInner.imgArea .addImg button{width:26px;height:26px;position:absolute;top:35px;left:35px;}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea{margin-top:-20px;}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea button{width:14px;height:14px;}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea li{position:relative;overflow:hidden;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;font-size:14px;padding:20px 15px;}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea li button{float:right;}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea .uploadFile{margin:20px 0;}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea .uploadFile a{display:inline-block;border:1px solid #e3e3e3;padding:10px 20px}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea .uploadFile i{width:13px;height:13px;margin-right:5px;}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea span{display:block;max-width:690px;border:1px solid #e3e3e3;padding:10px}
+.teamPageInner .writeLayer li .writeLayerInner.fileArea textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.teamPageInner .writeLayer li .writeLayerInner.urlArea{border:1px solid #e3e3e3;}
+.teamPageInner .writeLayer li .writeLayerInner.urlArea p{padding:10px;border-bottom:1px solid #e3e3e3;}
+.teamPageInner .writeLayer li .writeLayerInner.urlArea .default{margin-bottom:0;border:0;padding:0;}
+.teamPageInner .writeLayer li .writeLayerInner.urlArea .default input{padding:0 5px;}
+.teamPageInner .writeLayer li .writeLayerInner.urlArea span{display:block;max-width:655px;padding:10px;}
+.teamPageInner .writeLayer li .writeLayerInner.urlArea textarea{display:block;width:100%;height:100px;border:0;font-size:14px;}
+.teamPageInner .writeLayer button{margin-right:5px;}
+
+.writeModiBox.imgView {padding: 20px;}
+.writeModiBox .writeLayerInner{margin-bottom:20px; display:block;max-width:690px;/*border:1px solid #e3e3e3;padding:10px*/}
+.writeModiBox .writeLayerInner textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.writeModiBox .writeLayerInner.editerArea{border:1px solid #e3e3e3;}
+.writeModiBox .writeLayerInner.editerArea span{display:block;max-width:690px;padding:10px}
+.writeModiBox .writeLayerInner.imgArea ul{overflow:hidden;margin-left:-10px;}
+.writeModiBox .writeLayerInner.imgArea li{position:relative;width:98px;height:98px;overflow:hidden;border:1px solid #e3e3e3;margin:0;padding:0;display:inline-block;*zoom:1;*display:inline;margin:0 10px 20px 10px;vertical-align:top;}
+.writeModiBox .writeLayerInner.imgArea li img{width:100%;}
+.writeModiBox .writeLayerInner.imgArea .btnImgDel{width:14px;height:14px;position:absolute;top:5px;right:0;}
+.writeModiBox .writeLayerInner.imgArea span{display:block;max-width:690px;border:1px solid #e3e3e3;padding:10px}
+.writeModiBox .writeLayerInner.imgArea textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.writeModiBox .writeLayerInner.imgArea .addImg button{width:26px;height:26px;position:absolute;top:35px;left:35px;}
+.writeModiBox .writeLayerInner.fileArea{margin-top:-20px;}
+.writeModiBox .writeLayerInner.fileArea button{width:14px;height:14px;}
+.writeModiBox .writeLayerInner.fileArea li{position:relative;overflow:hidden;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;font-size:14px;padding:20px 15px;}
+.writeModiBox .writeLayerInner.fileArea li button{float:right;}
+.writeModiBox .writeLayerInner.fileArea .uploadFile{margin:20px 0;}
+.writeModiBox .writeLayerInner.fileArea .uploadFile a{display:inline-block;border:1px solid #e3e3e3;padding:10px 20px}
+.writeModiBox .writeLayerInner.fileArea .uploadFile i{width:13px;height:13px;margin-right:5px;}
+.writeModiBox .writeLayerInner.fileArea span{display:block;max-width:690px;border:1px solid #e3e3e3;padding:10px}
+.writeModiBox .writeLayerInner.fileArea textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.writeModiBox .writeLayerInner.urlArea{border:1px solid #e3e3e3;}
+.writeModiBox .writeLayerInner.urlArea p{padding:10px;border-bottom:1px solid #e3e3e3;}
+.writeModiBox .writeLayerInner.urlArea .default{margin-bottom:0;border:0;padding:0;}
+.writeModiBox .writeLayerInner.urlArea .default input{padding:0 5px;}
+.writeModiBox .writeLayerInner.urlArea span{display:block;max-width:655px;padding:10px;}
+.writeModiBox .writeLayerInner.urlArea textarea{display:block;width:100%;height:100px;border:0;font-size:14px;} .writeLayerInner{margin-bottom:20px; display:block;max-width:690px;/*border:1px solid #e3e3e3;padding:10px*/}
+.writeModiBox .writeLayerInner textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.writeModiBox .writeLayerInner.editerArea{border:1px solid #e3e3e3;}
+.writeModiBox .writeLayerInner.editerArea span{display:block;max-width:690px;padding:10px}
+.writeModiBox .writeLayerInner.imgArea ul{overflow:hidden;margin-left:-10px;}
+.writeModiBox .writeLayerInner.imgArea li{position:relative;width:98px;height:98px;overflow:hidden;border:1px solid #e3e3e3;margin:0;padding:0;display:inline-block;*zoom:1;*display:inline;margin:0 10px 20px 10px;vertical-align:top;}
+.writeModiBox .writeLayerInner.imgArea li img{width:100%;}
+.writeModiBox .writeLayerInner.imgArea .btnImgDel{width:14px;height:14px;position:absolute;top:5px;right:0;}
+.writeModiBox .writeLayerInner.imgArea span{display:block;max-width:690px;border:1px solid #e3e3e3;padding:10px}
+.writeModiBox .writeLayerInner.imgArea textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.writeModiBox .writeLayerInner.imgArea .addImg button{width:26px;height:26px;position:absolute;top:35px;left:35px;}
+.writeModiBox .writeLayerInner.fileArea{margin-top:-20px;}
+.writeModiBox .writeLayerInner.fileArea button{width:14px;height:14px;}
+.writeModiBox .writeLayerInner.fileArea li{position:relative;overflow:hidden;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;font-size:14px;padding:20px 15px;}
+.writeModiBox .writeLayerInner.fileArea li button{float:right;}
+.writeModiBox .writeLayerInner.fileArea .uploadFile{margin:20px 0;}
+.writeModiBox .writeLayerInner.fileArea .uploadFile a{display:inline-block;border:1px solid #e3e3e3;padding:10px 20px}
+.writeModiBox .writeLayerInner.fileArea .uploadFile i{width:13px;height:13px;margin-right:5px;}
+.writeModiBox .writeLayerInner.fileArea span{display:block;max-width:690px;border:1px solid #e3e3e3;padding:10px}
+.writeModiBox .writeLayerInner.fileArea textarea{display:block;width:100%;height:50px;border:0;font-size:14px;}
+.writeModiBox .writeLayerInner.urlArea{border:1px solid #e3e3e3;}
+.writeModiBox .writeLayerInner.urlArea p{padding:10px;border-bottom:1px solid #e3e3e3;}
+.writeModiBox .writeLayerInner.urlArea .default{margin-bottom:0;border:0;padding:0;}
+.writeModiBox .writeLayerInner.urlArea .default input{padding:0 5px;}
+.writeModiBox .writeLayerInner.urlArea span{display:block;max-width:655px;padding:10px;}
+.writeModiBox .writeLayerInner.urlArea textarea{display:block;width:100%;height:100px;border:0;font-size:14px;}
+.writeModiBox .btns {margin-top:10px;}
+.writeModiBox .btns .btn {margin-right:5px;padding:6px 12px 5px 12px !important;}
+
+.writeDetail{border:1px solid #ccc;background:#fff;color:#333;margin-top:20px;padding:20px;}
+.writeDetail .top{position:relative;display:block;overflow:visible; padding: 0 0 10px 0; background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;}
+.writeDetail .top .thumb{display:inline-block;width:58px;height:58px;border:1px solid #999;font-size:0;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s; vertical-align:top;}
+.writeDetail .top .thumb img{width:100%; height:100%;}
+.writeDetail .top .name{font-size:14px;margin:0 10px;vertical-align:top;}
+.writeDetail .top .date{vertical-align:top;color:#999;position:relative;top:2px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.writeDetail .top .hit{vertical-align:top;color:#999;position:relative;top:2px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.writeDetail .top .edit{position:absolute;top:0;right:0;}
+.writeDetail .edit button{width:18px;height:18px;}
+.teamPageInner .detailTxt{line-height:150%;padding:20px 0 50px 0;}
+.teamPageInner .detailTxt img{max-width:100%;}
+.teamPageInner .detailImg img{max-width:100%;}
+.teamPageInner .fileView li{position:relative;padding:10px 15px;border:1px solid #e3e3e3;margin-bottom:10px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamPageInner .fileView li i{width:24px;height:22px;margin-right:10px;}
+.teamPageInner .fileView li p{display:block;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;margin-right:30px;}
+.teamPageInner .fileView li button{width:24px;height:24px;position:absolute;top:9px;right:15px;}
+.teamPageInner .linkView li{padding:10px 15px;border:1px solid #e3e3e3;margin-bottom:10px;background:#fcfcfc;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamPageInner .linkView li a{display:block;height:100%;background:url('/images/common/icon_clamp02.png') right center no-repeat;}
+.teamPageInner .linkView li span{color:#0099ff;text-decoration:underline;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;display:block;margin-right:30px;}
+.commentList li{position:relative;min-height:60px;border-top:1px solid #e3e3e3;overflow:hidden;padding:30px 0;}
+.commentList li .thumb{position:absolute;top:29px;left:0;display:inline-block;width:58px;height:58px;border:1px solid #999;font-size:0;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.commentList li .thumb img{width:58px; height:58px;}
+.commentList li .name{margin-left:0;font-weight:bold;font-size:14px;}
+
+.commentList li .commentTxt{margin-left:75px;}
+.commentList li .commentTxt p{margin-top:5px;line-height:150%;}
+.commentList li .feedback{position:absolute;top:20px;right:0;}
+.commentList li .date{font-size:12px;color:#999; padding-left:10px;}
+.commentList li .edit { position:absolute; top:25px; right:0px;}
+.commentList li .edit button {width:18px; height:18px;}
+
+.commentForm{position:relative;border:1px solid #ccc;background:#fafafa;padding:9px;}
+.commentForm button{width:60px;height:60px;position:absolute;top:9px;right:9px;}
+.commentForm span{display:block;margin-right:80px;}
+.commentForm textarea{width:100%;border:0;background:0;padding:15px 0 15px 15px;}
+.teamPageInner .writeDetail.viewImg{padding:0;}
+.teamPageInner .writeDetail.viewImg .top{position:relative;display:block;overflow:hidden;padding:20px;}
+.teamPageInner .writeDetail.viewImg .top .edit{position:absolute;top:20px;right:20px;}
+.teamPageInner .writeDetail.viewImg .detailTxt{padding:20px 20px 50px 20px;}
+.teamPageInner .writeDetail.viewImg .commentList{padding:0 20px;}
+.teamPageInner .writeDetail.viewImg .commentForm{margin:0 20px 20px 20px;}
+.profileCotns > .starRating {background:#fcfcfc;border:1px solid #e3e3e3;vertical-align:top;height:28px;padding:10px 0;text-align:center;margin-bottom:5px;font-size:0;overflow:hidden;}
+.profileCotns > .starRating ul{display:inline-block;vertical-align:top;margin-right:15px;}
+.profileCotns > .starRating li{position:relative;overflow:hidden;width:30px;height:28px;font-size:0;margin:0 2px;vertical-align:top;display:inline-block;*zoom:1;*display:inline;}
+.profileCotns > .starRating li span{display:inline-block;position:absolute;top:0;left:0;height:28px;}
+.profileCotns > .starRating .questGrade{font-size:16px;position:relative;top:5px;font-weight:bold;}
+.teamPageInner .profileCotns .questList > ul > li{position:relative;overflow:hidden;background:url('/images/common/icon_dotLine.png') 0 top repeat-x;font-size:14px;padding:15px 0;display:block;}
+.teamPageInner .profileCotns .questList > ul > li:first-child{background:none;}
+.teamPageInner .profileCotns .questList > ul > li a{font-size:16px;display:block;font-weight:normal;margin-bottom:5px;}
+.teamPageInner .profileCotns .questList > ul > li .date, .teamPageInner .profileCotns .questList > ul > li .field{font-size:12px;}
+.teamPageInner .profileCotns .questList > ul > li > div{display:block;width:100%;overflow:hidden;background: url('/images/common/icon_clamp03.png') right center no-repeat;color:#666;}
+.teamPageInner .profileCotns .questList > ul > li.questIng a{background:none;}
+.teamPageInner .profileCotns .questList > ul > li .left{float:left;}
+.teamPageInner .profileCotns .questList > ul > li .right{float:right;}
+.teamPageInner .profileCotns .questList > ul > li .questStep{display:inline-block;margin:13px 22px 0 0;font-weight:bold;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamPageInner .profileCotns .questList > ul > li .starRating {background:none;border:0;vertical-align:top;height:15px;margin:13px 30px 0 0;text-align:center;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;cursor:pointer;}
+.teamPageInner .profileCotns .questList > ul > li .starRating ul{display:inline-block;height:15px;vertical-align:top;}
+.teamPageInner .profileCotns .questList > ul > li .starRating li{position:relative;overflow:hidden;width:16px;height:15px;font-size:0;margin:0 1px;vertical-align:top;}
+.teamPageInner .profileCotns .questList > ul > li .starRating li span{display:inline-block;position:absolute;top:0;left:0;height:15px;}
+.teamPageInner .profileCotns .questList > ul > li .starRating .questGrade{display:inline-block;font-size:14px;position:relative;top:0px;left:5px;font-weight:bold;}
+.profileBox{position:relative;border:1px solid #ccc;background:#fff;padding:20px;margin-bottom:20px;font-size:14px;}
+.profileBox .tit{font-size:20px;font-weight:400;display:block;margin-bottom:21px;}
+.profileBox .tit button{width:18px;height:18px;float:right;margin:0;}
+.profileBox.teamQuest{padding-bottom:20px;}
+.profileBox.myPageTeam{padding-bottom:0;}
+.profileBox .profileCotns{line-height:140%;}
+.profileBox .profileLayer{position:absolute;top:-1px;left:-1px;z-index:88;border:1px solid #ccc;background:#fff;display:block;width:100%;display:none;}
+.profileBox .profileLayer .inner{padding:20px;}
+.profileBox .profileLayer .tit{margin-bottom:15px;}
+.profileBox .profileLayer .btns {margin-top:20px;}
+.profileBox .profileLayer .btns button{margin-right:5px;padding:6px 12px 5px 12px;}
+.profileBox .profileLayer .textArea{display:block;max-width:650px;border:1px solid #e3e3e3;background:#fff;padding:10px;}
+.profileBox .profileLayer textarea{border:0;width:100%;height:130px;}
+.profileBox .profileThumb{overflow:hidden;}
+.profileBox .profileThumb li{width:100%;max-width:193px;display:inline-block;*zoom:1;*display:inilne;margin:0 20px 30px 0;text-align:center;vertical-align:top;}
+.profileBox .profileThumb li img{width:100%;max-width:193px;border:1px solid #ccc;  height:193px;}
+.profileBox .profileThumb .name{font-size:16px;display:block;margin-top:5px;}
+.profileBox .profileThumb .name em{color:#fff;display:inline-block;text-align:center;height:22px;line-height:22px;font-size:14px;margin-left:5px;position:relative;top:-1px;}
+.profileBox .profileThumb .iconNumPlus{width:36px;}
+.profileBox .profileThumb .iconNum{width:21px;}
+
+/* footer */
+.footerInner{position:relative;max-width:980px;margin:0 auto;padding:0 10px;font-family: 'Nanum Barun Gothic';overflow:hidden;}
+.footerMenu{float:left;}
+.footerMenu a{font-weight:200;color:#fff;font-size:13px;}
+.footerMenu ul{overflow:hidden;}
+.footerMenu li{float:left;margin-right:15px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.footerMenu li.about a{color:#99d6e7}
+.footerSns{float:right;overflow:hidden;}
+.footerSns li{float:left;margin-left:5px;}
+.footerSns li i{width:36px;height:36px;}
+.footerInfo{clear:both;color:#ccc;font-size:12px;margin-top:30px;}
+.footerInfo address{display:block;margin:10px 0 5px 0;}
+
+/* notification */
+.notification{width:100%;color:#333;}
+.notificationInner{position:relative;max-width:980px;padding:0 10px;margin:0 auto;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.notificationList{border:1px solid #dcdcdc;background:#fff;}
+.notificationList li{position:relative;}
+.notificationList li.active{background:#f9f9f9;}
+.notificationList li:hover{background:#f9f9f9;}
+.notificationList li > div{padding:20px 30px;background:url('/images/common/icon_dotLine.png') 0 top repeat-x;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.notificationList li:first-child > div{background:none !important;}
+.notificationList li.noReading{background:#fffaec;}
+.notificationList i{width:41px;height:41px;position: absolute;}
+.notificationList a{display:block;background: url('/images/common/icon_clamp04.png') right center no-repeat;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.notificationList .txt{margin-left:70px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.notificationList .txt em{display:inline-block;color:#666;font-weight:normal;font-size:12px;}
+.notificationList .txt p{font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;margin:5px 30px 0 0;color:#333;}
+.btnMoreNotification{font-size:16px;text-align:center;width:100%;border:1px solid #dcdcdc;border-top:0;padding:15px 0;background:#fff;}
+
+/* team Wanted, team Srch, user Srch */
+.teamWanted, .teamSrch, .userSrch{width:100%;color:#333;}
+.teamWanted .teamInfo{top:82px;}
+.teamWantedInner{position:relative;max-width:980px;padding:0 10px;margin:0 auto;overflow:hidden; min-height:740px;}
+.teamSrchInner{position:relative;max-width:980px;padding:0 10px;margin:0 auto;overflow:hidden; min-height:600px;}
+.userSrchInner{position:relative;max-width:980px;padding:0 10px;margin:0 auto;overflow:hidden; min-height:700px;}
+.teamWantedInfo{position:absolute;top:82px;right:10px;width:235px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamWantedInfo .btnWrite{display:block;margin-bottom:30px;}
+.teamSrchInfo, .userSrchInfo{position:absolute;top:140px;right:10px;width:235px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamWantedInfo .default, .teamSrchInfo .default, .userSrchInfo .default{position:relative;}
+.teamWantedInfo input[type="text"], .teamSrchInfo input[type="text"], .userSrchInfo input[type="text"]{padding:11px 0;font-size:14px;}
+.teamWantedInfo .iconTeamSrch, .teamSrchInfo .iconTeamSrch, .userSrchInfo .iconTeamSrch{position:absolute;top:9px;right:7px;width:20px;height:20px;}
+.teamWantedInfo .selectList, .teamSrchInfo .selectList, .userSrchInfo .selectList{display:block;border-top:1px solid #ccc;margin-top:20px;}
+.teamWantedInfo .selectList label, .teamSrchInfo .selectList label, .userSrchInfo .selectList label{display:block;font-size:14px;color:#666;margin:20px 0 10px 0;}
+.teamWantedInfo .selectList .sbHolder, .teamSrchInfo .selectList .sbHolder, .userSrchInfo .selectList .sbHolder{width:233px;}
+.teamWantedInfo .selectList .sbSelector, .teamWantedInfo .selectList .sbOptions, .teamSrchInfo .selectList .sbSelector, .teamSrchInfo .selectList .sbOptions, .userSrchInfo .selectList .sbSelector, .userSrchInfo .selectList .sbOptions{width:233px;text-align:left;}
+.teamWantedInfo .btnCondition, .teamSrchInfo .btnCondition, .userSrchInfo .btnCondition{display:none;}
+.teamWantedList, .teamSrchList, .userSrchList{display:block;margin-right:245px;border:1px solid #dcdcdc;background:#fff;}
+.teamWantedList > ul > li{position:relative;padding:20px;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;overflow:hidden;}
+.teamWantedList > ul > li .info01{overflow:hidden;font-size:12px;color:#666;margin-bottom:5px;}
+.teamWantedList > ul > li .info01 .date{float:left;}
+.teamWantedList > ul > li .info01 .hit{float:right;}
+.teamWantedList > ul > li .info02{width:100%;display:block;position:relative;height:22px;}
+.teamWantedList > ul > li .info02 p{display:block;}
+.teamWantedList > ul > li .info02 ul{position:absolute;top:3px;right:0;}
+.teamWantedList > ul > li .info02 li{float:left;margin-left:10px;vertical-align:top;display:inline-block;}
+.teamWantedList > ul > li .info02 li span{vertical-align:top;display:inline-block;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.teamWantedList > ul > li .info02 li.teamName span{max-width:60px;}
+.teamWantedList > ul > li .info02 li.nickName span{max-width:72px;}
+.teamWantedList > ul > li .info02 li.teamArea span{max-width:60px;}
+.teamWantedList > ul > li .info02 a{color:#333;display:block;margin:0 310px 0 55px;padding-top:3px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.teamWantedList > ul > li .info02 i{margin-right:5px;}
+.teamWantedList > ul > li .info02 img{position:relative;top:-4px;margin-right:5px;width:22px;height:22px;border-radius:50px;overflow:hidden;behavior:url(../../common/js/border-radius.htc);border:1px solid #ddd;background:#e5e5e5;}
+.teamWantedList > ul > li .iconTeamSrchName{width:21px;height:14px;}
+.teamWantedList > ul > li .iconTeamSrchArea{width:12px;height:16px;}
+.teamWantedList > ul > li .colorBox{position:absolute;top:0;}
+.teamSrchList > ul > li, .userSrchList > ul > li{position:relative;min-height:58px;padding:20px;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;}
+.teamSrchList > ul > li:hover, .userSrchList > ul > li:hover{background:#f9f9f9 url('/images/common/icon_dotLine.png') 0 bottom repeat-x;}
+.teamSrchList > ul > li a, .userSrchList > ul > li a{width:100%;height:100%;}
+.teamSrchList > ul > li .thumb img{display:inline-block;width:58px;height:58px;border:1px solid #999999;position:absolute;}
+.userSrchList > ul > li .thumb img{display:inline-block;width:58px;height:58px;border:1px solid #999999;position:absolute;border-radius:58px;behavior: url(../../common/js/border-radius.htc);}
+.teamSrchList > ul > li .info, .userSrchList > ul > li .info{margin:8px 0 0 75px;color:#333;}
+.teamSrchList > ul > li .info ul, .userSrchList > ul > li .info ul{overflow:hidden;margin-top:10px;}
+.teamSrchList > ul > li .info li, .userSrchList > ul > li .info li{float:left;margin:0 20px 10px 0;}
+.teamSrchList > ul > li .info li i, .userSrchList > ul > li .info li i{width:17px;height:17px;margin-right:5px;}
+.teamSrchList > ul > li .info li:last-child i, .userSrchList > ul > li .info li:last-child i{margin-right:0;}
+.teamSrchList > ul > li .info p span {background:#525252; font-size:12px; color:#FFFFFF;margin-left:10px; padding:2px 8px;}
+.teamSrchList .empty {padding:20px;}
+.btnMoreList{font-size:16px;text-align:center;width:100%;padding:15px 0;background:#fff;}
+.srchTab{padding:10px 0 20px 0;}
+.srchTab a{display:inline-block;font-size:16px;font-weight:700;color:#999;margin-right:30px;padding-bottom:5px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.srchTab a.active{color:#2593bd;border-bottom:2px solid #2593bd;}
+.srchTab a.active .iconTeam{background-position:-114px -536px !important;}
+.srchTab a.active .iconUser{background-position:-111px -626px !important;}
+.srchTab a i{width:21px;height:21px;margin-right:7px;position:relative;top:-1px;}
+/*  winner 추가 */
+.winner01 {display:block; width:60px; height:60px; background:url(/images/common/icon_winner.png) 0px top no-repeat; position:absolute; z-index:100;}
+.winner02 {display:block; width:60px; height:60px; background:url(/images/common/icon_winner.png) -100px top no-repeat; position:absolute; z-index:100;}
+.winner03 {display:block; width:60px; height:60px; background:url(/images/common/icon_winner.png) -200px top no-repeat; position:absolute; z-index:100;}
+.winner04 {display:block; width:60px; height:60px; background:url(/images/common/icon_winner.png) -300px top no-repeat; position:absolute; z-index:100;}
+.winner05 {display:block; width:60px; height:60px; background:url(/images/common/icon_winner.png) -400px top no-repeat; position:absolute; z-index:100;}
+.winner06 {display:block; width:60px; height:60px; background:url(/images/common/icon_winner.png) -500px top no-repeat; position:absolute; z-index:100;}
+
+
+
+
+/* write */
+.teamWrite{display:block;border:1px solid #dcdcdc;background:#fff;padding:20px;}
+.teamWrite label{display:block;font-size:16px;margin-bottom:5px}
+.teamWrite .writeSubTit{display:block;font-size:14px;margin-bottom:5px}
+.teamWrite .default{margin-bottom:5px;}
+.teamWrite .default input{padding:9px 0;}
+.teamWrite .default textarea{font-size:14px;height:200px;}
+.teamWrite > ul > li{margin-bottom:15px;}
+.teamWrite  .sbHolder{width:250px;height:34px;font-size:14px;}
+.teamWrite .sbSelector{width:250px;height:34px;}
+.teamWrite .sbOptions{width:250px;}
+.teamWrite .sbOptions a{font-size:14px;}
+.teamWrite .btns{text-align:center;}
+.teamWrite .btns a{width:126px;margin:0 7px;}
+.teamWrite .btnAdd{width:33px;height:33px;background:#f3f2f2;border:1px solid #ccc;}
+.teamWrite .btnAdd i{width:18px;height:18px;}
+
+/* write view */
+.writeView{display:block;margin-right:248px;border:1px solid #ccc;background:#fff;color:#333;}
+.writeView .info{position:relative;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;padding:20px;}
+.writeView .info button{width:18px;height:18px;}
+.writeView .info .top{overflow:hidden;}
+.writeView .info .date{float:left;font-size:12px;color:#666;}
+.writeView .info .edit{float:right;}
+.writeView .info .tit{position:relative;margin-top:5px;font-size:16px;}
+.writeView .info .colorBox{margin-right:10px;}
+.writeView .info .nickName {position:relative;font-size:14px;}
+.writeView .info .nickName img{position:relative;top:7px;margin-right:5px;font-size:0;border-radius:22px;overflow:hidden;behavior:url(../../common/js/border-radius.htc);border:1px solid #ddd;background:#e5e5e5;}
+.writeView .txt{padding:20px;font-size:14px;min-height:200px;}
+.writeView .cmt {padding:20px;}
+.writeView .btnMoreList{border-top:1px solid #ccc;}
+
+/* my page */
+.subMyPage .container{padding-top:140px;}
+.myPage{width:100%;max-width:1000px;margin:0 auto;font-family: 'Nanum Barun Gothic';}
+.myPageInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;}
+.myPageDetail{display:block;margin-right:248px}
+.myPageDetail .tit{font-size:20px;font-weight:400;display:block;margin-bottom:21px;}
+.myPageDetail .tit button{width:18px;height:18px;float:right;margin:0 0 0 0;}
+.teamMakeTit{margin-bottom:20px;}
+.teamMakeTit a{display:inline-block;font-size:16px;font-weight:700;color:#999;padding-bottom:5px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.teamMakeTit a.btnBack{position:relative;top:5px;}
+.teamMakeTit a.btnBack i{width:28px;height:21px;}
+.teamMakeTit a.active{color:#2593bd;border-bottom:2px solid #2593bd;margin-left:15px;}
+.teamMakeTit a.active i{width:20px;height:21px;margin-right:7px;position:relative;top:-1px;}
+.makeTeam{border:1px solid #ccc;background:#fff;color:#333;padding:20px;}
+.makeTeam label{display:block;font-size:14px;margin-bottom:5px}
+.makeTeam .default{width:220px;margin-bottom:5px;}
+.makeTeam .default input{padding:9px 0;}
+.makeTeam .default textarea{font-size:14px;height:200px;}
+.makeTeam > ul > li{margin-bottom:15px;position:relative;}
+.makeTeam .sbHolder{width:250px;height:34px;font-size:14px;}
+.makeTeam .sbSelector{width:250px;height:34px;}
+.makeTeam .sbOptions{width:250px;}
+.makeTeam .sbOptions a{font-size:14px;}
+.makeTeam .btns{text-align:center;}
+.makeTeam .btns a{width:126px;margin:0 7px;}
+.makeTeam .makeTeamImg{position:relative;overflow:hidden;min-height:195px;}
+.makeTeam .big {position:absolute;top:0;left:0;}
+.makeTeam .big img{border:1px solid #ccc;}
+.makeTeam .small{overflow:hidden;margin-left:215px;}
+.makeTeam .small li{float:left;margin-right:15px;margin-bottom:12px;position:relative;}
+.makeTeam .small li .selected{position:absolute;top:0;left:0;display:none;}
+.makeTeam .small li a > img{border:1px solid #ccc;}
+.makeTeam .small li.fileUpload{border:1px solid #ccc; width:53px; height:53px; overflow:hidden; position:relative;}
+.makeTeam .small li.fileUpload input.upload{width: 0px; height: 53px; top: 0px; left:0; position:absolute !important;}
+.makeTeam .small li.fileUpload div {position:absolute; left:0px; top:0;}
+.makeTeam .small li.fileUpload div input {display:none;}
+.makeTeam .small li.fileUpload div label { width:53px;height:53px;filter:alpha(opacity=0);opacity:0;cursor:pointer; padding:0px;}
+
+/* terms, privacy */
+.terms, .privacy, .contact{width:100%;max-width:1000px;margin:0 auto;font-family: 'Nanum Barun Gothic';}
+.termsInner, .privacyInner, .contactInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;overflow:hidden;}
+.termsConts, .privacyConts, .contactConts{border:1px solid #ccc;background:#fff;color:#333;padding:30px 20px;}
+.contactConts label{display:block;font-size:14px;margin-bottom:5px}
+.contactConts .default{margin-bottom:5px;}
+.contactConts .default input{padding:9px 0;}
+.contactConts .default textarea{font-size:14px;height:200px;}
+.contactConts > ul > li{margin-bottom:15px;}
+.contactConts  .sbHolder{width:250px;height:34px;font-size:14px;}
+.contactConts .sbSelector{width:250px;height:34px;}
+.contactConts .sbOptions{width:250px;}
+.contactConts .sbOptions a{font-size:14px;}
+.contactConts .btns{text-align:center;}
+.contactConts .btns a{width:126px;}
+.termsConts .solo, .privacyConts .solo{color:#666;line-height:150%;}
+.solo.mt20{margin-top:20px}
+.solo.mb30{margin-bottom:30px}
+.firstOl h4{font-size:18px;color:#2693bc;font-weight:bold;}
+.firstOl h4.mt50{margin-top:50px;}
+.secondOl{margin-top:20px;}
+.secondOl h5{font-size:16px;margin-top:20px;margin-bottom:10px;font-weight:400;}
+.secondOl > li{line-height:200%;}
+.secondUl{margin-top:20px;}
+.secondUl h5{font-size:16px;margin-top:20px;margin-bottom:10px;font-weight:400;}
+.secondUl > li{line-height:200%;}
+
+.thirdUl{margin-top:20px;margin-left:20px;color:#666;}
+.thirdUl.mt0{margin-top:0;}
+.thirdUl h5{font-size:16px;margin-top:20px;margin-bottom:10px;font-weight:400;}
+.thirdUl > li{line-height:200%;list-style-type: disc;}
+
+.termsInfo, .thirdOl, .thirdUl{color:#666;}
+.fourthOl{margin-left: 16px;}
+.fourthUl{margin-left: 16px;}
+.fourthUl li{list-style-type: circle;}
+.subTerms{color:#666;margin:50px 0;}
+
+/* cs */
+.cs{width:100%;max-width:1000px;margin:0 auto;font-family: 'Nanum Barun Gothic';}
+.csInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;overflow:hidden;}
+.csConts{border:1px solid #ccc;background:#fff;color:#333;}
+.csConts .srchNum{padding:10px 20px;border-bottom:1px solid #ccc;}
+.csConts .srchNum strong{color:#f2682d;}
+.csConts .date, .csConts .hit{font-size:12px;color:#666;margin-right:20px;}
+.csConts .btns{text-align:center;}
+.csConts .btns a{width:126px;margin:0 7px;}
+.csTop {position:relative;overflow:hidden;}
+.csTop ul{overflow:hidden;float:left;}
+.csTop li{float:left;margin-right:30px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.csTop li a{display:inline-block;font-size:16px;font-weight:700;color:#999;padding-bottom:5px;-moz-transition:0.4s;-o-transition:0.4s;-webkit-transition:0.4s;transition:0.4s;}
+.csTop li a.active{color:#2593bd;border-bottom:2px solid #2593bd;}
+.csTop li a:hover{color:#2593bd;border-bottom:2px solid #2593bd;}
+.csTop .default{width:233px;position:relative;float:right;-moz-transition:0.4s;-o-transition:0.4s;-webkit-transition:0.4s;transition:0.4s;}
+.csTop .default input{padding:9px 0;}
+.csTop .iconTeamSrch{position:absolute;top:6px;right:7px;width:20px;height:20px;}
+.noticeList li{position:relative;padding:20px;border-bottom:1px solid #ccc;}
+.noticeList li:hover{background:#f9f9f9;}
+.noticeList li a{display:block;font-size:16px;color:#333;margin-top:10px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.noticeView .tit{position:relative;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;padding:20px;}
+.noticeView .tit p{font-size:16px;color:#333;margin:10px 100px 0 0;}
+.noticeView .tit a{position:absolute;top:35px;right:20px;}
+.noticeView .tit i{width:20px;height:14px;margin-right:5px;}
+.noticeView .txt{padding:20px;line-height:150%;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x; font-size:14px;}
+.noticeView .attachFile {padding:20px;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;}
+.noticeView .btns {padding:20px; text-align:center;}
+.noticeView .btns a{width:126px;margin:0 7px;}
+.faqList > li{position:relative;border-bottom:1px solid #ccc;}
+.faqList > li > a{padding:20px;display:block;font-weight:bold;font-size:16px;color:#333;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;line-height:24px;}
+.faqList > li a span{margin-right:10px;}
+.faqList > li ul{border-top:1px solid #ccc;display:none;}
+.faqList > li li:first-child{background:none;}
+.faqList > li li{padding:20px;background:url('/images/common/icon_dotLine.png') 0 top repeat-x;}
+.proposal{padding:20px;}
+.proposal label{display:block;margin-bottom:10px;}
+.proposal input[type="text"]{padding:11px 0;}
+.proposal textarea{height:200px;}
+
+/* quest */
+.questPage{width:100%;color:#333;}
+.questPageInner{position:relative;width:980px;padding:0 10px;margin:0 auto;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s; min-height:600px;}
+.questViewInner{position:relative;max-width:980px;padding:0 10px;margin:0 auto;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s; min-height:500px;}
+.questViewInner .teamInfo{top:102px;}
+.questViewInner .teamInfo .btnShare i, .questViewInner .teamInfo .btnOutputSubmit i{display:none;width:20px;height:20px;}
+.questViewInner .teamInfoInner{padding:10px 20px;}
+.questViewInner .writeDetail, .boardWrite{margin-right:248px;margin-top:0;}
+.questViewInner .writeDetail .detailTxt{line-height: 150%;padding: 20px 0 50px 0;font-size:14px;min-height:200px;}
+.questViewInner .writeDetail .name,.questViewInner .writeDetail .date, .questViewInner .writeDetail .hit{display:inline-block;margin-top:5px;}
+.questViewInner .writeDetail .tit{position:absolute;top:30px;left:70px; padding-bottom:10px; font-size:15px;}
+.questViewInner .writeDetail .thumb {border:0;}
+.questViewInner .writeDetail .thumb img{display:inline-block;width:58px;height:58px;border:1px solid #999999;position:absolute;border-radius:58px;behavior: url(../../common/js/border-radius.htc);}
+.questViewInner .srch .btnWrite {padding:0 !important; position:absolute;width: 40px;height: 38px;background: #23a3c7 url('/images/common/sprites.png') -107px -802px no-repeat !important;font-size: 0;}
+.questViewInner .srch .default {margin-left: 50px;margin-right: 248px;position:relative;}
+.questViewInner .srch .default input[type="text"]{padding: 11px 0;font-size: 14px;}
+.questViewInner .srch .default .iconTeamSrch{position: absolute;top: 9px;right: 7px;width: 20px;height: 20px;}
+.questViewInner .srchNum{padding:10px 20px;border-bottom:1px solid #ccc;}
+.questViewInner .srchNum strong{color:#f2682d;}
+.questViewInner .date, .questViewInner .hit{font-size:12px;color:#666;margin-right:20px;}
+
+.questViewInner .fileView li{position:relative;padding:10px 15px;border:1px solid #e3e3e3;margin-bottom:10px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questViewInner .fileView li i{width:24px;height:22px;margin-right:10px;}
+.questViewInner .fileView li p{display:block;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;margin-right:30px;}
+.questViewInner .fileView li button{width:24px;height:24px;position:absolute;top:9px;right:15px;}
+
+.questPageDetail{display:block;margin-right:248px}
+.questListView li{position:relative;padding:15px 0;background:url('/images/common/icon_dotLine.png') 0 top repeat-x;color:#666;}
+.questListView li a{font-size:16px;display:block;margin-bottom:5px;margin-right:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;}
+.questListView li span{font-size:12px;}
+.questListView li strong{position:absolute;top:30px;right:0;font-size:14px;}
+.questSrchInfo{position:absolute;top:82px;right:10px;width:235px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questSrchInfo .default{position:relative;}
+.questSrchInfo input[type="text"]{padding:11px 0;font-size:14px;}
+.questSrchInfo .iconTeamSrch{position:absolute;top:9px;right:7px;width:20px;height:20px;}
+.questSrchInfo .selectList{display:block;border-top:1px solid #ccc;margin-top:20px;}
+.questSrchInfo .selectList label{display:block;font-size:14px;color:#666;margin:20px 0 10px 0;}
+.questSrchInfo .selectList .sbHolder{width:233px;}
+.questSrchInfo .selectList .sbSelector, .questSrchInfo .selectList .sbOptions{width:233px;text-align:left;}
+.questSrchInfo .btnCondition{display:none;}
+.questPageList{width:732px;overflow:hidden;}
+.questPageList > ul{margin-left:-10px;}
+.questPageList > ul > li{width:235px;min-height:367px;float:left;margin:0 0px 20px 10px;border:1px solid #ccc;background:#fff;font-size:0;overflow:hidden;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questPageList .thumb a img{max-width:235px;width:100%;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questPageList .cates{font-size:12px;padding:0 10px;color:#666;}
+.questPageList .cates .colorBox{padding:0 5px;margin-right:5px;font-size:12px;}
+.questPageList .tit{padding:0 10px;margin:10px 0 10px 0;height:37px;overflow:hidden;}
+.questPageList .tit a{font-size:16px;color:#333;display:inline-block;height:100%;}
+.questPageList .qp {font-size:13px;color:#777;display:inline-block;height:100%;padding:0 10px;margin:0 0 10px 0;}
+.questPageList .info{position:relative;margin:-9px 0 0 0;padding:5px 0 0 0;background:url('/images/common/img_clampbar.png') center top no-repeat;}
+.questPageList .infoInner{background:#fff;padding-top:10px;}
+.questPageList .infoInner i{width:17px;height:17px;margin-right:5px;}
+.questPageList .infoInner li{border-top:1px solid #f1f1f1;padding:8px 10px;}
+.questPageList .infoInner li span{display:inline-block;width:49%;font-size:12px;}
+.questPageList .infoInner li em{position:relative;top:2px;}
+.questPageList .infoInner li em.countDown{color:#ef402a;}
+.questPageList .gage{background:#f1f1f1;height:5px;}
+.questPageList .gageInner{height:5px;display:inline-block;}
+.questPageList .gageInner.color01{background:#19a3c7;}
+.questPageList .gageInner.color02{background:#ef402a;}
+.questTab{padding:20px 0 20px 0;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questTab a{display:inline-block;font-size:16px;font-weight:700;color:#999;margin-right:20px;padding-bottom:5px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questTab a.active{color:#2593bd;border-bottom:2px solid #2593bd;}
+.questTab a i{width:20px;height:20px;margin-right:7px;position:relative;top:-1px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questTab a em{display:inline-block;width:24px;height:13px;padding-top:3px;color:#fff;text-align:center;font-size:12px;}
+.questView{display:block;margin-right:248px;border:1px solid #ccc;background:#fff;color:#333;}
+.questView .questImg{width:100%;}
+.questView .questImg img{width:100%;}
+.questView .questImgOQ {width:100%; text-align:center;}
+.questView .questImgOQ img {margin:20px;width:90%; height:auto;}
+.questView .questTxt{padding:20px;font-size:14px;line-height:170%;}
+.questView .questTxt .infoTit{font-size:16px;color:#23a3c7;display:block;}
+.questView .questTxt .questInfoDetail li{margin-bottom:20px;}
+.questBoardList li{position:relative;padding:20px;background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x;min-height:60px;}
+.questBoardList li:hover{background:#f9f9f9 url('/images/common/icon_dotLine.png') 0 bottom repeat-x;}
+.questBoardList li a{display:block;font-size:16px;color:#333;margin-top:10px;margin-left:75px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.questBoardList li .thumb {width:58px;height:58px;}
+.questBoardList li .thumb a {display:inline-block;position:absolute;margin-top:0px;margin-left:0px;}
+.questBoardList li .thumb a img {width:58px;height:58px;border:1px solid #ccc;border-radius:58px;behavior: url(../../common/js/border-radius.htc);}
+.questBoardList  .date, .questBoardList .hit{font-size:12px;color:#666;margin-left:75px;display: inline-block;margin-top: 5px;}
+.questTit{padding:20px 0 20px 0;}
+.questTit a{display:inline-block;font-size:16px;font-weight:700;color:#999;padding-bottom:5px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questTit a.btnBack{position:relative;top:5px;}
+.questTit a.btnBack i{width:28px;height:21px;}
+.questTit a.active{color:#2593bd;border-bottom:2px solid #2593bd;margin-left:15px;}
+.questTit a.active i{width:21px;height:20px;margin-right:7px;}
+.questResult{display:block;margin-right:245px;}
+.questResult > ul > li{position:relative;padding:20px;margin-bottom:20px;border:1px solid #dcdcdc;background:#fff;}
+.questResult > ul > li a{width:100%;height:100%;}
+.questResult > ul > li .tit{font-size:20px;}
+.resultInner{border:1px solid #e3e3e3;padding:10px;margin-top:10px;}
+.resultInner .thumb img{display:inline-block;width:58px;height:58px;border:1px solid #999999;position:absolute;border-radius:58px;behavior: url(../../common/js/border-radius.htc);}
+.resultInner .thumb02 img{display:inline-block;width:58px;height:58px;border:1px solid #999999;position:absolute;}
+.resultInner .info{margin:8px 0 0 75px;color:#333;}
+.resultInner .info ul{overflow:hidden;margin-top:10px;}
+.resultInner .info li{float:left;margin:0 20px 10px 0;}
+.resultInner .info li i{width:17px;height:17px;margin-right:5px;}
+.resultInner .info li:last-child i{margin-right:0;}
+.rankingInput{display:inline-block;border:#ccc 1px solid;margin-bottom:10px;padding:0 5px;color: #555;background:#fff;width:30px;}
+.rankingInput input{padding:5px 0;text-align:center;}
+
+
+/* request */
+.request{width:100%;max-width:1000px;margin:0 auto;font-family: 'Nanum Barun Gothic';}
+.requestInner{position:relative;margin:0 auto;font-size:14px;padding:0 10px;overflow:hidden;}
+.request img{-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.openQuest{padding:50px 0 40px 0;border:1px solid #ccc;background:#fff;color:#333;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;text-align:center;}
+.openQuest .txt{font-size:16px;line-height:150%;}
+.openQuest .txt span{width:320px;display:block;font-size:20px;color:#0099cc;border-bottom:1px solid #0099cc;margin:20px auto 0 auto;font-weight:200;}
+.openQuest ul{overflow:hidden;margin:50px auto 70px auto;width:660px;background:url('/images/contents/icon_stepArrow.png') center 40px no-repeat;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.openQuest li{float:left;width:220px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.openQuest li b{display:block;font-weight:200;font-size:18px;margin:15px 0;}
+.openQuest li em{font-size:14px;line-height:170%;}
+.requestBox{margin-top:20px;padding:50px 0 40px 0;border:1px solid #ccc;background:#fff;color:#333;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;text-align:center;}
+.requestBox .txt{width:325px;font-weight:700;display:block;font-size:20px;color:#262b35;border-bottom:1px solid #262b35;margin:0 auto 20px auto;}
+.requestBox .txt02{font-size:16px;line-height:150%;}
+.requestBox img{-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.requestBox > ul{overflow:hidden;margin:50px auto 70px auto;width:660px;background:url('/images/contents/icon_stepArrow02.png') center 40px no-repeat;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.requestBox > ul > li{float:left;width:220px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.requestBox > ul > li > b{display:block;font-weight:200;font-size:18px;margin:15px 0;}
+.requestBox > ul > li > em{font-size:14px;line-height:170%;}
+.requestBox > ul > li ul{margin-top:20px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.requestBox > ul > li li{margin-bottom:20px;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.requestBox > ul > li li b{display:block;font-weight:200;font-size:16px;margin:5px 0;}
+.requestBox > ul > li li em{color:#666;font-size:14px;}
+.openQuest a, .requestBox a{width:212px;font-size:18px;font-weight:200;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questMake{padding:30px;border:1px solid #ccc;background:#fff;color:#333;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questMake > ul > li{margin-bottom:25px;}
+.questMake label{display:block;font-size:16px;margin:0 0 5px 0;}
+.questMake label em{font-size:14px;}
+.questMake .labelTit{display:block;font-size:16px;margin-bottom:5px}
+.questMake .way label{display:inline-block;font-size:14px;color:#666;}
+.questMake .way label span{position:relative;top:2px;}
+.questMake .default{margin-bottom:0px;}
+.questMake .default input{padding:9px 0;}
+.questMake .default textarea{font-size:14px;height:200px;}
+.questMake .subLable{font-size:14px;}
+.questMake .btns{text-align:center;}
+.questMake .btns a{width:110px;}
+.questMake .infoTit{font-size:20px;font-weight:400;}
+.questMake .infoBox{color:#666;font-size:14px;background:#fcfcfc;border:1px solid #dcdcdc;padding:20px;margin:15px 0 30px 0;}
+.questMake .infoBox p{line-height:150%;}
+.questMake .infoBox .tit{font-weight:700;}
+.questMake .service {width:100%;overflow:hidden;margin-bottom:50px;}
+.questMake .service > li{width:33.33%;float:left;vertical-align:top;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.questMake .service > li .inner{padding:0 5px;}
+.questMake .service > li .top{padding:20px;background:#2593bd;color:#fff;text-align:center; height:130px;}
+.questMake .service > li .top strong{font-weight:700;font-size:18px;display:block;margin:5px 0 10px 0;font-family:'나눔바른고딕';}
+.questMake .service > li .top p{line-height:140%;}
+.questMake .service > li .middle{padding:20px;border:1px solid #d6d6d7;border-top:0;border-bottom:0;}
+.questMake .service > li .middle ul{min-height:95px;}
+.questMake .service > li .btm{padding:20px;background:#fbfbfb;border:1px solid #d6d6d7;}
+.questMake .service > li .btm ul{min-height:38px;}
+.questMake .service > li li{line-height:140%;}
+.questMake form ul li {padding-bottom:25px;}
+
+
+/* modal */
+.modalLayer{position:relative;border:1px solid #666;background:#fff;width:298px;color:#666;display:none}
+.modalLayer h5{display:block;font-size:16px;text-align:center;padding:17px 0;border-bottom:1px solid #666;}
+.modalLayer .btnPrevPage{width:30px;height:30px;position:absolute;top:12px;left:10px;}
+.modalLayer .btnModalClose{width:30px;height:30px;position:absolute;top:12px;right:10px;}
+.modalLayer .modalConts{padding:20px;text-align:center;font-size:14px;}
+.modalLayer .teamList{overflow:hidden;}
+.modalLayer .teamList li{position:relative;display:inline-block;*zoom:1;*display:inline;margin:0 8px 0 8px;text-align:center;vertical-align:top;}
+.modalLayer .teamList li.addTeam{background:url('/images/common/bg_member.png') no-repeat;}
+.modalLayer .teamList li a{font-size:0;}
+.modalLayer .teamList li .iconTeamNotice{width:17px;height:17px;line-height:20px;position:absolute;top:0;left:0;font-size:12px;color:#fff;text-indent:0;text-align:center;}
+.modalLayer .teamList li .thumb{display:inline-block;width:65px;height:65px;background:#e5e5e5;overflow:hidden;border-radius: 65px;behavior: url(../../common/js/border-radius.htc);border:1px solid #ddd;}
+.modalLayer .teamList li:first-child{margin-bottom:15px;}
+.modalLayer .teamList .name{display:block;font-size:12px;margin-top:5px;}
+.modalLayer .teamList .iconAddTeam{width:65px;height:65px;}
+.modalLayer .memberDetail .name{display:block;font-size:18px;color:#333;}
+.modalLayer .memberDetail ul{text-align:left;margin-top:10px;}
+.modalLayer .memberDetail li{position:relative;overflow:hidden;padding:10px 0;color:#535353;border-bottom:1px solid #c1c1c1;text-indent:-35px;padding-left:35px;vertical-align:top;}
+.modalLayer .memberDetail li strong{float:left;display:inline-block;width:35px;margin-top:2px;}
+.modalLayer .memberDetail li p{line-height:150%;}
+.modalLayer .inviteInput{max-width:150px;margin:20px auto 0 auto;}
+.modalLayer .inviteInput input{padding:10px 0;}
+.modalLayer .btns{margin-top:20px;text-align:center;}
+.modalLayer .btns .btn{padding: 6px 12px 5px 12px;margin:0 5px;}
+.modalLayer .teamOutSelect{margin-top:20px;}
+.modalLayer .teamOutSelect .sbHolder, .modalLayer .shareInfo .sbHolder, .modalLayer .submitInfo .sbHolder{width:180px;}
+.modalLayer .teamOutSelect .sbSelector, .modalLayer .teamOutSelect .sbOptions, .modalLayer .shareInfo .sbSelector, .modalLayer .shareInfo .sbOptions, .modalLayer .submitInfo .sbSelector, .modalLayer .submitInfo .sbOptions{width:180px;text-align:left;}
+.modalLayer .joinRequest .thumb{display:block;width:65px;height:65px;border:1px solid #ddd;margin:0 auto;}
+.modalLayer .joinRequest .teamName{display:block;font-size:18px;color:#333;margin:5px 0 10px 0;}
+.modalLayer .joinRequest .txt{font-size:14px;color:#797979}
+.modalLayer .questStep{display:inline-block;margin:13px 22px 0 0;font-weight:bold;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.modalLayer .starRating {background:none;border:0;vertical-align:top;height:22px;margin:-2px 30px 0 0;text-align:center;-moz-transition: 0.4s;-o-transition: 0.4s;-webkit-transition: 0.4s;transition: 0.4s;}
+.modalLayer .starRating ul{display:inline-block;height:22px;vertical-align:top;}
+.modalLayer .starRating li{position:relative;overflow:hidden;width:23px;height:22px;font-size:0;margin:0 1px;vertical-align:top;}
+.modalLayer .starRating li span{display:inline-block;position:absolute;top:0;left:0;height:22px;}
+.modalLayer .starRating .questGrade{display:inline-block;font-size:16px;position:relative;top:4px;left:5px;font-weight:bold;}
+.modalLayer .shareInfo .btns button, .modalLayer .submitInfo .btns button, .modalLayer .prizeList .btns button {width:90px}
+.modalLayer .submitInfo .btns button.btnGray{width:55px;}
+.modalLayer .errorInfo .btns button{width:130px}
+.modalLayer .shareInfo .sns{margin-top:20px;padding-top:15px;border-top:1px solid #ccc;}
+.modalLayer .shareInfo .sns a{width:100%;height:32px;line-height:32px;background:#23a3c8;color:#fff;text-align:left;vertical-align: top;margin:5px 0;}
+.modalLayer .shareInfo .sns i{width:31px;height:32px;border-right:1px solid #1f92b3;margin-right:10px;}
+
+.modalLayer .tabbtn {display:block; margin:0 0 10px 0; height:20px;}
+.modalLayer .tabbtn li { float:left; padding:0 10px 0 10px; border-left:#727272 1px solid; color:#999; cursor:pointer;}
+.modalLayer .tabbtn li.first {border:none; padding:0 10px 0 0;}
+.modalLayer .tabbtn li.active { font-weight:bold; color:#666;}
+.modalLayer .downList { width:100%; clear:both;}
+.modalLayer .downList .listBox { height:150px; border:#ccc 1px solid; overflow:scroll;}
+.modalLayer .downList .listBox span { padding:5px; border-bottom:#ccc 1px solid; display:block; text-align:left;}
+.modalLayer .downList .btns { text-align:left; margin-top:10px;}
+.modalLayer .downList .btns .btn {width:75px; padding:6px 12px 5px 12px; margin:0 10px 0 0; background:#949494;}
+.modalLayer .downList .downBtn { border-top:#ccc 1px solid; margin:10px 0 0 0; padding:20px 0 0 0;}
+.modalLayer .downList .downBtn .btn { width:75px; padding:6px 12px 5px 12px; background:#23a3c8;}
+
+.modalLayer .prizeList { width:100%; clear:both;}
+.modalLayer .prizeList .listBox { height:150px; border:#ccc 1px solid; overflow:scroll;}
+.modalLayer .prizeList .listBox span { padding:5px; border-bottom:#ccc 1px solid; display:block; text-align:left;}
+
+.modalLayer textarea {border:1px solid #ccc;background:#fff; padding:10px; width:220px; font-size:14px; color:#666; height:80px;}
+
+
+/* teamview */
+.teamView {padding:20px; overflow:hidden; background:url('/images/common/icon_dotLine.png') 0 bottom repeat-x; font-size:14px;}
+.teamView .txtBlue {font-size:16px; color:#23a3c7;}
+.teamView .txtBlue a { font-size:12px; padding:3px 10px; border:#ccc 1px solid; margin-left:15px;}
+.teamView .tit { font-size:16px; margin-bottom:20px; font-weight:400; display:block;}
+.teamView .txt {line-height:140%;}
+.btnBox {padding:20px; text-align:center;}
+.btnBox a {margin:0 7px; width:126px;}
+.btnTeamView {background:url('/images/common/icon_clamp02.png') 5px 7px no-repeat; position:absolute; right:20px; top:35px; width:20px; height:35px;}
+
+/*guide */
+.guide{width:100%;max-width:1000px;margin:0 auto;font-family: 'Nanum Barun Gothic';}
+.guideInner{position:relative;margin:0 auto;color:#666;font-size:14px;padding:0 10px;overflow:hidden;}
+.guideConts{border:1px solid #ccc;background:#fff;color:#333;}
+
+
+
+ /* media queries */
+@media all and (max-width: 950px) {
+	.container{padding:93px 0 50px 0;}
+	.main .container{padding:60px 0 0 0;}
+	.subTit{margin-top:4px;margin-bottom:16px;}
+	.headerInner{width:auto;height:60px;background:#262b35;}
+	.headerInner h1{position:absolute;top:17px;left:10;}
+	.headerInner h1 img{width:142px;}
+	.headerInner .iconMenu{display:inline-block;top:20px;}
+	.gnb{display:none;position:absolute;top:60px;left:0;background:#292b33;width:100%;}
+	.gnb li{display:block;clear:both;margin:0;border-top:1px solid #40434c;width:100%;}
+	.gnb a{width:100%;font-size:14px; font-weight:400;color:#fff;letter-spacing:-1px;padding:10px 0 10px 10px;}
+	.gnb a:hover{color:#0099cc;}
+	.gnb a.active{color:#0099cc;}
+	.util{position:absolute;top:15px;right:10px;}
+	.util li{margin-left:10px;}
+	.util li.btnLogin a, .util li.btnJoin a{width:28px !important;height:28px !important;padding:0 !important;font-size:0 !important;background:url('/images/common/sprites@2x.png') no-repeat !important;background-size:400px !important;}
+	.util li.btnLogin a{background-position:0 0 !important;}
+	.util li.btnJoin a{background-position:0 -48px !important;}
+	.util .btnQuestion a{padding:0;margin:3px 0px 0 0;}
+	.afterLogin{/*width:103px;*/ width:70px; top:16px;}
+	.afterLogin .btnQuestion{margin-right:13px;}
+	.afterLogin .msg{position:static;}
+	.afterLogin .msg .nums{margin-top:2px;}
+	.afterLogin .msg .nums span{display:none;}
+	.afterLogin .msg .nums i{width:27px;height:28px;margin:0;}
+	.afterLogin .msg .nums i.none {width:22px;}
+	.afterLogin .myMenu{width:28px;height:28px;}
+	.afterLogin .myMenu .userID em{display:none;}
+	.afterLogin .myMenu .thumb.active img{border:2px solid #0099cc;}
+	.afterLogin .myLayer{top:44px;right:-10px;}
+	.afterLogin .msgLayer{width:318px;top:44px;right:-10px;}
+	.afterLogin .msgLayer .txt p {width:227px;}
+	
+	.subTeamPage .container{padding-top:90px;}
+}
+ 
+ 
+@media all and (max-width: 767px) {
+	h3{font-size:24px;}
+	
+	.default{padding:0 10px;}
+	.sbSelector{text-indent:10px;}
+	.teamWrite label{font-size:14px;}
+	.teamWrite .writeSubTit{font-size:12px;}
+	.teamWrite, .proposal, .faqList > li li, .faqList > li > a, .teamPageInner .writeDetail.viewImg .top, .teamPageInner .linkView li, .teamPageInner .fileView li, .questPageInner .fileView li, .teamPageInner .writeLayer > ul > li, .teamPageInner .writeDetail, .modifyForm .rightInfo .info, .profileBox, .profileBox .profileLayer .inner, .teamWantedList > ul > li, .teamSrchList > ul > li, .userSrchList > ul > li, .writeView .info, .makeTeam, .contactConts, .csConts .srchNum, .noticeList li, .noticeView .tit, .noticeView .txt, .noticeView .btns, .noticeView .attachFile, .questMake, .guideConts, .teamSrchList .empty {padding:10px;}
+	.modifyInner{padding:0 10px;}
+	.modifyForm .leftInfo{position:static;display:block;width:auto;margin-bottom:20px;text-align:center;padding:10px;}
+	.modifyForm .rightInfo .info .tit{font-size:18px;}
+	.modifyForm .leftInfo .nickName{font-size:18px;}
+	.modifyForm .leftInfo .pic{margin:10px auto 10px auto;}
+	.modifyForm .leftInfo .btnChange{width:80px;}
+	.modifyForm .rightInfo{margin:0;}
+	.modifyForm .rightInfo .nameInput, .modifyForm .rightInfo .authNumberInput{width:auto;max-width:none;}
+	.modifyForm .rightInfo .pwModify button, .modifyForm .rightInfo .btnOut button{font-size:16px;padding: 9px 45px 7px 45px;}
+	.modifyForm .rightInfo .pwModify li{float:none;display:block;margin-bottom:10px;width:auto;max-width:none;}
+	.modifyForm .rightInfo .pwModify li .default{width:auto;}
+	.modifyForm .rightInfo .pwModify li.center{margin:0;}
+	.modifyForm .rightInfo .pwModify .btnSave{margin-top:25px;}
+	
+	.teamInfo{position:relative;right:0;border:1px solid #ccc;background:#fff;margin-bottom:10px;min-height: 100px;}
+	.teamWanted .teamInfo{top:0;}
+	.teamInfo h4{font-size:18px;margin:7px 0 8px 90px;}
+	.teamInfo .btnSubmit, .teamInfo .btnApply, .teamInfo .btnShare, .teamInfo .btnOutputSubmit, .teamInfo .btnOutputDown{padding:0 10px;margin:10px 0 10px 90px;display:none;}
+	.teamInfo .btnMoreTeam{display:block;position:relative;background:#fff;z-index:9;}
+	.teamInfo .teamInfoInner{width:auto;padding:10px 10px 0 10px;border:0;background:none;margin-bottom:0;min-height:60px;}
+	.teamInfo .teamThumb{width:78px;height:78px;position:absolute;top:10px;left:10px;}
+	.teamInfo .userThumb{width:78px;height:78px;position:absolute;top:10px;left:10px;margin:0;}
+	.teamInfo .userThumb img{width:78px;height:78px;}
+	.teamInfo .teamInfoList{width:auto;margin:0 0 10px 90px;display:none;}
+	.teamInfo .userInfoList{width:auto;margin:0 0 10px 90px;height:35px;}
+	.teamInfo .teamMember{margin:0 0 0 90px;}
+	.teamInfo .teamMember ul{width:auto;}
+	.teamInfo .teamMember li{margin:0 5px 10px 0;}
+	
+	.teamInfo .teamThumb img{width:78px;height:78px;}
+	
+	.teamPageInner .teamTab{padding-bottom:10px;}
+	.teamPageInner .writeBox button{width:50px;height:48px;}
+	.teamPageInner .writeBox .srchArea input{padding:14px 0;}
+	.teamPageInner .writeBox .srchArea button{right:10px;top:17px;}
+	.teamPageInner .teamConts{margin:20px 0 0 0;}
+	.teamPageInner .writeDetail .top .name{margin-left:5px;}
+	.teamPageInner .writeDetail .top .thumb{width:38px;height:38px;}
+	.teamPageInner .writeDetail .top .thumb img{width:100%; height:100%;}
+	.teamPageInner .writeDetail .top .date{position: absolute;top:25px;left:49px;}
+	.teamPageInner .detailTxt{padding-top:5px;}
+	.teamPageInner .commentList li{padding:10px 0;height:auto;}
+	.teamPageInner .commentList li .thumb{top:10px;width:38px;height:38px;}
+	.teamPageInner .commentList li .thumb img{width:38px; height:38px;}
+	.teamPageInner .commentList li .commentTxt{margin-left:48px;}
+	.teamPageInner .writeLayer li .writeLayerInner.fileArea{margin-top:0px;}
+	.teamPageInner .writeLayer li .writeLayerInner.imgArea ul{margin-left:-5px;}
+	.teamPageInner .writeLayer li .writeLayerInner.imgArea li{margin:0 5px 10px 5px;}
+	
+	.writeModiBox .writeLayerInner.fileArea{margin-top:0px;}
+	.writeModiBox .writeLayerInner.imgArea ul{margin-left:-5px;}
+	.writeModiBox .writeLayerInner.imgArea li{margin:0 5px 10px 5px;}
+	
+	.teamPageInner .writeLayer > ul > li.write01 .iconTabArrow{left:18px;}
+	.teamPageInner .writeLayer > ul > li.write02 .iconTabArrow{left:68px;}
+	.teamPageInner .writeLayer > ul > li.write03 .iconTabArrow{left:116px;}
+	.teamPageInner .writeLayer > ul > li.write04 .iconTabArrow{left:166px;}
+	.teamPageInner .fileView li button {top:12px;right:10px;}
+	.teamPageInner .fileView li i{margin-right:0;}
+	.teamPageInner .linkView li a {height: 100%;background: url('/images/common/icon_clamp03.png') right center no-repeat;}
+	.teamPageInner .writeDetail.viewImg .top .edit{top:10px;right:10px;}
+	.teamPageInner .writeDetail.viewImg .top .date{top:35px;left:59px;}
+	.teamPageInner .writeDetail.viewImg .detailTxt{padding:10px 10px 25px 10px;}
+	.teamPageInner .writeDetail.viewImg .commentList{padding:0 10px;}
+	.teamPageInner .writeDetail.viewImg .commentForm{margin:0 10px 10px 10px;}
+	.profile .tit, .myPageDetail .tit{font-size:18px;}
+	.profile .tit button, .myPageDetail .tit button{margin:0}
+	.profileBox.teamQuest{padding-bottom:0px;}
+	.profileBox .tit{margin-bottom:10px;font-size:18px;}
+	.profileBox .profileLayer{position:absolute;top:-1px;left:-1px;z-index:88;border:1px solid #ccc;background:#fff;display:block;width:100%;display:none;}
+	.profileBox .profileLayer .tit{margin-bottom:10px}
+	.profileBox .profileLayer .btns{margin-top:10px;}
+	.notificationList i{width:32px;height:32px;margin-top: 5px;}
+	.notificationList li > div{padding:15px 10px;}
+	.notificationList .txt{margin-left:40px;}
+	.notificationList .txt p{font-size:14px;}
+	.notificationList a{background: url('/images/common/icon_clamp05.png') right center no-repeat;}
+	.teamWantedInfo .btnWrite{padding:0;width:40px;height:38px;position:absolute;top:0;left:0;background:#23a3c7 url('/images/common/sprites.png') -107px -802px no-repeat !important;font-size:0; padding:0px !important;}
+	.teamWantedInfo, .teamSrchInfo, .userSrchInfo, .questSrchInfo{position:relative;width:auto;top:0;right:0;}
+	.teamWantedInfo .default{margin-right:97px;margin-left:50px;}
+	.teamSrchInfo .default, .userSrchInfo .default, .questSrchInfo .default{margin-right:97px;}
+	.teamWantedInfo .selectList, .teamSrchInfo .selectList, .userSrchInfo .selectList, .questSrchInfo .selectList{border:0;margin-top:10px;display:none;}
+	.teamWantedInfo .selectList label, .teamSrchInfo .selectList label, .userSrchInfo .selectList label, .questSrchInfo .selectList label{display:none;}
+	.teamWantedInfo .selectList .sbHolder, .teamSrchInfo .selectList .sbHolder, .userSrchInfo .selectList .sbHolder, .questSrchInfo .selectList .sbHolder{width:100%;margin-bottom:5px;}
+	.teamWantedInfo .selectList .sbSelector, .teamWantedInfo .selectList .sbOptions, .teamSrchInfo .selectList .sbSelector, .teamSrchInfo .selectList .sbOptions, .userSrchInfo .selectList .sbSelector, .userSrchInfo .selectList .sbOptions, .questSrchInfo .selectList .sbSelector, .questSrchInfo .selectList .sbOptions{width:100%;text-align:left;}
+	.teamWantedInfo .btnCondition, .teamSrchInfo .btnCondition, .userSrchInfo .btnCondition, .questSrchInfo .btnCondition{color:#535353;font-size:14px;position:absolute;top:0;right:0;width:85px;height:40px;display:block;padding-right:20px;}
+	.teamWantedList, .teamSrchList, .userSrchList, .questSrchInfo{margin-right:0;}
+	.teamWantedList > ul > li .info02 li{font-size:12px;}
+	.teamWantedList > ul > li .info02 li span{margin-top:2px;}
+	.teamSrchList > ul > li .info, .userSrchList > ul > li .info{margin:0 0 0 75px;}
+	.writeView, .questPageDetail, .myPageDetail{display:block;margin-right:0;}
+	.writeView .txt{padding:10px;min-height:0;}
+	.writeView .cmt{padding:10px;min-height:0;}
+	.subMyPage .container{padding-top:80px;}
+	.profileBox .profileThumb li{width:100%;max-width:118px;display:inline-block;*zoom:1;*display:inilne;margin:0 10px 20px 0;text-align:center;vertical-align:top;}
+	.profileBox .profileThumb li img{width:100%;max-width:118px;border:1px solid #ccc; height:auto; height:118px;}
+	.teamMakeTit{margin-top:20px;}
+	.csTop ul{float:none;}
+	.csTop .default{width:auto;float:none;margin-top:10px;}
+	.csConts .btns a{width:100px;margin:0 5px;}
+	.noticeView .tit a{top:10px;right:10px;font-size:0;}
+	.noticeView .tit i{margin-right:0px;}
+	.questViewInner .teamInfo{top:15px;background:none;border:0;margin-bottom:20px;}
+	.questViewInner .teamInfoInner{padding:0 10px;border: 1px solid #ccc;background: #fff;}
+	.questPageInner, .questPageList, .questPageList > ul {width:auto;}
+	.questPageInner .fileView li button {top:12px;right:10px;}
+	.questPageInner .fileView li i{margin-right:0;}
+	
+	.questViewInner .teamInfo .btnShare, .questViewInner .teamInfo .btnOutputSubmit{width:40px;padding:0;margin:10px 0 0 0;display:block;position:absolute;}
+	.questViewInner .teamInfo .btnShare a, .questViewInner .teamInfo .btnOutputSubmit a{font-size:0;height:19px;}
+	.questViewInner .teamInfo .btnSubmit, .questViewInner .teamInfo .btnOutputDown, .questViewInner .teamInfo .btnEnd{padding:0;display:block;margin:10px 0 0 50px;}
+	.questPageList > ul > li{max-width:366px;width:47.5%;padding-bottom:10px;}
+	.questPageList .thumb a img{max-width:480px;width:100%; height:auto;}
+	.questViewInner .teamInfo .btnShare i, .questViewInner .teamInfo .btnOutputSubmit i{display:block}
+	.questViewInner .teamInfo .btnShare i{margin:-1px 0 0 -1px;}
+	.questViewInner .teamInfo .btnOutputSubmit i{margin:-1px 0 0 -3px;}
+	.questViewInner .srch .default {margin-right:0;}
+	.questTab{padding:10px 0;}
+	.questTab a{font-size:0;}
+	.questTab a i{margin:0;}
+	.questTab a em{font-size:0;width:5px;height:5px;margin-left:1px;background:#e82821;padding:0;border-radius:2px;}
+	.questView, .questViewInner .writeDetail, .boardWrite, .questResult{margin:0;}
+	.questView .questTxt{padding:10px;}
+	.openQuest a, .requestBox a{width:152px;font-size:16px;}
+	.openQuest{padding:20px 10px;}
+	.openQuest .txt{font-size:14px;}
+	.openQuest .txt span{width:300px;display:block;font-size:18px;color:#0099cc;border-bottom:1px solid #0099cc;margin:20px auto 0 auto;font-weight:700;}
+	.openQuest ul{overflow:hidden;margin:25px auto;width:auto;background:none;}
+	.openQuest li{float:none;width:auto;min-height:46px;text-align:left;position:relative;padding-top:10px;margin-bottom:20px;}
+	.openQuest li img{width:56px;position:absolute;top:0;left:0;}
+	.openQuest li b{display:block;font-size:16px;margin:0 0 10px 70px;}
+	.openQuest li br{display:none;}
+	.openQuest li em{font-size:14px;line-height:130%;display:block;margin:0 0 0 70px;}
+	.requestBox{padding:30px 20px 20px 20px;}
+	.requestBox .txt{width:290px;font-size:18px;}
+	.requestBox .txt02{font-size:14px;}
+	.requestBox .thumb img{width:56px;position:absolute;top:0;left:0;}
+	.requestBox .stepIcon img{width:25px;position:absolute;top:0;left:0;}
+	.requestBox > ul{overflow:hidden;margin:25px auto;width:auto;background:none;}
+	.requestBox > ul > li{float:none;width:auto;text-align:left;position:relative;padding-top:20px;margin-bottom:20px;}
+	.requestBox > ul > li > b{display:block;font-size:16px;margin:0 0 10px 70px;}
+	.requestBox > ul > li ul{margin:20px 0 0 70px;}
+	.requestBox > ul > li li{position:relative;margin-bottom:20px;padding-top:5px;}
+	.requestBox > ul > li li b{display:block;font-weight:200;font-size:14px;margin:0 0 0 35px;}
+	.requestBox > ul > li li em{margin:5px 0 0 35px;display:block;line-height:130%;}
+	.questMake .infoBox{padding:10px;}
+	.questMake .service > li{width:100%;float:none;margin-bottom:10px}
+	.questMake .service > li .inner{padding:0;}
+	.questMake .service > li .middle, .questMake .service > li .btm{padding:10px;}
+	.recomQuestList{padding:50px 0 35px 0;}
+	.todays{margin:60px auto;}
+	.todays .tit{margin-bottom:10px;}
+	.todays li{max-width:345px;}
+	.todays li.team .inner{padding-right:5px;}
+	.todays li.quest .inner{padding-left:5px;}
+	.recomQuestList .titArea{margin-bottom:10px;}
+	.mainQuest > ul > li{width:50%;}
+	.iconMenu.active{background-position:0 -137px !important;}
+	.iconSrch{background-position:-43px -933px !important;}
+	.iconWrite{background-position:-51px -531px !important;}
+	.iconWrite.active{background-position:-51px -583px !important;}
+	.iconAdd{background-position:-49px -633px !important;}
+	.iconAdd.active{background-position:-49px -684px !important;}
+	.iconFile{background-position:-49px -837px !important;}
+	.iconFile.active{background-position:-49px -885px !important;}
+	.iconLink{background-position:-49px -735px !important;}
+	.iconLink.active{background-position:-49px -786px !important;}
+	.iconSmallFile{background-position:0px -832px !important;}
+	.iconFileDown{background-position:-57px -489px  !important;}
+	.btnSrchClose{background-position:-18px -469px !important}
+	.iconRequest_b{background-position:-114px -179px !important;}
+	.iconAlarm_b{background-position:-114px -241px !important;}
+	.iconFaqToggle{background-position:right -610px !important;}
+	.iconFaqToggle.active{background-position:right -649px !important;}
+	.iconPeriod{background-position:-112px -1106px !important;}
+	.iconPopular {background-position:-112px -1148px !important;}
+	
+	.teamView {padding:10px;}
+	.btnBox {padding:10px;}
+	
+	.btnTeamView {background:url('/images/common/icon_clamp02.png') 5px 7px no-repeat; position:absolute; right:10px; top:20px; width:20px; height:35px;}
+	
+	.modifyForm .leftInfo .fileUpload div label {width:100%; left:0px;}
+	
+	.commentList li .edit { position:absolute; top:10px; right:0px;}
+}
+
+@media all and (max-width: 600px) { 
+	.teamWantedList > ul > li .info02 ul{position:relative;top:0;right:0;margin:10px 0 0 45px;}
+	.teamWantedList > ul > li .info02 li.teamName{max-width:90px;}
+	.teamWantedList > ul > li .info02 li.nickName span{max-width:70px;}
+	.teamWantedList > ul > li .info02 li.teamArea{max-width:70px;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+	.teamWantedList > ul > li .info02 a{margin:0 0 0 55px;}
+	.csTop li{margin-right:20px;}
+	.request a{font-size:14px;}
+	.footerMenu{margin-bottom:30px;}
+	.footerMenu li{float:none;margin-bottom:5px;}
+	address{width:270px;line-height:150%;}
+}
+
+@media all and (max-width: 505px) { 
+	.questPageList > ul > li{max-width:483px;width:96.4%;}
+	.questPageList .thumb img{max-width:483px;width:100%;}
+	.todays{margin:60px auto 30px auto;}
+	.todays li{max-width:none;width:100%;margin-bottom:35px;}
+	.todays li.team .inner{padding-right:0;}
+	.todays li.quest .inner{padding-left:0;}
+}
+
+@media all and (max-width: 480px) { 
+	.teamPageInner .profileCotns .questList > ul > li .questStep{margin-top:5px;}
+	.teamPageInner .profileCotns .questList > ul > li .left{float:none;}
+	.teamPageInner .profileCotns .questList > ul > li .right{float:none;text-align:left;}
+	.teamPageInner .profileCotns .questList > ul > li .starRating{margin-top:5px;text-align:left;}
+	.mainQuest > ul > li{width:100%;}
+}
+
+@media all and (max-width: 400px) { 
+	h3{font-size:24px;}
+	.default input{border:0;background:none;width:100%;padding:10px 0;}
+	input[type="submit"], .fb a{font-size:16px;padding:9px 0;}
+	.modifyForm .rightInfo .numberInput{margin-bottom:10px;}
+	.modifyForm .rightInfo .btnAuth{margin-left:0 !important;margin-bottom:25px;}
+	.notificationList i{display:none;}
+	.notificationList .txt{margin-left:0px;}
+	.makeTeam .small{overflow:hidden;margin-left:0;margin-top:210px}
+}
+
+
+
+/* 레티나 이미지 처리 */
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1) {
+	.afterLogin .msg .nums{margin-top:0px;}
+	.afterLogin .msgLayer li{background:url('/images/common/icon_clamp@2x.png') 95% center no-repeat;background-size:6px;}
+	.afterLogin .msgLayer li.active{background:#efefef url('/images/common/icon_clamp@2x.png') 95% center no-repeat;background-size:6px;}
+	.afterLogin .msgLayer li:hover{background:#efefef url('/images/common/icon_clamp@2x.png') 95% center no-repeat;background-size:6px;}
+	.loginInner .line, .joinInner .line{background:url('/images/common/img_or@2x.png') center 0 no-repeat;background-size:484px;}
+	.teamPageInner .linkView li a{background:url('/images/common/icon_clamp03@2x.png') right center no-repeat;background-size:9px;}
+	.teamPageInner .fileView li button {top:10px;}
+	.teamPageInner .fileView li i{margin-top:3px;}
+	.questPageInner .fileView li button {top:10px;}
+	.questPageInner .fileView li i{margin-top:3px;}
+	.modalLayer .teamList li.addTeam{background:url('/images/common/bg_member@2x.png') no-repeat;background-size:65px;}
+	.teamPageInner .profileCotns .questList > ul > li > div{background: url('/images/common/icon_clamp03@2x.png') right center no-repeat;background-size:9px;}
+	.teamWantedInfo .btnWrite{height:42px;background:#23a3c7 url('/images/common/sprites@2x.png?123') -105px -802px no-repeat;font-size:0;background-size:400px;}
+	.questSrchInfo .iconTeamSrch{top:11px;}
+	.etcIcon{display:inline-block;background:url('/images/common/etc@2x.png?1') no-repeat;background-size:50px;}
+	.iconFaq{display:inline-block;background:url('/images/common/faq@2x.png') no-repeat;background-size:48px;}
+	.sbToggle{background: url('/images/common/etc@2x.png') -10px 16px no-repeat;background-size:50px;}
+	.sbToggleOpen{background: url('/images/common/etc@2x.png') -10px -18px no-repeat;background-size:50px;}
+	.questViewInner .srch .btnWrite {background: #23a3c7 url('/images/common/sprites@2x.png') -104px -804px no-repeat;background-size:400px;}
+	.visual .bx-wrapper .bx-pager.bx-default-pager a, .recomQuestInner .bx-wrapper .bx-pager.bx-default-pager a {background:url('/images/common/sprites@2x.png') -236px -44px no-repeat;background-size:400px;}
+	.visual .bx-wrapper .bx-pager.bx-default-pager a.active, .recomQuestInner .bx-wrapper .bx-pager.bx-default-pager a.active {background:url('/images/common/sprites@2x.png') -236px 0 no-repeat;background-size:400px;}
+	.visual .bx-wrapper .bx-controls-auto .bx-start {background:url('/images/common/sprites@2x.png') -236px -132px no-repeat;background-size:400px;}
+	.visual .bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active {background:url('/images/common/sprites@2x.png') -236px -220px no-repeat;background-size:400px;}
+	.visual .bx-wrapper .bx-controls-auto .bx-stop {background:url('/images/common/sprites@2x.png') -236px -88px no-repeat;background-size:400px;}
+	.visual .bx-wrapper .bx-controls-auto .bx-stop:hover, .visual .bx-wrapper .bx-controls-auto .bx-stop.active {background:url('/images/common/sprites@2x.png') -236px -176px no-repeat;background-size:400px;}
+	.icon, .util li.btnLogin a, .util li.btnJoin a{background:url('/images/common/sprites@2x.png') no-repeat;background-size:400px;}
+	.iconMore{background:url('/images/common/icon_more@2x.png') center center no-repeat;background-size:23px;}
+	.iconMenu{background-position:0 -96px !important;top:20px !important;}
+	.iconMenu.active{background-position:0 -136px !important;}
+	.iconMsg{background-position:0 -174px !important;}
+	.iconMsg.active{background-position:0 -218px !important;}
+	/*.iconWrite{background-position:-51px -583px !important;}
+	.iconWrite.active{background-position:-51px -532px !important;}*/
+	/*.iconFile{background-position:-49px -738px !important;}
+	.iconFile.active{background-position:-49px -790px !important;}*/
+	/*.iconAdd{background-position:-49px -633px !important;}
+	.iconAdd.active{background-position:-49px -685px !important;}*/
+	/*.iconLink{background-position:-49px -842px !important;}
+	.iconLink.active{background-position:-49px -890px !important;}*/
+	/*.iconSrch{background-position:-43px -937px !important;}*/
+	.iconFb{background-position:-62px -194px !important;}
+	.iconIns{background-position:-62px -260px !important;}
+	.iconSmallFile{background-position:0px -832px !important;}
+	.iconFileDown{background-position:-56px -489px !important;}
+	.iconTeamNotice{background-position:-62px -999px  !important;}
+	.iconStarOff{background-position:-62px -1046px !important;}
+	.iconStarOn{background-position:-62px -1104px !important;}
+	.iconStarOff_s{background-position:-62px -1162px !important;}
+	.iconStarOn_s{background-position:-112px 0px !important;}
+	.iconStarOff_m{background-position:-112px -297px !important;}
+	.iconStarOn_m{background-position:-112px -349px !important;}
+	.iconTeamSrch{background-position:-112px -400px !important;}
+	.iconTeamSrchName{background-position:-112px -449px !important;}
+	.iconTeamSrchArea{background-position:-112px -494px !important;}
+	.iconTeam{background-position:-110px -447px !important;}
+	.iconUser{background-position:-110px -582px !important;}
+	.srchTab a.active .iconTeam{background-position:-111px -537px !important;}
+	.srchTab a.active .iconUser{background-position:-110px -628px !important;}
+	.iconRating{background-position:-112px -675px !important;}
+	.iconAge{background-position:-112px -719px !important;}
+	.iconSex{background-position:-112px -765px !important;}
+	.iconNum{background-position:-112px -913px !important;}
+	.iconNumPlus{background-position:-112px -863px !important;}
+	.iconTeamMake{background-position:-112px -1013px !important;}
+	.iconTeamBack{background-position:-112px -964px !important;}
+	.iconQuestion{background-position:-176px -727px !important;}
+	.iconCompany{background-position:-174px -499px !important;}
+	.iconCate{background-position:-176px -545px !important;}
+	.iconDate{background-position:-176px -589px !important;}
+	.iconCheck{background-position:-176px -635px !important;}
+	.iconShare{background-position:-176px -836px !important;}
+	.iconSetting{background-position:-176px -886px !important;}
+	.iconQuestHome{background-position:-176px 0 !important;}
+	a.active .iconQuestHome{background-position:-176px -50px !important;}
+	.iconQuestInfo{background-position:-176px -100px !important;}
+	a.active .iconQuestInfo{background-position:-176px -150px !important;}
+	.iconQuestBoard{background-position:-176px -300px !important;}
+	a.active .iconQuestBoard{background-position:-176px -350px !important;}
+	.iconQuestTeam{background-position:-176px -400px !important;}
+	a.active .iconQuestTeam{background-position:-176px -450px !important;}
+	.iconResult{background-position:-176px -1031px !important;}
+	.iconInputAdd{background-position:-176px -984px !important;}
+	.iconInputMinus{background-position:-206px -984px !important;}
+	.iconQuot{background-position:-236px -264px !important;}
+	.iconBlog{background-position:-237px -316px !important;}
+	.iconAddMem{background-position:-236px -382px !important;}
+}

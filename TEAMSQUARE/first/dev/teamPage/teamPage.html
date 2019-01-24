@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>팀스퀘어 - 프로젝트를 위한 협업소셜네트워크</title>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css">
+<link rel="stylesheet" type="text/css" href="../common/css/teamsquare.v2.css">
+<script src="../common/js/jquery-1.8.3.min.js"></script>
+<script src="../common/js/jquery.plugin.js"></script>
+<script src="../common/js/teamsquare.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body class="sub subTeamPage">
+<!-- skip navigation -->
+<p class="skipnavigationT">
+	<a href="#gnb">상단 메뉴로 바로가기</a>
+	<a href="#container">본문 콘텐츠로 바로가기</a>
+</p>
+<!-- //skip navigation -->
+
+	<div id="wrap" class="wrap">
+
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="headerInner">
+				<h1><a href="../index.html"><img src="../images/common/img_logo.png" alt="TEAMSQUARE 로고"/></a></h1>
+				<button type="button" class="icon iconMenu" id="btnMenu">메뉴 열기</button>
+				<div id="gnb" class="gnb">
+					<ul>
+						<li><h2><a href="">퀘스트</a></h2></li>
+						<li><h2><a href="">팀/유저</a></h2></li>
+						<li><h2><a href="">팀/팀원 구함</a></h2></li>
+						<li><h2><a href="">퀘스트 만들기</a></h2></li>
+					</ul>
+				</div>
+
+				<!-- 로그인전 -->
+				<!-- div class="util">
+					<ul>
+						<li class="btnQuestion"><a href=""><i class="icon iconQuestion">?</i></a></li>
+						<li class="btnLogin"><a href="../login/login.html" class="btn btnSkyBlue">로그인</a></li>
+						<li class="btnJoin"><a href="../join/join.html" class="btn btnGray">회원가입</a></li>
+					</ul>
+				</div -->
+				<!-- //로그인전 -->
+
+				<!-- 로그인후 -->
+				<div class="afterLogin">
+					<div class="btnQuestion">
+						<a href="" name="showLayer"><i class="icon iconQuestion">?</i></a>
+					</div>
+					<div class="msg">
+						<a href="#noticesLayer" class="nums" name="showLayer">
+							<i class="icon iconMsg">알림</i><span class="icon iconBe">99+</span> <!-- span class="icon iconNone">0</span -->
+						</a>
+						<div class="msgLayer defaultLayer" id="noticesLayer" style="display:none;">
+							<ul>
+								<li class="on">
+									<a href="">
+										<i class="icon iconRequest">요청</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>팀 000000에서 가입 요청이 있습니다.</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<span class="btnMore"><button type="button" class="icon02 iconMore">더보기</button></span>
+						</div>
+					</div>
+					<div class="myMenu">
+						<a href="#myLayer" class="userID" name="showLayer">
+							<span class="thumb"><img src="../images/common/img_userThumb.png" alt="사용자 사진" width="28"/></span>
+							<em>doodfdsfsdfling</em>
+						</a>
+						<div class="myLayer defaultLayer" id="myLayer" style="display:none;">
+							<ul>
+								<li><a href="">마이페이지</a></li>
+								<li><a href="">개인정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //로그인후 -->
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<section id="container" class="container">
+			<div class="teamPage">
+				<div class="teamPageInner">
+					<!-- 팀 정보 -->
+					<div class="teamInfo">
+						<div class="teamInfoInner">
+							<h4>TEAM SQUARE</h4>
+							<span class="teamThumb">
+								<img src="../images/contents/img_teamThumb.png" alt=""/>
+							</span>
+							<div class="teamInfoList">
+								<ul>
+									<li><i class="icon iconMoney">상금 아이콘</i><span class="tit">총 상금</span><span class="txt">90,000</span></li>
+									<li><i class="icon iconCredit">크래딧 아이콘</i><span class="tit">총 크래딧</span><span class="txt">5000</span></li>
+									<li><i class="icon iconArea">지역 아이콘</i><span class="tit">지역</span><span class="txt">경기</span></li>
+									<li><i class="icon iconField">분야 아이콘</i><span class="tit">분야</span><span class="txt">소셜,마케팅</span></li>
+									<li><i class="icon iconTeamNum">팀원수 아이콘</i><span class="tit">팀원수</span><span class="txt">5</span></li>
+								</ul>
+							</div>
+							<div class="teamMember">
+								<ul>
+									<li><a href=""><img src="../images/common/@temp01.png" alt="" width="50"/></a></li>
+									<li><a href=""><img src="../images/common/@temp01.png" alt="" width="50"/></a></li>
+									<li class="noMember"><a href=""><img src="../images/common/icon_more@2x.png" alt="" width="23"/></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="btnApply"><a href="" class="btn btnSkyBlue">팀 가입 신청하기</a></div>
+						<span class="btnMoreTeam"><button type="button" class="etcIcon iconMoreTeam">더보기</button></span>
+					</div>
+					<!-- //팀 정보 -->
+					<!-- 팀 스토리 -->
+					<div class="teamConts">
+						<!-- 탭메뉴 -->
+						<div class="teamTab">
+							<a href="../teamPage/teamPage.html" class="active"><i class="icon iconStory">팀스토리 아이콘</i>팀스토리</a>
+							<a href="../profile/profile.html" ><i class="icon iconProfile">프로필 아이콘</i>프로필</a>
+						</div>
+						<!-- //탭메뉴 -->
+
+						<!-- 작성 메뉴 및 검색 -->
+						<div class="writeBox">
+							<ul>
+								<li><button type="button" class="icon iconWrite ">글 쓰기</button></li>
+								<li><button type="button" class="icon iconAdd ">이미지 추가</button></li>
+								<li><button type="button" class="icon iconFile ">파일 첨부</button></li>
+								<li><button type="button" class="icon iconLink ">링크 추가</button></li>
+							</ul>
+							<button type="button" id="btnSrch" class="icon iconSrch">검색</button>
+							<div class="srchArea"><span class="default"><input type="text" placeholder="글 내용, 작성자명으로 검색해 보세요."/><button type="button" id="btnSrchClose" class="etcIcon btnSrchClose">닫기</button></span></div>
+						</div>
+						<!-- //작성 메뉴 및 검색 -->
+
+						<!-- 작성메뉴 레이어 -->
+						<div class="writeLayer">
+							<ul>
+								<li class="write01">
+									<i class="etcIcon iconTabArrow">탭 위치 아이콘</i>
+									<div class="writeLayerInner editerArea">
+										에디터 추가
+									</div>
+									<button type="button" class="btn btnSkyBlue">게시하기</button><button type="button" class="btn btnGray">취소</button>
+								</li>
+								<li class="write02">
+									<i class="etcIcon iconTabArrow">탭 위치 아이콘</i>
+									<div class="writeLayerInner imgArea">
+										<ul>
+											<li>
+												<img src="../images/common/@temp03.png" alt="">
+												<button type="button" class="etcIcon btnImgDel">삭제</button>
+											</li>
+											<li>
+												<img src="../images/common/@temp03.png" alt="">
+												<button type="button" class="etcIcon btnImgDel">삭제</button>
+											</li>
+											<li>
+												<img src="../images/common/@temp03.png" alt="">
+												<button type="button" class="etcIcon btnImgDel">삭제</button>
+											</li>
+											<li>
+												<img src="../images/common/@temp03.png" alt="">
+												<button type="button" class="etcIcon btnImgDel">삭제</button>
+											</li>
+											<li class="addImg">
+												<button type="button" class="etcIcon iconAddImg">이미지 추가</button>
+											</li>
+										</ul>
+										<span>
+											<textarea name="" id="" placeholder="설명"></textarea>
+										</span>
+									</div>
+									<button type="button" class="btn btnSkyBlue">게시하기</button><button type="button" class="btn btnGray">취소</button>
+								</li>
+								<li class="write03">
+									<i class="etcIcon iconTabArrow">탭 위치 아이콘</i>
+									<div class="writeLayerInner fileArea">
+										<ul>
+											<li><p>스트린샷 2014-12-14 _10.53.23.png<button type="button" class="etcIcon btnFileClose">닫기</button></p></li>
+											<li><p>스트린샷 2014-12-14 _10.53.23.png<button type="button" class="etcIcon btnFileClose">닫기</button></p></li>
+											<li><p>스트린샷 2014-12-14 _10.53.23.png<button type="button" class="etcIcon btnFileClose">닫기</button></p></li>
+											<li><p>스트린샷 2014-12-14 _10.53.23.png<button type="button" class="etcIcon btnFileClose">닫기</button></p></li>
+											<li><p>스트린샷 2014-12-14 _10.53.23.png<button type="button" class="etcIcon btnFileClose">닫기</button></p></li>
+											<li><p>스트린샷 2014-12-14 _10.53.23.png<button type="button" class="etcIcon btnFileClose">닫기</button></p></li>
+										</ul>
+										<div class="uploadFile">
+											 <a href=""><i class="etcIcon iconUploadFile">파일추가 아이콘</i>파일 추가</a>
+										</div>
+										<span>
+											<textarea name="" id="" placeholder="설명"></textarea>
+										</span>
+									</div>
+									<button type="button" class="btn btnSkyBlue">게시하기</button><button type="button" class="btn btnGray">취소</button>
+								</li>
+								<li class="write04">
+									<i class="etcIcon iconTabArrow">탭 위치 아이콘</i>
+									<div class="writeLayerInner urlArea">
+										<p>
+											<span class="default"><input type="url" placeholder="URL" /></span>
+										</p>
+										<span><textarea name="" placeholder="설명" ></textarea></span>
+									</div>
+									<button type="button" class="btn btnSkyBlue">게시하기</button><button type="button" class="btn btnGray">취소</button>
+								</li>
+							</ul>
+						</div>
+						<!-- //작성메뉴 레이어 -->
+
+						<!-- 상세내용 -->
+						<div class="writeDetail">
+							<div class="top">
+								<span class="thumb"><img src="../images/common/img_userThumb02.png" alt=""/></span>
+								<em class="name">홍길동</em>
+								<span class="date">2014. 11. 24.</span>
+								<div class="edit">
+									<button type="button" class="icon iconEdit">편집</button>
+									<button type="button" class="icon iconDel">삭제</button>
+								</div>
+							</div>
+							<div class="detailTxt">
+								<!-- 파일 보기 -->
+								<div class="fileView">
+									<ul>
+										<li>
+											<p><i class="icon iconSmallFile">파일 아이콘</i>스트린샷 2014-12-14 _10.53.23.png </p><button type="button" class="icon iconFileDown">다운로드</button>
+										</li>
+										<li>
+											<p><i class="icon iconSmallFile">파일 아이콘</i>스트린샷 2014-12-14 _10.53.23.png </p><button type="button" class="icon iconFileDown">다운로드</button>
+										</li>
+										<li>
+											<p><i class="icon iconSmallFile">파일 아이콘</i>스트린샷 2014-12-14 _10.53.23.png </p><button type="button" class="icon iconFileDown">다운로드</button>
+										</li>
+									</ul>
+								</div>
+								<!-- //파일 보기 -->
+								<!-- 링크 보기 -->
+								<div class="linkView">
+									<ul>
+										<li>
+											<a href="">
+												<p>필생(必生), 반드시 떠나야 사는 자</p>
+												<span>http://teamsquare.com/quest/20141202_uhp.php</span>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<p>필생(必生), 반드시 떠나야 사는 자</p>
+												<span>http://teamsquare.com/quest/20141202_uhp.php</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- 링크 보기 -->
+
+								인액터스는 국내 30여개의 대학에서 활동하고 있으며 구성원들은 지도교수, 기업인들과 협력하여 지역사회에 도움이 되는 프로젝트를 실행하며 사회적 책임감을 갖춘 인재로 성장하고 있습니다.
+
+								인액터스와의 파트너쉽으로 팀스퀘어는 사회적 경제 분야의 다양한 프로젝트 진행에 탄력을 받게 되었습니다.
+
+								사회적 문제를 해결하기 위해 대학생, 청년들과의 협업이 필요한 기업, 단체는 언제든 팀스퀘어에 연락주세요~^^
+								<img src="../images/common/@temp02.png" alt=""/>
+							</div>
+							<!-- 댓글 -->
+							<ul class="commentList">
+								<li>
+										<span class="thumb"><img src="../images/common/img_userThumb02.png" alt=""/></span>
+										<div class="commentTxt">
+											<em class="name">홍길동</em><span class="date">2014. 11. 24&nbsp;&nbsp;오전 10:00</span>
+											<p>각 페이지별로 몇가지 추가 고려해야하는 사항들도 말씀 주셨어요. 그부분은 일요일에 공유드리겠습니다.</p>
+										</div>
+								</li>
+								<li>
+										<span class="thumb"><img src="../images/common/img_userThumb02.png" alt=""/></span>
+										<div class="commentTxt">
+											<em class="name">홍길동</em><span class="date">2014. 11. 24&nbsp;&nbsp;오전 10:00</span>
+											<p>각 페이지별로 몇가지 추가 고려해야하는 사항들도 말씀 주셨어요. 그부분은 일요일에 공유드리겠습니다.</p>
+										</div>
+								</li>
+							</ul>
+							<div class="commentForm">
+								<span><textarea name="" id="" ></textarea></span>
+								<button type="button" class="btn btnSkyBlue">등록</button>
+							</div>
+							<!-- //댓글 -->
+						</div>
+						<!-- //상세내용 -->
+					</div>
+					<!-- //팀 스토리 -->
+				</div>
+			</div>
+		</section>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footerInner">
+				<ul class="footerMenu">
+					<li class="about"><a href="#none">About 팀스퀘어</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+					<li><a href="">광고 및 제휴문의</a></li>
+					<li><a href="">고객센터</a></li>
+				</ul>
+				<ul class="footerSns">
+                                                                                <li><a href=""><i class="icon iconBlog">블로그</i></a></li>
+					<li><a href=""><i class="icon iconFb">페이스북</i></a></li>
+					<li><a href=""><i class="icon iconIns">인스타그램</i></a></li>
+				</ul>
+				<div class="footerInfo">
+					<h1><img src="../images/common/img_logo.png" alt="TEAMSQUARE 로고" width="114"/></h1>
+					<address>서울특별시 서초구 반포동 사평대로 55 (반포동 114-3) 심산기념문화센터 서초창의허브 137-040</address>
+					<p class="copyRight">© 2014 TEAMSQUARE, inc.</p>
+				</div>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+	</div>
+
+
+	<strong>팝업 메뉴 - 확인 후 삭제</strong><br/>
+	<a href="" onclick="showModal('team'); return false;">팀원</a><br/>
+	<a href="" onclick="showModal('teamDetail'); return false;">팀원 상세보기</a><br/>
+	<a href="" onclick="showModal('teamInvite'); return false;">초대하기</a><br/>
+	<a href="" onclick="showModal('teamOut'); return false;">탈퇴하기</a>
+	<!-- 팀원 -->
+	<div class="modalLayer" id="team" >
+		<div class="modalInner">
+			<h5>팀원</h5>
+			<div class="modalConts">
+				<ul class="teamList">
+					<li>
+						<a href="" onclick="showModal('teamDetail'); return false; ">
+							<span class="icon iconTeamNotice">9</span>
+							<span class="thumb"><img src="../images/common/@temp01.png" alt="" width="65"/></span>
+							<span class="name">홍길동</span>
+						</a>
+					</li>
+					<li>
+						<a href="" onclick="showModal('teamDetail'); return false;">
+							<span class="thumb"><img src="../images/common/@temp01.png" alt="" width="65"/></span>
+							<span class="name">홍길동</span>
+						</a>
+					</li>
+					<li>
+						<a href="" onclick="showModal('teamDetail'); return false;">
+							<span class="thumb"><img src="../images/common/@temp01.png" alt="" width="65"/></span>
+							<span class="name">홍길동</span>
+						</a>
+					</li>
+					<li>
+						<a href="" onclick="showModal('teamDetail'); return false;">
+							<span class="thumb"><img src="../images/common/@temp01.png" alt="" width="65"/></span>
+							<span class="name">홍길동</span>
+						</a>
+					</li>
+					<li>
+						<a href="" onclick="showModal('teamDetail'); return false;">
+							<span class="thumb"><img src="../images/common/@temp01.png" alt="" width="65"/></span>
+							<span class="name">홍길동</span>
+						</a>
+					</li>
+					<li class="addTeam">
+						<button type="button" class="etcIcon iconAddTeam">팀원 추가하기</button>
+						<span class="name">초대하기</span>
+					</li>
+				</ul>
+			</div>
+			<button type="button" class="etcIcon btnModalClose" onclick="hideModal('team'); return false;">모달 닫기</button>
+		</div>
+	</div>
+	<!-- //팀원 -->
+
+	<!-- 팀원 상세보기 -->
+	<div class="modalLayer" id="teamDetail" >
+		<div class="modalInner">
+			<h5>팀원 상세보기</h5>
+			<div class="modalConts">
+				<div class="memberDetail">
+					<img src="../images/common/@temp01.png" alt="" width="80"/>
+					<span class="name">홍길동</span>
+					<ul>
+						<li>
+							<strong>분야</strong>
+							<p>소셜 > 사회복지, 소셜 > 크라우드펀딩소셜 > 사회복지</p>
+						</li>
+						<li>
+							<strong>연령</strong>
+							<p>20대 초반</p>
+						</li>
+						<li>
+							<strong>성별</strong>
+							<p>남</p>
+						</li>
+					</ul>
+				</div>
+				<div class="btns"><a href="" class="btn btnSkyBlue">개인페이지</a><button type="button" class="btn btnGray">팀 탈퇴</button></div>
+			</div>
+			<button type="button" class="etcIcon btnPrevPage">이전 페이지</button>
+			<button type="button" class="etcIcon btnModalClose" onclick="hideModal('teamDetail'); return false;">모달 닫기</button>
+		</div>
+	</div>
+	<!-- //팀원 상세보기  -->
+
+	<!-- 초대하기 -->
+	<div class="modalLayer" id="teamInvite" >
+		<div class="modalInner">
+			<h5>초대하기</h5>
+			<div class="modalConts">
+				<p>팀원으로 초대하실 분의<br/>닉네임을 입력해주세요.</p>
+				<span class="default inviteInput"><input type="text" /></span>
+				<div class="btns"><button type="button" class="btn btnGray">초대</button></div>
+			</div>
+			<button type="button" class="etcIcon btnPrevPage">이전 페이지</button>
+			<button type="button" class="etcIcon btnModalClose" onclick="hideModal('teamInvite'); return false;">모달 닫기</button>
+		</div>
+	</div>
+	<!-- //초대하기 -->
+
+	<!-- 탈퇴하기 -->
+	<div class="modalLayer" id="teamOut" >
+		<div class="modalInner">
+			<h5>탈퇴하기</h5>
+			<div class="modalConts">
+				<p>팀의 리더를 선정하신 후에<br/>탈퇴하실 수 있습니다.</p>
+				<div class="teamOutSelect">
+					<select class="mid">
+						<option value="멤버선택">멤버선택</option>
+						<option value="홍길동">홍길동</option>
+					</select>
+				</div>
+				<div class="btns"><button type="button" class="btn btnGray">리더 선정 후 탈퇴</button></div>
+			</div>
+			<button type="button" class="etcIcon btnPrevPage">이전 페이지</button>
+			<button type="button" class="etcIcon btnModalClose" onclick="hideModal('teamOut'); return false;">모달 닫기</button>
+		</div>
+	</div>
+	<!-- //탈퇴하기 -->
+
+<!-- skip navigation -->
+<p class="skipnavigationB"><a href="#gnb">상단 바로가기</a></p>
+<!-- //skip navigation -->
+</body>
+</html>

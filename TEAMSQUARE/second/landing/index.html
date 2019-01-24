@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"-->
+<title>팀스퀘어</title>
+<link rel="stylesheet" type="text/css" href="http://www.teamsquare.com/Content/common.css">
+<link rel="stylesheet" type="text/css" href="http://www.teamsquare.com/Content/teamsquare.v2.css">
+<script type="text/javascript" src="http://teamsquare.com/Scripts/jquery-1.8.3.min.js"></script>
+<style>
+	.header{background:none;}	
+	.header.fixed{background:#3caada;height:60px;}
+	.headerIn{width:980px;max-width:980px;margin:0 auto;}
+	.headerIn h1 a{font-size:0;}	
+	.headerIn .util{position:absolute;top:0;right:20px;line-height:55px;}	
+	.headerIn .util a{font-size:16px;color:#fff;margin-left:15px;}
+	.footerIn{width:980px;max-width:980px;padding:0;}
+	.footerIn h1{padding-left:15px;}
+	.headerIn{position:relative;max-width:960px;}
+	.landingVisual{position:relative;width:980px;height:450px;margin:0 auto;}
+	.landingVisual .obj1{position:absolute;bottom:-61px;right:30px;}
+	.landingVisual .txt1{font-size:28px;color:#fff;margin:0 0 35px 30px;padding-top:60px;}	
+	.landingVisual .txt1 strong{font-size:32px;display:block;line-height:32px;font-weight:500;}	
+	.landingVisual .txt1 .obj0{vertical-align:top;margin-top:1px;}
+	.landingVisual .txt2{position:relative;font-size:20px;color:#cce8f4;margin-left:30px;padding:25px 0;}
+	.landingVisual .txt2:before{content:'';position:absolute;top:0;left:0;display:block;width:79px;height:2px;background:#fff;}	
+	.landingVisual .txt2 strong{color:#fff;font-weight:400;}	
+	.landingVisual .txt3{font-size:16px;color:#cce8f4;margin-left:30px;}		
+	.landingVisual .txt3 strong{color:#fff;font-weight:400;}		
+	.landingVisual .btnDowns{margin:30px 0 0 30px;font-size:0;}		
+	.landingVisual .btnDowns a{margin-right:10px;}		
+	.landingInfos{width:980px;margin:0 auto;padding:120px 0 110px 0;}	
+	.landingInfos ul{font-size:0;}
+	.landingInfos li{width:33.33%;display:inline-block;vertical-align:top;text-align:center;padding-top:110px;}
+	.landingInfos li.first{background:url('img/img_obj2.png') center top no-repeat;}	
+	.landingInfos li.second{background:url('img/img_obj3.png') center top no-repeat;}
+	.landingInfos li.third{background:url('img/img_obj4.png') center top no-repeat;}		
+	.landingInfos li p{font-size:20px;line-height:24px;margin-bottom:20px;}	
+	.landingInfos li p strong{font-weight:500;display:block;margin-bottom:10px;}	
+	.landingInfos li span{font-size:16px;color:#333;line-height:16px;}	
+	.landingMov{background:#343b3e;padding:80px 0;}
+	.landingMov .mov{width:854px;height:480px;margin:0 auto 50px auto;}	
+	.landingMov a{display:block;font-weight:700;color:#fff;font-size:24px;width:220px;height:50px;margin:0 auto;line-height:50px;background:#3caada;text-align:center;}	
+	@media all and (max-width:639px) {
+		.footer{display:block;}
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function(){
+			if($(this).scrollTop() > 60) {
+					$(".header").addClass('fixed');
+			} else {
+				$(".header").removeClass('fixed');
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<div id="wrap" class="wrap" style="background:url('img/img_top.jpg') center top repeat-x;">
+	<!-- header -->
+	<div class="header">
+		<div class="headerIn">
+			<h1><a href="">TEAMSQARE</a></h1>
+			<div class="util">
+				<a href="">회원가입</a><a href="">로그인</a>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->	
+	
+	<div id="container" class="container">
+		<div class="landingVisual">
+			<p class="txt1">
+				기회를 함께 공유합니다.
+				<strong>내 손안의 기회 <img src="img/img_obj0.png" class="obj0" alt="" /></strong>
+			</p>
+			<p class="txt2">
+				놓치고 있던 <strong>이 순간의 모든 기회</strong>가 매일 나를 찾아옵니다.<br>
+				기회. 이제 찾지 말고 <strong>팀스퀘어</strong> 하세요.
+			</p>
+			<p class="txt3">
+				팀스퀘어는 <strong>‘기회’를 공유하는 새로운 협업 SNS</strong> 입니다.<br>
+				지금 바로 다운로드 받으세요.
+			</p>
+			<div class="btnDowns">
+				<a href=""><img src="img/btn_ios.jpg" alt="Download on the APP STORE" /></a>
+				<a href=""><img src="img/btn_android.jpg" alt="ANDROID APP ON Google play" /></a>
+			</div>
+			<img src="img/img_obj1.png" class="obj1" alt="" />
+		</div>
+		
+		<div class="landingInfos">
+			<ul>
+				<li class="first">
+					<p><strong>이 순간. 우리 모두의 기회.</strong>함께 성장할 수 있는 기회만<br>서로 공유합니다.</p>
+					<span>스팸 같은 일상은 이제 그만!<br>일거리, 협업거리, 경험거리,<br>비지니스의 기회 등<br>나를 위한 기회를 찾아보세요.</span>
+				</li>
+				<li class="second">
+					<p><strong>팀스퀘어 퀘스트</strong>기회의 큐레이션!<br>매일 기회를 체크하세요.</p>
+					<span>관심분야, 지역, 키워드별<br>새로운 기회가 맞춤형으로<br>매일 나를 찾아옵니다.</span>
+				</li>
+				<li class="third">
+					<p><strong>나만의 팀메이트</strong>나에게 기회가 되는<br>새로운 인맥을 만나 보세요.</p>
+					<span>'사람'이 곧 ‘기회’ 입니다.<br>팀메이트가 늘어날 수록<br>더 많은 기회를 만날 수 있어요.</span>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="landingMov">
+			<div class="mov">
+				<iframe width="854" height="480" src="https://www.youtube.com/embed/xWsobTuZ2mk" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<a href="">시작하기</a>
+		</div>
+	</div>
+	
+	<!-- footer -->
+	<div class="footer">
+		<div class="footerIn">
+			<h1><a href=""><em>ⓒ </em>TEAMSQUARE Inc.</a></h1>
+			<ul class="sns">
+				<li><a href="" class="icons iconBlog"><span class="blind">blog</span></a></li>
+				<li><a href="" class="icons iconIns"><span class="blind">instagram</span></a></li>
+				<li><a href="" class="icons iconFb"><span class="blind">facebook</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //footer -->		
+</div>
+</body>
+</html>

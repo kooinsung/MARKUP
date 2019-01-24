@@ -1,0 +1,134 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Noto Sans Thin'), local('NotoSans-Thin'),
+    url(../fonts/eot/NotoSansKR-Thin-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Thin-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Thin-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Thin-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Sans Light'), local('NotoSans-Light'),
+    url(../fonts/eot/NotoSansKR-Light-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Light-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Light-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Light-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 350;
+    src: local('Noto Sans DemiLight'), local('NotoSans-DemiLight'),
+    url(../fonts/eot/NotoSansKR-DemiLight-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-DemiLight-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-DemiLight-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url(../fonts/eot/NotoSansKR-Regular-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Regular-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Regular-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-Medium'),
+    url(../fonts/eot/NotoSansKR-Medium-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Medium-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Medium-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url(../fonts/eot/NotoSansKR-Bold-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Bold-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Bold-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Noto Sans Black'), local('NotoSans-Black'),
+    url(../fonts/eot/NotoSansKR-Black-Hestia.eot),
+    url(../fonts/eot/NotoSansKR-Black-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/woff/NotoSansKR-Black-Hestia.woff) format('woff'),
+    url(../fonts/otf/NotoSansKR-Black-Hestia.otf) format('opentype');
+}
+
+/*RESET STYLE*/
+html, body, div, span, amediaet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+
+}
+
+body, html{font-family:'Noto Sans Korean',sans-serif;font-weight:300;box-sizing: border-box;  -moz-box-sizing: border-box;-webkit-text-size-adjust:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+ol,ul,li{list-style: none;font-size:0;}
+li{list-style: none;font-size:12px;}
+table{border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;font-family:'Noto Sans Korean',sans-serif;}
+textarea{outline:none;padding:0;margin:0;font-family:'Noto Sans Korean',sans-serif;font-weight:300;}
+td,th{vertical-align:middle;font-family:'Noto Sans Korean',sans-serif;}
+select::-ms-expand {/* IE 8 */-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";/* IE 5-7 */filter: alpha(opacity=0);/* Good browsers :) */opacity:0;}
+select{outline:none;-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;-o-appearance: none;appearance: none;}
+input[type="checkbox"] { -webkit-appearance:checkbox;-moz-appearance: checkbox;appearance: checkbox;-webkit-border-radius:0px;}
+input[type="radio"] { -webkit-appearance:radio;-moz-appearance: radio;appearance: radio;-webkit-border-radius:0px;}
+input[type="text"] { outline:none;-webkit-appearance: none;-webkit-border-radius:0px;border-radius: 0px;  -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family:'Noto Sans Korean',sans-serif;font-weight:300;}
+hr{display:none;}
+a{margin:0;padding:0;border:0;background:transparent;text-decoration:none;color:#666;font-size:12px;display:inline-block;font-family:'Noto Sans Korean',sans-serif;}
+a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;}
+em,address{font-style:normal;}
+fieldset{border:0; vertical-align:top;}
+legend{display:block;}
+button{outline:none;font-weight:400;font-family:'Noto Sans Korean',sans-serif;display:inline-block; font-size:0;margin:0; padding:0; border:none; background:none; text-align:center; vertical-align:middle; white-space:nowrap; cursor:pointer;}
+img{font-size:0;line-height:0;}
+i{display:inline-block;text-indent: -99999px;*text-indent:0px;margin-right:2px;}
+p{font-family:'Noto Sans Korean',sans-serif;font-weight:300;}
+strong{font-family:'Noto Sans Korean',sans-serif;}
+.blind{visibility: hidden;overflow: hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;font-size: 0;line-height: 0;}
+::-webkit-input-placeholder { color:#666; }
+::-moz-placeholder { color:#666; }
+:-ms-input-placeholder { color:#666; } 
+input:-moz-placeholder { color:#666; }
+textarea::-webkit-input-placeholder { color:#666; }
+textarea::-moz-placeholder { color:#666; }
+textarea:-ms-input-placeholder { color:#666; } 
+textarea:-moz-placeholder { color:#666; }

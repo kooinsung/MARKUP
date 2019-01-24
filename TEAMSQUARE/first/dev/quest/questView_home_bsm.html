@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>팀스퀘어 - 프로젝트를 위한 협업소셜네트워크</title>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css">
+<link rel="stylesheet" type="text/css" href="../common/css/teamsquare.v2.css">
+<link rel="stylesheet" type="text/css" href="../common/css/quest.css">
+<script src="../common/js/jquery-1.8.3.min.js"></script>
+<script src="../common/js/jquery.plugin.js"></script>
+<script src="../common/js/teamsquare.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body class="sub subMyPage">
+<!-- skip navigation -->
+<p class="skipnavigationT">
+	<a href="#gnb">상단 메뉴로 바로가기</a>
+	<a href="#container">본문 콘텐츠로 바로가기</a>
+</p>
+<!-- //skip navigation -->
+
+	<div id="wrap" class="wrap">
+
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="headerInner">
+				<h1><a href="../index.html"><img src="../images/common/img_logo.png" alt="TEAMSQUARE 로고"/></a></h1>
+				<button type="button" class="icon iconMenu" id="btnMenu">메뉴 열기</button>
+				<div id="gnb" class="gnb">
+					<ul>
+						<li><h2><a href="">퀘스트</a></h2></li>
+						<li><h2><a href="">팀/유저</a></h2></li>
+						<li><h2><a href="">팀/팀원 구함</a></h2></li>
+						<li><h2><a href="">퀘스트 만들기</a></h2></li>
+					</ul>
+				</div>
+
+				<!-- 로그인전 -->
+				<!-- div class="util">
+					<ul>
+						<li class="btnQuestion"><a href=""><i class="icon iconQuestion">?</i></a></li>
+						<li class="btnLogin"><a href="../login/login.html" class="btn btnSkyBlue">로그인</a></li>
+						<li class="btnJoin"><a href="../join/join.html" class="btn btnGray">회원가입</a></li>
+					</ul>
+				</div -->
+				<!-- //로그인전 -->
+
+				<!-- 로그인후 -->
+				<div class="afterLogin">
+					<div class="btnQuestion">
+						<a href="" name="showLayer"><i class="icon iconQuestion">?</i></a>
+					</div>
+					<div class="msg">
+						<a href="#noticesLayer" class="nums" name="showLayer">
+							<i class="icon iconMsg">알림</i><span class="icon iconBe">99+</span> <!-- span class="icon iconNone">0</span -->
+						</a>
+						<div class="msgLayer defaultLayer" id="noticesLayer" style="display:none;">
+							<ul>
+								<li class="on">
+									<a href="">
+										<i class="icon iconRequest">요청</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>팀 000000에서 가입 요청이 있습니다.</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<span class="btnMore"><button type="button" class="icon02 iconMore">더보기</button></span>
+						</div>
+					</div>
+					<div class="myMenu">
+						<a href="#myLayer" class="userID" name="showLayer">
+							<span class="thumb"><img src="../images/common/img_userThumb.png" alt="사용자 사진" width="28"/></span>
+							<em>doodfdsfsdfling</em>
+						</a>
+						<div class="myLayer defaultLayer" id="myLayer" style="display:none;">
+							<ul>
+								<li><a href="">마이페이지</a></li>
+								<li><a href="">개인정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //로그인후 -->
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<section id="container" class="container">
+			<div class="questPage">
+				<div class="questViewInner">
+					<h3>북스맨 : 시크릿 매니저</h3>
+
+					<!-- 퀘스트 정보 -->
+					<div class="teamInfo">
+						<div class="teamInfoInner">
+							<div class="questInfoList">
+								<ul>
+									<li><i class="icon iconCompany">기업 아이콘</i><span class="txt">서울시</span></li>
+									<li><i class="icon iconCate">카테고리 아이콘</i><span class="txt">소셜/공익</span></li>
+									<li><i class="icon iconDate">기간 아이콘</i><span class="txt">~ 2014. 08. 24.</span></li>
+									<li><i class="icon iconMoney">총 상금 아이콘</i><span class="txt">0</span></li>
+									<li><i class="icon iconCredit">크래딧 아이콘</i><span class="txt">0</span></li>
+									<li><i class="icon iconCheck">참여가능 아이콘</i><span class="txt">참여가능</span></li>
+								</ul>
+							</div>
+						</div>
+						<div class="btnShare"><a href="" class="btn btnGray"><i class="icon iconShare"></i>공유하기</a></div>
+						<div class="btnSubmit"><a href="" class="btn btnSkyBlue">제출하기</a></div>
+						<div class="btnOutputSubmit"><a href="" class="btn btnGray"><i class="icon iconSetting"></i>결과물 제출 설정</a></div>
+						<div class="btnOutputDown"><a href="" class="btn btnSkyBlue">결과물 다운로드</a></div>
+					</div>
+					<!-- //퀘스트 정보 -->
+
+					<!-- 퀘스트 탭 메뉴 -->
+					<div class="questTab">
+						<a href="questView_home_bsm.html" class="active"><i class="icon iconQuestHome">홈 아이콘</i>홈</a>
+						<a href="questView_info_bsm.html" class=""><i class="icon iconQuestInfo">세부정보 아이콘</i>세부정보</a>
+						<a href="questView_notice.html" class=""><i class="icon iconQuestNotice">공지사항 아이콘</i>공지사항 <em class="icon iconOrange">95</em></a>
+						<a href="questView_board.html" class=""><i class="icon iconQuestBoard">퀘스트보드 아이콘</i>퀘스트보드 <em class="icon iconOrange">95</em></a>
+						<a href="questView_team.html" class=""><i class="icon iconQuestTeam">참여 아이콘</i>참여 팀 <em class="icon iconOrange">95</em></a>
+					</div>
+					<!-- //퀘스트 탭 메뉴 -->
+
+					<!-- 퀘스트 보기 -->
+					<div class="questView">
+						<div class="questImg">
+							<img src="../images/quest/bsm_top.jpg" alt="">
+						</div>
+						<div class="questTxt">
+                        	<div class="tq_TopBox" style="background:url(/images/quest/bsm_box.jpg) center top repeat-x; padding:185px 0 40px 0; margin:0 0 30px 0;">
+                            	<p style="background:url(/images/quest/bsm_bg.png) center top no-repeat; height:20px;"></p>
+                                <p style="text-align:center; padding:15px 20px; font-size:15px; color:#ebd6a5; font-weight:100;">시민을 위한 도서관. 서울도서관의 소셜퀘스트가 오픈 되었습니다. <br>
+매주 토요일 서울시청 광장에서 열리는 서울시민, 중고서점, 출판사 등의 100개 팀이 함께 여는 중고책 장터인 &lt;2015한평시민책시장&gt;을 총괄 기획하고 운영할 청년 프로젝트 팀을 찾는 퀘스트입니다.</p>
+                                <p style="background:url(/images/quest/bsm_bg.png) center bottom no-repeat; height:20px;"></p>
+                            </div>
+                            <p class="tq_tit tq_brown1">When / 모집기간</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li>2015년 4월 24일 오후 6시</li>
+								</ul>
+                            </div>
+                            <p class="tq_tit tq_brown1">What / 퀘스트 미션</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li class="bullet">한평시민책시장을 주도적으로 운영<br>(연간 20회 진행, 5~11월 매주 토요일 진행, 7~8월 및 추석연휴 제외)</li>
+                                	<li class="bullet">한평시민책시장 활성화를 위한 콘텐츠 기획 및 홍보</li>
+								</ul>
+                            </div>
+                            <p class="tq_tit tq_brown1">Who / 참가자격</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li class="bullet">책과 관련된 꿈을 키우고 있는 3인 이상의 청년 팀</li>
+                                	<li class="bullet">책을 기반으로 한 열린 장터, 지역 커뮤니티 육성에 관심 있는 청년 팀 </li>
+                                	<li class="bullet">헌책방을 돕기 위한 소명의식을 가지고 활동기간 동안 책임감 있게 운영할 수 있는 청년 팀</li>
+                                	<li class="bullet">서울도서관, 지역도서관, 출판사, 중고서점 들과의 인적 네트워크가 필요한 팀</li>
+								</ul>
+                            </div>
+                            <p class="tq_tit tq_brown1">Rewards / 퀘스트 보상</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li class="bullet">활동비 지급</li>
+                                	<li class="bullet">서울도서관 활동증명서 발급</li>
+								</ul>
+                            </div>
+                            <p class="tq_tit tq_brown1">How /퀘스트 진행절차</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li class="bullet">참가팀 모집: 4월 24일 오후 여섯시까지 www.teamsquare.com 퀘스트 페이지를 통해 신청</li>
+                                	<li class="bullet">퀘스트팀 선정: 4월말<br>선정기준에 가장 부합하는 팀 선정(1팀), 북스맨  활동 시작</li>
+                                	<li class="bullet">퀘스트 실행: 5월~11월 매주 토요일(7, 8월 & 추석연휴 제외)</li>
+                                	<li class="bullet">11월 활동 보고 및 심사 후 종료</li>
+								</ul>
+                            </div>
+                            <p class="tq_tit tq_brown1">Apply / 참가방법</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li>팀스퀘어(www.teamsquare.com)에서 ‘북스맨 공식 퀘스트 페이지’에서 팀 소개 및 2015 한평시민책시장 활성화 아이디어 기획안을 제출</li>
+                                	<li class="tq_f13px tq_grey1">※ 서류심사 후, 소정의 면접을 통해 선발</li>
+								</ul>
+                            </div>
+                            <p class="tq_tit tq_brown1">Why /선정기준</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li class="bullet">책과 중고책시장 및 헌책방에 대한 애정 </li>
+                                	<li class="bullet">매주 진행되는 행사를 책임감 있게 운영할 수 있는 열정</li>
+                                	<li class="bullet">한평시민책시장을 재미있게 이끌어갈 통통 튀는 아이디어</li>
+								</ul>
+                            </div>
+                            <p class="tq_tit tq_brown1">Inquiry / 문의</p>
+                            <div class="tq_con">
+                            	<ul>
+                                	<li class="bullet">inquiry@teamsquare.com</li>
+                                	<li class="bullet">tel. 070-8239-0301</li>
+								</ul>
+                            </div>
+                            
+                                                    
+                        
+                        </div>
+					</div>
+					<!-- //퀘스트 보기 -->
+
+				</div>
+			</div>
+		</section>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footerInner">
+				<ul class="footerMenu">
+					<li class="about"><a href="">About 팀스퀘어</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+					<li><a href="">광고 및 제휴문의</a></li>
+					<li><a href="">고객센터</a></li>
+				</ul>
+				<ul class="footerSns">
+                    <li><a href=""><i class="icon iconBlog">블로그</i></a></li>
+					<li><a href=""><i class="icon iconFb">페이스북</i></a></li>
+					<li><a href=""><i class="icon iconIns">인스타그램</i></a></li>
+				</ul>
+				<div class="footerInfo">
+					<h1><img src="../images/common/img_logo.png" alt="TEAMSQUARE 로고" width="114"/></h1>
+					<address>서울특별시 서초구 반포동 사평대로 55 (반포동 114-3) 심산기념문화센터 서초창의허브 137-040</address>
+					<p class="copyRight">© 2014 TEAMSQUARE, inc.</p>
+				</div>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+	</div>
+
+<strong>팝업 메뉴 - 확인 후 삭제</strong><br/>
+<a href="" onclick="showModal('share'); return false;">공유하기</a><br/>
+<a href="" onclick="showModal('submit'); return false;">제출</a><br/>
+<a href="" onclick="showModal('reSubmit'); return false;">제출</a><br/>
+<a href="" onclick="showModal('error'); return false;">오류</a><br/>
+<a href="" onclick="showModal('error02'); return false;">오류</a><br/>
+
+<!-- 공유하기 -->
+<div class="modalLayer" id="share" >
+	<div class="modalInner">
+		<h5>공유하기</h5>
+		<div class="modalConts">
+				<div class="shareInfo">
+					<select class="mid">
+						<option value="팀선택">팀선택</option>
+						<option value="홍길동">홍길동</option>
+					</select>
+					<div class="btns"><button type="button" class="btn btnSkyBlue">완료</button></div>
+					<div class="sns">
+						<a href=""><i class="icon iconFbLayer"></i>페이스북 공유하기</a>
+						<a href=""><i class="icon iconTwitter"></i>트위터 공유하기</a>
+					</div>
+				</div>
+		</div>
+		<button type="button" class="etcIcon btnModalClose" onclick="hideModal('share'); return false;">모달 닫기</button>
+	</div>
+</div>
+<!-- //공유하기  -->
+
+<!-- 오류 -->
+<div class="modalLayer" id="error" >
+	<div class="modalInner">
+		<h5>오류</h5>
+		<div class="modalConts">
+				<div class="errorInfo">
+					<p>퀘스트에 참여하기 위해서는 팀페이지가<br/>
+					필요 합니다. 팀페이지를 개설하시겠습니까?</p>
+					<div class="btns"><button type="button" class="btn btnSkyBlue">팀페이지 만들기</button></div>
+				</div>
+		</div>
+		<button type="button" class="etcIcon btnModalClose" onclick="hideModal('error'); return false;">모달 닫기</button>
+	</div>
+</div>
+<!-- //오류  -->
+
+<!-- 오류 -->
+<div class="modalLayer" id="error02" >
+	<div class="modalInner">
+		<h5>오류</h5>
+		<div class="modalConts">
+				<div class="errorInfo">
+					<p>퀘스트에 참여하기 위해서는<br/>
+					실명인증이 필요 합니다. </p>
+					<div class="btns"><button type="button" class="btn btnSkyBlue">인증페이지로 이동</button></div>
+				</div>
+		</div>
+		<button type="button" class="etcIcon btnModalClose" onclick="hideModal('error02'); return false;">모달 닫기</button>
+	</div>
+</div>
+<!-- //오류  -->
+
+<!-- 제출하기 -->
+<div class="modalLayer" id="submit" >
+	<div class="modalInner">
+		<h5>제출하기</h5>
+		<div class="modalConts">
+				<div class="submitInfo">
+					<select class="mid">
+						<option value="팀선택">팀선택</option>
+					</select>
+					<div class="btns"><button type="button" class="btn btnSkyBlue">완료</button></div>
+				</div>
+		</div>
+		<button type="button" class="etcIcon btnModalClose" onclick="hideModal('submit'); return false;">모달 닫기</button>
+	</div>
+</div>
+<!-- //제출하기  -->
+
+<!-- 다시 제출하기 -->
+<div class="modalLayer" id="reSubmit" >
+	<div class="modalInner">
+		<h5>제출하기</h5>
+		<div class="modalConts">
+				<div class="submitInfo">
+					<p>당 팀은 이미 결과물을 제출하였습니다. <br/>새로운 결과물을 다시 올리시겠습니까?</p>
+					<div class="btns"><button type="button" class="btn btnSkyBlue">다시 올리기</button><button type="button" class="btn btnGray">취소</button></div>
+				</div>
+		</div>
+		<button type="button" class="etcIcon btnModalClose" onclick="hideModal('reSubmit'); return false;">모달 닫기</button>
+	</div>
+</div>
+<!-- //다시 제출하기  -->
+<!-- skip navigation -->
+<p class="skipnavigationB"><a href="#gnb">상단 바로가기</a></p>
+<!-- //skip navigation -->
+</body>
+</html>

@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/* webfont */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');
+  src: url('../../common/font/NanumBarunGothic.eot');
+  src: url('../../common/font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+       url('../../common/font/NanumBarunGothic.woff') format('woff'),
+       url('../../common/font/NanumBarunGothic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nanum Barun Gothic Bold'), local('Nanum Barun Gothic-Bold'), local('NanumBarunGothic Bold');
+  src: url(../../common/font/NanumBarunGothicBold.eot);
+  src: url(../../common/font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../../common/font/NanumBarunGothicBold.woff) format('woff'),
+       url(../../common/font/NanumBarunGothicBold.ttf) format('truetype');
+}
+
+/*RESET STYLE*/
+html, body, div, span, amediaet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+
+}
+
+body, html{height:100%;font-family:'나눔바른고딕' , 'Nanum Barun Gothic','Malgun Gothic','맑은 고딕',sans-serif;box-sizing: border-box;  -moz-box-sizing: border-box;-webkit-text-size-adjust:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+ol,ul,li{list-style: none;font-size:0;}
+li{list-style: none;font-size:14px;}
+table{border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;font-smoothing: antialiased;text-shadow: 1px 1px 1px rgba(0,0,0,0.004);text-stroke: 0.6px;}
+input,textarea,select,td,th{vertical-align:middle;font-family:'나눔바른고딕' ,'Nanum Barun Gothic' ,'Malgun Gothic','맑은 고딕',sans-serif;-webkit-appearance:none; -webkit-border-radius:0px;}
+hr{display:none;}
+a{margin:0;padding:0;border:0;background:transparent;text-decoration:none;color:#666;font-size:14px;display:inline-block;}
+a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;}
+em,address{font-style:normal;}
+fieldset{border:0; vertical-align:top;}
+legend{display:block;}
+button{display:inline-block; font-size:0;margin:0; padding:0; border:none; background:none; text-align:center; vertical-align:middle; white-space:nowrap; cursor:pointer;font-family: 'Nanum Barun Gothic';}
+i{display:inline-block;text-indent: -99999px;*text-indent:0px;}
+.clear{clear:both;}
+.blind{visibility: hidden;overflow: hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;font-size: 0;line-height: 0;}
+.floatL{float:left;}
+.floatR{float:right;}
+#file{display:none;cursor:pointer;}
+.file{font-size:14px;height:32px;display:inline-block;border:#ccc 1px solid;margin-bottom:10px;padding:0 15px;color: #555;background:#fff;}
+
+/* drog select */
+::selection{background:#23a3c7;color:#FFF;text-shadow:none;}
+::-moz-selection{background:#23a3c7;color:#FFF;text-shadow:none;}
+::-webkit-selection{background:#23a3c7;color:#FFF;text-shadow:none;}
+
+/* placeholder */
+::-webkit-input-placeholder{color:#666;}
+:-moz-placeholder{color:#666;}
+::-moz-placeholder{color:#666;}
+:-ms-input-placeholder{color:#666;}
+
+/*건너뛰기 링크*/
+.skipnavigationT a, .skipnavigationB a {position:absolute; left:-20000px; text-align:center; width:600px; font-weight:bold }
+.skipnavigationT a:hover,
+.skipnavigationT a:focus,
+.skipnavigationT a:active {position:absolute; top:0; left:50%; padding:5px 0; margin-left:-300px; text-decoration:none; color:#FFFFFF; background:none repeat scroll 0 30% #698893; z-index: 999999999; }
+.skipnavigationB a:hover,
+.skipnavigationB a:focus,
+.skipnavigationB a:active {position:absolute; bottom:0; left:50%; padding:5px 0; margin-left:-300px; text-decoration:none; color:#FFFFFF; background:none repeat scroll 0 30% #698893; z-index: 999999999; }
+
+/* button style */
+.btn{padding:0 !important;color:#fff !important;font-size:14px;display:inline-block;padding:8px 12px 7px 12px !important;text-align:center !important;white-space:nowrap !important;vertical-align:middle !important;cursor:pointer !important;border:1px solid transparent !important;font-weight:400 !important;line-height:1.4 !important;}
+.btnSkyBlue{background:#23a3c8 !important;}
+.btnGray{background:#949494 !important;}
+.btnGray02{background:#666666 !important;}
+.btnOrange{background:#f2682d !important;}
+
+/* icon style */
+.icon{display:inline-block;background:url('../../images/common/sprites.png') no-repeat;}
+.etcIcon{display:inline-block;background:url('../../images/common/etc.png') no-repeat;}
+.iconFaq{width:24px;height:24px;display:inline-block;background:url('../../images/common/faq.png') no-repeat;text-indent: -9999px;}
+.iconFaq01{background-position:-12px 0 !important;}
+.iconMsg{background-position:0 -178px !important;}
+.iconMsg.active{background-position:0 -222px !important;}
+.iconNone{background-position:0 -398px !important;}
+.iconBe{background-position:0 -354px !important;}
+.iconRequest{background-position:0 -264px !important;}
+.iconRequest_b{background-position:-114px -45px !important;}
+.iconAlarm{background-position:0 -311px !important;}
+.iconAlarm_b{background-position:-114px -115px !important;}
+.iconI{background-position:0 -440px !important;}
+.iconMore{display:block;width:100%;padding:10px 0;margin:0 auto;text-align:center;background:url('../../images/common/icon_more.png') center center no-repeat;}
+.iconMenu{background-position:0 -96px !important;}
+.iconMenu.active{background-position:0 -137px !important;}
+.iconMoney{background-position:-62px -96px !important;}
+.iconCredit{background-position:-62px 0 !important;}
+.iconArea{background-position:-61px -48px !important;}
+.iconField{background-position:0px -1180px !important;}
+.iconTeamNum{background-position:0px -1145px !important;}
+.iconStory{background-position:0px -478px !important;}
+.iconProfile{background-position:0px -553px !important;}
+.iconSrch{background-position:-42px -117px !important;}
+.iconTeamSrch{background-position:-114px -399px !important;}
+.iconWrite{background-position:16px -664px !important;}
+.iconWrite.active{background-position:16px -614px !important;}
+.iconAdd{background-position:18px -764px !important;}
+.iconAdd.active{background-position:18px -714px !important;}
+.iconFile{background-position:-44px -360px !important;}
+.iconFile.active{background-position:-44px -304px !important;}
+.iconSmallFile{background-position:-63px -437px !important;}
+.iconLink{background-position:18px -956px !important;}
+.iconLink.active{background-position:18px -906px !important;}
+.iconEdit{background-position:0 -1025px !important;}
+.iconDel{background-position:2px -1063px !important;}
+.iconOut{background-position:-20px -68px !important;}
+.iconAco{background-position:-17px -107px !important;}
+.iconAco.active{background-position:-17px -152px !important;}
+.iconFb{background-position:-63px -193px !important;}
+.iconIns{background-position:-63px -259px !important;}
+.btnFileClose{background-position:-18px -236px !important;}
+.iconUploadFile{background-position:-18px -280px !important;}
+.btnImgDel{background-position:-18px -324px !important;}
+.iconAddImg{background-position:-12px -367px  !important;}
+.iconTabArrow{background-position:-16px -197px  !important;}
+.iconFileDown{background-position:0 -1101px  !important;}
+.btnSrchClose{background-position:-16px -423px !important}
+.btnModalClose{background-position:-10px -462px !important}
+.btnPrevPage{background-position:-10px -504px !important}
+.iconAddTeam{background-position:8px -349px  !important;}
+.iconTeamNotice{background-position:-63px -994px !important;}
+.iconMoreTeam{background-position:center -552px !important;}
+.iconMoreTeam.active{background-position:center -589px !important;}
+.iconStarOff{background-position:-63px -1041px !important;}
+.iconStarOn{background-position:-63px -1099px !important;}
+.iconStarOff_s{background-position:-63px -1157px !important;}
+.iconStarOn_s{background-position:-114px 0px !important;}
+.iconStarOff_m{background-position:-114px -297px !important;}
+.iconStarOn_m{background-position:-114px -348px !important;}
+.iconTeamSrchName{background-position:-114px -449px !important;}
+.iconTeamSrchArea{background-position:-114px -493px !important;}
+.iconCondition{background-position:50px -540px !important;}
+.iconCondition.active{background-position:50px -577px !important;}
+.iconTeam{background-position:-114px -446px !important;}
+.iconUser{background-position:-111px -580px !important;}
+.iconRating{background-position:-114px -675px !important;}
+.iconAge{background-position:-114px -718px !important;}
+.iconSex{background-position:-114px -764px !important;}
+.iconNum{background-position:-114px -912px !important;}
+.iconNumPlus{background-position:-114px -862px !important;}
+.iconTeamMake{background-position:-114px -1013px !important;}
+.iconTeamBack{background-position:-114px -963px !important;}
+.iconList{background-position:-114px -1063px !important;}
+.iconFaqToggle{background-position:right -601px !important;}
+.iconFaqToggle.active{background-position:right -639px !important;}
+.iconPeriod{background-position:-114px -1106px !important;}
+.iconPopular {background-position:-114px -1148px !important;}
+.iconCompany{background-position:-172px -499px !important;}
+.iconCate{background-position:-174px -546px !important;}
+.iconDate{background-position:-174px -590px !important;}
+.iconCheck{background-position:-174px -636px !important;}
+.iconQuestHome{background-position:-174px 0 !important;}
+a.active .iconQuestHome{background-position:-174px -50px !important;}
+.iconQuestInfo{background-position:-174px -100px !important;}
+ a.active .iconQuestInfo{background-position:-174px -150px !important;}
+.iconQuestNotice{background-position:-174px -200px !important;}
+a.active .iconQuestNotice{background-position:-174px -250px !important;}
+.iconQuestBoard{background-position:-174px -300px !important;}
+a.active .iconQuestBoard{background-position:-174px -350px !important;}
+.iconQuestTeam{background-position:-174px -400px !important;}
+a.active .iconQuestTeam{background-position:-174px -450px !important;}
+.iconOrange{background-position:-174px -682px !important;}
+.iconQuestion{background-position:-174px -728px !important;}
+.iconQuestion:hover{background-position:-174px -782px !important;}
+.iconShare{background-position:-174px -836px !important;}
+.iconSetting{background-position:-174px -886px !important;}
+.iconPen{background-position:-174px -936px !important;}
+.iconInputAdd{background-position:-174px -984px !important;}
+.iconResult{background-position:-174px -1031px !important;}
+.iconFbLayer{background-position:-165px -1074px !important;}
+.iconTwitter{background-position:-166px -1128px !important;}
+.iconQuot{background-position:-234px -264px !important;}
+.iconBlog{background-position:-234px -316px !important;}
+.iconAddMem{background-position:-234px -382px !important;}
+
+/* colorBox style */
+.colorBox{display:inline-block;font-size:14px;color:#fff;height:22px;line-height:22px;padding:0 10px;}
+.colorBox.green{background:#43b96f;}
+.colorBox.orange{background:#f2682d;}
+.colorBox.blackGray{background:#333;}
+
+/* title style */
+h3{font-size:30px;color:#262626;font-weight:400;-webkit-font-smoothing: antialiased;font-family:'Nanum Barun Gothic','나눔바른고딕','Malgun Gothic','맑은 고딕',sans-serif;}
+h4{font-size:22px;color:#333;font-weight:400;-webkit-font-smoothing: antialiased;font-family:'Nanum Barun Gothic','나눔바른고딕','Malgun Gothic','맑은 고딕',sans-serif;}
+.subTit{font-size:14px;color:#666;display:block;line-height:140%;letter-spacing:0;margin-top:2px;margin-bottom:26px;}
+
+/* input style */
+input[type="checkbox"] { -webkit-appearance:checkbox; }
+input[type="radio"] { -webkit-appearance:radio; -webkit-border-radius:10px; }
+input[type="submit"]{margin:0 0 15px 0;width:100%;border:none;color:#fff;font-size:18px;font-weight:500;background:#23a3c7;text-align:center;padding:13px 0;}
+.default{display:block;border:#ccc 1px solid;margin-bottom:10px;padding:0 15px;color: #555;background:#fff;}
+.default.focus{border:1px solid #23a3c7;}
+.default.error{border:1px solid #ef402a;}
+.default input{border:0;background:none;font-size:14px;width:100%;padding:15px 0;}
+.default textarea{border:0;background:none;font-size:14px;width:100%;padding:15px 0;}
+.default input:focus{border:none;outline:none;}
+.errorMsg{color:#ef402a;font-size:12px;margin-bottom:10px;}
+
+/* color */
+.color01{color:#258eb6;}
+
+/* custom select */
+.sbHolder{background-color: #fff;border: solid 1px #ccc;font-size: 14px;height: 34px;position: relative;width: 70px;display:inline-block}
+.sbSelector{display: block;height: 34px;left: 0;line-height: 34px;outline: none;overflow: hidden;position: absolute;text-indent: 15px;top: 0;width: 70px;}
+.sbToggle{background: url('../../images/common/etc.png') -10px 16px no-repeat;display: block;height: 34px;outline: none;position: absolute;right: 0;top: 0;width: 30px;}
+.sbToggleOpen{background: url('../../images/common/etc.png') -10px -18px no-repeat;}
+.sbOptions{background:#fff;border: solid 1px #ccc;list-style: none;left: -1px;margin: 0;padding: 0;position: absolute;top: 30px;width: 70px;z-index: 1;overflow-y: auto;}
+.sbOptions li{padding: 0 12px;}
+.sbOptions a{font-size:14px;display: block;outline: none;padding: 7px 0 7px 3px;}
+.sbOptions li.last a{border-bottom: none;}
+.custom250 .sbHolder, .custom250 .sbSelector, .custom250 .sbOptions{width:250px;}
+.custom100 .sbHolder, .custom100 .sbSelector, .custom100 .sbOptions{width:100px;}
+.custom60 .sbHolder, .custom60 .sbSelector, .custom60 .sbOptions{width:60px;}

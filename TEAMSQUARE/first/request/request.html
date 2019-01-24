@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>팀스퀘어 - 프로젝트를 위한 협업소셜네트워크</title>
+<link rel="stylesheet" type="text/css" href="../common/css/common.css">
+<link rel="stylesheet" type="text/css" href="../common/css/teamsquare.v2.css">
+<script src="../common/js/jquery-1.8.3.min.js"></script>
+<script src="../common/js/jquery.plugin.js"></script>
+<script src="../common/js/teamsquare.js"></script>
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+</head>
+<body class="sub">
+<!-- skip navigation -->
+<p class="skipnavigationT">
+	<a href="#gnb">상단 메뉴로 바로가기</a>
+	<a href="#container">본문 콘텐츠로 바로가기</a>
+</p>
+<!-- //skip navigation -->
+
+	<div id="wrap" class="wrap">
+
+		<!-- header -->
+		<header id="header" class="header">
+			<div class="headerInner">
+				<h1><a href="../index.html"><img src="../images/common/img_logo.png" alt="TEAMSQUARE 로고"/></a></h1>
+				<button type="button" class="icon iconMenu" id="btnMenu">메뉴 열기</button>
+				<div id="gnb" class="gnb">
+					<ul>
+						<li><h2><a href="">퀘스트</a></h2></li>
+						<li><h2><a href="">팀/유저</a></h2></li>
+						<li><h2><a href="">팀/팀원 구함</a></h2></li>
+						<li><h2><a href="">퀘스트 의뢰하기</a></h2></li>
+					</ul>
+				</div>
+
+				<!-- 로그인전 -->
+				<!-- div class="util">
+					<ul>
+						<li class="btnQuestion"><a href=""><i class="icon iconQuestion">?</i></a></li>
+						<li class="btnLogin"><a href="../login/login.html" class="btn btnSkyBlue">로그인</a></li>
+						<li class="btnJoin"><a href="../join/join.html" class="btn btnGray">회원가입</a></li>
+					</ul>
+				</div -->
+				<!-- //로그인전 -->
+
+				<!-- 로그인후 -->
+				<div class="afterLogin">
+					<div class="btnQuestion">
+						<a href="" name="showLayer"><i class="icon iconQuestion">?</i></a>
+					</div>
+					<div class="msg">
+						<a href="#noticesLayer" class="nums" name="showLayer">
+							<i class="icon iconMsg">알림</i><span class="icon iconBe">99+</span> <!-- span class="icon iconNone">0</span -->
+						</a>
+						<div class="msgLayer defaultLayer" id="noticesLayer" style="display:none;">
+							<ul>
+								<li class="on">
+									<a href="">
+										<i class="icon iconRequest">요청</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>팀 000000에서 가입 요청이 있습니다.</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="icon iconAlarm">알림</i>
+										<div class="txt">
+											<em>2014-11-11</em>
+											<p>서버 점검안내 (2014. 11.12. 12:00~13:00)fsdfdsfsd</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<span class="btnMore"><button type="button" class="icon02 iconMore">더보기</button></span>
+						</div>
+					</div>
+					<div class="myMenu">
+						<a href="#myLayer" class="userID" name="showLayer">
+							<span class="thumb"><img src="../images/common/img_userThumb.png" alt="사용자 사진" width="28"/></span>
+							<em>doodfdsfsdfling</em>
+						</a>
+						<div class="myLayer defaultLayer" id="myLayer" style="display:none;">
+							<ul>
+								<li><a href="">마이페이지</a></li>
+								<li><a href="">개인정보수정</a></li>
+								<li><a href="">로그아웃</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //로그인후 -->
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<section id="container" class="container">
+			<div class="request">
+				<div class="requestInner">
+					<h3>퀘스트 만들기</h3>
+					<p class="subTit">팀스퀘어의 광장에서는 누구나 쉽게 퀘스트를 만들 수 있습니다.</p>
+
+					<!-- 오픈 퀘스트 시작하기 -->
+					<div class="openQuest">
+						<p class="txt">함께 할 누군가가 필요하다면,<br/>내 문제를 해결해 줄 적합한 프로젝트 팀을 찾고 있다면,<br/>창의적인 아이디어와 콘텐츠를 얻기 위한 프로젝트 공모가 필요하다면,<span>지금 바로 나만의 퀘스트를 시작하세요.</span></p>
+						<ul>
+							<li class="step01">
+								<div class="thumb"><img src="../images/contents/img_openQuestStep01.png" alt=""></div>
+								<b>퀘스트 만들기</b>
+								<em>어떤 프로젝트도 OK.<br/>지금 고민하고 있는 문제와 아이디어를<br/>팀스퀘어의 광장에 던져 주세요.</em>
+							</li>
+							<li class="step02">
+								<div class="thumb"><img src="../images/contents/img_openQuestStep02.png" alt=""></div>
+								<b>퀘스트 오픈/ 확산</b>
+								<em>오픈된 퀘스트는<br/>팀스퀘어의유저와<br/>소셜미디어를 통해 확산됩니다.</em>
+							</li>
+							<li class="step03">
+								<div class="thumb"><img src="../images/contents/img_openQuestStep03.png" alt=""></div>
+								<b>결과물 선정/보상 </b>
+								<em>새로운 동료/팀,아이디어를<br/>확보했다면 이제 나의 프로젝트를<br/>현실로 만들어 보세요.</em>
+							</li>
+						</ul>
+						<div class="btns">
+							<a href="" class="btn btnSkyBlue">오픈 퀘스트 시작하기</a>
+						</div>
+					</div>
+					<!-- //오픈 퀘스트 시작하기 -->
+					<!-- 팀스퀘어 퀘스트 의뢰하기 -->
+					<div class="requestBox">
+						<strong class="txt">팀스퀘어 프로젝트 공모 통합 솔루션</strong>
+						<p class="txt02">팀 프로젝트 오픈마켓. 팀스퀘어가 여러분의 공모 프로젝트를 보다 성공적으로 만들어 드립니다.<br/>더욱 임팩트 있는 퀘스트 진행을 원하시거나, 대규모 공모전을 기획하고 있으시다면<br/>바로 알려주세요.팀스퀘어가 함께 하겠습니다.</p>
+						<ul>
+							<li class="step01">
+								<div class="thumb"><img src="../images/contents/img_QuestStep01.png" alt=""></div>
+								<b>사전 기획 / PR</b>
+								<ul>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request01.png" alt=""></div>
+										<b>퀘스트 기획</b>
+									</li>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request02.png" alt=""></div>
+										<b>1차 확산</b>
+										<em>팀스퀘어 네트워크, 소셜미디어,<br/>관련 커뮤니티, 오프라인<br/>프로모션, 매스 미디어</em>
+									</li>
+								</ul>
+							</li>
+							<li class="step02">
+								<div class="thumb"><img src="../images/contents/img_QuestStep01.png" alt=""></div>
+								<b>공모프로젝트 진행</b>
+								<ul>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request03.png" alt=""></div>
+										<b>팀 프로젝트 오픈마켓</b>
+									</li>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request04.png" alt=""></div>
+										<b>접수 및 결과물 관리</b>
+									</li>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request05.png" alt=""></div>
+										<b>참가팀 관리 / 커뮤니케이션 </b>
+									</li>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request06.png" alt=""></div>
+										<b>심사 / 선정 /  보상</b>
+									</li>
+								</ul>
+							</li>
+							<li class="step03">
+								<div class="thumb"><img src="../images/contents/img_QuestStep01.png" alt=""></div>
+								<b>사주관리</b>
+								<ul>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request07.png" alt=""></div>
+										<b>평가 / 리포트</b>
+										<em>참가자 관련통계</em>
+									</li>
+									<li>
+										<div class="stepIcon"><img src="../images/contents/icon_request08.png" alt=""></div>
+										<b>2차 확산</b>
+										<em>팀페이지 콘텐츠, 소셜미디어 공유</em>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="btns">
+							<a href="" class="btn btnOrange">팀스퀘어 퀘스트 의뢰하기</a>
+						</div>
+					</div>
+					<!-- //팀스퀘어 퀘스트 의뢰하기 -->
+				</div>
+			</div>
+		</section>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer" class="footer">
+			<div class="footerInner">
+				<ul class="footerMenu">
+					<li class="about"><a href="">About 팀스퀘어</a></li>
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+					<li><a href="">광고 및 제휴문의</a></li>
+					<li><a href="">고객센터</a></li>
+				</ul>
+				<ul class="footerSns">
+                                                                                <li><a href=""><i class="icon iconBlog">블로그</i></a></li>
+					<li><a href=""><i class="icon iconFb">페이스북</i></a></li>
+					<li><a href=""><i class="icon iconIns">인스타그램</i></a></li>
+				</ul>
+				<div class="footerInfo">
+					<h1><img src="../images/common/img_logo.png" alt="TEAMSQUARE 로고" width="114"/></h1>
+					<address>서울특별시 서초구 반포동 사평대로 55 (반포동 114-3) 심산기념문화센터 서초창의허브 137-040</address>
+					<p class="copyRight">© 2014 TEAMSQUARE, inc.</p>
+				</div>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+	</div>
+
+<!-- skip navigation -->
+<p class="skipnavigationB"><a href="#gnb">상단 바로가기</a></p>
+<!-- //skip navigation -->
+</body>
+</html>
