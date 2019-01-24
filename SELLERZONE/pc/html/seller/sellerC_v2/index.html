@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+<title>11ST SellerZone Coding List</title>
+<style>
+body {margin:0;padding:0;color:#000;font-family:'Droid Sans','Malgun Gothic','Apple-Gothic','애플고딕','Tahoma',dotum,'돋움',gulim,'굴림',sans-serif;font-size:12px;font-weight:normal;letter-spacing:-1px;-webkit-text-size-adjust:none;}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,legend{margin:0;padding:0;}
+form,fieldset,img{border:0;}
+table{border-spacing:0;border-collapse:collapse;}
+hr,legend,caption{display:none;}
+img,fieldset{border:0 none;}
+ul,ol,li{list-style:none outside;}
+img,input,select,textarea{vertical-align:middle;}
+a{display:inline-block;text-decoration:none;color:#3b3b3b;}
+a:link,a:hover,a:active{text-decoration:none;}
+li,p,dt,dd,div,span{word-break:break-all;}
+header {display:block;}
+h1 a{display:block;padding:5px;color:#fff;font-size:13px;font-weight:normal;line-height:2em;text-align:center;letter-spacing:0px;font-family:'Tahoma';background:#000;letter-spacing:1px;}
+.codinglist{border-bottom:1px solid #ccc;}
+.codinglist li{overflow:hidden;width:100%;border-top:1px solid #ccc;font-size:14px;line-height:1.8;letter-spacing:0;}
+.codinglist li a{display:block;position:relative;padding:10px 16px 10px 16px;color:#333;}
+.codinglist li a[href^='#']{padding-left:32px;font-weight:bold;color:#555;}
+.codinglist li a[href^='#']:before{content:'';position:absolute;top:50%;width:0;height:0;margin-top:-5px;margin-left:-16px;border-top:8px solid #aaa;border-left:4px solid transparent;border-right:4px solid transparent;-webkit-transition:0.5s;transition:0.5s;}
+.codinglist ul{display:none;}
+.codinglist ul{background:#f5f5f5}
+.codinglist ul ul{background:#e8e8e8}
+.codinglist li li a{padding-left:32px;font-size:13px;}
+.codinglist li li a[href^='#']{padding-left:48px;}
+.codinglist li li li a{padding-left:48px;}
+.codinglist .selected[href^='#']:before{border-top-color:#333;-webkit-transform:scaleY(-1);transform:scaleY(-1);}
+.codinglist > li > a.selected{color:#f43142;}
+.codinglist > li > a.selected[href^='#']:before{border-top-color:#f43142;}
+
+.cGuide {background:#eee;text-align:right;}
+.cGuide a{display:block;padding:10px;color:#333;letter-spacing:0;}
+li.del a, li.del a *{color:#999 !important;}
+li.del a > div:before{content:'DEL ';color:#d58787;font-size:0.7em;letter-spacing:0;vertical-align:top;}
+.new {color:#133db4 !important;}
+</style>
+<script src ="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+<header>
+	<h1><a href="">11st SellerZone Coding List</a></h1>
+</header>
+<section>
+<ul class="codinglist">
+	<li id="main"><a href="#main">메인</a>
+		<ul>
+			<li><a href="main.html">메인</a></li>
+		</ul>
+	</li>
+	<li id="introduce"><a href="#introduce">셀러존 소개</a>
+		<ul>
+			<li><a href="notice_list.html">공지사항 목록</a></li>
+			<li><a href="notice_view.html">공지사항 상세</a></li>
+		</ul>
+	</li>
+	<li id="online_edu"><a href="#online_edu">온라인 교육</a>
+		<ul>
+			<li><a href="movie-edu_list.html">동영상교육 목록</a></li>
+			<li><a href="movie-edu_view.html">동영상교육 상세</a></li>
+			<li><a href="live-edu.html">Live교육</a></li>
+		</ul>
+	</li>
+	<li id="field_edu"><a href="#field_edu">오프라인 교육</a>
+		<ul>
+			<li><a href="edu-schedule_list1.html">월간교육일정(예약) 목록(앨범형)</a></li>
+			<li><a href="edu-schedule_list2.html">월간교육일정(예약) 목록(리스트형)</a></li>
+			<li><a href="edu-schedule_view.html">월간교육일정(예약) 상세</a></li>
+			<li><a href="edu_apply.html">월간교육일정(예약) 신청</a></li>
+			<li><a href="consulting.html">셀러 컨설팅</a></li>
+		</ul>
+	</li>
+	<li id="knowhow"><a href="#knowhow">판매정보/노하우</a>
+		<ul>
+			<li><a href="mentoring_list.html">셀러 멘토링 목록</a></li>
+			<li><a href="mentoring_view.html">셀러 멘토링 상세</a></li>
+			<li><a href="column_list.html">셀러컬럼 목록</a></li>
+			<li><a href="column_view.html">셀러컬럼 상세</a></li>
+			<li><a href="sell-tip_list.html">판매활용 Tip 목록</a></li>
+			<li><a href="sell-tip_view.html">판매활용 Tip 상세</a></li>
+			<li><a href="download_list.html">다운로드 센터 목록</a></li>
+			<li><a href="download_view.html">다운로드 센터 상세</a></li>
+			<li><a href="shopping_trand_list.html">최신 쇼핑동향 목록</a></li>
+			<li><a href="shopping_trand_view.html">최신 쇼핑동향 상세</a></li>
+			<li><a href="newsletter_list1.html">뉴스레터 다시보기 목록(앨범형)</a></li>
+			<li><a href="newsletter_list2.html">뉴스레터 다시보기 목록(리스트형)</a></li>
+			<li><a href="newsletter_view.html">뉴스레터 다시보기 상세</a></li>
+		</ul>
+	</li>
+	<li id="qna"><a href="#qna">판매자 Q&A</a>
+		<ul>
+			<li><a href="faq.html">셀러존 FAQ</a></li>
+			<li><a href="mtom.html">1:1 문의하기</a></li>
+		</ul>
+	</li>
+	<li id="mypage"><a href="#mypage">마이페이지</a>
+		<ul>
+			<li><a href="mypage.html">마이페이지</a></li>
+			<li><a href="mypage_pop1.html">온라인 교육 팝업</a></li>
+			<li><a href="mypage_pop2.html">오프라인 교육 팝업</a></li>
+			<li><a href="mypage_pop3.html">1:1 문의 팝업</a></li>
+		</ul>
+	</li>
+</ul>
+
+<script>
+(function($) {
+
+    var toggleList = (function() {
+    	var depth = $('.codinglist a');
+
+		depth.each(function () {
+			var self = $(this);
+
+			self.on('click', function(e) {
+				if(self.attr('class') !== 'selected'){
+					listOpen(self);
+				} else {
+					e.preventDefault();
+					listClose(self);
+				}
+			});
+		});
+
+		var listOpen = function(item){
+			var content = item.next();
+
+			item.addClass('selected');
+			content.slideDown(300);
+		}
+		var listClose = function(item){
+			var content = item.next();
+
+			item.removeClass('selected');
+			content.slideUp(300);
+			content.find('ul').hide();
+			content.find('ul').prev().removeClass('selected');
+		}
+
+		var uiUrl = location.href,
+			uiType = uiUrl.split('#')[1],
+			firstItem,
+			parentsItem;
+
+		if(uiType !== undefined){
+			firstItem = $('#' + uiType).find('a:first');
+			listOpen(firstItem);
+
+			parentsItem = $('#' + uiType).parents('ul:not(.codinglist)');
+			listOpen(parentsItem.prev());
+		}
+
+    }());
+}(jQuery));
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="euc-kr" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon-precomposed" href="/MW/img/mw11st_touchicon.png" />
+<link rel="shortcut icon" href="/MW/img/mw11st_touchicon.png" />
+<title>11번가 셀러존</title>
+<link rel="stylesheet" href="../../css/sellercenter/sellercenter.css" />
+<!--[if lt IE 9]><script type="text/javascript" src="/MW/js/ui/ie.js"></script><![endif]-->
+<script src="http://m.11st.co.kr/MW/Common/js/jquery-2.1.1.min.js"></script>
+<script src="/MW/js/ui/ui.js"></script>
+<script src="../../js/sellercenter/sellercenter.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<!-- header -->
+	<header>
+		<h1 class="logo"><a href="menu.html">11st 셀러존</a></h1>
+		<a href="" class="btn_menu">menu</a>
+		<a href="" class="btn_login">login</a>
+	</header>
+	<!-- //header -->
+	
+	<!-- content -->
+	<div class="content">
+		<!-- key visual -->
+		<div class="key_visual">
+			<div class="m_bill">
+				<ul class="mwContainer">
+					<li><a href="#"><img src="../../img/sellercenter/temp/img_dummy1.jpg" alt=""></a></li>
+				</ul>
+				<!--button type="button" class="prev" onclick="bSwipe.prev();" data-clickurl="MWJ" data-clickkey="MWJ01" data-clickitem="MWJ0162">이전</button>
+				<button type="button" class="next" onclick="bSwipe.next();" data-clickurl="MWJ" data-clickkey="MWJ01" data-clickitem="MWJ0162">다음</button-->
+				<div class="page"><span class="hide_txt">현재페이지</span><b>3</b> / <span class="hide_txt">전체페이지</span><span>10</span></div>
+				<a href="#pop_all" class="all" onclick="mwSellerUI.layerPopup.open('pop_all');return false">전체</a>
+			</div>
+		</div>
+		<!-- //key visual -->
+
+		<!-- icon menu -->
+		<div class="icon_menu">
+			<ul>
+				<li>
+					<div class="in">
+						<strong class="cate">셀러존<br/>온라인</strong>
+					</div>
+				</li>
+				<li>
+					<a href="" class="in">
+						<em class="new"></em><span class="name">동영상 교육</span>
+					</a>
+				</li>
+				<li>
+					<a href="" class="in">
+						<em class="on"></em><span class="name">라이브 강의</span>
+					</a>
+				</li>
+				<li>
+					<a href="" class="in">
+						<span class="name">교육일정 및 예약</span>
+					</a>
+				</li>
+				<li>
+					<a href="" class="in">
+						<span class="name">판매자 컨설팅</span>
+					</a>
+				</li>
+				<li>
+					<div class="in">
+						<strong class="cate">셀러존<br/>오프라인</strong>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //icon menu -->
+
+		<div class="customer_menu">
+			<strong>셀러존 고객센터</strong>
+			<ul>
+				<li><a href="">셀러존 FAQ</a></li>
+				<li><a href="">셀러존 TIP</a></li>
+				<li><a href="">마이페이지</a></li>
+				<li><a href="">셀러존 소개</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //content -->
+
+	<a href="#wrap" class="f_top">TOP</a> <!-- top버튼, app 비노출 -->
+
+	<!-- footer -->
+	<script src="http://ui-m.11st.co.kr/MW/html/inc/cm_footer_main.js"></script>
+	<!-- //footer -->	
+</div>
+
+<!-- 201601721 수정 -->
+<div class="pop_all" id="pop_all" style=";">
+	<ul class="ad">
+		<li><a href="#"><img src="../../img/sellercenter/temp/img_dummy1.jpg" alt="" /></a></li>
+		<li><a href="#"><img src="../../img/sellercenter/temp/img_dummy1.jpg" alt="" /></a></li>
+		<li><a href="#"><img src="../../img/sellercenter/temp/img_dummy1.jpg" alt="" /></a></li>
+		<li><a href="#"><img src="../../img/sellercenter/temp/img_dummy1.jpg" alt="" /></a></li>
+		<li><a href="#"><img src="../../img/sellercenter/temp/img_dummy1.jpg" alt="" /></a></li>
+	</ul>
+	<button type="button" class="close">닫기</button>
+</div>
+<!-- //201601721 수정 -->
+
+
+<!-- layer popup -->
+<div class="layer_pop" id="layer_pop">
+	<div class="in">
+		<h1>로그인</h1>
+		<div class="layer_body">
+			<p>댓글 입력은 로그인이 필요한 서비스입니다.<br/>로그인 후 이용해 주시기 바랍니다.</p>
+		</div>
+		<div class="layer_btns">
+			<span><a href="" class="red">로그인</a></span>
+			<span><a href="" class="gray">취소</a></span>
+		</div>
+		<!--div class="layer_btns long"> 버튼 한개일때
+			<span><a href="" class="red">로그인</a></span>
+		</div-->
+		<button type="button" class="btn_pop_close" onclick="mwSellerUI.layerPopup.close('layer_pop');">close</button>
+	</div>
+</div>
+<!-- //layer popup -->
+<script type="text/javascript">
+	$(function(){
+		mwSellerUI.layerPopup.open('layer_pop');
+	});
+</script>
+
+</body>
+</html>
