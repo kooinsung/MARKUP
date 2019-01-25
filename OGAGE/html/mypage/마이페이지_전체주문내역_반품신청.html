@@ -1,0 +1,1254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <meta name="" content="" />
+        <title>오가게</title>      
+		
+		<link href="http://cdn.halfclub.com/Images_Web/Ogage/service_ogage.ico" rel="shortcut icon" id="favicon" />
+		<link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- 마이페이지 css -->
+		<link href="../../css/mypage.css" rel="stylesheet" type="text/css" />
+		<!-- //마이페이지 css -->
+
+		<script src="http://www.halfclub.com/Common/Javascript/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="../../js/mypage.js" type="text/javascript"></script>
+
+		<!-- //jquery ui -->
+		<link href="../../css/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+		<script src="../../js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+		<!-- jquery ui -->
+    </head>
+    <body>
+
+	<div id="wrap">
+		
+		<!-- skip 영역 -->
+		<div id="skip">
+			<h2>스킵</h2>
+			<ul>
+				<li><a href="#header_gnb">카테고리 메뉴 바로가기</a></li>
+				<li><a href="#content">본문바로가기</a></li>
+			</ul>
+		</div>
+		<!-- //skip 영역 -->
+
+		<!-- header -->
+		<div id="header" class="header_wrap">
+			<div class="header_util">
+				<ul class="util_left">
+					<li class="mall_select"><a href="javascript:;">오가게</a></li>
+					<li class="direct_list"><a href="javascript:;"><span>바로방문</span><em class="direct_on"></em></a></li>
+					<li><a href="javascript:;">즐겨찾기</a></li>
+					<li><a href="javascript:;">모바일</a></li>
+				</ul>
+				<ul class="util_right">
+					<li><a href="javascript:;">로그인</a></li>
+					<li><a href="javascript:;">회원가입</a></li>
+					<li><a href="javascript:;">주문/배송</a></li>
+					<li><a href="javascript:;">마이페이지</a></li>
+					<li><a href="javascript:;">고객센터</a></li>
+				</ul>		
+			</div>
+			<div class="header_top">
+				<h1 class="logo">
+					<a href="javascript:;"><img src="../../img/common/logo_ogage.gif" alt="ogage" /></a>
+				</h1>
+				<div class="header_top_r">
+					<div class="hot_keyword">
+						<ul>
+							<li><a href="javascript:;">앵글부츠</a></li>
+						</ul>
+						<a href="javascript:;" title="이전검색어" class="hot_keyword_prev"></a>
+						<a href="javascript:;" title="다음검색어" class="hot_keyword_next"></a>
+					</div>
+					<div class="header_search">					
+						<input type="text" name="search" id="search" class="header_search_input" />	
+						<a href="javascript:;" class="btn_search" title="검색"></a>
+					</div>
+				</div>		
+			</div>
+			<div id="header_gnb" class="header_gnb">				
+				<div class="gnb_area">
+					<div class="gnb_special"><a href="javascript:;">소호샵#</a></div>
+					<ul class="gnb_left">						
+						<li class="active">
+							<a href="javascript:;">여성</a>
+							<div class="gnb_sub_layer">
+								<div class="gnb_layer_left">
+									<p class="sub_tit">SHOP BY PRODUCT</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">티셔츠</a></li>
+										<li><a href="javascript:;">니트/가디건</a></li>
+										<li><a href="javascript:;">블라우스/셔츠</a></li>
+										<li><a href="javascript:;">베스트/조끼</a></li>
+										<li><a href="javascript:;">스커트</a></li>
+										<li><a href="javascript:;">원피스</a></li>
+										<li><a href="javascript:;">팬츠</a></li>
+										<li><a href="javascript:;">데님팬츠</a></li>
+										<li><a href="javascript:;">자켓</a></li>
+										<li><a href="javascript:;">점퍼</a></li>
+									</ul>
+								</div>
+								<div class="gnb_layer_right">
+									<p class="sub_tit">TOP BRANDS</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">이란지</a></li>
+										<li><a href="javascript:;">립합</a></li>
+										<li><a href="javascript:;">스타일온미</a></li>
+										<li><a href="javascript:;">메이블루</a></li>
+										<li><a href="javascript:;">아뜨랑스</a></li>
+										<li><a href="javascript:;">스타일멘토</a></li>
+										<li><a href="javascript:;">큐니걸스</a></li>
+										<li><a href="javascript:;">PEPER</a></li>
+										<li><a href="javascript:;">메이뜰</a></li>
+										<li><a href="javascript:;">MAGJAY</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+                            <a href="javascript:;">남성</a>
+                            <div class="gnb_sub_layer">
+								<div class="gnb_layer_left">
+									<p class="sub_tit">SHOP BY PRODUCT</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">티셔츠</a></li>
+										<li><a href="javascript:;">니트/가디건</a></li>
+										<li><a href="javascript:;">블라우스/셔츠</a></li>
+										<li><a href="javascript:;">베스트/조끼</a></li>
+										<li><a href="javascript:;">스커트</a></li>
+										<li><a href="javascript:;">원피스</a></li>
+										<li><a href="javascript:;">팬츠</a></li>
+										<li><a href="javascript:;">데님팬츠</a></li>
+										<li><a href="javascript:;">자켓</a></li>
+										<li><a href="javascript:;">점퍼</a></li>
+									</ul>
+								</div>
+								<div class="gnb_layer_right">
+									<p class="sub_tit">TOP BRANDS</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">이란지</a></li>
+										<li><a href="javascript:;">립합</a></li>
+										<li><a href="javascript:;">스타일온미</a></li>
+										<li><a href="javascript:;">메이블루</a></li>
+										<li><a href="javascript:;">아뜨랑스</a></li>
+										<li><a href="javascript:;">스타일멘토</a></li>
+										<li><a href="javascript:;">큐니걸스</a></li>
+										<li><a href="javascript:;">PEPER</a></li>
+										<li><a href="javascript:;">메이뜰</a></li>
+										<li><a href="javascript:;">MAGJAY</a></li>
+									</ul>
+								</div>
+							</div>
+                        </li>
+						<li>
+                            <a href="javascript:;">잡화</a>
+                            <div class="gnb_sub_layer">
+								<div class="gnb_layer_left">
+									<p class="sub_tit">SHOP BY PRODUCT</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">티셔츠</a></li>
+										<li><a href="javascript:;">니트/가디건</a></li>
+										<li><a href="javascript:;">블라우스/셔츠</a></li>
+										<li><a href="javascript:;">베스트/조끼</a></li>
+										<li><a href="javascript:;">스커트</a></li>
+										<li><a href="javascript:;">원피스</a></li>
+										<li><a href="javascript:;">팬츠</a></li>
+										<li><a href="javascript:;">데님팬츠</a></li>
+										<li><a href="javascript:;">자켓</a></li>
+										<li><a href="javascript:;">점퍼</a></li>
+									</ul>
+								</div>
+								<div class="gnb_layer_right">
+									<p class="sub_tit">TOP BRANDS</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">이란지</a></li>
+										<li><a href="javascript:;">립합</a></li>
+										<li><a href="javascript:;">스타일온미</a></li>
+										<li><a href="javascript:;">메이블루</a></li>
+										<li><a href="javascript:;">아뜨랑스</a></li>
+										<li><a href="javascript:;">스타일멘토</a></li>
+										<li><a href="javascript:;">큐니걸스</a></li>
+										<li><a href="javascript:;">PEPER</a></li>
+										<li><a href="javascript:;">메이뜰</a></li>
+										<li><a href="javascript:;">MAGJAY</a></li>
+									</ul>
+								</div>
+							</div>
+                        </li>
+					</ul>
+					<ul class="gnb_right">
+						<li><a href="javascript:;">신상</a></li>
+						<li class="active"><a href="javascript:;">세일</a></li>
+						<li><a href="javascript:;">베스트</a></li>
+						<li><a href="javascript:;">기획전</a></li>
+						<li><a href="javascript:;">이벤트</a></li>
+					</ul>
+				</div>			
+			</div>		
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div id="content" class="content">
+
+			<!-- 마이페이지 -->
+			<div cass="my_page">
+				<!-- 전체주문내역 -->
+				<div class="all_order_list">
+
+					<!-- 타이틀 -->
+					<div class="page_tit">
+						<h3><a href="">마이페이지</a></h3>
+					</div>
+					<!-- //타이틀 -->
+
+					<!-- 마이페이지 상단 -->
+					<div class="mypage_top">
+						<!-- 유저 -->
+						<div class="user">
+							<span class="user_thumb"><img src="../../img/mypage/img_default-user.png" alt="" /></span>
+							<div class="txt">
+								<strong>안지현님, 반갑습니다.</strong>
+								<a href="">플래티넘+</a>
+							</div>
+						</div>
+						<!-- //유저 -->
+
+						<!-- 마이페이지 메뉴 -->
+						<div class="mypage_menu">
+							<ul>
+								<li class="menu_all active">
+									<a href="">
+										<p>전체주문내역<br/><span class="number_type">3</span></p>
+									</a>
+								</li>
+								<li class="menu_coupon">
+									<a href="">
+										<p>쿠폰<br/><span class="number_type">1</span></p>
+									</a>
+								</li>
+								<li class="menu_save">
+									<a href="">
+										<p>적립금<br/><span class="number_type">13,000</span></p>
+									</a>
+								</li>
+								<li class="menu_review">
+									<a href="">
+										<p>상품평<br/><span class="number_type">5</span></p>
+									</a>
+								</li>
+								<li class="menu_wish">
+									<a href="">
+										<p>마이 위시<br/><span class="number_type">10</span></p>
+									</a>
+								</li>
+								<li class="menu_brand">
+									<a href="">
+										<p>마이 브랜드<br/><span class="number_type">7</span></p>
+									</a>
+								</li>
+								<li class="menu_qna">
+									<a href="">
+										<p>나의 문의<br/><span class="number_type">8</span></p>
+									</a>
+								</li>
+								<li class="menu_receipt">
+									<a href="">
+										<p>영수증 발행<br/><span class="number_type">2</span></p>
+									</a>
+								</li>
+								<li class="menu_refund">
+									<a href="">
+										<p>환불계좌<br/>관리</p>
+									</a>
+								</li>
+								<li class="menu_modify">
+									<a href="">
+										<p>회원정보<br/>수정</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //마이페이지 메뉴 -->
+					</div>
+					<!-- //마이페이지 상단 -->
+
+					<!-- 주문조회 -->
+					<div class="mypage_srch">
+						<div class="period">
+							<strong class="tit">기간별 조회</strong>
+							<ul>
+								<li><button type="button" class="active">2주</button></li>
+								<li><button type="button">1개월</button></li>
+								<li><button type="button">3개월</button></li>
+								<li><button type="button">6개월</button></li>
+								<li><button type="button">1년</button></li>
+							</ul>
+							<div class="date_box">
+								<span class="default_input start"><input type="text" id="start"/></span><em>-</em><span class="default_input end"><input type="text" id="end"/></span>
+								<button type="button" class="btn_gray">조회</button>
+								<script type="text/javascript">
+										$(function() {
+											$('#start, #end').datepicker({
+												showOn: 'button',
+												dateFormat: 'yy-mm-dd',
+												prevText: '이전 달',
+												nextText: '다음 달',
+												monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+												monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+												dayNames: ['일','월','화','수','목','금','토'],
+												dayNamesShort: ['일','월','화','수','목','금','토'],
+												dayNamesMin: ['일','월','화','수','목','금','토'],
+												showMonthAfterYear: true,
+												yearSuffix: '년'
+											});
+										});
+								</script>
+							</div>
+						</div>
+						<div class="prd_name">
+							<strong class="tit">상품명</strong>
+							<span class="default_input"><input type="text" /></span>
+							<button type="button" class="btn_gray">검색</button>
+						</div>
+					</div>
+					<!-- //주문조회 -->
+
+					<!-- 주문조회 리스트 -->
+					<div class="order_list">
+						<div class="list_top">
+							<div class="type">
+								<div class="type_sel select_wrap">
+									<label for="">전체 (<em class="number_type">3</em>)</label>
+									<select name="">
+										<option>전체 (<em class="number_type">1</em>)</option>
+										<option>주문 (<em class="number_type">0</em>)</option>
+										<option>취소 (<em class="number_type">2</em>)</option>
+										<option>반품 (<em class="number_type">4</em>)</option>
+										<option>교환 (<em class="number_type">10</em>)</option>
+									</select>
+								</div>
+							</div>
+							<ul class="s_tabs">
+								<li class="active"><a href="">국내 <em class="number_type">3</em></a></li>
+								<li class=""><a href="">해외 <em class="number_type">0</em></a></li>
+							</ul>
+						</div>
+						<div class="s_tabsConts">
+							<div>
+								<table class="type1" summary="이 표는 주문일, 주문번호, 상품정보, 수량, 금액, 상태, 접수/완료의 구성으로 이루어진 표입니다.">
+									<caption>주문 내역 리스트</caption>
+									<colgroup>
+										<col width="96"/>
+										<col width="123"/>
+										<col width="*"/>
+										<col width="77"/>
+										<col width="92"/>
+										<col width="88"/>
+										<col width="104"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>주문일</th>
+											<th>주문번호</th>
+											<th>상품정보</th>
+											<th>수량</th>
+											<th>금액</th>
+											<th>상태</th>
+											<th>접수/완료</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 여러개 -->
+										<tr>
+											<td colspan="7" class="order_mutiple">
+												<table class="type1 type1_in" summary="이 표는 주문일, 주문번호, 상품정보, 수량, 금액, 상태, 접수/완료의 구성으로 이루어진 표입니다.">
+													<caption>주문 내역 리스트</caption>
+													<colgroup>
+														<col width="96"/>
+														<col width="123"/>
+														<col width="*"/>
+														<col width="77"/>
+														<col width="92"/>
+														<col width="88"/>
+														<col width="104"/>
+													</colgroup>
+													<tbody>
+													<tr>
+														<td class="order_date" rowspan="3"> <!-- 여러개일경우 해당 row개수에 맞게 rowspan조절해줘야함 -->
+															2015.08.27
+														</td>
+														<td class="order_number" rowspan="2"> <!-- 여러개일경우 해당 row개수에 맞게 rowspan조절해줘야함 -->
+															<div><a href="">150827005483</a><br/></div>
+															<button type="button" class="btn_small">배송지 변경</button><br/>
+															<button type="button" class="btn_small">주문 전체 취소</button>
+														</td>
+														<td class="prd_info">
+															<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+															<div class="txt">
+																<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+																<ul class="opt_order_list">
+																	<li><a href="">선택 01_Black_Free</a></li>
+																	<li><a href="">선택 01_Black_Free</a></li>
+																</ul>
+															</div>
+														</td>
+														<td class="prd_num">
+															<ul class="opt_order_list">
+																<li>&nbsp;<!-- default로 놔두세요 --></li>
+																<li>1</li>
+																<li>1</li>
+															</ul>
+														</td>
+														<td class="prd_price">
+															<ul class="opt_order_list">
+																<li>&nbsp;<!-- default로 놔두세요 --></li>
+																<li>19,000원</li>
+																<li>19,000원</li>
+															</ul>
+														</td>
+														<td class="prd_state">
+															<ul class="opt_order_list">
+																<li>&nbsp;<!-- default로 놔두세요 --></li>
+																<li><strong>결제완료</strong></li>
+																<li><strong>결제취소</strong></li>
+															</ul>
+														</td>
+														<td class="prd_suc">
+															<span class="cancel_date">
+																2015.08.31<br/>/2015.09.03
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="prd_info">
+															<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+															<div class="txt">
+																<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+																<ul class="opt_order_list">
+																	<li><a href="">선택 01_Black_Free</a></li>
+																</ul>
+															</div>
+														</td>
+														<td class="prd_num">
+															<ul class="opt_order_list">
+																<li>1</li>
+															</ul>
+														</td>
+														<td class="prd_price">
+															<ul class="opt_order_list">
+																<li>19,000원</li>
+															</ul>
+														</td>
+														<td class="prd_state">
+															<ul class="opt_order_list">
+																<li><strong>출고대기</strong></li>
+															</ul>
+														</td>
+														<td class="prd_suc">
+															<button type="button" class="btn_small">취소신청</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="order_number">
+															<div><a href="">150827005483</a><br/></div>
+															<button type="button" class="btn_small">배송지 변경</button><br/>
+														</td>
+														<td class="prd_info">
+															<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+															<div class="txt">
+																<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+																<ul class="opt_order_list">
+																	<li><a href="">선택 01_Black_Free</a></li>
+																</ul>
+															</div>
+														</td>
+														<td class="prd_num">
+															<ul class="opt_order_list">
+																<li>1</li>
+															</ul>
+														</td>
+														<td class="prd_price">
+															<ul class="opt_order_list">
+																<li>19,000원</li>
+															</ul>
+														</td>
+														<td class="prd_state">
+															<ul class="opt_order_list">
+																<li><strong>출고대기</strong></li>
+															</ul>
+														</td>
+														<td class="prd_suc">
+															<span class="cancel_date">
+																2015.08.31<br/>/2015.09.03
+															</span>
+														</td>
+													</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<!-- //여러개 -->
+
+										<!-- 한개 -->
+										<tr>
+											<td class="order_date">
+												2015.08.27
+											</td>
+											<td class="order_number">
+												<div><a href="">150827005483</a><br/></div>
+												<button type="button" class="btn_small">배송지 변경</button><br/>
+											</td>
+											<td class="prd_info">
+												<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+												<div class="txt">
+													<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+													<ul class="opt_order_list">
+														<li><a href="">선택 01_Black_Free</a></li>
+													</ul>
+												</div>
+											</td>
+											<td class="prd_num">
+												<ul class="opt_order_list">
+													<li>1</li>
+												</ul>
+											</td>
+											<td class="prd_price">
+												<ul class="opt_order_list">
+													<li>19,000원</li>
+												</ul>
+											</td>
+											<td class="prd_state">
+												<ul class="opt_order_list">
+													<li><a href="" class="btn_arrow">출고 <span class="sprite_mypage"></span></a></li>
+												</ul>
+											</td>
+											<td class="prd_suc">
+												<button type="button" class="btn_small">반품신청</button>
+												<button type="button" class="btn_small">교환신청</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="order_date">
+												2015.08.27
+											</td>
+											<td class="order_number">
+												<div><a href="">150827005483</a><br/></div>
+												<button type="button" class="btn_small">배송지 변경</button><br/>
+											</td>
+											<td class="prd_info">
+												<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+												<div class="txt">
+													<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+													<ul class="opt_order_list">
+														<li><a href="">선택 01_Black_Free</a></li>
+													</ul>
+												</div>
+											</td>
+											<td class="prd_num">
+												<ul class="opt_order_list">
+													<li>1</li>
+												</ul>
+											</td>
+											<td class="prd_price">
+												<ul class="opt_order_list">
+													<li>19,000원</li>
+												</ul>
+											</td>
+											<td class="prd_state">
+												<ul class="opt_order_list">
+													<li><strong>출고대기</strong></li>
+												</ul>
+											</td>
+											<td class="prd_suc">
+												<span class="cancel_date">
+													2015.08.31<br/>/2015.09.03
+												</span>
+											</td>
+										</tr>
+										<!-- //한개 -->
+									</tbody>
+								</table>
+							</div>
+							<div>
+								<table class="type1" summary="이 표는 주문일, 주문번호, 상품정보, 수량, 금액, 상태, 접수/완료의 구성으로 이루어진 표입니다.">
+									<caption>주문 내역 리스트</caption>
+									<colgroup>
+										<col width="96"/>
+										<col width="123"/>
+										<col width="*"/>
+										<col width="77"/>
+										<col width="92"/>
+										<col width="88"/>
+										<col width="104"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>주문일</th>
+											<th>주문번호</th>
+											<th>상품정보</th>
+											<th>수량</th>
+											<th>금액</th>
+											<th>상태</th>
+											<th>접수/완료</th>
+										</tr>
+									</thead>
+									<tbody>
+										<!-- 여러개 -->
+										<tr>
+											<td colspan="7" class="order_mutiple">
+												<table class="type1 type1_in" summary="이 표는 주문일, 주문번호, 상품정보, 수량, 금액, 상태, 접수/완료의 구성으로 이루어진 표입니다.">
+													<caption>주문 내역 리스트</caption>
+													<colgroup>
+														<col width="96"/>
+														<col width="123"/>
+														<col width="*"/>
+														<col width="77"/>
+														<col width="92"/>
+														<col width="88"/>
+														<col width="104"/>
+													</colgroup>
+													<tbody>
+													<tr>
+														<td class="order_date" rowspan="3"> <!-- 여러개일경우 해당 row개수에 맞게 rowspan조절해줘야함 -->
+															2015.08.27
+														</td>
+														<td class="order_number" rowspan="2"> <!-- 여러개일경우 해당 row개수에 맞게 rowspan조절해줘야함 -->
+															<div><a href="">150827005483</a><br/></div>
+															<button type="button" class="btn_small">배송지 변경</button><br/>
+															<button type="button" class="btn_small">주문 전체 취소</button>
+														</td>
+														<td class="prd_info">
+															<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+															<div class="txt">
+																<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+																<ul class="opt_order_list">
+																	<li><a href="">선택 01_Black_Free</a></li>
+																	<li><a href="">선택 01_Black_Free</a></li>
+																</ul>
+															</div>
+														</td>
+														<td class="prd_num">
+															<ul class="opt_order_list">
+																<li>&nbsp;<!-- default로 놔두세요 --></li>
+																<li>1</li>
+																<li>1</li>
+															</ul>
+														</td>
+														<td class="prd_price">
+															<ul class="opt_order_list">
+																<li>&nbsp;<!-- default로 놔두세요 --></li>
+																<li>19,000원</li>
+																<li>19,000원</li>
+															</ul>
+														</td>
+														<td class="prd_state">
+															<ul class="opt_order_list">
+																<li>&nbsp;<!-- default로 놔두세요 --></li>
+																<li><strong>결제완료</strong></li>
+																<li><strong>결제취소</strong></li>
+															</ul>
+														</td>
+														<td class="prd_suc">
+															<span class="cancel_date">
+																2015.08.31<br/>/2015.09.03
+															</span>
+														</td>
+													</tr>
+													<tr>
+														<td class="prd_info">
+															<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+															<div class="txt">
+																<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+																<ul class="opt_order_list">
+																	<li><a href="">선택 01_Black_Free</a></li>
+																</ul>
+															</div>
+														</td>
+														<td class="prd_num">
+															<ul class="opt_order_list">
+																<li>1</li>
+															</ul>
+														</td>
+														<td class="prd_price">
+															<ul class="opt_order_list">
+																<li>19,000원</li>
+															</ul>
+														</td>
+														<td class="prd_state">
+															<ul class="opt_order_list">
+																<li><strong>출고대기</strong></li>
+															</ul>
+														</td>
+														<td class="prd_suc">
+															<button type="button" class="btn_small">취소신청</button>
+														</td>
+													</tr>
+													<tr>
+														<td class="order_number">
+															<div><a href="">150827005483</a><br/></div>
+															<button type="button" class="btn_small">배송지 변경</button><br/>
+														</td>
+														<td class="prd_info">
+															<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+															<div class="txt">
+																<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+																<ul class="opt_order_list">
+																	<li><a href="">선택 01_Black_Free</a></li>
+																</ul>
+															</div>
+														</td>
+														<td class="prd_num">
+															<ul class="opt_order_list">
+																<li>1</li>
+															</ul>
+														</td>
+														<td class="prd_price">
+															<ul class="opt_order_list">
+																<li>19,000원</li>
+															</ul>
+														</td>
+														<td class="prd_state">
+															<ul class="opt_order_list">
+																<li><strong>출고대기</strong></li>
+															</ul>
+														</td>
+														<td class="prd_suc">
+															<span class="cancel_date">
+																2015.08.31<br/>/2015.09.03
+															</span>
+														</td>
+													</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<!-- //여러개 -->
+
+										<!-- 한개 -->
+										<tr>
+											<td class="order_date">
+												2015.08.27
+											</td>
+											<td class="order_number">
+												<div><a href="">150827005483</a><br/></div>
+												<button type="button" class="btn_small">배송지 변경</button><br/>
+											</td>
+											<td class="prd_info">
+												<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+												<div class="txt">
+													<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+													<ul class="opt_order_list">
+														<li><a href="">선택 01_Black_Free</a></li>
+													</ul>
+												</div>
+											</td>
+											<td class="prd_num">
+												<ul class="opt_order_list">
+													<li>1</li>
+												</ul>
+											</td>
+											<td class="prd_price">
+												<ul class="opt_order_list">
+													<li>19,000원</li>
+												</ul>
+											</td>
+											<td class="prd_state">
+												<ul class="opt_order_list">
+													<li><a href="" class="btn_arrow">출고 <span class="sprite_mypage"></span></a></li>
+												</ul>
+											</td>
+											<td class="prd_suc">
+												<button type="button" class="btn_small">반품신청</button>
+												<button type="button" class="btn_small">교환신청</button>
+											</td>
+										</tr>
+										<tr>
+											<td class="order_date">
+												2015.08.27
+											</td>
+											<td class="order_number">
+												<div><a href="">150827005483</a><br/></div>
+												<button type="button" class="btn_small">배송지 변경</button><br/>
+											</td>
+											<td class="prd_info">
+												<span class="thumb"><img src="../../img/mypage/img_dummy1.png" alt="" /></span>
+												<div class="txt">
+													<strong><a href="">[LipHop] (립합)퓨론티/초커/목걸이/태슬초커/레이스/네크리스태슬초커/레이스/네크리스</a> <span class="btn_red"><em class="sprite_mypage"></em>하프빠른배송</span></strong>
+													<ul class="opt_order_list">
+														<li><a href="">선택 01_Black_Free</a></li>
+													</ul>
+												</div>
+											</td>
+											<td class="prd_num">
+												<ul class="opt_order_list">
+													<li>1</li>
+												</ul>
+											</td>
+											<td class="prd_price">
+												<ul class="opt_order_list">
+													<li>19,000원</li>
+												</ul>
+											</td>
+											<td class="prd_state">
+												<ul class="opt_order_list">
+													<li><strong>출고대기</strong></li>
+												</ul>
+											</td>
+											<td class="prd_suc">
+												<span class="cancel_date">
+													2015.08.31<br/>/2015.09.03
+												</span>
+											</td>
+										</tr>
+										<!-- //한개 -->
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //주문조회 리스트 -->
+
+					<!-- 페이징 -->
+					<div class="paging">
+						<span class="sprite_mypage prev"><a href=""><em class="blind">prev</em></a></span>
+						<ul>
+							<li><a href="" class="active">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li><a href="">4</a></li>
+							<li><a href="">5</a></li>
+						</ul>
+						<span class="sprite_mypage next"><a href=""><em class="blind">next</em></a></span>
+					</div>
+					<!-- //페이징 -->
+				</div>
+				<!-- //전체주문내역 -->
+			</div>
+			<!-- //마이페이지 -->
+
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<div id="footer" class="footer_wrap">		
+			<div class="footer_top">
+				<div class="footer_in">
+					<div class="footer_notice">
+						<p class="footer_tit">Notice</p>
+						<ul class="footer_notice_list">
+							<li><a href="javascript:;">[당첨자발표] 펫스토어 1,000원 구매 찬스 이벤트 2차 당첨자 발표</a></li>
+						</ul>
+					</div>
+					<ul class="footer_util">
+						<li><a href="javascript:;">SNS</a></li>
+						<li><a href="javascript:;">Familly Site</a></li>
+						<li><a href="javascript:;">Private Brand</a></li>
+					</ul>
+				</div>			
+			</div>
+			<div class="footer_bot">
+				<div class="footer_in">
+					<ul class="footer_menu">
+						<li><a href="javascript:;">회사소개</a></li>
+						<li><a href="javascript:;">제휴 및 입점문의</a></li>
+						<li class="Private"><a href="javascript:;">개인정보취급방침</a></li>
+						<li><a href="javascript:;">청소년보호정책</a></li>
+						<li><a href="javascript:;">이용약관</a></li>
+					</ul>
+					<div class="footer_copyright">
+						<p>주소: 서울 서초구 서초동 1515-4번지 서원빌딩 2층~5층 (주)트라이씨클  대표이사: 윤치영  개인정보 보호 책임자: 유수종  호스트제공자:(주)트라이씨클</p>
+						<p>사업자 등록번호: 120-81-06331  통신판매업신고 제 강남 4959호  팩스: 02-3289-3321  이메일 문의: <a href="mailto:customer@tricycle.co.kr">customer@tricycle.co.kr</a></p>
+						<p>Copyright(c) OGAGE. All Rights Reserved.</p>
+					</div>
+					<div class="footer_info">
+						<p class="footer_tel">1588-1812</p>
+						<p>평일 am 09:00 ~ pm18:00</p>
+						<p>일요일 am 09:00 ~ pm 13:00</p>
+					</div>
+					<div>
+						<img src="../../img/common/footer_banner.gif" alt="" usemap="#footer_banner" />
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!-- //footer -->
+	
+	</div>
+
+	<!-- 반품신청 -->
+	<div class="layer_wrap" id="order_return_apply">
+		<div class="layer_inner">
+			<strong class="layer_tit">반품신청</strong>
+
+			<div class="layer_conts">
+				<!-- 리스트 -->
+				<table class="layer_type" summary="이 표는 체크박스, 상품정보, 수량, 금액의 구성으로 이루어진 표입니다.">
+					<caption>취소 신청 리스트</caption>
+					<colgroup>
+						<col width="62"/>
+						<col width="*"/>
+						<col width="92"/>
+						<col width="91"/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="check_all"><input type="checkbox"/></th>
+							<th class="">상품정보</th>
+							<th>수량</th>
+							<th>금액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4" class="no_padding">
+								<div class="scroll_area">
+									<div class="nano">
+										<div class="nano-content">
+											<table class="layer_type">
+												<colgroup>
+													<col width="62"/>
+													<col width="*"/>
+													<col width="92"/>
+													<col width="91"/>
+												</colgroup>
+												<tbody>
+													<!-- 세트 -->
+													<tr>
+														<td rowpspan="2" class="check_solo"><input type="checkbox"/></td>
+														<td class="prd_info">
+															<strong>[JBROS] 윌 투포켓 체크패턴 셔츠</strong>
+															<p>선택 02_머스타트_size_55</p>
+														</td>
+														<td class="quantity">
+															<div class="quantity_sel select_wrap">
+																<label for="">1</label>
+																<select name="">
+																	<option>1</option>
+																</select>
+															</div>
+														</td>
+														<td class="price"><span>12,300원</span></td>
+													</tr>
+													<tr>
+														<td colspan="4" class="reason">
+															<div class="reason_sel select_wrap">
+																<label for="">취소사유를 선택해 주세요</label>
+																<select name="">
+																	<option>취소사유를 선택해 주세요</option>
+																</select>
+															</div>
+															<span class="reason_input"><input type="text" value="텍스트를 입력하세요."/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+														</td>
+													</tr>
+													<!-- //세트 -->
+													<!-- 세트 -->
+													<tr>
+														<td rowpspan="2" class="check_solo"><input type="checkbox"/></td>
+														<td class="prd_info">
+															<strong><a href="">[JBROS] 윌 투포켓 체크패턴 셔츠</a></strong>
+															<p><a href="">선택 02_머스타트_size_55</a></p>
+														</td>
+														<td class="quantity">
+															<div class="quantity_sel select_wrap">
+																<label for="">1</label>
+																<select name="">
+																	<option>1</option>
+																</select>
+															</div>
+														</td>
+														<td class="price"><span>12,300원</span></td>
+													</tr>
+													<tr>
+														<td colspan="4" class="reason">
+															<div class="reason_sel select_wrap">
+																<label for="">취소사유를 선택해 주세요</label>
+																<select name="">
+																	<option>취소사유를 선택해 주세요</option>
+																</select>
+															</div>
+															<span class="reason_input"><input type="text" value="텍스트를 입력하세요."/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+														</td>
+													</tr>
+													<!-- //세트 -->
+													<!-- 세트 -->
+													<tr>
+														<td rowpspan="2" class="check_solo"><input type="checkbox"/></td>
+														<td class="prd_info">
+															<strong><a href="">[JBROS] 윌 투포켓 체크패턴 셔츠</a></strong>
+															<p><a href="">선택 02_머스타트_size_55</a></p>
+														</td>
+														<td class="quantity">
+															<div class="quantity_sel select_wrap">
+																<label for="">1</label>
+																<select name="">
+																	<option>1</option>
+																</select>
+															</div>
+														</td>
+														<td class="price"><span>12,300원</span></td>
+													</tr>
+													<tr>
+														<td colspan="4" class="reason">
+															<div class="reason_sel select_wrap">
+																<label for="">취소사유를 선택해 주세요</label>
+																<select name="">
+																	<option>취소사유를 선택해 주세요</option>
+																</select>
+															</div>
+															<span class="reason_input"><input type="text" value="텍스트를 입력하세요."/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+														</td>
+													</tr>
+													<!-- //세트 -->
+													<!-- 세트 -->
+													<tr>
+														<td rowpspan="2" class="check_solo"><input type="checkbox"/></td>
+														<td class="prd_info">
+															<strong>[JBROS] 윌 투포켓 체크패턴 셔츠</strong>
+															<p>선택 02_머스타트_size_55</p>
+														</td>
+														<td class="quantity">
+															<div class="quantity_sel select_wrap">
+																<label for="">1</label>
+																<select name="">
+																	<option>1</option>
+																</select>
+															</div>
+														</td>
+														<td class="price"><span>12,300원</span></td>
+													</tr>
+													<tr>
+														<td colspan="4" class="reason">
+															<div class="reason_sel select_wrap">
+																<label for="">취소사유를 선택해 주세요</label>
+																<select name="">
+																	<option>취소사유를 선택해 주세요</option>
+																</select>
+															</div>
+															<span class="reason_input"><input type="text" value="텍스트를 입력하세요."/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+														</td>
+													</tr>
+													<!-- //세트 -->
+													<!-- 세트 -->
+													<tr>
+														<td rowpspan="2" class="check_solo"><input type="checkbox"/></td>
+														<td class="prd_info">
+															<strong><a href="">[JBROS] 윌 투포켓 체크패턴 셔츠</a></strong>
+															<p><a href="">선택 02_머스타트_size_55</a></p>
+														</td>
+														<td class="quantity">
+															<div class="quantity_sel select_wrap">
+																<label for="">1</label>
+																<select name="">
+																	<option>1</option>
+																</select>
+															</div>
+														</td>
+														<td class="price"><span>12,300원</span></td>
+													</tr>
+													<tr>
+														<td colspan="4" class="reason">
+															<div class="reason_sel select_wrap">
+																<label for="">취소사유를 선택해 주세요</label>
+																<select name="">
+																	<option>취소사유를 선택해 주세요</option>
+																</select>
+															</div>
+															<span class="reason_input"><input type="text" value="텍스트를 입력하세요."/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+														</td>
+													</tr>
+													<!-- //세트 -->
+													<!-- 세트 -->
+													<tr>
+														<td rowpspan="2" class="check_solo"><input type="checkbox"/></td>
+														<td class="prd_info">
+															<strong><a href="">[JBROS] 윌 투포켓 체크패턴 셔츠</a></strong>
+															<p><a href="">선택 02_머스타트_size_55</a></p>
+														</td>
+														<td class="quantity">
+															<div class="quantity_sel select_wrap">
+																<label for="">1</label>
+																<select name="">
+																	<option>1</option>
+																</select>
+															</div>
+														</td>
+														<td class="price"><span>12,300원</span></td>
+													</tr>
+													<tr>
+														<td colspan="4" class="reason">
+															<div class="reason_sel select_wrap">
+																<label for="">취소사유를 선택해 주세요</label>
+																<select name="">
+																	<option>취소사유를 선택해 주세요</option>
+																</select>
+															</div>
+															<span class="reason_input"><input type="text" value="텍스트를 입력하세요."/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+														</td>
+													</tr>
+													<!-- //세트 -->
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+								<script type="text/javascript">
+									$(function(){
+										$(".nano").nanoScroller({alwaysVisible: true});
+									});
+								</script>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //리스트 -->
+
+				<br/><br/>
+
+				<!-- 반품처 정보 -->
+				<div class="return_info">
+					<div class="layer_detail_top">
+						<strong>반품처 정보</strong>
+						<span>* 반품처 주소를 꼭 확인해주세요</span>
+					</div>
+					<table class="horizontal_type" summary="이 표는 반품처, 배송지 주소, 연락처, 발송업체의 구성으로 이루어진 표입니다.">
+						<caption>반품처 정보</caption>
+						<colgroup>
+							<col width="100"/>
+							<col width="400"/>
+							<col width="75"/>
+							<col width="155"/>
+						</colgroup>
+						<tr>
+							<th>반품처</th>
+							<td colspan="3">안지현</td>
+						</tr>
+						<tr>
+							<th>배송지 주소</th>
+							<td colspan="3">(54787) 서울 서초구 명달로 서원빌딩 2~5층</td>
+						</tr>
+						<tr>
+							<th>연락처</th>
+							<td colspan="3">010-1234-5678 </td>
+						</tr>
+						<tr>
+							<th>발송업체</th>
+							<td>대한통운택배 </td>
+							<th>택배비</th>
+							<td>2,500원 </td>
+						</tr>
+					</table>
+				</div>
+				<!-- //반품처 정보 -->
+
+				<!-- 환불계좌 정보 -->
+				<div class="return_info">
+					<div class="layer_detail_top">
+						<strong>환불계좌 정보</strong>
+					</div>
+					<table class="horizontal_type" summary="이 표는 반품처, 배송지 주소, 연락처, 발송업체의 구성으로 이루어진 표입니다.">
+						<caption>반품처 정보</caption>
+						<colgroup>
+							<col width="100"/>
+							<col width="400"/>
+							<col width="75"/>
+							<col width="155"/>
+						</colgroup>
+						<tr>
+							<th>계좌번호</th>
+							<td colspan="3" class="return_number">
+								<div class="return_number_sel select_wrap">
+									<label for="">은행 선택</label>
+									<select name="">
+										<option>은행 선택</option>
+										<option>기업은행</option>
+										<option>국민은행</option>
+										<option>우리은행</option>
+										<option>하나은행</option>
+									</select>
+								</div>
+								<span class="reason_input"><input type="text" value="- 를 제외한 계좌번호 입력"/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+								<span class="reason_input"><input type="text" value="예금주"/> <button type="button" class="sprite_mypage btnValDel"></button></span>
+								<span class="return_number_check"><input type="checkbox" id="use"/><label for="use">주환불계좌 사용</label></span>
+							</td>
+						</tr>
+						<tr>
+							<th>현재 환불계좌</th>
+							<td colspan="3" class="current_return_number"><a href="">기업 01056781234 홍길동</a></td>
+						</tr>
+					</table>
+				</div>
+				<!-- //환불계좌 정보 -->
+
+
+				<!-- 가격 -->
+				<table class="price_type" summary="이 표는 상품 결제금액, 배송비, 환불금액의 구성으로 이루어진 표입니다.">
+					<caption>가격 리스트</caption>
+					<colgroup>
+						<col width="237"/>
+						<col width="237"/>
+						<col width="236"/>
+					</colgroup>
+					<tr>
+						<td>
+							<div class="price_view">
+								<span>상품 결제금액</span>
+								<strong class="number_type">42,500</strong><em class="won">원</em>
+							</div>
+						</td>
+						<td class="mid"> 
+							<div class="price_view">
+								<span>배송비</span>
+								<strong class="number_type minus">2,500</strong><em class="won">원</em><!-- 마이너스일때 minus클래스 추가 -->
+							</div>
+						</td>
+						<td>
+							<div class="price_view return">
+								<span>환불금액</span>
+								<strong class="number_type">40,000</strong><em class="won">원</em>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<!-- //가격 -->
+
+				<!-- 팁 -->
+				<div class="layer_tips">
+					<ul>
+						<li>* 업체배송 상품은 반품처 정보를 확인하시고, 7일 이내 직접 반송해주셔야 합니다.</li>
+						<li>* 업체 택배사가 훼미리 혹은 세덱스 택배인 경우 반품 시 고객센터 1:1 문의로 내용을 보내주시기 바랍니다.</li>
+						<li>* 도서산간, 제주도에서 반품 시 추가운임이 발생 할 수 있습니다.</li>
+					</ul>
+				</div>
+				<!-- //팁 -->
+			</div>
+
+			<!-- 버튼 -->
+			<div class="layer_btns">
+				<button type="button" class="sprite_mypage btn_big_layer" onclick="hide_modal('order_return_apply'); return false;">신청하기</button>
+			</div>
+			<!-- //버튼 -->
+
+			<button type="button" class="sprite_mypage btn_layer_close" onclick="hide_modal('order_return_apply'); return false;"><span class="blind">close</span></button>
+		</div>
+	</div>
+	<!-- //반품신청 -->
+
+	<script type="text/javascript">
+		$(function(){
+			show_modal('order_return_apply');
+		});
+	</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="Application/xhtml+xml; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="koos" />
+<meta name="copyright" content="" />
+<title>오가게 IA</title>
+<style type="text/css">
+* { margin:0; padding:0;}
+h1 { font-size:20px; margin:10px auto 20px auto; width:100%; text-align:center;}
+table.pageList { font:11px/16px Dotum; width:100%; background-color:#999; margin:0 0 30px;text-align:center;}
+table.pageList th { border-right:1px solid #adb1b3; border-bottom:1px solid #adb1b3;  background-color:#666666; height:35px; text-align:center; color:#fff; font-size:13px;}
+table.pageList td { border-right:1px solid #adb1b3; border-bottom:1px solid #adb1b3; padding:5px 5px 5px 20px; vertical-align:top; background-color:#fff;vertical-align:middle}
+table.pageList td.ailgnL{text-align:left}
+table.pageList td a:link, a:visited { font-weight:bold; color:#0072dc; text-decoration: none; font-size:12px; }
+table.pageList td a:hover, a:active { font-weight:bold; color:#32443d; text-decoration: underline; font-size:12px;}
+table.pageList tr.end td { background-color:#feffd7;}
+table.pageList tr.jspEnd td { background-color:#f8effd;}
+
+p { font-size:12px; color:#999999; margin:10px;}
+p a { margin-right:30px;}
+
+span { display:block; color:#bb3134;}
+</style>
+
+</head>
+
+<body>
+<h1>:::  오가게 IA :::</h1>
+
+<p></p>
+
+<table cellspacing="0" cellpadding="0"  id="tbList1" class="pageList">
+<colgroup>
+	<col width="" />
+	<col width="" />
+	<col width="" />
+	<col width="" />
+	<col width="" />
+</colgroup>
+<thead>
+<tr>
+	<th>1 Depth</th>
+	<th>2 Depth</th>
+	<th>folder</th>
+	<th>file</th>
+	<th>비고</th>
+</tr>
+</thead>
+<tbody>
+	<tr>
+		<td class="ailgnL" rowspan="28">마이페이지</td>
+		<td class="ailgnL">전체주문내역</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역.html" target="_blank">마이페이지_전체주문내역.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전체주문내역 - 주문상세</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_주문상세.html" target="_blank">마이페이지_전체주문내역_주문상세.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전체주문내역 - 반품신청</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_반품신청.html" target="_blank">마이페이지_전체주문내역_반품신청.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전체주문내역 - 취소신청</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_취소신청.html" target="_blank">마이페이지_전체주문내역_취소신청.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전체주문내역 - 취소신청완료</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_취소신청완료.html" target="_blank">마이페이지_전체주문내역_취소신청완료.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>	
+	<tr>
+		<td class="ailgnL">쿠폰-사용가능쿠폰</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_쿠폰_사용가능쿠폰.html" target="_blank">마이페이지_쿠폰_사용가능쿠폰.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">쿠폰-지난쿠폰내역</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_쿠폰_지난쿠폰내역.html" target="_blank">마이페이지_쿠폰_지난쿠폰내역.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">쿠폰-등록하기</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_쿠폰_등록하기.html" target="_blank">마이페이지_쿠폰_등록하기.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL">적립금_전체내역</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_적립금_전체내역.html" target="_blank">마이페이지_적립금_전체내역.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">적립금_적립내역</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_적립금_적립내역.html" target="_blank">마이페이지_적립금_적립내역.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">적립금_사용내역</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_적립금_사용내역.html" target="_blank">마이페이지_적립금_사용내역.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">적립금_적립금다운로드가능한내역</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_적립금_적립금다운로드가능한내역.html" target="_blank">마이페이지_적립금_적립금다운로드가능한내역.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL">상품평_작성한리뷰</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_상품평_작성한리뷰.html" target="_blank">마이페이지_상품평_작성한리뷰.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상품평_작성할수있는리뷰</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_상품평_작성할수있는리뷰.html" target="_blank">마이페이지_상품평_작성할수있는리뷰.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상품평_작성할수있는리뷰_리뷰작성</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_상품평_작성할수있는리뷰_리뷰작성.html" target="_blank">마이페이지_상품평_작성할수있는리뷰_리뷰작성.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상품평_작성할수있는리뷰_작성한리뷰</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_상품평_작성할수있는리뷰_작성한리뷰.html" target="_blank">마이페이지_상품평_작성할수있는리뷰_작성한리뷰.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL">마이브랜드_마이브랜드</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_마이브랜드_마이브랜드.html" target="_blank">마이페이지_마이브랜드_마이브랜드.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">마이브랜드_구매브랜드</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_마이브랜드_구매브랜드.html" target="_blank">마이페이지_마이브랜드_구매브랜드.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">마이브랜드_마이브랜드_등록</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_마이브랜드_마이브랜드_등록.html" target="_blank">마이페이지_마이브랜드_마이브랜드_등록.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL">영수증발행</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_영수증발행.html" target="_blank">마이페이지_영수증발행.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">현금영수증발행요청</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_현금영수증발행요청.html" target="_blank">마이페이지_현금영수증발행요청.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL">환불계좌관리</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_환불계좌관리.html" target="_blank">마이페이지_환불계좌관리.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">환불계좌관리_계좌등록</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_환불계좌관리_계좌등록.html" target="_blank">마이페이지_환불계좌관리_계좌등록.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">위시리스트</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_위시리스트.html" target="_blank">마이페이지_위시리스트.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">교환신청01</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_교환신청01.html" target="_blank">마이페이지_전체주문내역_교환신청01.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">교환신청02</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_교환신청02.html" target="_blank">마이페이지_전체주문내역_교환신청02.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">교환신청03</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_교환신청03.html" target="_blank">마이페이지_전체주문내역_교환신청03.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">교환신청04</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mypage/마이페이지_전체주문내역_교환신청04.html" target="_blank">마이페이지_전체주문내역_교환신청04.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="13">고객센터</td>
+		<td class="ailgnL">팝업</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_전화상담.html" target="_blank">고객센터_전화상담.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="4">FAQ</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_메인.html" target="_blank">고객센터_메인.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_faq_검색결과.html" target="_blank">고객센터_faq_검색결과.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_faq_검색결과없음.html" target="_blank">고객센터_faq_검색결과없음.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_faq_메뉴선택.html" target="_blank">고객센터_faq_메뉴선택.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" >공지사항</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_공지사항.html" target="_blank">고객센터_공지사항.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="2">쇼핑Q</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_쇼핑Q.html" target="_blank">고객센터_쇼핑Q.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_쇼핑Q_비로그인.html" target="_blank">고객센터_쇼핑Q_비로그인.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="5">서비스안내</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_서비스안내_바로오가게.html" target="_blank">고객센터_서비스안내_바로오가게.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_서비스안내_셀렉샵.html" target="_blank">고객센터_서비스안내_셀렉샵.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_서비스안내_회원혜택.html" target="_blank">고객센터_서비스안내_회원혜택.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_서비스안내_상담신호등서비스.html" target="_blank">고객센터_서비스안내_상담신호등서비스.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="customer_center/고객센터_서비스안내_SFF전문관.html" target="_blank">고객센터_서비스안내_SFF전문관.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="16">상품</td>
+		<td class="ailgnL" rowspan="8">브랜드</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_HOME.html" target="_blank">브랜드_HOME.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_전체보기.html" target="_blank">브랜드_전체보기.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_티셔츠.html" target="_blank">브랜드_티셔츠.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_니트가디건.html" target="_blank">브랜드_니트가디건.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_세일.html" target="_blank">브랜드_세일.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_상품행사.html" target="_blank">브랜드_상품행사.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_검색결과.html" target="_blank">브랜드_검색결과.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="brand/브랜드_관심중인회원.html" target="_blank">브랜드_관심중인회원.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">아이템</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/아이템.html" target="_blank">아이템.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="7">상품상세</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/상세.html" target="_blank">상세.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/상세_상품평있을때.html" target="_blank">상세_상품평있을때.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/상세_쿠폰다운로드.html" target="_blank">상세_쿠폰다운로드.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/상세_장바구니.html" target="_blank">상세_장바구니.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/상세_위시리스트.html" target="_blank">상세_위시리스트.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/상세_미리계산하기.html" target="_blank">상세_미리계산하기.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="product/상세_모바일앱 구매하기.html" target="_blank">상세_모바일앱 구매하기.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="12">기타</td>
+		<td class="ailgnL" rowspan="3">이벤트</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="event/이벤트_홈.html" target="_blank">이벤트_홈.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="event/이벤트_이벤트리스트.html" target="_blank">이벤트_이벤트리스트.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="event/이벤트_당첨자발표.html" target="_blank">이벤트_당첨자발표.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="2">혜택 안내</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="event/이벤트_회원혜택.html" target="_blank">회원혜택.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="event/이벤트_회원혜택_비로그인.html" target="_blank">회원혜택_비로그인.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">신상</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="etc/신상.html" target="_blank">신상.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">세일</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="etc/세일.html" target="_blank">세일.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="3">베스트</td>
+		<td class="ailgnL">스타일</td>
+		<td class="ailgnL"><a href="etc/베스트_스타일.html" target="_blank">베스트_스타일.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">스토어</td>
+		<td class="ailgnL"><a href="etc/베스트_스토어.html" target="_blank">베스트_스토어.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">아이템</td>
+		<td class="ailgnL"><a href="etc/베스트_아이템.html" target="_blank">베스트_아이템.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="2">스타일</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="etc/스타일_리스트.html" target="_blank">스타일_리스트.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="etc/스타일_상세.html" target="_blank">스타일_상세.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	
+    <tr>
+		<td class="ailgnL" rowspan="2">검색</td>
+		<td class="ailgnL">검색결과</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="search/og_search.html" target="_blank">og_search.html</a></td>
+		<td class="ailgnL">20151229</td>
+	</tr>
+    <tr>
+		<td class="ailgnL">검색결과 없음</td>
+        <td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="search/og_search_none.html" target="_blank">og_search_none.html</a></td>
+		<td class="ailgnL">20151229</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">스토어</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="store_style/style.html" target="_blank">style.html</a></td>
+		<td class="ailgnL">20160106</td>
+	</tr>
+    <tr>
+		<td class="ailgnL">기획전</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="exhibition/exhibition.html" target="_blank">exhibition.html</a></td>
+		<td class="ailgnL">20160106</td>
+	</tr>
+    <tr>
+		<td class="ailgnL">전문관</td>
+		<td class="ailgnL">SFF</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="shop/sff.html" target="_blank">sff.html</a></td>
+		<td class="ailgnL">20160111</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="4">메일</td>
+		<td class="ailgnL">주문메일</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mail/order.html" target="_blank">order.html</a></td>
+		<td class="ailgnL">20160114</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">교환메일</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mail/exchange.html" target="_blank">exchange.html</a></td>
+		<td class="ailgnL">20160114</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">반품메일</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mail/return.html" target="_blank">return.html</a></td>
+		<td class="ailgnL">20160114</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">쇼핑Q</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="mail/shopQ.html" target="_blank">shopQ.html</a></td>
+		<td class="ailgnL">20160114</td>
+	</tr>
+
+</tbody>
+</table>
+
+
+
+
+<script type="text/javascript">
+var tbList1 = document.getElementById('tbList1').getElementsByTagName('tr');
+var tmpObj;
+for(i=0;i<tbList1.length;i++) 
+{
+	tbList1[i].onmouseover = function() 
+	{	
+		tmpObj = this.getElementsByTagName('td');
+		for(j=0;j<tmpObj.length;j++)
+		{
+			tmpObj[j].style.backgroundColor = "#e8ffa9";
+		}
+	}
+	
+	tbList1[i].onmouseout = function() 
+	{ 
+		if(!this.getElementsByTagName('td')[0]) return false;
+		tmpObj = this.getElementsByTagName('td');
+		for(j=0;j<tmpObj.length;j++)
+		{
+			tmpObj[j].style.backgroundColor = "";
+		}
+
+	}
+	
+}
+</script>
+
+
+</body>
+</html>
+

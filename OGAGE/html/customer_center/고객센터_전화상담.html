@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        <meta name="" content="" />
+        <title>오가게</title>      
+		
+		<link href="http://cdn.halfclub.com/Images_Web/Ogage/service_ogage.ico" rel="shortcut icon" id="favicon" />
+		<link href="../../css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/common.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- 마이페이지 css -->
+		<link href="../../css/customer.css" rel="stylesheet" type="text/css" />
+		<!-- //마이페이지 css -->
+
+		<script src="http://www.halfclub.com/Common/Javascript/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="../../js/customer.js" type="text/javascript"></script>
+
+		<!-- //jquery ui -->
+		<link href="../../css/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css" />
+		<script src="../../js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+		<!-- jquery ui -->
+    </head>
+    <body>
+
+	<div id="wrap">
+		
+		<!-- skip 영역 -->
+		<div id="skip">
+			<h2>스킵</h2>
+			<ul>
+				<li><a href="#header_gnb">카테고리 메뉴 바로가기</a></li>
+				<li><a href="#content">본문바로가기</a></li>
+			</ul>
+		</div>
+		<!-- //skip 영역 -->
+
+		<!-- header -->
+		<div id="header" class="header_wrap">
+			<div class="header_util">
+				<ul class="util_left">
+					<li class="mall_select"><a href="javascript:;">오가게</a></li>
+					<li class="direct_list"><a href="javascript:;"><span>바로방문</span><em class="direct_on"></em></a></li>
+					<li><a href="javascript:;">즐겨찾기</a></li>
+					<li><a href="javascript:;">모바일</a></li>
+				</ul>
+				<ul class="util_right">
+					<li><a href="javascript:;">로그인</a></li>
+					<li><a href="javascript:;">회원가입</a></li>
+					<li><a href="javascript:;">주문/배송</a></li>
+					<li><a href="javascript:;">마이페이지</a></li>
+					<li><a href="javascript:;">고객센터</a></li>
+				</ul>		
+			</div>
+			<div class="header_top">
+				<h1 class="logo">
+					<a href="javascript:;"><img src="../../img/common/logo_ogage.gif" alt="ogage" /></a>
+				</h1>
+				<div class="header_top_r">
+					<div class="hot_keyword">
+						<ul>
+							<li><a href="javascript:;">앵글부츠</a></li>
+						</ul>
+						<a href="javascript:;" title="이전검색어" class="hot_keyword_prev"></a>
+						<a href="javascript:;" title="다음검색어" class="hot_keyword_next"></a>
+					</div>
+					<div class="header_search">					
+						<input type="text" name="search" id="search" class="header_search_input" />	
+						<a href="javascript:;" class="btn_search" title="검색"></a>
+					</div>
+				</div>		
+			</div>
+			<div id="header_gnb" class="header_gnb">				
+				<div class="gnb_area">
+					<div class="gnb_special"><a href="javascript:;">소호샵#</a></div>
+					<ul class="gnb_left">						
+						<li class="active">
+							<a href="javascript:;">여성</a>
+							<div class="gnb_sub_layer">
+								<div class="gnb_layer_left">
+									<p class="sub_tit">SHOP BY PRODUCT</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">티셔츠</a></li>
+										<li><a href="javascript:;">니트/가디건</a></li>
+										<li><a href="javascript:;">블라우스/셔츠</a></li>
+										<li><a href="javascript:;">베스트/조끼</a></li>
+										<li><a href="javascript:;">스커트</a></li>
+										<li><a href="javascript:;">원피스</a></li>
+										<li><a href="javascript:;">팬츠</a></li>
+										<li><a href="javascript:;">데님팬츠</a></li>
+										<li><a href="javascript:;">자켓</a></li>
+										<li><a href="javascript:;">점퍼</a></li>
+									</ul>
+								</div>
+								<div class="gnb_layer_right">
+									<p class="sub_tit">TOP BRANDS</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">이란지</a></li>
+										<li><a href="javascript:;">립합</a></li>
+										<li><a href="javascript:;">스타일온미</a></li>
+										<li><a href="javascript:;">메이블루</a></li>
+										<li><a href="javascript:;">아뜨랑스</a></li>
+										<li><a href="javascript:;">스타일멘토</a></li>
+										<li><a href="javascript:;">큐니걸스</a></li>
+										<li><a href="javascript:;">PEPER</a></li>
+										<li><a href="javascript:;">메이뜰</a></li>
+										<li><a href="javascript:;">MAGJAY</a></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li>
+                            <a href="javascript:;">남성</a>
+                            <div class="gnb_sub_layer">
+								<div class="gnb_layer_left">
+									<p class="sub_tit">SHOP BY PRODUCT</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">티셔츠</a></li>
+										<li><a href="javascript:;">니트/가디건</a></li>
+										<li><a href="javascript:;">블라우스/셔츠</a></li>
+										<li><a href="javascript:;">베스트/조끼</a></li>
+										<li><a href="javascript:;">스커트</a></li>
+										<li><a href="javascript:;">원피스</a></li>
+										<li><a href="javascript:;">팬츠</a></li>
+										<li><a href="javascript:;">데님팬츠</a></li>
+										<li><a href="javascript:;">자켓</a></li>
+										<li><a href="javascript:;">점퍼</a></li>
+									</ul>
+								</div>
+								<div class="gnb_layer_right">
+									<p class="sub_tit">TOP BRANDS</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">이란지</a></li>
+										<li><a href="javascript:;">립합</a></li>
+										<li><a href="javascript:;">스타일온미</a></li>
+										<li><a href="javascript:;">메이블루</a></li>
+										<li><a href="javascript:;">아뜨랑스</a></li>
+										<li><a href="javascript:;">스타일멘토</a></li>
+										<li><a href="javascript:;">큐니걸스</a></li>
+										<li><a href="javascript:;">PEPER</a></li>
+										<li><a href="javascript:;">메이뜰</a></li>
+										<li><a href="javascript:;">MAGJAY</a></li>
+									</ul>
+								</div>
+							</div>
+                        </li>
+						<li>
+                            <a href="javascript:;">잡화</a>
+                            <div class="gnb_sub_layer">
+								<div class="gnb_layer_left">
+									<p class="sub_tit">SHOP BY PRODUCT</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">티셔츠</a></li>
+										<li><a href="javascript:;">니트/가디건</a></li>
+										<li><a href="javascript:;">블라우스/셔츠</a></li>
+										<li><a href="javascript:;">베스트/조끼</a></li>
+										<li><a href="javascript:;">스커트</a></li>
+										<li><a href="javascript:;">원피스</a></li>
+										<li><a href="javascript:;">팬츠</a></li>
+										<li><a href="javascript:;">데님팬츠</a></li>
+										<li><a href="javascript:;">자켓</a></li>
+										<li><a href="javascript:;">점퍼</a></li>
+									</ul>
+								</div>
+								<div class="gnb_layer_right">
+									<p class="sub_tit">TOP BRANDS</p>
+									<ul class="sub_list">
+										<li><a href="javascript:;">이란지</a></li>
+										<li><a href="javascript:;">립합</a></li>
+										<li><a href="javascript:;">스타일온미</a></li>
+										<li><a href="javascript:;">메이블루</a></li>
+										<li><a href="javascript:;">아뜨랑스</a></li>
+										<li><a href="javascript:;">스타일멘토</a></li>
+										<li><a href="javascript:;">큐니걸스</a></li>
+										<li><a href="javascript:;">PEPER</a></li>
+										<li><a href="javascript:;">메이뜰</a></li>
+										<li><a href="javascript:;">MAGJAY</a></li>
+									</ul>
+								</div>
+							</div>
+                        </li>
+					</ul>
+					<ul class="gnb_right">
+						<li><a href="javascript:;">신상</a></li>
+						<li class="active"><a href="javascript:;">세일</a></li>
+						<li><a href="javascript:;">베스트</a></li>
+						<li><a href="javascript:;">기획전</a></li>
+						<li><a href="javascript:;">이벤트</a></li>
+					</ul>
+				</div>			
+			</div>		
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div id="content" class="content">
+
+			<!-- 고객센터 -->
+			<div class="customer_center">
+				<!-- 타이틀 -->
+				<div class="page_tit">
+					<h3><a href="">고객센터</a></h3>
+				</div>
+				<!-- //타이틀 -->
+				
+				<!-- 고객센터 유틸 -->
+				<div class="customer_util">
+					<ul>
+						<li>
+							<a href="">
+								<em class="sprite_customer icon_board_counsel"></em> <span>게시판 상담</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<em class="sprite_customer icon_kakao_counsel"></em> <span>카카오톡 상담</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<em class="sprite_customer icon_partnership"></em> <span>입점 / 제휴 문의</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //고객센터 유틸 -->
+
+				<!-- 고객센터메뉴 및 신호등 -->
+				<div class="customer_menu">
+					<ul>
+						<li class="customer_home active">
+							<a href="">
+								<strong>HOME</strong>
+							</a>
+						</li>
+						<li class="customer_faq ">
+							<a href="">
+								<strong>FAQ</strong>
+							</a>
+						</li>
+						<li class="customer_notice ">
+							<a href="">
+								<strong>공지사항</strong>
+							</a>
+						</li>
+						<li class="customer_shoppingq ">
+							<a href="">
+								<strong>쇼핑 Q</strong>
+							</a>
+						</li>
+						<li class="customer_service ">
+							<a href="">
+								<strong>서비스 안내</strong>
+							</a>
+						</li>
+					</ul>
+					<div class="tel">
+						<div class="tel_in">
+							<a href="">
+								<p><span class="sprite_customer icon_tel"></span>전화상담</p>
+								<strong class="number_type">1588-1812</strong>
+							</a>
+							<a href="" class="btn_use_info">이용안내</a>
+						</div>
+					</div>
+				</div>
+				<!-- //고객센터메뉴 및 신호등 -->
+
+				<div class="customer_main_row">
+					<div class="left_row">
+						<strong class="row_tit">FAQ 빠른 안내</strong>
+						<div class="customer_srch_box">
+							<div class="fast_sel select_wrap">
+								<label for="">전체항목</label>
+								<select name="">
+									<option>전체항목</option>
+								</select>
+							</div>
+							<span class="inputs"><input type="text" /> <button type="button">검색</button></span>
+						</div>
+						<ul class="faq_article">
+							<li><a href="">주문/결제</a></li>
+							<li><a href="">교환</a></li>
+							<li><a href="">반품/환불</a></li>
+							<li><a href="">배송</a></li>
+							<li><a href="">쿠폰/적립금</a></li>
+							<li><a href="">쇼핑 Q</a></li>
+							<li><a href="">회원정보</a></li>
+							<li><a href="">영수증/세금 계산서</a></li>
+							<li><a href="">해외배송</a></li>
+							<li><a href="">사이트 이용</a></li>
+						</ul>
+
+					</div>
+					<div class="right_row">
+						<strong class="row_tit">공지사항</strong>
+						<div class="noticeSmallList">
+							<table>
+								<colgroup>
+									<col style="width:415px;"/>
+									<col style="width:90px;"/>
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="left">질문내용</th>
+										<th>날짜</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href=""><strong>[공지]</strong> LG U+ 전자결제 시스템 점검 작업 안내 LG U+ 전자결제 시스템 점검 작업 안내</a></td>
+										<td class="data">2015. 11. 01</td>
+									</tr>
+									<tr>
+										<td><a href=""><strong>[공지]</strong> 가상계좌 간헐적 장애 안내</a></td>
+										<td class="data">2015. 11. 01</td>
+									</tr>
+									<tr>
+										<td><a href=""><strong>[공지]</strong> 광복절 대체 공휴일에 따른 8월 14일(금)</a></td>
+										<td class="data">2015. 11. 01</td>
+									</tr>
+									<tr>
+										<td><a href=""><strong>[당첨자발표]</strong> LF 룰렛 적립금 이벤트</a></td>
+										<td class="data">2015. 11. 01</td>
+									</tr>
+									<tr>
+										<td><a href=""><strong>[당첨자발표]</strong> 7월 상품평 이벤트</a></td>
+										<td class="data">2015. 11. 01</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<a href="">+ 더보기</a>
+					</div>
+				</div>
+
+				<div class="customer_main_service_info">
+					<strong>서비스 안내</strong>
+					<div>
+						<ul>
+							<li><a href="고객센터_서비스안내_바로오가게.html" >바로오가게</a></li>
+							<li><a href="고객센터_서비스안내_셀렉샵.html" >셀렉샵</a></li>
+							<li><a href="고객센터_서비스안내_회원혜택.html" >회원 혜택</a></li>
+							<li><a href="고객센터_서비스안내_상담신호등서비스.html" >상담 신호등 서비스</a></li>
+							<li><a href="고객센터_서비스안내_SFF전문관.html" >S.F.F 전문관</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //고객센터 -->
+
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<div id="footer" class="footer_wrap">		
+			<div class="footer_top">
+				<div class="footer_in">
+					<div class="footer_notice">
+						<p class="footer_tit">Notice</p>
+						<ul class="footer_notice_list">
+							<li><a href="javascript:;">[당첨자발표] 펫스토어 1,000원 구매 찬스 이벤트 2차 당첨자 발표</a></li>
+						</ul>
+					</div>
+					<ul class="footer_util">
+						<li><a href="javascript:;">SNS</a></li>
+						<li><a href="javascript:;">Familly Site</a></li>
+						<li><a href="javascript:;">Private Brand</a></li>
+					</ul>
+				</div>			
+			</div>
+			<div class="footer_bot">
+				<div class="footer_in">
+					<ul class="footer_menu">
+						<li><a href="javascript:;">회사소개</a></li>
+						<li><a href="javascript:;">제휴 및 입점문의</a></li>
+						<li class="Private"><a href="javascript:;">개인정보취급방침</a></li>
+						<li><a href="javascript:;">청소년보호정책</a></li>
+						<li><a href="javascript:;">이용약관</a></li>
+					</ul>
+					<div class="footer_copyright">
+						<p>주소: 서울 서초구 서초동 1515-4번지 서원빌딩 2층~5층 (주)트라이씨클  대표이사: 윤치영  개인정보 보호 책임자: 유수종  호스트제공자:(주)트라이씨클</p>
+						<p>사업자 등록번호: 120-81-06331  통신판매업신고 제 강남 4959호  팩스: 02-3289-3321  이메일 문의: <a href="mailto:customer@tricycle.co.kr">customer@tricycle.co.kr</a></p>
+						<p>Copyright(c) OGAGE. All Rights Reserved.</p>
+					</div>
+					<div class="footer_info">
+						<p class="footer_tel">1588-1812</p>
+						<p>평일 am 09:00 ~ pm18:00</p>
+						<p>일요일 am 09:00 ~ pm 13:00</p>
+					</div>
+					<div>
+						<img src="../../img/common/footer_banner.gif" alt="" usemap="#footer_banner" />
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!-- //footer -->
+	
+	</div>
+
+
+	<!-- 전화상담 -->
+	<div class="layer_wrap layer_wrap2" id="call">
+		<div class="layer_inner layer_inner2">
+			<strong class="layer_tit">전화상담</strong>
+			<div class="layer_conts">
+				<div class="call_top">
+					<strong class="number_type">1588-1812</strong>
+					<ul>
+						<li>평일 : 09:00 ~ 18:00</li>
+						<li>토요일 : 09:00 ~ 13:00</li>
+					</ul>
+				</div>
+				<div class="call_tips">
+					<ol>
+						<li>
+							<strong>1. ARS 서비스 안내</strong>
+							<ul>
+								<li>- 오가게 고객센터는 배송, 취소, 반품, 환불, 변경, 회원등 문의를 ARS 상으로 조회, 접수하실 수 있습니다. 안내 중 ARS로 안내가 불가능한 상담은 상담원 연결을 해드립니다.</li>
+								<li>- 상담 시 주민등록번호와 주문번호를 정확히 기입하셔야 ARS 안내 및 상담이 원활이 진행되니 미리 확인해주세요.</li>
+								<li>- ARS로 문의하시기 불편하시거나 문의하실 사항이 많은 경우에는 쇼핑Q 게시판을 이용해주시기 바랍니다.</li>
+							</ul>
+						</li>
+						<li>
+							<strong>2. ARS 이용방법</strong>
+							<ul>
+								<li>- 1단계 : 1588-1812 발신</li>
+								<li>- 2단계 : 회원, 비회원 입력</li>
+								<li>
+									- 3단계 : 문의유형 선택
+									<ol>
+										<li>1) 반품신청 → 반품신청 접수</li>
+										<li>2) 배송조회 → 배송상황 안내</li>
+										<li>3) 환불조회 → 품절, 취소, 반품의 환불처리 상황 안내</li>
+										<li>4) 취소,변경 → 주문취소, 변경, 기타 문의</li>
+									</ol>
+								</li>
+								<li>- 4단계 : 주문번호, 생년월일 입력</li>
+								<li>- 5단계 : 상품 선택 후 ARS로 접수 및 조회 안내</li>
+								<li>- 6단계 : 종료 후 문자로 상담접수 안내</li>
+							</ul>
+						</li>
+					</ol>
+				</div>
+			</div>
+			<button type="button" class="sprite_customer btn_layer_close" onclick="hide_modal('call'); return false;"><span class="blind">close</span></button>
+		</div>
+	</div>
+	<!-- //전화상담 -->
+
+	<script type="text/javascript">
+		$(function(){
+			show_modal('call');
+		});
+	</script>
+
+
+	</body>
+</html>

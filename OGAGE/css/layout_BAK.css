@@ -1,0 +1,23 @@
+@charset "euc-kr";
+
+/* table */
+.tbl_type1{width:100%}
+.tbl_type1 th,.tbl_type1 td{padding:15px 0;text-align:center}
+.tbl_type1 th{border-bottom:1px solid #dddddf;background:url(../img/common/bar1.gif) no-repeat 0 50%;font-size:14px;color:#242424}
+.tbl_type1 td{border-left:1px solid #eef0ef;border-bottom:1px solid #eef0ef;color:#8b8b8b}
+
+.tbl_type2{width:100%}
+.tbl_type2 th,.tbl_type2 td{padding:13px 0;text-align:left}
+.tbl_type2 th{border-bottom:1px solid #eef0ef;background:url(../img/common/bar1.gif) no-repeat right 50%;font-size:13px;color:#555;text-indent:24px}
+.tbl_type2 td{border-bottom:1px solid #eef0ef;color:#8b8b8b;text-indent:30px;font-size:13px}
+
+.tbl_type3{width:100%}
+.tbl_type3 th,.tbl_type3 td{padding:18px 0;border-bottom:1px solid #dddddf;background:#f4f4f4;text-align:left}
+.tbl_type3 th{border-left:1px solid #dddddf;font-size:13px;font-weight:normal;color:#555;text-align:left;text-indent:24px}
+.tbl_type3 th:first-child{border-left:0}
+.tbl_type3 td{font-size:16px;font-family:NanumGothicBold;color:#242424;text-align:right}
+
+/* ¼¿·ºÆ®¹Ú½º */
+.select_wrap{position:relative;width:100px;height:28px;border:1px solid #d7d8dc;background:#fff url(../img/common/arrow2.png) no-repeat right 11px;font-size:12px;line-height:28px;color:#242424;text-align:left}
+.select_wrap label{position:absolute;top:0;left:10px;font-size:12px;color:#242424}
+.select_wrap select{font-size:12px;color:#242424;-webkit-appearance:none;opacity:0;filter:alpha(opacity=0)}
