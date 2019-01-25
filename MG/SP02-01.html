@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>MG새마을금고 Push시스템</title>
+	<link rel="stylesheet" type="text/css" href="css/mg/common.css">
+	<link rel="stylesheet" type="text/css" href="css/mg/MG.v1.css">
+	<script src="js/mg/jquery-2.2.2.min.js"></script>
+	<script src="js/mg/jquery.plugin.js"></script>
+	<script src="js/mg/MG.v1.js"></script>
+</head>
+<body class="pageType2">
+	<!-- lnb -->
+	<!--div class="lnb">
+		<div class="in">
+			<strong>전체메뉴</strong>
+			<nav class="nav">
+				<ul class="depth1">
+					<li><a href="SP02-01.html"><i class="mg iconLnb1"></i>스마트알림</a></li>
+					<li><a href="SP02-02.html"><i class="mg iconLnb2"></i>입출금</a></li>
+					<li><a href="SP03-03.html"><i class="mg iconLnb3"></i>금융안내</a></li>
+					<li><a href="SP04-04.html"><i class="mg iconLnb4"></i>체크카드</a></li>
+					<li><a href="SP05-05.html"><i class="mg iconLnb5"></i>공제</a></li>
+					<li class="sub">
+						<a href=""><i class="mg iconLnb6"></i>고객센터</a>
+						<ul class="depth2">
+							<li><a href="">- 공지사항</a></li>
+							<li><a href="">- 고객센터 연결</a></li>
+							<li><a href="">- 서비스 안내</a></li>
+							<li><a href="">- 이용약관</a></li>
+							<li><a href="">- 개인정보처리(취급)방침</a></li>
+							<li><a href="">- 버전확인</a></li>
+						</ul>
+					</li>
+					<li class="sub">
+						<a href=""><i class="mg iconLnb7"></i>설정</a>
+						<ul class="depth2">
+							<li><a href="">- 입출금 알림 설정</a></li>
+							<li><a href="">- 메시지 알림 설정</a></li>
+							<li><a href="">- PIN 비밀번호 변경</a></li>
+							<li><a href="">- 환경 설정</a></li>
+							<li><a href="">- 서비스 해지</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<button class="mg btnLnbClose">close</button>
+		</div>
+	</div-->
+	<!-- //lnb -->
+
+	<div class="wrap">
+		<!-- header -->
+		<!--header class="header">
+			<button type="button" class="mg btnMenu" id="btnMenu"><span class="blind">menu</span></button>
+			<h1 class="mg"><span class="blind">MG 새마을금고</span></h1>
+			<button type="button" class="mg btnLogout"><span class="blind">logout</span></button>
+		</header-->
+		<!-- //header -->
+
+		<!-- content -->
+		<section class="container">
+			<div class="content">
+				<!-- 탭메뉴 -->
+				<div class="gnb">
+					<ul>
+						<li class="active"><a href="SP02-01.html">스마트알림</a></li>
+						<li><a href="SP02-02.html">입출금</a></li>
+						<li><a href="SP02-03.html">금융안내</a></li>
+						<li><a href="SP02-04.html">체크카드</a></li>
+						<li><a href="SP02-05.html">공제</a></li>
+					</ul>
+				</div>
+				<!-- //탭메뉴 -->
+
+				<!-- 스마트 알리미 -->
+				<div class="lists">
+					<!-- 루프 -->
+					<div class="listLoop">
+						<!-- 날짜 및 시간-->
+						<div class="util">
+							<p class="date"><span><i class="mg bltDate"></i>2016년 03월 18일 금요일</span></p>
+						</div>
+						<!-- //날짜 및 시간-->
+						<ul class="list">
+							<!-- 입금 -->
+							<li class="deposit">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>입금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //입금 -->
+
+							<!-- 출금 -->
+							<li class="withdraw">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>출금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<span class="comment">내집마련 통장임</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //출금 -->
+
+							<!-- 알림 -->
+							<li class="notice">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>알림</span>
+											<span class="txt">만기일알림</span>
+										</div>
+										<div class="colum4">
+											<p>0000000000(아파트론)의 금번 이자납입일은 00월00일 입니다. </p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- //알림 -->
+
+							<!-- 배너 -->
+							<li class="banner">
+								<div class="in">
+									<a href=""><img src="images/mg/@temp.png" alt=""></a>
+								</div>
+							</li>
+							<!-- //배너 -->
+						</ul>
+					</div>
+					<!-- //루프 -->
+
+					<!-- 루프 -->
+					<div class="listLoop">
+						<!-- 날짜 및 시간-->
+						<div class="util">
+							<p class="date"><span><i class="mg bltDate"></i>2016년 03월 18일 토요일</span></p>
+						</div>
+						<!-- //날짜 및 시간-->
+						<ul class="list">
+							<!-- 입금 -->
+							<li class="deposit">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>입금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //입금 -->
+
+							<!-- 입금 -->
+							<li class="deposit">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>입금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //입금 -->
+
+							<!-- 입금 -->
+							<li class="deposit">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>입금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //입금 -->
+
+							<!-- 입금 -->
+							<li class="deposit">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>입금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //입금 -->
+
+							<!-- 입금 -->
+							<li class="deposit">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>입금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //입금 -->
+						</ul>
+					</div>
+					<!-- //루프 -->
+
+					<!-- 루프 -->
+					<div class="listLoop">
+						<!-- 날짜 및 시간-->
+						<div class="util">
+							<p class="date"><span><i class="mg bltDate"></i>2016년 03월 18일 일요일</span></p>
+						</div>
+						<!-- //날짜 및 시간-->
+						<ul class="list">
+							<!-- 출금 -->
+							<li class="withdraw">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>출금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<span class="comment">내집마련 통장임</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //출금 -->
+
+							<!-- 출금 -->
+							<li class="withdraw">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>출금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<span class="comment">내집마련 통장임</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //출금 -->
+
+							<!-- 출금 -->
+							<li class="withdraw">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>출금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<span class="comment">내집마련 통장임</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //출금 -->
+
+							<!-- 출금 -->
+							<li class="withdraw">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>출금</span>
+											<span class="txt">000-0000-000<br/>2016/03/18</span>
+										</div>
+										<div class="colum2">
+											<span class="bankingType">[ 인터넷 뱅킹 ]</span>
+											<span class="name">이범종</span>
+											<span class="comment">내집마련 통장임</span>
+											<strong class="price">999,999,999<em>원</em></strong>
+										</div>
+									</div>
+									<div class="total">
+										잔액 1,999,999,000원
+									</div>
+								</div>
+							</li>
+							<!-- //출금 -->
+						</ul>
+					</div>
+					<!-- //루프 -->
+
+					<!-- 루프 -->
+					<div class="listLoop">
+						<!-- 날짜 및 시간-->
+						<div class="util">
+							<p class="date"><span><i class="mg bltDate"></i>2016년 03월 18일 월요일</span></p>
+						</div>
+						<!-- //날짜 및 시간-->
+						<ul class="list">
+							<!-- 알림 -->
+							<li class="notice">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>알림</span>
+											<span class="txt">만기일알림</span>
+										</div>
+										<div class="colum4">
+											<p>0000000000(아파트론)의 금번 이자납입일은 00월00일 입니다. </p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- //알림 -->
+
+							<!-- 알림 -->
+							<li class="notice">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>알림</span>
+											<span class="txt">만기일알림</span>
+										</div>
+										<div class="colum4">
+											<p>0000000000(아파트론)의 금번 이자납입일은 00월00일 입니다. </p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- //알림 -->
+
+							<!-- 알림 -->
+							<li class="notice">
+								<span class="time">10:20:33</span>
+								<div class="in">
+									<div class="infos">
+										<div class="colum1">
+											<span class="type"><i class="mg"></i>알림</span>
+											<span class="txt">만기일알림</span>
+										</div>
+										<div class="colum4">
+											<p>0000000000(아파트론)의 금번 이자납입일은 00월00일 입니다. </p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- //알림 -->
+						</ul>
+					</div>
+					<!-- //루프 -->
+				</div>
+				<!-- //스마트 알리미 -->
+
+				<!-- 더보기 -->
+				<div class="btnMore">
+					<button type="button">더보기 <i class="mg iconListMore"></i></button>
+				</div>
+				<!-- //더보기 -->
+			</div>
+		</section>
+		<!-- //content -->
+
+		<!-- top -->
+		<div class="mg btnTop">
+			<button type="button"><span class="blind">top</span></button>
+		</div>
+		<!-- //top -->
+	</div>
+</body>
+</html>

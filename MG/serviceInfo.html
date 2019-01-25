@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>MG새마을금고 Push시스템</title>
+	<link rel="stylesheet" type="text/css" href="css/mg/common.css">
+	<link rel="stylesheet" type="text/css" href="css/mg/MG.v1.css">
+	<script src="js/mg/jquery-2.2.2.min.js"></script>
+	<script src="js/mg/jquery.plugin.js"></script>
+</head>
+<body>
+	<div class="carouselArea">
+		<div class="carousel">
+			<ul class="paneContainer">
+				<li class="pane" style="background:url('images/mg/img_service1.jpg') center top no-repeat;background-size:cover;"></li>
+				<li class="pane" style="background:url('images/mg/img_service2.jpg') center top no-repeat;background-size:cover;"></li>
+				<li class="pane" style="background:url('images/mg/img_service3.jpg') center top no-repeat;background-size:cover;"></li>
+			</ul>
+		</div>
+		<button type="button" class="mg btnInfoClose"><span class="blind">close</span></button>
+		<div class="paging">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
+
+		function Carousel(selector){
+			var self = this;
+			var $carousel = $(selector);
+			var $container = $('.paneContainer', selector);
+			var $panes = $('.pane', selector);
+
+			var paneWidth = 0;
+			var paneCount = $panes.length;
+			var panBoundary = .1   /* 20160511 수정 */
+
+			var currentPane = 0;
+
+			function setPaneSize(){
+				paneWidth = $carousel.width();
+				$panes.each(function(){
+					$(this).width(paneWidth);
+				});
+				$container.width(paneWidth * paneCount);
+			}
+
+			self.init = function(){
+				setPaneSize();
+				$(window).on('load resize orientationchange', function(){
+					setPaneSize();
+					self.showPane(currentPane);
+				});
+			}
+
+			self.showPane = function(index){
+				currentPane = Math.max(0, Math.min(index, paneCount - 1));
+				setContainerOffsetX(-currentPane * paneWidth, true);
+				$('.paging li').removeClass('active');
+				$('.paging li').eq(currentPane).addClass('active');
+			}
+
+			function setContainerOffsetX(offsetX, doTransition){
+				if(doTransition){
+					$container.addClass('transition').one(transitionEnd, function(){
+						$container.removeClass('transition');
+					});
+				}
+				$container.css({'left':offsetX});
+			}
+
+			self.next = function(){
+				self.showPane(++currentPane);
+			}
+
+			self.prev = function(){
+				self.showPane(--currentPane);
+			}
+
+			function handleHammer(e){
+				switch(e.type){
+					case 'swipeleft':
+					case 'swiperight':
+					handleSwipe(e);
+					break;
+					case 'panleft':
+					case 'panright':
+					case 'panend':
+					case 'pancancel':
+					handlePan(e);
+					break;
+				}
+			}
+
+			function handleSwipe(e){
+				switch(e.direction){
+					case Hammer.DIRECTION_LEFT:
+					self.next();
+					break;
+					case Hammer.DIRECTION_RIGHT:
+					self.prev();
+					break;
+				}
+				hammer.stop(true);
+			}
+
+			function outOfBound(){
+				var left = $container.position().left;
+				return(currentPane == 0 && left >= 0) || (currentPane == paneCount - 1 && left <= paneWidth * (paneCount - 1));
+			}
+
+			function handlePan(e){
+				switch(e.type){
+					case 'panleft':
+					case 'panright':
+					if(outOfBound()){
+						e.deltaX *= .2;
+					}
+					setContainerOffsetX(-currentPane * paneWidth + e.deltaX);
+					break;
+					case 'panend':
+					case 'pancancel':
+					if(Math.abs(e.deltaX) > paneWidth * panBoundary){
+						if(e.deltaX > 0){
+							self.prev();
+						}else{
+							self.next();
+						}
+					}else{
+						self.showPane(currentPane);
+					}
+					break;
+				}
+			}
+			var hammer = new Hammer($carousel[0]).on('swipeleft swiperight panleft panright panend pancancel', handleHammer);
+		}
+
+		var c = new Carousel('.carousel');
+		c.init();
+		c.showPane(0);
+
+		$('.paging li').click(function(){
+			var index = $('.paging li').index($(this));
+			c.showPane(index);
+		});
+	</script>
+</body>
+</html>
