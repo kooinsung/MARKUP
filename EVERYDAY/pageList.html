@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="Application/xhtml+xml; charset=utf-8" />
+<meta name="author" content="Webagency di9" />
+<meta name="copyright" content="킴스클럽" />
+<title>에브리데이 - 페이지 리스트</title>
+<style type="text/css">
+* { margin:0; padding:0;}
+h1 { font-size:20px; margin:10px auto 20px auto; width:100%; text-align:center;}
+table.pageList { font:11px/16px Dotum; width:100%; background-color:#999; margin:0 0 30px; }
+table.pageList th { border-right:1px solid #adb1b3; border-bottom:1px solid #adb1b3;  background-color:#666666; height:35px; text-align:center; color:#fff; font-size:13px;}
+table.pageList td { border-right:1px solid #adb1b3; border-bottom:1px solid #adb1b3; padding:5px; vertical-align:top; background-color:#fff;}
+table.pageList td a:link, a:visited { font-weight:bold; color:#0072dc; text-decoration: none; font-size:12px; }
+table.pageList td a:hover, a:active { font-weight:bold; color:#32443d; text-decoration: underline; font-size:12px;}
+table.pageList tr.end td { background-color:#feffd7;}
+table.pageList tr.jspEnd td { background-color:#f8effd;}
+
+p { font-size:12px; color:#999999; margin:10px;}
+p a { margin-right:30px;}
+</style>
+
+</head>
+
+<body>
+<h1>::: 에브리데이 리뉴얼 IA :::</h1>
+
+<p>02.16 가맹점 모집 추가 - 상단 GNB 변경 </p>
+
+<!-- 2012-02-16
+<p>
+	<a href="0819_everyday_html.zip">0819_에브리데이 html 압축 </a>
+	<a href="0819_everyday_jsp.zip">0819_에브리데이 jsp 압축 </a>
+</p>
+<p>
+	<a href="0822_everyday_html.zip">0822_에브리데이 html 압축 </a>
+	<a href="0822_everyday_jsp.zip">0822_에브리데이 jsp 압축 </a>
+	상단에 js 파일이 추가되었습니다. 전체 페이지 적용 되었습니다.
+</p>
+<p>
+	<a href="0825_everyday_jsp.zip">0825_에브리데이 jsp 압축 </a>
+	개인정보취급방침 추가 되었습니다. heder 와 side 메뉴, footer 도 수정 되었습니다.
+	전체적으로 컨텐츠 내용이 수정 되었습니다. 확인하시고 반영해 주세요.
+	파일을 열어 보시면 24, 25 일 날짜로 수정 된 파일들은 적용시켜 주세요.
+</p>
+<p>
+	<a href="0826_everyday_html.zip">0826_에브리데이 html 압축 </a>
+	<a href="0826_everyday_jsp.zip">0826_에브리데이 jsp 압축 </a>
+</p>
+<p>
+	<a href="0829_everyday_html.zip">0829_에브리데이 html 압축 </a>
+	<a href="0829_everyday_jsp.zip">0829_에브리데이 jsp 압축 </a>
+</p>
+//-->
+
+<table cellspacing="0" cellpadding="0"  id="tbList1" class="pageList">
+	<col width="12%" />
+	<col width="15%" />
+	<col width="15%" />
+	<col width="12%" />
+	<col width="12%" />
+	<col width="12%" />
+	<col width="10%" />
+	<col width="12%" />
+	<thead>
+	<tr>
+		<th>1 Depth</th>
+		<th>2 Depth</th>
+		<th>3 Depth</th>
+		<th>상세화면</th>
+		<th>폴더</th>
+		<th>PAGE CODE</th>
+		<th>작성자</th>
+		<th>비고</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr class="end">
+		<td>Main</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="main.html" target="_blank">index</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td rowspan="4">이마트 에브리데이</td>
+		<td>에브리데이 소개</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="4">/everyday</td>
+		<td><a href="everyday/introduction.html" target="_blank">introduction</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<!-- tr>
+		<td>CEO 인사말</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="" target="_blank">ceo</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr -->
+	<tr class="end">
+		<td>회사연혁</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="everyday/history.html" target="_blank">history</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<!-- tr>
+		<td>VISION</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="" target="_blank">vision</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr-->
+	<tr class="end">
+		<td>윤리경영</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="everyday/ethics.html" target="_blank">ethics</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>본사오시는 길</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="everyday/location.html" target="_blank">location</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+	<tr class="end">
+		<td rowspan="5">지점찾기</td>
+		<td rowspan="5">지점검색</td>
+		<td>지점명 검색</td>
+		<td>&nbsp;</td>
+		<td rowspan="5">/store</td>
+		<td><a href="store/name.html" target="_blank">name</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>지역별 검색</td>
+		<td>&nbsp;</td>
+		<td><a href="store/region.html" target="_blank">region</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td rowspan="3">지점 상세페이지</td>
+		<td>지점소개보기</td>
+		<td><a href="store/storeinfo.html" target="_blank">storeinfo</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>지점소식 리스트</td>
+		<td><a href="store/storeinfo_list.html" target="_blank">storeinfo_list</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>지점소식 보기</td>
+		<td><a href="store/storeinfo_view.html" target="_blank">storeinfo_view</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+
+	<tr class="end">
+		<td rowspan="4">쇼핑정보</td>
+		<td>인터넷 전단</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="4">/shopping</td>
+		<td><a href="shopping/flyer.html" target="_blank">flyer</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>에브리데이 독자상품</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="shopping/brand.html" target="_blank">brand</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>신세계 상품권</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="shopping/certificate.html" target="_blank">certificate</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>상품생활정보</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="shopping/gift.html" target="_blank">gift</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+	<tr class="end">
+		<td rowspan="2">포인트 카드</td>
+		<td>포인트 카드 안내</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="2">/pointcard</td>
+		<td><a href="pointcard/pointguide.html" target="_blank">pointguide</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>포인트 카드 FAQ</td>
+		<td>&nbsp;</td>
+		<td>목록</td>
+		<td><a href="pointcard/pointfaq.html" target="_blank">pointfaq</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+	<tr class="end">
+		<td rowspan="11">고객만족센터</td>
+		<td rowspan="4">고객의 소리</td>
+		<td>&nbsp;</td>
+		<td>실명인증</td>
+		<td rowspan="11">/customer</td>
+		<td><a href="customer/voice.html" target="_blank">voice</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>쓰기</td>
+		<td><a href="customer/voice_write.html" target="_blank">voice_write</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>약관전체보기</td>
+		<td><a href="customer/voicePop.html" target="_blank">voicePop</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>고객의 소리 완료</td>
+		<td><a href="customer/voice_end.html" target="_blank">voice_end</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td rowspan="3">FAQ</td>
+		<td>&nbsp;</td>
+		<td>목록</td>
+		<td><a href="customer/faq.html" target="_blank">faq</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>faq 검색결과</td>
+		<td><a href="customer/faq_search.html" target="_blank">faq_search</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>FAQ검색결과없을때</td>
+		<td><a href="customer/faq_searchNo.html" target="_blank">faq_searchNo</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td rowspan="2">고객만족 서비스</td>
+		<td>에브리데이 5대약속</td>
+		<td>&nbsp;</td>
+		<td rowspan="2"><a href="customer/service.html" target="_blank">service</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>고객쇼핑 안심제도</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+	<tr class="end">
+		<td rowspan="2">에브리데이 뉴스</td>
+		<td>&nbsp;</td>
+		<td>목록</td>
+		<td><a href="customer/news_list.html" target="_blank">news_list</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>보기</td>
+		<td><a href="customer/news_view.html" target="_blank">news_view</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<!-- tr>
+		<td rowspan="2">공지사항</td>
+		<td>&nbsp;</td>
+		<td>목록</td>
+		<td><a href="" target="_blank">notice_list</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>보기</td>
+		<td><a href="" target="_blank">notice_view</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr -->
+
+	<tr class="end">
+		<td rowspan="6">채용정보</td>
+		<td>인사제도</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="6">/recruit</td>
+		<td><a href="recruit/recruit01.html" target="_blank">recruit01</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>채용 프로세스</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="recruit/recruit02.html" target="_blank">recruit02</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>채용공고</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="recruit/recruit03.html" target="_blank">recruit03</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>상시채용</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="recruit/recruit04.html" target="_blank">recruit04</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>합격자 발표</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="recruit/recruit05.html" target="_blank">recruit05</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>공지사항</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="recruit/recruit06.html" target="_blank">recruit06</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+
+	<tr class="end">
+		<td rowspan="10">가맹점 모집 [ 2 / 16 신규 ]</td>
+		<td>가맹 안내</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="10">/shop</td>
+		<td><a href="shop/shop01.html" target="_blank">shop01</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>가맹 Q&A</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop02.html" target="_blank">shop02</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>사업 설명회</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop03.html" target="_blank">shop03</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td rowspan="3">1:1 상담</td>
+		<td>실명 인증</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop04.html" target="_blank">shop04</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>신청서 작성</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop04_2.html" target="_blank">shop04_2</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>신청서 완료</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop04_3.html" target="_blank">shop04_3</a></td>
+		<td>&nbsp;</td>
+		<td>2012-02-23</td>
+	</tr>
+	<tr class="end">
+		<td rowspan="4">가맹 회원가입</td>
+		<td>전용 회원가입</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop05.html" target="_blank">shop05</a></td>
+		<td>&nbsp;</td>
+		<td rowspan="4">외부개발 [ iframe ]</td>
+	</tr>
+	<tr class="end">
+		<td>회원가입 약관</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop05_2.html" target="_blank">shop05_2</a></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>회원가입 신청</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop05_3.html" target="_blank">shop05_3</a></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>회원가입 완료</td>
+		<td>&nbsp;</td>
+		<td><a href="shop/shop05_4.html" target="_blank">shop05_4</a></td>
+		<td>&nbsp;</td>
+	</tr>
+
+
+
+	<tr class="end">
+		<td rowspan="7">popup</td>
+		<td>개인정보 보호를 위한 이용자 동의사항</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="7">/pop</td>
+		<td><a href="pop/agreement.html" target="_blank">agreement</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="pop/pop.html" target="_blank">pop</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>개인정보 보호를 위한 이용자 동의사항</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="pop/pop2.html" target="_blank">pop2</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>실명인증 실패</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="pop/pop3.html" target="_blank">pop3</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td rowspan="2">아이디 중복 확인</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="pop/pop4.html" target="_blank">pop4</a></td>
+		<td>&nbsp;</td>
+		<td>2012-02-23</td>
+	</tr>
+	<tr class="end">
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="pop/pop4_1.html" target="_blank">pop4_1</a></td>
+		<td>&nbsp;</td>
+		<td>2012-02-23</td>
+	</tr>
+	<tr class="end">
+		<td>우편번호 검색</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="pop/pop5.html" target="_blank">pop5</a></td>
+		<td>&nbsp;</td>
+		<td>2012-02-23</td>
+	</tr>
+
+
+
+
+
+	<tr>
+		<td rowspan="5">Utility Menu</td>
+		<td>채용정보</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="5">/utility</td>
+		<td>외부링크</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td rowspan="2">협력업체 모집</td>
+		<td>수수료 임대업체</td>
+		<td>&nbsp;</td>
+		<td><a href="" target="_blank">partner_01</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>공산품/생식품업체</td>
+		<td>&nbsp;</td>
+		<td><a href="" target="_blank">partner_02</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>개인정보 취급방침</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="utility/privacy.html" target="_blank">privacy</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr class="end">
+		<td>이메일 무단수집 거부</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td><a href="utility/privacy02.html" target="_blank">privacy02</a></td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+	</tr>
+	</tbody>
+</table>
+
+
+
+<script type="text/javascript">
+var tbList1 = document.getElementById('tbList1').getElementsByTagName('tr');
+var tmpObj;
+for(i=0;i<tbList1.length;i++) 
+{
+	tbList1[i].onmouseover = function() 
+	{	
+		tmpObj = this.getElementsByTagName('td');
+		for(j=0;j<tmpObj.length;j++)
+		{
+			tmpObj[j].style.backgroundColor = "#e8ffa9";
+		}
+	}
+	
+	tbList1[i].onmouseout = function() 
+	{ 
+		if(!this.getElementsByTagName('td')[0]) return false;
+		tmpObj = this.getElementsByTagName('td');
+		for(j=0;j<tmpObj.length;j++)
+		{
+			tmpObj[j].style.backgroundColor = "";
+		}
+
+	}
+	
+}
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+/* = HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+body#main  #heardArae { display:;} /* 2011-12-12 수정 - block 삭제 */
+
+#heardArae { display:inline;}
+
+/* TOP GNB MENU SYTLE */
+#header #gnb {display:inline; }
+#header .gnbArea { width:732px; margin:22px 0 0 201px; overflow:hidden;}
+
+
+#header .gnbArea li div.subGnb li { margin: 0 0 0 13px;}
+
+
+

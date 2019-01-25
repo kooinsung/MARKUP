@@ -1,0 +1,28 @@
+/* = HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+body#main  #heardArae { display:;}/* 2011-12-12 수정 - block 삭제 */
+
+#heardArae { display:inline;}
+
+/* TOP GNB MENU SYTLE */
+
+
+
+#header #gnb {display:inline; }
+#header .gnbArea { width:732px; margin:22px 0 0 187px; overflow:hidden;}
+div.storZone dl { float:left; width:auto;}
+
+div.textZone { height:128px;}
+
+#header .gnbArea li div.subGnb li { margin: 0 0 10px 13px;}
+
+
+#cont{width:750px;}
+
+div.textZone { float:left; width:160px; }
+
+div.zoneSearch { float:left; width:315px; }
+div.subGnbSearch { width:100%; overflow:hidden; margin:19px 0 12px 0; display:none;}
+div.subGnb ul.item02 li img{ margin-left: 17px;}
+div.subGnb ul.item03 li img{ margin-left: 0px;}
+
