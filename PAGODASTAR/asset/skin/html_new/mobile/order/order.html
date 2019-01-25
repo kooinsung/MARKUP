@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<title>파고다스타</title>
+	<link rel="apple-touch-icon" href="../../../../../asset/skin/mbasil/img/common/pst_img.png"/>
+	<link rel="shortcut icon" href="../../../../../asset/skin/mbasil/img/common/pst_img.png" />
+	<meta name="naver-site-verification" content="44fa86ea3842f66f8fb901f9dd7d9d24bcb1256f"/>
+	<meta name="description" content="파고다 1위 스타강사의 토익, 토플, 중국어, HSK, 일본어, JLPT, 아이엘츠, 오픽, 토익스피킹, 기초영어, 취업관련 인터넷강의 서비스">
+	<!-- jquery mobile css-->
+	<link rel="stylesheet" href="../../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<!-- //jquery mobile css -->
+	<link rel="stylesheet" type="text/css" href="../../../../../asset/skin/mbasil/css/ui.css">
+	<link rel="stylesheet" href="../../../../../asset/skin/mbasil/css/swiper.css" />
+	<link rel="stylesheet" href="../../../../../asset/skin/mbasil/css/pasta_m.css" />
+	<script src="../../../../../asset/js/jquery.min.js"></script>
+	
+	<!-- jquery mobile js -->
+	<script>
+	$(document).on("mobileinit", function() {
+		var silentScroll = $.mobile.silentScroll;
+		$.mobile.silentScroll = function(ypos) {
+			if($.type(ypos) !== "number") {
+				return;
+			} else {
+				silentScroll.apply(this, arguments);
+			}
+		}
+	});
+	</script>
+	<script src="../../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<!-- //jquery mobile js -->
+
+	<!-- 사용자 옵션 js -->
+	<script src="../../../../../asset/js/common_function.js"></script>
+	<script src="../../../../../asset/js/gangnam_function.js"></script>
+	<script src="../../../../../asset/skin/mbasil/js/TweenMax.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../../../../../asset/js/browser.detect.js"></script>
+	<!-- //사용자 옵션 js -->
+
+
+	<!-- 신규 css파일 -->
+	<link rel="stylesheet" href="../../../../../asset/skin/mint/mobile/css/sub.css" />
+
+	<!-- 신규 js파일 -->
+	<script src="../../../../../asset/skin/mint/mobile/js/pagodastar.plugin.js"></script>
+	<script src="../../../../../asset/skin/mint/mobile/js/pagodastar.ui.js"></script>
+</head>
+<body class="pgds-sub">
+	<div id="pgds-wrap" class="pgds-wrap">
+		<!-- header -->
+		<header id="pgds-header" class="pgds-header">
+			<a href="" class="back">back</a>
+			<h1 class="p_tit">주문결제</h1>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<section class="pgds-content">
+			<!-- 주문결제 -->
+			<div class="orders">
+				<h2>주문상품 정보 확인</h2>
+				<div class="order_row">
+					<!-- 주문상품 -->
+					<div class="order_prds">
+						<ul>
+							<li>
+								<p class="tit"><strong>[강의패키지]</strong>이까짓 중국어 기초 패키지</p>
+								<div class="pay_infos_list">
+									<ul>
+										<li>
+											<span class="opt_tit">강사명</span>
+											<div class="opt_result">켈리정</div>
+										</li>
+										<li>
+											<span class="opt_tit">수강기간</span>
+											<div class="opt_result">40일</div>										
+										</li>
+										<li>
+											<span class="opt_tit">즉시할인 <button type="button" class="sq" onclick="pagodastarUI.layer.open2('layer_sale');">?</button></span>
+											<div class="opt_result">
+												<span class="realtime_price"><strong>-380,000<em class="won">원</em></strong></span>
+											</div>										
+										</li>
+										<li>
+											<span class="opt_tit">가격</span>
+											<div class="opt_result">
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<p class="tit"><strong>[단과]</strong>Cambridge IELTS 공식 입문 Reading [Academic]+첨삭</p>
+								<div class="pay_infos_list">
+									<ul>
+										<li>
+											<span class="opt_tit">강사명</span>
+											<div class="opt_result">켈리정</div>
+										</li>
+										<li>
+											<span class="opt_tit">수강기간</span>
+											<div class="opt_result">40일</div>										
+										</li>
+										<li>
+											<span class="opt_tit">가격</span>
+											<div class="opt_result">
+												<div class="prices">
+													<strong>420,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- 주문상품 -->
+				</div>
+
+				<h2>배송지 정보</h2>
+				<div class="order_row">
+					<div class="choice_addr">
+						<!-- 주소지 선택 -->
+						<div class="addr_type">
+							<ul>
+								<li><input type="radio" name="addr_type" id="addr_type1" checked="checked"/><label for="addr_type1">기본 배송지</label></li>
+								<li><input type="radio" name="addr_type" id="addr_type2"/><label for="addr_type2">최근 배송지</label></li>
+								<li><input type="radio" name="addr_type" id="addr_type3"/><label for="addr_type3">직접입력</label></li>
+							</ul>
+						</div>
+						<!-- //주소지 선택 -->
+
+						<!-- 주소지 폼 -->
+						<div class="addr_form">
+							<ul>
+								<li>
+									<strong class="form_tit">받는분</strong>
+									<div class="form_in">
+										<span class="custom_input"><input type="text" value="" /></span>
+									</div>
+								</li>
+								<li>
+									<strong class="form_tit">주소</strong>
+									<div class="form_in">
+										<span class="custom_input mix"><input type="text" value="" /><button type="button">우편번호</button></span>
+										<span class="custom_input mid"><input type="text" value="" /></span>
+										<span class="custom_input"><input type="text" value="" /></span>
+									</div>
+								</li>
+								<li>
+									<strong class="form_tit">휴대폰</strong>
+									<div class="form_in">
+										<div class="phone">
+											<span class="custom_input"><input type="text" pattern="[0-9]*" max="9999" maxlength="4" value="" /></span>
+											<span class="custom_input"><input type="text" pattern="[0-9]*" max="9999" maxlength="4" value="" /></span>
+											<span class="custom_input"><input type="text" pattern="[0-9]*" max="9999" maxlength="4" value="" /></span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="form_in">
+										<div class="etc">
+											<span class="custom_select">
+												<select name="" id="">
+													<option value="">배송 시 요청사항 선택하기</option>
+													<option value="">배송 시 요청사항 선택하기</option>
+													<option value="">배송 시 요청사항 선택하기</option>
+												</select>
+											</span>
+											<span class="custom_input"><input type="text" value="" placeholder="기타 내용을 입력해주세요." /></span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //주소지 폼 -->
+					</div>
+				</div>
+
+				<h2>쿠폰/포인트/상품권 적용</h2>
+				<div class="order_row">
+					<div class="my_moneys">
+						<!-- 쿠폰 -->
+						<dl>
+							<dt><strong>쿠폰</strong><span>(사용가능 : <em>2장</em>)</span></dt>
+							<dd>
+								<span class="custom_input mix"><input type="text" value="" /><em class="won">원</em></span>
+							</dd>
+							<dd class="btns">
+								<span class="view"><a href="">쿠폰조회/적용</a></span>
+								<span class="cancel"><a href="">쿠폰적용취소</a></span>
+							</dd>
+						</dl>
+						<!-- //쿠폰 -->
+
+						<!-- 패밀리머니 -->
+						<dl>
+							<dt><strong>패밀리머니(포인트)</strong><span>(보유 : <em>1,919원</em>)</span></dt>
+							<dd>
+								<span class="custom_input mix"><input type="text" value="" /><em class="won">원</em></span>
+								<input type="checkbox" id="all1"/><label for="all1">모두사용</label>
+							</dd>
+						</dl>
+						<!-- //패밀리머니 -->
+
+						<!-- 파고다상품권 -->
+						<dl>
+							<dt><strong>파고다상품권</strong><span>(잔액 : <em>100,000원</em>)</span></dt>
+							<dd>
+								<span class="custom_input mix"><input type="text" value="" /><em class="won">원</em></span>
+								<input type="checkbox" id="all2"/><label for="all2">모두사용</label>
+							</dd>
+						</dl>
+						<!-- //파고다상품권 -->
+
+						<!-- 모바일상품권 -->
+						<dl>
+							<dt><strong>모바일상품권</strong><span>(잔액 : <em>66,600원</em>)</span></dt>
+							<dd>
+								<span class="custom_input mix"><input type="text" value="" /><em class="won">원</em></span>
+								<input type="checkbox" id="all3"/><label for="all3">모두사용</label>
+							</dd>
+						</dl>
+						<!-- //모바일상품권 -->
+
+						<!-- SK텔레콤 T멤버십 회원 -->
+						<dl class="skt">
+							<dt><strong>SK텔레콤 T멤버십 회원</strong></dt>
+							<dd class="btns">
+								<span class="view"><a href="">회원인증/쿠폰발급</a></span>
+							</dd>
+							<dd class="txts">
+								<p>T 멤버십 회원 인증 시, 2종 쿠폰 발급</p>
+								<ul>
+									<li>- 패키지 결제 시 추가 5% 할인</li>
+									<li>- 프리패스 결제 시 추가 10% 할인</li>
+								</ul>
+							</dd>
+						</dl>
+						<!-- //SK텔레콤 T멤버십 회원 -->
+					</div>
+				</div>
+
+				<h2 class="total">최종 결제금액 확인</h2>
+				<div class="order_row">
+					<div class="order_total_pay">
+						<!-- 총 주문금액 -->
+						<dl>
+							<dt><strong>총 주문금액</strong></dt>
+							<dd><strong>999,999<em class="won">원</em></strong></dd>
+						</dl>
+						<!-- 총 주문금액 -->
+
+						<!-- 총 할인금액 -->
+						<dl>
+							<dt><strong>총 할인금액</strong></dt>
+							<dd><strong class="total_sale">-129,000<em class="won">원</em></strong></dd>
+							<dd class="sale_detail">
+								<dl>
+									<dt><strong>즉시할인</strong></dt>
+									<dd><strong>-22,500<em class="won">원</em></strong></dd>
+								</dl>
+								<dl>
+									<dt><strong>쿠폰</strong></dt>
+									<dd><strong>-22,500<em class="won">원</em></strong></dd>
+								</dl>
+								<dl>
+									<dt><strong>패밀리머니(포인트)</strong></dt>
+									<dd><strong>-22,500<em class="won">원</em></strong></dd>
+								</dl>
+								<dl>
+									<dt><strong>파고다상품권</strong></dt>
+									<dd><strong>-22,500<em class="won">원</em></strong></dd>
+								</dl>
+								<dl>
+									<dt><strong>모바일 상품권</strong></dt>
+									<dd><strong>-22,500<em class="won">원</em></strong></dd>
+								</dl>
+							</dd>
+						</dl>
+						<!-- 총 할인금액 -->
+
+						<!-- 배송비 -->
+						<dl>
+							<dt><strong>배송비</strong></dt>
+							<dd><strong>-2,500<em class="won">원</em></strong></dd>
+						</dl>
+						<!-- //배송비 -->
+
+						<!-- 최종 결제 금액 -->
+						<dl class="result_pay">
+							<dt><strong>최종 결제금액</strong></dt>
+							<dd><strong>999,999<em class="won">원</em></strong></dd>
+						</dl>
+						<!-- //최종 결제 금액 -->
+					</div>
+				</div>
+
+				<h2>결제수단 선택</h2>
+				<div class="order_row">
+					<div class="payment_sel">
+						<!-- 결제 수단 -->
+						<div class="types">
+							<ul>
+								<li><input type="radio" name="payment_type" id="payment_type1"/><label for="payment_type1">신용카드</label></li>
+								<li><input type="radio" name="payment_type" id="payment_type2"/><label for="payment_type2">페이나우(간편결제)</label></li>
+								<li><input type="radio" name="payment_type" id="payment_type3"/><label for="payment_type3">실시간 계좌이체</label></li>
+								<li><input type="radio" name="payment_type" id="payment_type4"/><label for="payment_type4">무통장 입금</label></li>
+							</ul>
+						</div>
+						<!-- //결제 수단 -->
+
+						<p class="txt">※ 회원님이 지정하신 은행계좌에 방문 혹은 인터넷 뱅킹으로 입금하여 주십시오.<br>예약 후 반드시 <span>3일 이내에 입금을 완료</span> 하셔야 합니다. </p>
+
+						<!-- 에스크로 -->
+						<div class="escrow">
+							<strong>※ 구매안전서비스 에스크로</strong>
+							<div class="use_chk">
+								<ul>
+									<li><input type="radio" name="use_chk" id="use_chk1"/><label for="use_chk1">이용안함</label></li>
+									<li><input type="radio" name="use_chk" id="use_chk2"/><label for="use_chk2">이용함</label></li>
+								</ul>
+							</div>
+							<ul class="tips">
+								<li>구매안전서비스 에스크로를 이용하면 구매 확인 전에는 입금 금액이 은행에 예치되며, 구매 확인 후 해당 금액이 쇼핑몰에 지급됩니다.</li>
+								<li>에스크로 결제는 무통장입금 또는 계좌이체 신청 시 배송되는 상품이 있는 경우에 이용하실 수 있습니다.</li>
+								<li><a href="">전자상거래 등에서의 소비자 보호에 관한 법류에 따른 구매안전서비스 에스크로 안내 </a></li>
+							</ul>
+						</div>
+						<!-- //에스크로 -->
+
+						<!-- 규정 확인 -->
+						<div class="rule">
+							<input type="checkbox" id="rule_chk"/><label for="rule_chk">취소/환불 규정을 확인하였습니다.</label>
+							<button type="button" onclick="pagodastarUI.layer.open2('layer_rule');">내용보기</button>
+						</div>
+						<!-- //규정 확인 -->
+					</div>
+				</div>
+
+				<!-- 결제하기 -->
+				<div class="btn_payment">
+					<a href="">결제하기</a>
+				</div>
+				<!-- //결제하기 -->
+			</div>
+			<!-- //주문결제 -->
+		</section>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="pgds-footer">
+			<div class="footer_row1">
+				<ul>
+					<li><a href="">PC버전보기</a></li>
+					<li><a href="">APP다운로드</a></li>
+					<li><a href="">카카오톡상담</a></li>
+					<li><a href="">전화상담</a></li>
+				</ul>
+			</div>
+
+			<div class="footer_row2">
+				<ul class="utils">
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+				</ul>
+
+				<strong class="logo"><a href="" class="pgds-sp">PAGODA STAR</a></strong>
+
+				<div class="infos">
+					<p>(주) 파고다에스씨에쓰 대표이사 박경실</p>
+					<p>서울특별시 서초구 강남대로 419(서초동)</p>
+					<p><span>TEL : 02-6907-2489</span><span class="nbar">FAX : 02-533-8066</span></p>
+					<p><span>사업자등록번호 : 214-87-63551</span><strong><a href="">사업자정보확인</a></strong></p>
+					<p><span>통신판매신고 : 2005-서울서초-05273</span><strong><a href="">escrow 가입확인</a></strong></p>
+					<p class="copyright">Copyright© PAGODA SCS Inc. All rights reserved.</p>
+				</div>
+
+				<ul class="sns">
+					<li class="yt"><a href="" class="pgds-sp">youtube</a></li>
+					<li class="fb"><a href="" class="pgds-sp">facebook</a></li>
+				</ul>
+
+				<a href="" id="move_top" class="pgds-sp move_top">top move</a>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+		<!-- 하단 고정 메뉴 -->
+		<section class="pgds-menubar">
+			<ul>
+				<li><a href="../../../../../asset/skin/html_new/mobile/main/index.html" class="">홈</a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/menu.html" class="">전체메뉴</a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/lately.html" class="">최근본강의 <em class="num">10</em></a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/my_login.html" class="">내 강의실</a></li>
+			</ul>
+		</section>
+		<!-- //하단 고정 메뉴 -->
+	</div>
+
+
+	<!-- 즉시할인 -->
+	<div class="pgds-layer2" id="layer_sale">
+		<div class="layer_outer">
+			<strong class="tit">즉시할인</strong>
+			<div class="layer_inner">
+				<div class="realtime_txt">
+					즉시할인 금액 = (정가  -  판매가) + 모바일 첫구매 할인
+				</div>
+			</div>
+			<button type="button" class="close" onclick="pagodastarUI.layer.close2('layer_sale');">close</button>
+		</div>
+	</div>
+	<!-- //즉시할인 -->
+
+	<!-- 강의 취소/환불 안내 -->
+	<div class="pgds-layer2 blue" id="layer_rule">
+		<div class="layer_outer">
+			<strong class="tit">강의 취소/환불 안내</strong>
+			<div class="layer_inner">
+				<div class="rule_detail">
+					<dl>
+						<dt>강의 환불 기준</dt>
+						<dd>
+							<strong>- 일반 강의 및 강의 패키지/프리패스</strong>
+							<p class="txt">결제일로부터 7일간 2강 이하 수강 (0차시 제외), 환불 시에는 전액 환불 처리해 드리고 있습니다.</p>
+							<p class="txt2">*20강 미만의 강의 경우, 1강 이하 수강 시, 전액 환불 가능합니다.</p>
+						</dd>
+						<dd>
+							<strong>- 교재 포함 강의 상품</strong>
+							<p class="txt">
+								교재 포함 강의 상품의 경우, 교재 미사용 시 반송 후 위 환불기준에 따라 취소/환불이 가능합니다. 단 반송비용(5,000원)을 입금해 주셔야 환불 처리가 진행 됩니다.<br>
+								교재를 사용한 경우, 교재비용을 제외 한 후 환불 받으실 수 있습니다.
+							</p>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>교재 환불 기준</dt>
+						<dd>
+							<strong>- 교재 배송 전</strong>
+							<p class="txt">반송 비용 없이 환불 처리 가능</p>
+						</dd>
+						<dd>
+							<strong>- 교재 배송 완료 후</strong>
+							<p class="txt">
+								배송 받으신 날로부터 3일 이내 연락을 주신 경우 환불 가능 (단, 반송비용 입금 및 물류센터로 반송 완료 후 교재 사용 여부를 확인하여 환불 가능)<br><br>
+								환불 시 디지털 기기와 교재는 각각 개별상품별로 왕복 택배비(5,000원)이 부과 됩니다.
+							</p>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>태블릿 패키지 환불 기준</dt>
+						<dd>
+							<strong>- 상품 수령일로부터 7일 이내, 환불신청이 가능합니다. <span>(태블릿 PC는 개봉할 경우 환불이 불가능합니다)</span></strong>
+							<p class="txt">단순 변심: 상품 수령 후, 7일 이내 신청 가능</p>
+							<p class="txt">상품 불량/오배송: 상품 수령 후 3개월 이내 혹은 그 사실을 알게 된 이후 30일 이내 반품 신청 가능</p>
+						</dd>
+						<dd>
+							<strong>- 교환 및 반품 안내</strong>
+							<p class="txt">
+								제품 자체의 이상인 경우 100% 환불/교환 가능 합니다. (갤럭시 탭A 7.0의 경우, A/S센터에서 불량확인증을 받은 상품만 새 제품 교환이 가능)<br><br>
+								태블릿 PC를 환불 및 반품할 경우, 왕복 배송비 6,000원을 반송 계좌번호로 입금하셔야 환불/반송 접수 됩니다. 
+							</p>
+							<p class="txt2">반송계좌정보 : 우리은행 1005-000-988849<br>(예금주: 파고다SCS)</p>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>환불 처리 소요기간</dt>
+						<dd>
+							<p class="txt">- 신용카드 : 상품 회수 확인 후 해당카드사로 청구 취소 요청 (약 1-7일 소요되며, 카드사 별 다를 수 있습니다.)</p>
+							<p class="txt">- 무통장입금: 상품 회수 확인 후 공휴일 제외 3일이내 처리 (단순 변심 환불 시 무통장입금 환불 수수료를 부담하셔야 합니다.)</p>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>취소/환불 신청방법</dt>
+						<dd>
+							<p class="txt">강의, 태블릿 패키지 관련 취소 및 환불 신청은 1:1 고객센터 문의글 또는 파고다 스타 고객센터로 전화 신청 후 가능합니다.</p>
+							<p class="txt2">파고다스타 고객센터 :<br>02)6907-2489 (월~금 09:00~18:00)</p>
+						</dd>
+					</dl>
+
+					<div class="mtm">
+						<a href="">1:1 문의</a>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="close" onclick="pagodastarUI.layer.close2('layer_rule');">close</button>
+		</div>
+	</div>
+	<!-- //강의 취소/환불 안내 -->
+
+	<script>
+		$(function(){
+			pagodastarUI.subs.init();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<title>파고다스타</title>
+	<link rel="apple-touch-icon" href="../../../../../asset/skin/mbasil/img/common/pst_img.png"/>
+	<link rel="shortcut icon" href="../../../../../asset/skin/mbasil/img/common/pst_img.png" />
+	<meta name="naver-site-verification" content="44fa86ea3842f66f8fb901f9dd7d9d24bcb1256f"/>
+	<meta name="description" content="파고다 1위 스타강사의 토익, 토플, 중국어, HSK, 일본어, JLPT, 아이엘츠, 오픽, 토익스피킹, 기초영어, 취업관련 인터넷강의 서비스">
+	<!-- jquery mobile css-->
+	<link rel="stylesheet" href="../../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<!-- //jquery mobile css -->
+	<link rel="stylesheet" type="text/css" href="../../../../../asset/skin/mbasil/css/ui.css">
+	<link rel="stylesheet" href="../../../../../asset/skin/mbasil/css/swiper.css" />
+	<link rel="stylesheet" href="../../../../../asset/skin/mbasil/css/pasta_m.css" />
+	<script src="../../../../../asset/js/jquery.min.js"></script>
+	
+	<!-- jquery mobile js -->
+	<script>
+	$(document).on("mobileinit", function() {
+		var silentScroll = $.mobile.silentScroll;
+		$.mobile.silentScroll = function(ypos) {
+			if($.type(ypos) !== "number") {
+				return;
+			} else {
+				silentScroll.apply(this, arguments);
+			}
+		}
+	});
+	</script>
+	<script src="../../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<!-- //jquery mobile js -->
+
+	<!-- 사용자 옵션 js -->
+	<script src="../../../../../asset/js/common_function.js"></script>
+	<script src="../../../../../asset/js/gangnam_function.js"></script>
+	<script src="../../../../../asset/skin/mbasil/js/TweenMax.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../../../../../asset/js/browser.detect.js"></script>
+	<!-- //사용자 옵션 js -->
+
+
+	<!-- 신규 css파일 -->
+	<link rel="stylesheet" href="../../../../../asset/skin/mint/mobile/css/main.css" />
+
+	<!-- 신규 js파일 -->
+	<script src="../../../../../asset/skin/mint/mobile/js/pagodastar.plugin.js"></script>
+	<script src="../../../../../asset/skin/mint/mobile/js/pagodastar.ui.js"></script>
+</head>
+<body class="pgds-main">
+	<div id="pgds-wrap" class="pgds-wrap">
+		<!-- header -->
+		<header id="pgds-header" class="pgds-header">
+			<!-- 로고 -->
+			<h1 class="logo"><a href="" class="pgds-sp">PAGODA STAR</a></h1>
+			<!-- //로고 -->
+
+			<!-- 메뉴 -->
+			<div class="gnbs">
+				<ul>
+					<li><a href="" class="active">홈</a></li>
+					<li><a href="">신토익</a></li>
+					<li><a href="">프리패스</a></li>
+					<li><a href="">무료특강</a></li>
+					<li><a href="">이벤트</a></li>
+
+				</ul>
+			</div>
+			<!-- //메뉴 -->
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<section class="pgds-content">
+			<!-- 키 비주얼 -->
+			<div class="key_visual" id="key_visual" >
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href=""><img src="../../../../../asset/skin/mint/mobile/img/img_dummy1.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href=""><img src="../../../../../asset/skin/mint/mobile/img/img_dummy2.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href=""><img src="../../../../../asset/skin/mint/mobile/img/img_dummy1.jpg" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href=""><img src="../../../../../asset/skin/mint/mobile/img/img_dummy2.jpg" alt=""></a>
+						</div>
+					</div>
+					<div class="slider_pagination"></div>
+					<button type="button" class="swiper-next">next</button>
+					<button type="button" class="swiper-prev">prev</button>
+				</div>
+				
+				<!-- all view : 해당 배너의 아이디 호출 -->
+				<div class="all_view">
+					<div class="number_pager">
+						<em class="current">1</em> / <em class="total"></em>
+					</div>
+					<button type="button" onclick="pagodastarUI.all_layer.open('key_visual');">전체보기</button>
+				</div>
+				<!-- //all view -->
+			</div>
+			<!-- //키 비주얼 -->
+
+			<!-- 카테고리 메뉴 -->
+			<div class="main_cate_menus">
+				<!-- 탭 -->
+				<div class="card_tabs">
+					<ul>
+						<li><a href="#testprep" class="active">시험 과목</a></li>
+						<li><a href="#tablet">태블릿 패키지</a></li>
+						<li><a href="#zzal">짤강</a></li>
+						<li><a href="#speaking">기초/회화</a></li>
+						<li><a href="#career">취업</a></li>
+					</ul>
+				</div>
+				<!-- //탭 -->
+
+
+				<!-- 20161028 수정 -->
+				<div class="card_sections">
+					<!-- 시험과목 -->
+					<div id="testprep" class="card_section testprep">
+						<div class="card_top">
+							<!-- 제목 -->
+							<strong class="tit">시험과목</strong>
+							<!-- //제목 -->
+
+							<!-- 해쉬태그 -->
+							<div class="hash">
+								<ul>
+									<li><a href=""># 태그</a></li>
+									<li><a href=""># 최대5글자</a></li>
+									<li><a href=""># 레벨테스트</a></li>
+								</ul>
+							</div>
+							<!-- //해쉬태그 -->
+						</div>
+
+						<!-- 리스트 -->
+						<div class="card_lists">
+							<ul>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 </p>
+											<div class="teachers">
+												<ul class="four">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="three">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="two">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers ">
+												<ul class="one">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //리스트 -->
+
+						<!-- 더보기 -->
+						<a href="" class="btn_more">더보기 <em class="ico_plus"></em></a>
+						<!-- //더보기 -->
+					</div>
+					<!-- //시험과목 -->
+
+					<!-- 태블릿 패키지 -->
+					<div id="tablet" class="card_section tablet">
+						<div class="card_top">
+							<!-- 제목 -->
+							<strong class="tit">태블릿 패키지</strong>
+							<!-- //제목 -->
+
+							<!-- 해쉬태그 -->
+							<div class="hash">
+								<ul>
+									<li><a href=""># 태그</a></li>
+									<li><a href=""># 최대5글자</a></li>
+									<li><a href=""># 레벨테스트</a></li>
+								</ul>
+							</div>
+							<!-- //해쉬태그 -->
+						</div>
+
+						<!-- 리스트 -->
+						<div class="card_lists">
+							<ul>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 </p>
+											<div class="teachers">
+												<ul class="four">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="three">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="two">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers ">
+												<ul class="one">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //리스트 -->
+
+						<!-- 더보기 -->
+						<a href="" class="btn_more">더보기 <em class="ico_plus"></em></a>
+						<!-- //더보기 -->
+					</div>
+					<!-- //태블릿 패키지 -->
+
+					<!-- 짤강 -->
+					<div id="zzal" class="card_section zzal">
+						<div class="card_top">
+							<!-- 제목 -->
+							<strong class="tit">짤강</strong>
+							<!-- //제목 -->
+
+							<!-- 해쉬태그 -->
+							<div class="hash">
+								<ul>
+									<li><a href=""># 태그</a></li>
+									<li><a href=""># 최대5글자</a></li>
+									<li><a href=""># 레벨테스트</a></li>
+								</ul>
+							</div>
+							<!-- //해쉬태그 -->
+						</div>
+
+						<!-- 리스트 -->
+						<div class="card_lists">
+							<ul>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 </p>
+											<div class="teachers">
+												<ul class="four">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="three">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="two">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers ">
+												<ul class="one">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //리스트 -->
+
+						<!-- 더보기 -->
+						<a href="" class="btn_more">더보기 <em class="ico_plus"></em></a>
+						<!-- //더보기 -->
+					</div>
+					<!-- //짤강 -->
+
+					<!-- 기초/회화 -->
+					<div id="speaking" class="card_section speaking">
+						<div class="card_top">
+							<!-- 제목 -->
+							<strong class="tit">기초/회화</strong>
+							<!-- //제목 -->
+
+							<!-- 해쉬태그 -->
+							<div class="hash">
+								<ul>
+									<li><a href=""># 태그</a></li>
+									<li><a href=""># 최대5글자</a></li>
+									<li><a href=""># 레벨테스트</a></li>
+								</ul>
+							</div>
+							<!-- //해쉬태그 -->
+						</div>
+
+						<!-- 리스트 -->
+						<div class="card_lists">
+							<ul>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 </p>
+											<div class="teachers">
+												<ul class="four">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="three">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="two">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers ">
+												<ul class="one">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //리스트 -->
+
+						<!-- 더보기 -->
+						<a href="" class="btn_more">더보기 <em class="ico_plus"></em></a>
+						<!-- //더보기 -->
+					</div>
+					<!-- //기초/회화 -->
+
+					<!-- 취업 -->
+					<div id="career" class="card_section career">
+						<div class="card_top">
+							<!-- 제목 -->
+							<strong class="tit">취업</strong>
+							<!-- //제목 -->
+
+							<!-- 해쉬태그 -->
+							<div class="hash">
+								<ul>
+									<li><a href=""># 태그</a></li>
+									<li><a href=""># 최대5글자</a></li>
+									<li><a href=""># 레벨테스트</a></li>
+								</ul>
+							</div>
+							<!-- //해쉬태그 -->
+						</div>
+
+						<!-- 리스트 -->
+						<div class="card_lists">
+							<ul>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 </p>
+											<div class="teachers">
+												<ul class="four">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="three">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers">
+												<ul class="two">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb2_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<div class="utils">
+										<a href="">
+											<p class="name">강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명 강의명강의명강의명강의명강의명강의명강의명</p>
+											<div class="teachers ">
+												<ul class="one">
+													<li><img src="../../../../../asset/skin/mint/mobile/img/thumb_s.jpg" alt="" ></li>
+												</ul>
+											</div>
+											<div class="infos">
+												<div class="date">
+													<dl>
+														<dt>수강기간</dt>
+														<dd><del>000일</del> <strong>200일</strong></dd>
+													</dl>
+												</div>
+												<div class="prices">
+													<del>200,000<em class="won">원</em></del>
+													<strong>129,000<em class="won">원</em></strong>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="btns">
+										<ul>
+											<li class="free"><a href="">무료강의</a></li>
+											<li class="cart"><a href="">장바구니</a></li>
+											<li class="apply"><a href="">수강신청</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //리스트 -->
+
+						<!-- 더보기 -->
+						<a href="" class="btn_more">더보기 <em class="ico_plus"></em></a>
+						<!-- //더보기 -->
+					</div>
+					<!-- //취업 -->
+				</div>
+				<!-- //20161028 수정 -->
+			</div>
+			<!-- //카테고리 메뉴 -->
+
+			<!-- 온라인 스터디 -->
+			<div class="main_online_study">
+				<div class="links">
+					<ul>
+						<li class="study"><a href="">온라인 스터디</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //온라인 스터디 -->
+
+			<!-- 무료 특강 -->
+			<div class="main_free_lecture">
+				<strong class="tit"><a href="">무료특강</a></strong>
+				<div class="lists">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="">
+									<img src="../../../../../asset/skin/mint/mobile/img/img_dummy3.jpg" alt="">
+									<div class="lecture_tit">신토익 신기술 비법전수신토익 신기술 비법전수신토익 신기술 비법전수</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="">
+									<img src="../../../../../asset/skin/mint/mobile/img/img_dummy3.jpg" alt="">
+									<div class="lecture_tit">신토익 신기술 비법전수신토익 신기술 비법전수신토익 신기술 비법전수</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="">
+									<img src="../../../../../asset/skin/mint/mobile/img/img_dummy3.jpg" alt="">
+									<div class="lecture_tit">신토익 신기술 비법전수신토익 신기술 비법전수신토익 신기술 비법전수</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="">
+									<img src="../../../../../asset/skin/mint/mobile/img/img_dummy3.jpg" alt="">
+									<div class="lecture_tit">신토익 신기술 비법전수신토익 신기술 비법전수신토익 신기술 비법전수</div>
+								</a>
+							</div>
+						</div>
+						<div class="slider_pagination"></div>
+					</div>
+				</div>
+			</div>
+			<!-- //무료 특강 -->
+
+			<!-- 수강 후기 -->
+			<div class="main_review_lecture">
+				<strong class="tit"><a href="">수강후기</a></strong>
+				<div class="lists">
+					<ul>
+						<li>
+							<a href="">
+								<div class="info">
+									<span class="thumb"><img src="../../../../../asset/skin/mint/mobile/img/img_user1.png" alt="" /></span>
+									<div class="star">
+										<ul>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class="hit"></li>
+										</ul>
+										<strong class="point_num">5.0</strong>
+									</div>
+								</div>
+								<div class="txts">
+									<strong>[NEW 스타토익 800 목표반 RC] 잘 들 었습니다. </strong>
+									<p>결국 800목표였지만 이제는 860점의 점수가 되었답니다.</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="info">
+									<span class="thumb"><img src="../../../../../asset/skin/mint/mobile/img/img_user2.png" alt="" /></span>
+									<div class="star">
+										<ul>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class=""></li>
+										</ul>
+										<strong class="point_num">4.0</strong>
+									</div>
+								</div>
+								<div class="txts">
+									<strong>[NEW 스타토익 800 목표반 RC] 잘 들 었습니다. </strong>
+									<p>결국 800목표였지만 이제는 860점의 점수가 되었답니다.</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<div class="info">
+									<span class="thumb"><img src="../../../../../asset/skin/mint/mobile/img/img_user1.png" alt="" /></span>
+									<div class="star">
+										<ul>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class="hit"></li>
+											<li class=""></li>
+											<li class=""></li>
+										</ul>
+										<strong class="point_num">3.0</strong>
+									</div>
+								</div>
+								<div class="txts">
+									<strong>[NEW 스타토익 800 목표반 RC] 잘 들 었습니다. 잘 들 었습니다. 잘 들 었습니다. 잘 들 었습니다.잘 들 었습니다.잘 들 었습니다.잘 들 었습니다. </strong>
+									<p>결국 800목표였지만 이제는 860점의 점수가 되었답니다.되었답니다.되었답니다.되었답니다.되었답니다.되었답니다.되었답니다.되었답니다.</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<button type="button" class="more">더보기 <em class="ico_plus"></em></button>
+			</div>
+			<!-- //수강 후기 -->
+		</section>
+		<!-- //content -->
+		
+		<!-- footer -->
+		<footer class="pgds-footer">
+			<div class="footer_row1">
+				<ul>
+					<li><a href="">PC버전보기</a></li>
+					<li><a href="">APP다운로드</a></li>
+					<li><a href="">카카오톡상담</a></li>
+					<li><a href="">전화상담</a></li>
+				</ul>
+			</div>
+
+			<div class="footer_row2">
+				<ul class="utils">
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+				</ul>
+
+				<strong class="logo"><a href="" class="pgds-sp">PAGODA STAR</a></strong>
+
+				<div class="infos">
+					<p>(주) 파고다에스씨에쓰 대표이사 박경실</p>
+					<p>서울특별시 서초구 강남대로 419(서초동)</p>
+					<p><span>TEL : 02-6907-2489</span><span class="nbar">FAX : 02-533-8066</span></p>
+					<p><span>사업자등록번호 : 214-87-63551</span><strong><a href="">사업자정보확인</a></strong></p>
+					<p><span>통신판매신고 : 2005-서울서초-05273</span><strong><a href="">escrow 가입확인</a></strong></p>
+					<p class="copyright">Copyright© PAGODA SCS Inc. All rights reserved.</p>
+				</div>
+
+				<ul class="sns">
+					<li class="yt"><a href="" class="pgds-sp">youtube</a></li>
+					<li class="fb"><a href="" class="pgds-sp">facebook</a></li>
+				</ul>
+
+				<a href="" id="move_top" class="pgds-sp move_top">top move</a>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+		<!-- 하단 고정 메뉴 -->
+		<section class="pgds-menubar">
+			<ul>
+				<li class="active"><a href="../../../../../asset/skin/html_new/mobile/main/index.html" class="active">홈</a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/menu.html" class="">전체메뉴</a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/lately.html" class="">최근본강의 <em class="num">9</em></a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/my_login.html" class="">내 강의실</a></li>
+			</ul>
+		</section>
+		<!-- //하단 고정 메뉴 -->
+	</div>
+
+	<script>
+		$(function(){
+			pagodastarUI.main.init();
+		});
+	</script>
+</body>
+</html>

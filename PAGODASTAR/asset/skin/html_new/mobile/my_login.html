@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<title>파고다스타</title>
+	<link rel="apple-touch-icon" href="../../../../asset/skin/mbasil/img/common/pst_img.png"/>
+	<link rel="shortcut icon" href="../../../../asset/skin/mbasil/img/common/pst_img.png" />
+	<meta name="naver-site-verification" content="44fa86ea3842f66f8fb901f9dd7d9d24bcb1256f"/>
+	<meta name="description" content="파고다 1위 스타강사의 토익, 토플, 중국어, HSK, 일본어, JLPT, 아이엘츠, 오픽, 토익스피킹, 기초영어, 취업관련 인터넷강의 서비스">
+	<!-- jquery mobile css-->
+	<link rel="stylesheet" href="../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<!-- //jquery mobile css -->
+	<link rel="stylesheet" type="text/css" href="../../../../asset/skin/mbasil/css/ui.css">
+	<link rel="stylesheet" href="../../../../asset/skin/mbasil/css/swiper.css" />
+	<link rel="stylesheet" href="../../../../asset/skin/mbasil/css/pasta_m.css" />
+	<script src="../../../../asset/js/jquery.min.js"></script>
+	
+	<!-- jquery mobile js -->
+	<script>
+	$(document).on("mobileinit", function() {
+		var silentScroll = $.mobile.silentScroll;
+		$.mobile.silentScroll = function(ypos) {
+			if($.type(ypos) !== "number") {
+				return;
+			} else {
+				silentScroll.apply(this, arguments);
+			}
+		}
+	});
+	</script>
+	<script src="../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<!-- //jquery mobile js -->
+
+	<!-- 사용자 옵션 js -->
+	<script src="../../../../asset/js/common_function.js"></script>
+	<script src="../../../../asset/js/gangnam_function.js"></script>
+	<script src="../../../../asset/skin/mbasil/js/TweenMax.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../../../../asset/js/browser.detect.js"></script>
+	<!-- //사용자 옵션 js -->
+
+
+	<!-- 신규 css파일 -->
+	<link rel="stylesheet" href="../../../../asset/skin/mint/mobile/css/main.css" />
+
+	<!-- 신규 js파일 -->
+	<script src="../../../../asset/skin/mint/mobile/js/pagodastar.plugin.js"></script>
+	<script src="../../../../asset/skin/mint/mobile/js/pagodastar.ui.js"></script>
+</head>
+<body class="pgds-my">
+	<div id="pgds-wrap" class="pgds-wrap">
+		<!-- header -->
+		<header id="pgds-header" class="pgds-header">
+			<a href="" class="back">back</a>
+			<h1 class="p_tit">내 강의실</h1>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<section class="pgds-content">
+			<div class="my">
+				<!-- 로그인 전 -->
+				<!--div class="login_before">
+					<a href="" class="login">로그인</a>
+					<a href="" class="join"class="join"><span>회원가입</span></a>
+				</div-->
+				<!-- //로그인 전 -->
+
+				<!-- //로그인 후 -->
+				<div class="login_after">
+					<div class="users">
+						<span class="thumb"><img src="../../../../asset/skin/mint/mobile/img/img_user3.png" alt="" /></span>
+						<div class="name"><a href="">정우성</a><em>님</em></div>
+						<a href="" class="logout">로그아웃</a>
+					</div>
+
+					<div class="my_menu">
+						<ul>
+							<li>
+								<a href="">내 강의실</a>
+							</li>
+							<li>
+								<a href="">장바구니 <em class="num">99</em></a>
+							</li>
+							<li>
+								<a href="">관심강의 <em class="num">5</em></a>
+							</li>
+							<li>
+								<a href="">결제정보</a>
+							</li>
+							<li>
+								<a href="">쿠폰 <em class="num">10</em></a>
+							</li>
+							<li>
+								<a href="">
+									<span class="point"><em>1,111,700</em></span>
+									포인트
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- //로그인 후 -->
+
+				<!-- 고객센터 -->
+				<div class="customer">
+					<div class="default_list">
+						<strong>고객센터</strong>
+						<ul>
+							<!-- 20161104 순서 수정 -->
+							<li><a href="">자주묻는질문</a></li>
+							<li><a href="">1:1 문의</a></li>
+							<!-- //20161104 순서 수정 -->
+							<li><a href="">공지사항</a></li>
+							<li><a href="">파고다스타에 바란다</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //고객센터 -->
+
+				<!-- 상담 -->
+				<div class="consult">
+					<ul>
+						<li><a href="">전화<br>상담</a></li>
+						<li><a href="">카카오톡<br>상담</a></li>
+					</ul>
+				</div>
+				<!-- //상담 -->
+			</div>
+		</section>
+		<!-- //content -->
+
+
+		<!-- 하단 고정 메뉴 -->
+		<section class="pgds-menubar">
+			<ul>
+				<li><a href="../../../../asset/skin/html_new/mobile/main/index.html" class="">홈</a></li>
+				<li><a href="../../../../asset/skin/html_new/mobile/menu.html" class="">전체메뉴</a></li>
+				<li><a href="../../../../asset/skin/html_new/mobile/lately.html" class="">최근본강의 <em class="num">99</em></a></li>
+				<li><a href="../../../../asset/skin/html_new/mobile/my_login" class="active">내 강의실</a></li>
+			</ul>
+		</section>
+		<!-- //하단 고정 메뉴 -->
+	</div>
+
+	<script>
+		$(function(){
+		});
+	</script>
+</body>
+</html>

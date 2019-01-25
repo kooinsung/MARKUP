@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<title>파고다스타</title>
+	<link rel="apple-touch-icon" href="../../../../../asset/skin/mbasil/img/common/pst_img.png"/>
+	<link rel="shortcut icon" href="../../../../../asset/skin/mbasil/img/common/pst_img.png" />
+	<meta name="naver-site-verification" content="44fa86ea3842f66f8fb901f9dd7d9d24bcb1256f"/>
+	<meta name="description" content="파고다 1위 스타강사의 토익, 토플, 중국어, HSK, 일본어, JLPT, 아이엘츠, 오픽, 토익스피킹, 기초영어, 취업관련 인터넷강의 서비스">
+	<!-- jquery mobile css-->
+	<link rel="stylesheet" href="../../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+	<!-- //jquery mobile css -->
+	<link rel="stylesheet" type="text/css" href="../../../../../asset/skin/mbasil/css/ui.css">
+	<link rel="stylesheet" href="../../../../../asset/skin/mbasil/css/swiper.css" />
+	<link rel="stylesheet" href="../../../../../asset/skin/mbasil/css/pasta_m.css" />
+	<script src="../../../../../asset/js/jquery.min.js"></script>
+	
+	<!-- jquery mobile js -->
+	<script>
+	$(document).on("mobileinit", function() {
+		var silentScroll = $.mobile.silentScroll;
+		$.mobile.silentScroll = function(ypos) {
+			if($.type(ypos) !== "number") {
+				return;
+			} else {
+				silentScroll.apply(this, arguments);
+			}
+		}
+	});
+	</script>
+	<script src="../../../../../asset/jmobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<!-- //jquery mobile js -->
+
+	<!-- 사용자 옵션 js -->
+	<script src="../../../../../asset/js/common_function.js"></script>
+	<script src="../../../../../asset/js/gangnam_function.js"></script>
+	<script src="../../../../../asset/skin/mbasil/js/TweenMax.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../../../../../asset/js/browser.detect.js"></script>
+	<!-- //사용자 옵션 js -->
+
+
+	<!-- 신규 css파일 -->
+	<link rel="stylesheet" href="../../../../../asset/skin/mint/mobile/css/sub.css" />
+
+	<!-- 신규 js파일 -->
+	<script src="../../../../../asset/skin/mint/mobile/js/pagodastar.plugin.js"></script>
+	<script src="../../../../../asset/skin/mint/mobile/js/pagodastar.ui.js"></script>
+</head>
+<body class="pgds-sub">
+	<div id="pgds-wrap" class="pgds-wrap">
+		<!-- header -->
+		<header id="pgds-header" class="pgds-header">
+			<a href="" class="back">back</a>
+			<h1 class="p_tit">장바구니</h1>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<section class="pgds-content">
+			<!-- 장바구니 -->
+			<div class="carts">
+				<!-- 전체 선택 -->
+				<div class="cart_top">
+					<input type="checkbox" name="" id="all_check" /><label for="all_check">전체선택 (총 <em class="total_num">0</em>개)</label>
+
+					<div class="all_del">
+						<button type="button">선택삭제</button>
+					</div>
+				</div>
+				<!-- //전체 선택 -->
+
+				<!-- 장바구니 상품 없을 경우 -->
+				<div class="no_cart" style="display:none;">
+					<p>장바구니가 비어있습니다.</p>
+				</div>
+				<!-- //장바구니 상품 없을 경우 -->
+
+				<!-- 장바구니 리스트 -->
+				<div class="cart_list">
+					<ul>
+						<li>
+							<div class="check">
+								<input type="checkbox" name="" id="cl1" /><label for="cl1"><strong>[강의패키지]</strong> 이까짓 중국어 기초 패키지</label>
+							</div>
+
+							<div class="pay_infos_list">
+								<ul>
+									<li>
+										<span class="opt_tit">강사명</span>
+										<div class="opt_result">켈리정</div>
+									</li>
+									<li>
+										<span class="opt_tit">수강기간</span>
+										<div class="opt_result">40일</div>										
+									</li>
+									<li>
+										<span class="opt_tit">즉시할인 <button type="button" class="sq" onclick="pagodastarUI.layer.open2('layer_sale');">?</button></span>
+										<div class="opt_result">
+											<span class="realtime_price"><strong>-380,000<em class="won">원</em></strong></span>
+										</div>										
+									</li>
+									<li>
+										<span class="opt_tit">가격</span>
+										<div class="opt_result">
+											<div class="prices">
+												<del>200,000<em class="won">원</em></del>
+												<strong>129,000<em class="won">원</em></strong>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<ul class="btns">
+								<li class="del"><a href="" >삭제</a></li>
+								<li class="payment"><a href="" >결제</a></li>
+							</ul>		
+						</li>
+
+						<li>
+							<div class="check">
+								<input type="checkbox" name="" id="cl2" /><label for="cl2"><strong>[교재]</strong> 이까짓 중국어 기초 STEP 1</label>
+							</div>
+
+							<div class="pay_infos_list">
+								<ul>
+									<li>
+										<span class="opt_tit">발행일</span>
+										<div class="opt_result">2016.05.02</div>
+									</li>
+									<li>
+										<span class="opt_tit">가격</span>
+										<div class="opt_result">
+											<div class="prices">
+												<strong>129,000<em class="won">원</em></strong>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<ul class="btns">
+								<li class="del"><a href="" >삭제</a></li>
+								<li class="payment"><a href="" >결제</a></li>
+							</ul>			
+						</li>
+
+						<li>
+							<div class="check">
+								<input type="checkbox" name="" id="cl3" /><label for="cl3"><strong>[제품]</strong> iPad mini 4 Silicone</label>
+							</div>
+
+							<div class="pay_infos_list">
+								<ul>
+									<li>
+										<span class="opt_tit">옵션</span>
+										<div class="opt_result">차콜 그레이</div>
+									</li>
+									<li>
+										<span class="opt_tit">가격</span>
+										<div class="opt_result">
+											<div class="prices">
+												<strong>129,000<em class="won">원</em></strong>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<ul class="btns">
+								<li class="del"><a href="" >삭제</a></li>
+								<li class="payment"><a href="" >결제</a></li>
+							</ul>				
+						</li>
+
+						<li>
+							<div class="check">
+								<input type="checkbox" name="" id="cl4" /><label for="cl4"><strong>[모의테스트]</strong> ew 모의토익테스트Vol.15</label>
+							</div>
+
+							<div class="pay_infos_list">
+								<ul>
+									<li>
+										<span class="opt_tit">옵션</span>
+										<div class="opt_result">TEST + VOD</div>
+									</li>
+									<li>
+										<span class="opt_tit">응시기간</span>
+										<div class="opt_result">30일</div>
+									</li>
+									<li>
+										<span class="opt_tit">가격</span>
+										<div class="opt_result">
+											<div class="prices">
+												<strong>129,000<em class="won">원</em></strong>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+
+							<ul class="btns">
+								<li class="del"><a href="" >삭제</a></li>
+								<li class="payment"><a href="" >결제</a></li>
+							</ul>		
+						</li>
+					</ul>
+				</div>
+				<!-- //장바구니 리스트 -->
+
+				<!-- 총액 -->
+				<div class="cart_total">
+					<div class="totals">
+						<table>
+						 <colgroup>
+							<col style="width:50%;"/>
+							<col style="width:50%;"/>
+						 </colgroup>
+						 <tbody>
+							<tr>
+								<th>총 상품금액</th>
+								<td><strong>129,000<em class="won">원</em></strong></td>
+							</tr>
+							<tr class="realtime">
+								<th>즉시할인</th>
+								<td><strong>-129,000<em class="won">원</em></strong></td>
+							</tr>
+							<tr>
+								<th>배송비</th>
+								<td><strong>0<em class="won">원</em></strong></td>
+							</tr>
+							<tr class="total_num">
+								<th>총 결제 예정금액</th>
+								<td><strong>999,900<em class="won">원</em></strong></td>
+							</tr>
+						 </tbody>
+						</table>
+					</div>
+
+					<div class="tips">
+						<ul>
+							<li>실 결제 금액은 주문결제페이지 내 쿠폰/할인 적용에 따라 달라집니다. </li>
+							<li>구매 혜택 :  FM (포인트) 2% 적립, 모바일 지원, 무료 배송</li>
+						</ul>
+					</div>
+
+					<ul class="btns">
+						<li class="another"><a href="" >다른 강의 보기</a></li>
+						<li class="payment"><a href="" >결제하기</a></li>
+					</ul>
+				</div>
+				<!-- //총액 -->
+			</div>
+			<!-- //장바구니 -->
+		</section>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="pgds-footer">
+			<div class="footer_row1">
+				<ul>
+					<li><a href="">PC버전보기</a></li>
+					<li><a href="">APP다운로드</a></li>
+					<li><a href="">카카오톡상담</a></li>
+					<li><a href="">전화상담</a></li>
+				</ul>
+			</div>
+
+			<div class="footer_row2">
+				<ul class="utils">
+					<li><a href="">이용약관</a></li>
+					<li><a href="">개인정보취급방침</a></li>
+				</ul>
+
+				<strong class="logo"><a href="" class="pgds-sp">PAGODA STAR</a></strong>
+
+				<div class="infos">
+					<p>(주) 파고다에스씨에쓰 대표이사 박경실</p>
+					<p>서울특별시 서초구 강남대로 419(서초동)</p>
+					<p><span>TEL : 02-6907-2489</span><span class="nbar">FAX : 02-533-8066</span></p>
+					<p><span>사업자등록번호 : 214-87-63551</span><strong><a href="">사업자정보확인</a></strong></p>
+					<p><span>통신판매신고 : 2005-서울서초-05273</span><strong><a href="">escrow 가입확인</a></strong></p>
+					<p class="copyright">Copyright© PAGODA SCS Inc. All rights reserved.</p>
+				</div>
+
+				<ul class="sns">
+					<li class="yt"><a href="" class="pgds-sp">youtube</a></li>
+					<li class="fb"><a href="" class="pgds-sp">facebook</a></li>
+				</ul>
+
+				<a href="" id="move_top" class="pgds-sp move_top">top move</a>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+		<!-- 하단 고정 메뉴 -->
+		<section class="pgds-menubar">
+			<ul>
+				<li><a href="../../../../../asset/skin/html_new/mobile/main/index.html" class="">홈</a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/menu.html" class="">전체메뉴</a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/lately.html" class="">최근본강의 <em class="num">10</em></a></li>
+				<li><a href="../../../../../asset/skin/html_new/mobile/my_login.html" class="">내 강의실</a></li>
+			</ul>
+		</section>
+		<!-- //하단 고정 메뉴 -->
+	</div>
+
+	<!-- 즉시할인 -->
+	<div class="pgds-layer2" id="layer_sale">
+		<div class="layer_outer">
+			<strong class="tit">즉시할인</strong>
+			<div class="layer_inner">
+				<div class="realtime_txt">
+					즉시할인 금액 = (정가  -  판매가) + 모바일 첫구매 할인
+				</div>
+			</div>
+			<button type="button" class="close" onclick="pagodastarUI.layer.close2('layer_sale');">close</button>
+		</div>
+	</div>
+	<!-- //즉시할인 -->
+
+	<script>
+		$(function(){
+			pagodastarUI.subs.init();
+		});
+	</script>
+</body>
+</html>
