@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/* 1024이상 화면 */
+.sample{position:relative;width:100%;max-width:1180px;margin:0 auto;}
+.sample .sampleLeft{position:absolute;top:0;left:0;width:280px;text-align:center;background:red}
+.sample .sampleConts{position:relative;display:block;min-height:1000px;margin:0 0 0 290px;background:pink}
+
+
+/* 1024이하 화면 */
+@media all and (max-width: 1024px) {
+	.sample .sampleLeft{position:relative;width:auto;}
+	.sample .sampleConts{margin:0;}
+}
+
+/* 640이하 화면 */
+@media all and (max-width: 639px) { 
+}
+/* 김영대 추가 */
+.prdListType03.contents > ul > li{
+	width: 33.333%;
+}
+@media all and (max-width: 480px) {
+.prdListType03.contents > ul > li {
+  width: 100% !important;
+  max-width: none;
+}
+}

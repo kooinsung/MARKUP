@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<title>스타일렛</title>
+<link rel="stylesheet" type="text/css" href="common/css/common.css">
+<link rel="stylesheet" type="text/css" href="common/css/stylet.v1.css">
+<script src="common/js/jquery-1.9.0.min.js"></script>
+<script src="common/js/jquery.plugin.js"></script>
+<script src="common/js/stylet.v1.js"></script>
+<!--[if lt IE 9]>
+	<link type="text/css" rel="stylesheet" href="common/css/ie.css"  media="all"/>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div id="wrap" class="wrap">
+		<!-- 모바일용 left menu -->
+		<div class="sb-slidebar sb-left sb-momentum-scrolling">
+			<ul class="lnbArea">
+				<li class="before"  style=";">
+					<a href="" class="btnLogin"><em>로그인</em> 해주세요.</a>
+					<strong class="btnJoin"><a href="" >회원가입</a></strong>
+				</li>
+				<li class="after" style=";">
+					<div class="user" onclick="">
+							<a href="" class="iconHome btnHome">home</a>
+							<div class="noShop">
+								<span><a href="">Make it,셀렉샵!!</a></span>
+								<a href="" class="iconMake btnMake">샵만들기</a>
+							</div>
+							<span class="thumb">
+								<img src="img/common/img_userThumb.png" alt="">
+							</span>
+							<strong>Sooyeon Park</strong>
+					</div>
+					<ul class="info">
+						<li>
+							<a href="">
+								<i class="iconMyItem02"></i><br/> Item <em>9,999개</em>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="iconWhiteLike"></i><br/> Like <em>9,999개</em>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="iconFollower02"></i><br/> Follower <em>9,999개</em>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<i class="iconFollowing02"></i><br/> Following <em>9,999개</em>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="lnb">
+					<nav>
+						<ul>
+							<li class="first" style=";"><a href="" class="depth01">Home</a></li>
+							<li>
+								<a href="" class="depth01">Ranking</a>
+								<ul class="depth02">
+									<li><a href="">종합랭킹</a></li>
+									<li><a href="">상품클릭 베스트</a></li>
+									<li><a href="">댓글순</a></li>
+									<li><a href="">리뷰순</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="" class="depth01">Category</a>
+								<ul class="depth02">
+									<li><a href="">여성</a></li>
+									<li><a href="">남성</a></li>
+									<li><a href="">잡화</a></li>
+									<li><a href="">악세사리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="" class="depth01">Style</a>
+								<ul class="depth02">
+									<li><a href="">Hotpick</a></li>
+									<li><a href="">Daily/Issue</a></li>
+									<li><a href="">People/Shop</a></li>
+									<li><a href="">Staff/Stree</a></li>
+								</ul>
+							</li>
+							<li><a href="" class="depth01">Contest</a></li>
+							<li><a href="" class="depth01">Selectors</a></li>
+							<li><a href="" class="depth01">RanDom</a></li>
+						</ul>
+					</nav>
+				</li>
+				<li class="etcMenu">
+					<ul>
+						<li><a href="">초대하기</a></li>
+						<li><a href="">Language</a></li>
+					</ul>
+				</li>
+				<li class="boardMenu">
+					<ul>
+						<li><a href="">about	</a></li>
+						<li><a href="">알립니다</a></li>
+						<li><a href="">궁금해요</a></li>
+						<li><a href="">이용안내</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- //모바일용 left menu -->
+
+		<div id="sb-site">
+			<!-- header -->
+			<header class="header">
+				<div class="headerTop">
+					<div class="headerTopInner">
+						<!-- 상단 패밀리 사이트 -->
+						<div class="familySite">
+							<ul>
+								<li><a href=""><img src="img/common/img_familySite01_off.png" alt="" /></a></li>
+								<li><a href=""><img src="img/common/img_familySite02_off.png" alt="" /></a></li>
+								<li><a href=""><img src="img/common/img_familySite03_off.png" alt="" /></a></li>
+								<li><a href=""><img src="img/common/img_familySite04_off.png" alt="" /></a></li>
+								<li><a href=""><img src="img/common/img_familySite05_off.png" alt="" /></a></li>
+								<li><a href=""><img src="img/common/img_familySite06_off.png" alt="" /></a></li>
+								<li class="on"><a href=""><img src="img/common/img_familySite07_on.png" alt="" /></a></li>
+							</ul>
+						</div>					
+						<!-- //상단 패밀리 사이트 -->
+
+						<!-- 웹화면용 -->
+						<div class="webUtil">
+							<!-- 로그인 -->
+							<!-- a href="" class="btnLogin">로그인</a -->
+							<!-- //로그인 -->
+							<span class="logout">
+								<a href="" class="btnLogToggle"><img src="img/common/img_userThumb.png" width="25" alt=""><em>Freezia11</em></a>
+								<div class="loginLayer">
+									<div class="loginList">
+										<ul>
+											<li><a href=""><i class="iconMyItem"></i>Item <em>9,999개</em></a></li>
+											<li><a href=""><i class="iconGrayLike02"></i>Like <em>9,999개</em></a></li>
+											<li><a href=""><i class="iconFollower03"></i>Follower <em>9,999개</em></a></li>
+											<li><a href=""><i class="iconFollowing"></i>Following <em>9,999개</em></a></li>
+										</ul>
+									</div>
+									<a href="" class="btnLogout">로그아웃</a>
+								</div>
+							</span>
+							<a href="" class="btnNotice">알립니다</a>
+							<a href="" class="btnQuestion">궁금해요</a>
+							<a href="" class="btnFaq">이용안내</a>
+							<!-- 글로벌 메뉴 -->
+							<div class="global">
+								<span class="btnToggle" >한국어</span>
+								<ul>
+									<li><a href="">일본어</a></li>
+									<li><a href="">중국어(간체)</a></li>
+									<li><a href="">중국어(번체)</a></li>
+									<li><a href="">영어</a></li>
+									<li><a href="">프랑스</a></li>
+									<li><a href="">그리스</a></li>
+									<li><a href="">베트남</a></li>
+									<li><a href="">인도네시아</a></li>
+									<li><a href="">싱가폴</a></li>
+									<li><a href="">북한</a></li>
+								</ul>
+							</div>
+							<!-- //글로벌 메뉴 -->
+
+							<!-- 단추 버튼 -->
+							<a href="" class="btnTopButton"><i class="icon iconTopButton"></i>단추</a>
+							<!-- //단추 버튼 -->
+						</div>
+						<!-- //웹화면용 -->
+					</div>
+				</div>
+				<div class="headerInner">
+					<!-- 로고 -->
+					<h1><span><a href=""><img src="img/common/img_logo.png" alt=""></a></span></h1>
+					<!-- //로고 -->
+
+					<!-- 모바일용 메뉴버튼 -->
+					<button type="button" class="sb-open-left iconToggleMenu btnMenuToggle">메뉴</button>
+					<!-- //모바일용 메뉴버튼 -->
+
+					<div class="util">
+						<div class="utilInner">
+							<!-- 검색 -->
+							<span class="srchArea">
+								<span class="srch">
+									<button type="button" class="iconSrch btnSrch">검색</button>
+									<span class="default"><input type="text" /></span> 
+								</span>
+								<span class="srch02" >
+									<button type="button" class="iconSrch btnSrch">검색</button>
+									<span class="default"><input type="text" /></span>
+									<a href="" class="btnMobileSrch">검색</a>
+									<button type="button" class="iconSrchClose btnSrchClose">검색 닫기</button> 
+								</span>
+								<!-- 검색어별 리스트 -->
+								<div class="srchListType01" style="display:none">
+									<ul>
+										<li>
+											<a href="">원피스</a>
+											<button type="button" class="iconLayerClose btnListDel" >닫기</button>
+										</li>
+										<li>
+											<a href="">원피스</a>
+											<button type="button" class="iconLayerClose btnListDel" >닫기</button>
+										</li>
+										<li>
+											<a href="">원피스</a>
+											<button type="button" class="iconLayerClose btnListDel" >닫기</button>
+										</li>
+										<li>
+											<a href="">원피스</a>
+											<button type="button" class="iconLayerClose btnListDel" >닫기</button>
+										</li>
+										<li>
+											<a href="">원피스</a>
+											<button type="button" class="iconLayerClose btnListDel" >닫기</button>
+										</li>
+									</ul>
+									<button type="button" class="btnSrchDel">검색 기록 삭제</button>
+								</div>
+								<!-- //검색어별 리스트 -->
+								<!-- 검색건별 리스트 -->
+								<div class="srchListType02" style="display:none">
+									<ul>
+										<li>
+											<a href=""><em class="typingText">원</em>피스 <span class="srchNum">1,423건</span></a>
+											
+										</li>
+										<li>
+											<a href=""><em class="typingText">청</em>치마 <span class="srchNum">17건</span></a>
+										</li>
+										<li>
+											<a href=""><em class="typingText">청</em>모자 <span class="srchNum">11건</span></a>
+										</li>
+										<li>
+											<a href=""><em class="typingText">청</em>바지 <span class="srchNum">3건</span></a>
+										</li>
+										<li>
+											<a href=""><em class="typingText">청</em>청패션 <span class="srchNum">23건</span></a>
+										</li>
+									</ul>
+								</div>
+								<!-- //검색건별 리스트 -->
+							</span>
+							<!-- //검색 -->
+							<!-- 초대하기 -->
+							<span class="invite">
+								<button type="button" class="iconInvite btnLayerView">초대하기</button>
+								<!-- 초대하기 레이어 -->
+								<div class="inviteLayer">
+									<div class="smsSend">
+										<strong class="tit">SMS 초대</strong>
+										<span class="default" ><input type="text" class="" value="http://m.stylet.halfclub.com/se"/></span>
+										<p class="tip">* URL 전달을 통해 친구에게 초대해 보세요.</p>
+										<div class="number">
+											<span class="select" style="width:60px;">
+												<select name="" id="" class="custom">
+													<option value="010">010</option>
+													<option value="011">011</option>
+													<option value="016">016</option>
+													<option value="017">017</option>
+													<option value="018">018</option>
+												</select>
+											</span>
+											<span class="default" style="width:50px;"><input type="text" class="" value=""/></span>
+											<span class="default" style="width:50px;"><input type="text" class="" value=""/></span>
+										</div>
+										<a href="" class="btnSend">SMS 보내기</a>
+									</div>
+									<div class="snsInvite">
+										<strong class="tit">SNS 초대</strong>
+										<ul>
+											<li>
+												<a href="">
+													<img src="img/common/icon_talk.png" alt="카카오톡">
+													<span>카카오톡</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="img/common/icon_line.png" alt="라인">
+													<span>라인</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<img src="img/common/icon_fb.png" alt="페이스북">
+													<span>페이스북</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<button type="button" class="iconLayerClose btnLayerClose">닫기</button>
+								</div>
+								<!-- //초대하기 레이어 -->
+							</span>
+							<!-- //초대하기 -->
+						</div>
+					</div>
+					<!-- 웹화면용 GNB -->
+					<nav class="gnb">
+						<div class="gnbInner">
+							<ul class="gnbDepth01">
+								<li>
+									<a href="" class="">RANKING</a>
+								</li>
+								<li>
+									<a href="">CATEGORY</a>
+								</li>
+								<li>
+									<a href="">STYLE</a>
+								</li>
+								<li><a href="">CONTEST</a></li>
+								<li><a href="">SELECTORS</a></li>
+							</ul>
+							<div class="gnbDepth02">
+								<ul>
+									<li class="d01">
+										<ul>
+											<li><a href="">종합랭킹</a></li>
+											<li><a href="">상품클릭 베스트</a></li>
+											<li><a href="">댓글순</a></li>
+											<li><a href="">리뷰순</a></li>
+										</ul>
+									</li>
+									<li class="d02">
+										<ul>
+											<li><a href="">여성</a></li>
+											<li><a href="">남성</a></li>
+											<li><a href="">잡화</a></li>
+											<li><a href="">악세사리</a></li>
+										</ul>
+									</li>
+									<li class="d03">
+										<ul>
+											<li><a href="">Hotpick(Editor Shop)</a></li>
+											<li><a href="">Daily/Issue</a></li>
+											<li><a href="">People/Shop</a></li>
+											<li><a href="">Staff/Stree</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<!-- //웹화면용 GNB -->
+				</div>	
+			</header>
+			<!-- //header -->
+
+			<!-- content -->
+			<section class="container" >
+				<div class="contentTop listTop">
+					<div class="contentTopInner">
+						<div class="left">
+							<!-- 뒤로 -->
+							<a href="" class="iconBack btnBack">back</a>
+							<!-- //뒤로 -->
+							<!-- 카테 -->
+							<div class="cate">
+								<span class="btnToggle">여성<i class="iconCataToggle"></i></span>
+								<ul>
+									<li><a href="">전체보기</a></li>
+									<li><a href="" class="active">여성</a></li>
+									<li><a href="">남성</a></li>
+									<li><a href="">잡화</a></li>
+									<li><a href="">악세사리</a></li>
+								</ul>
+							</div>
+							<!-- //카테 -->
+							<!-- 검색 결과 갯수 -->
+							<div class="srchPrdNum" style="display:none;">
+								<strong>청치마 (1,174건)</strong>
+							</div>
+							<!-- //검색 결과 갯수 -->
+						</div>
+						<div class="right">
+							<div class="rightInner">
+								<!-- 검색 및 정렬 -->
+								<span class="listSrch listUtil">
+									<button type="button" class="iconGrayArrow btnLayerView02">검색</button>
+									<div class="detailSrchLayer" style=";">
+										<ul>
+											<li style="display:none;">
+											<span class="default"><input type="text" id="txt01" placeholder="추천 제목/내용" /></span>
+											</li>
+											<li style="display:none;">
+											 <span class="default"><input type="text" id="txt02" placeholder="셀렉터 명 / 아이디"/></span>
+											</li>
+											<li>
+											 <span class="default"><input type="text" id="txt03"placeholder="상품 명" /></span>
+											</li>
+										</ul>
+										<div class="btns">
+											<button type="button" class="iconReset btnReset">초기화</button>
+											<button type="button" class="iconDetailSrch btnDetailSrch">검색</button>
+										</div>
+									</div>
+								</span><span class="listSort listUtil">
+									<button type="button" class="iconGrayArrow btnLayerView02">정렬/보기방식</button>
+									<div class="sortLayer" style="">
+										<ul>
+											<li><a href="">신규 등록 순</a></li>
+											<li><a href="" class="active">조회수 순</a></li>
+											<li><a href="">좋아요 순</a></li>
+										</ul>
+									</div>
+								</span>
+								<!-- 검색 및 정렬 -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="prdList">
+						<ul id="prdList">
+							<li class="item"> 
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_default.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy02.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy02.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy01.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item"> 
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy01.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy02.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<img src="img/common/img_dummy03.png" alt="">
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy01.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item"> 
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy01.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy02.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<img src="img/common/img_dummy03.png" alt="">
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy01.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item"> 
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy01.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy02.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>999,000</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<img src="img/common/img_dummy03.png" alt="">
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+											<div class="iconList">
+												<span class="comment"><i class="iconComment"></i> 317</span><span class="share"><i class="iconShare"></i> 148</span>
+											</div>
+										</a>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+							<li class="item">
+								<div class="inner">
+									<span class="thumb">
+										<div class="cycleLike gray">
+											<a href=""><span><i class="iconLike"></i> <em>23</em></span></a>
+										</div>
+										<!-- div class="dim"></div -->
+										<a href=""><img src="img/common/img_dummy01.png" alt=""></a>
+									</span>
+									<div class="info">
+										<a href="">
+											<strong>우리일년 청데님셔츠</strong>
+											<p>물이 빠진듯한 독특한 워싱 소재가 사용되어 단품으로만 착용해도 멋스러울것 같아요. 멋스러울것 같아요.</p>
+										</a>
+										<div class="iconList">
+											<span class="comment"><i class="iconComment"></i> 317</span>
+											<span class="share"><i class="iconShare"></i> 148</span>
+										</div>
+									</div>
+									<div class="user">
+										<a href="">
+											<span class="userThumb"><img src="img/common/img_userThumb.png" width="40" alt=""></span> <em class="userName">Yu Rim Gang</em> <span class="fav"><i class="iconFav"></i> 413</span>
+										</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="btnMore">
+							<a href="">더보기 <i class="iconMoreArrow"></i></a>
+						</div>
+						<div class="loading"><img src="img/common/ajax_loader.gif" width="40" alt=""></div>
+					</div>
+				</div>
+			</section>
+			<!-- //content -->
+
+					<!-- 패밀리사이트 -->
+					<div class="topFamily">
+						<button type="button" class="btnFamily iconFamily"></button>
+						<div class="topFamilyInner">
+							<div class="topFamilyList">
+								<strong>Family Site</strong>
+								<ul>
+									<li><a href=""><img src="img/common/img_family01.png" style="max-width:112px;" alt=""></a></li>
+									<li><a href=""><img src="img/common/img_family02.png" style="max-width:81px;" alt=""></a></li>
+									<li><a href=""><img src="img/common/img_family03.png" style="max-width:129px;" alt=""></a></li>
+									<li><a href=""><img src="img/common/img_family04.png" style="max-width:90px;" alt=""></a></li>
+									<li><a href=""><img src="img/common/img_family05.png" style="max-width:121px;"alt=""></a></li>
+								</ul>
+								<button type="button" class="btnCloseFamily iconCloseFamily"></button>
+							</div>
+						</div>
+					</div>
+					<!-- //패밀리사이트 -->
+
+			<!-- footer -->
+			<footer class="footer">
+				<div class="footerPc">
+					<div class="footerInner">
+						<ul class="footerMenu">
+							<li><a href="">회사소개</a></li>
+							<li><a href="">제휴 및 입점문의</a></li>
+							<li><a href="">개인정보취급방침 </a></li>
+							<li><a href="">청소년보호정책</a></li>
+							<li><a href="">이용약관</a></li>
+						</ul>
+						<div class="familySite">
+							<ul>
+								<li><a href=""><img src="img/common/img_footerFamily01.png" alt=""></a></li>
+								<li><a href=""><img src="img/common/img_footerFamily02.png" alt=""></a></li>
+								<li><a href=""><img src="img/common/img_footerFamily03.png" alt=""></a></li>
+								<li><a href=""><img src="img/common/img_footerFamily04.png" alt=""></a></li>
+								<li><a href=""><img src="img/common/img_footerFamily05.png" alt=""></a></li>
+								<li><a href=""><img src="img/common/img_footerFamily06.png" alt=""></a></li>
+							</ul>
+						</div>
+						<div class="txt">
+							<p>(주)트라이씨클은 패션기업 (주)데코, (주)대현, (주)슈페리어가 공동 출자한 패션 인터넷 전문기업입니다.</p>
+							<p>주소 : 서울특별시 서초구 서초동 1515-4 서원빌딩 2~5F (주)트라이씨클 &nbsp; 대표이사 : 최형석 &nbsp; 개인정보 보호 책임자 : 이용근</p>
+							<p>사업자 등록번호 : 120-81-06331 &nbsp; 통신판매업신고 제 강남 4959호 &nbsp; 팩스 : 02-3289-3321 &nbsp; 이메일 문의 : customer@ricycle.co.kr</p>
+						</div>
+						<ul class="brandLogo">
+							<li><a href=""><img src="img/common/img_brandLogo01.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo02.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo03.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo04.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo05.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo06.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo07.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo08.png" alt=""></a></li>
+							<li><a href=""><img src="img/common/img_brandLogo09.png" alt=""></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footerM" >
+					<p class="copyRight">COPYRIGHT(C) STYLET. ALL RIGHTS RESERVED.</p>
+					<div class="footerInner">
+						<ul class="footerMenu">
+							<li><a href="">회사소개</a></li>
+							<li><a href="">제휴 및 입점문의</a></li>
+							<li><a href="">개인정보취급방침 </a></li>
+							<li><a href="">청소년보호정책</a></li>
+							<li><a href="">이용약관</a></li>
+						</ul>
+						<div class="txt">
+							<p>(주)트라이씨클은 패션기업 (주)데코, (주)대현, (주)슈페리어가 공동 출자한 패션 인터넷 전문기업입니다.</p>
+							<p>(주)트라이씨클 대표이사 : 최형석 &nbsp; 개인정보보호책임자 : 이용근</p>
+							<p>사업자등록번호 : 120-81-06331 통신판매업신고 강남 4959호</p>
+							<p>서울특별시 서초구 서초동 1515-4 서원빌딩 2~5F &nbsp; 이메일 : customer@tricycle.co.kr</p>
+							<p>고객센터 : 하프클럽 통합고객센터 1544-7495 (평일 오전9시~오후7시/토요일 오전9시~오후1시/일요일공휴일 휴무)</p>
+						</div>
+					</div>
+					<div class="btnfooterToggle" id="btnfooterToggle">
+						<a href=""><span>약관 및 법적 고지 확인, 상세 정보 보기</span></a>
+					</div>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+	</div>
+</body>
+</html>

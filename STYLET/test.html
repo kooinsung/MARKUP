@@ -1,0 +1,787 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="title" content="패션 피플이 엄선한 트렌드 아이템 셀렉샵#" />
+
+<meta id="metaTitle" property="og:title"></meta>
+<meta id="metaUrl" property="og:url"></meta>
+<meta id="metaImage" property="og:image"></meta> 
+<meta id="metaContent" property="og:description"></meta>
+
+<title>STYLET - 패션 피플이 엄선한 트렌드 아이템</title>
+<link rel="stylesheet" type="text/css" href="http://m51.stylet.halfclub.com/Store/Common/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://m51.stylet.halfclub.com/Store/Common/css/stylet.v1.css">
+<link rel="stylesheet" type="text/css" href="http://m51.stylet.halfclub.com/Store/Common/css/placeholder.css"/>
+<link rel="stylesheet" type="text/css" href="http://m51.stylet.halfclub.com/Store/Common/css/notice.css">
+<link rel="stylesheet" type="text/css" href="http://m51.stylet.halfclub.com/Store/Common/css/custom.css">
+<link rel="stylesheet" type="text/css" href="http://m51.stylet.halfclub.com/Store/Common/css/syh.css">
+<link rel="stylesheet" type="text/css" href="http://m51.stylet.halfclub.com/Store/Common/css/apply.css">
+<script src="http://m51.stylet.halfclub.com/Store/Common/js/jquery-1.9.0.min.js"></script>
+<script src="http://m51.stylet.halfclub.com/Store/Common/js/jquery.plugin.js"></script>
+<script src="http://m51.stylet.halfclub.com/Store/Common/js/jquery.textPlaceholder.js"></script>
+<script src="http://m51.stylet.halfclub.com/Store/Common/js/stylet.v1.js"></script>
+<script src="http://m51.stylet.halfclub.com/Store/Common/js/Initialize.js"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="http://m51.stylet.halfclub.com/Store/Common/js/kakao.link.js"></script>
+<script src="http://m51.stylet.halfclub.com/Store/Common/js/SNSHelper.js"></script>
+
+<!--[if lt IE 9]>
+	<link type="text/css" rel="stylesheet" href="common/css/ie.css"  media="all"/>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+
+    <script src="http://m51.stylet.halfclub.com/Store/Common/js/ProductHelper.js"></script>
+    <script src="http://m51.stylet.halfclub.com/Store/Common/js/ContentsHelper.js"></script>
+
+    <script type="text/javascript">
+        var isCpSending = false;
+        
+        var ph = new ProductHelper({
+            UID: ''
+        });
+        
+        var ch = new ContentsHelper({
+            UID: ''
+        });
+
+        $(document).ready(function () {
+            InitSet();
+        });
+
+        function InitSet() {
+            GetMainPrdList(1);
+            
+        }
+        var isCpSendingS = false;
+        function GetStyleBoardList() {
+            var url = "http://m51.stylet.halfclub.com/Store/STYLE/AddForm/Type_StyletBoard.aspx";
+            var params = "";
+            params += MakeUrl(params, "pageSize", 8);
+
+            $.ajax({
+                url: url + params,
+                contentType: "application/json",
+                type: "get",
+                data: {},
+                datatype: "json",
+                timeout: 30000,
+                beforeSend: function (xhr) {
+                    if (!isCpSendingS) {
+                        isCpSendingS = true;
+
+                        LoadGoingImg(isCpSendingS);
+                    }
+                    else {
+                        xhr.abort();
+                    }
+                },
+                success: function (data) {
+                    RenderStyleList(data);
+                },
+                error: function (xhr) {
+                    if (xhr.statusText == 'timeout') {
+                        alert("timeout : 다시 페이지를 호출해주세요.")
+                    }
+                }
+                , complete: function () {
+                    isCpSendingS = false;
+                    LoadGoingImg(isCpSendingS);
+                }
+            })
+        }
+
+        function RenderStyleList(html) {
+            ch.BindEachItem(html.trim(), "prdListS");
+        }
+
+
+        function GetMainPrdList(current) {
+            var url = "http://m51.stylet.halfclub.com/Store/Main/AddForm/Type_PrdAndCodi.aspx";
+            var params = "";
+
+            params += MakeUrl(params, "current", current);
+
+            $.ajax({
+                url: url + params,
+                contentType: "application/json",
+                type: "get",
+                data: {},
+                datatype: "json",
+                timeout: 10000,
+                beforeSend: function (xhr) {
+                    if (!isCpSending) {
+                        isCpSending = true;
+                        LoadGoingImg(isCpSending);
+                    }
+                    else {
+                        xhr.abort();
+                    }
+                },
+                success: function (data) {
+                    RenderList(data, current);
+
+                    if (current <= 1)
+                        GetStyleBoardList();
+
+                    $('#ContentPlaceHolder1_hidCurrentPage').val(current + 1);
+                },
+                error: function (xhr) {
+                    if (xhr.statusText == 'timeout') {
+                        alert("timeout : 다시 페이지를 호출해주세요.")
+                    }
+                }
+                , complete: function () {
+                    isCpSending = false;
+                    LoadGoingImg(isCpSending);
+
+                 
+                }
+            })
+        }
+
+
+        function GetMore() {
+            GetMainPrdList(parseInt($('#ContentPlaceHolder1_hidCurrentPage').val()))
+        }
+
+        function RenderList(html) {
+            ph.BindEachItem(html.trim(), "prdList");
+        }
+    </script>
+      
+
+
+     <script type="text/javascript">
+         function ConfirmLogin() {
+             var userid = getCookie_LoginInfo("UserID") == null ? "" : getCookie_LoginInfo("UserID");
+                //로그인여부
+                if (userid.toLowerCase() == "buyguest" || userid == "") {
+                    if (confirm("로그인이 필요한 서비스입니다. \n 로그인하시겠습니까?")) {
+
+                        GoLogin_pop('5');
+                        return false;
+                    }
+                    else {
+
+                        return false;
+                    }
+                }
+                else
+                    location.href = 'http://m51.stylet.halfclub.com/Store/Invite/Invite.aspx';
+            }
+        </script>
+</head>
+
+<body class="main">
+    <div id="wrap" class="wrap">
+        <!-- 모바일용 left menu -->
+        
+
+<div class="sb-slidebar sb-left sb-momentum-scrolling">
+	<ul class="lnbArea">
+		<li class="before">
+            
+                <a href="https://m.member.halfclub.com/Login?returl=http%3a%2f%2fm51.stylet.halfclub.com%2fStore%2fMain%2fMain.aspx" class="btnLogin"><em>로그인</em> 해주세요.</a>
+                <strong class="btnJoin" ><a href="https://m.member.halfclub.com/" >회원가입</a></strong>
+            
+             
+		</li>
+
+		
+
+		<li class="lnb">
+			<nav>
+				<ul>
+					<li class="first"><a href="http://m51.stylet.halfclub.com/Store/Main/Main.aspx" class="depth01">Home</a></li>
+					<li>
+						<a href="http://m51.stylet.halfclub.com/Store/Ranking/LikeRanking.aspx?R_Gubn=LK" class="depth01">Ranking</a>
+						<ul class="depth02">
+							<li><a href="http://m51.stylet.halfclub.com/Store/Ranking/LikeRanking.aspx?R_Gubn=LK">좋아요 랭킹</a></li>
+							<li><a href="http://m51.stylet.halfclub.com/Store/Ranking/CmntRanking.aspx?R_Gubn=CM">댓글 랭킹</a></li>
+							<li><a href="http://m51.stylet.halfclub.com/Store/Ranking/ActiveRanking.aspx?R_Gubn=AC">활동랭킹</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx" class="depth01">Category</a>
+						<ul class="depth02">
+                            
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=cut">Cute</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=Fem">Feminine</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=spo">Sporty</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=Cas">Casual</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=man">Manish</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=roc">Rock Chic</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=men">Men's</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=liv">Living</a></li>
+                                
+							
+						</ul>
+					</li>
+					<li>
+						<a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx" class="depth01">Style</a>
+						<ul class="depth02">
+                            
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15731">쇼퍼아이템</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15739">스트리트 스냅</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15868">데일리 스타일</a></li>
+                                
+                                    <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15908">얼리버드 픽</a></li>
+                                
+						</ul>
+					</li>
+                    <li><a href="http://m51.stylet.halfclub.com/Store/Contest/Contest_List.aspx" class="depth01">Contest</a></li>
+					<li><a href="http://m51.stylet.halfclub.com/Store/Selectors/SelectorsList.aspx" class="depth01">Selectors</a></li>
+					
+				</ul>
+			</nav>
+		</li>
+		<li class="etcMenu">
+			<ul>
+				<li><a onclick="ConfirmLogin();">초대하기</a></li>
+				<li><a href="http://m51.stylet.halfclub.com/Store/Language/langList.aspx">Language</a></li>
+			</ul>
+		</li>
+		<li class="boardMenu">
+			<ul>
+				<li><a href="http://m51.stylet.halfclub.com/Store/About/About.aspx">about	</a></li>
+				<li><a href="http://m51.stylet.halfclub.com/Store/Notice/NoticeList.aspx">알립니다</a></li>
+				<li><a href="http://m51.stylet.halfclub.com/Store/Faq/FaqList.aspx">궁금해요</a></li>
+				<li><a href="http://m51.stylet.halfclub.com/Store/UseInfo/UseInfo.aspx">이용안내</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+        <!-- //모바일용 left menu -->
+
+        <div id="sb-site">
+            
+            <!-- header -->
+            
+
+<style type="text/css">
+    .goog-te-gadget-icon {background-image:url('') !important;background-position:0 0 !important;}
+    .goog-te-banner-frame.skiptranslate {display: none !important;}
+    body { top: 0px !important; }
+    .goog-te-menu-value span {
+        cursor: pointer;
+        display: inline-block;
+        width: 88px;
+        height: 23px;
+        line-height: 23px;
+        background: #fff url('http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/icon_leftSmallArrow.png') 85px center no-repeat;
+        padding-left: 10px;
+    }
+</style>
+<script type="text/javascript">
+
+    //모바일로 로그인했을경우 
+    $(document).ready(function () {
+        var isMember = "False";
+        var isSelector = "0"
+        if (isMember == "True") {
+            
+            $("#header_Login").hide();
+            $('#mobile_join').hide();
+            $('#header_Logout').show();
+
+            //if (isSelector == 0) {
+            //    $('#header_Logout').hide();
+            //} else {
+            //    $('#header_Logout').show();
+            //}
+            
+        } else {
+            
+            $("header_Login").show();
+            $('#mobile_join').show();
+            $('#header_Logout').hide();
+        }
+
+        if (getCookie("googtrans") != null) {
+
+            var curr_lang_arr = getCookie("googtrans").split("/");
+            var curr_lang = curr_lang_arr[curr_lang_arr.length - 1];
+
+            if (curr_lang == "en") {
+                $("#lang_toggle").text("영어");
+            }else{
+                $("#lang_toggle").text("한국어");
+            }
+        } 
+    });
+    
+</script>
+
+<header class="header">
+    <div class="headerTop">
+	    <div class="headerTopInner">
+		    <!-- 상단 패밀리 사이트 -->
+		    <div class="familySite">
+			    <ul>
+				    <li><a href="javascript:_MnmSetting(1,'_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_familySite01_off.png" alt="" /></a></li>
+				    <li><a href="javascript:_MnmSetting(3,'_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_familySite02_off.png" alt="" /></a></li>
+				    <li><a href="javascript:_MnmSetting(6,'_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_familySite03_off.png" alt="" /></a></li>
+				    <li><a href="javascript:_MnmSetting(2,'_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_familySite04_off.png" alt="" /></a></li>
+				    
+				    <li class="on"><a href="javascript:_MnmSetting(9,'');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_familySite07_on.png" alt="" /></a></li>
+			    </ul>
+		    </div>					
+		    <!-- //상단 패밀리 사이트 -->
+
+		    <!-- 웹화면용 -->
+		    <div class="webUtil">
+			    <!-- 로그인 -->
+			    <a href="javascript:GoLogin_pop('0');" class="btnLogin" id="header_Login" >로그인</a>
+			    <!-- //로그인 -->
+                <span class="logout" id="header_Logout">
+				    <a href="http://m51.stylet.halfclub.com/Store/MyShop/MyShopItem.aspx?SelectorID=&ConType=N" class="btnLogToggle">
+                        <img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/profile/15.jpg" width="25" alt=""><em></em>
+				    </a>
+				    <div class="loginLayer" style="z-index:101;">
+					    <div class="loginList">
+						    <ul>
+							    <li><a href="http://m51.stylet.halfclub.com/Store/MyShop/MyShopItem.aspx?SelectorID=&ConType=N"><i class="iconMyItem"></i>Item <em>0개</em></a></li>
+							    <li><a href="http://m51.stylet.halfclub.com/Store/MyShop/MyShopPrdLiks.aspx?SelectorID=&ConType=L"><i class="iconGrayLike02"></i>Like <em>0개</em></a></li>
+							    <li><a href="http://m51.stylet.halfclub.com/Store/MyShop/MyShopFollower.aspx?SelectorID="><i class="iconFollower03"></i>Follower <em>0개</em></a></li>
+							    <li><a href="http://m51.stylet.halfclub.com/Store/MyShop/MyShopFollowing.aspx?SelectorID="><i class="iconFollowing"></i>Following <em>0개</em></a></li>
+						    </ul>
+					    </div>
+					    <a href="http://www.halfclub.com/Member/Logout.asp?RUrl=http://m74.stylet.halfclub.comhttp://m51.stylet.halfclub.com/Store/main/main.aspx" class="btnLogout">로그아웃</a>
+				    </div>
+			    </span>
+                <a href="http://m51.stylet.halfclub.com/Store/Notice/NoticeList.aspx" class="btnNotice">알립니다</a>
+				<a href="http://m51.stylet.halfclub.com/Store/Faq/FaqList.aspx" class="btnQuestion">궁금해요</a>
+				<a href="http://m51.stylet.halfclub.com/Store/UseInfo/UseInfo.aspx" class="btnFaq">이용안내</a>
+
+			    <!-- 글로벌 메뉴 -->
+			    <div class="global">
+						<span class="btnToggle" id="lang_toggle" >한국어</span>
+						<ul>
+							<li><a href="javascript:ChangeLang('ko');">한국어</a></li>
+                            <li><a href="javascript:ChangeLang('en');">영어</a></li>
+						</ul>
+					</div>
+
+                <div id="google_translate_element" style="display:none;"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'ko', includedLanguages: 'en,ko'
+                            , layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                            , autoDisplay: false
+                            , multilanguagePage: true
+                        }, 'google_translate_element');
+                    }
+                </script>
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <!-- //글로벌 메뉴 -->
+
+			    <!-- 단추 버튼 -->
+			    <a href="http://danchu.stylet.com" class="btnTopButton" target="_blank"><i class="icon iconTopButton"></i>단추</a>
+			    <!-- //단추 버튼 -->
+		    </div>
+		    <!-- //웹화면용 -->
+	    </div>
+    </div>
+    <div class="headerInner">
+	    <!-- 로고 -->
+	    <h1><span><a href="http://m51.stylet.halfclub.com/Store/Main/Main.aspx"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_logo.png" id="set_logo" alt=""></a></span></h1>
+	    <!-- //로고 -->
+       
+
+	    <!-- 모바일용 메뉴버튼 -->
+	    <button type="button" class="sb-open-left iconToggleMenu btnMenuToggle">메뉴</button>
+	    <!-- //모바일용 메뉴버튼 -->
+
+        <!-- 패밀리사이트 -->
+		<div class="topFamily">
+			<button type="button" class="btnFamily iconFamily"></button>
+			<div class="topFamilyInner">
+				<div class="topFamilyList">
+					<strong>Family Site</strong>
+					<ul>
+						<li><a href="javascript:_MnmSetting(1, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_family01.png" alt=""></a></li>
+						<li><a href="javascript:_MnmSetting(3, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_family02.png" alt=""></a></li>
+						<li><a href="javascript:_MnmSetting(6, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_family03.png" alt=""></a></li>
+						<li><a href="javascript:_MnmSetting(2, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_family04.png" alt=""></a></li>
+						
+					</ul>
+					<button type="button" class="btnCloseFamily iconCloseFamily"></button>
+				</div>
+			</div>
+		</div>
+		<!-- //패밀리사이트 -->
+
+	    <div class="util">
+			<div class="utilInner">
+				
+				<!-- c -->
+				<span class="invite">
+					<button type="button" onclick="ConfirmLogin();" class="iconInvite btnLayerView" >초대하기</button>
+				</span>
+				<!-- //초대하기 -->
+			</div>
+		</div>
+
+       
+
+	    <!-- 웹화면용 GNB -->
+	    <nav class="gnb">
+		    <div class="gnbInner">
+			    <ul class="gnbDepth01" id="gnbDepth01">
+                    <li><a href="http://m51.stylet.halfclub.com/Store/About/About.aspx" class="">ABOUT</a></li>
+                    <li><a href="http://m51.stylet.halfclub.com/Store/Ranking/LikeRanking.aspx?R_Gubn=LK" class="">RANKING</a></li>
+					<li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx">CATEGORY</a></li>
+					<li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx">STYLE</a></li>
+					<li><a href="http://m51.stylet.halfclub.com/Store/Contest/Contest_List.aspx">CONTEST</a></li>
+					<li><a href="http://m51.stylet.halfclub.com/Store/Selectors/SelectorsList.aspx">SELECTORS</a></li>
+                    
+                        <li><a href="http://m51.stylet.halfclub.com/Store/Apply/SelectorApply.aspx" class="">APPLY</a></li>
+                    
+			    </ul>
+
+                <div class="gnbDepth02">
+					<ul>
+						<li class="d01">
+							<ul>
+								<li><a href="http://m51.stylet.halfclub.com/Store/Ranking/LikeRanking.aspx?R_Gubn=LK">좋아요 랭킹</a></li>
+							    <li><a href="http://m51.stylet.halfclub.com/Store/Ranking/CmntRanking.aspx?R_Gubn=CM">댓글 랭킹</a></li>
+							    <li><a href="http://m51.stylet.halfclub.com/Store/Ranking/ActiveRanking.aspx?R_Gubn=AC">활동 랭킹</a></li>
+							</ul>
+						</li>
+						<li class="d02">
+							<ul>
+                                
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=cut">Cute</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=Fem">Feminine</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=spo">Sporty</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=Cas">Casual</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=man">Manish</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=roc">Rock Chic</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=men">Men's</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/Category/CatePrdList.aspx?styleType=liv">Living</a></li>
+                                    
+							</ul>
+						</li>
+						<li class="d03">
+							<ul>
+								
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15731">쇼퍼아이템</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15739">스트리트 스냅</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15868">데일리 스타일</a></li>
+                                    
+                                        <li><a href="http://m51.stylet.halfclub.com/Store/STYLE/StyleList.aspx?areaID=15908">얼리버드 픽</a></li>
+                                    
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+		    </div>
+	    </nav>
+	    <!-- //웹화면용 GNB -->
+    </div>	
+</header>
+
+<!-- //header -->
+
+
+            <!-- //header -->
+
+            <!-- content -->
+            
+    
+    <section class="container" >
+        <form method="post" action="Main.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTcxMzYyMTk2Ng9kFgJmD2QWBgIFD2QWBgIBDxYCHgdWaXNpYmxlZ2QCBw8WAh4LXyFJdGVtQ291bnQCCBYQZg9kFgJmDxUCA2N1dARDdXRlZAIBD2QWAmYPFQIDRmVtCEZlbWluaW5lZAICD2QWAmYPFQIDc3BvBlNwb3J0eWQCAw9kFgJmDxUCA0NhcwZDYXN1YWxkAgQPZBYCZg8VAgNtYW4GTWFuaXNoZAIFD2QWAmYPFQIDcm9jCVJvY2sgQ2hpY2QCBg9kFgJmDxUCA21lbgVNZW4nc2QCBw9kFgJmDxUCA2xpdgZMaXZpbmdkAgkPFgIfAQIEFghmD2QWAmYPFQIFMTU3MzEP7Ie87Y287JWE7J207YWcZAIBD2QWAmYPFQIFMTU3MzkT7Iqk7Yq466as7Yq4IOyKpOuDhWQCAg9kFgJmDxUCBTE1ODY4E+uNsOydvOumrCDsiqTtg4DsnbxkAgMPZBYCZg8VAgUxNTkwOBDslrzrpqzrsoTrk5wg7ZS9ZAIGD2QWBmYPFgIfAGdkAgEPFgIfAQIIFhBmD2QWAmYPFQIDY3V0BEN1dGVkAgEPZBYCZg8VAgNGZW0IRmVtaW5pbmVkAgIPZBYCZg8VAgNzcG8GU3BvcnR5ZAIDD2QWAmYPFQIDQ2FzBkNhc3VhbGQCBA9kFgJmDxUCA21hbgZNYW5pc2hkAgUPZBYCZg8VAgNyb2MJUm9jayBDaGljZAIGD2QWAmYPFQIDbWVuBU1lbidzZAIHD2QWAmYPFQIDbGl2BkxpdmluZ2QCAg8WAh8BAgQWCGYPZBYCZg8VAgUxNTczMQ/sh7ztjbzslYTsnbTthZxkAgEPZBYCZg8VAgUxNTczORPsiqTtirjrpqztirgg7Iqk64OFZAICD2QWAmYPFQIFMTU4NjgT642w7J2866asIOyKpO2DgOydvGQCAw9kFgJmDxUCBTE1OTA4EOyWvOumrOuyhOuTnCDtlL1kAgcPZBYCZg9kFgICAQ8WAh8BAgQWCGYPZBYEAgEPZBYCZg8UKwIHBTMvU3RvcmUvTXlTaG9wL015U2hvcEl0ZW0uYXNweD9zZWxlY3RvcklEPSZDb25UeXBlPU4FSGh0dHA6Ly9jZG4uaGFsZmNsdWIuY29tL0ltYWdlc19XZWIvMjAxNV9zdHlsZXQvaW1nL2NvbW1vbi9wcm9maWxlLzE1LmpwZ2RkBQEwBQEwBQEwZAIDDxYCHwBnFgJmDxUCAS9TaHR0cDovL2ltZy5oYWxmY2x1Yi5jb20vSW1hZ2VzX1RlbXBsZXQvQnVpbGRlci8yMDE1MDYvVHJpY3ljbGUyMDE1MDYxMTc3NDkxNDQ2OS5wbmdkAgEPZBYEAgEPFgIfAGcWAmYPFQc8L1N0b3JlL015U2hvcC9NeVNob3BJdGVtLmFzcHg/c2VsZWN0b3JJRD1pY2VtaW5kMDcmQ29uVHlwZT1OWGh0dHA6Ly9jZG4uaGFsZmNsdWIuY29tL0ltYWdlc19XZWIvU2VsZWN0U2hvcC9QaG90by9TZWxlY3Rvci90aHVtbmFpbC8xNDE4MzAwMTE4MDc1Ny5qcGcJ7Zek7Zek7ZekhQHshYDroInthLAg7Zek7Zek7ZekIOyeheuLiOuLpC4g7JyE7Iuc66as7Iqk7Yq47JeQIOuLtOqyqOyeiOuKlCDsoIDrp4zsnZgg7Ji37J6l7J2EIOqzteqwnO2VqeuLiOuLpC4g66eO7J20IOq1rOqyveyZgOyjvOyEuOyapyEhIO2XvzopAjQ3ATACMjJkAgMPZBYCZg8VAgAFI25vbmVkAgIPZBYEAgEPZBYCZg8UKwIHBTMvU3RvcmUvTXlTaG9wL015U2hvcEl0ZW0uYXNweD9zZWxlY3RvcklEPSZDb25UeXBlPU4FSGh0dHA6Ly9jZG4uaGFsZmNsdWIuY29tL0ltYWdlc19XZWIvMjAxNV9zdHlsZXQvaW1nL2NvbW1vbi9wcm9maWxlLzE1LmpwZ2RkBQEwBQEwBQEwZAIDDxYCHwBnFgJmDxUCFGh0dHA6Ly93d3cubmF2ZXIuY29tVGh0dHA6Ly9pbWcuaGFsZmNsdWIuY29tL0ltYWdlc19UZW1wbGV0L0J1aWxkZXIvMjAxNTA2L1RyaWN5Y2xlMjAxNTA2MTExNzMwMTQyMjA0LnBuZ2QCAw9kFgQCAQ8WAh8AZxYCZg8VBzovU3RvcmUvTXlTaG9wL015U2hvcEl0ZW0uYXNweD9zZWxlY3RvcklEPWt0b21jbGUmQ29uVHlwZT1OV2h0dHA6Ly9jZG4uaGFsZmNsdWIuY29tL0ltYWdlc19XZWIvU2VsZWN0U2hvcC9QaG90by9TZWxlY3Rvci90aHVtbmFpbC8xNTEyMjMwOTEyMDI4LmpwZwl0YXJ0X25vaXKZAUJlc3QgRml0LCBIaWdoIFF1YWxsaXR5LCBMb3cgUHJpY2UsIEdvb2QgU3R5bGUhDQo8YnIvPuuCtOqwgCDsnoXqs6Ag7Iu27J2ALCDqvK0g7IKs6rOgIOyLtuydgCDrgrQg7JyE7Iuc66as7Iqk7Yq466W8IOuLueyLoOqzvCDqs7XsnKDtlZjqs6Ag7Iu27Iq164uI64ukLgMxNzcBMAI1NmQCAw9kFgJmDxUCAAUjbm9uZWRkf5chO0G/I1GkOk2wprO7gRZ2pz4=" />
+</div>
+
+	        <div class="topItems"  >
+            <div class="topItemsInner" style="background:url('http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_dummy16.png') top center no-repeat;">
+			    <div class="topItemsCarousel">
+				    <ul class="owl-carousel">
+                        
+                                
+                                
+                                    <li class="item imgType">
+						                <div class="box">
+							                <a href="/"><img src="http://img.halfclub.com/Images_Templet/Builder/201506/Tricycle20150611774914469.png" alt=""></a>
+						                </div>
+					                </li>
+                                
+                            
+                                
+                                    <li class="item">
+									    <div class="box">
+							                <a href="http://m51.stylet.halfclub.com/Store/MyShop/MyShopItem.aspx?selectorID=icemind07&ConType=N">
+								                <span class="userThumb"><img src="http://cdn.halfclub.com/Images_Web/SelectShop/Photo/Selector/thumnail/14183001180757.jpg" alt=""></span>
+								                <strong class="tit">헤헤헤’s 셀렉샵</strong>
+								                <p class="txt">셀렉터 헤헤헤 입니다. 위시리스트에 담겨있는 저만의 옷장을 공개합니다. 많이 구경와주세욧!! 헿:)</p>
+								                <div class="iconList">
+									                <span class="itemNum"><i class="iconItem"></i> 47</span>
+									                <span class="voice"><i class="iconShare03"></i> 0</span>
+									                <span class="like"><i class="iconLineHeart"></i> 22</span>
+								                </div>
+							                </a>
+						                </div>
+					                </li>
+                                
+                                
+                            
+                                
+                                
+                                    <li class="item imgType">
+						                <div class="box">
+							                <a href="http://www.naver.com"><img src="http://img.halfclub.com/Images_Templet/Builder/201506/Tricycle201506111730142204.png" alt=""></a>
+						                </div>
+					                </li>
+                                
+                            
+                                
+                                    <li class="item">
+									    <div class="box">
+							                <a href="http://m51.stylet.halfclub.com/Store/MyShop/MyShopItem.aspx?selectorID=ktomcle&ConType=N">
+								                <span class="userThumb"><img src="http://cdn.halfclub.com/Images_Web/SelectShop/Photo/Selector/thumnail/1512230912028.jpg" alt=""></span>
+								                <strong class="tit">tart_noir’s 셀렉샵</strong>
+								                <p class="txt">Best Fit, High Quallity, Low Price, Good Style!
+<br/>내가 입고 싶은, 꼭 사고 싶은 내 위시리스트를 당신과 공유하고 싶습니다.</p>
+								                <div class="iconList">
+									                <span class="itemNum"><i class="iconItem"></i> 177</span>
+									                <span class="voice"><i class="iconShare03"></i> 0</span>
+									                <span class="like"><i class="iconLineHeart"></i> 56</span>
+								                </div>
+							                </a>
+						                </div>
+					                </li>
+                                
+                                
+                            
+					    
+				    </ul>
+			    </div>
+		    </div>
+	    </div>
+        
+            <input type="hidden" name="ctl00$ContentPlaceHolder1$hidCurrentPage" id="ContentPlaceHolder1_hidCurrentPage" value="1" />
+
+		    <div class="content">
+		        <div class="prdList prdListType03">
+			        <ul id="prdList"  ></ul>
+
+			        <div class="btnMore">
+				        <a onclick="GetMore()">더보기 <i class="iconMoreArrow"></i></a>
+			        </div>
+                     <br />
+                    <ul id="prdListS"></ul>
+		        </div>
+
+	        </div>
+          
+	    </form>
+    </section>
+
+     <!-- //모달 -->
+	<script type="text/javascript">
+
+	    $(document).ready(function () {
+
+	        var mainbanner_cnt = "3.6";
+
+	        $('.topItemsCarousel .owl-carousel').owlCarousel({
+	            autoWidth: true,
+	            center: true,
+	            mouseDrag: true,
+	            items: mainbanner_cnt,
+	            loop: true,
+	            margin: 30,
+	            dots: false,
+	            itemElement: 'li',
+	            autoplay: true,
+	            autoplayTimeout: 3000,
+	            autoplayHoverPause: true
+	        });
+
+	    });
+	    //$(document).ready(function () {
+	    //    //2개짜리
+	    //    var sliders = new Array();
+	    //    $('.twos').each(function (i, twoSlider) {
+	    //        sliders[i] = $(twoSlider).bxSlider({
+	    //            minSlides: 2,
+	    //            maxSlides: 2,
+	    //            slideWidth: 280,
+	    //            moveSlides: 2,
+	    //            pager: false
+	    //        });
+	    //    });
+	    //    $(window).on("orientationchange load resize", function () {
+	    //        var w = $(window).width();
+	    //        $.each(sliders, function (i, twoSlider) {
+	    //            if (w <= 640) {
+	    //                twoSlider.reloadSlider({
+	    //                    minSlides: 2,
+	    //                    maxSlides: 2,
+	    //                    slideWidth: 280,
+	    //                    moveSlides: 2,
+	    //                    pager: false
+	    //                });
+	    //            } else {
+	    //                twoSlider.reloadSlider({
+	    //                    minSlides: 2,
+	    //                    maxSlides: 2,
+	    //                    slideWidth: 280,
+	    //                    moveSlides: 2,
+	    //                    pager: false
+	    //                });
+	    //            }
+	    //        });
+	    //    });
+	    //});
+	</script>     
+
+            <!-- content -->
+
+            <!-- footer -->
+            
+
+<!-- footer -->
+<footer class="footer " >
+	<div class="footerPc">
+		<div class="footerInner">
+			<ul class="footerMenu">
+			    <li><a href="http://www.tricycle.co.kr/" target="_blank">회사소개</a></li>
+			    <li><a href="http://www.halfclub.com/Company/Affiliate.asp" target="_blank">제휴 및 입점문의</a></li>
+			    <li><a href="http://member.halfclub.com/Info/PrivatePolicy" target="_blank">개인정보취급방침 </a></li>
+			    <li><a href="http://member.halfclub.com/Info/TeenPolicyInfo" target="_blank">청소년보호정책</a></li>
+			    <li><a href="http://member.halfclub.com/Info/TermsPolicyInfo" target="_blank">이용약관</a></li>
+		    </ul>
+            <div class="familySite">
+			    <ul>
+				    <li class="first">Family site</li>
+				    <li><a href="javascript:_MnmSetting(1, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_footerFamily01.png" alt=""></a></li>
+				    <li><a href="javascript:_MnmSetting(3, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_footerFamily02.png" alt=""></a></li>
+				    <li><a href="javascript:_MnmSetting(2, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_footerFamily03.png" alt=""></a></li>
+				    <li><a href="javascript:_MnmSetting(6, '_blank');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_footerFamily04.png" alt=""></a></li>
+				    <li><a href="javascript:_MnmSetting(9, '');"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_footerFamily05.png" alt=""></a></li>
+				    <li><a href="http://www.ogage.cn/" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_footerFamily06.png" alt=""></a></li>
+			    </ul>
+		    </div>
+            <div class="txt">
+				<p>(주)트라이씨클은 패션기업 (주)데코, (주)대현, (주)슈페리어가 공동 출자한 패션 인터넷 전문기업입니다.</p>
+				<p>주소 : 서울특별시 서초구 서초동 1515-4 서원빌딩 2~5F (주)트라이씨클 &nbsp; 대표이사 : 최형석 &nbsp; 개인정보 보호 책임자 : 이용근</p>
+				<p>사업자 등록번호 : 120-81-06331 &nbsp; 통신판매업신고 제 강남 4959호 &nbsp; 팩스 : 02-3289-3321 &nbsp; 이메일 문의 : customer@ricycle.co.kr</p>
+			</div>
+            <ul class="brandLogo">
+			    <li><a href="http://www.rankey.com/index.php" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo01.png" alt=""></a></li>
+			    <li><a href="http://www.etrust.or.kr:8080/jsp/open/eTrust_info.jsp?unique_id=793481" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo02.png" alt=""></a></li>
+			    <li><a href="http://www.ftc.go.kr/" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo03.png" alt=""></a></li>
+			    <li><a href="https://sealinfo.verisign.com/splash?form_file=fdf/splash.fdf&amp;dn=www.halfclub.com&amp;lang=ko" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo04.png" alt=""></a></li>
+			    <li><a href="javascript:;" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo05.png" alt=""></a></li>
+			    <li><a href="javascript:;" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo06.png" alt=""></a></li>
+			    <li><a href="http://www.kolsa.or.kr/sub02_04.htm?current_page=3&amp;member_grade_name=정회원" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo07.png" alt=""></a></li>
+			    <li><a href="http://new.kaf.or.kr/" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo08.png" alt=""></a></li>
+			    <li><a href="javascript:;" target="_blank"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/img_brandLogo09.png" alt=""></a></li>
+		    </ul>
+           </div>
+		</div>
+        <div class="footerM" >
+					<p class="copyRight">COPYRIGHT(C) STYLET. ALL RIGHTS RESERVED.</p>
+			
+					<div class="footerInner">
+						<ul class="footerMenu">
+							<li><a href="http://m.halfclub.com/Company/Company.aspx" target="_blank">회사소개</a></li>
+			                <li><a href="http://www.halfclub.com/Company/Affiliate.asp" target="_blank">제휴 및 입점문의</a></li>
+			                <li><a href="http://m.member.halfclub.com/info/PrivatePolicy" target="_blank">개인정보취급방침 </a></li>
+			                <li><a href="http://m.member.halfclub.com/Info/TeenPolicyInfo" target="_blank">청소년보호정책</a></li>
+			                <li><a href="http://m.member.halfclub.com/info/TermsPolicyInfo" target="_blank">이용약관</a></li>
+						</ul>
+						<div class="txt">
+							<p>(주)트라이씨클은 패션기업 (주)데코, (주)대현, (주)슈페리어가 공동 출자한 패션 인터넷 전문기업입니다.</p>
+							<p>(주)트라이씨클 대표이사 : 최형석 &nbsp; 개인정보보호책임자 : 이용근</p>
+							<p>사업자등록번호 : 120-81-06331 통신판매업신고 강남 4959호</p>
+							<p>서울특별시 서초구 서초동 1515-4 서원빌딩 2~5F &nbsp; 이메일 : customer@tricycle.co.kr</p>
+							<p>고객센터 : 하프클럽 통합고객센터 1544-7495 (평일 오전9시~오후7시/토요일 오전9시~오후1시/일요일공휴일 휴무)</p>
+						</div>
+					</div>
+					<div class="btnfooterToggle" id="btnfooterToggle">
+						<a href=""><span>약관 및 법적 고지 확인, 상세 정보 보기</span></a>
+					</div>
+				</div>
+         </footer>
+<!-- //footer -->
+
+            <!-- //footer -->
+
+		</div>
+	</div>
+
+    <!-- 상품상세보기 레이어 -->
+    
+	<div class="detailPrd" id="detailPrd">
+    <button type="button" class="iconModalClose btnClose" onclick="hideModal('detailPrd');return false;">닫기</button>        
+        <div id="detailPrdInner" class="detailPrdInner" style="background:#ffffff;margin-top:8px" id="prd_more_html">
+	    </div>
+	</div>
+
+    <!-- 공유하기 레이어 -->
+	<div class="shareLayer" id="shareLayer">
+		<div class="shareLayerInner">
+			<strong>공유</strong>
+			<ul class="shareList">
+			</ul>
+			<button type="button" class="iconModalClose02 btnClose" onclick="hideModal('shareLayer');return false;">닫기</button>
+		</div>
+	</div>
+	<!-- //공유하기 레이어 -->
+
+	<!-- 좋아요 레이어 -->
+	<div class="likeLayer" id="likeLayer">
+		<div class="likeLayerInner">
+			<strong id="stlikeCount" ></strong>
+			<ul class="layerLikeList">
+				
+			</ul>
+			<div class="btnLikeMore" style="display:none;">
+                <a>더 보기 <i class="iconMoreArrow"></i></a>
+			</div>
+			<button type="button" class="iconModalClose02 btnClose" onclick="hideModal('likeLayer');return false;">닫기</button>
+            <input type=hidden id="hidLikePaging" value="1">
+		</div>
+	</div>
+	<!-- //좋아요 레이어 -->
+    <div id="divloading" class="loading" style="display:none;"><img src="http://cdn.halfclub.com/Images_Web/2015_stylet/img/common/ajax_loader.gif" width="40" alt=""></div>
+
+			
+    
+</body>
+
+</html>

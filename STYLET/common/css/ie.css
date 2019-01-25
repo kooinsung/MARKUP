@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.prdList > ul > li{width:300px;max-width:none;}
+.prdList.MyPrdList > ul > li{width:290px;max-width:none;}
+.prdList.MyPrdList.MyPrdList02 > ul > li{width:135px;max-width:none;}
+.prdList.ContentViewList > ul > li{width:290px;max-width:none;}
+@media all and (max-width: 1024px) {
+	.prdList > ul > li{width:300px;max-width:none;}
+}
+
+
+@media all and (max-width: 639px) { 
+	.prdList > ul > li{width:300px;max-width:none;}
+	.prdList.MyPrdList > ul > li{width:290px;max-width:none;}
+	.prdList.MyPrdList.MyPrdList02 > ul > li{width:135px;max-width:none;}
+	.prdList.ContentViewList > ul > li{width:290px;max-width:none;}
+}
