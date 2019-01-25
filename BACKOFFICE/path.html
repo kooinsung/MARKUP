@@ -1,0 +1,898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="Application/xhtml+xml; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="koos" />
+<meta name="copyright" content="" />
+<title>KT쇼핑 IA</title>
+<style type="text/css">
+* { margin:0; padding:0;}
+h1 { font-size:20px; margin:10px auto 20px auto; width:100%; text-align:center;}
+table.pageList { font:11px/16px Dotum; width:100%; background-color:#999; margin:0 0 30px;text-align:center;}
+table.pageList th { border-right:1px solid #adb1b3; border-bottom:1px solid #adb1b3;  background-color:#666666; height:35px; text-align:center; color:#fff; font-size:13px;}
+table.pageList td { border-right:1px solid #adb1b3; border-bottom:1px solid #adb1b3; padding:5px 5px 5px 20px; vertical-align:top; background-color:#fff;vertical-align:middle}
+table.pageList td.ailgnL{text-align:left}
+table.pageList td a:link, a:visited { font-weight:bold; color:#0072dc; text-decoration: none; font-size:12px; }
+table.pageList td a:hover, a:active { font-weight:bold; color:#32443d; text-decoration: underline; font-size:12px;}
+table.pageList tr.end td { background-color:#feffd7;}
+table.pageList tr.jspEnd td { background-color:#f8effd;}
+
+p { font-size:12px; color:#999999; margin:10px;}
+p a { margin-right:30px;}
+
+span { display:block; color:#bb3134;}
+</style>
+
+</head>
+
+<body>
+<h1>:::  KT쇼핑 IA :::</h1>
+
+<p></p>
+
+<table cellspacing="0" cellpadding="0"  id="tbList1" class="pageList">
+<colgroup>
+	<col width="" />
+	<col width="" />
+	<col width="" />
+	<col width="" />
+	<col width="" />
+</colgroup>
+<thead>
+<tr>
+	<th>1 Depth</th>
+	<th>2 Depth</th>
+	<th>folder</th>
+	<th>file</th>
+	<th>비고</th>
+</tr>
+</thead>
+<tbody>
+	<tr>
+		<td class="ailgnL">alert</td>
+		<td class="ailgnL" >/</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="alert.html" target="_blank">alert.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">table style</td>
+		<td class="ailgnL" >/</td>
+		<td class="ailgnL">/</td>
+		<td class="ailgnL"><a href="table.html" target="_blank">table.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="24">업체 관리</td>
+		<td class="ailgnL" rowspan="9">업체 관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_001.html" target="_blank">UI_BAP_PM_001.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록( KT 그룹사, 콘텐츠 제휴)</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_002.html" target="_blank">UI_BAP_PM_002.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록(중개쇼핑) </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_002_02.html" target="_blank">UI_BAP_PM_002_02.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">보기</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_003.html" target="_blank">UI_BAP_PM_003.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정(중개쇼핑) </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_004.html" target="_blank">UI_BAP_PM_004.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">계약정보 이력</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_005.html" target="_blank">UI_BAP_PM_005.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">현재수수료율보기 </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_006.html" target="_blank">UI_BAP_PM_006.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">샵관리자 등록 </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_007.html" target="_blank">UI_BAP_PM_007.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">샵관리자</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_008.html" target="_blank">UI_BAP_PM_008.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="10">업체 선불충전 관리 </td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_011.html" target="_blank">UI_BAP_PM_011.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	<tr/>
+	<tr>
+		<td class="ailgnL">선불충전  </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_012.html" target="_blank">UI_BAP_PM_012.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체검색  </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_017.html" target="_blank">UI_BAP_PM_017.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 선불충전 상세현황  </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_013.html" target="_blank">UI_BAP_PM_013.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 선불충전 상세현황> 선불충전_등록  </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_012_02.html" target="_blank">UI_BAP_PM_012_02.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 선불충전 상세현황> 선불충전_상세보기  </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_014.html" target="_blank">UI_BAP_PM_014.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 선불충전 상세현황> 충전금액 소진내역 </td>
+		<td class="ailgnL"><a href="UI_BAP_PM_018.html" target="_blank">UI_BAP_PM_018.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 선불충전 상세현황> 선불충전_승인 화면</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_015.html" target="_blank">UI_BAP_PM_015.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 선불충전 상세현황> 선불충전_수정</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_016.html" target="_blank">UI_BAP_PM_016.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="5">CPC 과금 정보 관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_021.html" target="_blank">UI_BAP_PM_021.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_022.html" target="_blank">UI_BAP_PM_022.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">보기</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_023.html" target="_blank">UI_BAP_PM_023.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_024.html" target="_blank">UI_BAP_PM_024.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">카테고리 검색</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_025.html" target="_blank">UI_BAP_PM_025.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="16">상품 관리</td>
+		<td class="ailgnL" rowspan="8">카테고리 관리</td>
+		<td class="ailgnL">대표 카테고리 관리 - 목록</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_031.html" target="_blank">UI_BAP_GM_031.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">대표 카테고리 관리 - 등록</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_032.html" target="_blank">UI_BAP_GM_032.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">대표 카테고리 관리 - 상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_033.html" target="_blank">UI_BAP_GM_033.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">대표 카테고리 관리 - 수정</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_034.html" target="_blank">UI_BAP_GM_034.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전시 카테고리 관리 - 수정</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_036.html" target="_blank">UI_BAP_GM_036.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전시 카테고리 관리 - 등록</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_037.html" target="_blank">UI_BAP_GM_037.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전시 카테고리 관리 - 상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_038.html" target="_blank">UI_BAP_GM_038.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">전시 카테고리 관리 - 수정</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_039.html" target="_blank">UI_BAP_GM_039.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">카테고리 매핑 관리</td>
+		<td class="ailgnL">전시 카테고리 매핑</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_041.html" target="_blank">UI_BAP_GM_041.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="3">상품관리 </td>
+		<td class="ailgnL">상품 모니터링</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_046.html" target="_blank">UI_BAP_GM_046.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상품그룹코드 관리</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_051.html" target="_blank">UI_BAP_GM_051.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상품그룹코드 검색</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_052.html" target="_blank">UI_BAP_GM_052.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="4">모델명 사전 관리 </td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_056.html" target="_blank">UI_BAP_GM_056.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_057.html" target="_blank">UI_BAP_GM_057.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_058.html" target="_blank">UI_BAP_GM_058.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_GM_059.html" target="_blank">UI_BAP_GM_059.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="43">전시관리</td>
+		<td class="ailgnL" rowspan="20">Mobile 메뉴설정</td>
+		<td class="ailgnL">이용안내</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_001.html" target="_blank">UI_BAP_DM_001.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">딱 ! 상세</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_002.html" target="_blank">UI_BAP_DM_002.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">딱 ! 수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_003.html" target="_blank">UI_BAP_DM_003.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">Sho doc 메인 상세</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_006.html" target="_blank">UI_BAP_DM_006.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">Sho doc추천 - 기획전 검색</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_011.html" target="_blank">UI_BAP_DM_011.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 상품 정보 관리</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_012.html" target="_blank">UI_BAP_DM_012.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">업체 상품 정보 관리</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_013.html" target="_blank">UI_BAP_DM_013.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">Sho doc 메인 등록 - 상품확인 팝업</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_023.html" target="_blank">UI_BAP_DM_023.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">Sho doc 메인 수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_007.html" target="_blank">UI_BAP_DM_007.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">Sho doc추천 - 메인배너검색</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_014.html" target="_blank">UI_BAP_DM_014.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">Sho doc추천 - 기획전검색</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_015.html" target="_blank">UI_BAP_DM_015.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">베스트 상세</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_021.html" target="_blank">UI_BAP_DM_021.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">베스트 수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_022.html" target="_blank">UI_BAP_DM_022.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">자동상품묶음 - 등록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_026.html" target="_blank">UI_BAP_DM_026.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">자동상품묶음 - 상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_027.html" target="_blank">UI_BAP_DM_027.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">자동상품묶음 - 수정 </td>
+		<td class="ailgnL"><a href="UI_BAP_DM_028.html" target="_blank">UI_BAP_DM_028.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">자동상품묶음 - 등록 </td>
+		<td class="ailgnL"><a href="UI_BAP_DM_031.html" target="_blank">UI_BAP_DM_031.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수동상품묶음 - 상세보기(사용, 미사용)</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_032.html" target="_blank">UI_BAP_DM_032.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수동상품묶음 - 수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_033.html" target="_blank">UI_BAP_DM_033.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">Sho doc추천 - 기획전검색 </td>
+		<td class="ailgnL"><a href="UI_BAP_DM_034.html" target="_blank">UI_BAP_DM_034.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="6">기획전 관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_041.html" target="_blank">UI_BAP_DM_041.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_042.html" target="_blank">UI_BAP_DM_042.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록 - 상품검색</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_016.html" target="_blank">UI_BAP_DM_016.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록 > 상품검색 > 내역보기</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_017.html" target="_blank">UI_BAP_DM_017.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_043.html" target="_blank">UI_BAP_DM_043.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_044.html" target="_blank">UI_BAP_DM_044.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="4">이벤트 관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_046.html" target="_blank">UI_BAP_DM_046.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_047.html" target="_blank">UI_BAP_DM_047.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_048.html" target="_blank">UI_BAP_DM_048.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_049.html" target="_blank">UI_BAP_DM_049.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="4">타임라인 관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_051.html" target="_blank">UI_BAP_DM_051.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_052.html" target="_blank">UI_BAP_DM_052.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_053.html" target="_blank">UI_BAP_DM_053.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_054.html" target="_blank">UI_BAP_DM_054.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="5">Mobile 메인배너관리 & Moblie 비교상품 메인배너관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_056.html" target="_blank">UI_BAP_DM_056.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_057.html" target="_blank">UI_BAP_DM_057.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_058.html" target="_blank">UI_BAP_DM_058.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_059.html" target="_blank">UI_BAP_DM_059.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록 > 상품검색팝업</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_060.html" target="_blank">UI_BAP_DM_060.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="4">Mobile 팝업 관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_061.html" target="_blank">UI_BAP_DM_061.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_062.html" target="_blank">UI_BAP_DM_062.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_063.html" target="_blank">UI_BAP_DM_063.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_DM_064.html" target="_blank">UI_BAP_DM_064.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="22">고객센터</td>
+		<td class="ailgnL" rowspan="5">FAQ</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_001.html" target="_blank">UI_BAP_CS_001.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_002.html" target="_blank">UI_BAP_CS_002.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_003.html" target="_blank">UI_BAP_CS_003.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_004.html" target="_blank">UI_BAP_CS_004.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">카테고리 등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_005.html" target="_blank">UI_BAP_CS_005.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="4">공지사항</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_006.html" target="_blank">UI_BAP_CS_006.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_007.html" target="_blank">UI_BAP_CS_007.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">텍스트 등록 시 & 상세보기 이미지 등록 시</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_008.html" target="_blank">UI_BAP_CS_008.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_009.html" target="_blank">UI_BAP_CS_009.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL" rowspan="3">1:1 문의</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_011.html" target="_blank">UI_BAP_CS_011.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_012.html" target="_blank">UI_BAP_CS_012.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">답변등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_013.html" target="_blank">UI_BAP_CS_013.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL" rowspan="3">업체1:1 문의</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_016.html" target="_blank">UI_BAP_CS_016.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_017.html" target="_blank">UI_BAP_CS_017.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">답변등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_018.html" target="_blank">UI_BAP_CS_018.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL" rowspan="7">이용약관 </td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_021.html" target="_blank">UI_BAP_CS_021.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">신규등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_022.html" target="_blank">UI_BAP_CS_022.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">개정약관등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_023.html" target="_blank">UI_BAP_CS_023.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">보기</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_024.html" target="_blank">UI_BAP_CS_024.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">수정 </td>
+		<td class="ailgnL"><a href="UI_BAP_CS_025.html" target="_blank">UI_BAP_CS_025.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">상세 - 미리보기 </td>
+		<td class="ailgnL"><a href="UI_BAP_CS_026.html" target="_blank">UI_BAP_CS_026.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">추가등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CS_027.html" target="_blank">UI_BAP_CS_027.html</a></td>
+		<td class="ailgnL">상세보기하고 분리</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="4">Push관리</td>
+		<td class="ailgnL" rowspan="4">PUSH 현황</td>
+		<td class="ailgnL">목록 </td>
+		<td class="ailgnL"><a href="UI_BAP_PS_001.html" target="_blank">UI_BAP_PS_001.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록 </td>
+		<td class="ailgnL"><a href="UI_BAP_PS_003.html" target="_blank">UI_BAP_PS_003.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세보기 </td>
+		<td class="ailgnL"><a href="UI_BAP_PS_004.html" target="_blank">UI_BAP_PS_004.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정 </td>
+		<td class="ailgnL"><a href="UI_BAP_PS_005.html" target="_blank">UI_BAP_PS_005.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="10">위젯 관리</td>
+		<td class="ailgnL" rowspan="1">위젯 현황</td>
+		<td class="ailgnL">목록 </td>
+		<td class="ailgnL"><a href="UI_BAP_CM_026.html" target="_blank">UI_BAP_CM_026.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="4">위젯 수동상품 관리</td>
+		<td class="ailgnL">목록 </td>
+		<td class="ailgnL"><a href="UI_BAP_CM_021.html" target="_blank">UI_BAP_CM_021.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록 </td>
+		<td class="ailgnL"><a href="UI_BAP_CM_022.html" target="_blank">UI_BAP_CM_022.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세 </td>
+		<td class="ailgnL"><a href="UI_BAP_CM_023.html" target="_blank">UI_BAP_CM_023.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정 </td>
+		<td class="ailgnL"><a href="UI_BAP_CM_024.html" target="_blank">UI_BAP_CM_024.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="5">위젯 수동콘텐츠 관리</td>
+		<td class="ailgnL">목록 </td>
+		<td class="ailgnL"><a href="UI_BAP_CM_001.html" target="_blank">UI_BAP_CM_001.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">목록  - 미리보기 -검수 </td>
+		<td class="ailgnL"><a href="UI_BAP_CM_005.html" target="_blank">UI_BAP_CM_005.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CM_002.html" target="_blank">UI_BAP_CM_002.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세</td>
+		<td class="ailgnL"><a href="UI_BAP_CM_003.html" target="_blank">UI_BAP_CM_003.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_CM_004.html" target="_blank">UI_BAP_CM_004.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="9">광고관리</td>
+		<td class="ailgnL" rowspan="1">광고현황</td>
+		<td class="ailgnL">목록 </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_005.html" target="_blank">UI_BAP_AM_005.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">Mobile 광고관리</td>
+		<td class="ailgnL">목록  - 전체</td>
+		<td class="ailgnL"><a href="UI_BAP_AM_005.html" target="_blank">UI_BAP_AM_005.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="7">Mobile 광고관리</td>
+		<td class="ailgnL">배너등록 </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_023.html" target="_blank">UI_BAP_AM_023.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">배너 상세보기 </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_024.html" target="_blank">UI_BAP_AM_024.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">배너 수정 </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_025.html" target="_blank">UI_BAP_AM_025.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">검색키워드 목록 </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_026.html" target="_blank">UI_BAP_AM_026.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">검색키워드 등록  </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_027.html" target="_blank">UI_BAP_AM_027.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">검색키워드 등록  </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_028.html" target="_blank">UI_BAP_AM_028.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+		<tr>
+		<td class="ailgnL">검색키워드 수정  </td>
+		<td class="ailgnL"><a href="UI_BAP_AM_029.html" target="_blank">UI_BAP_AM_029.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="12">통계</td>
+		<td class="ailgnL" rowspan="4">회원가입현황 </td>
+		<td class="ailgnL">연령별보기 </td>
+		<td class="ailgnL"><a href="UI_BAP_UL_001.html" target="_blank">UI_BAP_UL_001.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">지역별보기  </td>
+		<td class="ailgnL"><a href="UI_BAP_UL_002.html" target="_blank">UI_BAP_UL_002.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">가입 채널별보기</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_003.html" target="_blank">UI_BAP_UL_003.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">가입 방법별보기 </td>
+		<td class="ailgnL"><a href="UI_BAP_UL_004.html" target="_blank">UI_BAP_UL_004.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">서비스 이용 조회 </td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_005.html" target="_blank">UI_BAP_UL_005.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">주요서비스  이용 조회 </td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_006.html" target="_blank">UI_BAP_UL_006.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">기간별 중개 매출 현황</td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_011.html" target="_blank">UI_BAP_UL_011.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">중개 매출 랭킹 – 쇼핑몰 유형순위 / 업체순위</td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_012.html" target="_blank">UI_BAP_UL_012.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">중개 매출 랭킹 – 카테고리 / 상품</td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_013.html" target="_blank">UI_BAP_UL_013.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">광고 매출 현황 - 채널별 </td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_014.html" target="_blank">UI_BAP_UL_014.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">광고 매출 현황 - 업체별 목록</td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_015.html" target="_blank">UI_BAP_UL_015.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="1">월별 정산 내역</td>
+		<td class="ailgnL">&nbsp;</td>
+		<td class="ailgnL"><a href="UI_BAP_UL_016.html" target="_blank">UI_BAP_UL_016.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+
+	<tr>
+		<td class="ailgnL" rowspan="4">권한관리</td>
+		<td class="ailgnL" rowspan="4">계정관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_001.html" target="_blank">UI_BAP_PM_001.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">등록</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_002.html" target="_blank">UI_BAP_PM_002.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">보기</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_003.html" target="_blank">UI_BAP_PM_003.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_PM_004.html" target="_blank">UI_BAP_PM_004.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL" rowspan="4">시스템관리</td>
+		<td class="ailgnL" rowspan="4">버젼관리</td>
+		<td class="ailgnL">목록</td>
+		<td class="ailgnL"><a href="UI_BAP_SM_011.html" target="_blank">UI_BAP_SM_011.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_SM_012.html" target="_blank">UI_BAP_SM_012.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">상세보기</td>
+		<td class="ailgnL"><a href="UI_BAP_SM_013.html" target="_blank">UI_BAP_SM_013.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="ailgnL">수정</td>
+		<td class="ailgnL"><a href="UI_BAP_SM_014.html" target="_blank">UI_BAP_SM_014.html</a></td>
+		<td class="ailgnL">&nbsp;</td>
+	</tr>
+</tbody>
+</table>
+
+
+
+
+<script type="text/javascript">
+var tbList1 = document.getElementById('tbList1').getElementsByTagName('tr');
+var tmpObj;
+for(i=0;i<tbList1.length;i++) 
+{
+	tbList1[i].onmouseover = function() 
+	{	
+		tmpObj = this.getElementsByTagName('td');
+		for(j=0;j<tmpObj.length;j++)
+		{
+			tmpObj[j].style.backgroundColor = "#e8ffa9";
+		}
+	}
+	
+	tbList1[i].onmouseout = function() 
+	{ 
+		if(!this.getElementsByTagName('td')[0]) return false;
+		tmpObj = this.getElementsByTagName('td');
+		for(j=0;j<tmpObj.length;j++)
+		{
+			tmpObj[j].style.backgroundColor = "";
+		}
+
+	}
+	
+}
+</script>
+
+
+</body>
+</html>
+

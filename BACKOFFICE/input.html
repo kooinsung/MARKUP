@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="stylesheet" href="common/css/common.css" type="text/css" media="all" />
+<link rel="stylesheet" href="common/css/KT.admin.v1.css" type="text/css" media="all" />
+<script type="text/javascript"  src="common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"  src="common/js/jquery.plugin.js"></script>
+<script type="text/javascript"  src="common/js/KT.admin.v1.js"></script>
+<title></title>
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="common/css/oldIE.css" type="text/css" media="all" />
+<![endif]-->
+</head>
+<body style="max-width:1200px;font-size:12px;">
+<strong>input style</strong>
+<br/>
+<br/>
+
+<span class="defaultInput calInput"><input type="text" class="start"/></span><em class="bar">~</em><span class="defaultInput calInput"><input type="text" class="end"/></span>
+<ul class="btnDays">
+	<li><button type="button" >오늘</button></li>
+	<li><button type="button" >일주일</button></li>
+	<li><button type="button" >15일</button></li>
+	<li><button type="button" >한달</button></li>
+</ul>
+<script type="text/javascript">
+		$(function() {
+			$('.start, .end').datepicker({
+				showOn: 'button',
+				dateFormat: 'yy-mm-dd',
+				prevText: '이전 달',
+				nextText: '다음 달',
+				monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+				dayNames: ['일','월','화','수','목','금','토'],
+				dayNamesShort: ['일','월','화','수','목','금','토'],
+				dayNamesMin: ['일','월','화','수','목','금','토'],
+				showMonthAfterYear: true,
+				yearSuffix: '년'
+					});
+		});
+</script>
+
+<br/>
+<br/>
+
+<span class="defaultInput calInput"><input type="text" class="cal"/></span>
+	<div class="time">
+		<span class="select">
+			<select name="" id="">
+				<option value="">00</option>
+				<option value="">00</option>
+				<option value="">00</option>
+			</select>
+		</span>
+		시
+		<span class="select">
+			<select name="" id="">
+				<option value="">00</option>
+				<option value="">00</option>
+				<option value="">00</option>
+			</select>
+		</span>
+		분
+	</div>
+	<script type="text/javascript">
+			$(function() {
+				$('.cal').datepicker({
+					showOn: 'button',
+					dateFormat: 'yy-mm-dd',
+					prevText: '이전 달',
+					nextText: '다음 달',
+					monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+					monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+					dayNames: ['일','월','화','수','목','금','토'],
+					dayNamesShort: ['일','월','화','수','목','금','토'],
+					dayNamesMin: ['일','월','화','수','목','금','토'],
+					showMonthAfterYear: true,
+					yearSuffix: '년'
+						});
+			});
+	</script>
+
+<br/>
+<br/>
+
+<div class="ingRadio">
+	<span class="radio"><input type="radio" name="charge" id="all" checked="checked"/><label for="all">전체</label></span>
+	<span class="radio"><input type="radio" name="charge" id="charge1"><label for="charge1">승인대기</label></span>
+	<span class="radio"><input type="radio" name="charge" id="charge2"><label for="charge2">승인완료</label></span>
+	<span class="radio"><input type="radio" name="charge" id="charge3"><label for="charge3">승인반려</label></span>
+	<span class="radio"><input type="radio" name="charge" id="charge4"><label for="charge4">충전취소</label></span>
+	<span class="radio"><input type="radio" name="charge" id="charge5"><label for="charge5">소진</label></span>
+</div>
+
+
+<br/>
+<br/>
+
+<span class="select">
+	<select name="" id="">
+		<option value="">쇼핑몰 유형 선택</option>
+	</select>
+</span>
+<span class="select">
+	<select name="" id="">
+		<option value="">업체명</option>
+	</select>
+</span>
+<span class="select">
+	<select name="" id="">
+		<option value="">쇼핑몰 명/코드 직접검색</option>
+	</select>
+</span>
+
+<br/>
+<br/>
+
+<span class="select long">
+	<select name="" id="">
+		<option value="">쇼핑몰 명/코드 직접검색</option>
+	</select>
+</span>
+
+<br/>
+<br/>
+
+<div class="checks">
+	<span class="check"><input type="checkbox" name="targetAge" id="target4"><label for="target4">전체</label></span>
+	<span class="check"><input type="checkbox" name="targetAge" id="target5"><label for="target5">~ 20대</label></span>
+	<span class="check"><input type="checkbox" name="targetAge" id="target6"><label for="target6">30대</label></span>
+	<span class="check"><input type="checkbox" name="targetAge" id="target7"><label for="target7">40대</label></span>
+	<span class="check"><input type="checkbox" name="targetAge" id="target8"><label for="target8">50대 ~</label></span>
+</div>
+
+<br/>
+<br/>
+
+<p class="line">
+	<span class="fileType"><span class="defaultInput block"><input type="text"></span><button class="button">File</button></span>
+	<span class="poi1">(반드시 730 X 172 사이즈, jpg 이미지 등록)</span>
+</p>
+<div class="altTxt">
+	<span class="defaultInput block"><input type="text" placeholder="대체 텍스트 입력 바랍니다."><div class="checkValidation" style="display:none;"><em>에러입니다.</em></div></span>
+</div>
+</body>
+</html>

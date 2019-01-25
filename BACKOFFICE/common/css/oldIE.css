@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.radio input[type="radio"] {display:inline;}
+.radio label{position:relative;top:2px;margin-left:2px;}
+.radio input[type="radio"] + label{background:none;}
+.radio input[type="radio"]:checked + label{background:none;}
+
+.check input[type="checkbox"] {display:inline;}
+.check label{position:relative;top:2px;margin-left:2px;}
+.check input[type="checkbox"] + label{background:none;}
+.check input[type="checkbox"]:checked + label{background:none;}
+
+.checkSolo input[type=checkbox]{display:inline;}
+.checkSolo label{display:none}
+.checkSolo input[type=checkbox]+label{background:none;}
+.checkSolo input[type=checkbox]:checked+label{background:none;}
+
+.select select{background:#fff;padding:2px 0;height:auto;}
+
+.ui-datepicker-trigger{vertical-align:top;font-size:0;margin:5px 0 0 4px;}
+.defaultInput input{line-height:24px;padding:3px 0;}

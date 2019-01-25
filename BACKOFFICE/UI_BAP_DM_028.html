@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="stylesheet" href="common/css/common.css" type="text/css" media="all" />
+<link rel="stylesheet" href="common/css/KT.admin.v1.css" type="text/css" media="all" />
+<script type="text/javascript"  src="common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"  src="common/js/jquery.plugin.js"></script>
+<script type="text/javascript"  src="common/js/KT.admin.v1.js"></script>
+<title></title>
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="common/css/oldIE.css" type="text/css" media="all" />
+<![endif]-->
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="headerIn">
+				<!-- 로고 -->
+				<h1><a href="#"><img src="img/ktshop.png" alt="kt shop management service"></a></h1>
+				<!-- //로고 -->
+
+				<!-- 1뎁스 -->
+				<div class="gnb">
+					<ul>
+						<li class="gnb1"><a href="" >업체관리</a></li>
+						<li class="gnb2"><a href="" >상품관리</a></li>
+						<li class="gnb3 on"><a href="" >전시관리</a></li>
+						<li class="gnb4"><a href="" >PUSH관리</a></li>
+						<li class="gnb5"><a href="" >콘텐츠관리</a></li>
+						<li class="gnb6"><a href="" >광고관리</a></li>
+						<li class="gnb7"><a href="" >회원관리</a></li>
+						<li class="gnb8"><a href="" >고객센터</a></li>
+						<li class="gnb9"><a href="" >민원현황</a></li>
+						<li class="gnb10"><a href="" >통계</a></li>
+						<li class="gnb11"><a href="" >매출현황</a></li>
+						<li class="gnb12"><a href="" >권한관리</a></li>
+					</ul>
+				</div>
+				<!-- //1뎁스 -->
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- lnb -->
+		<div class="lnb">
+			<div class="lnbIn">
+				<h2>전시관리</h2>
+
+				<!-- 2뎁스 -->
+				<ul>
+					<li>
+						<a href="">Mobile 메뉴설정</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">기획전 관리</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">이벤트 관리</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="">APP 메인배너관리</a>
+						<ul>
+							<li><a href="">업체 관리</a></li>
+							<li><a href="" class="on">업체 선불충전 관리</a></li>
+							<li><a href="">CPC 과금정보 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">APP POP-UP 관리</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- 2뎁스 -->
+
+				<!-- 로그아웃 -->
+				<div class="btns center">
+					<a href="" class="btnType1">LOG OUT</a>
+				</div>
+				<!-- //로그아웃 -->
+			</div>
+		</div>
+		<!-- //lnb -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<h3>메뉴 설정</h3>
+				<h4>
+					Mobile 서비스의 메인 메뉴를 관리 합니다.
+					<div class="btns">
+						<button type="button" class="btnType2">저장</button>
+						<button type="button" class="btnType3">취소</button>
+					</div>
+				</h4>
+
+				<!-- 모바일 메뉴 설정 가이드 -->
+				<div class="mobileGuide">
+					<div class="sortMenuList">
+						<div class="btnSorts">
+							<button type="button" class="btnLast" id="btnLast">last</button>
+							<button type="button" class="btnDown" id="btnDown">down</button>
+							<button type="button" class="btnUp" id="btnUp">up</button>
+							<button type="button" class="btnFirst" id="btnFirst">first</button>
+							<button type="button" class="btnAdd" id="btnAdd">add</button>
+							<button type="button" class="btnDisabled " id="btnDisabled">disabled</button>
+							<!-- button type="button" class="btnActive" id="btnActive">actived</button -->
+						</div>
+						<ul class="sortMenu">
+							<li ><button type="button">딱!</button></li>
+							<li><button type="button">KTShop(추천)</button></li>
+							<li class="selected"><button type="button">베스트</button></li>
+							<li><button type="button">오늘오픈</button></li>
+							<li><button type="button">마감임박</button></li>
+							<li class="disabled"><button type="button">기획전 (미사용)</button></li>
+						</ul>
+					</div>
+					<div class="guideConts">
+						<h5>오늘오픈</h5>
+
+						<!-- 사용여부 -->
+						<div class="useType">
+							<span class="radio"><input type="radio" name="useRadio" id="useYes" checked="checked"/><label for="useYes">사용</label></span>
+							<span class="radio"><input type="radio" name="useRadio" id="useNo" /><label for="useNo">미사용</label></span>
+						</div>
+						<!-- //사용여부 -->
+
+						<!-- 폼 -->
+						<div class="tbl_bs4">
+							<table>
+								<colgroup>
+									<col width="150">
+									<col width="">
+								</colgroup>
+								<tbody>
+									<tr>
+										<td colspan="2">
+											<span class="select">
+												<select name="" id="">
+													<option value="">자동상품묶음</option>
+												</select>
+											</span>
+											<span class="select">
+												<select name="" id="">
+													<option value="">오늘오픈</option>
+												</select>
+											</span>
+											<span class="select">
+												<select name="" id="">
+													<option value="">모든상품</option>
+												</select>
+											</span>
+											<!-- 개수입력시 -->
+											<span class="defaultInput"><input type="text"><div class="checkValidation"><em>에러입니다.</em></div></span>
+											<!-- //개수입력시 -->
+
+											<!-- 1차뎁스 -->
+											순위 <span class="defaultInput"><input type="text" style="width:50px;"/><div class="checkValidation"><em>에러입니다.</em></div></span>위 까지
+											<!-- //1차뎁스 -->
+										</td>
+									</tr>
+									<tr>
+										<th>
+											<strong>메뉴명 설정</strong> <span class="poi1">*</span>
+										</th>
+										<td>
+											<span class="defaultInput"><input type="text" value="오늘오픈"/><div class="checkValidation"><em>에러입니다.</em></div></span>
+											<!-- span class="defaultInput error"><div class="checkValidation" style="display:none;"><em>에러입니다.</em></div><input type="text" /></span 에러 일때-->
+											<span class="poi1">(10자 이내로 입력해 주세요.)</span>
+										</td>
+									</tr>
+									<tr>
+										<th><strong>비쥬얼 이미지</strong></th>
+										<td>
+											<p class="line">
+												<span class="fileType"><span class="defaultInput block"><input type="text" /></span><button class="button">File</button></span>
+												<button type="button" class="btnType4">삭제</button>
+												<span class="poi1">(반드시 730 X 172 사이즈, jpg 이미지 등록)</span>
+											</p>
+											<div class="altTxt">
+												<span class="defaultInput block"><input type="text" placeholder="대체 텍스트 입력 바랍니다."><div class="checkValidation" style="display:none;"><em>에러입니다.</em></div></span>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="wrap_mgnt">
+							<h6>상품관리</h6>
+							<div class="tbTop">
+								<p class="ea">총 <span class="poi1">2</span> 개</p>
+								<div class="btns">
+									<button type="button" class="btnType4">삭제</button>
+								</div>
+							</div>
+							<div class="tbl_bs2">
+								<table>
+									<colgroup>
+										<col style="width:50px;"/>
+										<col style="width:50px;"/>
+										<col style="width:;"/>
+										<col style="width:;"/>
+										<col style="width:;"/>
+										<col style="width:;"/>
+										<col style="width:;"/>
+										<col style="width:;"/>
+										<col style="width:70px;"/>
+										<col style="width:70px;"/>
+									</colgroup>
+									<tbody>
+									<tr>
+										<th><span class="checkSolo"><input type="checkbox" name="" id="t1" /><label for="t1"></label></span></th><!-- input 아이디하고 labe 아이디 동일 값주세요 -->
+										<th>번호</th>
+										<th>카테고리<br/>1depth</th>
+										<th>상품<br/>그룹코드</th>
+										<th>상품명</th>
+										<th>이미지</th>
+										<th>최저가</th>
+										<th>최고가</th>
+										<th>비교<br/>상품수</th>
+										<th>게시순서</th>
+									</tr>
+									<tr>
+										<td><span class="checkSolo"><input type="checkbox" name="" id="t2" /><label for="t2"></label></span></td><!-- input 아이디하고 labe 아이디 동일 값주세요 -->
+										<td>1</td>
+										<td>스포츠레저</td>
+										<td>PDG03</td>
+										<td  class="name"><a href="">실속 있는 장보기 우리집 식탁까지!</a></td>
+										<td><img src="img/@dummy.jpg" alt="dummy image" class="h26"></td>
+										<td>100,000,000</td>
+										<td>100,000,000</td>
+										<td>99</td>
+										<td>
+											<div class="moves">
+												<button class="btnUpMove">위로</button>
+												<button class="btnDownMove">아래로</button>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="checkSolo"><input type="checkbox" name="" id="t3" /><label for="t3"></label></span></td><!-- input 아이디하고 labe 아이디 동일 값주세요 -->
+										<td>1</td>
+										<td>스포츠레저</td>
+										<td>PDG03</td>
+										<td  class="name"><a href="">실속 있는 장보기 우리집 식탁까지!</a></td>
+										<td><img src="img/@dummy.jpg" alt="dummy image" class="h26"></td>
+										<td>100,000,000</td>
+										<td>100,000,000</td>
+										<td>99</td>
+										<td>
+											<div class="moves">
+												<button class="btnUpMove">위로</button>
+												<button class="btnDownMove">아래로</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- //폼-->
+					</div>
+				</div>
+				<!-- //모바일 메뉴 설정 가이드 -->
+
+					<div class="btns right margin">
+					<button type="button" class="btnType2">저장</button>
+					<button type="button" class="btnType3">취소</button>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+	</div>
+</body>
+</html>

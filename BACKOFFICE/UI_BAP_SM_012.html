@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link rel="stylesheet" href="common/css/common.css" type="text/css" media="all" />
+<link rel="stylesheet" href="common/css/KT.admin.v1.css" type="text/css" media="all" />
+<script type="text/javascript"  src="common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript"  src="common/js/jquery.plugin.js"></script>
+<script type="text/javascript"  src="common/js/KT.admin.v1.js"></script>
+<title></title>
+<!--[if lte IE 8]>
+	<link rel="stylesheet" href="common/css/oldIE.css" type="text/css" media="all" />
+<![endif]-->
+</head>
+<body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<div class="headerIn">
+				<!-- 로고 -->
+				<h1><a href="#"><img src="img/ktshop.png" alt="kt shop management service"></a></h1>
+				<!-- //로고 -->
+
+				<!-- 1뎁스 -->
+				<div class="gnb">
+					<ul>
+						<li class="gnb1"><a href="" >업체관리</a></li>
+						<li class="gnb2"><a href="" >상품관리</a></li>
+						<li class="gnb3 on"><a href="" >전시관리</a></li>
+						<li class="gnb4"><a href="" >PUSH관리</a></li>
+						<li class="gnb5"><a href="" >콘텐츠관리</a></li>
+						<li class="gnb6"><a href="" >광고관리</a></li>
+						<li class="gnb7"><a href="" >회원관리</a></li>
+						<li class="gnb8"><a href="" >고객센터</a></li>
+						<li class="gnb9"><a href="" >민원현황</a></li>
+						<li class="gnb10"><a href="" >통계</a></li>
+						<li class="gnb11"><a href="" >매출현황</a></li>
+						<li class="gnb12"><a href="" >권한관리</a></li>
+					</ul>
+				</div>
+				<!-- //1뎁스 -->
+			</div>
+		</div>
+		<!-- //header -->
+
+		<!-- lnb -->
+		<div class="lnb">
+			<div class="lnbIn">
+				<h2>전시관리</h2>
+
+				<!-- 2뎁스 -->
+				<ul>
+					<li>
+						<a href="">Mobile 메뉴설정</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">기획전 관리</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">이벤트 관리</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="">APP 메인배너관리</a>
+						<ul>
+							<li><a href="">업체 관리</a></li>
+							<li><a href="" class="on">업체 선불충전 관리</a></li>
+							<li><a href="">CPC 과금정보 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">APP POP-UP 관리</a>
+						<ul>
+							<li><a href="">서브메뉴 1</a></li>
+							<li><a href="" class="on">서브메뉴 2</a></li>
+							<li><a href="">서브메뉴 3</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- 2뎁스 -->
+
+				<!-- 로그아웃 -->
+				<div class="btns center">
+					<a href="" class="btnType1">LOG OUT</a>
+				</div>
+				<!-- //로그아웃 -->
+			</div>
+		</div>
+		<!-- //lnb -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<h3>버젼관리</h3>
+				
+				<div class="defaultBox">
+					<p class="noti_txt2" style="visibility:hidden">(<strong class="poi1">*</strong>)는 필수사항 입니다. 반드시 입력바랍니다.</p>
+					<div class="tbl_bs">
+						<table>
+							<colgroup>
+								<col width="150px;">
+								<col width="">
+								<col width="150px">
+								<col width="">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>등록자</th>
+									<td>홍길동</td>
+									<th>등록일</th>
+									<td>2015-07-25</td>
+								</tr>
+								<tr>
+									<th>시행일</th>
+									<td>
+										<span class="defaultInput calInput"><input type="text" class="start"/></span>
+										<div class="time">
+											<span class="select">
+												<select name="" id="">
+													<option value="">00</option>
+													<option value="">00</option>
+													<option value="">00</option>
+												</select>
+											</span>
+											시
+											<span class="select">
+												<select name="" id="">
+													<option value="">00</option>
+													<option value="">00</option>
+													<option value="">00</option>
+												</select>
+											</span>
+											분
+										</div>
+										<script type="text/javascript">
+												$(function() {
+													$('.start, .end').datepicker({
+														showOn: 'button',
+														dateFormat: 'yy-mm-dd',
+														prevText: '이전 달',
+														nextText: '다음 달',
+														monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+														monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+														dayNames: ['일','월','화','수','목','금','토'],
+														dayNamesShort: ['일','월','화','수','목','금','토'],
+														dayNamesMin: ['일','월','화','수','목','금','토'],
+														showMonthAfterYear: true,
+														yearSuffix: '년'
+															});
+												});
+										</script>
+									</td>
+									<th>게시 상태</th>
+									<td>
+										<div class="ingRadio">
+											<span class="radio"><input type="radio" name="viewState" id="yes"><label for="yes">게시</label></span>
+											<span class="radio"><input type="radio" name="viewState" id="no"><label for="no">중지</label></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>구분</th>
+									<td>
+										<div class="checks">
+											<span class="check"><input type="checkbox" name="target" id="target1"><label for="target1">전체</label></span>
+											<span class="check"><input type="checkbox" name="target" id="target2"><label for="target2">프리로드</label></span>
+											<span class="check"><input type="checkbox" name="target" id="target3"><label for="target3">구글마켓</label></span>
+											<span class="check"><input type="checkbox" name="target" id="target4"><label for="target4">올렛마켓</label></span>
+										</div>
+									</td>
+									<th>옵션</th>
+									<td>
+										<div class="ingRadio">
+											<span class="radio"><input type="radio" name="opt" id="opt1"><label for="opt1">필수</label></span>
+											<span class="radio"><input type="radio" name="opt" id="opt2"><label for="opt2">선택</label></span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										제목
+									</th>
+									<td colspan="3">
+										<span class="defaultInput block" ><input type="text" value="" /><div class="checkValidation"><em>에러입니다.</em></div></span>
+										<!-- span class="defaultInput error"><div class="checkValidation" style="display:none;"><em>에러입니다.</em></div><input type="text" /></span 에러 일때-->
+									</td>
+								</tr>
+								<tr>
+									<th>
+										내용작성
+									</th>
+									<td colspan="3">
+										<span class="textarea">
+											<textarea name="" id="" rows="10"></textarea>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btns right margin">
+						<button type="button" class="btnType2">저장</button>
+						<button type="button" class="btnType3">취소</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+	</div>
+</body>
+</html>
