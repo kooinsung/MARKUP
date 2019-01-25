@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densityDpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>shodoc</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/shodoc.v1.css">
+	<script src="../js/lib/jquery-2.0.2.min.js"></script>
+	<script src="../js/lib/jquery.plugin.js"></script>
+	<script src="../js/shodoc.v1.js"></script>
+</head>
+<body>
+
+<div id="mWrap">
+	<!-- header -->
+	<section class="headerSub">
+		<header>
+			<button type="button" class="btnBack">back</button>
+			<strong class="tit">상품상세</strong>
+			<button type="button" class="btnSrch">search</button>
+			<div class="like">
+				<a href="">
+					<span class="icon heart">찜한목록</span>
+					<span class="number">88+</span>
+				</a>
+			</div>
+		</header>
+	</section>
+	<!-- //header -->
+	
+	<!-- container -->
+	<section class="container sub">
+		<div class="detail">
+			<div class="visual">
+				<div class="origin"><p>출처 <em>|</em> 빅골프</p></div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href=""><img src="../img/temp/temp6.png" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href=""><img src="../img/temp/temp6.png" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href=""><img src="../img/temp/temp6.png" alt=""></a>
+						</div>
+						<div class="swiper-slide">
+							<a href=""><img src="../img/temp/temp6.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<script>
+					var todayHotSwiper = new Swiper('.visual .swiper-container', {
+							pagination: '.visual .swiper-pagination',
+							paginationClickable: true
+					});
+				</script>
+			</div>
+
+			<div class="titArea">
+				<strong>[Critical Cycle] 크리티컬 사이클 클래식 맷블랙크리티컬 사이클 클래식 맷블랙</strong>
+				<span>등록일 2015.03.17</span>
+				<div class="detailIcons">
+					<button type="button" class="heart">like</button>
+					<button type="button" class="sprite iconDetailShare">share</button>
+				</div>
+			</div>
+
+			<div class="priceRange">
+				<p class="sample"><span class="down">최저 999,999,900원</span> ~ <span class="up">최고 999,999,900원</span></p>
+				<p class="choice">
+					<input type="text" class="down" id="down" readonly="readonly"/>
+					<input type="text" class="up" id="up" readonly="readonly"/>
+				</p>
+				<div class="priceGage">
+					<div id="priceGage"></div>
+				</div>
+				<a href="" class="btnPriceSrch">가격검색</a>
+				<p class="tips">* 이미지가 비슷한 상품을 모아 낮은 가격순으로 제공합니다.</p>
+			</div>
+
+			<div class="noPrd">
+				<p>상품이 없습니다</p>
+			</div>
+
+			<div class="compare">
+				<div class="compareTop">
+					<a href=""><strong>가격비교</strong><em>(185)</em></a>
+				</div>
+				<div class="compareList">
+					<ul>
+						<li>
+							<a href="">
+								<span class="brand">11번가</span>
+								<ul>
+									<li class="free"><em>무료<br/>배송</em></li>
+									<li class="coupon"><em>쿠폰<br/>할인</em></li>
+									<li class="card"><em>카드<br/>할인</em></li>
+								</ul>
+								<span class="price lowest">99,000원</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="brand"><em>G마켓 오늘의특가</em>(9)</span>
+								<ul>
+									<li class="free"><em>무료<br/>배송</em></li>
+									<li class="coupon"><em>쿠폰<br/>할인</em></li>
+									<li class="card"><em>카드<br/>할인</em></li>
+								</ul>
+								<span class="price">99,000원</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="brand">11번가</span>
+								<ul>
+									<li class="free"><em>무료<br/>배송</em></li>
+									<li class="coupon"><em>쿠폰<br/>할인</em></li>
+									<li class="card"><em>카드<br/>할인</em></li>
+								</ul>
+								<span class="price">99,000원</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="brand">11번가</span>
+								<ul>
+									<li class="free"><em>무료<br/>배송</em></li>
+									<li class="coupon"><em>쿠폰<br/>할인</em></li>
+									<li class="card"><em>카드<br/>할인</em></li>
+								</ul>
+								<span class="price">99,000원</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span class="brand">11번가</span>
+								<ul>
+									<li class="free"><em>무료<br/>배송</em></li>
+									<li class="coupon"><em>쿠폰<br/>할인</em></li>
+									<li class="card"><em>카드<br/>할인</em></li>
+								</ul>
+								<span class="price">99,000원</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+				
+			<div class="prdReview">
+				<div class="prdReviewTop">
+					<a href="">리뷰 및 평점</a>
+				</div>
+				<div class="totals">
+					<div class="totalsTop">
+						전체
+						<div class="stars">
+							<ul>
+								<li class="on"><span></span></li>
+								<li class="on"><span></span></li>
+								<li class="on"><span></span></li>
+								<li class=""><span></span></li>
+								<li class=""><span></span></li>
+							</ul>
+						</div>
+						<span class="num">4.1<em>/5</em>(983명)</span>
+					</div>
+					<div class="likePeople">
+						<ul>
+							<li class="five">
+								<div class="in">
+									<span>0 <em>명</em></span>
+									<div class="icons"><em>5</em></div>
+								</div>
+							</li>
+							<li class="four active">
+								<div class="in">
+									<span>999 <em>명</em></span>
+									<div class="icons"><em>4</em></div>
+								</div>
+							</li>
+							<li class="three">
+								<div class="in">
+									<span>0 <em>명</em></span>
+									<div class="icons"><em>3</em></div>
+								</div>
+							</li>
+							<li class="two">
+								<div class="in">
+									<span>0 <em>명</em></span>
+									<div class="icons"><em>2</em></div>
+								</div>
+							</li>
+							<li class="one">
+								<div class="in">
+									<span>0 <em>명</em></span>
+									<div class="icons"><em>1</em></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="reviewList">
+					<span>세부리뷰(28)</span>
+					<ul>
+						<li>
+							<p class="tit"><strong>내 맘에 쏙 드는 청소기!내 맘에 쏙 드는 청소기!</strong> <em>2015.07.08</em></p>
+							<div class="txt">
+								<div class="stars">
+									<ul>
+										<li class="on"><span></span></li>
+										<li class="on"><span></span></li>
+										<li class="on"><span></span></li>
+										<li class=""><span></span></li>
+										<li class=""><span></span></li>
+									</ul>
+								</div>
+								<p>생각보다 가볍고 좋습니다.<br/>기존의 싸이클론방식 진공청소기보다 무게가<br/>훨~씬 가볍습니다. 흡입력도 무지 좋습니다.</p>
+								<div class="info"><span>신세계몰</span> <em>|</em> <span>live657***</span></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="prds peoplesPrd1">
+				<strong class="tit">이 상품을 선택한 고객들이 같이 본 상품 </strong>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb">
+										<em class="priceAnother">가격비교(999)</em>
+										<img src="../img/temp/temp2.png" alt="">
+									</span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">최저 999,999,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+					</div>
+				</div>
+				<script>
+					var swiper = new Swiper('.peoplesPrd1 .swiper-container', {
+							slidesPerView: 'auto',
+							freeMode: true,
+							spaceBetween:8
+					});
+				</script>
+			</div>
+
+			<div class="prds peoplesPrd2">
+				<strong class="tit">취향이 비슷한 고객들의 선택</strong>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb">
+										<em class="priceAnother">가격비교(999)</em>
+										<img src="../img/temp/temp2.png" alt="">
+									</span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">최저 999,999,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+						<div class="swiper-slide">
+								<a href="">
+									<span class="thumb"><img src="../img/temp/temp2.png" alt=""></span>
+									<p class="name">일이삼사오육칠팔일이삼사오육칠팔 [부엔모조]</p>
+									<strong class="price">280,000원</strong>
+								</a>
+						</div>
+					</div>
+				</div>
+				<script>
+					var swiper = new Swiper('.peoplesPrd2 .swiper-container', {
+							slidesPerView: 'auto',
+							freeMode: true,
+							spaceBetween:8
+					});
+				</script>
+			</div>
+
+			<div class="keyWord">
+				<strong class="tit">연관 키워드</strong>
+				<ul>
+					<li><a href="">#여성용 비키니</a></li>
+					<li><a href="">#인케이스</a></li>
+					<li><a href="">#양문형 냉장고</a></li>
+					<li><a href="">#산악 자전거</a></li>
+					<li><a href="">#휴대폰 배터리</a></li>
+					<li><a href="">#벌꿀</a></li>
+					<li><a href="">#제주갈치</a></li>
+					<li><a href="">#사이클론 진공청소기</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer>
+		<div class="btnWrap">
+			<span><a href="">회원가입</a></span>
+			<span><a href="">로그인</a></span>
+			<span><a href="">앱설치</a></span>
+		</div>
+		<div class="provision">
+			<a href="">이용약관</a>
+			<a href="">개인정보취급방침</a>
+		</div>
+		<div class="txt1">쇼닥에서는 해당쇼핑몰이 제공하는 상품정보에 대해 책임을 지지않으며 주문, 결제, 배송, 환불 등 관련된 책임은 해당쇼핑몰에 있습니다.</div>
+		<div id="ftrBtn" class="operatorInfo">
+			<dl>
+				<dt><a href="#ftrInfo"><img src="../img/operator_info.png" alt="㈜케이티 사업자정보"></a></dt>
+				<dd>
+					<p id="ftrInfo" class="info">
+						대표이사: 황창규 <br>
+						주소: 경기도 성남시 분당구 불정로 90(정자동 206번지) <br>
+						사업자등록번호: 102-81-42945
+					</p>
+					<p class="copyright">Copyright ⓒ 2015 KT Corp. All Rights Reserved.</p>
+				</dd>
+			</dl>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+
+<script>
+	$(function(){
+		$('#priceGage').slider({
+			range: true,
+			min: 0,
+			max: 999999000,
+			values: [ 0, 777777000 ],
+			slide: function( event, ui ) {
+				$('.choice .down').val(ui.values[0] + "원");
+				$('.choice .up').val(ui.values[1] + "원");
+			}
+		});
+		$('.choice .down').val($('#priceGage').slider( "values", 0 ) + "원");
+		$('.choice .up').val($('#priceGage').slider( "values", 1 ) + "원");
+	})
+</script>
+</body>
+</html>

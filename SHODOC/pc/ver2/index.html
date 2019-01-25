@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta property='og:title' content='헤매지 말고 쇼핑은 쇼닥!'/>
+<meta property='og:image' content='./img/img_title.png'/>
+<meta property='og:site_name' content='ShoDoc'/>
+<meta property='og:url' content=''/>
+<meta property='og:description' content='쇼닥은 나와 비슷한 사람들의 취향에 맞는 상품을 분석하여 추천해주는 쇼핑 서비스입니다.'/>  
+<title>ShoDoc</title>
+<link rel="shortcut icon" type="image/x-icon" href="./img/shodoc.ico">
+<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+<script type="text/javascript" src="common/js/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/jquery.plugin.js"></script>
+<!--[if IE]>
+	<script type="text/javascript">
+		 var console = { log: function() {} };
+	</script>
+<![endif]-->
+<script type="text/javascript">
+
+	$(document).ready(function() {
+		
+
+		$('#shodoc').fullpage({
+			'verticalCentered': false,
+			'css3': true,
+			'navigation': true,
+			'navigationPosition': 'right',
+
+			afterLoad: function(anchorLink, index){
+
+				if(index == 2){
+					$('.section.service1 .phone').addClass('active');
+					$('.section.service1 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service1 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service1 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service1 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					setTimeout("$('.section.service1 .sex').addClass('active');", 450);
+					setTimeout("$('.section.service1 .age').addClass('active');", 650);
+					setTimeout("$('.section.service1 .area').addClass('active');", 750);
+					$('.section.service1 .default').delay(1300).animate({opacity:0}, 500);
+					$('.section.service1 .top').delay(1300).animate({left: '0px'}, 500);
+					$('.section.service1 .long').delay(1300).animate({left: '0px'}, 500);
+				}else if(index == 3){
+					$('.section.service2 .phone').addClass('active');
+					$('.section.service2 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service2 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service2 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service2 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service2 .segBoxScroll').delay(800).animate({top: '330px'}, 500, "easeInOutCubic").delay(600).animate({top: '235px'}, 500, "easeInOutCubic").delay(600).animate({top: '140px'}, 500, "easeInOutCubic").delay(600).animate({top: '60px'}, 500, "easeInOutCubic");
+				}else if(index == 4){
+					$('.section.service3 .phone').addClass('active');
+					$('.section.service3 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service3 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service3 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service3 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					setTimeout("$('.section.service3 .img1').addClass('active');", 450);
+					setTimeout("$('.section.service3 .img2').addClass('active');", 550);
+					setTimeout("$('.section.service3 .img3').addClass('active');", 650);
+					setTimeout("$('.section.service3 .img4').addClass('active');", 750);
+					setTimeout("$('.section.service3 .img4.active').addClass('end');", 1700);
+					setTimeout("$('.section.service3 .img3.active').addClass('end');", 1800);
+					setTimeout("$('.section.service3 .img2.active').addClass('end');", 1900);
+					setTimeout("$('.section.service3 .img1.active').addClass('end');", 2000);
+					$('.section.service3 .top').delay(2500).animate({top: '-33px'}, 500);
+					$('.section.service3 .long').delay(2500).animate({top: '-154px'}, 1500);
+				}else if(index == 5){
+					$('.section.service4 .phone').addClass('active');
+					$('.section.service4 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service4 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service4 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					$('.section.service4 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+					setTimeout("$('.section.service4 .keyword1').addClass('active');", 350);
+					setTimeout("$('.section.service4 .keyword6').addClass('active');", 450);
+					setTimeout("$('.section.service4 .keyword2').addClass('active');", 550);
+					setTimeout("$('.section.service4 .keyword5').addClass('active');", 650);
+					setTimeout("$('.section.service4 .keyword3').addClass('active');", 750);
+					setTimeout("$('.section.service4 .keyword4').addClass('active');", 850);
+					setTimeout("$('.section.service4 .keyword4.active').addClass('end');", 1700);
+					setTimeout("$('.section.service4 .keyword3.active').addClass('end');", 1750);
+					setTimeout("$('.section.service4 .keyword5.active').addClass('end');", 1800);
+					setTimeout("$('.section.service4 .keyword2.active').addClass('end');", 1850);
+					setTimeout("$('.section.service4 .keyword6.active').addClass('end');", 1900);
+					setTimeout("$('.section.service4 .keyword1.active').addClass('end');", 1950);
+					$('.section.service4 .default').delay(2300).animate({opacity:0}, 1000);
+					$('.section.service4 .top').delay(2400).animate({opacity:1}, 1000);
+					$('.section.service4 .long').delay(2400).animate({left: '0px'}, 500);
+					setTimeout("$('.section.service4 .bag1').addClass('active');", 3000);
+					setTimeout("$('.section.service4 .bag2').addClass('active');", 3300);
+					setTimeout("$('.section.service4 .bag3').addClass('active');", 3500);
+				}
+			},
+
+			onLeave: function(index, newIndex, direction){
+				$('.menu li').removeClass('active');
+				$('.menu.top li').removeClass('active');
+				$('.menu').addClass('top');
+				if(newIndex == 1){
+					$('.menu').removeClass('top');
+					 $('.menu li').eq(0).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','none');
+				}else if(newIndex == 2){
+					 $('.menu.top li').eq(1).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','none');
+				}else if(newIndex == 3){
+					 $('.menu.top li').eq(1).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','none');
+				}else if(newIndex == 4){
+					 $('.menu.top li').eq(1).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','none');
+				}else if(newIndex == 5){
+					 $('.menu.top li').eq(1).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','none');
+				}else if(newIndex == 6){
+					 $('.menu.top li').eq(2).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','none');
+				}else if(newIndex == 7){
+					 $('.menu.top li').eq(3).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','#d2d7da');
+				}else if(newIndex == 8){
+				 $('.menu.top li').eq(3).addClass('active');
+					$('#fp-nav ul li').eq(6).find('a span').css('background','#d2d7da');
+				}
+				reset1();
+				reset2();
+				reset3();
+				reset4();
+			}
+
+		});
+
+		function reset1(){
+			$('.section.service1 .phone, .section.service1 .item').stop( true, true ).removeClass('active');
+			$('.section.service1 .c1').stop( true, true ).css({'left':'60px','opacity':'0'});
+			$('.section.service1 .c2, .section.service1 .c3, .section.service1 .c4').stop( true, true ).css({'left':'50px','opacity':'0'});
+			$('.section.service1 .default').stop( true, true ).css({'opacity':'1'});
+			$('.section.service1 .top').stop( true, true ).css({'top':'0px','left':'252px'});
+			$('.section.service1 .long').stop( true, true ).css({'top':'65px','left':'252px'});
+		}
+		
+		function reset2(){
+			$('.section.service2 .phone').stop( true, true ).removeClass('active');
+			$('.section.service2 .segBoxScroll').stop( true, true ).css({'top':'425px'});
+			$('.section.service2 .c1').stop( true, true ).css({'left':'-40px','opacity':'0'});
+			$('.section.service2 .c2, .section.service2 .c3, .section.service2 .c4').stop( true, true ).css({'left':'-50px','opacity':'0'});
+
+		}
+
+		function reset3(){
+			$('.section.service3 .phone, .section.service3 .item').stop( true, true ).removeClass('active');
+			$('.section.service3 .item').stop( true, true ).removeClass('end');
+			$('.section.service3 .c1').stop( true, true ).css({'left':'60px','opacity':'0'});
+			$('.section.service3 .c2, .section.service3 .c3, .section.service3 .c4').stop( true, true ).css({'left':'50px','opacity':'0'});
+			$('.section.service3 .top').stop( true, true ).css({'top':'0px'});
+			$('.section.service3 .long').stop( true, true ).css({'top':'74px'});
+		}
+
+		function reset4(){
+			$('.section.service4 .phone, .section.service4 .item').stop( true, true ).removeClass('active');
+			$('.section.service4 .item').stop( true, true ).removeClass('end');
+			$('.section.service4 .c1').stop( true, true ).css({'left':'-40px','opacity':'0'});
+			$('.section.service4 .c2, .section.service4 .c3, .section.service4 .c4').stop( true, true ).css({'left':'-50px','opacity':'0'});
+			$('.section.service4 .default').stop( true, true ).css({'opacity':'1'});
+			$('.section.service4 .top').stop( true, true ).css({'opacity':'0'});
+			$('.section.service4 .long').stop( true, true ).css({'top':'33px','left':'252px'});
+		}
+	});
+</script>
+
+</head>
+<body>
+<style type="text/css">
+	.popup{position:absolute;top:10px;left:10px;z-index:100000;}
+	.popupIn{position:relative;width:400px;}
+	.popUtil{position:absolute;bottom:0;left:0;width:100%;height:33px;background:#c9c9c7;font-size:14px;color:#1e1e1e;}
+	.popUtil .in{position:relative;}
+	.popUtil .check{margin-top:5px;margin-left:10px;display:block;}
+	.popUtil .check input{position:relative;top:-2px;}
+	.popUtil .btnPopClose{position:absolute;top:0;right:17px;background:none;border:0;font-size:14px;color:#1e1e1e;background:url('btn_close.png') right 5px no-repeat;padding-right:17px;}
+</style>
+<div class="popup">
+	<div class="popupIn">
+		<a href=""><img src="popup/201604/img_pop1.jpg" alt=""></a>
+		<div class="popUtil">
+			<div class="in">
+				<span class="check"><input type="checkbox" id="oneDay"/><label for="oneDay">오늘 하루 보지 않기</label></span>
+				<button type="button" class="btnPopClose">닫기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="menu">
+	<ul id="menu">
+		<li class="active"><a href="javascript:$.fn.fullpage.moveTo(1);">쇼닥홈</a></li>
+		<li><a href="javascript:$.fn.fullpage.moveTo(2);">서비스소개</a></li>
+		<li><a href="javascript:$.fn.fullpage.moveTo(6);">동영상</a></li>
+		<li><a href="javascript:$.fn.fullpage.moveTo(7);">제휴문의</a></li>
+	</ul>
+</div>
+
+<div id="shodoc">
+	<!-- 쇼닥 홈 -->
+	<div class="section main" id="section0">
+		<div class="bubble bubble1"></div>
+		<div class="bubble bubble2"></div>
+		<div class="bubble bubble3"></div>
+		<div class="bubble bubble4"></div>
+		<div class="bubble bubble5"></div>
+		<div class="bubble bubble6"></div>
+		<div class="bubbleDot bubble7"></div>
+		<div class="bubbleDot bubble8"></div>
+		<div class="bubbleDot bubble9"></div>
+		<div class="bubbleDot bubble10"></div>
+		<div class="bubbleDot bubble11"></div>
+		<div class="sectionIn">
+			<div class="conts">
+				<img src="img/section1_1.png" alt="헤매지 말고, 쇼핑은 Shodoc" class="logo"/>
+				<div class="btnDowns">
+					<a href=""><img src="img/section1_2.png" alt="google play"/></a>
+					<a href="javascript:alert('준비중입니다.');"><img src="img/section1_3.png" alt="app store"/><span>*IOS는 현재 준비중입니다.</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //쇼닥 홈 -->
+
+	<!-- 딱 -->
+	<div class="section service1" id="section1">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<img src="img/img_service1-sex.png" alt="men" class="item sex"/>
+								<img src="img/img_service1-age.png" alt="32세" class="item age"/>
+								<img src="img/img_service1-area.png" alt="서울" class="item area"/>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service1-default.jpg" alt="" class="default"/>
+										<img src="img/img_service1-top.jpg" alt="" class="top"/>
+										<img src="img/img_service1-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">쇼닥맞춤</span>
+							<strong class="c2">딱</strong>
+							<p class="c3">상품을 추천해주는 새로운 방법</p>
+							<p class="c4">매일매일 쏟아지는 상품 중<br/>딱 맞는 상품을 코디해 드려요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //딱 -->
+
+	<!-- 콕 -->
+	<div class="section service2" id="section2">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<div class="segBox">
+									<div class="segBoxScroll">
+										<img src="img/img_service2-seg.png" alt="" class=""/>
+									</div>
+								</div>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service2-top.jpg" alt="" class="top"/>
+										<img src="img/img_service2-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">쇼핑팁</span>
+							<strong class="c2">콕</strong>
+							<p class="c3">가족, 애인에게 드릴 선물이<br/>고민되신다면<em>!</em></p>
+							<p class="c4">쇼닥을 보세요. 감동을 줄 수 있는<br/>상품을 콕 찍어줘요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //콕 -->
+
+	<!-- 핫 -->
+	<div class="section service3" id="section3">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<img src="img/img_service3-img1.png" alt="" class="item img1"/>
+								<img src="img/img_service3-img2.png" alt="" class="item img2"/>
+								<img src="img/img_service3-img3.png" alt="" class="item img3"/>
+								<img src="img/img_service3-img4.png" alt="" class="item img4"/>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service3-top.jpg" alt="" class="top"/>
+										<img src="img/img_service3-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">추천핫딜</span>
+							<strong class="c2">핫</strong>
+							<p class="c3">놓칠 수 없는 핫딜 정보<em>!</em></p>
+							<p class="c4">헤매지 말고, 쇼닥에서 모아진 상품을<br/>한눈에 확인해 보세요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //핫 -->
+
+	<!-- 짠 -->
+	<div class="section service4" id="section4">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<img src="img/img_service4-ba1.png" alt="" class="item bag1"/>
+								<img src="img/img_service4-ba2.png" alt="" class="item bag2"/>
+								<img src="img/img_service4-ba3.png" alt="" class="item bag3"/>
+								<img src="img/img_service4-keyword1.png" alt="" class="item keyword1"/>
+								<img src="img/img_service4-keyword2.png" alt="" class="item keyword2"/>
+								<img src="img/img_service4-keyword3.png" alt="" class="item keyword3"/>
+								<img src="img/img_service4-keyword4.png" alt="" class="item keyword4"/>
+								<img src="img/img_service4-keyword5.png" alt="" class="item keyword5"/>
+								<img src="img/img_service4-keyword6.png" alt="" class="item keyword6"/>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service4-default.jpg" alt="" class="default"/>
+										<img src="img/img_service4-top.jpg" alt="" class="top"/>
+										<img src="img/img_service4-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">검색</span>
+							<strong class="c2">짠</strong>
+							<p class="c3">평범한 검색결과 방식은 안녕<em>!</em></p>
+							<p class="c4">큐레이션된 상품 중심으로 짠~하고<br/>결과를 보여줘요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //짠 -->
+
+	<div class="section movie" id="section5">
+		<!-- 영상 -->
+		<div class="movList">
+			<div class="row">
+				<ul>
+					<li>
+						<iframe width="600" height="337" src="https://www.youtube.com/embed/VQ6mWb90vQU" frameborder="0" wmode="transparent"allowfullscreen></iframe>
+						<div>쇼닥-콕, 쇼핑팁편</div>
+					</li>
+					<li>
+						<iframe width="600" height="337" src="https://www.youtube.com/embed/VQ6mWb90vQU" frameborder="0" wmode="transparent"allowfullscreen></iframe>
+						<div>쇼닥-핫, 추천핫딜편</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //영상 -->
+
+		<!-- 준비중 -->
+		<!--div class="commingSoon" >
+			<div class="row">
+				<img src="img/img_commingsoon.png" alt="Shodoc - 준비중입니다." class=""/>
+			</div>
+		</div-->
+		<!-- //준비중 -->
+	</div>
+
+	<div class="section info " id="section6">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<p><strong>헤매지 말고 쇼닥과 함께</strong> 판매를 시작하세요!</p>
+					<a href="" class="btnPartner"><span>제휴 신청하기</span></a>
+					<div class="process">
+						<strong>제휴프로세스</strong>
+						<ul>
+							<li>
+								<img src="img/section7_1.png" alt=""/>
+								<span>제휴문의 접수</span>
+							</li>
+							<li>
+								<img src="img/section7_2.png" alt=""/>
+								<span>심사 후 담당자 연락</span>
+							</li>
+							<li>
+								<img src="img/section7_3.png" alt=""/>
+								<span>제휴계약 체결</span>
+							</li>
+							<li>
+								<img src="img/section7_4.png" alt=""/>
+								<span>상품 판매 개시</span>
+							</li>
+						</ul>
+					</div>
+					<div class="preparationItem">
+						<strong>제휴 문의 시 필수 준비사항</strong>
+						<ul>
+							<!-- 20160310 수정-->
+							<li>
+								<div class="in">
+									<span>회사소개서·사업자등록증</span>
+									<p>회사 정보와 함께 사업자등록증을<br/>이메일(shodoc@kt.com)에 첨부해 주세요. </p>
+								</div>
+							</li>
+							<li>
+								<div class="in">
+									<span>상품정보·소개</span>
+									<p>상품소개서는 자유양식으로 준비하여<br/>이메일에 첨부해 주세요.</p>
+								</div>
+							</li>
+							<!-- //20160310 수정-->
+							<li>
+								<div class="in">
+									<span>담당자 이메일·연락처</span>
+									<p>연락 가능한 담당자 이메일과<br/>연락처를 꼭 작성해 주세요.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section info2 fp-auto-height" id="section7">
+		<div class="conts">
+
+		<div class="btmBox">
+			<p><img src="img/section7_9.png" alt="헤매지 말고, 쇼핑은 Shodoc" class=""/></p>
+			<div class="btnDowns">
+				<a href=""><img src="img/section1_2.png" alt="google play"/></a>
+				<a href="javascript:alert('준비중입니다.');"><img src="img/section1_3.png" alt="app store"/><span>*IOS는 현재 준비중입니다.</span></a>
+			</div>
+			<div class="share">
+				<span>쇼닥 공유하기</span>
+				<ul>
+					<li><a href=""><img src="img/section7_7.png" alt="facebook"/></a></li>
+					<li><a href=""><img src="img/section7_8.png" alt="twitter"/></a></li>
+				</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

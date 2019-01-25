@@ -1,0 +1,39 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 10:11:25 1월 23, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:38:05 2월 1, 2016.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+@charset "utf-8"; 
+
+/*
+ * Hangeul NanumBarunGothic Font
+ */
+@font-face {
+ font-family: 'NanumBarunGothic';
+ src: url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWeb.eot);
+ src: url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWeb.eot) format('embedded-opentype'),
+      url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWeb.woff) format('woff'),
+      url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWeb.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBarunGothicBold';
+ src: url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWebBold.eot);
+ src: url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWebBold.eot) format('embedded-opentype'),
+      url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWebBold.woff) format('woff'),
+      url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothic/NanumBarunGothicWebBold.ttf) format('truetype');
+}
+@font-face {
+ font-family: 'NanumBareunGothicUltraLight';
+ src: url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothicL/NanumBarunGothicWebUltraLight_11172.eot);
+ src: url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothicL/NanumBarunGothicWebUltraLight_11172.eot) format('embedded-opentype'),
+      url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothicL/NanumBarunGothicWebUltraLight_11172.woff) format('woff'),
+      url(/web/20160123101125/http://hangeul.naver.com/webfont/NanumBarunGothicL/NanumBarunGothicWebUltraLight_11172.ttf) format('truetype');
+}

@@ -1,0 +1,1065 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 10:11:19 1월 23, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:38:07 2월 1, 2016.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+@charset "utf-8";
+/* Incomms Web Standard UI Part SJC 20140822 */
+
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:NanumBarunGothic;font-size:12px;color:#181818}
+img,fieldset{border:0}
+textarea{-webkit-border-radius:0;-webkit-appearance:none;resize:none}
+ul,ol{list-style:none}
+li{vertical-align:top}
+em,address{font-style:normal}
+input,select{vertical-align:middle}
+a{color:#181818;text-decoration:none}
+a:hover{text-decoration:none}
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+hr,legend{display:none}
+caption{visibility:hidden;overflow:hidden;position:static;top:0;left:0;width:0;height:0;font-size:0;line-height:0}
+html,body,#container,#content,#wrap{width:100%;height:100%}
+#container,#content,#wrap{min-width:1250px}
+.big_tx{font-family:NanumBareunGothicLight;font-size:68px;line-height:95px}
+.big_tx strong{font-family:NanumBarunGothic;font-weight:normal}
+.big_tx em{padding:0 9px 5px 0;background-color:#181818;color:#fff}
+.fl{float:left}
+.fr{float:right}
+
+/* layout */
+#header{position:fixed;top:0;left:0;z-index:20;width:100%;height:60px}
+#header h1{position:absolute;top:86px;left:40px;z-index:20}
+#header .pg_info{display:inline-block;position:absolute;top:170px;left:0;height:53px;padding:37px 0 0 121px;background:url(http://hangeul.naver.com/img/bg_pginfo.png) no-repeat;font-size:19px}
+#container,#container2{position:relative;z-index:10}
+#footer{position:absolute;left:0;bottom:30px;z-index:20;padding:4px 0 0 50px}
+#footer .inform{overflow:hidden;position:absolute;top:0;left:0;width:40px;height:40px;background:url(http://hangeul.naver.com/img/btn_ft.gif) no-repeat;text-indent:-9999px}
+#footer .inform:hover{background-image:url(http://hangeul.naver.com/img/btn_ft_off.gif)}
+#footer .inform.on~.lst_sns{display:block!important}
+#footer .lst_sns{display:none;overflow:hidden;position:absolute;top:0;left:40px}
+#footer .lst_sns li{float:left;margin-left:2px}
+#footer .lst_sns li img{position:static}
+#footer span{font-size:11px;line-height:17px;color:#999}
+
+/* 나눔폰트 버그대응 */
+.b_tx,.gnb ul li:hover a.v2,.gnb ul li.on a.v2{font-family:NanumBarunGothicBold}
+
+/* 공통 칼라버튼 */
+.color_btn{display:inline-block;*display:inline;position:relative;margin-bottom:5px;*zoom:1}
+.color_btn>a{display:inline-block;overflow:hidden;height:26px;padding-right:75px;border-bottom:6px solid #181818;background:url(http://hangeul.naver.com/img/color_btn.png) no-repeat 100% 0;font-size:16px}
+.hoverbg{display:block;position:absolute;top:0;right:-40px;left:20px;z-index:-10;height:63px;background:none;-webkit-transition:background .5s;transition:background .5s}
+.color_btn>a:hover+.hoverbg{background:#ffe11c}
+.color_btn>a:hover{background-position:100% 2px}
+
+.hoverbg.v2{display:block;position:absolute;top:0;right:-40px;left:20px;z-index:-10;height:63px;background:none;-webkit-transition:background .5s;transition:background .5s}
+.color_btn.v2>a{background:url(http://hangeul.naver.com/img/color_btn2.png) no-repeat 101% 2px}
+.color_btn.v2>a:hover{background-position:100% 2px}
+
+/* 공통 */
+.gnb{position:absolute;top:0;right:0;left:0;height:60px}
+.gnb ul{overflow:hidden;width:100%;*width:101%;height:60px;background-color:#1a1a1a}
+.gnb ul li{float:left;width:14.285%;*width:14.1%;background-color:#1a1a1a}
+.gnb ul li a{display:block;position:relative;height:41px;padding-top:19px;background:url(http://hangeul.naver.com/img/gnb_bar.gif) no-repeat;font-family:NanumBarunGothicBold;color:#fff;text-align:center}
+.gnb ul li a span{display:inline-block;*display:inline;padding-bottom:2px;font-size:19px;*zoom:1}
+.gnb ul li:hover a span,.gnb ul li.on a span{border-bottom:3px solid #fff}
+.gnb ul li .home{*display:block;width:19px;height:18px;margin-top:2px;border:none;background:url(http://hangeul.naver.com/img/home.png) no-repeat 0 -28px;text-indent:-999px}
+.gnb ul li.on a span.home{border:none;background-position:0 0}
+.gnb ul li:hover a span.home{border:none}
+.gnb ul li.on:hover a span.home{border:none;background-position:0 -28px}
+.gnb ul li:hover a{background-color:#2db400;color:#fff}
+.gnb ul li.on:hover a span{border-color:#fff!important}
+.gnb ul li.on a.v2{color:#f9da03}
+.gnb ul li.on a.v2 span{border-color:#f9da03}
+.gnb ul li:hover a.v2{background-color:#f9da03;color:#fff}
+.gnb ul li.on a.v3{color:#28dcac}
+.gnb ul li.on a.v3 span{border-color:#28dcac}
+.gnb ul li:hover a.v3{background-color:#28dcac;color:#fff}
+.gnb ul li.on a.v4{color:#4c60ff}
+.gnb ul li.on a.v4 span{border-color:#4c60ff}
+.gnb ul li:hover a.v4{background-color:#4c60ff;color:#fff}
+.gnb ul li.on a.v5{color:#2d82f7}
+.gnb ul li.on a.v5 span{border-color:#2d82f7}
+.gnb ul li:hover a.v5{background-color:#2d82f7;color:#fff}
+.gnb ul li.on a.v6{color:#35f44e}
+.gnb ul li.on a.v6 span{border-color:#35f44e}
+.gnb ul li:hover a.v6{background-color:#35f44e;color:#fff}
+.gnb ul li.on a.v7{color:#ff82d2}
+.gnb ul li.on a.v7 span{border-color:#ff82d2}
+.gnb ul li:hover a.v7{background-color:#ff82d2;color:#fff}
+
+.gnb .btn{display:block;overflow:hidden;position:absolute;top:60px;right:0;z-index:100;width:90px;height:90px;background:url(http://hangeul.naver.com/img/btn_gnb.jpg) no-repeat;text-indent:-999px}
+.gnb .gnb_on{display:block}
+.gnb .gnb_off{display:none;background:url(http://hangeul.naver.com/img/btn_gnb2.gif) no-repeat}
+.on .gnb{top:0}
+.on .gnb .gnb_on{display:none}
+.on .gnb .gnb_off{display:block}
+.gnb_bg{position:absolute;top:60px;left:0;width:100%;height:90px;background-color:#fff;opacity:.95;filter:alpha(opacity=95)}
+.gnb_bg.top{opacity:0;filter:alpha(opacity=0)}
+.gnb_bg.v1{background-color:#fffdf4}
+.gnb_bg.v2{background-color:#f1f9ff}
+.gnb_bg.v3{background-color:#d2fff9}
+.gnb_bg.v4{background-color:#f8f8f8}
+.gnb_bg.v5{background-color:#fbe762}
+.gnb_bg.v6{background-color:#f1fffd}
+.gnb_bg.v7{background-color:#fbfff1}
+
+.sub_tab{position:absolute;top:97px;right:130px}
+.sub_tab li{float:left;padding:0 39px 0 0}
+.sub_tab li a{display:block;padding:0 0 3px;border-bottom-style:solid;border-bottom-width:0;border-bottom-color:#999;font-family:NanumBarunGothicBold;font-weight:normal;font-size:16px;-webkit-transition:border-color .8s;transition:border-color .8s}
+.sub_tab li a:hover,.sub_tab li.on a{border-bottom-width:3px;border-color:#181818}
+.sub_tab.v2 li a{border-bottom-color:#666;color:#eee;-webkit-transition:border-color .3s;transition:border-color .3s}
+.sub_tab.v2 li a:hover,.sub_tab.v2 li.on a{border-bottom-width:3px;border-color:#eee}
+
+.nav{position:fixed;top:50%;right:0;z-index:20;width:90px;height:310px;margin-top:-155px}
+.nav .num{position:absolute;bottom:148px;width:100%;font-family:NanumGothic;font-size:12px;text-align:center}
+.nav .prev,.nav .next{display:block;position:absolute;left:0;bottom:0;width:90px;height:100px;background:url(http://hangeul.naver.com/img/sp_nav.png) no-repeat;text-indent:-9999px}
+.nav a.prev,.nav a.next{display:none}
+.nav a.on{display:block}
+.nav a.on+span{display:none}
+.nav a.prev{bottom:210px;background-position:0 -100px}
+.nav span.prev{bottom:210px}
+.nav a.next{background-position:-90px -100px}
+.nav span.next{background-position:-90px -5px}
+.nav.v2 .num{color:#fff}
+.nav.v2 .prev,.nav.v2 .next{background-image:url(http://hangeul.naver.com/img/sp_nav2.png)}
+.top_btn{display:block;position:fixed;right:20px;bottom:152px;z-index:200;width:60px;height:60px;background:url(http://hangeul.naver.com/img/top.png) no-repeat}
+.btn_naver{overflow:hidden;position:absolute;top:-4px;left:-2px;display:inline-block;*display:inline;width:41px;height:17px; background:url(http://hangeul.naver.com/img/blank.png) repeat;text-indent:-999px;*zoom:1}
+
+/* 메인 */
+#wrap_main #container,#wrap_main #content,#wrap_main{min-width:800px}
+#wrap_main{width:100%;height:100%;background-color:#fff7ee}
+.main_lst li{overflow:hidden;float:left;position:relative}
+.main_lst li img{vertical-align:top}
+.main_lst li .main_box{display:block;position:absolute;top:50%;left:50%;width:500px;height:500px;margin:-250px 0 0 -250px;background-color:#fff}
+.main_lst li .main_box h2{position:absolute;top:59px;left:50px;font-family:NanumBareunGothicUltraLight;font-size:63px;font-weight:normal;line-height:89px;letter-spacing:-1px;word-spacing:-3px}
+.main_lst li .main_box h2 em{padding:0 19px 6px 1px;background-color:#000;font-family:NanumBarunGothicBold;line-height:70px;color:#fff}
+.main_lst li .main_box p{position:absolute;top:329px;left:351px;font-size:13px;line-height:30px;color:#00f6b4}
+.main_lst li .main_box p.v2{top:65px}
+.main_lst li .main_box p+span{position:absolute;left:50px;bottom:59px;padding-right:35px;background:url(http://hangeul.naver.com/img/ico_arr3.png) no-repeat 100% 1px;font-size:17px;font-family:NanumBarunGothicBold;cursor:pointer;-webkit-transition:padding-right .4s;transition:padding-right .4s}
+.main_lst li .main_box:hover p+span{padding-right:43px}
+.main_lst #main_tab3 .main_box p{color:#00ff18}
+.main_lst #main_tab3 .bg_main_old{width:100%;height:100%;background:url(http://hangeul.naver.com/img/bg_main_old.gif) repeat 50% 50%}
+.main_lst #main_tab3 .bg_main_old{
+/* Chrome, Safari, Opera */-webkit-animation-name:move_up;-webkit-animation-duration:70s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;
+/* Standard syntax */animation-name:move_up;animation-duration:70s;animation-timing-function:linear;animation-iteration-count:infinite}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes move_up{0%{background-position:50% 0}100%{background-position:50% 2000px}}
+
+@keyframes move_up{
+0%{background-position:50% 0}
+100%{background-position:50% 2000px}
+}
+
+.main_lst #main_tab4 .main_box p{color:#ff8894}
+.main_lst #main_tab4 .bg_main_nanum{position:absolute;top:50%;left:50%;width:3000px;height:1800px;margin:-900px 0 0 -1500px;background:none}
+
+.bg_main_nanum.move div{position:absolute;-webkit-animation-name:bubble;-webkit-animation-duration:5s;-webkit-animation-timing-function:ease-in-out;-webkit-animation-delay:-1s;-webkit-animation-iteration-count:infinite;-webkit-animation-direction:alternate;-webkit-animation-play-state:running;
+/* Standard syntax */animation-name:bubble;animation-duration:5s;animation-timing-function:ease-in-out;animation-delay:-1s;animation-iteration-count:infinite;animation-direction:alternate;animation-play-state:running}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bubble{0%{margin-top:-40px}100%{margin-top:40px}}
+
+/* Standard syntax */
+@keyframes bubble{
+0%{margin-top:-40px}
+100%{margin-top:40px}
+}
+
+.bg_main_nanum.move .h_move{position:absolute;-webkit-animation-name:bubble2;-webkit-animation-duration:15s;-webkit-animation-timing-function:ease-in-out;-webkit-animation-delay:-1s;-webkit-animation-iteration-count:infinite;-webkit-animation-direction:alternate;-webkit-animation-play-state:running;
+/* Standard syntax */animation-name:bubble2;animation-duration:15s;animation-timing-function:ease-in-out;animation-delay:-1s;animation-iteration-count:infinite;animation-direction:alternate;animation-play-state:running}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bubble2{0%{margin-left:-100px}100%{margin-left:100px}}
+
+/* Standard syntax */
+@keyframes bubble2{
+0%{margin-left:-100px}
+100%{margin-left:100px}
+}
+
+.bg_main_nanum.move div.pt_no1{top:108px;left:713px;width:368px;height:368px;background-image:url(http://hangeul.naver.com/img/pt_no1.png)}
+.bg_main_nanum.move div.pt_no2{top:594px;left:1430px;width:310px;height:310px;background-image:url(http://hangeul.naver.com/img/pt_no2.png);-webkit-animation-delay:-2s;animation-delay:-2s}
+.bg_main_nanum.move div.pt_no3{top:473px;left:1899px;width:195px;height:195px;background-image:url(http://hangeul.naver.com/img/pt_no3.png);-webkit-animation-delay:-4s;animation-delay:-4s}
+.bg_main_nanum.move div.pt_no4{top:1028px;left:1698px;width:267px;height:267px;background-image:url(http://hangeul.naver.com/img/pt_no4.png);-webkit-animation-delay:-8s;animation-delay:-8s}
+.bg_main_nanum.move div.pt_no5{top:149px;left:2258px;width:135px;height:135px;background-image:url(http://hangeul.naver.com/img/pt_no5.png);-webkit-animation-delay:-9s;animation-delay:-9s}
+.bg_main_nanum.move div.pt_no6{top:929px;left:152px;width:323px;height:323px;background-image:url(http://hangeul.naver.com/img/pt_no6.png);-webkit-animation-delay:-10s;animation-delay:-10s}
+.bg_main_nanum.move div.pt_no7{top:573px;left:478px;width:262px;height:262px;background-image:url(http://hangeul.naver.com/img/pt_no7.png);-webkit-animation-delay:-11s;animation-delay:-11s}
+.bg_main_nanum.move div.pt_no8{top:288px;left:1699px;width:84px;height:84px;background-image:url(http://hangeul.naver.com/img/pt_no8.png);-webkit-animation-delay:-12s;animation-delay:-12s}
+.bg_main_nanum.move div.pt_no9{top:526px;left:1366px;width:44px;height:45px;background-image:url(http://hangeul.naver.com/img/pt_no9.png);-webkit-animation-delay:-13s;animation-delay:-13s}
+.bg_main_nanum.move div.pt_no10{top:445px;left:239px;width:308px;height:309px;background-image:url(http://hangeul.naver.com/img/pt_no10.png);-webkit-animation-delay:-14s;animation-delay:-14s}
+.bg_main_nanum.move div.pt_no11{top:1149px;left:577px;width:63px;height:64px;background-image:url(http://hangeul.naver.com/img/pt_no11.png);-webkit-animation-delay:-15s;animation-delay:-15s}
+.bg_main_nanum.move div.pt_no12{top:310px;left:2514px;width:316px;height:316px;background-image:url(http://hangeul.naver.com/img/pt_no12.png);-webkit-animation-delay:-16s;animation-delay:-16s}
+.bg_main_nanum.move div.pt_no13{top:149px;left:272px;width:84px;height:84px;background-image:url(http://hangeul.naver.com/img/pt_no13.png);-webkit-animation-delay:-17s;animation-delay:-17s}
+.bg_main_nanum.move div.pt_no14{top:1025px;left:2264px;width:390px;height:390px;background-image:url(http://hangeul.naver.com/img/pt_no14.png);-webkit-animation-delay:-18s;animation-delay:-18s}
+.bg_main_nanum.move div.pt_no15{top:1235px;left:485px;width:124px;height:124px;background-image:url(http://hangeul.naver.com/img/pt_no15.png);-webkit-animation-delay:-19s;animation-delay:-19s}
+.bg_main_nanum.move div.pt_no16{top:1261px;left:848px;width:321px;height:322px;background-image:url(http://hangeul.naver.com/img/pt_no16.png);-webkit-animation-delay:-20s;animation-delay:-20s}
+.bg_main_nanum.move div.pt_no17{top:710px;left:1011px;width:90px;height:90px;background-image:url(http://hangeul.naver.com/img/pt_no17.png);-webkit-animation-delay:-10s;animation-delay:-10s}
+.bg_main_nanum.move div.pt_no18{top:1204px;left:1904px;width:124px;height:124px;background-image:url(http://hangeul.naver.com/img/pt_no18.png);-webkit-animation-delay:-22s;animation-delay:-22s}
+.bg_main_nanum.move div.pt_no19{top:863px;left:1123px;width:135px;height:135px;background-image:url(http://hangeul.naver.com/img/pt_no19.png);-webkit-animation-delay:-13s;animation-delay:-13s}
+.bg_main_nanum.move div.pt_no20{top:880px;left:2065px;width:193px;height:193px;background-image:url(http://hangeul.naver.com/img/pt_no20.png);-webkit-animation-delay:-24s;animation-delay:-24s}
+.bg_main_nanum.move div.pt_no21{top:428px;left:1012px;width:222px;height:222px;background-image:url(http://hangeul.naver.com/img/pt_no21.png);-webkit-animation-delay:-25s;animation-delay:-25s}
+.bg_main_nanum.move div.pt_no22{top:1249px;left:1405px;width:92px;height:95px;background-image:url(http://hangeul.naver.com/img/pt_no22.png);-webkit-animation-delay:-26s;animation-delay:-26s}
+.bg_main_nanum.move div.pt_no23{top:1359px;left:2264px;width:148px;height:148px;background-image:url(http://hangeul.naver.com/img/pt_no23.png);-webkit-animation-delay:-27s;animation-delay:-27)}
+.bg_main_nanum.move div.pt_no24{top:217px;left:422px;width:155px;height:155px;background-image:url(http://hangeul.naver.com/img/pt_no24.png);-webkit-animation-delay:-28s;animation-delay:-28s}
+.bg_main_nanum.move div.pt_no25{top:906px;left:2702px;width:119px;height:119px;background-image:url(http://hangeul.naver.com/img/pt_no25.png);-webkit-animation-delay:-29s;animation-delay:-29s}
+.bg_main_nanum.move div.pt_no26{top:332px;left:1995px;width:263px;height:263px;background-image:url(http://hangeul.naver.com/img/pt_no26.png);-webkit-animation-delay:-30s;animation-delay:-30s}
+.bg_main_nanum.move div.pt_no27{top:122px;left:1228px;width:186px;height:186px;background-image:url(http://hangeul.naver.com/img/pt_no27.png);-webkit-animation-delay:-31s;animation-delay:-31s}
+.bg_main_nanum.move div.pt_no28{top:507px;left:2409px;width:63px;height:64px;background-image:url(http://hangeul.naver.com/img/pt_no28.png);-webkit-animation-delay:-32s;animation-delay:-32s}
+.bg_main_nanum.move div.pt_no29{top:1001px;left:708px;width:148px;height:148px;background-image:url(http://hangeul.naver.com/img/pt_no29.png);-webkit-animation-delay:-16s;animation-delay:-16s}
+.bg_main_nanum.move div.pt_no30{top:71px;left:2351px;width:325px;height:325px;background-image:url(http://hangeul.naver.com/img/pt_no30.png);-webkit-animation-delay:-34s;animation-delay:-34s}
+.bg_main_nanum.move div.pt_no31{top:1481px;left:1536px;width:204px;height:204px;background-image:url(http://hangeul.naver.com/img/pt_no31.png);-webkit-animation-delay:-35s;animation-delay:-35s}
+.bg_main_nanum.move div.pt_no32{top:697px;left:2224px;width:77px;height:77px;background-image:url(http://hangeul.naver.com/img/pt_no32.png);-webkit-animation-delay:-36s;animation-delay:-36s}
+.main_lst #main_tab5 .main_box p{color:#00ff18}
+.main_lst #main_tab5 .main_box h2 em{padding:0 17px 6px 1px;font-size:60px}
+.main_lst #main_tab5 .main_box h2 em span{letter-spacing:-2px}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.main_lst #main_tab5 .main_box h2 em{font-size:61px}
+}
+.main_lst #main_tab6 .main_box p{color:#6e94ff}
+.main_lst #main_tab7 .main_box p{color:#00ff18}
+.main_lst #main_tab1 .main_box p{color:#ff64c8}
+
+.main_lst #main_tab1 .main_box h2 em{position:relative;padding-right:93px;letter-spacing:0}
+.main_lst #main_tab1 .main_box h2 em .num{position:absolute;top:-17px;right:21px;font-size:30px;font-style:normal;letter-spacing:-2px}
+
+/* 나눔글꼴 체험 */
+.experience{width:100%;height:100%}
+.experience>li{overflow:hidden;position:relative;z-index:1;width:100%;height:100%;min-height:850px;text-align:center}
+.experience #experience_int{background:url(http://hangeul.naver.com/img/bg_nanum.jpg) no-repeat 50% 0}
+.experience li img{position:absolute;top:0;left:0;z-index:-1}
+.experience .sub_con{display:inline-block;*display:inline;text-align:center;vertical-align:middle;*zoom:1}
+.experience .v_bar{display:inline-block;*display:inline;width:1px;height:100%;background:none;vertical-align:middle;*zoom:1}
+.experience .big_tx{display:inline-block;*display:inline;overflow:hidden;*zoom:1}
+.experience .big_tx strong{margin-left:-2px;padding:0 9px 5px 0;background-color:#181818;color:#fff}
+.experience .guide_area{display:inline-block;*display:inline;padding:7px 0 0 88px;vertical-align:top;*zoom:1}
+.tx_type{margin-bottom:40px;font-size:13px;line-height:27px;color:#333}
+.tx_type2{font-size:12px;line-height:20px;color:#999}
+.tx_type3{margin-bottom:29px;font-size:13px;line-height:20px;color:#333}
+.tx_type3 h4{margin:0 0 10px;font-family:NanumBarunGothicBold;font-weight:normal;font-size:16px}
+.tx_type3 ul{overflow:hidden;width:430px;*width:450px}
+.tx_type3 li{float:left;margin:0 0 8px}
+.tx_type3 li a{display:block;overflow:hidden;height:17px;margin:0 20px 5px 0;padding:0 13px 0 0;border-bottom:1px solid #6a6a6a;background:url(http://hangeul.naver.com/img/ico_arr2.png) no-repeat 100% 4px;font-family:NanumBarunGothicBold}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.tx_type3 li a{height:16px}
+}
+.tx_type3 li a:hover{text-decoration:none}
+.tx_btn{border-bottom:1px solid #00d319}
+.tx_btn span{padding-right:13px;background:url(http://hangeul.naver.com/img/ico_arr.png) no-repeat 100% 2px;color:#00d319}
+.btn_top{display:inline-block;overflow:hidden;position:fixed;right:20px;bottom:20px;width:60px;height:60px;background:url(http://hangeul.naver.com/img/top.png) no-repeat;text-indent:-99999px}
+
+#experience_int .sub_con{text-align:left}
+#experience_type{background-color:#fffdf4}
+#experience_type .ly_down,#experience_type2 .ly_down,#experience_type3 .ly_down,#experience_type5 .ly_down,#experience_type7 .ly_down{left:-88px}
+#experience_type6 .ly_down{left:-167px}
+.write .sub_con{margin-top:-220px;color:#555}
+.write .test_area{display:inline-block;overflow:hidden;position:relative;width:1200px;max-height:390px}
+.write .test_area p{font-family:NanumBarunpen;font-size:110px;color:#ee1a60;outline-width:0}
+.write .guide_area{position:absolute;left:0;bottom:81px;width:100%;padding:0}
+.write .tx_type{margin-bottom:7px;line-height:26px;color:#555}
+.write .tx_type2{margin-bottom:57px;line-height:18px}
+.write a:hover+.hoverbg{background-color:#fc588b}
+.write .ly_down li a:hover{color:#fd487e}
+.write .ly_down li a:hover .ico_dn{background-position:0 -12px}
+.write .test_area p em{display:inline-block}
+.write .cursor{font-family:NanumBarunGothic;color:#f9da03;opacity:1;-webkit-animation-name:pointer;animation-name:pointer;-webkit-animation-duration:1.2s;-webkit-animation-timing-function:ease;-webkit-animation-iteration-count:infinite;
+/* Standard syntax */animation-duration:1.2s;animation-timing-function:ease;animation-iteration-count:infinite}
+.write .cursor.v2{color:#fff;-webkit-animation-name:pointer2;animation-name:pointer2}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pointer{0%{opacity:0}50%{opacity:0}70%{opacity:1}100%{opacity:1}}
+
+/* Standard syntax */
+@keyframes pointer{
+0%{opacity:0}
+50%{opacity:0}
+70%{opacity:1}
+100%{opacity:1}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pointer2{0%{opacity:0}50%{opacity:0}70%{opacity:1}100%{opacity:1}}
+
+/* Standard syntax */
+@keyframes pointer2{
+0%{opacity:0}
+50%{opacity:0}
+70%{opacity:1}
+100%{opacity:1}
+}
+
+#experience_type2{background-color:#f1f9ff}
+.write.v2 .test_area{max-height:350px}
+.write.v2 .test_area p{font-family:NanumBareunGothicUltraLight;font-size:100px;color:#001a6f}
+.write.v2 a:hover+.hoverbg{background-color:#385cf3}
+.write.v2 .cursor{height:100px;margin-top:-15px;*margin-top:-26px}
+.write.v2 .ly_down li a:hover .ico_dn{background-position:0 -12px}
+.write.v2 .tx_type2{margin-bottom:32px}
+.write.v2 .ly_down li a:hover{color:#385cf3}
+.write.v2 .ly_down li a:hover .ico_dn{background-position:0 -24px}
+.write.v2 .slid_area{color:#1e41d1}
+.write.v2 .slid_area .bar,.write.v2 .ui-slider{background-color:#1e41d1}
+.write.v2 .ui-slider .ui-slider-handle{background-position:0 -12px}
+
+#experience_type3{background-color:#d2fff9}
+.write.v3 .test_area{max-height:350px;*max-height:390px}
+.write.v3 .test_area p{font-family:NanumBarunGothic;font-size:100px;color:#002bb7}
+.write.v3 a:hover+.hoverbg{background-color:#385cf3}
+.write.v3 .cursor{height:100px;margin-top:-13px;*margin-top:-22px}
+.write.v3 .tx_type2{margin-bottom:32px}
+.write.v3 .ly_down li a:hover{color:#385cf3}
+.write.v3 .ly_down li a:hover .ico_dn{background-position:0 -24px}
+.write.v3 .slid_area{color:#1e41d1}
+.write.v3 .slid_area .bar,.write.v3 .ui-slider{background-color:#385cf3}
+.write.v3 .ui-slider .ui-slider-handle{background-position:0 -12px}
+
+#experience_type4{background-color:#f8f8f8}
+.write.v4 .test_area{max-height:380px}
+.write.v4 .test_area p{font-family:NanumMyeongjoEco;font-size:100px;color:#181818}
+.write.v4 .test_area p.v2{font-family:NanumGothicEco}
+.write.v4 a:hover+.hoverbg{background-color:#0ae724}
+.write.v4 .cursor{height:100px}
+.write.v4.tx_type2{margin-bottom:32px}
+.write.v4 .ly_down li a:hover{color:#0ae724}
+.write.v4 .ly_down li a:hover .ico_dn{background-position:0 -36px}
+.write.v4 .slid_area{color:#0ae724}
+.write.v4 .slid_area a{width:136px;color:#0ae724}
+.write.v4 .slid_area .bar,.write.v4 .ui-slider{background-color:#0ae724}
+.write.v4 .ui-slider .ui-slider-handle{background-position:0 -24px}
+.write.v4 .ly_sel{width:159px}
+.write.v4 .slid_area a .ico_sel{right:-8px}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.write.v4 .slid_area a .ico_sel{right:-5px}
+}
+
+#experience_type5{background-color:#fbe762}
+.write.v5 .test_area{max-height:350px}
+.write.v5 .test_area p{font-family:NanumBrush;font-size:150px;color:#6826b9}
+.write.v5 .test_area p.v2{font-family:NanumPen}
+.write.v5 a:hover+.hoverbg{background-color:#935bd8}
+.write.v5 .cursor{height:150px}
+.write.v5 .tx_type2{margin-bottom:32px}
+.write.v5 .ly_down li a:hover{color:#935bd8}
+.write.v5 .ly_down li a:hover .ico_dn{background-position:0 -48px}
+.write.v5 .slid_area{color:#935bd8}
+.write.v5 .slid_area a{width:103px;color:#935bd8}
+.write.v5 .slid_area a .ico_sel{background:url(http://hangeul.naver.com/img/sel_arr2.png) no-repeat}
+.write.v5 .slid_area .bar,.write.v5 .ui-slider{background-color:#935bd8}
+.write.v5 .ui-slider .ui-slider-handle{background-position:0 -36px}
+.write.v5 .ly_sel{width:125px;border:1px solid #935bd8}
+.write.v5 .slid_area a .ico_sel{right:-8px}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.write.v5 .slid_area a .ico_sel{right:-5px}
+}
+
+#experience_type6{background-color:#f1fffd}
+.write.v6 .test_area{max-height:405px}
+.write.v6 .test_area p{font-family:NanumGothic;font-size:120px;color:#00de1a}
+.write.v6 a:hover+.hoverbg{background-color:#0ae724}
+.write.v6 .cursor{height:120px}
+.write.v6 .tx_type2{margin-bottom:32px}
+.write.v6 .ly_down li a:hover{color:#0ae724}
+.write.v6 .ly_down li a:hover .ico_dn{background-position:0 -36px}
+.write.v6 .slid_area{color:#0ae724}
+.write.v6 .slid_area .bar,.write.v6 .ui-slider{background-color:#0ae724}
+.write.v6 .ui-slider .ui-slider-handle{background-position:0 -24px}
+
+#experience_type7{background-color:#fbfff1}
+.write.v7 .test_area p{font-family:NanumMyeongjo;font-size:110px;color:#ff4200}
+.write.v7 a:hover+.hoverbg{background-color:#ff7845}
+.write.v7 .tx_type2{margin-bottom:32px}
+.write.v7 .ly_down li a:hover{color:#ff7845}
+.write.v7 .ly_down li a:hover .ico_dn{background-position:0 -60px}
+.write.v7 .slid_area{color:#ff7845}
+.write.v7 .slid_area .bar,.write.v7 .ui-slider{background-color:#ff7845}
+.write.v7 .ui-slider .ui-slider-handle{background-position:0 -48px}
+
+.ly_sel{position:absolute;top:18px;left:0;width:159px;border:1px solid #0ae724}
+.ly_sel li{float:left;width:100%;border-top:1px solid #e5e5e5;background-color:#fff}
+.ly_sel li:first-child{border:none}
+.ly_sel li a{width:100%!important;height:27px;padding-top:12px;font-weight:normal;color:#0ae724;text-align:center!important}
+
+/* 슬라이드 바 */
+.slid_area{margin-bottom:22px;font-size:13px;font-family:NanumBarunGothicBold;color:#fd487e;text-align:center}
+.slid_area span:first-child{position:relative}
+.slid_area a{display:inline-block;color:#fd487e;text-align:left}
+.slid_area a .ico_sel{display:block;position:absolute;top:4px;width:11px;height:8px;background:url(http://hangeul.naver.com/img/sel_arr.png) no-repeat}
+.slid_area .bar{display:inline-block;width:1px;height:17px;margin:-1px 20px 0;background-color:#fd487e;vertical-align:middle}
+.ui-slider{display:inline-block;*display:inline;position:relative;top:-4px;z-index:99999;width:200px;height:1px;margin-left:11px;background-color:#fd487e;font-size:0;line-height:0;text-align:left;*zoom:1}
+.ui-slider .ui-slider-handle{position:absolute;z-index:2;width:12px;height:12px;margin:-6px 0 0 -6px;background:url(http://hangeul.naver.com/img/sp_slidebt.png) no-repeat;cursor:default;-ms-touch-action:none;touch-action:none}
+
+/* 다운로드 레이어 */
+.ly_down{overflow:hidden;position:absolute;top:26px;left:0;width:380px}
+.ly_down ul{overflow:hidden;background-color:#464646}
+.ly_down.v2{width:400px}
+.ly_down.v2 strong{width:202px}
+.ly_down.v3{left:50%;width:762px;margin-left:-381px}
+.ly_down.v3 li{width:380px}
+.ly_down.v4{width:540px}
+.ly_down.v4 ul{float:left;width:380px}
+.ly_down.v5{width:782px;margin-left:-222px}
+.ly_down.v5 li{width:380px}
+.ly_down.v6{width:233px}
+.ly_down.v6 li{position:relative}
+.ly_down.v6 a{width:217px;padding-left:16px}
+.ly_down.v6 .ico_dn{position:absolute;top:11px;right:20px}
+.ly_down ul{overflow:hidden;margin:-1px 0 0 -1px}
+.ly_down li{float:left;width:100%;height:37px;margin:1px 0 0 1px;background-color:#181818;font-size:14px;text-align:left}
+.ly_down strong,.ly_down a,.ly_more{display:inline-block;float:left;height:26px;padding-top:11px;font-weight:normal;color:#fff}
+.ly_down strong{width:182px;padding-left:16px}
+.ly_down li strong+a,.ly_more{width:104px;text-align:center}
+.ly_down li strong+a+a{width:78px;background:url(http://hangeul.naver.com/img/bg_dn.gif) no-repeat 0 10px;text-align:center}
+.ly_down .ico_dn{display:inline-block;overflow:hidden;width:9px;height:12px;margin:1px 0 0 8px;background:url(http://hangeul.naver.com/img/sp_overarr.png) no-repeat;text-indent:-9999px;vertical-align:top;cursor:pointer}
+.ly_down a:hover{color:#ffe11c}
+.ly_down a:hover .ico_dn{background-position:0 -72px}
+.ly_down a.ly_more{width:156px;margin:-1px 0 0 1px;background-color:#181818}
+.ly_down a.ly_more:hover{color:#0ae724}
+.ly_down a.ly_more:hover .ico_dn{background-position:0 -36px}
+
+/* 알림레이어 */
+.ly_alert{overflow:hidden;position:absolute;top:50%;left:50%;width:231px;height:99px;margin:-50px 0 0 -116px;background:url(http://hangeul.naver.com/img/bg_alert.png) no-repeat;text-indent:-9999px}
+
+/* 모바일 도돌런처 */
+.dodol #container,.dodol #content,.dodol #wrap,.dodol #header{min-width:1100px}
+.dodol #container{min-height:890px;background:url(http://hangeul.naver.com/img/bg_dodol.gif) repeat}
+.dodol .phone{position:absolute;top:0;left:48px;width:300px;height:588px;background:url(http://hangeul.naver.com/img/bg_phone_area.png) no-repeat}
+.dodol .rolling{overflow:hidden;width:266px;height:471px;margin:60px 0 0 17px}
+.dodol .rolling ul{float:left;width:5000px}
+.dodol .rolling li{float:left;width:266px;height:471px}
+.dodol .rolling .phone_con{background:url(http://hangeul.naver.com/img/bg_phone.jpg) no-repeat}
+.dodol .rolling .phone_con2{background:url(http://hangeul.naver.com/img/bg_phone2.jpg) no-repeat}
+.dodol .rolling .phone_con3{background:url(http://hangeul.naver.com/img/bg_phone3.jpg) no-repeat}
+.dodol .dodol_con{position:absolute;top:50%;left:50%;width:1100px;height:600px;margin:-300px 0 0 -550px}
+.dodol .cp_txt{display:inline-block;*display:inline;overflow:hidden;width:630px;margin:66px 0 0 438px;font-family:NanumBareunGothicLight;font-size:67px;line-height:90px;letter-spacing:-1px;*zoom:1}
+.dodol .cp_txt strong{margin-left:-2px;padding:0 8px 5px 0;background-color:#181818;font-family:NanumBarunGothic;font-weight:normal;color:#fff}
+.dodol .cp_txt em{font-family:NanumBarunGothic}
+.dodol h3{position:absolute;top:31px;left:438px;font-size:16px;font-weight:normal}
+.dodol .dodol_btn{position:absolute;top:464px;left:438px;width:500px}
+.dodol .color_btn{float:left;margin:0 37px 15px 0}
+.dodol .color_btn>a{width:233px;padding:0}
+.dodol .color_btn>a.v2{width:163px}
+.dodol .noti{position:absolute;left:54px;bottom:-52px;font-size:11px;line-height:18px;color:#999;text-align:center}
+.roll_btn{position:absolute;top:50%;right:0;left:0;min-width:1100px;height:104px;margin:-52px auto;text-align:center}
+.roll_btn ul{display:inline-block;position:relative;width:100%;max-width:1232px;height:100%}
+.roll_btn a{display:inline-block;position:absolute;top:0;width:104px;height:104px;background:url(http://hangeul.naver.com/img/sp_rollbtn.png) no-repeat;text-indent:-9999px;opacity:.1;filter:alpha(opacity=10)}
+.roll_btn a:hover{opacity:1;filter:alpha(opacity=100)}
+.roll_btn a.prev{left:0}
+.roll_btn a.next{right:0;background-position:0 -104px}
+.rolling_num{position:absolute;right:0;left:0;bottom:-59px;text-align:center}
+.rolling_num li{display:inline-block;*display:inline;*zoom:1}
+.rolling_num li a{display:block;width:26px;height:26px;background:url(http://hangeul.naver.com/img/sp_page.png) no-repeat}
+.rolling_num li a:hover,.rolling_num li.on a{background-position:0 -26px}
+.dodol_ly{z-index:50;border:5px solid #181818;background:#fff}
+.dodol_ly dl{margin:5px 0 39px 37px}
+.dodol_ly dt{padding:24px 0 4px;font-size:15px;line-height:17px;font-family:NanumBarunGothicBold}
+.dodol_ly dd{font-size:13px;line-height:22px;color:#333}
+.dodol_ly dd ol{overflow:hidden;width:520px;margin-left:-4px;background:url(http://hangeul.naver.com/img/bg_ly_dodol.jpg) no-repeat 0 2px}
+.dodol_ly dd ol li{float:left;width:130px;padding-top:190px;font-size:12px;color:#666;text-align:center;line-height:16px}
+.dodol_ly .ico_cls{display:block;position:absolute;top:22px;right:23px;width:22px;height:22px;background:url(http://hangeul.naver.com/img/btn_cls.png) 0 0 no-repeat}
+.dodol_ly .down{display:inline-block;height:14px;border-bottom:1px solid #00d319}
+.dodol_ly .down span{padding-right:9px;background:url(http://hangeul.naver.com/img/ico_arr4.png) no-repeat 100% 2px;font-family:NanumBarunGothicBold;font-size:12px;color:#00d319;vertical-align:1px}
+
+
+/* 옛한글 */
+.oldtxt #container,.oldtxt #content,.oldtxt #wrap,.oldtxt #header{min-width:1100px;height:auto}
+.oldtxt #wrap{position:relative}
+.oldtxt #container{position:absolute;top:0;right:0;left:0;bottom:0;min-height:1240px;background:url(http://hangeul.naver.com/img/bg_oldtxt.gif) no-repeat 50% 0}
+.oldtxt_con{position:relative;width:1100px;margin:0 auto;padding-top:160px}
+.sub_tab2{position:absolute;top:90px;left:5px;z-index:20;width:550px}
+.sub_tab2 li{float:left;width:180px;margin-right:3px}
+.sub_tab2 li a{display:block;width:180px;height:26px;padding-top:9px;background-color:#eaeaea;font-size:15px;font-family:NanumBarunGothicBold;color:#181818;text-align:center}
+.sub_tab2 li a:hover,.sub_tab2 li.on a{background-color:#f9da03}
+.oldtxt_con .mov_area{width:1100px;height:620px;padding-left:5px}
+.oldtxt_con .color_btn{margin-right:24px}
+.oldtxt_con .big_tx{font-size:63px;line-height:88px}
+.tx_area{overflow:hidden;padding:46px 0 100px 5px}
+.tx_area .big_tx{float:left;width:540px}
+.tx_area .guide_area{float:left;padding-top:7px}
+.tx_area .tx_type{margin-bottom:32px}
+.tx_area .tx_type2{margin-bottom:15px}
+.oldtxt.v2 #container{background:none}
+.oldtxt.v2 .oldtxt_con{padding:0 0 100px}
+.oldtxt.v2 .oldtxt_history{overflow:hidden;position:relative;z-index:10}
+.oldtxt.v2 .oldtxt_history li{float:left;position:relative;width:1100px;height:700px}
+.oldtxt.v2 .oldtxt_history li:first-child{padding-top:125px}
+.oldtxt.v2 .oldtxt_history h4{position:absolute;top:250px;left:0;z-index:60;width:370px;height:88px;padding:42px 0 0;border:5px solid #222;font-size:40px;font-weight:normal;text-align:center}
+.oldtxt.v2 .oldtxt_history .tx_type{position:absolute;top:625px;left:320px;z-index:50;width:700px}
+.oldtxt.v2 .oldtxt_history .tx_type2{position:absolute;top:572px;left:560px;z-index:40}
+.oldtxt.v2 .oldtxt_history .img_box{position:absolute;top:250px;left:560px;z-index:20}
+.oldtxt.v2 .oldtxt_history .img_box.v2{top:521px;left:0;z-index:10}
+.oldtxt.v2 .oldtxt_history .oldtxt_year{position:absolute;top:333px;left:151px;z-index:30;font-size:150px;color:#ffe53a}
+.oldtxt.v2 .oldtxt_history .lst2 h4{top:125px;left:650px}
+.oldtxt.v2 .oldtxt_history .lst2 .tx_type{top:290px;left:650px;width:380px}
+.oldtxt.v2 .oldtxt_history .lst2 .tx_type2{top:561px;left:0}
+.oldtxt.v2 .oldtxt_history .lst2 .tx_type2.v2{top:561px;left:416px}
+.oldtxt.v2 .oldtxt_history .lst2 .img_box{top:125px;left:0}
+.oldtxt.v2 .oldtxt_history .lst2 .oldtxt_year{top:220px;left:420px}
+.oldtxt.v2 .oldtxt_history .lst3 h4{top:125px;left:0}
+.oldtxt.v2 .oldtxt_history .lst3 .tx_type{top:290px;left:0;width:500px}
+.oldtxt.v2 .oldtxt_history .lst3 .tx_type2{top:576px;left:276px}
+.oldtxt.v2 .oldtxt_history .lst3 .img_box{top:125px;left:650px}
+.oldtxt.v2 .oldtxt_history .lst3 .oldtxt_year{top:404px;left:241px}
+.oldtxt.v2 .oldtxt_history li.lst4{height:740px}
+.oldtxt.v2 .oldtxt_history .lst4 h4{top:125px;left:650px}
+.oldtxt.v2 .oldtxt_history .lst4 .tx_type{top:125px;left:0;width:550px}
+.oldtxt.v2 .oldtxt_history .lst4 .tx_type2{top:649px;left:0}
+.oldtxt.v2 .oldtxt_history .lst4 .img_box{top:305px;left:410px}
+.oldtxt.v2 .oldtxt_history .lst4 .img_box.v2{top:257px;left:0}
+.oldtxt.v2 .oldtxt_history .lst4 .oldtxt_year{top:224px;left:452px}
+.history_nav{position:fixed;top:250px;right:0;bottom:0;z-index:100;width:90px;max-height:776px}
+.history_nav li{position:absolute;top:0;left:0;width:90px;padding-top:5px;font-size:12px;color:#777;text-align:center;cursor:pointer}
+.history_nav li.v2{top:25%}
+.history_nav li.v3{top:50%}
+.history_nav li.v4{top:75%}
+.history_nav .year_bar{position:absolute;top:0;right:17px;width:90000px;height:19px;background:url(http://hangeul.naver.com/img/bg_year_bar.gif) repeat-x 0 10px}
+.history_nav .bg_year{display:inline-block;position:absolute;top:8px;right:0;width:5px;height:5px;background:url(http://hangeul.naver.com/img/bg_year.gif) no-repeat}
+.oldtxt.v3{background:#2e2922}
+.oldtxt.v3 #container,.oldtxt.v3 #content,.oldtxt.v3 #wrap,.oldtxt.v3 #header{min-width:1280px;height:auto}
+.oldtxt.v3 #container{overflow:hidden;position:absolute;top:0;right:0;left:0;bottom:0;min-height:1100px;background:none}
+.oldtxt.v3 #container .test_bg{position:absolute;top:0;left:50%;width:2560px;height:1440px;margin-left:-1280px;background:url(http://hangeul.naver.com/img/bg_digitizing.jpg) no-repeat}
+.oldtxt.v3 .flash_area{position:absolute;top:125px;left:50%;width:1200px;height:920px;margin-left:-600px}
+.oldtxt.v3 .gnb_bg{background-color:#191919}
+
+/* 레시피북 */
+body.recipe{height:auto}
+.recipe #container,.recipe #content,.recipe #wrap,.recipe #header{min-width:1100px}
+.recipe .book_con{position:relative;padding:0 0 98px;background:url(http://hangeul.naver.com/img/bg_book.gif) no-repeat 50% 0}
+.recipe p~.color_btn>a{width:210px;height:49px;margin-right:34px;padding-right:33px;background-position:101% 24px;line-height:22px}
+.recipe p~.color_btn>a:hover{background-position:100% 24px}
+.recipe .hoverbg{right:-6px;height:85px}
+.recipe .tx_area{position:relative;z-index:20;width:1100px;margin:0 auto;padding:147px 0 0}
+.recipe .tx_area .big_tx{width:502px}
+.recipe .tx_area .tx_type{margin-bottom:42px}
+.recipe .book{position:relative;z-index:10;width:1100px;height:530px;margin:26px auto 0}
+.recipe .rolling{overflow:hidden;width:1100px;height:530px}
+.recipe .rolling ul{float:left;width:50000px}
+.recipe .rolling li{float:left;width:1100px;height:530px}
+.recipe .rolling .phone_con{background:url(http://hangeul.naver.com/img/bk_01.jpg) no-repeat}
+.recipe .rolling .phone_con2{background:url(http://hangeul.naver.com/img/bk_02.jpg) no-repeat}
+.recipe .rolling .phone_con3{background:url(http://hangeul.naver.com/img/bk_03.jpg) no-repeat}
+.recipe .rolling .phone_con4{background:url(http://hangeul.naver.com/img/bk_04.jpg) no-repeat}
+.recipe .rolling .phone_con5{background:url(http://hangeul.naver.com/img/bk_05.jpg) no-repeat}
+.recipe .rolling .phone_con6{background:url(http://hangeul.naver.com/img/bk_06.jpg) no-repeat}
+.recipe .rolling .phone_con7{background:url(http://hangeul.naver.com/img/bk_07.jpg) no-repeat}
+.recipe .rolling .phone_con8{background:url(http://hangeul.naver.com/img/bk_08.jpg) no-repeat}
+.recipe .rolling .phone_con9{background:url(http://hangeul.naver.com/img/bk_09.jpg) no-repeat}
+.recipe .rolling .phone_con10{background:url(http://hangeul.naver.com/img/bk_10.jpg) no-repeat}
+.recipe .roll_btn{top:643px;z-index:20}
+.recipe .rolling_num{bottom:117px;z-index:20}
+.recipe .roll_btn ul{max-width:1307px}
+.recipe .book_con.v2{padding:0;background:#ffe21c}
+.recipe .book_con.v2 .big_tx{width:580px;font-size:37px;line-height:51px}
+.recipe .book_con.v2 .big_tx p{padding-top:22px;font-family:NanumBarunGothic;font-size:13px;line-height:24px;color:#333}
+.recipe .book_con.v2 .tx_area{position:relative;z-index:20;width:1100px;margin:0 auto;padding:73px 0 148px}
+.book_con.v2 .color_btn>a{width:111px;height:26px;padding-right:75px}
+.book_con.v2 .hoverbg{right:-40px;height:63px}
+.book_con.v2 .color_btn>a:hover+.hoverbg{background:#517ad4}
+.book_con.v2 textarea{overflow:auto;width:464px;height:156px;margin-bottom:29px;padding:21px 27px;border:1px solid #eddd73;font-size:13px;line-height:24px;text-align:left;resize:none}
+.recipe .tx_area .guide_area{position:relative}
+.recipe .ly_fbook{position:absolute;top:86px;left:29px;background:none;font-size:13px;color:#999;line-height:24px}
+
+/* 레시피북 레이어 */
+.recipe_ly{z-index:50;border:5px solid #181818;background:#fff}
+.recipe_ly dl{margin:5px 0 48px 37px}
+.recipe_ly dt{padding:24px 0 3px;font-size:15px;line-height:17px;font-family:NanumBarunGothicBold}
+.recipe_ly dd{font-size:13px;line-height:24px;color:#333}
+.recipe_ly .ly_noti{position:absolute;left:36px;bottom:28px;font-size:12px;color:#999}
+.recipe_ly .ico_cls{display:block;position:absolute;top:22px;right:23px;width:22px;height:22px;background:url(http://hangeul.naver.com/img/btn_cls.png) 0 0 no-repeat}
+
+/* 한글박물관 */
+.museum #wrap{height:auto !important;background:url(http://hangeul.naver.com/img/bg_museum.jpg) no-repeat 50% 0}
+.museum #container,.museum #content,.museum #wrap,.museum #header{min-width:1100px}
+.museum .gnb_bg{background-color:#f9faf9}
+.museum .book_con{position:relative}
+.museum a:hover+.hoverbg{background-color:#4c60ff}
+.museum .tx_area .guide_area{padding-top:5px}
+.museum .tx_area{position:relative;z-index:20;width:1100px;margin:0 auto;padding:116px 0 50px}
+.museum .tx_area .big_tx{width:520px;line-height:90px}
+.museum .tx_area .big_tx em{padding:0 20px 5px 0}
+.museum .tx_area .tx_type{margin-bottom:4px}
+.museum .tx_area .tx_type2{overflow:hidden;width:580px;margin-bottom:39px;font-size:13px}
+.museum .tx_area .tx_type2 dt{float:left;width:48px;margin:0 22px 8px 0;color:#333}
+.museum .tx_area .tx_type2 dt .fr{margin-right:2px}
+.museum .tx_area .tx_type2 dd{float:left;width:510px;margin:0 0 8px;color:#888}
+.museum .tx_area .tx_type2 dd em{margin:0 3px}
+.museum .tx_area .tx_type2 a,.museum_con.v2 .big_tx a{display:inline-block;height:16px;margin-left:12px;border-bottom:1px solid #00d319}
+.museum .tx_area .tx_type2 a span,.museum_con.v2 .big_tx a span,.ico_link span{padding-right:12px;background:url(http://hangeul.naver.com/img/ico_arr4.png) no-repeat 100% 2px;font-family:NanumBarunGothicBold;font-size:12px;color:#00d319;vertical-align:1px}
+.museum_con.v2 .big_tx a{height:18px;margin:0}
+.museum .museum_movie{position:relative;z-index:10;width:1100px;height:530px;margin:0 auto}
+.museum .museum_con.v2{position:relative;margin-top:98px;background-color:#fafaf8}
+.museum .museum_con.v2 .big_tx{width:412px;margin-top:-8px;font-size:41px;line-height:55px}
+.museum .museum_con.v2 .big_tx p{padding-top:21px;font-family:NanumBarunGothic;font-size:13px;line-height:24px}
+.museum .museum_con.v2 .tx_area{position:relative;z-index:20;width:1100px;margin:0 auto;padding:70px 0 50px}
+.museum .museum_con.v2 .link_area li{float:left;width:322px;height:215px;margin-left:22px;background-color:#fff;vertical-align:top}
+.museum .museum_con.v2 .link_area .thmb img{vertical-align:top}
+.museum .museum_con.v2 .link_area .info{height:49px;padding:9px 0 0 20px;font-size:13px;line-height:21px;border:1px solid #eee;border-top-width:0}
+.museum .museum_con.v2 .link_area .info span{font-size:12px;color:#999}
+.museum .museum_con.v2 .junior_area{overflow:hidden;position:relative;z-index:20;width:1100px;margin:0 auto;padding:50px 0 142px;border-top:1px solid #181818}
+.museum .museum_con.v2 .junior_area .big_tx{float:left;margin-top:-12px}
+.museum .museum_con.v2 .junior_area .big_tx h6{font-size:30px;color:#181818}
+.museum .museum_con.v2 .junior_area .link_area{float:left;margin-left:24px}
+.museum .museum_con.v2 .junior_area .link_area p{margin:-1px 0 11px;font-size:13px;color:#333}
+.museum .museum_con.v2 .junior_area .link_area .ico_link{display:inline-block;height:13px;border-bottom:1px solid #00d319}
+/* 한글 문서 */
+#wrap.hw{height:auto}
+#wrap.hw .gnb_bg{background-color:#f9f9f9}
+.section_area5{position:relative;width:100%;min-width:1305px;background-color:#f9f9f9}
+.section_area5 .section{position:relative;z-index:5}
+.section_area5 .section .section_spot{position:relative;width:auto;margin:0 73px}
+.section_area5 .section .section_spot h2{position:relative;width:565px;height:310px;margin:0 auto;padding-top:100px}
+.section_area5 .section .section_spot .btn{display:block;position:absolute;left:22px;bottom:4px;width:87px;height:21px;background:url(http://hangeul.naver.com/img/img_renew_docs/img_docs_btn.jpg) no-repeat}
+.section_area5 .section .section_spot .btn2{display:block;position:absolute;left:114px;bottom:4px;width:110px;height:21px;background:url(http://hangeul.naver.com/img/img_renew_docs/img_docs_btn2.jpg) no-repeat}
+.section_area5 .section .section_spot{height:407px;margin:0 73px;text-align:center}
+.section_area5 .section .sec_area{margin:85px 72px 0;background:url(http://hangeul.naver.com/img/bg_pattern.gif) repeat-x}
+.section_area5 .section .sec_area .tab{position:absolute;top:460px;left:73px;width:auto;font-family:NanumBarunGothicBold}
+.section_area5 .section .sec_area ul li{float:left}
+.section_area5 .section .sec_area ul li a{height:39px;font-size:19px;line-height:21px;color:#181818}
+.section_area5 .section .sec_area ul li a.on,.section_area5 .section .sec_area ul li a:hover{color:#2d82f7}
+.section_area5 .section .sec_area ul li .ppt{display:block;width:170px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat}
+.section_area5 .section .sec_area ul li .ppt:hover{background-position:0 -58px}
+.section_area5 .section .sec_area ul li .ppt.on{background-position:0 -58px}
+.section_area5 .section .sec_area ul li .word{display:block;width:100px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat}
+.section_area5 .section .sec_area ul li .word:hover{background-position:0 -158px}
+.section_area5 .section .sec_area ul li .word.on{background-position:0 -158px}
+.section_area5 .section .sec_area ul li .hwp{display:block;width:100px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat}
+.section_area5 .section .sec_area ul li .hwp:hover{background-position:0 -158px}
+.section_area5 .section .sec_area ul li .hwp.on{background-position:0 -158px}
+.section_area5 .section .sec_area ul li .excel{display:block;width:100px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat}
+.section_area5 .section .sec_area ul li .excel:hover{background-position:0 -158px}
+.section_area5 .section .sec_area ul li .excel.on{background-position:0 -158px}
+.section_area5 .section .sec_area .chk_all{float:right;margin-top:-49px}
+.section_area5 .section .sec_area .chk_all input{position:absolute;top:0;left:-9999px}
+.section_area5 .section .sec_area .chk_all label.on{background-position:-200px -30px}
+.section_area5 .section .sec_area .chk_all label{display:inline-block;width:116px;height:22px;margin-right:24px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-200px 0;vertical-align:middle}
+.section_area5 .section .sec_area .chk_all a{display:inline-block;height:40px;padding:0 13px;font-family:NanumBarunGothicBold;font-size:15px;color:#fff;vertical-align:middle}
+.section_area5 .section .sec_area .chk_all a span{display:block;padding:0 23px 0 0;background:url(http://hangeul.naver.com/img/ico_doc_dw.png) no-repeat 100% 13px;line-height:40px}
+.section_area5 .section .sec_area .chk_all .btn_select_dw{background-color:#2d82f7}
+.section_area5 .section .sec_area .chk_all .btn_select_guide{margin-left:4px;background-color:#b5b5b5}
+.section_area5 .section .sec_area .lis_ppt{overflow:hidden;padding-top:36px;*padding-bottom:35px}
+.section_area5 .section .sec_area .lis_ppt ul{overflow:hidden}
+.section_area5 .section .sec_area .lis_ppt ul.ppt li{margin-bottom:50px;padding-right:35px}
+.section_area5 .section .sec_area .lis_ppt ul.excel{*padding-bottom:58px}
+.section_area5 .section .sec_area .lis_ppt ul.excel li{margin-bottom:50px;padding-right:35px}
+.section_area5 .section .sec_area .lis_ppt ul.excel li.template2{padding-right:31px}
+.section_area5 .section .sec_area .lis_ppt ul.word li{margin-bottom:50px;padding-right:31px}
+.section_area5 .section .sec_area .lis_ppt ul.word li.template2{padding-right:31px}
+.section_area5 .section .sec_area .lis_ppt .docs{position:relative;height:250px;border:1px solid #f0f0f0;background-color:#fff}
+.section_area5 .section .sec_area .lis_ppt .docs .box_br{display:none;position:absolute;top:0;left:-1px}
+.section_area5 .section .sec_area .lis_ppt .docs .box_br.on{display:block;z-index:20}
+.section_area5 .section .sec_area .lis_ppt .docs .docu_txt{padding-top:10px}
+.section_area5 .section .sec_area .lis_ppt .docs .docu_txt input{position:absolute;left:-9999px}
+.section_area5 .section .sec_area .lis_ppt .docs .docu_txt label{display:inline-block;position:absolute;left:5px;bottom:14px;z-index:30;height:22px;padding:13px 0 0 38px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-190px -130px;font-size:15px;font-family:NanumBarunGothicBold;color:#585858}
+.section_area5 .section .sec_area .lis_ppt .docs .docu_txt label.on{background-position:-190px -170px}
+.section_area5 .section .sec_area .lis_ppt .docs .docu_txt .dw{display:block;position:absolute;right:12px;bottom:15px;width:17px;height:22px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-200px -400px}
+.section_area5 .section .sec_area .lis_ppt .docs .docu_txt .dw:hover{background-position:-200px -440px}
+.section_area5 .section .sec_area .lis_ppt .docs .docu_txt .dw.on{background-position:-200px -440px}
+.section_area5 .section .sec_area .lis_ppt .docs .view{display:none;position:absolute;left:93px;bottom:121px;width:79px;height:61px}
+.section_area5 .section .sec_area .lis_ppt .docs .view.on{display:block;z-index:20}
+.section_area5 .section .sec_area .lis_ppt .docs .view .pre{position:absolute;left:0;width:38px;height:38px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-200px -260px}
+.section_area5 .section .sec_area .lis_ppt .docs .view .pre:hover{background-position:-250px -260px}
+.section_area5 .section .sec_area .lis_ppt .docs .view .next{display:block;position:absolute;right:0;width:38px;height:38px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-200px -210px}
+.section_area5 .section .sec_area .lis_ppt .docs .view .next:hover{background-position:-250px -210px}
+.section_area5 .section .sec_area .lis_ppt .docs .view .num{display:inline-block;position:absolute;bottom:0;width:79px;height:20px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-300px -210px;font-size:15px;font-family:NanumBarunGothicBold;color:#fff;text-align:center}
+.section_area5 .section .sec_area .lis_ppt .docs .new_docs{display:none;position:absolute;top:0;left:0;z-index:10}
+.section_area5 .section .sec_area .lis_ppt .docs .new_docs.on{display:block}
+.section_area5 .section .sec_area .lis_ppt .docs2{position:relative;height:330px;border:1px solid #f0f0f0;background-color:#fff}
+.section_area5 .section .sec_area .lis_ppt .docs2 .box_br{display:none;position:absolute;top:0;left:-1px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .box_br.on{display:block;z-index:20}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt{height:42px;padding-top:10px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt input{position:absolute;left:-9999px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt label{display:inline-block;position:absolute;left:5px;bottom:12px;z-index:30;height:22px;padding:13px 0 0 38px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-190px -130px;font-size:15px;font-family:NanumBarunGothicBold;color:#555}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt label.on{background-position:-190px -170px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt .dw{display:block;position:absolute;right:12px;bottom:15px;width:17px;height:22px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-200px -400px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt .dw:hover{background-position:-200px -440px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt .dw.on{background-position:-200px -440px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .docu_txt .txt_br{display:block;position:absolute;left:40px;bottom:-2px;width:110px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .view{display:none;position:absolute;left:57px;bottom:160px;width:79px;height:61px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .view.on{display:block;z-index:20}
+.section_area5 .section .sec_area .lis_ppt .docs2 .view .pre{position:absolute;left:0;width:38px;height:38px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-200px -260px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .view .pre:hover{background-position:-250px -260px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .view .next{display:block;position:absolute;right:0;width:38px;height:38px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-200px -210px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .view .next:hover{background-position:-250px -210px}
+.section_area5 .section .sec_area .lis_ppt .docs2 .view .num{display:inline-block;position:absolute;bottom:0;width:79px;height:20px;background:url(http://hangeul.naver.com/img/spr5.png) no-repeat;background-position:-300px -210px;font-size:15px;font-family:NanumBarunGothicBold;color:#fff;text-align:center}
+.section_area5 .section .sec_area .lis_ppt .docs2 .new_docs{display:none;position:absolute;top:0;left:0}
+.section_area5 .section .sec_area .lis_ppt .docs2 .new_docs.on{display:block}
+.section_area5 .sub_con{display:inline-block;*display:inline;margin:0 auto;padding-top:113px;text-align:left;*zoom:1}
+.section_area5 .big_tx{display:inline-block;*display:inline;overflow:hidden;*zoom:1}
+.section_area5 .big_tx strong{margin-left:-2px;padding:0 9px 5px 0;background-color:#181818;color:#fff}
+.section_area5 .tx_type{margin-bottom:35px;padding:12px 0 0 6px;font-size:13px;line-height:28px}
+.section_area5 .color_btn{margin:0 39px 0 7px}
+.section_area5 #footer{bottom:-101px}
+.section_area5 .color_btn>a:hover+.hoverbg{background:#2d82f7}
+.footer_docs{position:relative;z-index:0;width:auto;min-width:1305px;height:114px;padding-bottom:15px;background-color:#f9f9f9}
+.footer_docs .footer_area{overflow:hidden;margin:0 73px;background:#f9f9f9 url(http://hangeul.naver.com/img/bg_pattern.gif) repeat-x;text-align:right}
+.footer_docs .footer_area .docs_info{float:right;margin-top:36px}
+.footer_docs .footer_area .docs_info p{padding:0 4px 14px 0}
+.footer_docs .footer_area .docs_info .btn3,.footer_docs .footer_area .docs_info .btn4{display:inline-block;*display:inlinel;overflow:hidden;height:40px;padding:0 13px;background-color:#b5b5b5;font-family:NanumBarunGothicBold;font-size:13px;color:#fff;vertical-align:middle;zoom:1}
+.footer_docs .footer_area .docs_info .btn4{margin-left:5px}
+.footer_docs .footer_area .docs_info .btn3 span,.footer_docs .footer_area .docs_info .btn4 span{display:block;padding-right:23px;background:url(http://hangeul.naver.com/img/ico_doc_dw.png) no-repeat 100% 13px;line-height:41px}
+.footer_docs .footer_area .social4{position:absolute;right:73px;margin-top:84px;padding-bottom:20px}
+.footer_docs .footer_area .social4 p{float:left;margin-top:4px;padding-right:15px}
+.footer_docs .docs_info p>span{font-size:11px;line-height:13px;color:#999}
+.footer_docs .docs_info p a{margin-left:16px;padding-right:16px;border-bottom:1px solid #00d319;background:url(http://hangeul.naver.com/img/ico_arr.png) no-repeat 100% 1px;font-family:NanumBarunGothicBold;font-size:11px;line-height:13px;color:#00d319;vertical-align:top}
+
+/* 걸어온 길 */
+.history .gnb_bg{background-color:#fcfcfc}
+.history img{border:0;vertical-align:top}
+.history #container,.history #content,.history #wrap,.history #header{min-width:1100px;height:auto}
+.history #container{background-color:#fcfcfc}
+.history_con{position:relative;width:1100px;margin:0 auto}
+.history_con .more{display:inline-block;margin-left:9px;padding-right:12px;border-bottom:1px solid #00d319;background:url(http://hangeul.naver.com/img/ico_arr.png) no-repeat 100% 1px;font-size:12px;line-height:12px;color:#00d319;vertical-align:4px}
+#history_2015,#history_2014,#history_2013,#history_2012,#history_2011,#history_2010,#history_2009,#history_2008{position:relative;width:100%;padding-top:130px}
+#history_2015 .typo_box,#history_2014 .typo_box,#history_2013 .typo_box,#history_2012 .typo_box,#history_2011 .typo_box{position:absolute;left:429px}
+#history_2015{height:739px;padding-top:108px}
+#history_2014{height:1691px}
+#history_2013{height:1218px}
+#history_2012{height:1104px}
+#history_2011{height:1045px}
+#history_2010{height:888px}
+#history_2009{height:570px}
+#history_2008{height:998px}
+.history_lst h4+ul li{position:absolute;border:1px solid #eee;background-color:#fff}
+.history .rolling{overflow:hidden;width:240px;height:256px}
+.history .rolling ul{float:left;width:5000px}
+.history .rolling li{float:left;position:static;width:240px;height:256px;border:none}
+.history .rolling .rolling_con{background:url(http://hangeul.naver.com/img/history_roll.gif) no-repeat}
+.history .rolling .rolling_con2{background:url(http://hangeul.naver.com/img/history_roll2.gif) no-repeat}
+.history .rolling .rolling_con3{background:url(http://hangeul.naver.com/img/history_roll3_v2.gif) no-repeat}
+.history .rolling .rolling_con4{background:url(http://hangeul.naver.com/img/history_roll4_v2.gif) no-repeat}
+.history .rolling .rolling_con5{background:url(http://hangeul.naver.com/img/history_roll5.gif) no-repeat}
+.history .rolling .rolling_con6{background:url(http://hangeul.naver.com/img/history_roll6.gif) no-repeat}
+.history .rolling .rolling_con7{background:url(http://hangeul.naver.com/img/history_roll7.gif) no-repeat}
+.history .rolling .rolling_con8{background:url(http://hangeul.naver.com/img/history_roll8.gif) no-repeat}
+.history .rolling .rolling_con9{background:url(http://hangeul.naver.com/img/history_roll9.gif) no-repeat}
+.history .rolling .rolling_con10{background:url(http://hangeul.naver.com/img/history_roll10.gif) no-repeat}
+.history .rolling .rolling_con11{background:url(http://hangeul.naver.com/img/history_roll11.gif) no-repeat}
+.history .rolling .rolling_con12{background:url(http://hangeul.naver.com/img/history_roll12.gif) no-repeat}
+.history .rolling .rolling_con13{background:url(http://hangeul.naver.com/img/history_roll13.gif) no-repeat}
+.history .rolling .rolling_con14{background:url(http://hangeul.naver.com/img/history_roll14.gif) no-repeat}
+.history_lst h4{position:absolute;top:254px;left:59px;z-index:10;font-family:NanumBarunGothic;font-size:130px;font-weight:normal;color:#0f0}
+.history .history_roll{top:356px;left:157px}
+.history .history_roll.v2{top:1365px;left:429px}
+.history .play_box{top:468px;left:429px}
+.history .play_box.v2{top:970px;left:429px}
+.history .tx_box{top:724px;left:18px}
+.history .tx_box2{top:1214px;left:18px;width:380px}
+.history .tx_box3{top:1326px;left:58px;width:337px}
+.history .tx_box4{top:1710px;right:117px;width:328px}
+.history .box_tx.btxt{padding-top:12px;padding-bottom:9px}
+.history .box_tx.btxt strong{line-height:26px}
+.history .box_tx.btxt2{padding-top:14px}
+.history .box_tx.btxt2 strong{display:inline-block;*display:inline;margin-bottom:8px;margin-bottom:4px;line-height:23px;*zoom:1}
+.box_tx{padding:10px 0 10px 20px;font-size:13px;line-height:19px;color:#333}
+.box_tx strong{margin-bottom:4px;font-size:20px;line-height:32px;color:#000}
+.movie_area{width:670px;height:409px}
+.history .play_box.v2 .movie_area{width:470px;height:283px}
+.history .tx_box2 .img_area{position:absolute;top:-131px;left:73px}
+.history .tx_box4 .img_area{position:absolute;top:-151px;left:56px}
+
+#history_2015 h4{top:163px}
+#history_2015 .history_roll{top:264px}
+#history_2015 .typo_box{top:131px}
+#history_2015 .play_box{top:468px}
+#history_2015 .play_box .movie_area{width:470px;height:286px}
+#history_2015 .typo_box{top:130px}
+
+#history_2013 h4{top:232px}
+#history_2013 .play_box{top:470px;left:429px}
+#history_2013 .play_box.v2{top:972px}
+#history_2013 .tx_box{top:673px;left:157px;width:240px}
+#history_2013 .tx_box2{top:560px;left:37px;width:360px}
+#history_2013 .tx_box2 .img_area{position:absolute;top:-234px;left:47px}
+#history_2013 .tx_box3{top:1060px;left:90px;width:307px}
+#history_2013 .typo_box{top:131px}
+
+#history_2012 h4{top:199px}
+#history_2012 .play_box{top:466px;left:429px}
+#history_2012 .tx_box{top:300px;left:17px;width:380px}
+#history_2012 .tx_box2{top:1122px;left:429px;width:320px}
+#history_2012 .tx_box2 .img_area{position:absolute;top:-149px;left:47px}
+#history_2012 .tx_box3{top:638px;left:77px;width:320px}
+#history_2012 .typo_box{top:130px}
+
+#history_2011 h4{top:93px}
+#history_2011 .tx_box{top:184px;left:17px;width:380px}
+#history_2011 .play_box{top:201px}
+#history_2011 .tx_box2{top:722px;left:429px}
+#history_2011 .tx_box2 .img_area{position:relative;top:0;left:0}
+#history_2011 .tx_box3{top:522px;left:157px;width:240px}
+#history_2011 .tx_box4{top:909px;left:37px;width:360px}
+#history_2011 .tx_box5{top:1021px;left:132px;width:265px}
+#history_2011 .tx_box6{top:1079px;left:428px;width:265px}
+
+#history_2010 .play_box{top:111px;left:429px}
+#history_2010 h4{top:176px}
+#history_2010 .history_roll{top:274px}
+#history_2010 .tx_box{top:699px;left:77px;width:320px}
+#history_2010 .tx_box2{top:811px;left:132px;width:265px}
+#history_2010 .tx_box3{top:632px;left:429px;width:240px}
+
+#history_2009 .play_box.v2{top:111px}
+#history_2009 h4{top:115px}
+#history_2009 .tx_box2{top:217px;left:82px;width:315px}
+#history_2009 .tx_box{top:310px;left:157px;width:240px}
+#history_2009 .tx_box3{top:487px;left:429px;width:331px}
+#history_2009 .tx_box4{top:599px;left:429px;width:210px}
+
+#history_2008 h4{top:273px}
+#history_2008 .play_box{top:109px}
+#history_2008 .history_roll{top:376px}
+#history_2008 .history_roll.v2{top:612px}
+
+.history .history_btn{display:inline-block;position:absolute;top:240px;right:4px}
+.history .history_btn a{display:inline-block;overflow:hidden;float:left;width:12px;height:12px;background:url(http://hangeul.naver.com/img/history_roll_btn.png) no-repeat -12px 0;text-indent:-9999px}
+.history .history_btn a.on,.history .history_btn a:hover{background-position:0 0}
+.history .history_nav{position:fixed;top:141px;right:0;bottom:10%;z-index:100;width:90px;max-height:776px}
+.history .history_nav li{position:absolute;top:0;left:0;width:90px;padding-top:5px;font-size:12px;color:#777;text-align:center;cursor:pointer}
+.history .history_nav li.v2{top:12%}
+.history .history_nav li.v3{top:24%}
+.history .history_nav li.v4{top:36%}
+.history .history_nav li.v5{top:48%}
+.history .history_nav li.v6{top:60%}
+.history .history_nav li.v7{top:72%}
+.history .history_nav li.v8{top:84%}
+.history .history_nav .year_bar{position:absolute;top:0;right:17px;width:90000px;height:19px;background:url(http://hangeul.naver.com/img/bg_year_bar2.gif) repeat-x 0 10px}
+.history .history_nav .bg_year{display:inline-block;position:absolute;top:8px;right:0;width:5px;height:5px;background:url(http://hangeul.naver.com/img/bg_year2.gif) no-repeat}
+.history .btn_top{right:80px}
+
+/* 한글 간판 */
+.sign .gnb_bg{background-color:#edf6f8}
+.sign #container{height:auto;background-color:#edf6f8}
+.sign img{vertical-align:top}
+.sign .hg_sign{padding:90px 0 135px;background:url(http://hangeul.naver.com/img/bg_sign_nationwide.jpg) no-repeat 50% 90px;text-align:center}
+.sign .hg_sign.bg_sign{background:url(http://hangeul.naver.com/img/bg_sign_bookstore.jpg) no-repeat 50% 90px}
+.sign .hg_sign.bg_street{background:url(http://hangeul.naver.com/img/bg_sign_bookstore2.jpg) no-repeat 50% 90px}
+.sign .play_box{position:relative;z-index:10;width:1100px;min-height:107px;max-height:619px;margin:0 auto}
+.sign .play_box .mov_area{overflow:hidden;position:relative}
+.sign .play_box .mov_area .btn_mov_play{overflow:hidden;position:absolute;top:23px;left:529px;width:42px;height:60px;background:url(http://hangeul.naver.com/img/sp_sign_lst2.png) no-repeat 0 -342px;color:transparent;text-indent:-1000px;transition:.8s;-webkit-transition:.8s}
+.sign .play_box .btn_box{position:absolute;top:0;right:-36px;width:36px;height:36px}
+.sign .play_box .btn_box .btn_mov{display:block;overflow:hidden;width:36px;height:36px;background:#fff url(http://hangeul.naver.com/img/btn_playarr.png) no-repeat 0 0;color:transparent;text-indent:-1000px;transition:.8s;-webkit-transition:.8s}
+.sign .play_box .btn_box .btn_mov:hover{background:#20c98f url(http://hangeul.naver.com/img/btn_playarr2.png) no-repeat 0 0}
+.sign .play_box .btn_box .btn_mov.off{background:#fff url(http://hangeul.naver.com/img/btn_playarr_off.png) no-repeat 0 0}
+.sign .play_box .btn_box .btn_mov.off:hover{background:#20c98f url(http://hangeul.naver.com/img/btn_playarr_off2.png) no-repeat 0 0}
+.sign .play_txt_box{overflow:hidden;position:relative;*position:static;z-index:10;width:1018px;margin:0 auto;padding:60px 0 46px;letter-spacing:-0.7px;*letter-spacing:-1px}
+.sign .big_tx{float:left;width:470px;font-size:60px;line-height:80px;font-weight:normal;text-align:left;letter-spacing:-2px}
+.sign .play_txt_box.v2{width:914px;padding:60px 0 46px}
+.sign .play_txt_box.v2 .big_tx{width:315px}
+.sign .big_tx strong{margin-left:-2px;margin-bottom:0px;padding:0 9px 5px 0;background-color:#181818;color:#fff}
+.sign .cont_txt{overflow:hidden;padding-top:1px;text-align:left}
+.sign .tx_type{margin-bottom:6px}
+.sign .tx_type2{padding-top:2px;font-size:13px}
+.sign .play_txt_box .lk_sign{display:inline-block;*display:inline;margin-top:17px;padding-right:13px;border-bottom:1px solid #20c98f;background:url(http://hangeul.naver.com/img/sp_signview_list.png) no-repeat 100% -246px;font-family:NanumBarunGothicBold;font-size:13px;color:#20c98f;zoom:1;letter-spacing:0}
+.sign .play_img_box{width:1208px;margin:0 auto}
+.sign .play_img_box ul{overflow:hidden}
+.sign .play_img_box li{float:left;position:relative;margin:6px;border:1px solid #e3eaec}
+.sign .play_img_box a{display:block;overflow:hidden;width:288px;height:235px;background:url(http://hangeul.naver.com/img/blank.png) repeat}
+.sign .play_img_box .thmb_box{display:block;overflow:hidden;position:relative;*z-index:-1;width:288px;height:180px}
+.sign .play_img_box .txt_box{display:block;overflow:hidden;width:228px;height:55px;*margin-top:-5px;padding:0 30px;background-color:#fff;line-height:55px;text-align:left;cursor:pointer}
+.sign .play_img_box .txt_box .txt{display:block;padding-right:35px;background:url(http://hangeul.naver.com/img/sp_sign_lst2.png) no-repeat 100% -179px;font-size:16px;color:#585858}
+.sign .play_img_box .thmb_box img{position:absolute;top:0;left:0}
+.sign .gray{z-index:10}
+.sign .color{z-index:0}
+.sign a:hover .gray{z-index:0}
+.sign a:hover .color{z-index:10}
+
+@-webkit-keyframes play_img_box{form{-webkit-transform:scale(1,1)}to{-webkit-transform:scale(1.05,1.05)}}
+@keyframes play_img_box{
+form{transform:scale(1,1)}
+to{transform:scale(1.05,1.05)}
+}
+.sign .play_img_box a:hover img{-webkit-animation:play_img_box .5s ease-in-out;-webkit-animation-fill-mode:forwards;animation:play_img_box .5s ease-in-out;animation-fill-mode:forwards}
+.sign .play_img_box a:hover .txt_box .txt{background-position:100% -132px;font-family:NanumBarunGothicBold;color:#181818}
+.sign .book_tab{width:1100px;height:72px;margin:0 auto}
+.sign .book_tab ul{overflow:hidden;margin-top:-2px;padding:2px 0 35px}
+.sign .book_tab li{overflow:hidden;float:left;width:180px;height:35px;background-color:#e1e1e1;font-family:NanumBarunGothicBold;font-size:16px;line-height:35px}
+.sign .book_tab li:first-child{margin-right:3px}
+.sign .book_tab li.on{background-color:#41e7ae}
+.sign .book_tab li a{display:block;font-family:NanumBarunGothicBold;color:#181818}
+.sign .street_txt_box{overflow:hidden;position:relative;z-index:10;width:1100px;margin:0 auto;padding-bottom:69px}
+.sign .street_txt_box .big_tx{float:none;width:auto}
+.sign .street_img_box{width:1208px;margin:0 auto}
+.sign .street_img_box ul{overflow:hidden;clear:both;position:relative}
+.sign .street_img_box .lst_l,.sign .street_img_box .lst_r{float:left;clear:none;width:50%}
+.sign .street_img_box li{float:left;padding:6px}
+.sign .street_img_box .tm{position:absolute}
+.sign .street_img_box .tm.ab_t{top:192px;right:0}
+.sign .street_img_box .tm.ab_l{top:192px;left:0}
+.sign .street_img_box .tm.ab_r{top:192px;left:302px}
+.sign .street_img_box .tm_r{float:right}
+.sign .street_img_box .tm_cr{clear:both}
+.sign .street_img_box li a{display:block;background:url(http://hangeul.naver.com/img/blank.png) repeat}
+.sign .street_img_box .thmb_box{display:block;overflow:hidden;position:relative;width:290px;height:180px}
+.sign .street_img_box .thmb_box img{position:absolute;top:0;left:0}
+.sign .street_img_box .thmb_box.sz2{width:290px;height:372px}
+.sign .street_img_box .thmb_box.sz3{width:592px;height:180px}
+.sign .street_img_box .thmb_box.sz4{width:592px;height:372px}
+.sign .street_img_box .thmb_box.sz5{width:894px;height:372px}
+
+@-webkit-keyframes street_img_box{form{-webkit-transform:scale(1,1)}to{-webkit-transform:scale(1.05,1.05)}}
+@keyframes street_img_box{
+form{transform:scale(1,1)}
+to{transform:scale(1.05,1.05)}
+}
+.sign .street_img_box a:hover img{-webkit-animation:street_img_box .5s ease-in-out;-webkit-animation-fill-mode:forwards;animation:street_img_box .5s ease-in-out;animation-fill-mode:forwards}
+.sign .dim{position:fixed;top:0;right:0;left:0;bottom:0;z-index:20;background-color:#000;filter:alpha(opacity=80);opacity:.8}
+.sign .ly_sign{position:absolute;top:0;left:0;z-index:30;width:100%;height:737px}
+.sign .ly_sign .thmb_box{width:1196px;height:737px;margin:0 auto}
+.sign .ly_sign .original_img{height:673px}
+.sign .ly_sign .txt_box{overflow:hidden;height:39px;padding:25px 30px 0;background-color:#fff}
+.sign .ly_sign .txt_box h5{float:left;margin-right:17px;padding-right:17px;background:url(http://hangeul.naver.com/img/sp_sign_lst2.png) no-repeat 100% -244px;font-family:NanumBarunGothicBold;font-size:13px;font-weight:normal;color:#181818}
+.sign .ly_sign .txt_box > p{font-size:13px;color:#333}
+.sign .ly_sign .ly_pg{position:absolute;top:312px;right:0;left:0;max-width:1196px;height:104px;margin:0 auto;text-align:center}
+.sign .ly_sign .ly_pg .pg_box{display:inline-block;*display:inline;overflow:hidden;position:relative;width:100%;max-width:1196px;min-width:500px;height:100%;zoom:1}
+.sign .ly_sign .ly_pg .pg_box a{display:block;position:absolute;top:50%;width:104px;height:104px;margin-top:-52px;background:url(http://hangeul.naver.com/img/blank.png) repeat;filter:alpha(opacity=50);opacity:.5}
+.sign .ly_sign .ly_pg .pg_box a:hover{filter:alpha(opacity=100);opacity:1}
+.sign .ly_sign .ly_pg .pg_box a > span{display:block;overflow:hidden;width:31px;height:50px;margin:27px auto 0;background:url(http://hangeul.naver.com/img/sp_sign_lst2.png) no-repeat -31px -334px;color:transparent;text-indent:-1000px}
+.sign .ly_sign .ly_pg .pg_box .prev{left:0}
+.sign .ly_sign .ly_pg .pg_box .next{right:0}
+.sign .ly_sign .ly_pg .pg_box .prev > span{background-position:0 0}
+.sign .ly_sign .ly_pg .pg_box .next > span{background-position:0 -70px}
+.sign .ly_sign .ly_cls{position:absolute;top:0;left:50%;width:1196px;height:75px;margin-left:-598px}
+.sign .ly_sign .cls{position:absolute;top:0;right:0;width:75px;height:75px;background-color:#161616}
+.sign .ly_sign .cls span{display:block;overflow:hidden;width:23px;height:23px;margin:26px auto 0;background:url(http://hangeul.naver.com/img/sp_sign_lst2.png) no-repeat 0 -289px;color:transparent;text-indent:-1000px}
+.sign .btn_top{z-index:10}
+
+/* 한글 간판 뷰 */
+.sign_view #container,.sign_view #content,.sign_view #wrap{min-height:640px}
+.sign_view #header{position:absolute;top:-1px;left:0;height:1px}
+.sign_view #header h1{overflow:hidden;position:absolute;top:-100px;left:-100px;height:1px;color:transparent;text-indent:-1000px}
+.sign_view img{vertical-align:top}
+.sign_view .btn_before{position:absolute;top:0;right:0;z-index:20;width:90px;height:90px;background-color:#181818;color:#fff;text-align:center}
+.sign_view .btn_before span{display:block;overflow:hidden;width:23px;height:23px;margin:33px auto 0;background:url(http://hangeul.naver.com/img/sp_sign_lst2.png) no-repeat 0 -289px;color:transparent;text-indent:-1000px}
+.sign_view .sign_box{overflow:hidden;position:absolute;top:0;right:0;left:0;bottom:127px}
+.sign_view .sign_box .sign_view_pg{overflow:hidden;position:absolute;top:0;left:0;width:100%;height:100%}
+.sign_view .sign_box ul{overflow:hidden;position:relative;height:100%}
+.sign_view .sign_box li{float:left;position:relative;height:100%}
+.sign_view .sign_box .view_pg{position:relative;width:100%;min-width:1250px;height:100%}
+.sign_view .sign_box .view_pg .pg{position:absolute;z-index:0;width:100%;height:100%}
+.sign_view .sign_box .txt_box{position:absolute;top:15%;left:8%;z-index:0;width:473px}
+.sign_view .sign_box .txt_box.fst{bottom:95px}
+.sign_view .sign_txt{float:left;position:relative;z-index:10;width:62%;height:100%}
+.sign_view .sign_tit h2{position:relative;z-index:10;font-size:15px;font-weight:normal;color:#181818}
+.sign_view .sign_tit h2 span{display:block}
+.sign_view .sign_tit h2 em{display:inline-block;*display:inline;height:47px;background-color:#181818;font-family:NanumMyeongjo;font-size:43px;line-height:44px;color:#fff;zoom:1}
+.sign_view .sign_tit p{position:relative;z-index:10;padding:9px 0;font-family:NanumMyeongjo;font-size:21px;color:#181818}
+.sign_view .store_tit{overflow:hidden;padding-bottom:13px;font-size:11px;color:#999}
+.sign_view .store_tit dt{float:left;margin-right:6px;padding-left:6px;background:url(http://hangeul.naver.com/img/sp_signview_list.png) no-repeat -30px -184px}
+.sign_view .store_tit dt:first-child{padding:0;background:none}
+.sign_view .store_tit dd{float:left;margin-right:6px}
+.sign_view .store_info{overflow:auto;position:absolute;top:198px;right:0;left:0;bottom:0;width:463px;min-height:208px;padding:0 10px 20px 0;color:#181818}
+.sign_view .store_info strong{display:block;padding:18px 0 6px;font-family:NanumBarunGothicBold;font-size:13px;font-weight:normal}
+.sign_view .store_info strong:first-child{padding-top:0}
+.sign_view .store_info p{font-size:13px;line-height:28px}
+.sign_view .lk_site{padding-right:13px;border-bottom:1px solid #00d319;background:url(http://hangeul.naver.com/img/sp_signview_list.png) no-repeat 100% -247px;font-size:11px;color:#00d319}
+.sign_view .sign_box .sign_img_box{float:right;position:relative;width:47%;height:100%}
+.sign_view .sign_new{overflow:hidden;position:absolute;top:0;right:0;left:158px;bottom:0;text-align:right}
+.sign_view .sign_design{position:absolute;left:-65px;bottom:108px;z-index:10;line-height:23px}
+.sign_view .sign_design .bf_store{margin-bottom:24px}
+.sign_view .sign_design strong{display:block;width:188px;font-family:NanumBarunGothicBold;font-size:11px;font-weight:normal;color:#999}
+.sign_view .sign_design p{width:188px;min-height:192px;font-size:11px;color:#999}
+.sign_view .pg_tit{overflow:hidden;position:absolute;top:-100px;left:-100px;width:1px;height:1px;color:transparent;text-indent:-1000px}
+.sign_view .sign_box_nv{position:absolute;left:0;bottom:33px;z-index:20;width:100%;height:14px;text-align:center}
+.sign_view .sign_box_nv ol{display:inline-block;*display:inline;margin:0 auto;zoom:1}
+.sign_view .sign_box_nv ol li{display:block;overflow:hidden;float:left;width:14px;height:14px;margin:0 8px;background:url(http://hangeul.naver.com/img/sp_signview_list.png) no-repeat 0 -160px}
+.sign_view .sign_box_nv ol li > a{display:block;overflow:hidden;color:transparent;text-indent:-1000px}
+.sign_view .sign_box_nv ol .on{background-position:0 -204px}
+.sign_view .view_pg_nv{overflow:hidden;z-index:100;width:100%;height:100%}
+.sign_view .view_pg_nv .prev,.sign_view .view_pg_nv .next{float:left;position:relative;z-index:10;width:120px;height:100%;background:url(http://hangeul.naver.com/img/blank.png) repeat}
+.sign_view .view_pg_nv .next{float:right}
+.sign_view .view_pg_nv .prev a,.sign_view .view_pg_nv .next a{display:block;position:absolute;top:50%;z-index:10;width:104px;height:104px;margin-top:-52px}
+.sign_view .view_pg_nv .prev a{left:6px}
+.sign_view .view_pg_nv .next a{right:6px}
+.sign_view .view_pg_nv .prev span,.sign_view .view_pg_nv .next span{display:block;overflow:hidden;position:relative;top:26px;width:33px;height:52px;margin:0 auto;background:url(http://hangeul.naver.com/img/sp_sign_lst2.png) no-repeat -42px -566px;color:transparent;text-indent:-1000px;filter:alpha(opacity=50);opacity:.5}
+.sign_view .view_pg_nv .prev span{background-position:0 -432px}
+.sign_view .view_pg_nv .next span{background-position:0 -514px}
+.sign_view .view_pg_nv .prev:hover span,.sign_view .view_pg_nv .next:hover span{filter:alpha(opacity=100);opacity:1}
+.sign_view .navigation{overflow:hidden;position:absolute;right:0;left:0;bottom:0;z-index:20;height:127px;padding:0 115px;background-color:#2c2c2c}
+.sign_view .navigation .carousel{position:relative;min-width:765px;max-width:1683px;margin:0 auto}
+.sign_view .navigation .prev,.sign_view .navigation .next{display:block;overflow:hidden;position:absolute;top:12px;z-index:10;width:116px;height:104px;background-color:#2c2c2c}
+.sign_view .navigation .prev{left:0;padding-left:6px}
+.sign_view .navigation .next{right:0;padding-right:6px}
+.sign_view .navigation .prev span,.sign_view .navigation .next span{display:block;overflow:hidden;position:relative;top:39px;width:16px;height:27px;margin:0 auto;background:url(http://hangeul.naver.com/img/sp_signview_list.png) no-repeat -31px -314px;color:transparent;text-indent:-1000px;filter:alpha(opacity=40);opacity:.4}
+.sign_view .navigation .prev span{background-position:0 0}
+.sign_view .navigation .next span{background-position:0 -80px}
+.sign_view .navigation .prev:hover span,.sign_view .navigation .next:hover span{filter:alpha(opacity=100);opacity:1}
+.sign_view .navigation > div{overflow:hidden}
+.sign_view .navigation ul{overflow:hidden;position:relative;height:102px;padding:13px 0 12px;white-space:nowrap}
+.sign_view .navigation li{float:left;position:relative;margin:0 13px}
+.sign_view .navigation li a{display:block;background:url(http://hangeul.naver.com/img/blank.png) repeat}
+.sign_view .navigation li a img{display:block}
+.sign_view .navigation li a .color{display:none}
+.sign_view .navigation li.on a .mask,.sign_view .navigation li a:hover .mask{display:block;position:absolute;top:0;left:0;z-index:10;width:119px;height:71px;border:4px solid #41e7ae}
+.sign_view .navigation li.on a .gray,.sign_view .navigation li a:hover .gray{display:none}
+.sign_view .navigation li.on a .color,.sign_view .navigation li a:hover .color{display:block}
+.sign_view .navigation li .txt{display:block;overflow:hidden;width:127px;margin-top:9px;font-size:13px;color:#fff;text-align:center;white-space:nowrap;text-overflow:ellipsis}
+.sign_view .navigation li .txt > span{padding-right:4px;color:#999}
+
+/* 한글 공모전 2015 */
+.contest_2015 .gnb_bg{background-color:#ffd2fa}
+.contest_2015 #container{height:auto;background-color:#ffd2fa}
+.contest_2015 img{vertical-align:top}
+
+.contest_2015 .hg_contest{padding:90px 0 135px;background:url(http://hangeul.naver.com/img/bg_contest.jpg) no-repeat 50% 50px;text-align:center}
+.contest_2015 .play_txt_box{overflow:hidden;position:relative;*position:static;z-index:10;width:1100px;margin:0 auto;padding:60px 0;letter-spacing:-0.7px;*letter-spacing:-1px}
+.contest_2015 .big_tx{float:left;width:740px;line-height:80px;font-weight:normal;text-align:left;letter-spacing:-2px}
+.contest_2015 .big_tx strong{position:relative;margin-left:-2px;margin-bottom:0px;padding:0 105px 5px 0;background-color:#181818;color:#fff;letter-spacing:-1px;font-family: 'NanumBarunGothicBold';}
+.contest_2015 .big_tx strong i{position:absolute;top:-15px;right:19px;font-size:35px;letter-spacing:-2px;font-style:normal}
+.contest_2015 .cont_txt{overflow:hidden;padding-top:1px;text-align:left}
+.contest_2015 .tx_type{margin-bottom:6px;font-size:15px}
+
+.contest_2015 .play_img_box.grand h4{margin:11px 0 15px 5px;font-size:35px;text-align:left;font-family: 'NanumBareunGothicLight'}
+.contest_2015 .play_img_box.grand a{width:1100px;height:360px;margin:0 auto 4px;border:1px solid #787878}
+.contest_2015 .play_img_box.grand .txt_box{width:1100px;height:86px;padding:0;margin:0;background-color:#000;line-height:1;color:#fff}
+.contest_2015 .play_img_box.grand .thmb_box{width:1100px;height:275px;*z-index:10}
+.contest_2015 .play_img_box{width:1110px;margin:0 auto}
+.contest_2015 .play_img_box h4{margin:47px 0 9px 5px;font-size:35px;text-align:left;font-weight:normal;font-family: 'NanumBareunGothicLight'}
+.contest_2015 .play_img_box ul{overflow:hidden}
+.contest_2015 .play_img_box li{float:left;position:relative;margin:5px;border:1px solid #787878}
+.contest_2015 .play_img_box a{display:block;overflow:hidden;width:358px;height:358px;background:url(http://hangeul.naver.com/img/blank.png) repeat}
+.contest_2015 .play_img_box .thmb_box{display:block;overflow:hidden;position:relative;*z-index:-1;width:358px;height:274px}
+.contest_2015 .play_img_box .thmb_box img{position:absolute;top:0;left:0}
+.contest_2015 .play_img_box .txt_box{display:block;overflow:hidden;width:358px;height:84px;*margin-top:-4px;background-color:#000;line-height:1;color:#fff;text-align:left;cursor:pointer}
+.contest_2015 .play_img_box .txt_box h5{margin:20px 0 8px 29px;font-size:23px}
+.contest_2015 .play_img_box .txt_box p{margin-left:29px;font-size:15px;font-family:'NanumBareunGothicLight'}
+.contest_2015 .gray{z-index:10}
+.contest_2015 .color{z-index:0}
+.contest_2015 a:hover .gray{z-index:0}
+.contest_2015 a:hover .color{z-index:10}
+.contest_2015 .play_img_box a:hover img{-webkit-animation:play_img_box .5s ease-in-out;-webkit-animation-fill-mode:forwards;animation:play_img_box .5s ease-in-out;animation-fill-mode:forwards}
+.contest_2015 .play_img_box a:hover .txt_box .txt{background-position:100% -132px;font-family:NanumBarunGothicBold;color:#181818}
+
+/* 한글공모전 view */
+.contest_view #container{height:auto}
+.contest_view #content{height:auto}
+.contest_view .gnb_bg{opacity:0;filter:alpha(opacity=0)}
+.contest_view .hg_contest{padding:126px 0 135px;background:#ffd2fa url(http://hangeul.naver.com/img/bg_contest.jpg) no-repeat 50% -37px;text-align:center}
+
+.contest_view .view_header{position:relative;width:1100px;margin:0 auto;text-align:left}
+.contest_view .view_header_tit{display:block;font-size:40px;font-weight:normal;font-family:'NanumBareunGothicLight'}
+.contest_view .view_header .big_tx{display:inline-block;*display:inline;position:relative;margin-left:-2px;margin:8px 0 0;padding:6px 20px 13px 4px;background-color:#181818;color:#fff;line-height:1;font-weight:normal;*zoom:1}
+
+.contest_view .view_header .cont_txt{position:absolute;bottom:0;right:0;text-align:right}
+.contest_view .view_header .cont_txt p{font-size:23px;text-align:right}
+.contest_view .view_header .cont_txt .tx_type{margin-bottom:8px;font-family:'NanumBareunGothicLight'}
+.contest_view .view_header .cont_txt .tx_type2{color:#000}
+
+.contest_view .view_con{overflow:auto;width:1100px;margin:100px auto 0;}
+.contest_view .view_con_lft{float:left;text-align:left}
+.contest_view .view_con_rgt{float:right;width:720px}
+.contest_view .view_con_lft h5{margin-bottom:20px;font-size:18px;line-height:1;color:#fa5abe;font-weight:normal}
+.contest_view .view_con_lft h6{margin-bottom:14px;font-size:14px;line-height:1;color:#000}
+.contest_view .view_con_lft .up{margin-top:-37px}
+.contest_view .view_con_lft .in,
+.contest_view .view_con_lft p{margin:-7px 0 43px 0;font-size:14px;line-height:25px;color:#000;font-family:'NanumBareunGothicLight'}
+.contest_view .view_con_lft dt{float:left;width:50px}
+.contest_view .view_con_lft dd{margin-left:50px}
+.contest_view .view_con_rgt img{margin-bottom:16px}

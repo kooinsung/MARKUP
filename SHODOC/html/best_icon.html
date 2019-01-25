@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, target-densityDpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<title>shodoc</title>
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/shodoc.v1.css">
+	<script src="../js/lib/jquery-2.0.2.min.js"></script>
+	<script src="../js/lib/jquery.plugin.js"></script>
+	<script src="../js/shodoc.v1.js"></script>
+</head>
+<body>
+
+<!-- 좌측 메뉴 -->
+<div class="sideWrap">
+	<div class="sideIn">
+		<div class="sideTop">
+			<div class="sideTopIn">
+				<h2><a href="#">shodoc</a></h2>
+				<ul>
+					<li><a href="" class="icon logout">로그아웃</a></li>
+					<li><a href="" class="icon esta">설정</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 1뎁스 -->
+		<div class="depth1">
+			<ul>
+				<li><a href="" data-cate="sub1" class="depthCate1">패션의류</a></li>
+				<li><a href="" data-cate="sub2" class="depthCate2">패션잡화</a></li>
+				<li><a href="" data-cate="sub3" class="depthCate3">화장품·미용</a></li>
+				<li><a href="" data-cate="sub4" class="depthCate4">출산·육아</a></li>
+				<li><a href="" data-cate="sub5" class="depthCate5">식품</a></li>
+				<li><a href="" data-cate="sub6" class="depthCate6">주방·생활용품</a></li>
+				<li><a href="" data-cate="sub7" class="depthCate7">가구·인테리어</a></li>
+				<li><a href="" data-cate="sub8" class="depthCate8">디지털·가전</a></li>
+				<li><a href="" data-cate="sub9" class="depthCate9">스포츠·레저용품</a></li>
+				<li><a href="" data-cate="sub10" class="depthCate10">건강·문구·취미</a></li>
+				<li><a href="" data-cate="sub11" class="depthCate11">여행·문화·지역</a></li>
+			</ul>
+		</div>
+		<!-- //1뎁스 -->
+
+		<!-- 2뎁스 -->
+		<div class="depth2">
+			<div class="depth2In">
+				<div class="sub sub1" id="sub1">
+					<div class="depth2Top"><h3 class="subDepth1">패션의류</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+							<li><a href="">패션의류</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub2" id="sub2">
+					<div class="depth2Top"><h3 class="subDepth2">패션잡화</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+							<li><a href="">패션잡화</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub3" id="sub3">
+					<div class="depth2Top"><h3 class="subDepth3">화장품·미용</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+							<li><a href="">화장품·미용</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub4" id="sub4">
+					<div class="depth2Top"><h3 class="subDepth4">출산·육아</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+							<li><a href="">출산·육아</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub5" id="sub5">
+					<div class="depth2Top"><h3 class="subDepth5">식품</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+							<li><a href="">식품</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub6" id="sub6">
+					<div class="depth2Top"><h3 class="subDepth6">주방·생활용품</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+							<li><a href="">주방·생활용품</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub7" id="sub7">
+					<div class="depth2Top"><h3 class="subDepth7">가구·인테리어</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+							<li><a href="">가구·인테리어</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub8" id="sub8">
+					<div class="depth2Top"><h3 class="subDepth8">디지털·가전</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+							<li><a href="">디지털·가전</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub9" id="sub9">
+					<div class="depth2Top"><h3 class="subDepth9">스포츠·레저용품</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+							<li><a href="">스포츠·레저용품</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub10" id="sub10">
+					<div class="depth2Top"><h3 class="subDepth10">건강·문구·취미</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+							<li><a href="">건강·문구·취미</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sub sub11" id="sub11">
+					<div class="depth2Top"><h3 class="subDepth11">여행·문화·지역</h3></div>
+					<div class="depth2List">
+						<ul>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+							<li><a href="">여행·문화·지역</a></li>
+						</ul>
+					</div>
+				</div>
+				<button type="button" class="btn close" id="btnSubClose">닫기</button>
+			</div>
+			<div class="depth2Dim"></div>
+		</div>
+		<!-- //2뎁스 -->
+	</div>
+</div>
+<!-- //좌측 메뉴 -->
+
+<div id="mWrap">
+	<div class="headerWrap">
+		<!-- header -->
+		<section class="headerMain">
+			<header>
+				<h1><a href="">shodoc</a></h1>
+				<div class="search">
+					<input type="search">
+					<input type="button" alt="검색" class="icon">
+				</div>
+				<div class="like">
+					<a href="">
+						<span class="icon heart">찜한목록</span>
+						<span class="number">88+</span>
+					</a>
+				</div>
+				<div class="sideMenu" >
+					<a href="" class="icon side" id="btnMenu">메뉴</a>
+				</div>
+			</header>
+		</section>
+		<!-- //header -->
+
+		<!-- gnb -->
+		<section class="nav">
+			<div class="navIn">
+				<ul>
+					<li class="active"><a href="javascript:;" data-slide="0">쇼닥맞춤</a></li>
+					<li><a href="javascript:;" data-slide="1">쇼핑팁</a></li>
+					<li><a href="javascript:;" data-slide="2">추천핫딜</a></li>
+					<li><a href="javascript:;" data-slide="3">단골마트</a></li>
+					<li><a href="javascript:;" data-slide="4">백화점관</a></li>
+					<li><a href="javascript:;" data-slide="5">Fresh start</a></li>
+					<li><a href="javascript:;" data-slide="6">기획전/이벤트</a></li>
+				</ul>
+			</div>
+		</section>
+		<!-- //gnb -->
+	</div>
+
+	<!-- container -->
+	<section class="container">
+		<div class="swiper-container swiper-content">
+			<div class="swiper-wrapper">
+
+
+				<!-- 쇼핑팁 -->
+				<div class="swiper-slide">
+					<div class="contentIn contsTips">
+						<div class="todayHot">
+							<p class="tit">
+								<img src="../img/icon_titHot.png" alt="오늘의 hot 한 쇼핑팁은?"/>
+								<span class="todayHotTotal"><em class="current">1</em>/<em class="total"></em></span>
+							</p>
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<!-- 리스트 -->
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/252x252" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj_2"><strong>88</strong><span>%</span> G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+									<!-- //리스트 -->
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/292x292" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/292x292" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/292x292" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/292x292" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/292x292" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/292x292" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="todayHotIn">
+											<a href="#">
+												<div class="imgArea">
+													<span class="labels hotdeal" style="display:none;"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/292x292" alt="섬네일" class="thumb">
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="slider_pagination" style="display:none;"></div>
+							<script>
+							var todayHotSwiper = new Swiper('.todayHot .swiper-container', {
+								pagination:'.todayHot .slider_pagination',
+								paginationClickable: true,
+								slidesPerView:3,
+								centeredSlides: true,
+								initialSlide:0,
+								slidesPerView: 'auto',
+								loop: true
+							});
+							var totalSlides = $('.todayHot .slider_pagination span').length;
+							$('.todayHotTotal .total').html(totalSlides);
+							todayHotSwiper.on('slideChangeEnd', function(instance) {
+										var currentCount = (instance.activeIndex) % (totalSlides) + 1;
+										if(currentCount === 0) {
+												$('.todayHotTotal .current').html(totalSlides);
+										} else {
+												$('.todayHotTotal .current').html(currentCount);
+										}
+								});
+							</script>
+						</div>
+						
+						<div class="tipRow">
+							<div class="tipTit face1">
+								<a href=""><p><span>‘23-27세’</span> 심쿵하는 성장남</p></a>
+							</div>
+							<div class="goodsList goodsList2">
+								<ul>
+									<!-- 리스트 -->
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber blue"><em>1</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  ><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="subj1">G마켓 오늘만특가</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price1">888,000원</p>
+												</div>
+											</div>
+										</a>
+										<div class="info">
+											<div class="discount">
+												<span class="wLabels free">무료배송</span>
+												<span class="wLabels couponSale">쿠폰할인</span>
+												<span class="wLabels cardSale">카드할인</span>
+											</div>
+											<div class="purchase">구매 888,888</div>
+										</div>
+										<button class="heart on">찜하기</button>
+										<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+									</li>
+									<!-- //리스트 -->
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber blue"><em>2</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style=";"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="compare">
+													<button>가격비교 88</button>
+												</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price1">최저 999,999,999원</p>
+													<p class="price_2">최고 999,999,999원</p>
+												</div>
+											</div>
+										</a>
+										<button class="heart">찜하기</button>
+									</li>
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber blue"><em>3</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="subj_2"><strong>88</strong><span>%</span> G마켓 오늘만특가</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price_2 line_through">888,000원</p>
+													<p class="price1">888,000원</p>
+												</div>
+											</div>
+										</a>
+										<div class="info">
+											<div class="discount">
+												<span class="wLabels free">무료배송</span>
+												<span class="wLabels couponSale">쿠폰할인</span>
+												<span class="wLabels cardSale">카드할인</span>
+											</div>
+											<div class="purchase">구매 888,888</div>
+										</div>
+										<button class="heart">찜하기</button>
+										<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+									</li>
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber blue"><em>4</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="subj_2"><strong>88</strong><span>%</span> G마켓 오늘만특가</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price_2 line_through">888,000원</p>
+													<p class="price1">888,000원</p>
+												</div>
+											</div>
+										</a>
+										<button class="heart">찜하기</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tipRow">
+							<div class="tipTit face1">
+								<a href=""><p><span>‘23-27세’</span> 심쿵하는 성장남</p></a>
+							</div>
+							<div class="goodsList goodsList2">
+								<ul>
+									<!-- 리스트 -->
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber black"><em>1</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  ><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="subj1">G마켓 오늘만특가</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price1">888,000원</p>
+												</div>
+											</div>
+										</a>
+										<div class="info">
+											<div class="discount">
+												<span class="wLabels free">무료배송</span>
+												<span class="wLabels couponSale">쿠폰할인</span>
+												<span class="wLabels cardSale">카드할인</span>
+											</div>
+											<div class="purchase">구매 888,888</div>
+										</div>
+										<button class="heart on">찜하기</button>
+										<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+									</li>
+									<!-- //리스트 -->
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber black"><em>2</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style=";"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="compare">
+													<button>가격비교 88</button>
+												</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price1">최저 999,999,999원</p>
+													<p class="price_2">최고 999,999,999원</p>
+												</div>
+											</div>
+										</a>
+										<button class="heart">찜하기</button>
+									</li>
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber black"><em>3</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="subj_2"><strong>88</strong><span>%</span> G마켓 오늘만특가</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price_2 line_through">888,000원</p>
+													<p class="price1">888,000원</p>
+												</div>
+											</div>
+										</a>
+										<div class="info">
+											<div class="discount">
+												<span class="wLabels free">무료배송</span>
+												<span class="wLabels couponSale">쿠폰할인</span>
+												<span class="wLabels cardSale">카드할인</span>
+											</div>
+											<div class="purchase">구매 888,888</div>
+										</div>
+										<button class="heart">찜하기</button>
+										<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+									</li>
+									<li>
+										<a href="#">
+											<div class="imgArea">
+												<span class="bestNumber black"><em>4</em></span>
+												<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+												<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+												<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+												<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+												<img src="http://placehold.it/196x196" alt="섬네일" class="thumb">
+											</div>
+											<div class="txtArea">
+												<p class="subj_2"><strong>88</strong><span>%</span> G마켓 오늘만특가</p>
+												<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+												<div class="priceWrap">
+													<p class="price_2 line_through">888,000원</p>
+													<p class="price1">888,000원</p>
+												</div>
+											</div>
+										</a>
+										<button class="heart">찜하기</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="tipRow">
+							<div class="tipTit face2">
+								<a href=""><p><span>‘23-27세’</span> 심쿵하는 성장녀</p></a>
+							</div>
+							<div class="goodsList goodsList3">
+								<ul>
+									<!-- 리스트 -->
+									<li>
+										<div class="in">
+											<a href="#">
+												<div class="imgArea">
+													<span class="bestNumber red"><em>1</em></span>
+													<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  ><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/252x252" alt="섬네일" class="thumb">
+													<img src="../img/img_default.png" alt="" class="default"/>
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart on">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+											<div class="info">
+												<div class="discount">
+													<span class="hLabels free">무료<br/>배송</span>
+													<span class="hLabels couponSale">쿠폰<br/>할인</span>
+													<span class="hLabels cardSale">카드<br/>할인</span>
+												</div>
+												<div class="purchase">구매<br/>888,888</div>
+											</div>
+										</div>
+									</li>
+									<!-- //리스트 -->
+									<li>
+										<div class="in">
+											<a href="#">
+												<div class="imgArea">
+													<span class="bestNumber red"><em>2</em></span>
+													<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style=";"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/252x252" alt="섬네일" class="thumb">
+													<img src="../img/img_default.png" alt="" class="default"/>
+												</div>
+												<div class="txtArea">
+													<p class="compare">
+														<button>가격비교 88</button>
+													</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">최저 999,999,999원</p>
+														<p class="price_2">최고 999,999,999원</p>
+													</div>
+													<button class="heart">찜하기</button>
+												</div>
+												<p class="detailView">상품상세보기</>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="in">
+											<a href="#">
+												<div class="imgArea">
+													<span class="bestNumber red"><em>3</em></span>
+													<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/252x252" alt="섬네일" class="thumb">
+													<img src="../img/img_default.png" alt="" class="default"/>
+												</div>
+												<div class="txtArea">
+													<p class="subj_2"><strong>88</strong><span>%</span> G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price_2 line_through">888,000원</p>
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+											</a>
+											<div class="info">
+												<div class="discount">
+													<span class="hLabels free">무료<br/>배송</span>
+													<span class="hLabels couponSale">쿠폰<br/>할인</span>
+													<span class="hLabels cardSale">카드<br/>할인</span>
+												</div>
+												<div class="purchase">구매<br/>888,888</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="in">
+											<a href="#">
+												<div class="imgArea">
+													<span class="bestNumber red"><em>4</em></span>
+													<span class="labels hotdeal"><img src="../img/icon_label1.png" alt="핫딜" /></span>
+													<span class="labels best" style="display:none;"><img src="../img/icon_label4.png" alt="best1" /></span>
+													<span class="labels open"  style="display:none;"><img src="../img/icon_label3.png" alt="오늘오픈" /></span>
+													<span class="labels close" style="display:none;"><img src="../img/icon_label2.png" alt="오늘마감"/></span>
+													<img src="http://placehold.it/252x252" alt="섬네일" class="thumb">
+													<img src="../img/img_default.png" alt="" class="default"/>
+												</div>
+												<div class="txtArea">
+													<p class="subj1">G마켓 오늘만특가</p>
+													<p class="goodsName">[한울무역] 넥밴드 블루투스 HSDHDFH HSADFH 레드 넥밴드 블루투스 HSDHDFH HSADFH 레드</p>
+													<div class="priceWrap">
+														<p class="price1">888,000원</p>
+													</div>
+													<button class="heart">찜하기</button>
+													<!-- <button class="heart on">찜하기</button> --><!-- 찜한상태일 경우 class="on" 추가 -->
+												</div>
+												<p class="detailView">상품상세보기</>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //쇼핑팁 -->
+
+			</div>
+		</div>
+	</section>
+	<!-- //container -->
+
+	<!-- fixed btns -->
+	<div class="btnFixed">
+		<ul>
+			<li class="btnTop"><a href="#"><img src="../img/btn_fl_top.png" alt=""></a></li>
+			<li class="btnUserSetting"><a href=""><img src="../img/floating_default.png" alt=""></a></li>
+			<li class="btnUserSetting" style="display:none;"><a href=""><img src="../img/floating_men.png" alt=""></a></li>
+			<li class="btnUserSetting" style="display:none;"><a href=""><img src="../img/floating_women.png" alt=""></a></li>
+			<li class="btnUserSetting" style="display:none;"><a href=""><strong>99</strong><img src="../img/floating_men-age.png" alt=""></a></li>
+			<li class="btnUserSetting" style="display:none;"><a href=""><strong>99</strong><img src="../img/floating_women-age.png" alt=""></a></li>
+		</ul>
+	</div>
+	<!-- //fixed btns -->
+
+	<!-- footer -->
+	<footer>
+		<div class="btnWrap">
+			<span><a href="">회원가입</a></span>
+			<span><a href="">로그인</a></span>
+			<span><a href="">앱설치</a></span>
+		</div>
+		<div class="provision">
+			<a href="">이용약관</a>
+			<a href="">개인정보취급방침</a>
+		</div>
+		<div class="txt1">쇼닥에서는 해당쇼핑몰이 제공하는 상품정보에 대해 책임을 지지않으며 주문, 결제, 배송, 환불 등 관련된 책임은 해당쇼핑몰에 있습니다.</div>
+		<div id="ftrBtn" class="operatorInfo">
+			<dl>
+				<dt><a href="#ftrInfo"><img src="../img/operator_info.png" alt="㈜케이티 사업자정보"></a></dt>
+				<dd>
+					<p id="ftrInfo" class="info">
+						대표이사: 황창규 <br>
+						주소: 경기도 성남시 분당구 불정로 90(정자동 206번지) <br>
+						사업자등록번호: 102-81-42945
+					</p>
+					<p class="copyright">Copyright ⓒ 2015 KT Corp. All Rights Reserved.</p>
+				</dd>
+			</dl>
+		</div>
+	</footer>
+	<!-- //footer -->
+
+</div>
+
+<script>
+	$(function(){
+
+		//menu click move
+		$('.nav ul > li > a').bind('click', function () {
+				$('.nav ul > li').removeClass('active');
+				$(this).parent().addClass('active');
+				contentSwiper.slideTo($(this).data('slide'));
+				return false;
+		});
+
+		//swipe
+		var contentSwiper = $('.swiper-content').swiper({
+			autoHeight: true,
+			onInit : function(){
+				//최초 페이지 로드시
+				console.log('init');
+			},
+			onSlideChangeStart: function(activeIndex){
+				//카테고리 이동시
+				console.log('move');
+				$('.nav ul > li').removeClass('active');
+				$('.nav ul > li').eq(contentSwiper.activeIndex).addClass('active');
+				
+				//menu move
+				moveMenu();
+			},
+			onSlideChangeEnd : function(contentSwiper) {
+				//카테고리 이동후 데이터 호출시
+				console.log(contentSwiper.activeIndex);
+
+			}
+		})
+
+		//쇼핑팁 활성화 확인용으로 추후 삭제
+		$('.nav ul > li').eq(1).find('a').click();
+
+		function moveMenu(){
+			var outer = $('.nav');
+			var inner = $('.nav ul > li');
+			var target = $('.nav ul > li.active');
+			var x = outer.width();
+			var y = target.outerWidth(true);
+			var z = target.index();
+			var r = (x - y) / 1.9;
+			var s = y * z;
+			var t = s - r; 
+			outer.animate({ scrollLeft: Math.max(0, t)  }, 'fast');
+		};
+
+		//resize
+		$(window).resize(function(){
+			moveMenu();
+		});
+
+
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta property='og:title' content='헤매지 말고 쇼핑은 쇼닥!'/>
+<meta property='og:image' content='https://shodoc-jingwan.c9users.io/contents/img_title.png'/>
+<meta property='og:site_name' content='ShoDoc'/>
+<meta property='og:url' content='https://shodoc-jingwan.c9users.io'/>
+<meta property='og:description' content='쇼닥은 나와 비슷한 사람들의 취향에 맞는 상품을 분석하여 추천해주는 쇼핑 서비스입니다.'/>  
+
+	<title>ShoDoc</title>
+	<link rel="stylesheet" type="text/css" href="common/css/common.css" />
+	<script type="text/javascript" src="common/js/jquery.min.js"></script>
+	<script type="text/javascript" src="common/js/jquery.plugin.js"></script>
+	<style>
+
+		@keyframes animationFrames1{
+			0% {
+				transform:  translate(0px,0px)  rotate(0deg) ;
+			}
+			50% {
+				transform:  translate(0px,-200px)  rotate(360deg) ;
+			}
+			100% {
+				transform:  translate(0px,0px)  rotate(0deg) ;
+			}
+		}
+
+		@keyframes animationFrames11{
+			0% {
+				transform:  translate(0px,0px)  rotate(0deg) ;
+			}
+			50% {
+				transform:  translate(0px,-200px)  rotate(-360deg) ;
+			}
+			100% {
+				transform:  translate(0px,0px)  rotate(0deg) ;
+			}
+		}
+
+
+		@keyframes animationFrames2{
+			0% {
+				transform:  translate(0px,0px)  rotate(0deg) ;
+			}
+			50% {
+				transform:  translate(0px,-200px)  rotate(-360deg) ;
+			}
+			100% {
+				transform:  translate(0px,0px)  rotate(0deg) ;
+			}
+
+		}
+
+
+		.bubble1, .bubble2, .bubble5 {
+			position:absolute;
+			z-index:0;
+			animation: animationFrames1 linear 30s;
+			animation-iteration-count: infinite;
+			transform-origin: 50% 50%;
+			-webkit-animation: animationFrames1 linear 30s;
+			-webkit-animation-iteration-count:infinite ;
+			-webkit-transform-origin: 50% 50%;
+			-moz-animation: animationFrames1 linear 30s;
+			-moz-animation-iteration-count:infinite ;
+			-moz-transform-origin: 50% 50%;
+			-o-animation: animationFrames1 linear 30s;
+			-o-animation-iteration-count:infinite ;
+			-o-transform-origin: 50% 50%;
+			-ms-animation: animationFrames1 linear 30s;
+			-ms-animation-iteration-count:infinite ;
+			-ms-transform-origin: 50% 50%;
+		}
+
+		.bubble3, .bubble4, .bubble6 {
+			position:absolute;
+			z-index:0;
+			animation: animationFrames11 linear 30s;
+			animation-iteration-count: infinite;
+			transform-origin: 50% 50%;
+			-webkit-animation: animationFrames11 linear 30s;
+			-webkit-animation-iteration-count:infinite ;
+			-webkit-transform-origin: 50% 50%;
+			-moz-animation: animationFrames11 linear 30s;
+			-moz-animation-iteration-count:infinite ;
+			-moz-transform-origin: 50% 50%;
+			-o-animation: animationFrames11 linear 30s;
+			-o-animation-iteration-count:infinite ;
+			-o-transform-origin: 50% 50%;
+			-ms-animation: animationFrames11 linear 30s;
+			-ms-animation-iteration-count:infinite ;
+			-ms-transform-origin: 50% 50%;
+		}
+		.bubbleDot {
+			position:absolute;
+			z-index:0;
+			animation: animationFrames2 linear 25s;
+			animation-iteration-count: infinite;
+			transform-origin: 50% 50%;
+			-webkit-animation: animationFrames2 linear 25s;
+			-webkit-animation-iteration-count:infinite ;
+			-webkit-transform-origin: 50% 50%;
+			-moz-animation: animationFrames2 linear 25s;
+			-moz-animation-iteration-count:infinite ;
+			-moz-transform-origin: 50% 50%;
+			-o-animation: animationFrames2 linear 25s;
+			-o-animation-iteration-count:infinite ;
+			-o-transform-origin: 50% 50%;
+			-ms-animation: animationFrames2 linear 25s;
+			-ms-animation-iteration-count:infinite ;
+			-ms-transform-origin: 50% 50%;
+		}
+
+		.bubbleLine {
+			position:absolute;
+			animation: animationFrames2 linear 25s;
+			animation-iteration-count: infinite;
+			transform-origin: 50% 50%;
+			-webkit-animation: animationFrames2 linear 25s;
+			-webkit-animation-iteration-count:infinite ;
+			-webkit-transform-origin: 50% 50%;
+			-moz-animation: animationFrames2 linear 25s;
+			-moz-animation-iteration-count:infinite ;
+			-moz-transform-origin: 50% 50%;
+			-o-animation: animationFrames2 linear 25s;
+			-o-animation-iteration-count:infinite ;
+			-o-transform-origin: 50% 50%;
+			-ms-animation: animationFrames2 linear 25s;
+			-ms-animation-iteration-count:infinite ;
+			-ms-transform-origin: 50% 50%;
+		}
+
+		.bubble1{opacity:.5;top:252px;left:13%;width:46px;height:55px;background:url(img/icon_bubble1.png) 0 0 no-repeat;}
+		.bubble2{opacity:.5;top:800px;left:15%;width:42px;height:48px;background:url(img/icon_bubble2.png) 0 0 no-repeat;}
+		.bubble3{opacity:.5;top:393px;left:30%;width:34px;height:38px;background:url(img/icon_bubble3.png) 0 0 no-repeat;}
+		.bubble4{opacity:.5;top:235px;right:15%;width:52px;height:49px;background:url(img/icon_bubble4.png) 0 0 no-repeat;}
+		.bubble5{opacity:.5;top:420px;right:25%;width:36px;height:45px;background:url(img/icon_bubble5.png) 0 0 no-repeat;}
+		.bubble6{opacity:.5;top:850px;right:8%;width:45px;height:52px;background:url(img/icon_bubble6.png) 0 0 no-repeat;}
+		.bubble7{opacity:.5;top:215px;left:20%;width:6px;height:6px;background:url(img/icon_bubbleDot1.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+		.bubble8{opacity:.5;top:387px;left:7%;width:6px;height:6px;background:url(img/icon_bubbleDot2.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+		.bubble9{opacity:.5;top:560px;left:50%;width:6px;height:6px;background:url(img/icon_bubbleDot3.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+		.bubble10{opacity:.5;top:770px;right:365px;width:6px;height:6px;background:url(img/icon_bubbleDot4.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+		.bubble11{opacity:.5;top:360px;right:145px;width:6px;height:6px;background:url(img/icon_bubbleDot5.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+		.bubble12{opacity:.5;top:800px;left:145px;width:17px;height:19px;background:url(img/icon_bubbleLine1.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+		.bubble13{opacity:.5;top:230px;right:20%;width:27px;height:29px;background:url(img/icon_bubbleLine2.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+		.bubble14{opacity:.5;top:800px;right:15%;width:25px;height:14px;background:url(img/icon_bubbleLine3.png) 0 0 no-repeat;-webkit-animation-delay:-12s;animation-delay:-12s}
+
+		.menu{position:fixed;bottom:0;z-index:1;width:100%;height:72px;text-align:center;background:url(img/bg_menu.png) bottom center no-repeat;background-size:100% 100%;-moz-transition:2.5s;-o-transition:2.5s;-webkit-transition:2.5s;-ms-transition:2.5s;transition:2.5s;}
+		.menu ul{font-size:0;min-width:1024px;}
+		.menu li{display:inline-block;width:20%;line-height:72px;display:inline-block;text-align:center;-moz-transition:0.1s;-o-transition:0.1s;-webkit-transition:0.1s;-ms-transition:0.1s;transition:0.1s;}
+		.menu li a{font-size:20px;color:#fff;font-weight:700;display:block;-moz-transition:0.1s;-o-transition:0.1s;-webkit-transition:0.1s;-ms-transition:0.1s;transition:0.1s;}
+
+		.menu.top{bottom:auto;top:0%;}
+		.menu.top ul{font-size:0;margin:0 64px;background:url(img/icon_line.png) 0 71px repeat-x;}
+		.menu.top li{display:inline-block;width:20%;line-height:72px;display:inline-block;text-align:center;}
+		.menu.top li a{font-size:20px;color:#2a465f;font-weight:700;}
+		.menu.top li.active{border-bottom:3px solid #072746;}
+		.menu.top li.active a{font-size:24px;}
+
+		#shodoc{min-width:1024px;}
+		.section.main .sectionIn{}
+		.section.main .conts{width:578px;margin:0 auto 0 auto;}
+		.section.main .conts .logo{margin-top:-23%;}
+		.section.main .conts .btnDowns{font-size:0;text-align:center;margin-top:80px;}
+		.section.main .conts .btnDowns a{vertical-align:top;font-size:0;display:inline-block;margin:0 10px;}
+		.section.main .conts .btnDowns a span{font-size:16px;display:block;color:#888888;font-weight:300;margin-top:10px;}
+
+		.section.service1{background-image: url(img/bg_service1.png);}
+		.section.service1 .sectionIn{width:1024px;height:100%;margin:0 auto;}
+		.section.service1 .conts{display: table;height:100%;vertical-align:middle;}
+		.section.service1 .conts .row{display: table-cell;vertical-align: middle;}
+		.section.service1 .motionBox{width:1024px;position:relative;z-index:100;}
+		.section.service1 .motionBox .phoneBox{margin:8% 0 0 90px;}
+		.section.service1 .motionBox .phoneBox .phone{display:inline-block;position:relative;opacity:0;transition: 1s;}
+		.section.service1 .motionBox .phoneBox .phone.active{opacity:1;}
+		.section.service1 .motionBox .phoneBox .phoneOuter{position:relative;z-index:2;}
+		.section.service1 .motionBox .phoneBox .view{position:absolute;top:64px;left:35px;z-index:3;width:280px;height:500px;}
+		.section.service1 .motionBox .phoneBox .viewIn{position:relative;width:280px;height:500px;overflow:hidden;}
+		.section.service1 .motionBox .phoneBox .loading{opacity:0;text-align:center;width:100%;height:430px;background:#dedede;margin:0 auto;position:absolute;top:72px;left:0;z-index:3;}
+		.section.service1 .motionBox .phoneBox .loading img{width:72px;margin-top:170px;}
+		.section.service1 .motionBox .phoneBox .default{position:absolute;top:74px;left:0;z-index:3;}
+		.section.service1 .motionBox .phoneBox .top{position:absolute;top:0;left:0;z-index:4;}
+		.section.service1 .motionBox .phoneBox .long{position:absolute;top:74px;left:280px;z-index:3;}
+		.section.service1 .motionBox .phoneBox .sex{position:absolute;top:190px;left:-150px;z-index:6;transform: scale(0.1);opacity:0;transition:0.5s;}
+		.section.service1 .motionBox .phoneBox .sex.active{transform: scale(1);opacity:1;}
+		.section.service1 .motionBox .phoneBox .age{position:absolute;top:400px;right:-110px;z-index:6;transform: scale(0.1);opacity:0;transition:0.5s;}
+		.section.service1 .motionBox .phoneBox .age.active{transform: scale(1);opacity:1;}
+		.section.service1 .motionBox .phoneBox .area{position:absolute;top:120px;right:-100px;z-index:1;transform: scale(0.1);opacity:0;transition:0.5s;}
+		.section.service1 .motionBox .phoneBox .area.active{transform: scale(1);opacity:1;}
+		.section.service1 .motionBox .copy{position:absolute;right:0;top:50px;}
+		.section.service1 .motionBox .copy .c1{font-size:24px;color:#2f6266;display:block;width:120px;text-align:center;border-top:2px solid #60898d;border-bottom:2px solid #60898d;position:relative;top:20px;left:60px;padding:5px 0;opacity:0;}
+		.section.service1 .motionBox .copy .c2{display:block;font-size:160px;color:#2f6266;font-weight:500;display:block;position:relative;left:50px;opacity:0;}
+		.section.service1 .motionBox .copy .c3{font-size:32px;color:#2f6266;font-weight:500;margin-bottom:15px;position:relative;left:50px;opacity:0;line-height:40px;line-height:40px;}
+		.section.service1 .motionBox .copy .c4{font-size:24px;color:#2f6266;position:relative;left:50px;opacity:0;}
+		.section.service1 .motionBox .copy .c4 strong{font-weight:500;}
+
+		.section.service2{background-image: url(img/bg_service2.png);}
+		.section.service2 .sectionIn{width:1024px;height:100%;margin:0 auto;}
+		.section.service2 .conts{display: table;height:100%;vertical-align:middle;}
+		.section.service2 .conts .row{display: table-cell;vertical-align: middle;}
+		.section.service2 .motionBox{width:1024px;position:relative;z-index:100;}
+		.section.service2 .motionBox .phoneBox{text-align:right;margin:8% 90px 0 0;}
+		.section.service2 .motionBox .phoneBox .phone{display:inline-block;position:relative;opacity:0;transition: 1s;}
+		.section.service2 .motionBox .phoneBox .phone.active{opacity:1;}
+		.section.service2 .motionBox .phoneBox .phoneOuter{position:relative;z-index:2;}
+		.section.service2 .motionBox .phoneBox .view{position:absolute;top:64px;left:35px;z-index:3;width:280px;height:500px;}
+		.section.service2 .motionBox .phoneBox .viewIn{position:relative;width:280px;height:500px;overflow:hidden;}
+		.section.service2 .motionBox .phoneBox .top{position:absolute;top:0;left:0;z-index:4;}
+		.section.service2 .motionBox .phoneBox .long{position:absolute;top:74px;left:-3px;z-index:3;}
+		.section.service2 .motionBox .phoneBox .gift1{position:absolute;top:370px;left:-175px;z-index:6;opacity:0;transition:1.3s;}
+		.section.service2 .motionBox .phoneBox .gift1.active{opacity:1;top:470px;}
+		.section.service2 .motionBox .phoneBox .gift2{position:absolute;top:165px;right:-95px;z-index:2;opacity:0;transition:1.3s;}
+		.section.service2 .motionBox .phoneBox .gift2.active{opacity:1;top:265px;}
+		.section.service2 .motionBox .phoneBox .gift3{position:absolute;top:340px;right:-120px;z-index:1;opacity:0;transition:1.3s;}
+		.section.service2 .motionBox .phoneBox .gift3.active{opacity:1;top:400px;}
+		.section.service2 .motionBox .phoneBox .flower{position:absolute;top:255px;left:-135px;z-index:1;opacity:0;transition:1.3s;}
+		.section.service2 .motionBox .phoneBox .flower.active{opacity:1;top:355px;}
+		.section.service2 .motionBox .copy{position:absolute;left:0;top:50px;}
+		.section.service2 .motionBox .copy .c1{font-size:24px;color:#1e3f64;display:block;width:120px;text-align:center;border-top:2px solid #7890a7;border-bottom:2px solid #7890a7;position:relative;top:20px;left:-40px;padding:5px 0;opacity:0;}
+		.section.service2 .motionBox .copy .c2{display:block;font-size:160px;color:#1e3f64;font-weight:500;display:block;position:relative;left:-50px;opacity:0;}
+		.section.service2 .motionBox .copy .c3{font-size:32px;color:#1e3f64;font-weight:500;margin-bottom:15px;position:relative;left:-50px;opacity:0;line-height:40px;}
+		.section.service2 .motionBox .copy .c4{font-size:24px;color:#1e3f64;position:relative;left:-50px;opacity:0;}
+		.section.service2 .motionBox .copy .c4 strong{font-weight:500;}
+
+		.section.service3{background-image: url(img/bg_service3.png);}
+		.section.service3 .sectionIn{width:1024px;height:100%;margin:0 auto;}
+		.section.service3 .conts{display: table;height:100%;vertical-align:middle;}
+		.section.service3 .conts .row{display: table-cell;vertical-align: middle;}
+		.section.service3 .motionBox{width:1024px;position:relative;z-index:100;}
+		.section.service3 .motionBox .phoneBox{margin:8% 0 0 90px;}
+		.section.service3 .motionBox .phoneBox .phone{display:inline-block;position:relative;opacity:0;transition: 1s;}
+		.section.service3 .motionBox .phoneBox .phone.active{opacity:1;}
+		.section.service3 .motionBox .phoneBox .phoneOuter{position:relative;z-index:2;}
+		.section.service3 .motionBox .phoneBox .view{position:absolute;top:64px;left:35px;z-index:3;width:280px;height:500px;}
+		.section.service3 .motionBox .phoneBox .viewIn{position:relative;width:280px;height:500px;overflow:hidden;}
+		.section.service3 .motionBox .phoneBox .top{position:absolute;top:0;left:0;z-index:4;}
+		.section.service3 .motionBox .phoneBox .long{position:absolute;top:74px;left:0;z-index:3;}
+		.section.service3 .motionBox .phoneBox .per{position:absolute;top:420px;left:-99px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service3 .motionBox .phoneBox .per.active{transform: scale(1);opacity:1;}
+		.section.service3 .motionBox .phoneBox .per.active.end{top:250px;left:40px;transform: scale(0.1);opacity:0;}
+		.section.service3 .motionBox .phoneBox .img1{position:absolute;top:50px;left:-170px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service3 .motionBox .phoneBox .img1.active{transform: scale(1);opacity:1;}
+		.section.service3 .motionBox .phoneBox .img1.active.end{top:290px;left:130px;transform: scale(0.1);opacity:0;}
+		.section.service3 .motionBox .phoneBox .img2{position:absolute;top:115px;right:-120px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service3 .motionBox .phoneBox .img2.active{transform: scale(1);opacity:1;}
+		.section.service3 .motionBox .phoneBox .img2.active.end{top:280px;left:108px;transform: scale(0.1);opacity:0;}
+		.section.service3 .motionBox .phoneBox .img3{position:absolute;top:350px;right:-90px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service3 .motionBox .phoneBox .img3.active{transform: scale(1);opacity:1;}
+		.section.service3 .motionBox .phoneBox .img3.active.end{top:270px;right:80px;transform: scale(0.1);opacity:0;}
+		.section.service3 .motionBox .phoneBox .img4{position:absolute;top:160px;left:-110px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service3 .motionBox .phoneBox .img4.active{transform: scale(1);opacity:1;}
+		.section.service3 .motionBox .phoneBox .img4.active.end{top:240px;left:75px;transform: scale(0.1);opacity:0;}
+		.section.service3 .motionBox .copy{position:absolute;right:0;top:50px;}
+		.section.service3 .motionBox .copy .c1{font-size:24px;color:#002447;display:block;width:120px;text-align:center;border-top:2px solid #9eb0c4;border-bottom:2px solid #9eb0c4;position:relative;top:20px;left:60px;padding:5px 0;opacity:0;}
+		.section.service3 .motionBox .copy .c2{display:block;font-size:160px;color:#002447;font-weight:500;display:block;position:relative;left:50px;opacity:0;}
+		.section.service3 .motionBox .copy .c3{font-size:32px;color:#002447;font-weight:500;margin-bottom:15px;position:relative;left:50px;opacity:0;line-height:40px;line-height:40px;}
+		.section.service3 .motionBox .copy .c4{font-size:24px;color:#002447;position:relative;left:50px;opacity:0;}
+		.section.service3 .motionBox .copy .c4 strong{font-weight:500;}
+
+		.section.service4{background-image: url(img/bg_service4.png);}
+		.section.service4 .sectionIn{width:1024px;height:100%;margin:0 auto;}
+		.section.service4 .conts{display: table;height:100%;vertical-align:middle;}
+		.section.service4 .conts .row{display: table-cell;vertical-align: middle;}
+		.section.service4 .motionBox{width:1024px;position:relative;z-index:100;}
+		.section.service4 .motionBox .phoneBox{text-align:right;margin:8% 90px 0 0;}
+		.section.service4 .motionBox .phoneBox .phone{display:inline-block;position:relative;opacity:0;transition: 1s;}
+		.section.service4 .motionBox .phoneBox .phone.active{opacity:1;}
+		.section.service4 .motionBox .phoneBox .phoneOuter{position:relative;z-index:2;}
+		.section.service4 .motionBox .phoneBox .view{position:absolute;top:64px;left:35px;z-index:3;width:280px;height:500px;}
+		.section.service4 .motionBox .phoneBox .viewIn{position:relative;width:280px;height:500px;overflow:hidden;}
+		.section.service4 .motionBox .phoneBox .default{position:absolute;top:0;left:0;z-index:3;}
+		.section.service4 .motionBox .phoneBox .top{position:absolute;top:0;left:0;z-index:6;opacity:0;}
+		.section.service4 .motionBox .phoneBox .long{position:absolute;top:38px;left:280px;z-index:3;}
+		.section.service4 .motionBox .phoneBox .keyword1{position:absolute;top:100px;left:-140px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service4 .motionBox .phoneBox .keyword1.active{transform: scale(1);opacity:1;}
+		.section.service4 .motionBox .phoneBox .keyword1.active.end{top:220px;left:105px;transform: scale(0.1);opacity:0;}
+		.section.service4 .motionBox .phoneBox .keyword2{position:absolute;top:210px;left:-20px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service4 .motionBox .phoneBox .keyword2.active{transform: scale(1);opacity:1;}
+		.section.service4 .motionBox .phoneBox .keyword2.active.end{top:216px;left:112px;transform: scale(0.1);opacity:0;}
+		.section.service4 .motionBox .phoneBox .keyword3{position:absolute;top:340px;left:-100px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service4 .motionBox .phoneBox .keyword3.active{transform: scale(1);opacity:1;}
+		.section.service4 .motionBox .phoneBox .keyword3.active.end{top:220px;left:105px;transform: scale(0.1);opacity:0;}
+		.section.service4 .motionBox .phoneBox .keyword4{position:absolute;top:80px;right:-50px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service4 .motionBox .phoneBox .keyword4.active{transform: scale(1);opacity:1;}
+		.section.service4 .motionBox .phoneBox .keyword4.active.end{top:220px;right:118px;transform: scale(0.1);opacity:0;}
+		.section.service4 .motionBox .phoneBox .keyword5{position:absolute;top:180px;right:-140px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service4 .motionBox .phoneBox .keyword5.active{transform: scale(1);opacity:1;}
+		.section.service4 .motionBox .phoneBox .keyword5.active.end{top:220px;right:106px;transform: scale(0.1);opacity:0;}
+		.section.service4 .motionBox .phoneBox .keyword6{position:absolute;top:280px;right:-30px;z-index:6;transform: scale(2.5);opacity:0;transition:0.5s;}
+		.section.service4 .motionBox .phoneBox .keyword6.active{transform: scale(1);opacity:1;}
+		.section.service4 .motionBox .phoneBox .keyword6.active.end{top:220px;right:120px;transform: scale(0.1);opacity:0;}
+		.section.service4 .motionBox .phoneBox .bag1{position:absolute;top:186px;left:-95px;z-index:1;opacity:0;transition:1.3s;}
+		.section.service4 .motionBox .phoneBox .bag1.active{opacity:1;top:276px;}
+		.section.service4 .motionBox .phoneBox .bag2{position:absolute;top:305px;left:-120px;z-index:6;opacity:0;transition:1.3s;}
+		.section.service4 .motionBox .phoneBox .bag2.active{opacity:1;top:385px;}
+		.section.service4 .motionBox .phoneBox .bag3{position:absolute;top:280px;right:-130px;z-index:1;opacity:0;transition:1.3s;}
+		.section.service4 .motionBox .phoneBox .bag3.active{opacity:1;top:350px;}
+		.section.service4 .motionBox .copy{position:absolute;left:0;top:50px;}
+		.section.service4 .motionBox .copy .c1{font-size:24px;color:#662f65;display:block;width:80px;text-align:center;border-top:2px solid #a57ca8;border-bottom:2px solid #a57ca8;position:relative;top:20px;left:-40px;padding:5px 0;opacity:0;}
+		.section.service4 .motionBox .copy .c2{display:block;font-size:160px;color:#5d3561;font-weight:500;display:block;position:relative;left:-50px;opacity:0;}
+		.section.service4 .motionBox .copy .c3{font-size:32px;color:#5d3561;font-weight:500;margin-bottom:15px;position:relative;left:-50px;opacity:0;line-height:40px;}
+		.section.service4 .motionBox .copy .c4{font-size:24px;color:#5d3561;position:relative;left:-50px;opacity:0;}
+		.section.service4 .motionBox .copy .c4 strong{font-weight:500;}
+
+		.section.movie{background-image: url(img/bg_movie.png);}
+		.section.movie .commingSoon{width:512px;margin:0 auto;height:100%;vertical-align:middle;text-align:center;display: table;position:relative;z-index:10;}
+		.section.movie .commingSoon .row{display: table-cell;vertical-align: middle;}
+		.section.movie .movList{width:100%;height:100%;vertical-align:middle;text-align:center;display: table;position:relative;z-index:10;}
+		.section.movie .movList .row{display: table-cell;vertical-align: middle;}
+		.section.movie .movList ul{width:1260px;margin:0 auto;font-size:0;}
+		.section.movie .movList li{display:inline-block;margin:0 15px;font-size:0;}
+		.section.movie .movList li div{text-align:center;background:#072746;color:#fff;font-size:22px;line-height:56px;}
+
+		.section.info .conts{padding-top:130px;background-image: url(img/bg_info.png);padding-bottom:55px;}
+		.section.info .conts > p{font-size:36px;text-align:center;color:#333;}
+		.section.info .conts > p strong{color:#2833c0;}
+		.section.info .conts .btnPartner{display:block;width:448px;height:64px;line-height:64px;margin:25px auto 45px auto;text-align:center;font-size:26px;color:#fff;background:#29a4ff;border-radius:5px;}
+		.section.info .conts .btnPartner span{background:url(img/section7_5.png) right center no-repeat;padding-right:25px;}
+		.section.info .conts .process{width:960px;height:212px;border:1px solid #d5d5d5;background:url(img/bg_box.png) repeat;margin:0 auto 35px auto;border-radius:3px;position:relative;z-index:10;text-align:center;}
+		.section.info .conts .process strong{font-size:22px;color:#333;display:block;margin:10px 0}
+		.section.info .conts .process ul{font-size:0;background:url(img/section7_6.png) center 45px no-repeat;}
+		.section.info .conts .process ul li{display:inline-block;text-align:center;margin:0 59px}
+		.section.info .conts .process ul li span{display:block;color:#555;font-size:15px;}
+		.section.info .conts .preparationItem{width:960px;margin:0 auto;text-align:center;}
+		.section.info .conts .preparationItem strong{font-size:22px;font-weight:700;color:#333;display:block;margin-bottom:25px;}
+		.section.info .conts .preparationItem ul{font-size:0;}
+		.section.info .conts .preparationItem li{display:inline-block;width:33.33%;} 
+		.section.info .conts .preparationItem li .in{border-left:1px solid #cfd4e2;}
+		.section.info .conts .preparationItem li:first-child .in{border-left:0}
+		.section.info .conts .preparationItem li span{font-size:16px;color:#1988f3;}
+		.section.info .conts .preparationItem li p{font-size:14px;color:#666;margin-top:5px;}
+		.section.info .btmBox{height:416px;background:url(img/bg_bottom.png) center center no-repeat;text-align:center; }
+		.section.info .btmBox p{padding:56px 0 45px 0}
+		.section.info .btnDowns{font-size:0;text-align:center;margin-bottom:45px;}
+		.section.info .btnDowns a{vertical-align:top;font-size:0;display:inline-block;margin:0 10px;}
+		.section.info .btnDowns a span{font-size:16px;display:block;color:#fff;font-weight:300;margin-top:10px;}
+		.section.info .share{background:url(img/bg_sharebox.png) center center repeat;text-align:center; font-size:0;}
+		.section.info .share span{display:inline-block;color:#fff;vertical-align:top;margin-right:10px;margin-top:17px;font-size:18px;}
+		.section.info .share ul{display:inline-block;line-height:0;font-size:0;}
+		.section.info .share li{display:inline-block;margin:10px 8px;}
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var resultHtml='';
+					resultHtml += '<div class="bubble bubble1"></div>';
+					resultHtml += '<div class="bubble bubble2"></div>';
+					resultHtml += '<div class="bubble bubble3"></div>';
+					resultHtml += '<div class="bubble bubble4"></div>';
+					resultHtml += '<div class="bubble bubble5"></div>';
+					resultHtml += '<div class="bubble bubble6"></div>';
+					resultHtml += '<div class="bubbleDot bubble7"></div>';
+					resultHtml += '<div class="bubbleDot bubble8"></div>';
+					resultHtml += '<div class="bubbleDot bubble9"></div>';
+					resultHtml += '<div class="bubbleDot bubble10"></div>';
+					resultHtml += '<div class="bubbleDot bubble11"></div>';
+					resultHtml += '<div class="bubbleLine bubble12"></div>';
+					resultHtml += '<div class="bubbleLine bubble13"></div>';
+					resultHtml += '<div class="bubbleLine bubble14"></div>';
+			$('.section').append(resultHtml);
+
+			$('#shodoc').fullpage({
+				'scrollOverflow': true,
+				'verticalCentered': false,
+				'css3': true,
+				'sectionsColor': ['#e8edf8', '#fff', '#fff', '#fff', '#fff', '#fff', '#fff'],
+				'navigation': true,
+				'navigationPosition': 'right',
+
+				afterLoad: function(anchorLink, index){
+
+					if(index == 2){
+						$('.section.service1 .phone').addClass('active');
+						$('.section.service1 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service1 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service1 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service1 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						setTimeout("$('.section.service1 .sex').addClass('active');", 450);
+						setTimeout("$('.section.service1 .age').addClass('active');", 650);
+						setTimeout("$('.section.service1 .area').addClass('active');", 750);
+						$('.section.service1 .loading').delay(950).animate({opacity:1}, 500).delay(500).animate({opacity:0}, 300);
+						$('.section.service1 .default').delay(950).animate({opacity:0}, 300);
+						$('.section.service1 .top').delay(2600).animate({top: '-38px'}, 500);
+						$('.section.service1 .long').delay(1800).animate({left: '0px'}, 500).delay(350).animate({top: '-473px'}, 1500).delay(350).animate({top: '-924px'}, 1500);
+					}else if(index == 3){
+						$('.section.service2 .phone').addClass('active');
+						$('.section.service2 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service2 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service2 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service2 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						setTimeout("$('.section.service2 .gift1').addClass('active');", 350);
+						setTimeout("$('.section.service2 .gift2').addClass('active');", 450);
+						setTimeout("$('.section.service2 .gift3').addClass('active');", 550);
+						setTimeout("$('.section.service2 .flower').addClass('active');", 650);
+						$('.section.service2 .top').delay(1600).animate({top: '-38px'}, 500);
+						$('.section.service2 .long').delay(1600).animate({top: '-473px'}, 1500).delay(350).animate({top: '-904px'}, 1500);
+					}else if(index == 4){
+						$('.section.service3 .phone').addClass('active');
+						$('.section.service3 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service3 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service3 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service3 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						setTimeout("$('.section.service3 .per').addClass('active');", 350);
+						setTimeout("$('.section.service3 .img1').addClass('active');", 450);
+						setTimeout("$('.section.service3 .img2').addClass('active');", 550);
+						setTimeout("$('.section.service3 .img3').addClass('active');", 650);
+						setTimeout("$('.section.service3 .img4').addClass('active');", 750);
+						setTimeout("$('.section.service3 .img4.active').addClass('end');", 1700);
+						setTimeout("$('.section.service3 .img3.active').addClass('end');", 1800);
+						setTimeout("$('.section.service3 .img2.active').addClass('end');", 1900);
+						setTimeout("$('.section.service3 .img1.active').addClass('end');", 2000);
+						setTimeout("$('.section.service3 .per.active').addClass('end');", 2100);
+						$('.section.service3 .top').delay(2500).animate({top: '-38px'}, 500);
+						$('.section.service3 .long').delay(2500).animate({top: '-648px'}, 1500);
+					}else if(index == 5){
+						$('.section.service4 .phone').addClass('active');
+						$('.section.service4 .c1').delay(0).animate({left: '10px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service4 .c2').delay(100).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service4 .c3').delay(200).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						$('.section.service4 .c4').delay(300).animate({left: '0px', opacity:1}, 450, "easeOutQuad");
+						setTimeout("$('.section.service4 .keyword1').addClass('active');", 350);
+						setTimeout("$('.section.service4 .keyword6').addClass('active');", 450);
+						setTimeout("$('.section.service4 .keyword2').addClass('active');", 550);
+						setTimeout("$('.section.service4 .keyword5').addClass('active');", 650);
+						setTimeout("$('.section.service4 .keyword3').addClass('active');", 750);
+						setTimeout("$('.section.service4 .keyword4').addClass('active');", 850);
+
+						setTimeout("$('.section.service4 .keyword4.active').addClass('end');", 1700);
+						setTimeout("$('.section.service4 .keyword3.active').addClass('end');", 1750);
+						setTimeout("$('.section.service4 .keyword5.active').addClass('end');", 1800);
+						setTimeout("$('.section.service4 .keyword2.active').addClass('end');", 1850);
+						setTimeout("$('.section.service4 .keyword6.active').addClass('end');", 1900);
+						setTimeout("$('.section.service4 .keyword1.active').addClass('end');", 1950);
+
+						$('.section.service4 .default').delay(2300).animate({opacity:0}, 1000);
+						$('.section.service4 .top').delay(2400).animate({opacity:1}, 1000);
+						$('.section.service4 .long').delay(2400).animate({left: '0px'}, 500).delay(1200).animate({top: '-273px'}, 1000).delay(600).animate({top: '-727px'}, 1000);
+						setTimeout("$('.section.service4 .bag1').addClass('active');", 3000);
+						setTimeout("$('.section.service4 .bag2').addClass('active');", 3300);
+						setTimeout("$('.section.service4 .bag3').addClass('active');", 3500);
+					}
+
+				},
+
+				onLeave: function(index, newIndex, direction){
+					resultHtml='';
+
+					$('.menu.top li').removeClass('active');
+					$('.menu').addClass('top');
+					if(newIndex == 1){
+						$('.menu.top').css('background','url(img/bg_menu.png) bottom center repeat');
+						$('.menu').removeClass('top');
+					}else if(newIndex == 2){
+						 $('.menu.top').css('background','url(img/bg_service1.png) center top repeat');
+						 $('.menu.top li').eq(1).addClass('active');
+					}else if(newIndex == 3){
+						 $('.menu.top').css('background','url(img/bg_service2.png) center top repeat');
+						 $('.menu.top li').eq(1).addClass('active');
+					}else if(newIndex == 4){
+						 $('.menu.top').css('background','url(img/bg_service3.png) center top repeat');
+						 $('.menu.top li').eq(1).addClass('active');
+					}else if(newIndex == 5){
+						 $('.menu.top').css('background','url(img/bg_service4.png) center top repeat');
+						 $('.menu.top li').eq(1).addClass('active');
+					}else if(newIndex == 6){
+						 $('.menu.top').css('background','url(img/bg_movie.png) center top repeat');
+						 $('.menu.top li').eq(2).addClass('active');
+					}else if(newIndex == 7){
+						 $('.menu.top').css('background','url(img/bg_info.png) center top repeat');
+						 $('.menu.top li').eq(3).addClass('active');
+					};
+
+
+					if (index == 2 && direction == 'down'){
+						$('.section.service1 .phone, .section.service1 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service1 .c1').stop( true, true ).css({'left':'60px','opacity':'0'});
+						$('.section.service1 .c2, .section.service1 .c3, .section.service1 .c4').stop( true, true ).css({'left':'50px','opacity':'0'});
+						$('.section.service1 .loading').stop( true, true ).css({'opacity':'0'});
+						$('.section.service1 .default').stop( true, true ).css({'opacity':'1'});
+						$('.section.service1 .top').stop( true, true ).css({'top':'0px'});
+						$('.section.service1 .long').stop( true, true ).css({'top':'74px', 'left':'280px'});
+					}else if(index == 2 && direction == 'up'){
+						$('.section.service1 .phone, .section.service1 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service1 .c1').stop( true, true ).css({'left':'60px','opacity':'0'});
+						$('.section.service1 .c2, .section.service1 .c3, .section.service1 .c4').stop( true, true ).css({'left':'50px','opacity':'0'});
+						$('.section.service1 .loading').stop( true, true ).css({'opacity':'0'});
+						$('.section.service1 .default').stop( true, true ).css({'opacity':'1'});
+						$('.section.service1 .top').stop( true, true ).css({'top':'0px'});
+						$('.section.service1 .long').stop( true, true ).css({'top':'74px', 'left':'280px'});
+					}else if(index == 3 && direction == 'down'){
+						$('.section.service2 .phone, .section.service2 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service2 .c1').stop( true, true ).css({'left':'-40px','opacity':'0'});
+						$('.section.service2 .c2, .section.service2 .c3, .section.service2 .c4').stop( true, true ).css({'left':'-50px','opacity':'0'});
+						$('.section.service2 .top').stop( true, true ).css({'top':'0px'});
+						$('.section.service2 .long').stop( true, true ).css({'top':'74px'});
+					}else if(index == 3 && direction == 'up'){
+						$('.section.service2 .phone, .section.service2 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service2 .c1').stop( true, true ).css({'left':'-40px','opacity':'0'});
+						$('.section.service2 .c2, .section.service2 .c3, .section.service2 .c4').stop( true, true ).css({'left':'-50px','opacity':'0'});
+						$('.section.service2 .top').stop( true, true ).css({'top':'0px'});
+						$('.section.service2 .long').stop( true, true ).css({'top':'74px'});
+					}else if(index == 4 && direction == 'down'){
+						$('.section.service3 .phone, .section.service3 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service3 .item').stop( true, true ).removeClass('end');
+						$('.section.service3 .c1').stop( true, true ).css({'left':'60px','opacity':'0'});
+						$('.section.service3 .c2, .section.service3 .c3, .section.service3 .c4').stop( true, true ).css({'left':'50px','opacity':'0'});
+						$('.section.service3 .top').stop( true, true ).css({'top':'0px'});
+						$('.section.service3 .long').stop( true, true ).css({'top':'74px'});
+					}else if(index == 4 && direction == 'up'){
+						$('.section.service3 .phone, .section.service3 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service3 .item').stop( true, true ).removeClass('end');
+						$('.section.service3 .c1').stop( true, true ).css({'left':'60px','opacity':'0'});
+						$('.section.service3 .c2, .section.service3 .c3, .section.service3 .c4').stop( true, true ).css({'left':'50px','opacity':'0'});
+						$('.section.service3 .top').stop( true, true ).css({'top':'0px'});
+						$('.section.service3 .long').stop( true, true ).css({'top':'74px'});
+					}else if(index == 5 && direction == 'down'){
+						$('.section.service4 .phone, .section.service4 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service4 .item').stop( true, true ).removeClass('end');
+						$('.section.service4 .c1').stop( true, true ).css({'left':'-40px','opacity':'0'});
+						$('.section.service4 .c2, .section.service4 .c3, .section.service4 .c4').stop( true, true ).css({'left':'-50px','opacity':'0'});
+						$('.section.service4 .default').stop( true, true ).css({'opacity':'1'});
+						$('.section.service4 .top').stop( true, true ).css({'opacity':'0'});
+						$('.section.service4 .long').stop( true, true ).css({'top':'0px','left':'280px'});
+					}else if(index == 5 && direction == 'up'){
+						$('.section.service4 .phone, .section.service4 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service4 .item').stop( true, true ).removeClass('end');
+						$('.section.service4 .c1').stop( true, true ).css({'left':'-40px','opacity':'0'});
+						$('.section.service4 .c2, .section.service4 .c3, .section.service4 .c4').stop( true, true ).css({'left':'-50px','opacity':'0'});
+						$('.section.service4 .default').stop( true, true ).css({'opacity':'1'});
+						$('.section.service4 .top').stop( true, true ).css({'opacity':'0'});
+						$('.section.service4 .long').stop( true, true ).css({'top':'38px','left':'280px'});
+					}else if(index == 6 && direction == 'up'){
+						$('.section.service4 .phone, .section.service4 .item').stop( true, true ).removeClass('active');
+						$('.section.service4 .item.bag1, .section.service4 .item.bag2, .section.service4 .item.bag3').stop( true, true ).removeClass('active');
+						$('.section.service4 .item').stop( true, true ).removeClass('end');
+						$('.section.service4 .c1').stop( true, true ).css({'left':'-40px','opacity':'0'});
+						$('.section.service4 .c2, .section.service4 .c3, .section.service4 .c4').stop( true, true ).css({'left':'-50px','opacity':'0'});
+						$('.section.service4 .default').stop( true, true ).css({'opacity':'1'});
+						$('.section.service4 .top').stop( true, true ).css({'opacity':'0'});
+						$('.section.service4 .long').stop( true, true ).css({'top':'38px','left':'280px'});
+					}
+				}
+
+			});
+		});
+	</script>
+
+</head>
+<body>
+<div class="menu">
+	<ul id="menu">
+		<li><a href="javascript:$.fn.fullpage.moveTo(1);">쇼닥홈</a></li>
+		<li><a href="javascript:$.fn.fullpage.moveTo(2);">서비스소개</a></li>
+		<li><a href="javascript:$.fn.fullpage.moveTo(6);">동영상</a></li>
+		<li><a href="javascript:$.fn.fullpage.moveTo(7);">제휴문의</a></li>
+	</ul>
+</div>
+
+<div id="shodoc">
+	<!-- 쇼닥 홈 -->
+	<div class="section main" id="section0">
+		<div class="sectionIn">
+			<div class="conts">
+				<img src="img/section1_1.png" alt="헤매지 말고, 쇼핑은 Shodoc" class="logo"/>
+				<div class="btnDowns">
+					<a href=""><img src="img/section1_2.png" alt="google play"/></a>
+					<a href="javascript:alert('준비중입니다.');"><img src="img/section1_3.png" alt="app store"/><span>*IOS는 현재 준비중입니다.</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //쇼닥 홈 -->
+
+	<!-- 딱 -->
+	<div class="section service1" id="section1">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<img src="img/img_service1-sex.png" alt="men" class="item sex"/>
+								<img src="img/img_service1-age.png" alt="32세" class="item age"/>
+								<img src="img/img_service1-area.png" alt="서울" class="item area"/>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service1-default.jpg" alt="" class="default"/>
+										<div class="loading"><img src="img/loading_1.gif" alt="" /></div>
+										<img src="img/img_service1-top.jpg" alt="" class="top"/>
+										<img src="img/img_service1-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">쇼닥맞춤</span>
+							<strong class="c2">딱</strong>
+							<p class="c3">상품을 추천해주는 새로운 방법</p>
+							<p class="c4">매일매일 쏟아지는 물건 중<br/><strong>&#60;딱&#62;</strong> 맞는 상품을 코디해 드려요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //딱 -->
+
+	<!-- 콕 -->
+	<div class="section service2" id="section2">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<img src="img/img_service2-gift1.png" alt="" class="item gift1"/>
+								<img src="img/img_service2-gift2.png" alt="" class="item gift2"/>
+								<img src="img/img_service2-gift3.png" alt="" class="item gift3"/>
+								<img src="img/img_service2-flower.png" alt="" class="item flower"/>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service2-top.jpg" alt="" class="top"/>
+										<img src="img/img_service2-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">쇼핑팁</span>
+							<strong class="c2">콕</strong>
+							<p class="c3">애인, 가족에게 드릴 선물이<br/>고민되신다면!</p>
+							<p class="c4">쇼닥을 보세요. 감동을 줄 수 있는<br/>상품을 <strong>&#60;콕&#62;</strong> 찍어줘요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //콕 -->
+
+	<!-- 핫 -->
+	<div class="section service3" id="section3">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<img src="img/img_service3-50.png" alt="" class="item per"/>
+								<img src="img/img_service3-img1.png" alt="" class="item img1"/>
+								<img src="img/img_service3-img2.png" alt="" class="item img2"/>
+								<img src="img/img_service3-img3.png" alt="" class="item img3"/>
+								<img src="img/img_service3-img4.png" alt="" class="item img4"/>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service3-top.jpg" alt="" class="top"/>
+										<img src="img/img_service3-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">추천핫딜</span>
+							<strong class="c2">핫</strong>
+							<p class="c3">놓칠 수 없는 &#60;핫&#62;한 딜 상품정보!</p>
+							<p class="c4">헤매지 말고 쇼닥에 모아진 상품을<br/>한눈에 확인하세요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //핫 -->
+
+	<!-- 짠 -->
+	<div class="section service4" id="section4">
+		<div class="sectionIn">
+			<div class="conts">
+				<div class="row">
+					<div class="motionBox">
+						<div class="phoneBox">
+							<div class="phone">
+								<img src="img/img_service4-ba1.png" alt="" class="item bag1"/>
+								<img src="img/img_service4-ba2.png" alt="" class="item bag2"/>
+								<img src="img/img_service4-ba3.png" alt="" class="item bag3"/>
+								<img src="img/img_service4-keyword1.png" alt="" class="item keyword1"/>
+								<img src="img/img_service4-keyword2.png" alt="" class="item keyword2"/>
+								<img src="img/img_service4-keyword3.png" alt="" class="item keyword3"/>
+								<img src="img/img_service4-keyword4.png" alt="" class="item keyword4"/>
+								<img src="img/img_service4-keyword5.png" alt="" class="item keyword5"/>
+								<img src="img/img_service4-keyword6.png" alt="" class="item keyword6"/>
+								<div class="view">
+									<div class="viewIn">
+										<img src="img/img_service4-default.jpg" alt="" class="default"/>
+										<img src="img/img_service4-top.jpg" alt="" class="top"/>
+										<img src="img/img_service4-long.jpg" alt="" class="long"/>
+									</div>
+								</div>
+								<img src="img/img_phone.png" alt="" class="phoneOuter"/>
+							</div>
+						</div>
+						<div class="copy">
+							<span class="c1">검색</span>
+							<strong class="c2">짠</strong>
+							<p class="c3">평범한 검색결과 방식은 안녕!</p>
+							<p class="c4">큐레이션된 상품 중심으로 <strong>&#60;짠&#62;</strong>하고<br/>결과를 보여줘요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //짠 -->
+
+	<div class="section movie" id="section5">
+		<!-- 영상 -->
+		<div class="movList">
+			<div class="row">
+				<ul>
+					<li>
+						<iframe width="600" height="337" src="https://www.youtube.com/embed/VQ6mWb90vQU" frameborder="0" allowfullscreen></iframe>
+						<div>쇼닥-콕, 쇼핑팁편</div>
+					</li>
+					<li>
+						<iframe width="600" height="337" src="https://www.youtube.com/embed/VQ6mWb90vQU" frameborder="0" allowfullscreen></iframe>
+						<div>쇼닥-핫, 추천핫딜편</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //영상 -->
+
+		<!-- 준비중 -->
+		<!--div class="commingSoon" >
+			<div class="row">
+				<img src="img/img_commingsoon.png" alt="Shodoc - 준비중입니다." class=""/>
+			</div>
+		</div-->
+		<!-- //준비중 -->
+	</div>
+
+	<div class="section info " id="section6">
+		<div class="conts">
+			<p><strong>헤매지 말고 쇼닥과 함께</strong> 판매를 시작하세요!</p>
+			<a href="" class="btnPartner"><span>제휴 신청하기</span></a>
+			<div class="process">
+				<strong>제휴프로세스</strong>
+				<ul>
+					<li>
+						<img src="img/section7_1.png" alt=""/>
+						<span>제휴문의 접수</span>
+					</li>
+					<li>
+						<img src="img/section7_2.png" alt=""/>
+						<span>심사 후 담당자 연락</span>
+					</li>
+					<li>
+						<img src="img/section7_3.png" alt=""/>
+						<span>제휴계약 체결</span>
+					</li>
+					<li>
+						<img src="img/section7_4.png" alt=""/>
+						<span>상품 판매 개시</span>
+					</li>
+				</ul>
+			</div>
+			<div class="preparationItem">
+				<strong>제휴 문의 시 필수 준비사항</strong>
+				<ul>
+					<li>
+						<div class="in">
+							<span>회사소개서·사업자등록증</span>
+							<p>회사 정보와 함께 사업자등록증을 이미지<br/>파일로 준비하여 이메일에 첨부해 주세요. </p>
+						</div>
+					</li>
+					<li>
+						<div class="in">
+							<span>상품정보·소개</span>
+							<p>상품소개서는 자유양식으로 준비하신 후<br/>제안 시 이메일에 첨부해 주세요.</p>
+						</div>
+					</li>
+					<li>
+						<div class="in">
+							<span>담당자 이메일·연락처</span>
+							<p>연락 가능한 담당자 이메일과<br/>연락처를 꼭 작성해 주세요.</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="btmBox">
+			<p><img src="img/section7_9.png" alt="헤매지 말고, 쇼핑은 Shodoc" class=""/></p>
+			<div class="btnDowns">
+				<a href=""><img src="img/section1_2.png" alt="google play"/></a>
+				<a href="javascript:alert('준비중입니다.');"><img src="img/section1_3.png" alt="app store"/><span>*IOS는 현재 준비중입니다.</span></a>
+			</div>
+			<div class="share">
+				<span>쇼닥 공유하기</span>
+				<ul>
+					<li><a href=""><img src="img/section7_7.png" alt="facebook"/></a></li>
+					<li><a href=""><img src="img/section7_8.png" alt="twitter"/></a></li>
+				</ul>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
