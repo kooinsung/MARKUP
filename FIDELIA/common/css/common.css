@@ -1,0 +1,481 @@
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = RESET STYLE
+-----------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr { display: none; }
+
+a { margin:0; padding:0; border:0; vertical-align:baseline; background:transparent; text-decoration:none; color:#8b8c8e;}
+img{border:0;}
+em { font-style:normal; }
+caption{display:none;}
+.clear{clear:both;}
+
+/*건너뛰기 링크*/
+#skipTop{ position:absolute; width:0;height:0;font-size:0; overflow:hidden;visibility:hidden;}
+#skipBottom{ position:absolute; width:0;height:0;font-size:0; overflow:hidden;visibility:hidden;}
+#Content{ position:absolute; width:0;height:0;font-size:0; overflow:hidden;visibility:hidden;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = LAYOUT
+-----------------------------------------------------------------------------------*/
+body{width:100%;height:100%;background:url('http://image.cjmall.com/fidelia/images/common/bg_sub.gif') center center repeat-y;}
+.frameBody{background:#fff;}
+#wrap{width:100%;min-height:768px;}
+.mWrap{width:100%;min-width:1424px;margin:0 auto;}
+
+/* header */
+.mHeader{position:relative;width:100%;height:145px;padding-top:10px;margin:0 auto;text-align:center;z-index:100;}
+.mHeader p{width:1024px;margin:0 auto;text-align:right;}
+.mHeader .gnb{margin:40px 0 0 0;}
+header{position:relative;width:100%;height:145px;padding-top:10px;margin:0 auto;text-align:center;z-index:100;}
+header p{width:1024px;margin:0 auto;text-align:right;}
+header .gnb{z-index:101;margin:40px 0 0 0;}
+.oneDepth{display:inline-block;zoom:1;*display:inline;} 
+.oneDepth > li{float:left;padding:0 24px;background:url('http://image.cjmall.com/fidelia/images/common/img_bar.png') right 0 no-repeat;}
+.oneDepth > li.last{background:none;}
+.twoDepth{width:100%;height:60px;line-height:60px;background:url('http://image.cjmall.com/fidelia/images/common/bg_gnbsub.png') repeat-x;position:absolute;left:0;top:155px;z-index:100;display:none;}
+.twoDepth ul{display:inline-block;zoom:1;*display:inline;text-align:left;}
+.twoDepth li{float:left;margin-right:25px;}
+.subMenu01{margin-left:-19px;}
+.subMenu02{margin-left:-60px;}
+.subMenu03{margin-left:45px;}
+.subMenu04{margin-left:230px;}
+.subMenu05{margin-left:460px;}
+
+/* content */
+.main{width:100%;margin:0 auto;padding:0 0 0 0;overflow:hidden;}
+.main a{outline:none; select-dummy: expression(this.hideFocus=true)}
+.mHeader a{outline:none; select-dummy: expression(this.hideFocus=true)}
+.mFooter a{outline:none; select-dummy: expression(this.hideFocus=true)}
+.container{width:100%;margin:0 auto;background:#fff;padding:40px 0 0 0;overflow:hidden;}
+.frameContainer{width:100%;margin:0 auto;background:#fff;overflow:hidden;}
+.sectionArea{width:1024px;margin:0 auto;}
+aside{width:220px;float:left;}
+aside h2{height:40px;}
+/* aside .depth2{margin:5px 0 5px 11px;}
+/* aside .depth2 li{width:170px;padding:6px 0;} 2014-07-01 */
+aside .depth2{margin:5px 0 5px 0;}
+aside .depth2 li{width:170px;padding:6px 0 6px 11px;}
+aside .depth2 li.border{border-top:1px solid #e4e4e4;padding-top:12px;margin-top:6px;}
+aside .depth3{margin-top:10px;}
+aside .depth3 li{width:170px;padding:6px 0;}
+aside .depth3-2 li{width:170px;padding:3px 0;}
+aside .depth3-1{margin-top:10px;}
+aside .depth3-1 li{width:170px;padding:3px 0;}
+.content{position:relative;width:804px;margin-left:220px;overflow:hidden;min-height:768px;}
+.frameContent{position:relative;width:804px;overflow:hidden;}
+.content h3{height:35px;border-bottom:2px solid #000;z-index:98;}
+.frameContent h3{height:35px;border-bottom:2px solid #000;z-index:98;}
+.navigator{position:absolute;top:2px;right:0;font-family: "굴림", gulim, verdana; color:#707070;font-size:11px;height:14px;}
+
+/* footer */
+footer{width:1024px;height:186px;margin:0 auto;text-align:center;}
+.mFooter{width:100%;height:186px;margin:0 auto;text-align:center;background:url('http://image.cjmall.com/fidelia/images/main/bg_footer.png') repeat-x;overflow:hidden;}
+.logoCJ{margin-top:14px;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = INTRO
+-----------------------------------------------------------------------------------*/
+.introWrap{position:relative;width:1024px;height:768px;margin:0 auto;overflow:hidden;background: url('http://image.cjmall.com/fidelia/images/main/bg_intro.jpg') center center no-repeat;}
+.intro01{position:absolute;top:261px;width:1024px;height:318px;text-align:center;overflow:hidden;}
+.intro02{position:absolute;top:127px;width:1024px;text-align:center;overflow:hidden;}
+.introFooter{position:absolute;bottom:0;height:140px;}
+.blur{display:none;position:absolute;top:0;left:0;display:block;width:1024px;height:103px;background: url('http://image.cjmall.com/fidelia/images/main/img_indextxt02.jpg') center center no-repeat;}
+.nonBlur{display:none;position:absolute;top:0;left:0;width:1024px;height:103px;background: url('http://image.cjmall.com/fidelia/images/main/img_indextxt.jpg') center center no-repeat;}
+.langBtn img{vertical-align:middle;margin-bottom:2px;}
+.intro02 p{margin:38px 0 53px 0;}
+.intro02 ul{margin-top:113px;}
+.intro02 li{float:left;margin-right:6px}
+.intro02 li.last{margin-right:0;}
+
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = MAIN
+-----------------------------------------------------------------------------------*/
+.mScreen{position:relative;width:100%;height:600px;background:#fff;}
+.screen{width:1424px;height:600px;margin:0 auto;overflow:hidden;z-index:99;}
+.screen01{cursor:pointer;position:absolute;width:100%;height:600px;}
+.screen01-1{width:1424px;height:600px;margin:0 auto;}
+.screen02{cursor:pointer;display:none;position:absolute;width:100%;height:600px;background:url('http://image.cjmall.com/fidelia/images/main/img_leftScreen02_on.gif') center center no-repeat;}
+.screen02-1{width:1424px;height:600px;margin:0 auto;}
+.screen03{cursor:pointer;display:none;position:absolute;width:100%;height:600px;background:url('http://image.cjmall.com/fidelia/images/main/img_rightScreen02_on.gif') center center no-repeat;}
+.screen03-1{width:1424px;height:600px;margin:0 auto;}
+.mCont{width:100%;;height:220px;margin:0 auto;overflow:hidden;background:#8c1346;}
+.mEtc{width:1024px;height:226px;padding-top:30px;margin:0 auto;overflow:hidden;}
+.mCont .tabArea{position:relative;width:1044px;height:220px;margin:0 auto;}
+.mCont .tabMenu{position:absolute;width:212px;height:220px;}
+.mCont .tabMenu li {font-size:0; padding:0; text-indent:-9999px;}
+.mCont .tabMenu li a { display:block; width:212px; height:110px;  }
+.mCont .tabMenu li.tab01Menu a { background:url('http://image.cjmall.com/fidelia/images/main/tab01_off.jpg') no-repeat;}
+.mCont .tabMenu li.tab02Menu a { background:url('http://image.cjmall.com/fidelia/images/main/tab02_off.jpg') no-repeat;}
+.mCont .tabMenu li.tab01Menu_on a { background:url('http://image.cjmall.com/fidelia/images/main/tab01_on.jpg') no-repeat;}
+.mCont .tabMenu li.tab02Menu_on a { background:url('http://image.cjmall.com/fidelia/images/main/tab02_on.jpg') no-repeat;}
+.mCont .tabCont{position:absolute;width:780px;height:160px;left:253px;top:30px;overflow:hidden;}
+.mainBX{width:180px;}
+.mainBX a div{font-family: "굴림", gulim, verdana; color:#fff;font-size:11px;width:160px;height:160px;line-height:160px;text-align:center;position:absolute;display:none;background:#8b1345;-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=60)";filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60)filter: alpha(opacity=60);-moz-opacity:0.6;-khtml-opacity: 0.6;opacity: 0.6;}
+#mainNext01, #mainNext02{position:absolute;top:30px;right:0;}
+.mainNews{float:left;position:relative;width:258px;margin-right:42px;}
+.mainNews h3{height:25px;margin-bottom:3px;background:url('http://image.cjmall.com/fidelia/images/main/bg_line.png') center bottom repeat-x;}
+.mainNews .more{position:absolute;top:0;right:0;}
+.mainNews ul{margin-top:20px;}
+.mainNews li{height:25px;}
+.mainNews li p{float:left;font-family: "굴림", gulim, verdana; color:#707070;font-size:11px;display:block;overflow: hidden;width:180px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; padding-top:5px;}
+.mainNews li span{float:right;font-family: "굴림", gulim, verdana; color:#707070;font-size:11px;margin-top:6px;}
+.mainMov{overflow:hidden;}
+.mainMov h3{height:25px;}
+.mainMov ul{display:inline-block;width:1000px;}
+.mainMov li{float:left;margin-right:20px;text-align:center;}
+.mainMov li em{font-family: "굴림", gulim, verdana; color:#707070;font-size:11px;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = ABOUT Fidelia
+-----------------------------------------------------------------------------------*/
+.about{margin:40px 0 60px 0;}
+.ChinaLogo{position:absolute;margin:-10px 0 0 10px;}
+.identity .t1{margin:33px 0 11px 0;}
+.identity .t2{margin:29px 0 31px 0;}
+.globalCont{min-height:550px;}
+.history .t1{margin-bottom:50px;}
+.storyCont{min-height:614px;}
+
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = PRINT AD
+-----------------------------------------------------------------------------------*/
+.ad{position:relative;margin:33px 0 60px 0;display:inline-block;zoom:1;*display:inline;overflow:hidden;}
+.adImg{border:1px solid #000;float:left;}
+.adImg li{width:528px;height:680px;}
+.adThumb{width:260px;height:649px;float:right;}
+.adThumb li{position:relative;float:left;border:1px solid #c0c0c0;width:114px;height:148px;margin:0 0 12px 10px;overflow:hidden;}
+.adThumb li .thumbSelect{display:none;position:absolute;width:114px;height:158px;line-height:16px;background:url('http://image.cjmall.com/fidelia/images/pr/bg_thumbnail.png') no-repeat;color:#cccccc;font-family: Tahoma,"굴림", gulim, verdana; font-size:12px;text-align:center;padding-top:66px;}
+.control{display:inline-block;zoom:1;*display:inline;margin:-2px 0 0 25px;}
+.control span{cursor:pointer;font-family: "굴림", gulim, verdana; color:#626262;font-size:12px;}
+.control strong{color:#8b1345;}
+.control .paging{color:#bfbfbf;position:absolute;bottom:1px;right:55px;}
+.control .totalNum{color:#626262;}
+.pager-nav li.active{width:114px;height:148px;}
+.adThumb a{position:absolute;width:114px;height:148px;color:#cccccc;font-family: Tahoma,"굴림", gulim, verdana; font-size:0px;text-align:center;line-height:16px;}
+.adThumb a.active{position:absolute;width:114px;height:148px;line-height:16px;background:url('http://image.cjmall.com/fidelia/images/pr/bg_thumbnail.png') no-repeat;color:#cccccc;font-family: Tahoma,"굴림", gulim, verdana; font-size:12px;text-align:center;padding-top:60px;}
+.adThumb a:hover{position:absolute;width:114px;height:148px;line-height:16px;background:url('http://image.cjmall.com/fidelia/images/pr/bg_thumbnail.png') no-repeat;color:#cccccc;font-family: Tahoma,"굴림", gulim, verdana; font-size:12px;text-align:center;padding-top:60px;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = MEDIA
+-----------------------------------------------------------------------------------*/
+.media{position:relative;display:inline-block;zoom:1;*display:inline;width:804px;height:510px;margin:40px 0 60px 0;}
+.mediaList{position:relative;float:left;width:240px;height:510px;}
+.UpMenus{position:absolute;bottom:188px;}
+.UpMenus li {position:relative;float:left;width:202px;overflow:visible;font-family:"굴림", gulim, verdana; font-size:12px;color:#242424;cursor:pointer;}
+.UpMenus li ol {position:absolute;left:0;bottom:40px;width:200px;height:0px;overflow:hidden;}
+.UpMenus > li{padding:12px 0;border-bottom:1px solid #dbdbdb;}
+.UpMenus li ol.Up{border:1px solid #c0c0c0;}
+.UpMenus li:hover{background:url('http://image.cjmall.com/fidelia/images/common/icon_arrow.gif') right center no-repeat;font-family:"굴림", gulim, verdana; font-size:12px;color:#8b1345;font-weight:bold;}
+.UpMenus li.active{background:url('http://image.cjmall.com/fidelia/images/common/icon_arrow.gif') right center no-repeat;font-family:"굴림", gulim, verdana; font-size:12px;color:#8b1345;font-weight:bold;}
+#media01,#media02,#media03,#media04.#media05,#media06{display:inline-block;zoom:1;*display:inline;height:510px;}
+#media01 .tabMenu{position:absolute;bottom:0;right:0;width:562px;overflow:hidden;}
+#media01 .tabMenu li {float:left; font-size:0; padding:0; text-indent:-9999px;margin-right:10px;height:79px;}
+#media01 .tabMenu li a { display:block; width:102px; height:79px; text-align:center; background:#ffccff;}
+#media01 .tabMenu li.tab01Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-1.jpg') no-repeat;}
+#media01 .tabMenu li.tab02Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-2.jpg') no-repeat;}
+#media01 .tabMenu li.tab03Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-3.jpg') no-repeat;}
+#media01 .tabMenu li.tab04Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-4.jpg') no-repeat;}
+#media01 .tabMenu li.tab01Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-1_on.jpg') no-repeat;}
+#media01 .tabMenu li.tab02Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-2_on.jpg') no-repeat;}
+#media01 .tabMenu li.tab03Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-3_on.jpg') no-repeat;}
+#media01 .tabMenu li.tab04Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb01-4_on.jpg') no-repeat;}
+#media02 .tabMenu{position:absolute;bottom:0;right:0;width:562px;overflow:hidden;}
+#media02 .tabMenu li {float:left; font-size:0; padding:0; text-indent:-9999px;margin-right:10px;height:79px;}
+#media02 .tabMenu li a { display:block; width:102px; height:79px; text-align:center; background:#ffccff;}
+#media02 .tabMenu li.tab01Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-1.jpg') no-repeat;}
+#media02 .tabMenu li.tab02Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-2.jpg') no-repeat;}
+#media02 .tabMenu li.tab03Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-3.jpg') no-repeat;}
+#media02 .tabMenu li.tab04Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-4.jpg') no-repeat;}
+#media02 .tabMenu li.tab05Menu a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-5.jpg') no-repeat;}
+#media02 .tabMenu li.tab01Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-1_on.jpg') no-repeat;}
+#media02 .tabMenu li.tab02Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-2_on.jpg') no-repeat;}
+#media02 .tabMenu li.tab03Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-3_on.jpg') no-repeat;}
+#media02 .tabMenu li.tab04Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-4_on.jpg') no-repeat;}
+#media02 .tabMenu li.tab05Menu_on a { background:url('http://image.cjmall.com/fidelia/images/pr/img_mediaThumb02-5_on.jpg') no-repeat;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = PRESS
+-----------------------------------------------------------------------------------*/
+.pressList{margin:10px 0 60px 0;}
+.pressList li{position:relative;width:802px;height:140px;background:url('http://image.cjmall.com/fidelia/images/common/img_dotline.gif') 0 bottom no-repeat;overflow:hidden;padding-top:20px;overflow:hidden;}
+.pressList li dl{width:570px;float:right;margin-top:9px;}
+.pressList li dt{font-weight:bold;font-family: "굴림", gulim, verdana; color:#242424;font-size:18px;display:block;overflow: hidden;width:556px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis;padding-top:3px;}
+.pressList li dd{width:555px;height:34px;font-family: "굴림", gulim, verdana; color:#626262;font-size:12px;margin-top:15px;line-height:16px;}
+.pressThumb{width:208px;height:118px;float:left;}
+.pressDay{background:url('http://image.cjmall.com/fidelia/images/common/img_blt.gif') 0 5px no-repeat;padding-left:5px;font-family: Tahoma,"굴림", gulim, verdana; color:#d07ea0;font-size:11px;position:absolute;left:230px;bottom:25px;}
+.btn_more{position:absolute;right:0;bottom:15px;margin-top:20px;}
+.view{margin:40px 0 60px 0;}
+.pressTable{text-align:center;}
+.boardTitle th{height:31px;background:url('http://image.cjmall.com/fidelia/images/common/img_dotline.gif') 0 bottom no-repeat;font-family: "굴림", gulim, verdana; color:#242424;font-size:18px;}
+.boardTitle th strong{float:left;margin-bottom:5px;width:662px;text-align:left;line-height:24px;}
+.boardTitle th span{float:right;background:url('http://image.cjmall.com/fidelia/images/common/img_blt.gif') 0 5px no-repeat;margin-top:5px;padding-left:5px;font-family: Tahoma,"굴림", gulim, verdana; color:#d07ea0;font-size:11px;font-weight:normal;}
+.boardCont td{padding:40px 0;}
+.boardCont td p{text-align:left;font-family: "굴림", gulim, verdana; color:#626262;font-size:12px;line-height:18px;}
+.boardBtn td{padding-top:11px;border-top:1px solid #000;}
+.boardBtn td .LB{float:left;}
+.boardBtn td .LB a{margin-right:5px;}
+.boardBtn td .RB{float:right;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = FIDELIA SHOP
+-----------------------------------------------------------------------------------*/
+.shopTitle{margin-top:23px;font-family: "굴림", gulim, verdana; color:#242424;font-size:14px;}
+.shopList{display:inline-block;zoom:1;*display:inline;width:900px;margin:40px 0 10px 0;overflow:hidden;}
+.shopList > li{width:300px;height:262px;float:left;margin:0 0 60px 0;background:url('http://image.cjmall.com/fidelia/images/common/bg_dotline.gif') 250px center no-repeat;}
+.mainImg{width:200px;height:200px;}
+.thumbImg li{width:50px;height:50px;float:left;overflow:hidden;margin:10px 10px 0 0;}
+.thumbImg li a.dafult{display:inline-block;zoom:1;*display:inline;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = FIDELIA COLLECTION
+-----------------------------------------------------------------------------------*/
+/*showcase movie*/
+.showcaseMovie{width:100%;height:980px;overflow:hidden;background:url('http://image.cjmall.com/fidelia/images/collection/bg_movielist.jpg') center bottom no-repeat;margin:33px 0 60px 0;}
+.showcaseMovie #mainSlider{position:relative;width:804px;height:769px;overflow:hidden;}
+.showcaseMovie .slider > li{position:relative;width:804px;height:769px;overflow:hidden;}
+.showcaseMovie #mainSlider iframe{width:494px;height:278px;position:absolute;top:424px;left:155px;}
+.showcaseMovie .movieBtn01{position:absolute;top:700px;right:185px;}
+.showcaseMovie .movieBtn02{position:absolute;top:680px;left:252px;}
+.showcaseMovie .movieBtn02 li{float:left;margin-right:10px;}
+.showcaseMovie .thumbList{position:relative;width:760px;display:inline-block;zoom:1;*display:inline;padding-left:40px;text-align:center;}
+.showcaseMovie .thumbList li em{font-family: Dotum, "돋음", gulim, verdana; color:#808080;font-size:12px;width:160px;display:inline-block;zoom:1;*display:inline;margin-top:5px;line-height:16px;}
+.showcaseMovie #thumbNext{position:absolute;top:56px;right:25px;z-index:100;}
+.showcaseMovie #thumbPrev{position:absolute;top:56px;left:25px;z-index:100;}
+.showcaseMovie #thumbSlider{position:relative;margin:20px 0 0 0;z-index:99;}
+.showcaseMovie .thumb{width:180px;z-index:99;}
+.showcaseMovie .thumb li{width:180px;overflow:hidden;}
+.showcaseMovie .bx-wrapper .bx-window .thumb a {overflow:hidden;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/collection/bg_movielist-thumb.png') no-repeat;width:160px;height:100px;position:absolute;}
+.showcaseMovie #thumbSlider a.active{background:none;}
+.overseas{width:100%;height:949px;overflow:hidden;background:url('http://image.cjmall.com/fidelia/images/collection/bg_movielist.jpg') center bottom no-repeat;margin:33px 0 60px 0;}
+.overseas #mainSlider{position:relative;width:804px;height:769px;overflow:hidden;}
+.overseas .slider > li{position:relative;width:804px;height:769px;overflow:hidden;}
+.overseas #mainSlider iframe{width:416px;height:263px;position:absolute;top:324px;left:195px;}
+.overseas .movieBtn01{position:absolute;top:607px;right:185px;}
+.overseas .movieBtn02{position:absolute;top:680px;left:252px;}
+.overseas .movieBtn02 li{float:left;margin-right:10px;}
+.overseas .thumbList{position:relative;width:750px;display:inline-block;zoom:1;*display:inline;padding-left:50px;}
+.overseas #thumbNext{position:absolute;top:76px;right:25px;z-index:100;}
+.overseas #thumbPrev{position:absolute;top:76px;left:25px;z-index:100;}
+.overseas #thumbSlider{position:relative;margin:40px 0 0 0;z-index:99;}
+.overseas .thumb{width:180px;z-index:99;}
+.overseas .bx-wrapper .bx-window .thumb a {display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/collection/bg_movielist-thumb.png') no-repeat;width:160px;height:100px;position:absolute;}
+.overseas #thumbSlider a.active{background:none;}
+
+/*catalogue*/
+.catalogue{position:relative;width:100%;height:733px;overflow:hidden;background:#171516 url('http://image.cjmall.com/fidelia/images/collection/bg_gallerylist.gif') center bottom no-repeat;margin:33px 0 60px 0;}
+.catalogue #mainSlider2{position:relative;width:420px;height:550px;background:#171516;}
+.catalogue .cataSlider{width:420px;height:520px;margin:32px 0 0 192px;border:1px solid }
+.catalogue .slider2 > li{position:relative;width:420px;height:550px;text-align:center;font-family: Dotum,"돋음","굴림", gulim, verdana; color:#fff;font-size:11px;}
+.catalogue .slider2 p{margin-top:15px;}
+.catalogue #imgNext2{position:absolute;top:238px;right:86px;z-index:100;cursor:pointer;}
+.catalogue #imgPrev2{position:absolute;top:238px;left:86px;z-index:100;cursor:pointer;}
+.catalogue .thumbList2{position:relative;width:640px;display:inline-block;zoom:1;*display:inline;overflow:hidden;margin:63px 0 0 67px;padding-left:31px;}
+.catalogue #thumbNext2{position:absolute;top:18px;right:0;z-index:100;}
+.catalogue #thumbPrev2{position:absolute;top:18px;left:0;z-index:100;}
+.catalogue #thumbSlider2{position:relative;z-index:99;}
+.catalogue .thumb2{width:89px;z-index:99;}
+.catalogue .bx-wrapper .bx-window .thumb2 a {display:inline-block;zoom:1;*display:inline;width:72px;height:88px;position:absolute;background:url('http://image.cjmall.com/fidelia/images/common/bg_thumb.png') no-repeat;}
+.catalogue .bx-wrapper .bx-window .thumb2 a:hover {border:2px solid #79113c;height:88px;}
+.catalogue #thumbSlider2 a.active{border:2px solid #79113c;}
+#slide-pager ul {margin: 0;padding: 0;clear: both;}
+#slide-pager ul li {margin-right: 15px;border: 2px solid #161415;}
+#slide-pager ul li img { display: block;}
+.pagerWrap {width: 670px;position: relative;padding-left:35px;margin:55px 0 0 50px;}
+#slide-pager_prev {position:absolute;top:18px;left:0;}
+#slide-pager_next {position:absolute;top:18px;right:0;}
+#slide-pager ul li.activeSlide {border: 2px solid #79113c;}
+
+/*mode city paris*/
+.paris{display:inline-block;zoom:1;*display:inline;margin:33px 0 60px 0;}
+.parisInfo{display:inline-block;zoom:1;*display:inline;float:left;}
+.parisInfo .t01{margin-top:21px;}
+.parisInfo .t02{margin-top:18px;}
+.parisInfo .t01-k{margin-top:33px;}
+.parisInfo .t02-k{margin-top:56px;}
+.parisMov{display:inline-block;zoom:1;*display:inline;float:right;}
+.parisMov .tabMenu{position:absolute;margin:262px 0 0 0; width:100%;overflow:hidden;}
+.parisMov .tabMenu li {float:left; font-size:12px; padding:0; text-indent:-9999px; height:34px;margin-right:6px;}
+.parisMov .tabMenu li a { display:block; width:46px; height:34px; text-align:center; background:#ffccff;}
+.parisMov .tabMenu li.tab01Menu a { background:url('http://image.cjmall.com/fidelia/images/collection/tab_thumb01_off.png') no-repeat;}
+.parisMov .tabMenu li.tab02Menu a { background:url('http://image.cjmall.com/fidelia/images/collection/tab_thumb02_off.png') no-repeat;}
+.parisMov .tabMenu li.tab03Menu a { background:url('http://image.cjmall.com/fidelia/images/collection/tab_thumb03_off.png') no-repeat;}
+.parisMov .tabMenu li.tab01Menu_on a { background:url('http://image.cjmall.com/fidelia/images/collection/tab_thumb01_on.png') no-repeat;}
+.parisMov .tabMenu li.tab02Menu_on a { background:url('http://image.cjmall.com/fidelia/images/collection/tab_thumb02_on.png') no-repeat;}
+.parisMov .tabMenu li.tab03Menu_on a { background:url('http://image.cjmall.com/fidelia/images/collection/tab_thumb03_on.png') no-repeat;}
+.parisMov .content01{width:358px;height:298px;background:url('http://image.cjmall.com/fidelia/images/collection/tab_contentbg.gif') no-repeat; display:none;}
+.parisMov .content02{width:358px;height:298px;background:url('http://image.cjmall.com/fidelia/images/collection/tab_contentbg.gif') no-repeat; display:none;}
+.parisMov .content03{width:358px;height:298px;background:url('http://image.cjmall.com/fidelia/images/collection/tab_contentbg.gif') no-repeat; display:none;}
+.photoList{clear:both;padding-top:50px;overflow:hidden;}
+.photoList ul{width:820px;margin-top:17px;overflow:hidden;}
+.photoList li{float:left;margin:0 15px 15px 0;}
+
+
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+/* = FIDELIA Line
+-----------------------------------------------------------------------------------*/
+.line{position:relative;margin:40px 0 60px 0;overflow:hidden;}
+.line02{position:relative;margin:40px 0 60px 0;overflow:hidden;}
+.line h5{text-align:center;width:804px;height:63px;background:url('http://image.cjmall.com/fidelia/images/line/bg_title.gif') 0 bottom no-repeat;}
+.line h5.two{height:95px;}
+.line h5.two p{margin-top:5px;}
+.line h6{margin-top:10px;}
+.line .txt{height:320px;}
+.line .txt-k{height:220px;}
+.line .txt02{height:225px;}
+.line .txt02-k{height:220px;}
+.line .txt03{height:300px;}
+.line .txt03-k{height:220px;}
+.line .txt03-kk{height:270px;}
+.line .txt03-kkk{height:240px;}
+.line .txt03-kkkk{height:340px;}
+.line .txt03-kkkkk{height:280px;}
+.line .txt03-kkkkkk{height:255px;}
+.line .txt04{height:300px;}
+.line .txt04-k{height:237px;}
+.line .txt04 .t3{margin-top:25px;}
+.line .txt05{height:200px;}
+.line .t1{margin:11px 0 29px 0;}
+.line .t2{margin-top:11px;}
+.line .t1-k{margin:20px 0 30px 0;}
+.line .t2-k{margin-top:8px;}
+.line .introductionMov{text-align:center;width:240px;height:183px;position:absolute;top:176px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov-k{text-align:center;width:240px;height:183px;position:absolute;top:71px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov02{text-align:center;width:240px;height:215px;position:absolute;top:81px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov02-k{text-align:center;width:240px;height:215px;position:absolute;top:71px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov03{text-align:center;width:240px;height:215px;position:absolute;top:160px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov03-k{text-align:center;width:240px;height:215px;position:absolute;top:71px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov04{text-align:center;width:240px;height:215px;position:absolute;top:150px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov04-k{text-align:center;width:240px;height:215px;position:absolute;top:88px;right:0;background:url('http://image.cjmall.com/fidelia/images/line/bg_mov.gif') no-repeat;}
+.line .introductionMov p, .line .introductionMov02 p, .line .introductionMov03 p, .line .introductionMov04 p{bottom:0;}
+.line .menuArea{width:804px;margin:0 auto;position:relative;  margin:0 auto; clear:both; text-align:center;}
+.line .top-menu02{padding:0 0 0 0;}
+.line #top-menu{margin:5px 0 0 0;background:#fff;}
+.line #top-menu li {height:40px;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/line/bg_product-line.gif') right 0 no-repeat;padding-top:5px;}
+.line #top-menu li.last{background:none;}
+.line #top-menu a {height:37px;padding:0 15px 5px 15px;}
+.line #top-menu02{margin:5px 0 0 0;background:#fff;}
+.line #top-menu02 li {height:40px;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/line/bg_product-line.gif') right 0 no-repeat;padding-top:5px;}
+.line #top-menu02 li.last{background:none;}
+.line #top-menu02 a {height:37px;padding:0 10px 0 5px;}
+.line #top-menu03{margin:15px 0 15px 0;background:#fff;}
+.line #top-menu03 li {height:40px;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/line/bg_product-line.gif') right 0 no-repeat;padding-top:5px;}
+.line #top-menu03 li.last{background:none;}
+.line #top-menu03 a {height:37px;padding:0 15px 5px 15px;}
+
+.line #top-menu04{margin:5px 0 0 0;background:#fff;width:80%;margin:0 auto;}
+.line #top-menu04 li {height:40px;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/line/bg_product-line.gif') right 0 no-repeat;padding-top:5px;}
+.line #top-menu04 li.last{background:none;}
+.line #top-menu04 a {height:37px;padding:0 10px 0 5px;}
+
+.line #top-menu05{margin:5px 0 0 0;background:#fff;width:60%;margin:0 auto;}
+.line #top-menu05 li {height:40px;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/line/bg_product-line.gif') right 0 no-repeat;padding-top:5px;}
+.line #top-menu05 li.last{background:none;}
+.line #top-menu05 a {height:37px;padding:0 10px 0 5px;}
+
+.line .top-menu03{margin:15px 0 15px 0;background:#fff;}
+.line .top-menu03 li {height:40px;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/line/bg_product-line.gif') right 0 no-repeat;padding-top:5px;}
+.line .top-menu03 li.last{background:none;}
+.line .top-menu03 a {height:37px;padding:0 15px 5px 15px;}
+.line .product {clear:both;padding:26px;background:#eeeeee;overflow:hidden;}
+.line .product02 {position:relative;clear:both;padding:56px 26px 26px 26px;background:#eeeeee;overflow:hidden;}
+.line .product02 p{position:absolute;top:20px;left:298px;}
+.line .product a{margin-bottom:24px;display:inline-block;zoom:1;*display:inline;}
+.line .product a.last{margin:0;}
+.line .btn_shop{text-align:center;position:absolute;top:39px;left:274px;}
+.line .feature{margin-top:20px;display:block;}
+#topMove {position:absolute;top:200px;right:0;z-index:100;}
+.topMove02 {position:absolute;top:265px;right:0;z-index:100;}
+.showcaseImg{position:relative;margin-top:20px;}
+.showcaseImg iframe{position:absolute;}
+.designerIntro iframe{position:absolute;}
+.designerIntro #vera{left:48px;bottom:74px;}
+.designerIntro #boes1{left:44px;bottom:72px;}
+.designerIntro #boes2{right:44px;bottom:72px;}
+.illustration{background:#eeeeee;text-align:center;margin-top:20px;padding:30px;}
+.illustration li{margin-bottom:30px;}
+.illustration li.last{margin:0;}
+.inspiration{margin-top:30px;}
+.inspiration li{margin-bottom:30px;position:relative;height:420px;}
+.inspiration .blt{z-index:99;position:absolute;bottom:0;text-align:center;width:804px;}
+.inspiration .blt a{width:12px;height:12px;margin-right:5px;display:inline-block;zoom:1;*display:inline;background:url('http://image.cjmall.com/fidelia/images/line/bg_nav.gif') 0 -12px no-repeat;text-indent:-9999px;}
+.inspiration .blt a.activeSlide{background-position:0 0;}
+.line #tabSection{}
+.line #tabSection h4{position:absolute;top:0;left:0;display:inline-block;}
+.line #tabSection h4.tab01{}
+.line #tabSection h4.tab02{left:163px;}
+.line #tabSection h4.tab03{left:323px;}
+.line #tabSection h4.tab04{left:483px;}
+.line #tabSection h4.tab05{left:643px;}
+.line #tabSection .tabCont{padding-top:95px;}

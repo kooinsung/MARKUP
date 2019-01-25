@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=1044" />
+		<title>FIDELIA - DESIGNER LINGERIE</title>
+		<link rel="stylesheet" href="../../common/css/common.css" />
+		<script src="../../common/js/jquery-1.8.3.min.js"></script>
+		<script src="../../common/js/jquery.plugin.min.js"></script>
+		<script src="../../common/js/common.js"></script>
+		<!-- 하위 브라우져 HTML5 대응 -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+		<script>
+			$(document).ready(function(){
+				// ad
+				$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
+						$(pager).find('a').removeClass('active').filter('a:eq('+currSlideIndex+')').addClass('active'); 
+				}; 
+				$('.main-slides').cycle({
+					fx:     'fade',
+					speed:  '1000',
+					timeout: 0,
+					pager: '.pager-nav',
+					pagerAnchorBuilder: function(idx, slide) { 
+						var img = $(slide).children().eq(0).attr("src");
+						var cation = $(slide).children().eq(0).attr("alt");
+						return '<li><a href="">' + cation + '</a><img src="' + img + '" width="116" height="150" /></li>'; 
+					}
+				});
+				var maxItems = 8;
+				$(".adThumb li").each(function(i){
+					if(i%maxItems == 0 && i>=maxItems){ $(".adThumb").append("<ul class='pager-nav'></ul>");}
+					$(".adThumb .pager-nav").last().append(this);
+				});
+				$('.adThumb').cycle({
+					fx:     'scrollHorz',
+					speed:  '1000',
+					timeout: 0,
+					prev: '.prev',
+					next: '.next',
+					nowrap:  1,
+					after: onAfter
+				});
+				function onAfter(curr,next,opts) {
+					var caption = (opts.currSlide + 1) + ' / ' + opts.slideCount;
+					$('.paging').html("<strong>"+(opts.currSlide + 1)+"</strong>"+"&#47;"+"<span class=totalNum>"+opts.slideCount+"</span>");
+					if((opts.currSlide + 1) == 1){
+						$('.prev').find('img').attr('src','http://image.cjmall.com/fidelia/images/btn/btn_adprev_off.gif');
+						$('.next').find('img').attr('src','http://image.cjmall.com/fidelia/images/btn/btn_adnext_on.gif');
+
+					}else if((opts.currSlide + 1) == 2){
+						$('.next').find('img').attr('src','http://image.cjmall.com/fidelia/images/btn/btn_adnext_off.gif');
+						$('.prev').find('img').attr('src','http://image.cjmall.com/fidelia/images/btn/btn_adprev_on.gif');
+					}
+				}
+		 });
+		</script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37910453-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+
+<body>
+	<a class="accessibility" id="skipTop" href="#Content">콘텐츠 바로가기</a>
+	<div id="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js"></script>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<a id="Content" href="#skipTop">처음으로 가기</a>
+		<div class="container">
+			<section class="sectionArea">
+				<aside>
+					<script src="../common/include/lnb.js" type="text/javascript"></script>
+					<script type="text/javascript">
+					//<![CDATA[
+						lnbMenu03(1,1);
+					//]]>
+					</script>
+				</aside>
+
+				<section class="content">
+					<h3><img src="http://image.cjmall.com/fidelia/images/pr/h3_printad.gif" alt="PRINT AD"/></h3>
+					<p class="navigator">main &lt; FIDELIA PR &lt; AD &lt; <strong>print AD</strong></p>
+					<!--h4 class="shopTitle" ><strong>Print Ad</strong></h4-->
+
+					<div class="ad">
+						<section class="adImg">
+							<ul class="main-slides">
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad01.jpg"  alt="Vogue<br/>2012.06"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad02.jpg"  alt="Vogue<br/>2012.06"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad03.jpg"  alt="W<br/>2012.06"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad04.jpg"  alt="W<br/>2012.06"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad10.jpg"  alt="Marie claire<br/>2012.06"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad09.jpg"  alt="Marie claire<br/>2012.06"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad05.jpg"  alt="Vogue<br/>2011.05"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad06.jpg"  alt="Vogue<br/>2011.05"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad07.jpg"  alt="W<br/>2011.05"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad08.jpg"  alt="W<br/>2011.05"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad11.jpg"  alt="CHOSUNILBO<br/>2012.4.10"/></li>
+								<li><img src="http://image.cjmall.com/fidelia/images/pr/img_ad12.jpg"  alt="CHOSUNILBO<br/>2012.4.10"/></li>
+							</ul>
+						</section>
+						<section class="adThumb">
+							<ul class="pager-nav">
+							</ul>
+						</section>
+				
+						<div class="control">
+							<span class="prev"><img src="http://image.cjmall.com/fidelia/images/btn/btn_adprev_on.gif" alt="prev" /></span>
+							<span class="next"><img src="http://image.cjmall.com/fidelia/images/btn/btn_adnext_on.gif" alt="next" /></span>
+							<span class="paging"><strong>1</strong>/<span class="totalNum">5</span></span>
+						</div>
+					</div>
+				</section>
+
+			</section>
+		</div>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+	</div>
+	<a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a>
+
+	</body>
+</html>

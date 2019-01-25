@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=1044" />
+		<title>FIDELIA - DESIGNER LINGERIE</title>
+		<link rel="stylesheet" href="../../common/css/common.css" />
+		<script src="../../common/js/jquery-1.8.3.min.js"></script>
+		<script src="../../common/js/jquery.plugin.min.js"></script>
+		<script src="../../common/js/common.js"></script>
+		<!-- 하위 브라우져 HTML5 대응 -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+		<script>
+			$(document).ready(function(){
+				// 탭
+				var activeTab;
+				var allTab = $('.tabMenu li');
+				var allContents = $('div[id*=content0]');
+				var allonTab;
+				var allresetTab;
+				var offTab;
+				var onTab;
+				
+				$('.tabMenu li a').click(function(){ 
+					allContents.hide();
+					allonTab = $('.tabMenu li[class*=_on]').attr('class');
+					allresetTab = allonTab.replace('_on','');
+					$('.tabMenu li[class*=_on]').attr('class',allresetTab);
+					
+					offTab = $(this).parent().attr('class');
+					onTab = offTab.replace('Menu','Menu_on');
+					$(this).parent().attr('class',onTab);
+					
+					activeTab = $(this).attr('href');
+					$(activeTab).fadeIn();
+					return false;
+				}); $('.tabMenu li a:first').click();
+		 });
+		</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37910453-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+
+<body>
+	<a class="accessibility" id="skipTop" href="#Content">콘텐츠 바로가기</a>
+	<div id="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js"></script>
+		<!-- //header -->
+
+
+			<!-- content -->
+			<a id="Content" href="#skipTop">처음으로 가기</a>
+			<div class="container">
+				<section class="sectionArea">
+					<aside>
+					<script src="../common/include/lnb.js" type="text/javascript"></script>
+					<script type="text/javascript">
+					//<![CDATA[
+						lnbMenu05(3,5);
+					//]]>
+					</script>
+					</aside>
+
+					<section class="content">
+						<h3><img src="../../images/collection/h3_ModeCityParis.gif" alt="MODE CITY PARIS"/></h3>
+						<p class="navigator">main &lt; FIDELIA collection &lt; mode city paris &lt; <strong>2013. 1</strong></p>
+						<!--h4 class="shopTitle"><strong>2012.7</strong></h4-->
+
+						<section class="paris">
+							<section class="parisInfo">
+								<p><img src="../../images/collection/txt_paris05.gif" alt="Fidelia Mode City Paris - ‘Salon International de la Lingerie’2013. January"/></p>
+								<p class="t01-k"><img src="../../images/korea/collection/txt_paris06.gif" alt="피델리아는 1월 19일~21일 프랑스 파리 Porte de Versailles에서 열린 국제 란제리쇼 'Salon International de la Lingerie'에 한국 브랜드 단독 참가, 2002년 첫 출품 이후 2003, 2012년에 이어 올해로 4번째다.이번 패션쇼에서는 신제품 12점을 선보였으며, ‘Fidelia by Cilia Boes’라인으로 크리스챤 디올의 란제리&수영복 총괄 디자이너로 활동했던 Cilia Boes(실리아 보에스)가 크리에이티브 디렉터로 참여하여, 베르사이유 궁전 등 프랑스의 아름다운 건축물에서 얻은 영감과 오뜨꾸띄르적인 감각, 수공예적 기법을 접목시켜 고급스러움과 여성스러움, 화려함과 대중성을 담아 표현하였다. "/></p>
+							</section>
+							<section class="parisMov">
+								<iframe width="358" height="247" src="http://www.youtube.com/embed/Dc6paAlVORw?rel=0" frameborder="0" allowfullscreen></iframe>
+							</section>
+							<section class="photoList">
+								<h5><img src="../../images/collection/txt_paris07.gif" alt="Mode City PARIS 2013. photo"/></h5>
+								<ul>
+									<li><img src="../../images/collection/img_paris09.jpg" alt=""/></li>
+									<li><img src="../../images/collection/img_paris10.jpg" alt=""/></li>
+									<li><img src="../../images/collection/img_paris11.jpg" alt=""/></li>
+									<li><img src="../../images/collection/img_paris12.jpg" alt=""/></li>
+									<li><img src="../../images/collection/img_paris13.jpg" alt=""/></li>
+									<li><img src="../../images/collection/img_paris14.jpg" alt=""/></li>
+									<li><img src="../../images/collection/img_paris15.jpg" alt=""/></li>
+									<li><img src="../../images/collection/img_paris16.jpg" alt=""/></li>
+								</ul>
+							</section>
+						</section>
+
+					</section>
+
+				</section>
+			</section>
+		</div>
+		<hr/>
+		<!-- //content -->
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+	</div>
+	<a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a>
+
+	</body>
+</html>

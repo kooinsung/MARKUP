@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=1424" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="common/css/common.css" />
+		<script src="common/js/jquery-1.8.3.min.js"></script>
+		<script src="common/js/jquery.plugin.min.js"></script>
+		<script src="common/js/common.js"></script>
+
+
+		<!-- 하위 브라우져 HTML5 대응 -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+
+<script>
+	$(document).ready(function(){
+
+	//carousel
+	var mainBXslider01 = $('#mainBX01').bxSlider({
+		displaySlideQty: 4,
+		moveSlideQty: 1,
+		nextSelector: '#mainNext01',
+		prevSelector: '#mainPrev01',
+		nextText: '<img src="http://image.cjmall.com/fidelia/images/main/btn_next.png" alt="next"/>',
+		prevText: '<img src="http://image.cjmall.com/fidelia/images/main/btn_prev.png" alt="prev"/>'
+	});
+
+	var mainBXslider02 = $('#mainBX02').bxSlider({
+		displaySlideQty: 4,
+		moveSlideQty: 1,
+		nextSelector: '#mainNext02',
+		prevSelector: '#mainPrev02',
+		nextText: '<img src="http://image.cjmall.com/fidelia/images/main/btn_next.png" alt="next"/>',
+		prevText: '<img src="http://image.cjmall.com/fidelia/images/main/btn_prev.png" alt="prev"/>'
+	});
+
+
+	//탭 메뉴
+	var activeTab;
+	var allTab = $('.tabMenu li');
+	var allContents = $('div[id*=content0]');
+	var allonTab;
+	var allresetTab;
+	var offTab;
+	var onTab;
+	$('.tabMenu li a').click(function(){ 
+		allContents.hide();
+		allonTab = $('.tabMenu li[class*=_on]').attr('class');
+		allresetTab = allonTab.replace('_on','');
+		$('.tabMenu li[class*=_on]').attr('class',allresetTab);
+		
+		offTab = $(this).parent().attr('class');
+		onTab = offTab.replace('Menu','Menu_on');
+		$(this).parent().attr('class',onTab);
+		
+		activeTab = $(this).attr('href');
+		$(activeTab).show();
+		return false;
+
+	});$('.tabMenu li a:first').click();
+	$('.tabMenu li a:nth-child(1)').click(function(){
+		 $('.mCont').css('background','#700e37');
+		 });
+	$('.tabMenu li a:first').click(function(){
+		 $('.mCont').css('background','#8b1345');
+		 });
+
+
+
+	//var c = 1;
+	//var tabsN = allTab.length;
+	//function auto(){
+	//	allTab.eq(c++%tabsN).find('a').click();
+	//}
+	 //vTimer = setInterval(auto, 7000);
+
+	//carousel 오버시 썸네일 효과
+	$('.mainBX li a').hover(
+		function(){
+			$(this).find('div').stop().fadeIn();
+		},
+		function(){
+			$(this).find('div').stop().fadeOut();
+		}
+	);
+
+	//큰이미지 
+
+		$('#leftDafult').mouseenter(function(){
+			 $('.tabMenu li a:first').click();
+      $(this).hide().stop();
+			$('.screen02').fadeIn('fast');
+
+		});
+
+		$('#rightDafult').mouseenter(function(){
+			$('.tabMenu li a:nth-child(1)').click();
+      $(this).fadeOut('fast').stop();
+			$('.screen03').fadeIn('fast');
+
+		});
+
+
+		$('.screen02').mouseleave(function(){
+      $(this).hide().stop();
+			$('#leftDafult').fadeIn('fast');
+		});
+
+		$('.screen03').mouseleave(function(){
+      $(this).hide().stop();
+			$('#rightDafult').fadeIn('fast');
+		});
+
+
+
+		$('#rightOn').mouseenter(function(){
+				$('.tabMenu li a:nth-child(1)').click(); 
+				$('.screen02').fadeOut('fast');
+				$('.screen03').fadeIn('fast');
+
+		});
+
+		$('#leftOn').mouseenter(function(){
+				 $('.tabMenu li a:first').click(); 
+				$('.screen03').fadeOut('fast');
+				$('.screen02').fadeIn('fast');
+
+		});
+
+ });
+
+		$(window).resize(function() {
+			var $content = $('.mWrap');
+			var contentAreaWidth = $(window).width();
+			 if (contentAreaWidth < 1425) {
+				$content.css({'width' : '1424px', 'margin' : '0 auto'});
+			 }else if(contentAreaWidth > 1424){
+				$content.css('width', '100%');
+			 }
+		 });
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37910453-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	</head>
+
+<body>
+	<a class="accessibility" id="skipTop" href="#Content">콘텐츠 바로가기</a>
+	<div id="wrap" class="mWrap">
+
+		<!-- header -->
+		<header class="mHeader">
+			<p>
+				<span><img src="http://image.cjmall.com/fidelia/images/common/util_changeL.png" alt="CHANGE LANGUAGE |" /></span>
+				<a href="main.html"><img src="http://image.cjmall.com/fidelia/images/common/util_english_on.png" alt="ENGLISH" /></a>
+				<a href="korea/main.html"><img src="http://image.cjmall.com/fidelia/images/common/util_korea_off.png" alt="KOREA" /></a>
+			</p>
+			<h1><a href="main.html"><img src="http://image.cjmall.com/fidelia/images/common/logo.png" alt="FIDELIA - DESIGN LINGERIE" /></a></h1>
+			<nav class="gnb">
+				<ul class="oneDepth">
+					<li>
+						<a href="AboutFidelia/BrandStory.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb01_off.png" alt="ABOUT FIDELIA" class=""/></a>
+						<div class="twoDepth" >
+							<ul class="subMenu01">
+								<li><a href="AboutFidelia/BrandStory.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb01-1_off.png" alt="Brand Story" class="rollover"/></a></li>
+								<li><a href="AboutFidelia/BrandIdentity.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb01-2_off.png" alt="Brand Identity"  class="rollover"/></a></li>
+								<li><a href="AboutFidelia/BrandHistory.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb01-3_off.png" alt="Brand History"  class="rollover"/></a></li>
+								<li><a href="AboutFidelia/DesignIntroduction.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb01-4_off.png" alt="DESIGNER INTRODUCTION"  class="rollover"/></a></li>
+								<li><a href="AboutFidelia/BI.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb01-5_off.png" alt="BI"  class="rollover"/></a></li>
+								<li><a href="AboutFidelia/GlobalFidelia.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb01-6_off.png" alt="Global Fidelia"  class="rollover"/></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="FideliaLine/DesignerIntroduction01.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb02_off.png" alt="FIDELIA LINE" class=""/></a>
+						<div class="twoDepth" >
+							<ul class="subMenu02">
+								<li><a href="FideliaLine/DesignerIntroduction01.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb02-1_off.png" alt="VERA WANG For FIDELIA"  class="rollover"/></a></li>
+								<li><a href="FideliaLine/DesignerIntroduction02.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb02-2_off.png" alt="FIDELIA By Cilia BOЁS"  class="rollover"/></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="FideliaPR/AD.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb03_off.png" alt="FIDELIA PR" class=""/></a>
+						<div class="twoDepth" >
+							<ul class="subMenu03">
+								<li><a href="FideliaPR/AD.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb03-1_off.png" alt="AD"  class="rollover"/></a></li>
+								<li><a href="FideliaPR/Movie.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb03-2_off.png" alt="Media"  class="rollover"/></a></li>
+								<li><a href="FideliaPR/Press.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb03-3_off.png" alt="press"  class="rollover"/></a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="FideliaShop/VERAWANG_1st_02.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb04_off.png" alt="FIDELIA SHOP" class=""/></a>
+						<div class="twoDepth" >
+							<ul class="subMenu04">
+								<li><a href="FideliaShop/VERAWANG_1st_02.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb04-1_off.png" alt="VERA WANG For FIDELIA"  class="rollover"/></a></li>
+								<li><a href="FideliaShop/CILIABOES_fw.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb04-2_off.png" alt="FIDELIA By Cilia BOЁS"  class="rollover"/></a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="last">
+						<a href="FideliaCollection/Video.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb05_off.png" alt="FIDELIA COLLECTION"class=""/></a>
+						<div class="twoDepth" >
+							<ul class="subMenu05">
+								<li><a href="FideliaCollection/Video.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb05-1_off.png" alt="Movie"  class="rollover"/></a></li>
+								<li><a href="FideliaCollection/Catalogue-VERAWANG_fw_1st.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb05-2_off.png" alt="Catalogue"  class="rollover"/></a></li>
+								<li><a href="FideliaCollection/ModeCityParis03.html"><img src="http://image.cjmall.com/fidelia/images/common/gnb05-3_off.png" alt="Mode City Paris"  class="rollover"/></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<hr/>
+		<div class="clear"></div>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<a id="Content" href="#skipTop">처음으로 가기</a>
+		<section class="main">
+			<div class="mScreen">
+				<div class="screen01">
+					<div class="screen01-1">
+					<img src="http://image.cjmall.com/fidelia/images/main/img_screen.png"  width="1424" height="600" border="0" usemap="#Map"/>
+						<map name="Map" id="Map">
+							<area shape="poly" coords="3,4,7,593,642,593,773,8" href="#" id="leftDafult"/>
+							<area shape="poly" coords="784,6,656,594,1418,592,1422,3" href="#" id="rightDafult"/>
+						</map>
+					</div>
+				</div>
+
+				<div class="screen02">
+					<div class="screen02-1">
+						<img src="http://image.cjmall.com/fidelia/images/main/img_leftScreen_on.png" alt="" width="1424" height="600" border="0"  usemap="#Map2"/>
+						<map name="Map2" id="Map2">
+							<area shape="poly" coords="783,4,652,595,1410,594,1417,9" href="#none" id="rightOn" onfocus="this.blur()";/>
+						  <area shape="poly" coords="3,4,5,593,640,596,768,7" href="FideliaLine/DesignerIntroduction01.html" onfocus="this.blur()";/>
+						</map>
+					</div>
+				</div>
+
+				<div class="screen03">
+					<div class="screen03-1">
+						<img src="http://image.cjmall.com/fidelia/images/main/img_rightScreen_on.png" alt=""  width="1424" height="600" border="0"  usemap="#Map3"/>
+						<map name="Map3" id="Map3">
+							<area shape="poly" coords="4,4,6,596,646,593,776,5" href="#" id="leftOn" onfocus="this.blur()";/>
+						  <area shape="poly" coords="788,6,652,594,1412,592,1419,4" href="FideliaLine/DesignerIntroduction02.html" onfocus="this.blur()"/>
+						</map>
+					</div>
+				</div>
+			</div>
+
+			<div class="mCont">
+				<div class="tabArea">
+					<ul class="tabMenu">
+						<li class="tab01Menu_on" id="te"><a href="#content01" ></a>tab01</li>
+						<li class="tab02Menu tab2"><a href="#content02"></a>tab02</li>
+					</ul>
+
+					<div id="content01" class="tabCont">
+						<ul id="mainBX01" class="mainBX">
+							<li><a href="FideliaLine/Product01-7.html#veraWhite"><div>Vera White</div><img src="http://image.cjmall.com/fidelia/images/main/1st_01_white.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-7.html#veraIndipink"><div>Vera Indi Pink</div><img src="http://image.cjmall.com/fidelia/images/main/1st_02_pink.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-7.html#veraWine"><div>Vera Wine</div><img src="http://image.cjmall.com/fidelia/images/main/1st_04_wine.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-7.html#veraRoyalblue"><div>Vera Royal Blue</div><img src="http://image.cjmall.com/fidelia/images/main/1st_03_blue.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-7.html#veraBlack"><div>Vera Black</div><img src="http://image.cjmall.com/fidelia/images/main/1st_05_black.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-8.html#veraIvorywhite"><div>Vera Ivory White</div><img src="http://image.cjmall.com/fidelia/images/main/2nd_01_white.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-8.html#veraIndipink"><div>Vera Indi Pink</div><img src="http://image.cjmall.com/fidelia/images/main/2nd_02_pink.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-8.html#veraMint"><div>Vera Mint</div><img src="http://image.cjmall.com/fidelia/images/main/2nd_03_mint.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-8.html#veraDeepgrey"><div>Vera Deep Grey</div><img src="http://image.cjmall.com/fidelia/images/main/2nd_04_grey.jpg" /></a></li>
+							<li><a href="FideliaLine/Product01-8.html#veraRedpink"><div>Vera Redpink</div><img src="http://image.cjmall.com/fidelia/images/main/2nd_05_red.jpg" /></a></li>
+						</ul>
+						<span id="mainPrev01" style="display:none;"></span><span id="mainNext01"></span>
+					</div>
+					<div id="content02" class="tabCont">
+						<ul id="mainBX02" class="mainBX">
+							<li><a href="FideliaLine/ss_Product01.html#beige"><div>Beige</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_begie.jpg" /></a></li>
+							<li><a href="FideliaLine/ss_Product01.html#black"><div>Black</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_black.jpg" /></a></li>
+							<li><a href="FideliaLine/ss_Product01.html#blue"><div>Blue</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_blue.jpg" /></a></li>
+							<li><a href="FideliaLine/ss_Product01.html#ivory"><div>Ivory</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_ivory.jpg" /></a></li>
+							<li><a href="FideliaLine/ss_Product01.html#lightpink"><div>Light Pink</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_lightpink.jpg" /></a></li>
+							<li><a href="FideliaLine/ss_Product01.html#orange"><div>Orange</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_orange.jpg" /></a></li>
+							<li><a href="FideliaLine/ss_Product01.html#print"><div>Print</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_print.jpg" /></a></li>
+							<li><a href="FideliaLine/ss_Product01.html#red"><div>Red</div><img src="http://image.cjmall.com/fidelia/images/main/ss01_red.jpg" /></a></li>
+						</ul>
+						<span id="mainPrev02" style="display:none;"></span><span id="mainNext02"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="mEtc">
+				<div class="mainNews">
+					<h3><img src="http://image.cjmall.com/fidelia/images/main/tit_main01.gif" /></h3>
+					<ul>
+						<li><a href="FideliaPR/Press_view04.html"><p>Successful Venture by Korean Lingerie Brand, ‘Fidelia’, Seducing Paris</p><span>13/01/21</span></a></li>
+						<li><a href="FideliaPR/Press_view.html"><p>FIDELIA, Huge response at European market exhibiting ‘Mode City PARIS 2012’</p><span>12/07/23 </span></a></li>
+						<li><a href="FideliaPR/Press_view02.html"><p>"Enjoy with exclusively sensitive rational price of luxury lingerie"</p><span>12/07/12</span></a></li>
+						<li><a href="FideliaPR/Press_view03.html"><p>Luxury of Dress, Vera Wang - Meeting “FIDELIA” Luxury of lingerie</p><span>12/03/20</span></a></li>
+					</ul>
+					<span class="more"><a href="FideliaPR/Press.html"><img src="http://image.cjmall.com/fidelia/images/main/icon_main01.gif" /></a></span>
+				</div>
+
+				<div class="mainMov">
+					<h3><img src="http://image.cjmall.com/fidelia/images/main/tit_main02.gif" /></h3>
+					<ul>
+						<li>
+							<iframe width="228" height="151" src="//www.youtube.com/embed/f6ZWuQyOZsc?rel=0" frameborder="0" allowfullscreen></iframe><br/>
+							<em>CILIA BOES 2014 S/S</em>
+						</li>
+						<li>
+							<iframe width="228" height="151" src="//www.youtube.com/embed/IR6m3OfkyF0?rel=0" frameborder="0" allowfullscreen></iframe><br/>
+							<em>VEAR WANG 2014 S/S</em>
+						</li>
+						<li>
+							<iframe width="228" height="151" src="//www.youtube.com/embed/ZrBcCGwAjeI?rel=0" frameborder="0" allowfullscreen></iframe><br/>
+							<em>VERA WANG 2014 S/S_2nd</em>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</section>
+		<hr/>
+		<!-- //content -->
+
+		<footer class="mFooter">
+			<p class="logoCJ"><img src="http://image.cjmall.com/fidelia/images/common/logo_cj.png" alt="CJ O SHOPPING" /></p>
+			<address><img src="http://image.cjmall.com/fidelia/images/common/footer_address.png" alt="" /></address>
+			<p><img src="http://image.cjmall.com/fidelia/images/common/footer_copyright.png" alt="" /></p>
+		</footer>
+	</div>
+	<a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a>
+
+
+	</body>
+</html>

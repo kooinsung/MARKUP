@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=1044" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="../../common/css/common.css" />
+		<script src="../../common/js/jquery-1.8.3.min.js"></script>
+		<script src="../../common/js/common.js"></script>
+
+		<!-- 하위 브라우져 HTML5 대응 -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+		<script>
+			$(document).ready(function(){
+				var speed = 0;
+				var menu = $('.topMove02');
+				var offset = menu.offset().top;
+				var menuStartPos = menu.position().top;
+				var top_offset = 0;
+					updateFloatingMenu();
+				$(window).scroll(function(){
+					updateFloatingMenu();
+				});
+				function updateFloatingMenu(){
+					var scrollAmount = $(document).scrollTop();
+					var newPosition = menuStartPos + scrollAmount;
+
+					if(scrollAmount > offset){
+						var topPos = (newPosition-offset) + offset;
+						menu.stop().animate({top: topPos}, speed);
+					}else{
+						menu.stop().animate({top: menuStartPos}, speed);
+					}
+				};
+		 });
+		</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37910453-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+
+
+<body>
+	<a class="accessibility" id="skipTop" href="#Content">콘텐츠 바로가기</a>
+	<div id="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js"></script>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<a id="Content" href="#skipTop">처음으로 가기</a>
+		<div class="container">
+			<section class="sectionArea">
+				<aside>
+					<script src="../common/include/lnb.js" type="text/javascript"></script>
+					<script type="text/javascript">
+					//<![CDATA[
+						lnbMenu02(2,9,18);
+					//]]>
+					</script>
+				</aside>
+
+				<section class="content topContent">
+					<h3><img src="http://image.cjmall.com/fidelia/images/line/h3_fideliabyciliaboes.gif" alt="FIDELIA BY CILIABOЁS"/></h3>
+					<p class="navigator">main &lt; FIDELIA line &lt; FIDELIA BY CILIABOЁS &lt; 2013 S/S collection &lt; <strong>Product</strong></p>
+					<section class="line">
+						<div id="tabSection">
+							<h4 class="tab01"><a href="#none"><img src="../../images/line/tab_product01_on.gif" alt=""/></a></h4>
+							<div class="tabCont">
+								<h5 class="two">
+									<img src="../../images/line/txt_introduction06-1.gif" alt="fidelia by Cilia Boёs S/S Collection"/>
+									<p><img src="../../images/line/tit_product01.gif" alt=""/></p>
+								</h5>
+								<div class="menuArea">
+									<ul class="top-menu03">
+										<li class="active"><a href="#White"><img src="../../images/line/tab32_off.gif" alt="" /></a></li>
+										<li><a href="#IndianPink"><img src="../../images/line/tab33_off.gif" alt="" /></a></li>
+										<li><a href="#Black"><img src="../../images/line/tab34_off.gif" alt="" /></a></li>
+										<li><a href="#Orange"><img src="../../images/line/tab35_off.gif" alt="" /></a></li>
+										<li><a href="#Mint"><img src="../../images/line/tab36_off.gif" alt="" /></a></li>
+										<li class="last"><a href="#BodyShapper"><img src="../../images/line/tab37_off.gif" alt="" /></a></li>
+									</ul>
+								</div>
+								<span class="topMove02"><a href="#TOP"><img src="http://image.cjmall.com/fidelia/images/line/btn_top.png" alt="top" /></a></span>
+								<div class="product">
+									<a id="White"><img src="../../images/korea/line/img_product06-1.jpg" alt="" /></a>
+									<a id="IndianPink"><img src="../../images/korea/line/img_product06-2.jpg" alt="" /></a>
+									<a id="Black"><img src="../../images/korea/line/img_product06-3.jpg" alt="" /></a>
+									<a id="Orange"><img src="../../images/korea/line/img_product06-4.jpg" alt="" /></a>
+									<a id="Mint"><img src="../../images/korea/line/img_product06-5.jpg" alt="" /></a>
+									<a id="BodyShapper" class="last"><img src="../../images/korea/line/img_product06-6.jpg" alt="" /></a>
+								</div>
+							</div>
+							<h4 class="tab02"><a href="#none"><img src="../../images/line/tab_product02_off.gif" alt=""/></a></h4>
+							<div class="tabCont">
+								<h5 class="two">
+									<img src="../../images/line/txt_introduction06-1.gif" alt="fidelia by Cilia Boёs S/S Collection"/>
+									<p><img src="../../images/line/tit_product02.gif" alt=""/></p>
+								</h5>
+								<div class="menuArea">
+									<ul class="top-menu03">
+										<li class="active"><a href="#White02"><img src="../../images/line/tab32_off.gif" alt="" /></a></li>
+										<li><a href="#SalmonPink"><img src="../../images/line/tab38_off.gif" alt="" /></a></li>
+										<li><a href="#Blue02"><img src="../../images/line/tab17_off.gif" alt="" /></a></li>
+										<li><a href="#Black02"><img src="../../images/line/tab34_off.gif" alt="" /></a></li>
+										<li class="last"><a href="#CoralPinkSlip"><img src="../../images/line/tab39_off.gif" alt="" /></a></li>
+									</ul>
+								</div>
+								<span class="topMove02"><a href="#TOP"><img src="http://image.cjmall.com/fidelia/images/line/btn_top.png" alt="top" /></a></span>
+								<div class="product">
+									<a id="White02"><img src="../../images/korea/line/img_product06-7.jpg" alt="" /></a>
+									<a id="SalmonPink"><img src="../../images/korea/line/img_product06-8.jpg" alt="" /></a>
+									<a id="Blue02"><img src="../../images/korea/line/img_product06-9.jpg" alt="" /></a>
+									<a id="Black02"><img src="../../images/korea/line/img_product06-10.jpg" alt="" /></a>
+									<a id="CoralPinkSlip" class="last"><img src="../../images/korea/line/img_product06-11.jpg" alt="" /></a>
+								</div>
+							</div>
+							<h4 class="tab03"><a href="#none"><img src="../../images/line/tab_product03_off.gif" alt=""/></a></h4>
+							<div class="tabCont">
+								<h5 class="two">
+									<img src="../../images/line/txt_introduction06-1.gif" alt="fidelia by Cilia Boёs S/S Collection"/>
+									<p><img src="../../images/line/tit_product03.gif" alt=""/></p>
+								</h5>
+								<div class="menuArea">
+									<ul class="top-menu03">
+										<li class="active"><a href="#LightBlue"><img src="../../images/line/tab40_off.gif" alt="" /></a></li>
+										<li><a href="#PinkFlower"><img src="../../images/line/tab41_off.gif" alt="" /></a></li>
+										<li><a href="#White03"><img src="../../images/line/tab32_off.gif" alt="" /></a></li>
+										<li><a href="#PitchSkin"><img src="../../images/line/tab42_off.gif" alt="" /></a></li>
+										<li class="last"><a href="#PinkSlip"><img src="../../images/line/tab43_off.gif" alt="" /></a></li>
+									</ul>
+								</div>
+								<span class="topMove02"><a href="#TOP"><img src="http://image.cjmall.com/fidelia/images/line/btn_top.png" alt="top" /></a></span>
+								<div class="product">
+									<a id="LightBlue"><img src="../../images/korea/line/img_product06-12.jpg" alt="" /></a>
+									<a id="PinkFlower"><img src="../../images/korea/line/img_product06-13.jpg" alt="" /></a>
+									<a id="White03"><img src="../../images/korea/line/img_product06-14.jpg" alt="" /></a>
+									<a id="PitchSkin"><img src="../../images/korea/line/img_product06-15.jpg" alt="" /></a>
+									<a id="PinkSlip" class="last"><img src="../../images/korea/line/img_product06-16.jpg" alt="" /></a>
+								</div>
+							</div>
+							<h4 class="tab04"><a href="#none"><img src="../../images/line/tab_product04_off.gif" alt=""/></a></h4>
+							<div class="tabCont">
+								<h5 class="two">
+									<img src="../../images/line/txt_introduction06-1.gif" alt="fidelia by Cilia Boёs S/S Collection"/>
+									<p><img src="../../images/line/tit_product04.gif" alt=""/></p>
+								</h5>
+								<div class="menuArea">
+									<ul class="top-menu03">
+										<li class="active"><a href="#CoralPink"><img src="../../images/line/tab44_off.gif" alt="" /></a></li>
+										<li><a href="#Mint02"><img src="../../images/line/tab36_off.gif" alt="" /></a></li>
+										<li><a href="#LavanderBlue"><img src="../../images/line/tab45_off.gif" alt="" /></a></li>
+										<li class="last"><a href="#Ivory"><img src="../../images/line/tab15_off.gif" alt="" /></a></li>
+									</ul>
+								</div>
+								<span class="topMove02"><a href="#TOP"><img src="http://image.cjmall.com/fidelia/images/line/btn_top.png" alt="top" /></a></span>
+								<div class="product">
+									<a id="CoralPink"><img src="../../images/korea/line/img_product06-17.jpg" alt="" /></a>
+									<a id="Mint02"><img src="../../images/korea/line/img_product06-18.jpg" alt="" /></a>
+									<a id="LavanderBlue"><img src="../../images/korea/line/img_product06-19.jpg" alt="" /></a>
+									<a id="Ivory" class="last"><img src="../../images/korea/line/img_product06-20.jpg" alt="" /></a>
+								</div>
+							</div>
+							<h4 class="tab05"><a href="#none"><img src="../../images/line/tab_product05_off.gif" alt=""/></a></h4>
+							<div class="tabCont">
+								<h5 class="two">
+									<img src="../../images/line/txt_introduction06-1.gif" alt="fidelia by Cilia Boёs S/S Collection"/>
+									<p><img src="../../images/line/tit_product05.gif" alt=""/></p>
+								</h5>
+								<div class="menuArea">
+									<ul class="top-menu03">
+										<li class="active"><a href="#MagentaPink"><img src="../../images/line/tab46_off.gif" alt="" /></a></li>
+										<li><a href="#AquaBlue"><img src="../../images/line/tab47_off.gif" alt="" /></a></li>
+										<li><a href="#Ravender"><img src="../../images/line/tab48_off.gif" alt="" /></a></li>
+										<li class="last"><a href="#Orange02"><img src="../../images/line/tab20_off.gif" alt="" /></a></li>
+									</ul>
+								</div>
+								<span class="topMove02"><a href="#TOP"><img src="http://image.cjmall.com/fidelia/images/line/btn_top.png" alt="top" /></a></span>
+								<div class="product">
+									<a id="MagentaPink"><img src="../../images/korea/line/img_product06-21.jpg" alt="" /></a>
+									<a id="AquaBlue"><img src="../../images/korea/line/img_product06-22.jpg" alt="" /></a>
+									<a id="Ravender"><img src="../../images/korea/line/img_product06-23.jpg" alt="" /></a>
+									<a id="Orange02" class="last"><img src="../../images/korea/line/img_product06-24.jpg" alt="" /></a>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+
+			</section>
+		</div>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+	</div>
+	<a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a>
+
+<script type='text/javascript'>
+
+
+
+</script>
+	</body>
+</html>

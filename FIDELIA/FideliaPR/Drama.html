@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=1044" />
+		<title>FIDELIA - DESIGNER LINGERIE</title>
+		<link rel="stylesheet" href="../common/css/common.css" />
+		<script src="../common/js/jquery-1.8.3.min.js"></script>
+		<script src="../common/js/jquery.plugin.min.js"></script>
+		<script src="../common/js/common.js"></script>
+		<!-- 하위 브라우져 HTML5 대응 -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+
+		<script>
+			$(document).ready(function(){
+				// 탭
+				var activeTab;
+				var allTab = $('.tabMenu li');
+				var allContents = $('div[class*=content0]');
+				var allonTab;
+				var allresetTab;
+				var offTab;
+				var onTab;
+				
+				$('.tabMenu li a').click(function(){ 
+					allContents.hide();
+					allonTab = $('.tabMenu li[class*=_on]').attr('class');
+					allresetTab = allonTab.replace('_on','');
+					$('.tabMenu li[class*=_on]').attr('class',allresetTab);
+					
+					offTab = $(this).parent().attr('class');
+					onTab = offTab.replace('Menu','Menu_on');
+					$(this).parent().attr('class',onTab);
+					
+					activeTab = $(this).attr('tab');
+					$(activeTab).fadeIn();
+					return false;
+				}); $('.tabMenu li a:first').click();
+		 });
+		</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37910453-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</head>
+
+<body>
+	<a class="accessibility" id="skipTop" href="#Content">콘텐츠 바로가기</a>
+	<div id="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js"></script>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<a id="Content" href="#skipTop">처음으로 가기</a>
+		<div class="container">
+			<section class="sectionArea">
+				<aside>
+					<script src="../common/include/lnb.js" type="text/javascript"></script>
+					<script type="text/javascript">
+					//<![CDATA[
+						lnbMenu03(2,3);
+					//]]>
+					</script>
+				</aside>
+
+				<section class="content">
+					<h3><img src="http://image.cjmall.com/fidelia/images/pr/h3_media.gif" alt="MEDIA"/></h3>
+					<p class="navigator">main &lt; FIDELIA PR &lt; media &lt; <strong>drama</strong></p>
+
+					<div class="media">
+						<section class="mediaList">
+							<ul class="UpMenus">
+									<li id="mediaList02">
+											Glass Mask (tvN Drama)
+											<ol>
+													<li><img src="http://image.cjmall.com/fidelia/images/pr/img_poster02.jpg" alt="" /></li>
+											</ol>
+									</li>
+							</ul>
+						</section>
+						<ul>
+							<li id="media02" style="">
+								<ul class="tabMenu">
+									<li class="tab01Menu_on"><a href="#none" tab=".content01"></a>tab01</li>
+									<li class="tab02Menu"><a href="#none" tab=".content02"></a>tab02</li>
+									<li class="tab03Menu"><a href="#none" tab=".content03"></a>tab03</li>
+									<li class="tab04Menu"><a href="#none" tab=".content04"></a>tab04</li>
+									<li class="tab05Menu"><a href="#none" tab=".content05"></a>tab05</li>
+								</ul>
+								<div class="content01" >
+									<img src="http://image.cjmall.com/fidelia/images/pr/img_media02-1.jpg" alt=""/>
+								</div>
+								<div class="content02" >
+									<img src="http://image.cjmall.com/fidelia/images/pr/img_media02-2.jpg" alt=""/>
+								</div>
+								<div class="content03" >
+									<img src="http://image.cjmall.com/fidelia/images/pr/img_media02-3.jpg" alt=""/>
+								</div>
+								<div class="content04" >
+									<img src="http://image.cjmall.com/fidelia/images/pr/img_media02-4.jpg" alt=""/>
+								</div>
+								<div class="content05" >
+									<img src="http://image.cjmall.com/fidelia/images/pr/img_media02-5.jpg" alt=""/>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+				</section>
+
+			</section>
+		</div>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+	</div>
+	<a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a>
+
+	</body>
+</html>

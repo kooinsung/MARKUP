@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=1044" />
+		<title>FIDELIA - DESIGNER LINGERIE</title>
+		<link rel="stylesheet" href="../common/css/common.css" />
+		<script src="../common/js/jquery-1.8.3.min.js"></script>
+		<script src="../common/js/jquery.plugin.min.js"></script>
+		<script src="../common/js/common.js"></script>
+
+		<!-- 하위 브라우져 HTML5 대응 -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+
+		<script>
+				$(document).ready(function(){
+					// ShowcaseMovie / OverseasCollection
+					var main_slider = $('#mainSlider').bxSlider({
+						mode:'fade',
+						controls: false
+					});
+					if($.browser.safari || $.browser.msie || $.browser.msie && $.browser.version == "8.0" || $.browser.msie && $.browser.version == "7.0"){
+						$('#thumbSlider a').css('margin-left','10px');
+					 }
+
+					if($.browser.msie && $.browser.version == "8.0"){
+						$('#thumbSlider a').css('margin','0px');
+					 }
+
+					$('#thumbSlider a:first').addClass('active');
+					var thumbs_slider = $('#thumbSlider').bxSlider({
+						displaySlideQty: 4,
+						moveSlideQty: 1,
+						nextSelector: '#thumbNext',
+						prevSelector: '#thumbPrev',
+						nextText: '<img src="http://image.cjmall.com/fidelia/images/btn/btn_movielist-next.png" alt="prev"/>',
+						prevText: '<img src="http://image.cjmall.com/fidelia/images/btn/btn_movielist-prev.png" alt="prev"/>'
+					});
+					$('#thumbSlider a').click(function(event) {	
+						var index = $(this).attr('index');
+						main_slider.goToSlide(index);
+						$('#thumbSlider a').removeClass('active');
+						$(this).addClass('active');
+						return false;
+					});
+			 });
+		</script>
+
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-37910453-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+
+	</head>
+
+<body>
+	<a class="accessibility" id="skipTop" href="#Content">콘텐츠 바로가기</a>
+	<div id="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js"></script>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<a id="Content" href="#skipTop">처음으로 가기</a>
+		<div class="container">
+			<section class="sectionArea">
+				<aside>
+					<script src="../common/include/lnb.js" type="text/javascript"></script>
+					<script type="text/javascript">
+					//<![CDATA[
+						lnbMenu05(1,1);
+					//]]>
+					</script>
+				</aside>
+
+				<section class="content">
+					<h3><img src="http://image.cjmall.com/fidelia/images/collection/h3_movie.gif" alt="MOVIE"/></h3>
+					<p class="navigator">main &lt; FIDELIA collection &lt; <strong>videos</strong></p>
+					<!--h4 class="shopTitle"><strong>Showcase movie</strong></h4-->
+
+
+					<section class="showcaseMovie">
+						<ul id="mainSlider"  class="slider">
+							<li>
+								<iframe  id="mov01" width="494" height="278" src="http://www.youtube.com/embed/Fclkw4asiXI?rel=0" frameborder="0" allowfullscreen></iframe>
+								<!--div class="movieBtn01"><a href="#none"><img src="http://image.cjmall.com/fidelia/images/btn/btn_download.png" alt="download"/></a></div-->
+								<img src="http://image.cjmall.com/fidelia/images/collection/bg_movie01.jpg" alt=""/>
+							</li>
+							<li>
+								<iframe width="494" height="278" src="http://www.youtube.com/embed/ylId_LdTTX4?rel=0" frameborder="0" allowfullscreen></iframe>
+								<!--div class="movieBtn01"><a href="#none"><img src="http://image.cjmall.com/fidelia/images/btn/btn_download.png" alt="download"/></a></div-->
+								<img src="http://image.cjmall.com/fidelia/images/collection/bg_movie01.jpg" alt=""/>
+							</li>
+							<li>
+								<iframe width="494" height="278" src="http://www.youtube.com/embed/Sp0cx7UjRQc?rel=0" frameborder="0" allowfullscreen></iframe>
+								<!--div class="movieBtn01"><a href="#none"><img src="http://image.cjmall.com/fidelia/images/btn/btn_download.png" alt="download"/></a></div-->
+								<img src="http://image.cjmall.com/fidelia/images/collection/bg_movie02.jpg" alt=""/>
+							</li>
+							<li>
+								<iframe width="494" height="278" src="http://www.youtube.com/embed/AR9KfMPgQYo?rel=0" frameborder="0" allowfullscreen></iframe>
+								<!--div class="movieBtn01"><a href="#none"><img src="http://image.cjmall.com/fidelia/images/btn/btn_download.png" alt="download"/></a></div-->
+								<img src="http://image.cjmall.com/fidelia/images/collection/bg_movie03.jpg" alt=""/>
+							</li>
+							<li>
+								<iframe width="494" height="278" src="http://www.youtube.com/embed/Tdx3V5zI_gU?rel=0" frameborder="0" allowfullscreen></iframe>
+								<!--div class="movieBtn01"><a href="#none"><img src="http://image.cjmall.com/fidelia/images/btn/btn_download.png" alt="download"/></a></div-->
+								<img src="http://image.cjmall.com/fidelia/images/collection/bg_movie04.jpg" alt=""/>
+							</li>
+							<li>
+								<iframe width="494" height="278" src="http://www.youtube.com/embed/7RG0RTnUkN8?rel=0" frameborder="0" allowfullscreen></iframe>
+								<!--div class="movieBtn01"><a href="#none"><img src="http://image.cjmall.com/fidelia/images/btn/btn_download.png" alt="download"/></a></div-->
+								<img src="http://image.cjmall.com/fidelia/images/collection/bg_movie04.jpg" alt=""/>
+							</li>
+						</ul>
+
+						<div class="thumbList">
+							<ul id="thumbSlider" class="thumb">
+								<li>
+									<a href="" index="0"></a><img src="http://image.cjmall.com/fidelia/images/collection/img_movieList-thumb01.jpg" width="160"/><br/>
+									<em>VERA WANG FOR FIDELIA_Launching Showcase</em>
+								</li>
+								<li>
+									<a href="" index="1"></a><img src="http://image.cjmall.com/fidelia/images/collection/img_movieList-thumb02.jpg" width="160"/><br/>
+									<em>VERA WANG FOR FIDELIA Launching Showcase Celeb Interview</em>
+								</li>
+								<li>
+									<a href="" index="2"></a><img src="http://image.cjmall.com/fidelia/images/collection/img_movieList-thumb03.jpg" width="160"/><br/>
+									<em>VERA WANG FOR FIDELIA 2012 S/S_2nd_making film</em>
+								</li>
+								<li>
+									<a href="" index="3"></a><img src="http://image.cjmall.com/fidelia/images/collection/img_movieList-thumb04.jpg" width="160"/><br/>
+									<em>VERA WANG FOR FIDELIA 2012 F/W_VERA VICTIORIA LINGERIE</em>
+								</li>
+								<li>
+									<a href="" index="4"></a><img src="http://image.cjmall.com/fidelia/images/collection/img_movieList-thumb06.jpg" width="160"/><br/>
+									<em>Paris Mode City Show_2012.07 (Part 1)</em>
+								</li>
+								<li>
+									<a href="" index="5"></a><img src="http://image.cjmall.com/fidelia/images/collection/img_movieList-thumb07.jpg" width="160"/><br/>
+									<em>Paris Mode City Show_2012.07 (Part 1)</em>
+								</li>
+							</ul>
+							<span id="thumbPrev"></span><span id="thumbNext"></span>
+						</div>
+					</section>
+
+				</section>
+			</section>
+		</div>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+	</div>
+	<a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a>
+
+
+	</body>
+</html>

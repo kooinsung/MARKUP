@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+		<meta name="viewport" content="width=1044" />
+		<title></title>
+		<meta name="author" content="" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="../common/css/common.css" />
+		<script src="../common/js/jquery-1.8.3.min.js"></script>
+		<script src="../common/js/common.js"></script>
+
+		<!-- 하위 브라우져 HTML5 대응 -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]--> 
+
+		<script>
+			$(document).ready(function(){
+				var speed = 0;
+				var menu = $('#topMove');
+				var offset = menu.offset().top;
+				var menuStartPos = menu.position().top;
+				var top_offset = 100;
+					updateFloatingMenu();
+				$(window).scroll(function(){
+					updateFloatingMenu();
+				});
+				function updateFloatingMenu(){
+					var scrollAmount = $(document).scrollTop();
+					var newPosition = menuStartPos + scrollAmount;
+
+					if(scrollAmount > offset){
+						var topPos = (newPosition-offset) + offset;
+						menu.stop().animate({top: topPos}, speed);
+					}else{
+						menu.stop().animate({top: menuStartPos}, speed);
+					}
+				};
+		 });
+		</script>
+
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-37910453-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+	</head>
+
+<body>
+	<a class="accessibility" id="skipTop" href="#Content">콘텐츠 바로가기</a>
+	<div id="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js"></script>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<a id="Content" href="#skipTop">처음으로 가기</a>
+		<div class="container">
+			<section class="sectionArea">
+				<aside>
+					<script src="../common/include/lnb.js" type="text/javascript"></script>
+					<script type="text/javascript">
+					//<![CDATA[
+						lnbMenu02(2,10,26);
+					//]]>
+					</script>
+				</aside>
+
+				<section class="content topContent">
+					<h3 id="TOP"><img src="http://image.cjmall.com/fidelia/images/line/h3_fideliabyciliaboes.gif" alt="FIDELIA BY CILIABOЁS"/></h3>
+					<p class="navigator">main &lt; FIDELIA line &lt; FIDELIA BY CILIABOЁS &lt; 2013 F/W collection_1st &lt; <strong>Product</strong></p>
+					<!--h4 class="shopTitle"><strong>2012 F/W Collection_1st - Product</strong></h4-->
+					<section class="line">
+						<h5><img src="http://image.cjmall.com/fidelia/images/line/fw_tit.gif" alt="Vera Wang for Fidelia 1st Collection"/></h5>
+						<div class="menuArea">
+							<ul id="top-menu" class="top-menu02">
+								<li class="active"><a href="#red"><img src="http://image.cjmall.com/fidelia/images/line/tab16_off.gif" alt="" /></a></li>
+								<li><a href="#black"><img src="http://image.cjmall.com/fidelia/images/line/tab14_off.gif" alt="" /></a></li>
+								<li><a href="#gold"><img src="http://image.cjmall.com/fidelia/images/line/tab50_off.gif" alt="" /></a></li>
+								<li class=""><a href="#emerald"><img src="http://image.cjmall.com/fidelia/images/line/tab51_off.gif" alt="" /></a></li>
+								<li><a href="#wine"><img src="http://image.cjmall.com/fidelia/images/line/tab55_off.gif" alt="" /></a></li>
+								<li><a href="#ivory"><img src="http://image.cjmall.com/fidelia/images/line/tab15_off.gif" alt="" /></a></li>
+								<li ><a href="#antique"><img src="http://image.cjmall.com/fidelia/images/line/tab52_off.gif" alt="" /></a></li>
+								<li class="last"><a href="#indian"><img src="http://image.cjmall.com/fidelia/images/line/tab53_off.gif" alt="" /></a></li>
+							</ul>
+						</div>
+						<div class="product ">
+							<a id="red"><img src="http://image.cjmall.com/fidelia/images/line/fw01_1.jpg" alt="" /></a>
+							<a id="black"><img src="http://image.cjmall.com/fidelia/images/line/fw01_2.jpg" alt="" /></a>
+							<a id="gold"><img src="http://image.cjmall.com/fidelia/images/line/fw01_3.jpg" alt="" /></a>
+							<a id="emerald"><img src="http://image.cjmall.com/fidelia/images/line/fw01_4.jpg" alt="" /></a>
+							<a id="wine"><img src="http://image.cjmall.com/fidelia/images/line/fw01_5.jpg" alt="" /></a>
+							<a id="ivory"><img src="http://image.cjmall.com/fidelia/images/line/fw01_6.jpg" alt="" /></a>
+							<a id="antique"><img src="http://image.cjmall.com/fidelia/images/line/fw01_7.jpg" alt="" /></a>
+							<a class="last" id="indian"><img src="http://image.cjmall.com/fidelia/images/line/fw01_8.jpg" alt="" /></a>
+						</div>
+						<span id="topMove"><a href="#TOP"><img src="http://image.cjmall.com/fidelia/images/line/btn_top.png" alt="top" /></a></span>
+					</section>
+				</section>
+
+			</section>
+		</div>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+	</div>
+	<a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a>
+
+<script type='text/javascript'>
+
+
+
+</script>
+	</body>
+</html>
