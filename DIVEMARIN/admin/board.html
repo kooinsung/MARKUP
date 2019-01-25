@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>게시판 샘플</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+<div class="division">
+<h1>Board List</h1>
+	<!-- Board List -->
+	<table class="tbl_list">
+					<colgroup>
+						<col width="6%" />
+						<col width="6%" />
+						<col width="*" />
+						<col width="18%" />
+						<col width="20%" />
+						<col width="12%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">선택</th>
+							<th scope="col">번호</th>
+							<th scope="col">제목</th>
+							<th scope="col">등록자</th>
+							<th scope="col">등록일</th>
+							<th scope="col">조회</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>10</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>9</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>8</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>7</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>6</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>5</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>4</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>3</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>2</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr class="none">
+							<td colspan="6" class="txtCenter">검색된 게시물이 없습니다.</td>
+						</tr>
+					</tbody>
+				</table>
+	<!-- //Board List -->
+</div>
+
+<div class="division">
+<h1>Board View</h1>
+	<!-- Board View -->
+	<table class="tbl_view">
+		<colgroup>
+			<col width="15%" />
+			<col width="35%" />
+			<col width="15%" />
+			<col width="35%" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row"><em>필수항목</em> 제목</th>
+				<td colspan="3">게시물 제목을 입력해 주세요</td>
+			</tr>
+			<tr>
+				<th scope="row"><em>필수항목</em> 등록자</th>
+				<td>관리자</td>
+				<th scope="row">등록일</th>
+				<td>2014-01-01</td>
+			</tr>
+			<tr>
+				<th scope="row">첨부파일</th>
+				<td colspan="3"><a href="#" class="fileView">첨부파일명.jpg</a><br/><a href="#" class="fileView">첨부파일명.jpg</a></td>
+			</tr>
+			<tr>
+				<td colspan="4" class="cont">내용 에디터 영역</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- //Board View -->
+</div>
+</body>
+</html>

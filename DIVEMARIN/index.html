@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+	<title> DIVE MARINE </title>
+	<link type="text/css" rel="stylesheet" href="common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="common/css/content.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="common/css/form.css"  media="all"/>
+	<script type="text/javascript" src="common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="common/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="common/js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="common/js/jquery-cookie.js"></script>
+	<script type="text/javascript" src="common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="common/js/common.js"></script>
+	<script type="text/javascript" src="common/js/jcommon.js"></script>
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+	<script>
+//		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/Windows CE/i)) || (navigator.userAgent.match(/Symbian/i)) || (navigator.userAgent.match(/BlackBerry/i)) || (navigator.userAgent.match(/Android/i))){
+//			window.location.href='http://dive-marine.com/mobile/main.html';
+//		}else{
+//
+//		};
+
+
+
+		//날씨
+		$(document).ready(function() {
+			$.simpleWeather({
+				woeid: '2347186',
+				unit: 'c',
+				success: function(weather) {
+					html = '<h2 style="display:none;">'+weather.city+'</h2>';
+					html += '<div class="weatherIcon"><img width="80px" src="img/common/'+weather.code+'.jpg"></div>';
+					html += '<div class="weatherInfo"><div class="weatherInfo01" ></div><div class="weatherInfo02" style="display:none;">' + weather.currently + '</div><div class="weatherInfo03">' + weather.temp + '&deg;' + weather.units.temp + '</div></div>';
+					$("#weather").html(html);
+					var d=new Date();
+					var week = new Array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
+					var dat=d.getDate();
+					var mon=d.getMonth() + 1;
+					var year=d.getFullYear();
+					var todayDate = year +"/"+ mon +"/" + dat + "/" + week[d.getDay()];
+					$('.weatherInfo01').text(todayDate);
+				},
+				error: function(error) {
+					$("#weather").html("<p>"+error+"</p>");
+				}
+			});
+
+			//하단 롤링
+			$('.bxslider').bxSlider({
+				 auto: false,
+				 autoHover:true,
+				 autoDelay:0,
+				video: true,
+				useCSS: false
+
+			});
+
+
+
+			//더 라차 탭
+			$(".tabMenu > div").hide().filter("div:first").show();
+			 var allTab = $('.tabMenu strong');
+			$('.tabMenu strong a').bind("click",function(){
+				var num = $(".tabMenu strong a").index($(this));
+				$(".tabMenu strong a img").each(function(){
+					$(this).attr("src", $(this).attr("src").replace("_on.", "_off."));
+				});
+				$(this).find("img").attr("src", $(this).find("img").attr("src").replace("_off.", "_on."));
+				$(".tabMenu > div").hide();
+				$($(".tabMenu div")[num]).show();
+			});
+			var c = 1;
+			var tabsN = allTab.length;function auto(){
+			allTab.eq(c++%tabsN).find('a').click();}
+			setInterval(auto, 5000);
+
+		});
+
+	
+
+		//팝업
+		$(document).ready(function(){
+			//띄우는 형태
+
+			$('#popup1').show();
+			if( $.cookie("show_popup1") == "false" ) $("#popup1").hide();
+			else $("#popup1").show();							
+
+			/*
+						$('#popup1').show();
+						if( $.cookie("show_popup1") == "false" ) $("#popup1").hide();
+						else $("#popup1").show();
+
+						$('#popup2').show();
+						if( $.cookie("show_popup2") == "false" ) $("#popup2").hide();
+						else $("#popup2").show();
+			*/
+			//상단에 붙는 형태
+
+			$('#popup02').slideDown('slow');
+			if( $.cookie("show_popup02") == "false" ) $("#popup02").hide();
+			else $("#popup02").slideDown('slow');
+
+		});
+
+
+		function popup_hide_cookieEx(cookiename,popupid) {
+			today = new Date();
+			$.cookie( cookiename, "false", { path: "/", expires : 1 } );
+			$("#"+popupid).hide();
+		}
+	</script>
+
+ </head>
+
+ <body>
+	<!-- 팝업 - 띄우는 형식 -->
+
+	<div id="popup1" class="popupType01"  >
+		<div class="popContents">
+			<a href=""><img src="http://www.dive-marine.com/upfile/rollimage/140305_popup[1]2.jpg" alt=""/></a>
+		</div>
+		<div class="popBottom">
+			<span><input type="checkbox" id="todayClose1"  onclick="popup_hide_cookieEx('show_popup1','popup1');"/><label for="todayClose1">1일간 열지 않음 X</label></span>
+		</div>
+	</div>						
+
+
+	<!-- //팝업 - 띄우는 형식 -->
+
+	<!-- 팝업 - 상단에서 내려오는 형식 -->
+
+	<div id="popup02">
+		<div class="popContents">
+			<div class="imaArea"><a href="http://dive-marine.com/liveaboad/similanschedule.html"><img src="img/common/img_banner.jpg" alt=""/></a></div>
+			<div class="popBottom">
+				<span><input type="checkbox" id="todayClose02"  onclick="popup_hide_cookieEx('show_popup02','popup02');"/><label for="todayClose02">1일간 열지 않음 X</label></span>
+			</div>
+		</div>
+	</div>	
+
+<!-- 	<div id="popup02">
+		<div class="popContents">
+			<div class="imaArea"><a href=""><img src="img/common/img_banner.jpg" alt=""/></a></div>
+			<div class="popBottom">
+				<span><input type="checkbox" id="todayClose02"  onclick="popup_hide_cookieEx('show_popup02','popup02');"/><label for="todayClose02">1일간 열지 않음 X</label></span>
+			</div>
+		</div>
+	</div> -->
+	<!-- //팝업 - 상단에서 내려오는 형식 -->
+
+	<div id="wrap" class="main">
+		<div class="etxt"></div>
+		<!-- HEADER -->
+
+<header class="sub">
+	<div class="inner">
+		<!-- 로고 -->
+		<h1><a href=""><img src="img/common/img_logo.jpg" alt="DIVE MARIN"/></a></h1>
+		<!-- //로고 -->
+
+		<!-- 메일링 -->
+		<div class="mailing">
+			<a href="#none" onclick="ShowModalPopup('mailingLayer'); return false;"><img src="img/common/txt_mailing.jpg" alt="new! 다이브마린의 새로운 소식을 받아보세요!"></a>
+		</div>
+		<!-- //메일링 -->
+
+	<form name="mailFrm" id="mailFrm" method="post">
+	<!-- 메일링폼 -->
+		<div id="mailingLayer" class="mailingLayer">
+			<strong><img src="img/common/txt_mailingTit.gif" /></strong>
+				<div class="tableArea">
+					<table>
+						<colgroup>
+							<col width="25%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td><input type="text" style="width:50%;" title="이름" id="name" name="name" nullable=true /></td>
+							</tr>
+							<tr>
+								<th scope="row">연락처</th>
+								<!-- <td><input type="text" style="width:50px;"/> - <input type="text" style="width:50px;"/> - <input type="text" style="width:50px;"/></td> -->
+								<td>
+											<select name="phoneSelect02" id="phoneSelect02" title="휴대전화번호 앞자리 선택">
+												
+	<option value="">선택</option>	
+	<option value="010" >010</option>
+	<option value="011" >011</option>
+	<option value="016" >016</option>
+	<option value="017" >017</option>
+	<option value="018" >018</option>
+	<option value="019" >019</option>	
+
+											</select> - <input type="text" id="phoneSelect02_1" name="phoneSelect02_1" title="휴대전화번호 가운데 자리" value="" style="width:50px;" maxlength="4" chartype="onlynum" nullable="false" /> - <input type="text" id="phoneSelect02_2" name="phoneSelect02_2"  title="휴대전화번호 마지막 자리" value="" style="width:50px;" maxlength="4" chartype="onlynum" nullable="false" />
+
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">메일</th>
+								<td class="mailingTd">
+									<input type="text" id="email"  name="email" title="이메일 입력" class="emailInput" value="" style="width:70px;" maxlength="50"  nullable="true"/> @
+									<input type="text" id="emailDetailHead" name="emailDetailHead"  title="이메일주소 입력" class="emailInput" value="" style="width:70px;" maxlength="50"  nullable="true"/>
+									<select name="emailSelectHead" id="emailSelectHead" title="이메일 선택">
+										
+	<option value="" selected>-선택-</option>
+	<option value="naver.com"    >     naver.com    </option>
+	<option value="nate.com" >      nate.com     </option>
+	<option value="chol.com"     >      chol.com     </option>
+	<option value="dreamwiz.com" >  dreamwiz.com </option>
+	<option value="empal.com" >     empal.com    </option>
+	<option value="freechal.com" >  freechal.com </option>
+	<option value="gmail.com" >     gmail.com    </option>
+	<option value="hanmail.net" >   hanmail.net  </option>
+	<option value="hanmir.com" >    hanmir.com   </option>
+	<option value="hitel.net" >     hitel.net    </option>
+	<option value="hotmail.com" >   hotmail.com  </option>
+	<option value="korea.com" >     korea.com    </option>
+	<option value="lycos.co.kr" >   lycos.co.kr  </option>	
+	<option value="netian.com" >    netian.com   </option>
+	<option value="paran.com" >     paran.com    </option>
+	<option value="yahoo.com" >     yahoo.com    </option>
+	<option value="yahoo.co.kr" >   yahoo.co.kr  </option>
+	<option value="" >기타</option>
+
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">스쿠버 레벨</th>
+								<td class="mailingTd02">
+									<select id="lavelSelectMail" name="lavelSelectMail">
+										<option value="">--선택해주세요--</option>
+										<option value="레벨없음"  >레벨없음</option>
+										<option value="체험다이버"  >체험다이버</option>
+										<option value="오픈워터"  >오픈워터</option>
+										<option value="어드벤스드"  >어드벤스드</option>
+										<option value="레스큐"  >레스큐</option>
+										<option value="다이브마스터"  >다이브마스터</option>
+										<option value="보조강사"  >보조강사</option>
+										<option value="강사"  >강사</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">방문유무</th>
+								<td>: 다이브마린을 다녀간적이 있다. <label for="yes">예</label><input type="radio" id="yes" name="visit" value="Y" checked/> <label for="no">아니오</label><input type="radio" id="no" name="visit" value="N"/></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btns"><button type="button" class="btnEnter" id="btnEnterMailform">확인</button><button type="button" class="btnCancel" onclick="HideModalPopup('mailingLayer'); return false;">취소</button></div>
+		</div>
+	</form>
+	<!-- 메일링폼 -->
+
+		<!-- sns -->
+		<div class="sns">
+			<ul>
+				<li class=""><a href="https://www.facebook.com/pages/%EB%8B%A4%EC%9D%B4%EB%B8%8C%EB%A7%88%EB%A6%B0/451109771631465" target="_blank"><img src="img/common/btn_facebook.jpg" alt="페이스북"/></a></li>
+				<li class=""><a href="http://cafe.naver.com/divemarine" target="_blank"><img src="img/common/btn_c.jpg" alt=""/></a></li>
+				<li class=""><a href="http://blog.naver.com/divemarine" target="_blank"><img src="img/common/btn_b.jpg" alt=""/></a></li>
+			</ul>
+		</div>
+		<!-- //sns -->
+	</div>
+
+	<!-- gnb -->
+	<nav>
+		<ul id="gnb">
+			<li>
+				<h2><a href="divemarin/intro.html"><img src="img/common/nav01_off.jpg" alt="다이브마린"/></a></h2>
+				<ul class="depth02 depth02-1">
+					<li>
+						<a href="divemarin/intro.html">
+							
+								<img src="img/common/nav01-1_off.jpg" alt="다이브마린 소개" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="divemarin/staff.html">
+							
+								<img src="img/common/nav01-2_off.jpg" alt="스탭소개" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="divemarin/boat.html">
+							
+								<img src="img/common/nav01-3_off.jpg" alt="다이브마린 보트" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="divemarin/location.html">
+							
+								<img src="img/common/nav01-4_off.jpg" alt="오시는 길" class="rollover"/>
+							
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2><a href="racha/intro.html"><img src="img/common/nav02_off.jpg" alt="라차섬"/></a></h2>
+					<ul class="depth02 depth02-2">
+						<li>
+							<a href="racha/intro.html">
+								
+									<img src="img/common/nav02-1_off.jpg" alt="라차섬 소개" class="rollover"/>
+								
+							</a>
+						</li>
+						<li>
+							<a href="racha/korean.html">
+								
+									<img src="img/common/nav02-2_off.jpg" alt="라차섬 한국인 전용투어" class="rollover"/>
+								
+							</a>
+						</li>
+						<li>
+							<a href="racha/dsd.html">
+								
+									<img src="img/common/nav02-3_off.jpg" alt="DSD 체험 다이빙" class="rollover"/>
+								
+							</a>
+						</li>
+						<li>
+							<a href="racha/viewer.html">
+								
+									<img src="img/common/nav02-4_off.jpg" alt="라차섬 볼거리" class="rollover"/>
+								
+							</a>
+						</li>
+						<li>
+							<a href="racha/seaquest.html">
+								
+									<img src="img/common/nav02-5_off.jpg" alt="Seaquest" class="rollover"/>
+								
+							</a>
+						</li>
+						<li>
+							<a href="racha/club.html">
+								
+									<img src="img/common/nav02-6_off.jpg" alt="Club del mar" class="rollover"/>
+								
+							</a>
+						</li>
+					</ul>
+			</li>
+			<li>
+				<h2><a href="liveaboad/similan.html"><img src="img/common/nav03_off.jpg" alt="리브어보드"/></a></h2>
+				<ul class="depth02 depth02-3">
+					<li>
+						<a href="liveaboad/similan.html">
+							
+								<img src="img/common/nav03-1_off.jpg" alt="시밀란 -시밀란 리브어보드 -스케쥴 / 일정 / 비용 " class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="liveaboad/ko-ra.html">
+							
+								<img src="img/common/nav03-2_off.jpg" alt="코모도 -코모도 리브어보드 -스케쥴 / 일정 / 비용" class="rollover"/>
+							
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2><a href="phuketdiving/padi.html"><img src="img/common/nav04_off.jpg" alt="푸켓다이빙"/></a></h2>
+				<ul class="depth02 depth02-4">
+					<li>
+						<a href="phuketdiving/padi.html">
+							
+								<img src="img/common/nav04-1_off.jpg" alt="PADI 코스" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="phuketdiving/fun.html">
+							
+								<img src="img/common/nav04-2_off.jpg" alt="펀다이빙" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="phuketdiving/experience.html">
+							
+								<img src="img/common/nav04-3_off.jpg" alt="체험다이빙" class="rollover"/>
+							
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2><a href="license/openwater.html"><img src="img/common/nav05_off.jpg" alt="다이빙자격증패키지"/></a></h2>
+				<ul class="depth02 depth02-5">
+					<li>
+						<a href="license/openwater.html">
+							
+								<img src="img/common/nav05-1_off.jpg" alt="오픈워터 패키지" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="license/advanced.html">
+							
+								<img src="img/common/nav05-2_off.jpg" alt="어드밴스드 패키지" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="license/all.html">
+							
+								<img src="img/common/nav05-3_off.jpg" alt="오픈워터 / 어드밴스드 패키지" class="rollover"/>
+							
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2><a href="point/phuket.html"><img src="img/common/nav06_off.jpg" alt="다이빙포인트"/></a></h2>
+				<ul class="depth02 depth02-6">
+					<li>
+						<a href="point/phuket.html">
+							
+								<img src="img/common/nav06-1_off.jpg" alt="푸켓" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="point/phiphi.html">
+							
+								<img src="img/common/nav06-2_off.jpg" alt="피피" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="point/hindaengkohha.html">
+							
+								<img src="img/common/nav06-3_off.jpg" alt="흰댕 / 꼬하" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="point/similan.html">
+							
+								<img src="img/common/nav06-4_off.jpg" alt="시밀란" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="point/komodo.html">
+							
+								<img src="img/common/nav06-5_off.jpg" alt="코모도" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="point/rajaampat.html">
+							
+								<img src="img/common/nav06-6_off.jpg" alt="라자암팟" class="rollover"/>
+							
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2><a href="recommend/viewer.html"><img src="img/common/nav07_off.jpg" alt="푸켓추천"/></a></h2>
+				<ul class="depth02 depth02-7">
+					<li>
+						<a href="recommend/viewer.html">
+							
+								<img src="img/common/nav07-1_off.jpg" alt="볼거리" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="recommend/tour.html">
+							
+								<img src="img/common/nav07-2_off.jpg" alt="투어" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="recommend/resort.html">
+							
+								<img src="img/common/nav07-3_off.jpg" alt="더라차 리조트" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="recommend/studyposition.html">
+							
+								<img src="img/common/nav07-4_off.jpg" alt="교육추천장소" class="rollover"/>
+							
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2><a href="community/notice_list.html"><img src="img/common/nav08_off.jpg" alt="커뮤니티"/></a></h2>
+				<ul class="depth02 depth02-8">
+					<li>
+						<a href="community/notice_list.html">
+							
+								<img src="img/common/nav08-1_off.jpg" alt="공지사항" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="community/qna_list.html">
+							
+								<img src="img/common/nav08-2_off.jpg" alt="질문과 답변" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="community/reservation_list.html">
+							
+								<img src="img/common/nav08-3_off.jpg" alt="예약게시판" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="community/faq_list.html">
+							
+								<img src="img/common/nav08-4_off.jpg" alt="자주묻는 FAQ" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="community/photo_list.html">
+							
+								<img src="img/common/nav08-5_off.jpg" alt="포토갤러리" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="community/movie_list.html">
+							
+								<img src="img/common/nav08-6_off.jpg" alt="동영상갤러리" class="rollover"/>
+							
+						</a>
+					</li>
+					<li>
+						<a href="community/tour_list.html">
+							
+								<img src="img/common/nav08-7_off.jpg" alt="여행후기" class="rollover"/>
+							
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<!-- //gnb -->
+
+</header>
+
+
+		<hr/>
+		<!-- //HEADER -->
+
+		<!-- CONTENT -->
+		<section id="content">
+			<div class="inner">
+				<!-- 중간사이즈 롤링 -->
+				<section class="mediumRolling">
+					<div class="cycle-pager" id="pager"></div>
+					<ul id="mediumRolling" class="cycle-slideshow" data-cycle-slides="li" data-cycle-auto-height="false" data-cycle-timeout="5000"  data-cycle-pager="#pager">
+
+								<li><a href="http://dive-marine.com/racha/korean.html"><img src="http://www.dive-marine.com/upfile/rollimage/main_img_140305_013.jpg" width="700" height="423" alt=""/></a></li>
+
+								<li><a href="http://dive-marine.com/license/all.html"><img src="http://www.dive-marine.com/upfile/rollimage/main_img_140305_021.jpg" width="700" height="423" alt=""/></a></li>
+
+								<li><a href="http://dive-marine.com/liveaboad/similanliveaboad.html"><img src="http://www.dive-marine.com/upfile/rollimage/main_img_140305_031.jpg" width="700" height="423" alt=""/></a></li>
+
+								<li><a href="http://dive-marine.com/liveaboad/similanschedule.html"><img src="http://www.dive-marine.com/upfile/rollimage/main_img_140305_041.jpg" width="700" height="423" alt=""/></a></li>
+
+								<li><a href="http://dive-marine.com/liveaboad/ko-ra.html"><img src="http://www.dive-marine.com/upfile/rollimage/main_img_140305_051.jpg" width="700" height="423" alt=""/></a></li>
+
+								<li><a href="http://dive-marine.com/liveaboad/ko-ra.html"><img src="http://www.dive-marine.com/upfile/rollimage/main_img_140305_061.jpg" width="700" height="423" alt=""/></a></li>
+
+<!-- 						<li><img src="img/content/img_rolling01.jpg" alt=""/></li>
+						<li><img src="img/content/img_rolling01.jpg" alt=""/></li>
+						<li><img src="img/content/img_rolling01.jpg" alt=""/></li> -->
+					</ul>
+				</section>
+				<!-- //중간사이즈 롤링 -->
+
+				<!-- 작은사이즈 롤링 -->
+				<div class="midRight" >
+					<section class="smallRolling">
+						<strong><a href="community/photo_list.html"><img src="img/common/txt_photoGallery.jpg" alt="PHOTO GALLERY"/></a></strong>
+						<ul id="smallRolling" class="cycle-slideshow" data-cycle-slides="li" data-cycle-auto-height="false" data-cycle-timeout="3000"   data-cycle-fx="scrollHorz"     data-cycle-prev="#prev" data-cycle-next="#next" >
+
+<!-- 								<li><a href="community/photo_view.html?seq=184"><img src="http://www.dive-marine.com/upfile/product/IMG_6679.jpg" width="270" height="250" alt=""/></a></li> -->
+								<li><a href="community/photo_view.html?seq=184"><img src="http://www.dive-marine.com/upfile/thumbnail/thumbnail_IMG_6679.jpg" width="270" height="250" alt=""/></a></li>
+
+<!-- 								<li><a href="community/photo_view.html?seq=183"><img src="http://www.dive-marine.com/upfile/product/IMG_35491.jpg" width="270" height="250" alt=""/></a></li> -->
+								<li><a href="community/photo_view.html?seq=183"><img src="http://www.dive-marine.com/upfile/thumbnail/thumbnail_IMG_35491.jpg" width="270" height="250" alt=""/></a></li>
+
+<!-- 								<li><a href="community/photo_view.html?seq=175"><img src="http://www.dive-marine.com/upfile/product/IMG_1320 사본2.jpg" width="270" height="250" alt=""/></a></li> -->
+								<li><a href="community/photo_view.html?seq=175"><img src="http://www.dive-marine.com/upfile/thumbnail/thumbnail_IMG_1320 사본2.jpg" width="270" height="250" alt=""/></a></li>
+
+<!-- 								<li><a href="community/photo_view.html?seq=174"><img src="http://www.dive-marine.com/upfile/product/IMG_67501.jpg" width="270" height="250" alt=""/></a></li> -->
+								<li><a href="community/photo_view.html?seq=174"><img src="http://www.dive-marine.com/upfile/thumbnail/thumbnail_IMG_67501.jpg" width="270" height="250" alt=""/></a></li>
+
+<!-- 								<li><a href="community/photo_view.html?seq=173"><img src="http://www.dive-marine.com/upfile/product/IMG_61411.jpg" width="270" height="250" alt=""/></a></li> -->
+								<li><a href="community/photo_view.html?seq=173"><img src="http://www.dive-marine.com/upfile/thumbnail/thumbnail_IMG_61411.jpg" width="270" height="250" alt=""/></a></li>
+
+<!-- 								<li><img src="img/content/img_photoGal01.jpg" alt=""/></li>
+								<li><img src="img/content/img_photoGal01.jpg" alt=""/></li>
+								<li><img src="img/content/img_photoGal01.jpg" alt=""/></li> -->
+						</ul>
+						<ul class="control">
+							<li id="prev"><img src="img/common/btn_prev.gif" alt="" /></li>
+							<li id="next"><img src="img/common/btn_next.gif" alt="" /></li>
+							<li class="bar"><img src="img/common/img_bar.gif" alt="" /></li>
+							<li id="play"><img src="img/common/btn_play_on.gif" alt="" /></li>
+							<li id="stop"><img src="img/common/btn_stop_off.gif" alt="" /></li>
+						</ul>
+					</section>
+					<!-- //작은사이즈 롤링 -->
+
+					<!-- 날씨정보 -->
+					<section class="weather">
+						<div class="weatherArea">
+							<strong><img src="img/common/txt_today.jpg" alt="TODAY PHUKET.TH"/></strong>
+							<div id="weather"></div>
+						</div>
+						<div class="moneyArea">
+							<strong><img src="img/common/txt_money.jpg" alt="TODAY PHUKET.TH"/></strong>
+							<p><img src="img/common/img_money.jpg"/></p>
+							<p class="currentRate">&nbsp;34.37</p>
+							<p><a href="http://fx.keb.co.kr/FER1101C.web?schID=fex&mID=FER1101C" target="_blank"><img src="img/common/img_bank.jpg"/></a></p>
+						</div>
+						
+	
+						
+					</section>
+					<!-- //날씨정보 -->
+
+
+				</div>
+				<div class="clear" ></div>
+				<!-- 중간메뉴 -->
+				<section class="directMenu">
+					<ul>
+						<li>
+							<img src="img/common/btn_directMenu01_off.jpg" alt="리브어보드 - 시밀란/코모도/라자암팟" class="overImg" usemap="#Map"/>
+							<map name="Map" id="Map">
+								<area shape="rect" coords="55,32,135,112" href="liveaboad/similan.html" />
+								<area shape="rect" coords="32,124,64,141" href="liveaboad/similan.html#similan" />
+								<area shape="rect" coords="75,125,110,141" href="liveaboad/similan.html#komodo" />
+								<area shape="rect" coords="118,125,163,141" href="liveaboad/similan.html#raja" />
+							</map>
+						</li>
+						<li>
+							<img src="img/common/btn_directMenu02_off.jpg" alt="예약하기 - 리브어보드/자격증/체험다이빙" class="overImg" usemap="#Map02"/>
+							<map name="Map02" id="Map02">
+								<area shape="rect" coords="59,32,131,112" href="community/reservation_list.html" />
+								<area shape="rect" coords="18,125,178,142" href="community/reservation_write.html" />
+							</map>
+						</li>
+						<li>
+							<img src="img/common/btn_directMenu03_off.jpg" alt="다이빙 포인트 - 푸켓/피피/힌댕,꼬하" class="overImg" usemap="#Map03"/>
+							<map name="Map03" id="Map03">
+								<area shape="rect" coords="51,38,140,113" href="point/phuket.html" />
+								<area shape="rect" coords="50,125,76,141" href="point/phuket.html" />
+								<area shape="rect" coords="84,127,136,142" href="point/hindaengkohha.html" />
+								<area shape="rect" coords="36,144,68,158" href="point/similan.html" />
+								<area shape="rect" coords="78,143,112,156" href="point/komodo.html" />
+								<area shape="rect" coords="115,140,159,156" href="point/rajaampat.html" />
+							</map>
+						</li>
+						<li>
+							<img src="img/common/btn_directMenu04_off.jpg" alt="커뮤니티 - 질문과 답변/여행후기" class="overImg" usemap="#Map04"/>
+							<map name="Map04" id="Map04">
+								<area shape="rect" coords="58,35,132,112" href="community/notice_list.html" />
+								<area shape="rect" coords="40,124,99,141" href="community/qna_list.html" />
+								<area shape="rect" coords="110,124,155,142" href="community/tour_list.html" />
+							</map>
+						</li>
+						<li class="last">
+							<img src="img/common/btn_directMenu05_off.jpg" alt="갤러리 - 사진/동영상" class="overImg" usemap="#Map05"/>
+							<map name="Map05" id="Map05">
+								<area shape="rect" coords="67,34,126,113" href="community/photo_list.html" />
+								<area shape="rect" coords="63,124,89,141" href="community/photo_list.html" />
+								<area shape="rect" coords="97,126,132,141" href="community/movie_list.html" />
+							</map>
+						</li>
+					</ul>
+				</section>
+				<!-- //중간메뉴 -->
+
+				<section class="imgMenu">
+					<div class="rightArea">
+						<strong><img src="img/content/tit_racha.jpg" alt=""/></strong>
+
+						<div class="tabMenu">
+							<strong class="ra01"><a href="#none"><img src="img/content/tab_racha01_on.jpg" alt=""/></a></strong>
+							<div class="tabMenuCont"><img src="http://www.dive-marine.com/upfile/rollimage/img_theracha01[1]7[1].jpg" alt=""/></div>
+
+							<strong class="ra02"><a href="#none"><img src="img/content/tab_racha02_off.jpg" alt=""/></a></strong>
+							<div class="tabMenuCont"><img src="http://www.dive-marine.com/upfile/rollimage/img_theracha03[1]2.jpg" alt=""/></div>
+
+							<strong class="ra03"><a href="#none"><img src="img/content/tab_racha03_off.jpg" alt=""/></a></strong>
+							<div class="tabMenuCont"><img src="http://www.dive-marine.com/upfile/rollimage/img_theracha02[1]1.jpg" alt=""/></div>
+
+							<strong class="ra04"><a href="#none"><img src="img/content/tab_racha04_off.jpg" alt=""/></a></strong>
+							<div class="tabMenuCont"><img src="http://www.dive-marine.com/upfile/rollimage/img_theracha04[1].jpg" alt=""/></div>
+						</div>
+						<a href="recommend/resort.html" class="btnRacha" ><img src="img/content/btn_racha.jpg" alt=""/></a>
+					</div>
+					<div class="leftArea">
+						<ul>
+
+
+							<li><a href="http://dive-marine.com/liveaboad/ko-ra.html"><img src="http://www.dive-marine.com/upfile/rollimage/img_mainThumb01[1]2[1].jpg" alt=""/></a></li>
+							<li><a href="http://dive-marine.com/liveaboad/similan.html#similan"><img src="http://www.dive-marine.com/upfile/rollimage/img_mainThumb02[1].jpg" alt=""/></a></li>
+							<li><a href="http://dive-marine.com/liveaboad/ko-ra.html#raja"><img src="http://www.dive-marine.com/upfile/rollimage/img_mainThumb03[1].jpg" alt=""/></a></li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- 게시판 목록 -->
+				<section class="boardList">
+					<ul>
+						<li class="notice">
+							<strong><a href="community/notice_list.html"><img src="img/common/txt_notice.jpg" alt="notice"/></a></strong>
+							<ul>
+
+								<li><a href="community/notice_view.html?seq=13">2014년~! 드디어 다이브마린 홈페이지 RENEWAL!</a></li>
+
+								<li><a href="community/notice_view.html?seq=7">2013~2014 시밀란 리브어보드 추가 모집 ! WHITE MANTA</a></li>
+
+								<li><a href="community/notice_view.html?seq=6">2013년 1월 피터팬 리브어보드 추가 모집 ! ^-^</a></li>
+
+								<li><a href="community/notice_view.html?seq=5">라차섬으로 여행오신분들 ! 주목해주세요 ! ^^</a></li>
+
+
+							</ul>
+						</li>
+						<li class="reserve">
+							<strong><a href="community/reservation_list.html"><img src="img/common/txt_reservation.jpg" alt="reservation"/></a></strong>
+							<ul>
+
+								<li><a href="community/reservation_list.html">한국인전용 라차섬투어 예약합니다&nbsp;</a></li>
+
+								<li><a href="community/reservation_list.html">라차섬 예약문의 드립니다&nbsp;(1)</a></li>
+
+								<li><a href="community/reservation_list.html">오픈워터팩키지 예약&nbsp;(1)</a></li>
+
+								<li><a href="community/reservation_list.html">라차섬 한국인 전용투어 예약합니다.&nbsp;(1)</a></li>
+
+							</ul>
+						</li>
+						<li class="divePoint">
+							<strong><a href="community/qna_list.html"><img src="img/common/txt_qna.jpg" alt="Q&A"/></a></strong>
+							<ul>
+
+								<li><a href="community/qna_list.html">라차섬 한국인전용 투어랑 체험다이빙 투어랑 다른게 뭔가요&nbsp;</a></li>
+
+								<li><a href="community/qna_list.html">펀다이빙 피피섬 코스 비용&nbsp;</a></li>
+
+								<li><a href="community/qna_list.html">오픈워터어드벤스 자격증 재발급건&nbsp;</a></li>
+
+								<li><a href="community/qna_list.html">오픈워터 어드밴스 라이센스&nbsp;</a></li>
+
+							</ul>
+						</li>
+						<li class="community">
+							<strong><a href="community/tour_list.html"><img src="img/common/txt_postscript.jpg" alt="postscript"/></a></strong>
+							<ul>
+
+								<li><a href="community/tour_view.html?seq=527">오픈워터  어드밴스드 후기~&nbsp;</a></li>
+
+								<li><a href="community/tour_view.html?seq=526">어드벤스 과정 후기&nbsp;(1)</a></li>
+
+								<li><a href="community/tour_view.html?seq=525">라차섬 체험다이빙 재밌었어요~~&nbsp;(1)</a></li>
+
+								<li><a href="community/tour_view.html?seq=524">라차섬 투어 후기 올립니다 ^^&nbsp;</a></li>
+
+<!-- 								<li><a href="">오픈워터+어드밴스드 예약확인 [1] </a></li>
+								<li><a href="">박미화님 바우처부탁드려요~ [1]</a></li>
+								<li><a href="">라차섬 체험다이빙 [1]</a></li>
+								<li><a href="">라차섬 체험다이빙 [1]</a></li> -->
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<!-- //게시판 목록 -->
+
+				<!-- 빅사이즈 롤링 -->
+				<section class="bigRolling">
+					<ul class="bxslider">
+
+
+
+						<li><iframe width="1000" height="554" src="//www.youtube.com/embed/lgGXkxiqpok?wmode=transparent" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="z-index:9;"></iframe></li>
+
+						<li><img src="http://www.dive-marine.com/upfile/rollimage/img_big01[1].jpg"  alt=""/></li>
+
+						<li><img src="http://www.dive-marine.com/upfile/rollimage/img_big02.jpg"  alt=""/></li>
+
+						<li><img src="http://www.dive-marine.com/upfile/rollimage/img_big03.jpg"  alt=""/></li>
+
+						<li><img src="http://www.dive-marine.com/upfile/rollimage/img_big04.jpg"  alt=""/></li>
+
+						<li><iframe width="1000" height="554" src="//www.youtube.com/embed/dfx3an-2-eg?wmode=transparent" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen style="z-index:9;"></iframe></li>
+
+
+					</ul>
+				</section>
+				<!-- //빅사이즈 롤링 -->
+		</section>
+		<hr/>
+		<!-- //CONTENT -->
+
+
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="inner01">
+				<section class="footerMenu">
+					<ul>
+						<li class="first">
+							<h2><a href="divemarin/intro.html"><img src="img/common/footer_menu01.gif" alt="다이브마린"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="divemarin/intro.html"><img src="img/common/footer_menu01-1.gif" alt="다이브마린 소개"/></a></li>
+								<li><a href="divemarin/staff.html"><img src="img/common/footer_menu01-2.gif" alt="스텝소개"/></a></li>
+								<li><a href="divemarin/boat.html"><img src="img/common/footer_menu01-3.gif" alt="다이브마린 보트"/></a></li>
+								<li><a href="divemarin/location.html"><img src="img/common/footer_menu01-4.gif" alt="오시는길"/></a></li>
+							</ul>
+						</li>
+
+						<li class="second">
+							<h2><a href="racha/intro.html"><img src="img/common/footer_menu02.gif" alt="라차섬"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="racha/intro.html"><img src="img/common/footer_menu02-1.gif" alt="라차섬 소개"/></a></li>
+								<li><a href="racha/korean.html"><img src="img/common/footer_menu02-2.gif" alt="라차섬 한국인 전용투어"/></a></li>
+								<li><a href="racha/dsd.html"><img src="img/common/footer_menu02-3.gif" alt="라차섬 체험다이빙"/></a></li>
+								<li><a href="racha/viewer.html"><img src="img/common/footer_menu02-4.gif" alt="볼거리"/></a></li>
+								<li><a href="racha/seaquest.html"><img src="img/common/footer_menu02-5.gif" alt="Seaquest"/></a></li>
+								<li><a href="racha/club.html"><img src="img/common/footer_menu02-6.gif" alt="Club"/></a></li>
+							</ul>
+						</li>
+
+						<li class="third">
+							<h2><a href="liveaboad/similan.html"><img src="img/common/footer_menu03.gif" alt="리브어보드"/></a></h2>
+							<ul class="footerDepth02">
+								<li>
+									<a href="liveaboad/similan.html"><img src="img/common/footer_menu03-1.gif" alt="시밀란"/></a>
+									<ul class="depth03">
+										<li><h4><a href="liveaboad/similanliveaboad.html"><img src="img/common/footer_menu03-1-1.gif" alt="시밀란 리브어보드"/></a></h4></li>
+										<li><h4><a href="liveaboad/similanSchedule.html"><img src="img/common/footer_menu03-1-2.gif" alt="시밀란 스케쥴"/></a></h4></li>
+									</ul>
+								</li>
+								<li>
+									<a href="liveaboad/ko-ra.html"><img src="img/common/footer_menu03-2.gif" alt="코모도/라자암팟"/></a>
+									<ul class="depth03">
+										<li><h4><a href="liveaboad/ko-raliveaboad.html"><img src="img/common/footer_menu03-2-1.gif" alt="코모도/라자암팟 리브어보드"/></a></h4></li>
+										<li><h4><a href="liveaboad/ko-raschedule.html"><img src="img/common/footer_menu03-2-2.gif" alt="코모도/라자암팟 스케쥴"/></a></h4></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="forth">
+							<h2><a href="phuketdiving/padi.html"><img src="img/common/footer_menu04.gif" alt="푸켓다이빙"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="phuketdiving/padi.html"><img src="img/common/footer_menu04-1.gif" alt="PADI 코스"/></a></li>
+								<li><a href="phuketdiving/fun.html"><img src="img/common/footer_menu04-2.gif" alt="펀다이빙"/></a></li>
+								<li><a href="phuketdiving/experience.html"><img src="img/common/footer_menu04-4.gif" alt="코스 비용"/></a></li>
+							</ul>
+						</li>
+
+						<li class="fifth">
+							<h2><a href="license/openwater.html"><img src="img/common/footer_menu05.gif" alt="다이빙자격증패키지"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="license/openwater.html"><img src="img/common/footer_menu05-1.gif" alt="오픈워터 패키지"/></a></li>
+								<li><a href="license/advanced.html"><img src="img/common/footer_menu05-2.gif" alt="어드밴스드 패키지"/></a></li>
+								<li><a href="license/all.html"><img src="img/common/footer_menu05-3.gif" alt="오픈워터/어드밴스드 패키지"/></a></li>
+							</ul>
+						</li>
+
+						<li class="sixth">
+							<h2><a href="point/phuket.html"><img src="img/common/footer_menu06.gif" alt="다이빙포인트"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="point/phuket.html"><img src="img/common/footer_menu06-1.gif" alt="푸켓"/></a></li>
+								<li><a href="point/phiphi.html"><img src="img/common/footer_menu06-2.gif" alt="피피"/></a></li>
+								<li><a href="point/hindaengkohha.html"><img src="img/common/footer_menu06-3.gif" alt="흰댕/꼬하"/></a></li>
+								<li><a href="point/similan.html"><img src="img/common/footer_menu06-4.gif" alt="시밀란"/></a></li>
+								<li><a href="point/komodo.html"><img src="img/common/footer_menu06-5.gif" alt="코모도"/></a></li>
+								<li><a href="point/rajaampat.html"><img src="img/common/footer_menu06-6.gif" alt="라자암팟"/></a></li>
+							</ul>
+						</li>
+
+						<li class="seventh">
+							<h2><a href="recommend/view.html"><img src="img/common/footer_menu07.gif" alt="푸켓관광"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="recommend/view.html"><img src="img/common/footer_menu07-1.gif" alt="볼거리"/></a></li>
+								<li><a href="recommend/tour.html"><img src="img/common/footer_menu07-2.gif" alt="투어"/></a></li>
+								<li><a href="recommend/resort.html"><img src="img/common/footer_menu07-3.gif" alt="더라차 리조트"/></a></li>
+								<li><a href="recommend/studyposition.html"><img src="img/common/footer_menu07-4.gif" alt="교육추천장소"/></a></li>
+							</ul>
+						</li>
+
+						<li class="eighth">
+							<h2><a href="community/notice_list.html"><img src="img/common/footer_menu08.gif" alt="커뮤니티"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="community/notice_list.html"><img src="img/common/footer_menu08-1.gif" alt="공지사항"/></a></li>
+								<li><a href="community/qna_list.html"><img src="img/common/footer_menu08-2.gif" alt="질문과 답변"/></a></li>
+								<li><a href="community/reservation_list.html"><img src="img/common/footer_menu08-3.gif" alt="예약게시판"/></a></li>
+								<li><a href="community/faq_list.html"><img src="img/common/footer_menu08-4.gif" alt="자주묻는 FAQ"/></a></li>
+								<li><a href="community/photo_list.html"><img src="img/common/footer_menu08-5.gif" alt="포토갤러리"/></a></li>
+								<li><a href="community/movie_list.html"><img src="img/common/footer_menu08-6.gif" alt="동영상갤러리"/></a></li>
+								<li><a href="community/tour_list.html"><img src="img/common/footer_menu08-7.gif" alt="여행후기"/></a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="inner02">
+				<section class="footerInfo">
+					<ul>
+						<li class="left"><a href=""><img src="img/common/img_logo02.jpg" alt="DIVE MARIN"/></a></li>
+						<li class="right"><img src="img/common/txt_footer03.jpg" alt="계좌정보 : 우리은행 (예금주:박철규) : 695-097951-12-101"/></li>
+						<li class="left info01"><img src="img/common/txt_footer01.jpg" alt="대표명 : 박철규  사업자등록번호 : 33-04165 Tel : 070-8236-0818 / 66-(0)87-888-0818   Email : divemarine@hotmail.com Address : 33/48 M.7 Soi Chaola55 T.Chalong A. Muang Phuket 83130 Thailand"/></li>
+						<li class="right info02"><img src="img/common/txt_footer04.jpg" alt="kakaotalk : divemarine"/></li>
+						<li class="left info03"><img src="img/common/txt_footer02.jpg" alt="COPYRIGHT(C) 2009 DIVE MARINE ALL RIGHTS RESERED."/></li>
+						<li class="right">
+							<img src="img/common/img_footer01.jpg" alt="PADI, sea quest, The" usemap="#fMap"/>
+							<map name="fMap" id="fMap">
+							  <area shape="rect" coords="1,2,96,49" href="http://www.padi.com/" target="_blank"/>
+							  <area shape="rect" coords="99,4,184,48" href="http://www.seaquest.th.com/" target="_blank"/>
+							  <area shape="rect" coords="184,2,241,49" href="http://www.theracha.com/new/index.htm" target="_blank"/>
+							  <area shape="rect" coords="244,4,349,50" href="http://www.diveland.kr/" target="_blank"/>
+							</map>
+						</li>
+					</ul>
+					<div class="coop">
+						<select name="coop" id="coop">
+							<option>다이브마린 협력사</option>
+
+								<option value="http://cafe.naver.com/divefor">다이빙포유</option>
+
+						</select>
+					</div>
+				</section>
+			</div>
+		</footer>
+		<!-- //FOOTER -->
+	</div>
+
+	<form name="regFrm" id="regFrm" method="post">
+	<!-- 메일링폼 -->
+		<div id="mailingLayer" class="mailingLayer">
+			<strong><img src="img/common/txt_mailingTit.gif" /></strong>
+				<div class="tableArea">
+					<table>
+						<colgroup>
+							<col width="25%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이름</th>
+								<td><input type="text" style="width:50%;" title="이름" id="name" name="name" nullable=true /></td>
+							</tr>
+							<tr>
+								<th scope="row">연락처</th>
+								<!-- <td><input type="text" style="width:50px;"/> - <input type="text" style="width:50px;"/> - <input type="text" style="width:50px;"/></td> -->
+								<td>
+											<select name="phoneSelect02" id="phoneSelect02" title="휴대전화번호 앞자리 선택">
+												
+	<option value="">선택</option>	
+	<option value="010" >010</option>
+	<option value="011" >011</option>
+	<option value="016" >016</option>
+	<option value="017" >017</option>
+	<option value="018" >018</option>
+	<option value="019" >019</option>	
+
+											</select> - <input type="text" id="phoneSelect02_1" name="phoneSelect02_1" title="휴대전화번호 가운데 자리" value="" style="width:50px;" maxlength="4" chartype="onlynum" nullable="false" /> - <input type="text" id="phoneSelect02_2" name="phoneSelect02_2"  title="휴대전화번호 마지막 자리" value="" style="width:50px;" maxlength="4" chartype="onlynum" nullable="false" />
+
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">메일</th>
+								<td class="mailingTd">
+									<input type="text" id="email"  name="email" title="이메일 입력" class="emailInput" value="" style="width:70px;" maxlength="50"  nullable="true"/> @
+									<input type="text" id="emailDetail" name="emailDetail"  title="이메일주소 입력" class="emailInput" value="" style="width:70px;" maxlength="50"  nullable="true"/>
+									<select name="emailSelect" id="emailSelect" title="이메일 선택">
+										
+	<option value="" selected>-선택-</option>
+	<option value="naver.com"    >     naver.com    </option>
+	<option value="nate.com" >      nate.com     </option>
+	<option value="chol.com"     >      chol.com     </option>
+	<option value="dreamwiz.com" >  dreamwiz.com </option>
+	<option value="empal.com" >     empal.com    </option>
+	<option value="freechal.com" >  freechal.com </option>
+	<option value="gmail.com" >     gmail.com    </option>
+	<option value="hanmail.net" >   hanmail.net  </option>
+	<option value="hanmir.com" >    hanmir.com   </option>
+	<option value="hitel.net" >     hitel.net    </option>
+	<option value="hotmail.com" >   hotmail.com  </option>
+	<option value="korea.com" >     korea.com    </option>
+	<option value="lycos.co.kr" >   lycos.co.kr  </option>	
+	<option value="netian.com" >    netian.com   </option>
+	<option value="paran.com" >     paran.com    </option>
+	<option value="yahoo.com" >     yahoo.com    </option>
+	<option value="yahoo.co.kr" >   yahoo.co.kr  </option>
+	<option value="" >기타</option>
+
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">스쿠버 레벨</th>
+								<td class="mailingTd02">
+									<select id="lavelSelect" name="lavelSelect">
+										<option value="">--선택해주세요--</option>
+										<option value="레벨없음"  >레벨없음</option>
+										<option value="체험다이버"  >체험다이버</option>
+										<option value="오픈워터"  >오픈워터</option>
+										<option value="어드벤스드"  >어드벤스드</option>
+										<option value="레스큐"  >레스큐</option>
+										<option value="다이브마스터"  >다이브마스터</option>
+										<option value="보조강사"  >보조강사</option>
+										<option value="강사"  >강사</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">방문유무</th>
+								<td>: 다이브마린을 다녀간적이 있다. <label for="yes">예</label><input type="radio" id="yes" name="visit" value="Y" checked/> <label for="no">아니오</label><input type="radio" id="no" name="visit" value="N"/></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="btns"><button type="button" class="btnEnter" id="btnEnter">확인</button><button type="button" class="btnCancel" onclick="HideModalPopup('mailingLayer'); return false;">취소</button></div>
+		</div>
+	</form>
+	<!-- 메일링폼 -->
+ </body>
+
+</html>
+<iframe name="comIframe" id="comIframe" src="about:blank" height="0" width="0"></iframe>

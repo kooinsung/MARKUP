@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>레이아웃 샘플</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div id="headerWrap">
+		<div id="header">
+			<h1><a href="#" title="홈페이지 새창 열림"><img src="images/logo.png" alt="로고" /></a></h1>
+			<p><strong>관리자</strong>님 반갑습니다. <input type="image" src="images/btn_logout.gif" alt="로그아웃" /></p>
+		</div>
+	</div>
+	<div id="container">
+		<div id="leftSide">
+			<!-- gnb -->
+			<ul id="gnb">
+				<li class="on"><a href="#">1뎁스 메뉴명</a>
+					<ul class="gnbDepth2" style="display:block">
+						<li class="on"><a href="#">2뎁스 메뉴명</a>
+							<ul class="gnbDepth3" style="display:block">
+								<li class="on"><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+						<li><a href="#">2뎁스 메뉴명</a>
+							<ul class="gnbDepth3">
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+						<li><a href="#">2뎁스 메뉴명</a></li>
+					</ul>
+				</li>
+				<li><a href="#">1뎁스 메뉴명</a>
+					<ul class="gnbDepth2">
+						<li><a href="#">2뎁스 메뉴명</a>
+							<ul class="gnbDepth3">
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+						<li><a href="#">2뎁스 메뉴명</a></li>
+						<li><a href="#">2뎁스 메뉴명</a>
+							<ul class="gnbDepth3">
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="#">1뎁스 메뉴명</a>
+					<ul class="gnbDepth2">
+						<li><a href="#">2뎁스 메뉴명</a>
+							<ul class="gnbDepth3">
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+						<li><a href="#">2뎁스 메뉴명</a>
+							<ul class="gnbDepth3">
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+						<li><a href="#">2뎁스 메뉴명</a>
+							<ul class="gnbDepth3">
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+								<li><a href="#">3뎁스 메뉴명</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- //gnb -->
+		</div>
+		<div id="rightSide">
+			<!-- content -->
+			<div id="content">
+				<p class="locaion">1뎁스 메뉴명 &gt; 2뎁스 메뉴명 &gt; <strong>3뎁스 메뉴명</strong></p>
+				<!-- 컨텐츠 영역 -->
+				<!-- 게시판 상단 검색 영역2 -->
+				<div class="srchArea">
+					<table class="tbl_srch">
+					<colgroup>
+						<col width="15%" />
+						<col width="*" />
+						<col width="15%" />
+						<col width="*" />
+						<col width="15%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row">와인구분</th>
+							<td>
+								<select style="width:100px">
+									<option value="">전체</option>
+								</select>
+							</td>
+							<th scope="row">생산국</th>
+							<td>
+								<select style="width:100px">
+									<option value="">전체</option>
+								</select>
+							</td>
+							<th scope="row">공개유무</th>
+							<td>
+								<select style="width:100px">
+									<option value="">전체</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">등록일</th>
+							<td colspan="5">
+								<span class="date"><input type="text" class="datepicker" /> ~ <input type="text" class="datepicker2" /></span>
+								<a href="javascript:setDate(7);" class="btnDefault"><span>1주일</span></a>
+								<a href="javascript:setDate(1);" class="btnDefault"><span>1개월</span></a>
+								<a href="javascript:setDate(3);" class="btnDefault"><span>3개월</span></a>
+								<a href="javascript:setDate(6);" class="btnDefault"><span>6개월</span></a>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제품구분</th>
+							<td colspan="5">
+								<input type="checkbox" /><label>New</label>
+								<input type="checkbox" /><label>Best</label>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">제품명</th>
+							<td colspan="5">
+								<input type="text" style="width:300px" />
+							</td>
+						</tr>
+					</tbody>
+					</table>
+					<p class="btnZone"><a href="#" class="btnDelete"><span>취소</span></a> <a href="#" class="btnRegist"><span>검색</span></a></p>
+				</div>
+				<!-- //게시판 상단 검색 영역2 -->
+				<!-- Board List -->
+				<!-- 전체건수 -->
+				<p class="srchResult">
+					<span class="listNum">전체 건수 : <strong class="fcRed">100</strong>건</span>
+					<span class="btn"><a href="#" class="btnDown"><span>엑셀파일 다운로드</span></a></span>
+				</p>
+				<!-- //전체건수 -->
+				<table class="tbl_list">
+					<colgroup>
+						<col width="6%" />
+						<col width="6%" />
+						<col width="*" />
+						<col width="18%" />
+						<col width="20%" />
+						<col width="12%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">선택</th>
+							<th scope="col">번호</th>
+							<th scope="col">제목</th>
+							<th scope="col">등록자</th>
+							<th scope="col">등록일</th>
+							<th scope="col">조회</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>10</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>9</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>8</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>7</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>6</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>5</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>4</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>3</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>2</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>1</td>
+							<td class="title"><a href="#">게시물 제목을 입력해 주세요</a></td>
+							<td>관리자</td>
+							<td>2014-01-01</td>
+							<td>125</td>
+						</tr>
+						<tr class="none">
+							<td colspan="6" class="txtCenter">검색된 게시물이 없습니다.</td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- //Board List -->
+				<!-- 페이징 -->
+				<div class="paging">
+					<span class="mgr"><a href="#"><img src="images/btn_pageFirst.gif" alt="처음으로" /></a></span><span><a href="#"><img src="images/btn_pagePrev.gif" alt="이전" /></a></span>
+					<a href="#" class="first">1</a>
+					<strong>2</strong>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#" class="last">10</a>
+					<span class="mgr"><a href="#"><img src="images/btn_pageNext.gif" alt="다음" /></a></span><span><a href="#"><img src="images/btn_pageLast.gif" alt="끝으로" /></a></span>
+				</div>
+				<!-- //페이징 -->
+				<p><a href="#" class="btnDelete"><span>선택항목을 삭제</span></a></p>
+				<!-- //컨텐츠 영역 -->
+			</div>
+			<!-- //content -->
+		</div>
+	</div>
+	<div id="footer">
+		<address>Copyright ⓒ 2013 디나인컴즈. All Rights Reserved.</address>
+	</div>
+</div>
+</body>
+</html>

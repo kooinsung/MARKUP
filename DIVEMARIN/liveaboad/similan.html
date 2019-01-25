@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+	<title>시밀란 - DIVE MARIN </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/content.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/form.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/common.js"></script>
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script>
+		$(document).ready(function(){
+			var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+				slideshows.not(this).cycle('goto', opts.currSlide);
+			});
+
+			$('#cycle-2 .cycle-slide').click(function(){
+				var index = $('#cycle-2').data('cycle.API').getSlideIndex(this);
+				slideshows.cycle('goto', index);
+			});
+		});
+	</script>
+ </head>
+
+ <body>
+
+	<div id="wrap">
+
+		<!-- HEADER -->
+		<header>
+			<div class="inner">
+				<!-- 로고 -->
+				<h1><img src="../img/common/img_logo.jpg" alt="DIVE MARIN"/></h1>
+				<!-- //로고 -->
+
+				<!-- 메일링 -->
+				<div class="mailing"><a href=""><img src="../img/common/txt_mailing.jpg" alt="new! 다이브마린의 새로운 소식을 받아보세요!"></a></div>
+				<!-- //메일링 -->
+			</div>
+
+			<!-- gnb -->
+			<nav>
+				<ul id="gnb">
+					<li>
+						<h2><a href="../divemarin/intro.html"><img src="../img/common/nav01_off.jpg" alt="다이브마린"/></a></h2>
+						<ul class="depth02 depth02-1">
+							<li><a href="../divemarin/intro.html"><img src="../img/common/nav01-1_off.jpg" alt="다이브마린 소개"/></a></li>
+							<li><a href="../divemarin/staff.html"><img src="../img/common/nav01-2_off.jpg" alt="스탭소개"/></a></li>
+							<li><a href="../divemarin/boat.html"><img src="../img/common/nav01-3_off.jpg" alt="다이브마린 보트"/></a></li>
+							<li><a href="../divemarin/location.html"><img src="../img/common/nav01-4_off.jpg" alt="오시는 길"/></a></li>
+						</ul>
+					</li>
+					<li>
+						<h2><a href="../racha/intro.html"><img src="../img/common/nav02_off.jpg" alt="라차섬"/></a></h2>
+							<ul class="depth02 depth02-2">
+								<li><a href="../racha/intro.html"><img src="../img/common/nav02-1_off.jpg" alt="라차섬 소개"/></a></li>
+								<li><a href="../racha/korean.html"><img src="../img/common/nav02-2_off.jpg" alt="라차섬 한국인 전용투어"/></a></li>
+								<li><a href="../racha/dsd.html"><img src="../img/common/nav02-3_off.jpg" alt="DSD 체험 다이빙"/></a></li>
+								<li><a href="../racha/viewer.html"><img src="../img/common/nav02-4_off.jpg" alt="라차섬 볼거리"/></a></li>
+								<li><a href="../racha/seaquest.html"><img src="../img/common/nav02-5_off.jpg" alt="Seaquest"/></a></li>
+								<li><a href="../racha/club.html"><img src="../img/common/nav02-6_off.jpg" alt="Club del mar"/></a></li>
+							</ul>
+					</li>
+					<li>
+						<h2><a href="../liveaboad/similan.html"><img src="../img/common/nav03_off.jpg" alt="리브어보드"/></a></h2>
+						<ul class="depth02 depth02-3">
+							<li><a href="../liveaboad/similan.html"><img src="../img/common/nav03-1_off.jpg" alt="시밀란 -시밀란 리브어보드 -스케쥴 / 일정 / 비용 "/></a></li>
+							<li><a href="../liveaboad/komodo.html"><img src="../img/common/nav03-2_off.jpg" alt="코모도 / 라자암팟   - 코모도 / 라자암팟 리브어보드 -스케쥴"/></a></li>
+						</ul>
+					</li>
+					<li>
+						<h2><a href="../phuketdiving/padi.html"><img src="../img/common/nav04_off.jpg" alt="푸켓다이빙"/></a></h2>
+						<ul class="depth02 depth02-4">
+							<li><a href="../phuketdiving/padi.html"><img src="../img/common/nav04-1_off.jpg" alt="PADI 코스"/></a></li>
+							<li><a href="../phuketdiving/fun.html"><img src="../img/common/nav04-2_off.jpg" alt="펀다이빙"/></a></li>
+							<li><a href="../phuketdiving/experience.html"><img src="../img/common/nav04-3_off.jpg" alt="체험다이빙"/></a></li>
+						</ul>
+					</li>
+					<li>
+						<h2><a href="../license/openwater.html"><img src="../img/common/nav05_off.jpg" alt="다이빙자격증패키지"/></a></h2>
+						<ul class="depth02 depth02-5">
+							<li><a href="../license/openwater.html"><img src="../img/common/nav05-1_off.jpg" alt="오픈워터 패키지"/></a></li>
+							<li><a href="../license/advanced.html"><img src="../img/common/nav05-2_off.jpg" alt="어드밴스드 패키지"/></a></li>
+							<li><a href="../license/all.html"><img src="../img/common/nav05-3_off.jpg" alt="오픈워터 / 어드밴스드 패키지"/></a></li>
+						</ul>
+					</li>
+					<li>
+						<h2><a href="../point/phuket.html"><img src="../img/common/nav06_off.jpg" alt="다이빙포인트"/></a></h2>
+						<ul class="depth02 depth02-6">
+							<li><a href="../point/phuket.html"><img src="../img/common/nav06-1_off.jpg" alt="푸켓"/></a></li>
+							<li><a href="../point/phiphi.html"><img src="../img/common/nav06-2_off.jpg" alt="피피"/></a></li>
+							<li><a href="../point/hindaengkohha.html"><img src="../img/common/nav06-3_off.jpg" alt="흰댕 / 꼬하"/></a></li>
+							<li><a href="../point/similan.html"><img src="../img/common/nav06-4_off.jpg" alt="시밀란"/></a></li>
+							<li><a href="../point/komodo.html"><img src="../img/common/nav06-5_off.jpg" alt="코모도"/></a></li>
+							<li><a href="../point/rajaampat.html"><img src="../img/common/nav06-6_off.jpg" alt="라자암팟"/></a></li>
+						</ul>
+					</li>
+					<li>
+						<h2><a href="../recommend/view.html"><img src="../img/common/nav07_off.jpg" alt="푸켓추천"/></a></h2>
+						<ul class="depth02 depth02-7">
+							<li><a href="../recommend/viewer.html"><img src="../img/common/nav07-1_off.jpg" alt="볼거리"/></a></li>
+							<li><a href="../recommend/tour.html"><img src="../img/common/nav07-2_off.jpg" alt="투어"/></a></li>
+							<li><a href="../recommend/resort.html"><img src="../img/common/nav07-3_off.jpg" alt="더라차 리조트"/></a></li>
+							<li><a href="../recommend/studyposition.html"><img src="../img/common/nav07-4_off.jpg" alt="교육추천장소"/></a></li>
+						</ul>
+					</li>
+					<li>
+						<h2><a href="../community/notice_list.html"><img src="../img/common/nav08_off.jpg" alt="커뮤니티"/></a></h2>
+						<ul class="depth02 depth02-8">
+							<li><a href="../community/notice_list.html"><img src="../img/common/nav08-1_off.jpg" alt="공지사항"/></a></li>
+							<li><a href="../community/qna_list.html"><img src="../img/common/nav08-2_off.jpg" alt="질문과 답변"/></a></li>
+							<li><a href="../community/reservation_list.html"><img src="../img/common/nav08-3_off.jpg" alt="예약게시판"/></a></li>
+							<li><a href="../community/faq_list.html"><img src="../img/common/nav08-4_off.jpg" alt="자주묻는 FAQ"/></a></li>
+							<li><a href="../community/photo_list.html"><img src="../img/common/nav08-5_off.jpg" alt="포토갤러리"/></a></li>
+							<li><a href="../community/movie_list.html"><img src="../img/common/nav08-6_off.jpg" alt="동영상갤러리"/></a></li>
+							<li><a href="../community/tour_list.html"><img src="../img/common/nav08-7_off.jpg" alt="여행후기"/></a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<!-- //gnb -->
+		</header>
+		<hr/>
+		<!-- //HEADER -->
+
+		<!-- CONTENT -->
+		<section id="contentSub03">
+			<div class="inner">
+				<!-- 타이틀 & 로케이션 -->
+				<div class="tit">
+					<h3><img src="../img/content/txt_similan.jpg" alt="시밀란"/></h3>
+					<p class="location">HOME &#62; 리브어보드 &#62; <strong class="current">시밀란</strong></p>
+				</div>
+				<!-- //타이틀 & 로케이션 -->
+				
+				<!-- 시밀란  -->
+				<div class="similan">
+					<ul class="similanMenu">
+						<li class="first on"><a href="../liveaboad/similan.html">시밀란</a></li>
+						<li class="second"><a href="../liveaboad/similanliveaboad.html">시밀란 리브어보드</a></li>
+						<li class="last"><a href="../liveaboad/similanschedule.html">스케쥴</a></li>
+					</ul>
+					<strong><img src="../img/content/txt_similan02.jpg" alt="시밀란"/></strong>
+					<div class="similanGallery">
+						<div id="slideshow-1">
+			        <a href="#" class="cycle-prev"><img src="../img/common/btn_prev02.gif" alt="이전"/></a>
+								<div id="cycle-1" class="cycle-slideshow"
+										data-cycle-slides="> div"
+										data-cycle-timeout="0"
+										data-cycle-prev="#slideshow-1 .cycle-prev"
+										data-cycle-next="#slideshow-1 .cycle-next"
+										data-cycle-caption="#slideshow-1 .custom-caption"
+										data-cycle-caption-template="Slide {{slideNum}} of {{slideCount}}"
+										data-cycle-fx="tileBlind",
+										data-cycle-loader="wait"
+										>
+										<div><img src="../img/content/img_similanGel01.jpg" width="900" height="500"></div>
+										<div><img src="../img/content/img_similanGel02.jpg" width="900" height="500"></div>
+										<div><img src="../img/content/img_similanGel03.jpg" width="900" height="500"></div>
+								</div>
+						<a href="#" class="cycle-next"><img src="../img/common/btn_next02.gif" alt="이전"/></a>
+						</div>
+						<div id="slideshow-2">
+							<div class="inner">
+								<div id="cycle-2" class="cycle-slideshow"
+										data-cycle-slides="> div"
+										data-cycle-timeout="0"
+										data-cycle-prev="#slideshow-2 .cycle-prev"
+										data-cycle-next="#slideshow-2 .cycle-next"
+										data-cycle-caption="#slideshow-2 .custom-caption"
+										data-cycle-caption-template="Slide {{slideNum}} of {{slideCount}}"
+										data-cycle-fx="carousel"
+										data-cycle-carousel-visible="10"
+										data-cycle-carousel-fluid=true
+										data-allow-wrap="false"
+										>
+										<div>
+											<div class="thumbBorder"></div>
+											<img src="../img/content/img_similanGel01.jpg" width="" height="">
+										</div>
+										<div>
+											<div class="thumbBorder"></div>
+											<img src="../img/content/img_similanGel02.jpg" width="" height="">
+										</div>
+										<div>
+											<div class="thumbBorder"></div>
+											<img src="../img/content/img_similanGel03.jpg" width="" height="">
+										</div>
+										<div><img src="../img/content/img_default.jpg" width="" height=""></div>
+										<div><img src="../img/content/img_default.jpg" width="" height=""></div>
+										<div><img src="../img/content/img_default.jpg" width="" height=""></div>
+										<div><img src="../img/content/img_default.jpg" width="" height=""></div>
+										<div><img src="../img/content/img_default.jpg" width="" height=""></div>
+										<div><img src="../img/content/img_default.jpg" width="" height=""></div>
+										<div><img src="../img/content/img_default.jpg" width="" height=""></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p class="similanText">
+						말레이어 숫자 '9'를 의미하는 셈빌란(sembelan)에서 유래된 시밀란은 9개의 섬으로 이루어져 있습니다. 푸켓 섬으로부터 북서쪽 약 90km 떨어진 해상에 위치한 9개의 크고 작은 섬들이 30km에 걸쳐 남북으로 길게 늘어선 시밀란 군도는 모래와 암초가 어우러져 수심이 적당하고 조용한 아름다운 산호 서식지에서부터 수심도 깊고 때때로 강한 조류도 있지만 시야가 굉장히 맑고 다양한 종류의 산호나 대형어종들을 쉽게 볼 수 있는 지역 등 여러 수준의 다이빙 실력과 다양한 취향의 다이버들의 요구를 모두 받아들일 수 있는 풍부한 수중환경을 가지고 있습니다.바위동굴과 아치, 때에 따라 나타나는 고래상어, 만타레이 등 각종 물고기들과 연산호로 꽉 들어찬 암초지대 등 그야말로 수중생물의 전시장이며 다이빙의 천국이라 할 수 있습니다. 기후적인 영향과 국립해양공원의 보존을 이유로 1년에 6개월, 10월말부터 이듬해 4월까지만 입장이 허용되고 있는 시밀란은 세계 10대 다이비이 포인트로 다이버들의 많은 사랑을 받고 있습니다.
+					</p>
+					<p><img src="../img/content/txt_similan03.jpg" alt="Similan National Park"/></p>
+					<div class="similanMap">
+						<div class="left"><img src="../img/content/img_similan.jpg" alt=""/></div>
+						<div class="right">
+							<strong><img src="../img/content/txt_similan04.jpg" alt=""/></strong>
+							<p>꼬 바느는 해변은 없지만, 독특한 해저 암석산들과 수중풍경으로 다이버들 사이에서 인기가 많습니다. 이 섬에는 유명한 다이브 사이트인 크리스마스 포인트(Christmas Point)와 록키 포인트(Rocky Point)가 있습니다. </p>
+							<strong><img src="../img/content/txt_similan05.jpg" alt=""/></strong>
+							<p>국립공원 관리사무소가 있는 8번 섬, 꼬 시밀란. 시말란 군도 중 가장 높고, 가장 큰 섬입니다. 관리사무소 바로 앞에는 도날드덕 베이(Donald Duck Bay)로 불리는 초승달 모양의 산호 모래해변이 펼쳐져 있는데 이곳이 바로 시밀란을 상징하는 세일락(Sail Rock)이 있는 섬입니다. 억겁의 세월 동안 파도에 깍여 가루가 된 산호모래가 300여m 해변을 뒤덮고 있는데 이 산호모레는 '파우더'라 불리울 정도로 보드랍고 하얗고 곱습니다. 또한 맑은 물은 바닥에 쌓인 산호모래가 빛을 반사한 덕분에 얼음처럼 차갑고 투명한 푸른빛이라고 해서 '아이스 블루(Ice Blue)'라고 불립니다.</p>
+							<strong><img src="../img/content/txt_similan06.jpg" alt=""/></strong>
+							<p>꼬 파유는 화강암산과 절벽 모래시장으로 어우러진 섬입니다. 딥식스(Deep Six)와 에덴의 동쪽(East of Eden)은 유명한 다이빙포인트로 항상 다이버들에게 다양하고 화려한 산호와 부채꼴산호, 해양어류의 군집을 제공합으로써 깊은 인상을 남깁니다.</p>
+							<strong><img src="../img/content/txt_similan07.jpg" alt=""/></strong>
+							<p>꼬 하와 꼬 혹, 이 두섬은 꼬 미앙의 동쪽에 위치하며 다른 섬들에 비해서 작지만 수정광경이 화려하며, 아주 고운 산호 해변으로 유명합니다.</p>
+							<strong><img src="../img/content/txt_similan08.jpg" alt=""/></strong>
+							<p>시밀란 국립공원에는 관리사무실이 두군데 있습니다.그 중 하나는 4번 섬 꼬미앙에 있습니다. 민물이 공급되며, 북쪽 끝에 있는 핫 야이 (Haad-Yai)와 동쪽 끝에 위치한 핫 렉 (Haad-Lek)의 두개의 모래해변이 있습니다. 4번 섬은 태국 왕실의 별장과 방갈로 형태의 숙박시설과 텐트장, 가벼운 식사가 가능한 식당이 있습니다. 시밀란 군도에서 숙박이 가능한 곳은 4번섬과 8번섬으로, 이 두섬은 스노쿨링이 가능하여 푸켓을 찾는 휴양객들이 데이트립(Day Trip)으로 많이 찾는 곳이 되었습니다.</p>
+							<strong><img src="../img/content/txt_similan09.jpg" alt=""/></strong>
+							<p>꼬 파양과 꼬 파안은 1번 섬 꼬 후용과 마찬가지로 보호지역으로 스쿠버다이빙을 금지하고 있습니다.</p>
+							<strong><img src="../img/content/txt_similan10.jpg" alt=""/></strong>
+							<p>꼬 후용은 두번째로 큰 섬으로 4번섬에서 8km 남쪽에 위치합니다. 시밀란 군도에서 가장 큰 산호 모래시장 해변이 이 섬에 위치하고 있습니다. 이 해변은 바다거북의 산란장으로 보호구역으로 지정되어 있어 입장하고자 한다면 공원 관리소의 허가가 필요합니다.</p>
+							<div class="north"><img src="../img/content/txt_similan11.jpg" alt=""/></div>
+							<strong><img src="../img/content/txt_similan12.jpg" alt=""/></strong>
+							<p>시밀란 섬에서 북쪽으로 약 20km에위치한 이 섬은 무인도이며.비치도 없습니다. 섬 서쪽으로 만을<br/>형성하고 있어 이곳에서 배들이 정박하며 휴식을 취하거나 야간 다이빙을 실시합니다.<br/>레오파드 상어는 봉우리와 벽 아래의 평평한 모래시장에서 흔히 볼 수 있습니다.<br/>연산호와 시밀란처럼 선명하지는 않지만 산호의 색은 완전히 다르고 터키 색, 노랑 그리고 파랑 외에도<br/>더욱 일반적인 분홍과 보라의 농도가 포함되어 있습니다. 꼬 본은 특히 물속에 많은 플랑크톤이 시즌<br/>막바지를 향해 갈수록 만타레이를 볼 수 있는 보다 좋은 장소 중 하나입니다.</p>
+							<strong><img src="../img/content/txt_similan13.jpg" alt=""/></strong>
+							<p>꼬 본 북쪽 25km의 꼬 타차이는 섬과 직각을 이루는 앞바다에 수중 산마루가 있습니다. 이는 태국에서<br/>최고의 다이브 중 하나입니다. 오염되지 않은 아름다운 비치가 꼬 타차이는 고래상어와 만타를 기대해<br/>볼 수 있습니다.</p>
+							<strong><img src="../img/content/txt_similan14.jpg" alt=""/></strong>
+							<p>수린(Surin)섬 동쪽 약 18km 수정에 있는 바위입니다. 고래상어와 함께 수영할 수 있는 세계 최고의<br/>장소를 썰물 때 GPS 설비를 장착하지 않은 보트는 항해의 위험에 노출됩니다.보통 2월에서 4월에<br/>방문하기가 가장 좋습니다.</p>
+						</div>
+					</div>
+				</div>
+				<!-- //시밀란 -->
+			</div>
+		</section>
+		<hr/>
+		<!-- //CONTENT -->
+
+
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="inner01">
+				<section class="footerMenu">
+					<ul>
+						<li class="first">
+							<h2><a href="../divemarin/intro.html"><img src="../img/common/footer_menu01.gif" alt="다이브마린"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="../divemarin/intro.html"><img src="../img/common/footer_menu01-1.gif" alt="다이브마린 소개"/></a></li>
+								<li><a href="../divemarin/staff.html"><img src="../img/common/footer_menu01-2.gif" alt="스텝소개"/></a></li>
+								<li><a href="../divemarin/boat.html"><img src="../img/common/footer_menu01-3.gif" alt="다이브마린 보트"/></a></li>
+								<li><a href="../divemarin/location.html"><img src="../img/common/footer_menu01-4.gif" alt="오시는길"/></a></li>
+							</ul>
+						</li>
+
+						<li class="second">
+							<h2><a href="../racha/intro.html"><img src="../img/common/footer_menu02.gif" alt="라차섬"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="../racha/intro.html"><img src="../img/common/footer_menu02-1.gif" alt="라차섬 소개"/></a></li>
+								<li><a href="../racha/korean.html"><img src="../img/common/footer_menu02-2.gif" alt="라차섬 한국인 전용투어"/></a></li>
+								<li><a href="../racha/dsd.html"><img src="../img/common/footer_menu02-3.gif" alt="라차섬 체험다이빙"/></a></li>
+								<li><a href="../racha/viewer.html"><img src="../img/common/footer_menu02-4.gif" alt="볼거리"/></a></li>
+								<li><a href="../racha/seaquest.html"><img src="../img/common/footer_menu02-5.gif" alt="Seaquest"/></a></li>
+								<li><a href="../racha/club.html"><img src="../img/common/footer_menu02-6.gif" alt="Club"/></a></li>
+							</ul>
+						</li>
+
+						<li class="third">
+							<h2><a href="../liveaboad/similan.html"><img src="../img/common/footer_menu03.gif" alt="리브어보드"/></a></h2>
+							<ul class="footerDepth02">
+								<li>
+									<a href="../liveaboad/similan.html"><img src="../img/common/footer_menu03-1.gif" alt="시밀란"/></a>
+									<ul class="depth03">
+										<li><h4><a href="../liveaboad/similanliveaboad.html"><img src="../img/common/footer_menu03-1-1.gif" alt="시밀란 리브어보드"/></a></h4></li>
+										<li><h4><a href="../liveaboad/similanSchedule.html"><img src="../img/common/footer_menu03-1-2.gif" alt="스케쥴"/></a></h4></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../liveaboad/komodo.html"><img src="../img/common/footer_menu03-2.gif" alt="코모도"/></a>
+									<ul class="depth03">
+										<li><h4><a href="../liveaboad/komodoliveaboad.html"><img src="../img/common/footer_menu03-2-1.gif" alt="시밀란 리브어보드"/></a></h4></li>
+										<li><h4><a href="../liveaboad/komodoSchedule.html"><img src="../img/common/footer_menu03-2-2.gif" alt="스케쥴"/></a></h4></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../liveaboad/rajaampat.html"><img src="../img/common/footer_menu03-3.gif" alt="라차암팟"/></a>
+									<ul class="depth03">
+										<li><h4><a href="../liveaboad/rajaampatliveaboad.html"><img src="../img/common/footer_menu03-3-1.gif" alt="라자암팟 리브어보드"/></a></h4></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+
+						<li class="forth">
+							<h2><a href="../phuketdiving/padi.html"><img src="../img/common/footer_menu04.gif" alt="푸켓다이빙"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="../phuketdiving/padi.html"><img src="../img/common/footer_menu04-1.gif" alt="PADI 코스"/></a></li>
+								<li><a href="../phuketdiving/fun.html"><img src="../img/common/footer_menu04-2.gif" alt="펀다이빙"/></a></li>
+								<li><a href="../phuketdiving/experience.html"><img src="../img/common/footer_menu04-4.gif" alt="코스 비용"/></a></li>
+							</ul>
+						</li>
+
+						<li class="fifth">
+							<h2><a href="../license/openwater.html"><img src="../img/common/footer_menu05.gif" alt="다이빙자격증패키지"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="../license/openwater.html"><img src="../img/common/footer_menu05-1.gif" alt="오픈워터 패키지"/></a></li>
+								<li><a href="../license/advanced.html"><img src="../img/common/footer_menu05-2.gif" alt="어드밴스드 패키지"/></a></li>
+								<li><a href="../license/all.html"><img src="../img/common/footer_menu05-3.gif" alt="오픈워터/어드밴스드 패키지"/></a></li>
+							</ul>
+						</li>
+
+						<li class="sixth">
+							<h2><a href="../point/phuket.html"><img src="../img/common/footer_menu06.gif" alt="다이빙포인트"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="../point/phuket.html"><img src="../img/common/footer_menu06-1.gif" alt="푸켓"/></a></li>
+								<li><a href="../point/phiphi.html"><img src="../img/common/footer_menu06-2.gif" alt="피피"/></a></li>
+								<li><a href="../point/hindaengkohha.html"><img src="../img/common/footer_menu06-3.gif" alt="흰댕/꼬하"/></a></li>
+								<li><a href="../point/similan.html"><img src="../img/common/footer_menu06-4.gif" alt="시밀란"/></a></li>
+								<li><a href="../point/komodo.html"><img src="../img/common/footer_menu06-5.gif" alt="코모도"/></a></li>
+								<li><a href="../point/rajaampat.html"><img src="../img/common/footer_menu06-6.gif" alt="라자암팟"/></a></li>
+							</ul>
+						</li>
+
+						<li class="seventh">
+							<h2><a href="../recommend/view.html"><img src="../img/common/footer_menu07.gif" alt="푸켓관광"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="../recommend/view.html"><img src="../img/common/footer_menu07-1.gif" alt="볼거리"/></a></li>
+								<li><a href="../recommend/tour.html"><img src="../img/common/footer_menu07-2.gif" alt="투어"/></a></li>
+								<li><a href="../recommend/resort.html"><img src="../img/common/footer_menu07-3.gif" alt="더라차 리조트"/></a></li>
+								<li><a href="../recommend/studyposition.html"><img src="../img/common/footer_menu07-4.gif" alt="교육추천장소"/></a></li>
+							</ul>
+						</li>
+
+						<li class="eighth">
+							<h2><a href="../community/notice_list.html"><img src="../img/common/footer_menu08.gif" alt="커뮤니티"/></a></h2>
+							<ul class="footerDepth02">
+								<li><a href="../community/notice_list.html"><img src="../img/common/footer_menu08-1.gif" alt="공지사항"/></a></li>
+								<li><a href="../community/qna_list.html"><img src="../img/common/footer_menu08-2.gif" alt="질문과 답변"/></a></li>
+								<li><a href="../community/reservation_list.html"><img src="../img/common/footer_menu08-3.gif" alt="예약게시판"/></a></li>
+								<li><a href="../community/faq_list.html"><img src="../img/common/footer_menu08-4.gif" alt="자주묻는 FAQ"/></a></li>
+								<li><a href="../community/photo_list.html"><img src="../img/common/footer_menu08-5.gif" alt="포토갤러리"/></a></li>
+								<li><a href="../community/movie_list.html"><img src="../img/common/footer_menu08-6.gif" alt="동영상갤러리"/></a></li>
+								<li><a href="../community/tour_list.html"><img src="../img/common/footer_menu08-7.gif" alt="여행후기"/></a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="inner02">
+				<section class="footerInfo">
+					<ul>
+						<li class="left"><img src="../img/common/img_logo02.jpg" alt="DIVE MARIN"/></li>
+						<li class="right"><img src="../img/common/txt_footer03.jpg" alt="계좌정보 : 우리은행 (예금주:박철규) : 695-097951-12-101"/></li>
+						<li class="left info01"><img src="../img/common/txt_footer01.jpg" alt="대표명 : 박철규  사업자등록번호 : 33-04165 Tel : 070-8236-0818 / 66-(0)87-888-0818   Email : divemarine@hotmail.com Address : 33/48 M.7 Soi Chaola55 T.Chalong A. Muang Phuket 83130 Thailand"/></li>
+						<li class="right info02"><img src="../img/common/txt_footer04.jpg" alt="kakaotalk : divemarine"/></li>
+						<li class="left info03"><img src="../img/common/txt_footer02.jpg" alt="COPYRIGHT(C) 2009 DIVE MARINE ALL RIGHTS RESERED."/></li>
+						<li class="right"><img src="../img/common/img_footer01.jpg" alt="PADI, sea quest, The"/></li>
+					</ul>
+				</section>
+			</div>
+		</footer>
+		<!-- //FOOTER -->
+
+	</div>
+ </body>
+
+</html>
