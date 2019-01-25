@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=yes">
+<meta name="Description" content="">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- Status bar -->
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../common/css/import.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../common/css/content.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../common/css/mediaQueries.css" type="text/css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="../common/js/iscroll.js"></script>
+<script type="text/javascript" src="../common/js/swipe.js"></script>
+<script type="text/javascript" src="../common/js/screen.js"></script>
+<script type="text/javascript" src="../common/js/modalpopup.js"></script>
+<title>이지웰 모바일 웹</title>
+
+</head>
+
+<body>
+	<!-- 비공개 게시물 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop01'); return false;" >1. 비공개 게시물 팝업</a><br/>
+	<div id="pop01" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>비공개 게시물입니다.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop01'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //비공개 게시물 팝업 -->
+
+	<!-- 글자수 초과 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop02'); return false;" >2. 글자수 초과 팝업</a><br/>
+	<div id="pop02" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>입력하신 내용은 0000byte입니다.<br/>1000byte 이상 입력할 수 없습니다.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop02'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //글자수 초과 팝업 -->
+
+	<!-- 삭제 의사 확인 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop03'); return false;" >3. 삭제 의사 확인 팝업</a><br/>
+	<div id="pop03" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>정말 삭제하시겠습니까?</p>
+			<button type="button" class="btn_yes first">예</button><button type="button" class="btn_no">아니오</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop03'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //삭제 의사 확인 팝업 -->
+
+	<!-- 삭제 완료 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop04'); return false;" >4. 삭제 완료 확인 팝업</a><br/>
+	<div id="pop04" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>삭제가 완료되었습니다.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop04'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //삭제 완료 확인 팝업 -->
+
+	<!-- 입력 누락된 항목이 있을 시  팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop05'); return false;" >5. 입력 누락된 항목이 있을 시  팝업</a><br/>
+	<div id="pop05" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>모든 항목을 입력 후 등록해주세요.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop05'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //입력 누락된 항목이 있을 시  팝업 -->
+
+	<!-- 등록 완료 시 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop06'); return false;" >6. 등록 완료 시 팝업</a><br/>
+	<div id="pop06" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>등록되었습니다.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop06'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //등록 완료 시 팝업 -->
+
+	<!-- 포인트 기부 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop07'); return false;" >7. 포인트 기부 팝업</a><br/>
+	<div id="pop07" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>기부 금액을 선택해주세요.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop07'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //포인트 기부 팝업 -->
+
+	<!-- 기부 신청 금액이 많을시 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop08'); return false;" >8. 기부 신청 금액이 많을시 팝업</a><br/>
+	<div id="pop08" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>기부 가능 금액보다<br/>기부 신청 금액이 많습니다.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop08'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //기부 신청 금액이 많을시 팝업 -->
+
+	<!-- 영수증 신청 여부 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop09'); return false;" >9. 영수증 신청 여부 팝업</a><br/>
+	<div id="pop09" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>기부금 영수증 발행 여부를<br/>선택해 주세요.</p>
+			<button type="button" class="btn_yes first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop09'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //영수증 신청 여부 팝업 -->
+</body>
+</html>

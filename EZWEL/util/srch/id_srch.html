@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=yes">
+<meta name="Description" content="">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- Status bar -->
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../common/css/import.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../common/css/content.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../common/css/mediaQueries.css" type="text/css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<script type="text/javascript" src="../../common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="../../common/js/swipe.js"></script>
+<script type="text/javascript" src="../../common/js/screen.js"></script>
+<script type="text/javascript" src="../../common/js/modalpopup.js"></script>
+<title>이지웰 모바일 웹</title>
+
+</head>
+
+<body>
+<p id="accessibility"><a id="skipTop" href="#content">컨텐츠 바로가기</a></p>
+<div id="wrap">
+	<!-- header -->
+	<header id="header">
+		<div class="inner">
+			<h1><a href="#none"><img src="../../images/common/h1_logo.gif" alt="ezwel 로고"/></a></h1>
+		</div>
+	</header>
+	<!-- //header -->
+	<hr/>
+
+	<!-- content -->
+	<section id="content">
+		<!-- 타이틀 -->
+		<div class="titleArea titleArea02">
+			<h2>아이디(사번) 찾기</h2>
+			<a href="#none" class="moreBtn"><img src="../../images/common/btn_back.png" alt="이전"/></a>
+		</div>
+		<!-- //타이틀 -->
+
+		<!-- 진행 스텝 -->
+		<div class="srchStep">
+			<ul>
+				<li class="first"><strong class="color01">본인확인</strong></li>
+				<li class="second">아이디(사번)안내</li>
+			</ul>
+		</div>
+		<!-- //진행 스텝 -->
+
+		<!-- 탭메뉴 : 선택탭에 on클래스 추가 -->
+		<div class="viewTab viewTab03 mg_t20">
+			<ul>
+				<li class="on"><a href="">등록한 정보로 확인</a></li>
+				<li class=""><a href="">본인 인증 수단으로 확인</a></li>
+			</ul>
+		</div>
+		<!-- //탭메뉴 -->
+		
+		<!-- 등록한 정보로 확인 -->
+		<div id="tabCont01" class="byInfo" style=";">
+			<div class="regInfo">
+				<p class="loginTip">소속 기업/기관 담당자가 등록한 개인정보를 입력하여 주세요.</p>
+				<input type="radio" id="phone" name="regInfo" checked /> <label for="phone">휴대폰</label>
+				<input type="radio" id="eMail" name="regInfo"/> <label for="eMail">이메일</label>
+			</div>
+			<ul>
+				<li>
+					<span>이름</span>
+					<p><span class="input_box"><span><input type="text" maxlength="25" title="이름" /></span></span></p>
+				</li>
+				<li>
+					<span>생년월일</span>
+					<p><span class="input_box"><span><input type="text" placeholder="주민등록상의 생년월일(6자리)" maxlength="25" title="주민등록상의 생년월일(6자리)" /></span></span></p>
+				</li>
+				<!-- 휴대폰시 -->
+				<li class="last01" style=";">
+					<span>휴대폰</span>
+					<p>
+						<select>
+							<option>010</option>
+							<option>011</option>
+							<option>018</option>
+							<option>019</option>
+							<option>017</option>
+						</select>
+						<span class="input_box"><span><input type="text" placeholder="" title="휴대폰 나머지 번호" /></span></span>
+					</p>
+				</li>
+				<!-- //휴대폰시 -->
+
+				<!-- 이메일시 -->
+				<li class="last02" style=";">
+					<span>이메일</span>
+					<p><span class="input_box"><span><input type="text" placeholder="" title="이메일" /></span></span></p>
+				</li>
+				<!-- //이메일시 -->
+			</ul>
+			<!-- 버튼 -->
+			<div class="btn_paySelect" style=";">
+				<a href="">확인</a>
+			</div>
+			<!-- //버튼 -->
+		</div>
+		<!-- //등록한 정보로 확인 -->
+
+	</section>
+	<!-- //content -->
+	<hr/>
+
+	<!-- footer -->
+	<footer id="footer">
+		<ul>
+			<li><a href="#none">로그아웃</a></li>
+			<li><a href="#none">제도안내</a></li>
+			<li><a href="#none">고객센터</a></li>
+			<li><a href="#none">▲ TOP</a></li>
+		</ul>
+		<div class="inner">
+			<p class="copyright">ⓒ 2012-2013 EZWELFARE Corp. All Rights Reserved</p>
+			<strong>고객센터</strong><span class="footerBtn"><a href="tel:02-3282-0579" class="phoneNumber">02.3282.0579</a></span><span class="footerBtn"><a href="#none" class="agreement">이용약관</a></span>
+			<p class="time">이용가능시간 : 오전9시~오후6시 (주말, 공휴일 휴무)</p>
+		</div>
+	</footer>
+	<!-- //풋터 -->
+
+</div>
+<p id="accessibility"><a id="skipBottom" href="#skipTop">처음으로 가기</a></p>
+</body>
+</html>

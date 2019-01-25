@@ -1,0 +1,106 @@
+/*-----------------------------------------------------------------------------------
+	HTML Elements Default Properties
+-----------------------------------------------------------------------------------*/
+
+
+.popup{z-index:10000;max-width:590px;width:90%;display:none;}
+.popup .cont .first{margin-right:5px;}
+.popup .tit{font-size:1.2em; background:#d9dfe4; color:#2c2e30; font-weight:bold; padding:10px; margin-bottom:4px;}
+.popup .areaName{font-weight:bold;font-size:0.750em; color:#2c2e30;display:inline-block;padding-right:10px;}
+.popup .search{padding:10px 0;}
+.popup .address{position:relative;height:270px;overflow:hidden;}
+.popup .address #scroll{height:270px;overflow:auto;}
+.popup .noSearch{margin-top:30px;}
+.popup .noSearch p{font-size:0.85em;}
+.popup .addressList li{padding:5px;text-align:left;position:relative;}
+.popup .addressList li .addressDel{position:absolute;top:3px;right:5px;border:1px solid #a6adb4; color:#323c45; font-size:0.75em; padding:2px 5px 2px 5px; font-weight:bold; text-align:center; line-height:16px;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #ebeff3 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ebeff3)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#ebeff3 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#ebeff3 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#ebeff3 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#ebeff3 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebeff3',GradientType=0 ); /* IE6-9 */}
+.popup .addressList li a{font-size:0.750em;}
+.popup .addressList li:nth-child(odd){background:#f4f7f9;}
+.popup .cont{font-size:1.2em;color:#687079;background:#fff; text-align:center;padding-bottom:24px;} /* 2013-11-28 padding 수정 */
+.popup .cont p{padding:24px 0;line-height:130%;}
+.popup .cont .tip{color:#0162b5;letter-spacing:-1px;font-size:0.750em;padding:11px 0;border-bottom:1px solid #919ba3;}
+.popup .cont .tip02{color:#0162b5;letter-spacing:-1px;font-size:0.750em;}
+.popup .cont input{padding:5px 0 5px 5px;color:#687079;width:60%;}
+.bundle .cont{text-align:left;}
+.bundle .cont ul{padding-top:15px;line-height:150%;}
+.bundle .cont li{padding:0 20px;}
+.popup02{z-index:10000;max-width:590px;width:90%;background:#fff;display:none;   }
+.popup02 .tit{font-size:1.5em;color:#2c2e30;height:95px;line-height:130%;position:relative;background:#f4f7f9;border-bottom:1px solid #919ba3;}
+.popup02 .tit .model{position:absolute;bottom:-5px;left:12px;}
+.popup02 .tit p{padding-top:20px;margin-left:100px;}
+.popup02 .cont{padding-top:10px;}
+.popup02 .cont strong{color:#cc0702;}
+.popup02 .tip{color:#0162b5;font-size:0.875em;margin:0 0 10px 24px;}
+.popup02 .receipt{background:url('../../images/common/bg_funeral01.png') 0 0 no-repeat;background-size:14px 16px;padding-left:15px;margin:0 0 5px 24px;}
+.popup02 .connect{background:url('../../images/common/bg_funeral02.png') 0 0 no-repeat;background-size:14px 15px;padding-left:15px;margin:0 0 10px 24px;}
+.popup02 .btns{border-top:1px solid #e3e3e3;padding:10px 0;text-align:center;}
+.popup03 .noticeImg img{line-height:0;max-width:100%;width:592px;text-align:center;}
+.popup03 .cont {padding:0;line-height:0;}
+.popup03 .cont p{padding:0;line-height:0;}
+.popup03 .btns a{width:49%;display:inline-block;position:relative;text-align:center;vertical-align:middle;font-weight:bold;overflow:hidden;}
+.popup03 .btns a:first-child{float:left;color:#fff;}
+.popup03 .btns a:last-child{float:right;color:#000;}
+.popup03 .btns a span{position:relative;z-index:99999;display:inline-block;padding:15px 0;font-size:16px;}
+.popup03 .btns a img{width:100%;position:absolute;top:0;left:0;}
+.popup03 .noticeClose{position:absolute;top:0;right:0;}
+.noticeWrap{position:absolute;}
+
+.popup .cont .btn_enter, .popup02 .cont .btn_enter{
+display:inline-block;width:120px;line-height:100%;color:#fff;font-weight:bold;font-size:1em;text-align:center;border:1px solid #cc0702;padding:8px 0 11px; /* 2013-11-28 간격 수정 */
+background: rgb(255,43,39); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,43,39,1) 0%, rgba(157,8,5,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,43,39,1)), color-stop(100%,rgba(157,8,5,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,43,39,1) 0%,rgba(157,8,5,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,43,39,1) 0%,rgba(157,8,5,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,43,39,1) 0%,rgba(157,8,5,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,43,39,1) 0%,rgba(157,8,5,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2b27', endColorstr='#9d0805',GradientType=0 ); /* IE6-9 */
+}
+.popup .btn_popClose, .popup02 .btn_popClose{display:inline-block;width:18px;height:18px;position:absolute; right:10px; top:9px;background:url('../../images/common/btn_close.png') right center no-repeat;background-size:18px 18px;font-size:0;}
+
+.popup .cont .btn_yes, .popup02 .cont .btn_yes{
+display:inline-block;width:120px;line-height:100%;color:#cc0702;font-weight:bold;font-size:1em;text-align:center;padding:8px 0;
+border:1px solid #cc0702;
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,231,231,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,231,231,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,231,231,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,231,231,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,231,231,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,231,231,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffe7e7',GradientType=0 ); /* IE6-9 */
+
+}
+.popup .cont .btn_no, .popup02 .cont .btn_no{
+display:inline-block;width:120px;line-height:100%;color:#323c45;font-weight:bold;font-size:1em;text-align:center;border:1px solid #676e75;padding:8px 0;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #ebeff3 99%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(99%,#ebeff3), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#ebeff3 99%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#ebeff3 99%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#ebeff3 99%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #ffffff 0%,#ebeff3 99%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+.popup .btn_popClose02{margin:0 auto;font-size:0;display:block;width:70px;height:22px;background:url('../../images/common/btn_close02.png') 50% 50% no-repeat;background-size:70px 22px;}
+.popup .cont .btn_area span{display:inline-block;width:29px;height:28px;background:url('../../images/common/icon_zipCode.png') 49% 50% no-repeat;background-size:22px 23px;}
+.popup .cont .btn_area{line-height:0;display:inline-block;width:29px;height:28px;border:1px solid #3b4249;font-size:0;color:#323c45;font-weight:bold;margin-left:5px;
+background: rgb(255,249,249); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,249,249,1) 0%, rgba(224,227,229,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,249,249,1)), color-stop(100%,rgba(224,227,229,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,249,249,1) 0%,rgba(224,227,229,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,249,249,1) 0%,rgba(224,227,229,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,249,249,1) 0%,rgba(224,227,229,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,249,249,1) 0%,rgba(224,227,229,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff9f9', endColorstr='#e0e3e5',GradientType=0 ); /* IE6-9 */
+}
+

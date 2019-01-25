@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=yes">
+<meta name="Description" content="">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- Status bar -->
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../common/css/import.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../common/css/content.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../common/css/mediaQueries.css" type="text/css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="../common/js/swipe.js"></script>
+<script type="text/javascript" src="../common/js/screen.js"></script>
+<script type="text/javascript" src="../common/js/modalpopup.js"></script>
+<title>이지웰 모바일 웹</title>
+
+</head>
+
+<body>
+<p id="accessibility"><a id="skipTop" href="#content">컨텐츠 바로가기</a></p>
+<div id="wrap">
+	<!-- 공지사항/이벤트 -->
+	<div class="notice">
+		
+		<ul id="noticeAndnews">
+			<li><a href="../#none"><span>공지사항/ 이벤트</span><p>상품평 이벤트 당첨자 발표상품평 이벤트 당첨자 발표상품평 이벤트 당첨자 발표상품평 이벤트 당첨자 발표</p></a></li>
+			<li><a href="../#none"><span>공지사항/ 이벤트</span><p>상품평 이벤트 당첨자 발표2</p></a></li>
+			<li><a href="../#none"><span>공지사항/ 이벤트</span><p>상품평 이벤트 당첨자 발표3</p></a></li>
+			<li><a href="../#none"><span>공지사항/ 이벤트</span><p>상품평 이벤트 당첨자 발표4</p></a></li>
+		</ul>
+		<button type="button" class="layerClose">공지사항 및 이벤트 닫기</button>
+	</div>
+	<!-- //공지사항/이벤트 -->
+
+	<!-- header -->
+	<header id="header">
+		<div class="inner">
+			<h1><a href="#none"><img src="../images/common/h1_logo.gif" alt="ezwel 로고"/></a></h1>
+			<button type="button" id="" class="allMenu">전체보기</button>
+			<div class="search_head">
+				<span class="input_box">
+					<span><input type="search" id="searchWords" name="searchWords" value="" title="검색어 입력" placeholder="검색어를 입력하세요" ></span>
+					<button type="submit" class="btn_srch"><span>검색</span></button>
+					<button type="button" class="btn_del" style=";"><span>삭제</span></button>
+				</span>
+
+				<a href=""  class="btn_myCart">
+					<span >10</span>
+				</a>
+
+			</div>
+			
+			<!-- 검색키워드 -->
+			<div id="unifiedSearch" style="display:none;">
+				<div class="autoComplete" style=";">
+					<ul>
+						<li><em class="relevant">유니클로</em></li>
+						<li><em class="relevant">유니클로</em> 남녀공용 수갑/채찍</li>
+						<li><em class="relevant">유니클로</em> 일본도</li>
+					</ul>
+					<strong class="listDelete"><button type="button">검색기록 <em>삭제&#215;</em></button></strong>
+					<div class="btn"><button type="button" class="btn_close">닫기</button></div>
+				</div>
+			</div>
+			<!-- //검색키워드 -->
+		</div>
+		<nav id="nav">
+			<div class="inner">
+				<ul>
+					<li><a href="#none" class="on">홈</a></li><li><a href="#none">나의복지</a></li><li><a href="#none"class="">SHOP</a></li><li><a href="#none">추천서비스</a></li><li><a href="#none" >행복한삶</a></li>
+				</ul>
+			</div>
+		</nav>
+
+
+		<div class="titleArea">
+			<h2>검색</h2>
+			<a href="#none" class="moreBtn"><img src="../images/common/btn_back.png" alt="이전"/></a>
+		</div>
+	</header>
+	<!-- //header -->
+	<hr/>
+
+	<!-- content -->
+	<section id="content">
+
+		<!-- 상품없을때-->
+		<div class="noCart" style="display:none;">
+			<img src="../images/content/no_cart.gif" alt="" width="160"/>
+		</div>
+		<!-- //상품없을때 -->
+
+		<!-- 장바구니 -->
+		<div class="cart" style=";">
+			<!-- 상단 전체선택 -->
+			<div class="all">
+				<div class="inner"><label for="allSelect"><input type="checkbox" id="allSelect"/> <em class="labelText">전체선택</em></label><span class="question" onclick="ShowModalPopup('question'); return false;">?</span></div>
+			</div>
+			<!-- //상단 전체선택 -->
+			<div class="tip"> 
+				<div class="inner">
+					<p>※ 장바구니 상품은 최대 30일간 보관됩니다.</p>
+					<p>※ 상품가격, 옵션 등 상품 정보가 변경된 경우 주문이 불가할 수 있습니다.</p>
+				</div>
+			</div>
+
+			<!-- 묶음배송 -->
+			<div class="allCart">
+				<!-- 묶음배송상품시 노출-->
+				<div class="all02" style=";">
+					<div class="inner"><label for="allSelect02"><input type="checkbox" id="allSelect02"/> 판매자 : <strong>아레나 코리아 묶음 배송상품</strong></label></div>
+				</div>
+				<!-- //묶음배송상품시 노출-->
+	
+				<!-- 장바구니 상품 리스트 -->
+				<ul class="cartProduct">
+					<li>
+						<!-- 썸네일 및 상품 이름 -->
+						<div class="orderProduct02">
+							<div class="inner">
+								<input type="checkbox" class="solo"/>
+								<p><img src="../images/@temp/@temp17.jpg" alt=""/></p>
+								<dl>
+									<dt>도루코 페이스 엑스엘 면도기+ 쉐이빙폼 210ml/PACEXL/6중면도날/정밀 면도날/윤활밴드/피부보습/질레트/쉬크</dt>
+								</dl>
+							</div>
+						</div>
+						<!-- //썸네일 및 상품 이름 -->
+	
+						<!-- 상품옵션 -->
+						<div class="orderOption02">
+							<ul>
+								<li class="amount "><span>수량</span><p><strong>10</strong>개</p></li>
+								<li class="option"><span>옵션</span><p>옵션1/옵션2/옵션3</p></li>
+								<li class="orderPrice"><span>총 상품금액</span><p><strong>18,000</strong>원</p></li>
+								<li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>2,000</strong>원(선결제)</p></li>
+							</ul>
+						</div>
+						<!-- //상품옵션 -->
+	
+						<!-- 옵션변경 버튼 -->
+						<div class="smallBtns">
+							<button type="button" class="btnType01">삭제</button>
+							<button type="button" class="btnType01 w80 btn_Modify" >주문수정 <img src="../images/common/icon_arrow05_off.png" alt="" width="9" class="icon"/></button>
+							<button type="button" class="btnType02">주문</button>
+						</div>
+						<!-- //옵션변경 버튼 -->
+	
+						<!-- 주문수정 토글 -->
+						<div class="orderOption orderModify" style=";">
+							<ul>
+								<li class="amount">
+									<span>수량</span>
+									<p><button bype="button">&#8211;</button><input type="number" value="1" pattern="[0-9]*"/><button bype="button">&#43;</button></p>
+								</li>
+								<li class="option">
+									<span>옵션 1</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+
+								<li class="option">
+									<span>배송비</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+							</ul>
+							<div class="smallBtns smallBtns02">
+								<button type="button" class="btnType01 cancel" >취소</button>
+								<button type="button" class="btnType02">변경</button>
+							</div>
+						</div>
+						<!-- //주문수정 토글 -->
+					</li>
+	
+					<li>
+						<!-- 썸네일 및 상품 이름 -->
+						<div class="orderProduct02">
+							<div class="inner">
+								<input type="checkbox" class="solo"/>
+								<p>
+									<span class="sellEnd" style=""><img src="../images/content/bg_phoneProduct.png" alt=""/></span> <!-- 휴대폰 상품 bg -->
+									<img src="../images/@temp/@temp17.jpg" alt=""/>
+								</p>
+								<dl>
+									<dt>휴대폰 상품은 온라인 전용관에서 구매 가능합니다.</dt>
+								</dl>
+							</div>
+						</div>
+						<!-- //썸네일 및 상품 이름 -->
+	
+						<!-- 상품옵션 -->
+						<div class="orderOption02">
+							<ul>
+								<li class="amount "><span>수량</span><p><strong>10</strong>개</p></li>
+								<li class="option"><span>옵션</span><p>옵션1/옵션2/옵션3</p></li>
+								<li class="orderPrice"><span>총 상품금액</span><p><strong>18,000</strong>원</p></li>
+								<li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>무료</strong> <button type="button" class="btn_bundle" onclick="ShowModalPopup('bundle'); return false;"><span>?</span></button></p></li>
+							</ul>
+						</div>
+						<!-- //상품옵션 -->
+	
+						<!-- 옵션변경 버튼 -->
+						<div class="smallBtns">
+							<button type="button" class="btnType01">삭제</button>
+							<button type="button" class="btnType01 w80 btn_Modify" >주문수정 <img src="../images/common/icon_arrow05_off.png" alt="" width="9" class="icon"/></button>
+							<button type="button" class="btnType02">주문</button>
+						</div>
+						<!-- //옵션변경 버튼 -->
+	
+						<!-- 주문수정 토글 -->
+						<div class="orderOption orderModify" style=";">
+							<ul>
+								<li class="amount">
+									<span>수량</span>
+									<p><button bype="button">&#8211;</button><input type="number" value="1" pattern="[0-9]*"/><button bype="button">&#43;</button></p>
+								</li>
+								<li class="option">
+									<span>옵션 1</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+								<li class="option">
+									<span>옵션 2</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+								<li class="option">
+									<span>배송비</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+							</ul>
+							<div class="smallBtns smallBtns02">
+								<button type="button" class="btnType01 cancel">취소</button>
+								<button type="button" class="btnType02">변경</button>
+							</div>
+						</div>
+						<!-- //주문수정 토글 -->
+					</li>
+	
+					<li>
+						<!-- 썸네일 및 상품 이름 -->
+						<div class="orderProduct02">
+							<div class="inner">
+								<input type="checkbox" class="solo disabled" disabled/> <!-- 판매종료 input에 disabled class 추가-->
+								<p>
+									<span class="sellEnd" style=""><img src="../images/content/bg_end.png" alt=""/></span> <!-- 판매종료 bg -->
+									<img src="../images/@temp/@temp17.jpg" alt=""/>
+								</p>
+								<dl>
+									<dt>도루코 페이스 엑스엘 면도기+ 쉐이빙폼 210ml/PACEXL/6중면도날/정밀 면도날/윤활밴드/피부보습/질레트/쉬크</dt>
+								</dl>
+							</div>
+						</div>
+						<!-- //썸네일 및 상품 이름 -->
+	
+						<!-- 상품옵션 -->
+						<div class="orderOption02">
+							<ul>
+								<li class="amount "><span>수량</span><p><strong>10</strong>개</p></li>
+								<li class="option"><span>옵션</span><p>옵션1/옵션2/옵션3</p></li>
+								<li class="orderPrice"><span>총 상품금액</span><p><strong>18,000</strong>원</p></li>
+								<li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>무료</strong></p></li>
+							</ul>
+						</div>
+						<!-- //상품옵션 -->
+	
+						<!-- 옵션변경 버튼 -->
+						<div class="smallBtns">
+							<button type="button" class="btnType01">삭제</button>
+						</div>
+						<!-- //옵션변경 버튼 -->
+					</li>
+				</ul>
+				<!-- //장바구니 상품 리스트 -->
+				
+				<!-- 묶음배송비 영역 -->
+				<div class="allDeliveryPay orderOption02">
+					<ul>
+						<li class="orderPrice"><span>총 금액</span><p><strong>18,000</strong>원</p></li>
+						<li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>2,000원(선결제)</strong> <button type="button" class="btn_bundle" onclick="ShowModalPopup('bundle'); return false;"><span>?</span></button></p></li>
+					</ul>
+				</div>
+				<!-- //묶음배송비 영역 -->
+			</div>
+			<!-- //묶음배송 -->
+			
+			
+			<!-- 묶음배송 -->
+			<div class="allCart">
+				<!-- 묶음배송상품시 노출-->
+				<div class="all02" style=";">
+					<div class="inner"><label for="allSelect02"><input type="checkbox" id="allSelect02"/> 판매자 : <strong>아레나 코리아 묶음 배송상품</strong></label></div>
+				</div>
+				<!-- //묶음배송상품시 노출-->
+	
+				<!-- 장바구니 상품 리스트 -->
+				<ul class="cartProduct">
+					<li>
+						<!-- 썸네일 및 상품 이름 -->
+						<div class="orderProduct02">
+							<div class="inner">
+								<input type="checkbox" class="solo"/>
+								<p><img src="../images/@temp/@temp17.jpg" alt=""/></p>
+								<dl>
+									<dt>도루코 페이스 엑스엘 면도기+ 쉐이빙폼 210ml/PACEXL/6중면도날/정밀 면도날/윤활밴드/피부보습/질레트/쉬크</dt>
+								</dl>
+							</div>
+						</div>
+						<!-- //썸네일 및 상품 이름 -->
+	
+						<!-- 상품옵션 -->
+						<div class="orderOption02">
+							<ul>
+								<li class="amount "><span>수량</span><p><strong>10</strong>개</p></li>
+								<li class="option"><span>옵션</span><p>옵션1/옵션2/옵션3</p></li>
+								<li class="orderPrice"><span>총 상품금액</span><p><strong>18,000</strong>원</p></li>
+								<!-- li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>2,000</strong>원(선결제)</p></li-->
+							</ul>
+						</div>
+						<!-- //상품옵션 -->
+	
+						<!-- 옵션변경 버튼 -->
+						<div class="smallBtns">
+							<button type="button" class="btnType01">삭제</button>
+							<button type="button" class="btnType01 w80 btn_Modify" >주문수정 <img src="../images/common/icon_arrow05_off.png" alt="" width="9" class="icon"/></button>
+							<button type="button" class="btnType02">주문</button>
+						</div>
+						<!-- //옵션변경 버튼 -->
+	
+						<!-- 주문수정 토글 -->
+						<div class="orderOption orderModify" style=";">
+							<ul>
+								<li class="amount">
+									<span>수량</span>
+									<p><button bype="button">&#8211;</button><input type="number" value="1" pattern="[0-9]*"/><button bype="button">&#43;</button></p>
+								</li>
+								<li class="option">
+									<span>옵션 1</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+								<li class="option">
+									<span>옵션 2</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+								<li class="option">
+									<span>배송비</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+							</ul>
+							<div class="smallBtns smallBtns02">
+								<button type="button" class="btnType01 cancel">취소</button>
+								<button type="button" class="btnType02">변경</button>
+							</div>
+						</div>
+						<!-- //주문수정 토글 -->
+					</li>
+	
+					<li>
+						<!-- 썸네일 및 상품 이름 -->
+						<div class="orderProduct02">
+							<div class="inner">
+								<input type="checkbox" class="solo"/>
+								<p>
+									<img src="../images/@temp/@temp17.jpg" alt=""/>
+								</p>
+								<dl>
+									<dt>도루코 페이스 엑스엘 면도기+ 쉐이빙폼 210ml/PACEXL/6중면도날/정밀 면도날/윤활밴드/피부보습/질레트/쉬크</dt>
+								</dl>
+							</div>
+						</div>
+						<!-- //썸네일 및 상품 이름 -->
+	
+						<!-- 상품옵션 -->
+						<div class="orderOption02">
+							<ul>
+								<li class="amount "><span>수량</span><p><strong>10</strong>개</p></li>
+								<li class="option"><span>옵션</span><p>옵션1/옵션2/옵션3</p></li>
+								<li class="orderPrice"><span>총 상품금액</span><p><strong>18,000</strong>원</p></li>
+								<li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>무료</strong> <button type="button" class="btn_bundle" onclick="ShowModalPopup('bundle'); return false;"><span>?</span></button></p></li>
+							</ul>
+						</div>
+						<!-- //상품옵션 -->
+	
+						<!-- 옵션변경 버튼 -->
+						<div class="smallBtns">
+							<button type="button" class="btnType01">삭제</button>
+							<button type="button" class="btnType01 w80 btn_Modify" >주문수정 <img src="../images/common/icon_arrow05_off.png" alt="" width="9" class="icon"/></button>
+							<button type="button" class="btnType02">주문</button>
+						</div>
+						<!-- //옵션변경 버튼 -->
+	
+						<!-- 주문수정 토글 -->
+						<div class="orderOption orderModify" style=";">
+							<ul>
+								<li class="amount">
+									<span>수량</span>
+									<p><button bype="button">&#8211;</button><input type="number" value="1" pattern="[0-9]*"/><button bype="button">&#43;</button></p>
+								</li>
+								<li class="option">
+									<span>옵션 1</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+								<li class="option">
+									<span>옵션 2</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+								<li class="option">
+									<span>배송비</span>
+									<p>
+										<select>
+											<option>선택하세요</option>
+											<option></option>
+										</select>
+									</p>
+								</li>
+							</ul>
+							<div class="smallBtns smallBtns02">
+								<button type="button" class="btnType01 cancel">취소</button>
+								<button type="button" class="btnType02">변경</button>
+							</div>
+						</div>
+						<!-- //주문수정 토글 -->
+					</li>
+	
+					<li>
+						<!-- 썸네일 및 상품 이름 -->
+						<div class="orderProduct02">
+							<div class="inner">
+								<input type="checkbox" class="solo disabled" disabled/> <!-- 판매종료 input에 disabled class 추가-->
+								<p>
+									<span class="sellEnd" style=""><img src="../images/content/bg_end.png" alt=""/></span> <!-- 판매종료 bg -->
+									<img src="../images/@temp/@temp17.jpg" alt=""/>
+								</p>
+								<dl>
+									<dt>도루코 페이스 엑스엘 면도기+ 쉐이빙폼 210ml/PACEXL/6중면도날/정밀 면도날/윤활밴드/피부보습/질레트/쉬크</dt>
+								</dl>
+							</div>
+						</div>
+						<!-- //썸네일 및 상품 이름 -->
+	
+						<!-- 상품옵션 -->
+						<div class="orderOption02">
+							<ul>
+								<li class="amount "><span>수량</span><p><strong>10</strong>개</p></li>
+								<li class="option"><span>옵션</span><p>옵션1/옵션2/옵션3</p></li>
+								<li class="orderPrice"><span>총 상품금액</span><p><strong>18,000</strong>원</p></li>
+								<li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>무료</strong></p></li>
+							</ul>
+						</div>
+						<!-- //상품옵션 -->
+	
+						<!-- 옵션변경 버튼 -->
+						<div class="smallBtns">
+							<button type="button" class="btnType01">삭제</button>
+						</div>
+						<!-- //옵션변경 버튼 -->
+					</li>
+					
+					<!-- 브랜드 아울렛-->
+					<li>
+						<!-- 썸네일 및 상품 이름 -->
+						<div class="orderProduct02">
+							<div class="inner">
+								<input type="checkbox" class="solo disabled" disabled/> <!-- 브랜드아울렛 input에 disabled class 추가-->
+								<p>
+									<span class="sellEnd" style=""><img src="../images/content/bg_brandOutlet.png" alt=""/></span> <!-- 브랜드아울렛 bg -->
+									<img src="../images/@temp/@temp17.jpg" alt=""/>
+								</p>
+								<dl>
+									<dt>브랜드아웃렛 상품은 온라인 전용관에서 구매가능합니다.</dt>
+								</dl>
+							</div>
+						</div>
+						<!-- //썸네일 및 상품 이름 -->
+
+						<!-- 옵션변경 버튼 -->
+						<div class="smallBtns">
+							<button type="button" class="btnType01">삭제</button>
+						</div>
+						<!-- //옵션변경 버튼 -->
+					</li>
+					<!-- //브랜드 아울렛-->
+				</ul>
+				<!-- //장바구니 상품 리스트 -->
+				
+				<!-- 묶음배송비 영역 -->
+				<div class="allDeliveryPay orderOption02">
+					<ul>
+						<li class="orderPrice"><span>총 금액</span><p><strong>18,000</strong>원</p></li>
+						<li class="deliveryCharge02 deliveryCharge03"><span>배송비</span><p><strong>2,000원(선결제)</strong> <button type="button" class="btn_bundle" onclick="ShowModalPopup('bundle'); return false;"><span>?</span></button></p></li>
+					</ul>
+				</div>
+				<!-- //묶음배송비 영역 -->
+			</div>
+			<!-- //묶음배송 -->
+						
+			<!-- 하단 전체선택 -->
+			<div class="all03">
+				<div class="inner"><label for="allSelect03"><input type="checkbox" id="allSelect03"/> 전체선택</label><span><button type="button" class="appBtn">선택상품 계산</button></span></div>
+			</div>
+			<!-- //하단 전체선택 -->
+
+			<!-- 총 금액(주문금액 및 배송비) -->
+			<div class="total">
+				<ul>
+					<li class="order"><span>주문금액</span><p><strong>18,000</strong>원</p></li>
+					<li class="delivery"><span>배송비</span><p><strong>2,000</strong>원</p></li>
+					<li class="payment"><span>결제금액</span><p><strong>18,000</strong>원</p></li>
+				</ul>
+			</div>
+			<!-- //총 금액(주문금액 및 배송비) -->
+		</div>
+		<!--// 장바구니 -->
+
+		<!-- 버튼 -->
+		<p id="cartBtns" class="listAppBtn listAppBtn03">
+			<a href="#none" class="listBtn w17">선택삭제</a><a href="#none" class="appBtn w17">선택주문</a><a href="#none" class="appBtn w30">전체주문 <img src="../images/common/bg_label03.png" alt="" class="icon02"/></a><!-- 1031 클래스 수정 -->
+		</p>
+		<!-- //버튼 -->
+	</section>
+	<!-- //content -->
+	<hr/>
+
+	<!-- footer -->
+	<footer id="footer02">
+		<ul>
+			<li><a href="#none">로그아웃</a></li>
+			<li><a href="#none">제도안내</a></li>
+			<li><a href="#none">고객센터</a></li>
+			<li><a href="#none" class="topMove">▲ TOP</a></li>
+		</ul>
+		
+		<div class="custom">
+			<p>
+				<strong>고객센터 <span>02-3282-0579</span></strong>
+				<em>(평일 09시 ~ 18시/ 주말,공휴일 제외)</em>
+			</p>
+			<div>
+				<a href="sms:02-3282-0579" class="sms"><img src="../images/common/bg_sms.png" width="12" alt=""/></a> <a href="tel:02-3282-0579" class="phone"><img src="../images/common/bg_phone.png" width="12" alt=""/></a>
+			</div>
+		</div>
+
+		<div class="etc">
+			<!-- ul>
+				<li class="reset"><button type="button">초기화</button></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="">개인정보취급방침</a></li>
+			</ul -->
+
+			<ul>
+				<li ><a href="">앱다운로드</a></li>
+				<li><a href="">PC버전</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="">개인정보취급방침</a></li>
+			</ul>
+		</div>
+		<div class="info">
+			<p><strong>이지웰페어(주) 대표이사</strong> : 김상용&nbsp;&nbsp;<strong class="cpInfo"><a href="">사업자정보확인</a></strong></p>
+			<p class="number"><strong>사업자등록번호</strong> : 101-81-80575&nbsp;&nbsp;<strong>통신판매업신고</strong> : 구로-2369호</p>
+			<p class="address"><strong>주소</strong> : 서울시 구로구 디지털로 34길 43 코오롱싸이언스밸리 1차 14층</p>
+			<p><strong>고객센터</strong> : 02-3282-0579 (평일 09~18시) </p>
+		</div>
+		<p class="copyright">ⓒ 2012-2013 EZWELFARE Corp. All Rights Reserved</p>
+	</footer>
+	<!-- //footer -->
+</div>
+
+<!-- 묶음배송비 -->
+<div id="bundle" class="popup bundle">
+	<p class="tit">묶음배송비</p>
+	<div class="cont">
+		<ul>
+			<li>- 동일업체 동일배송처 상품인 경우만 묶음 배송 가능합니다. </li>
+			<li>- 유료상품과 무료상품을 묶음 배송 했을 때 무료로 배송 처리됩니다.</li>
+			<li>- 2건의 유료배송상품을 묶음 처리했을 때 한번의 배송비만 부과됩니다.</li>
+			<li>- 설치상품의 경우 상품에 따라 배송비(설치비)가 별도로 부과됩니다.</li>
+			<li>- 2건의 유료배송상품 중 1건을 취소했을 때 취소하지 않은 1건의 배송비만 부과됩니다.</li>
+			<li>- 유료상품과 무료상품 중 무료상품을 취소 했을 때 유료상품 배송비는 착불로 추가 결제됩니다.</li>
+			<li>- 반품의 경우 별도의 반품배송비가 부과됩니다</li>
+		</ul>
+	</div>
+	<button type="button" class="btn_popClose" onclick="HideModalPopup('bundle'); return false;">팝업 닫기</button>
+</div>
+<!-- //글자수 초과 팝업 -->
+
+<!-- ?팝업 -->
+<div id="question" class="popup">
+	<p class="tit">&nbsp;</p>
+	<div class="cont">
+		<p>모바일 복지관의 장바구니는<br/>레인보우SHOP / 복지SHOP 상품만 보여집니다.</p>
+		<button type="button" class="btn_enter first">확인</button><button type="button" class="btn_no">취소</button>
+	</div>
+	<button type="button" class="btn_popClose" onclick="HideModalPopup('question'); return false;">팝업 닫기</button>
+</div>
+<!-- //?팝업 -->
+<p id="accessibility"><a id="skipBottom" href="#skipTop">처음으로 가기</a></p>
+</body>
+</html>

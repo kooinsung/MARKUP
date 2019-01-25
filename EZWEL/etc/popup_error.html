@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=yes">
+<meta name="Description" content="">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- Status bar -->
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../common/css/import.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../common/css/content.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../common/css/mediaQueries.css" type="text/css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../common/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="../common/js/iscroll.js"></script>
+<script type="text/javascript" src="../common/js/swipe.js"></script>
+<script type="text/javascript" src="../common/js/screen.js"></script>
+<script type="text/javascript" src="../common/js/modalpopup.js"></script>
+<title>이지웰 모바일 웹</title>
+
+</head>
+
+<body>
+<div>
+	<!-- 404에러 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('error01'); return false;" >1. 404에러 팝업</a><br/>
+	<div id="error01" class="popup03" >
+		<div class="cont">
+			<img src="../images/content/no_error.gif" alt="" width="90"/>
+			<p class="sTit">페이지를 찾을 수 없습니다.</p>
+			<p class="txt">죄송합니다. 고객님께서 요청하신 페이지를 찾을 수 없습니다.<br/>해당 페이지의 주소가 변경, 삭제 되었거나 혹은 현재 사용되지 않는 페이지입니다.</p>
+			<ol>
+				<li>①새로고침 하셔서 페이지를 다시 확인해주세요.</li>
+				<li>②브라우저 입력창에 입력하신 페이지 주소가 정확한지 확인해주세요.</li>
+			</ol>
+			<div class="btn_paySelect goMain" style=";">
+				<a href="">메인 페이지로 이동</a>
+			</div>
+		</div>
+		<a href="#none" onclick="HideModalPopup('error01'); return false;"><img src="../images/common/btn_close02.png" alt="닫기" width="80"/></a>
+	</div>
+
+	<!-- //404에러 팝업 -->
+
+	<!-- 500, 503에러 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('error02'); return false;" >2. 500, 503에러 팝업</a><br/>
+	<div id="error02" class="popup03" >
+		<div class="cont">
+			<img src="../images/content/no_error.gif" alt="" width="90"/>
+			<p class="sTit">일시적인 에러 혹은 페이지가 변경되었습니다.</p>
+			<p class="txt">죄송합니다. 일시적인 에러이거나 페이지가 변경되었습니다.</p>
+			<ol>
+				<li>①새로고침 하셔서 페이지를 다시 확인해주세요.</li>
+				<li>②브라우저 입력창에 입력하신 페이지 주소가 정확한지 확인해주세요.</li>
+			</ol>			
+			<div class="btn_paySelect goMain" style=";">
+				<a href="">메인 페이지로 이동</a>
+			</div>
+		</div>
+		<a href="#none" onclick="HideModalPopup('error02'); return false;"><img src="../images/common/btn_close02.png" alt="닫기" width="80"/></a>
+	</div>
+
+	<!-- //500, 503에러 팝업 -->
+
+	<!-- 잘못된액션 오류 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('error03'); return false;" >3. 잘못된액션 오류 팝업</a><br/>
+	<div id="error03" class="popup03" >
+		<div class="cont">
+			<img src="../images/content/no_error.gif" alt="" width="90"/>
+			<p class="sTit">페이지를 찾을 수 없습니다.</p>
+			<p class="txt">죄송합니다. 고객님께서 요청하신 페이지를 찾을 수 없습니다.<br/>계속해서 에러가 발생할 경우 관리자에게 문의해 주시기 바랍니다.</p>				
+			<div class="btn_paySelect goMain" style=";">
+				<a href="">메인 페이지로 이동</a>
+			</div>
+		</div>
+		<a href="#none" onclick="HideModalPopup('error03'); return false;"><img src="../images/common/btn_close02.png" alt="닫기" width="80"/></a>
+	</div>
+
+	<!-- //잘못된액션 오류  팝업 -->	
+
+	<!-- 로그인 오류  팝업 -->
+	<a href="#none" onclick="ShowModalPopup('error04'); return false;" >4. 로그인 오류 팝업</a><br/>
+	<div id="error04" class="popup03" >
+		<div class="cont">
+			<img src="../images/content/no_error.gif" alt="" width="90"/>
+			<p class="sTit">로그인 후 사용해 주십시오</p>
+			<p class="txt">안전한 보안을 위해 2시간이 초과될 경우 사용자 인증을 목적으로 재 로그인이 필요합니다. <br/>인증을 위해 자동으로 접속이 종료되었을 경우 불편하시더라로로그인 후 이용바랍니다.</p>			
+			<div class="btn_paySelect goMain" style=";">
+				<a href="">메인 페이지로 이동</a>
+			</div>
+		</div>
+		<a href="#none" onclick="HideModalPopup('error04'); return false;"><img src="../images/common/btn_close02.png" alt="닫기" width="80"/></a>
+	</div>
+
+	<!-- //로그인 오류 팝업 -->		
+</div>
+</body>
+</html>

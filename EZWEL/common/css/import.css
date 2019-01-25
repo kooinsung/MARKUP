@@ -1,0 +1,31 @@
+@charset "euc-kr";
+@import url("layout.css");
+@import url("default.css");
+@import url("form.css");
+@import url("popup.css");
+
+
+/* calendar */
+.calendar{position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#calendarSelector{position:relative;margin:0 10px 0 10px;border:1px solid #a4a6a2;border-radius:3px;overflow:hidden}
+#calendarSelector table{width:100%;border-radius:3px;border-collapse:collapse;}
+#calendarSelector table thead tr td{padding:0;border:0 !important;}
+#calendarSelector table thead tr td{text-align:center;background:#f3f7fa;vertical-align:top;text-align:right}
+#calendarSelector table thead tr td img{width:20px;height:20px;margin:7px 6px 0 0}
+#calendarSelector table thead tr th{background:#f3f7fa;font-weight:normal;height:42px;line-height:23px;border:0;}
+#calendarSelector table thead tr th em,#calendarSelector table thead tr th strong{display:inline-block;width:30px;height:23px;margin:0 15px;text-indent:-9999px;overflow:hidden}
+#calendarSelector table thead tr th strong{background:url(http://img.ezwel.com/welfare_mw/img/btn_calendar_left.gif) no-repeat;background-size:30px 23px}
+#calendarSelector table thead tr th em{background:url(http://img.ezwel.com/welfare_mw/img/btn_calendar_right.gif) no-repeat;background-size:30px 23px}
+#calendarSelector table thead tr th *.disabled{color:#999999}
+#calendarSelector table thead tr th span{font-size:14px;font-weight:bold;color:#000;position:relative;top:0px;}
+#calendarSelector table thead tr.dayWeek td{color:#888;height:35px;border:1px solid #c6c6c6 !important;background:#fff;font-weight:bold;text-align:center;vertical-align:middle}
+#calendarSelector table thead tr td:nth-child(1){border-left:none}
+#calendarSelector table thead tr td:nth-child(7){border-right:none}
+
+#calendarSelector table tbody tr td{text-align:center;color:#999;height:30px;border:1px solid #c6c6c6;width:14.28%;font-weight:bold;font-size:11px;background:#fff}
+#calendarSelector table tbody tr td.month{color:#333}
+#calendarSelector table tbody tr td.selected{background-color:#dedfe1}
+#calendarSelector table tbody tr td.month.Sunday{color:#e21d1d !important}
+#calendarSelector table tbody tr td.month.Saturday{color:#285ea8 !important}
+#calendarSelector table tbody tr td:nth-child(1){color:#e0a2a2;border-left:none}
+#calendarSelector table tbody tr td:nth-child(7){color:#7e98bc;border-right:none}

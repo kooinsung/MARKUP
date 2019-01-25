@@ -1,0 +1,372 @@
+@charset "euc-kr";
+
+
+/*------ width - 640px -----*/
+@media only screen and (max-width:640px) {
+	body, input, textarea, select, table, button { font-size:13px;}
+	select{font-size:10px;}
+	.daySearch .inBox select{font-size:12px;}
+	.daySearch .inBox table span{width:46.3%;}
+	.banner .rolling01 .slider .item img {width: 100%;height:auto;}
+	.banner{margin-bottom:13px;}
+	.banner a.allView{width:70px;height:22px;background-size:70px 22px;}
+	.banner .loading{top:35%;left:45%;}
+	#content.main .section01{ float:none; width:100%;overflow:hidden;}
+	#content.main .section01 h2{ padding:5px 12px 5px 12px;}
+	#content.main a.more{position:absolute;top:6px; right:12px;}
+	#content.main .section02{width:100%;overflow:hidden; border:0px !important; }
+	#content.main .section02 h2{ padding:5px 12px 5px 12px;}
+	.myPoint {padding:5px 12px 5px 12px;}
+	body#main#footer {margin-top:30px; }
+	.banner02{margin:16px 0 13px 0;display:block;}
+	.emailForm li.line span{font-size:8px;}
+
+
+	/* header */
+	header { position:relative; display:block; clear:both; }
+	header h1 { width:100%; text-align:center; height:28px;margin:10px 0;}
+	header h1 img {height:100%;}
+	header button {font-size:0px;}
+	header .allMenu { width:28px; height:28px;position:absolute; right:10px;top:0px; background:url('../../images/common/btn_allMenu01.png') no-repeat ;background-size:28px 28px;}
+	header .search_head {position: relative;overflow:hidden;}
+	header .extent{margin-bottom:0;padding:15px 12px 10px 12px;}
+	header .search_head .input_box {position: relative;display: block;margin-right:45px;border:2px solid #2e3841;overflow:hidden;}
+	header .search_head .input_box > span {display:block;padding: 0 0 0 0;}
+	header .search_head .input_box > span input { padding:6px 0 6px 12px; border:none; background:none;color:#8997a3; }
+	header .search_head .btn_srch {display:block;position:absolute;top:0;right:0;width:30px;height:29px; background:#323c45 url('../../images/common/icon_search.gif') center center no-repeat; background-size:17px 18px; }
+	header .search_head .btn_srch span{font-size:0;}
+	header .search_head .btn_del {display:block;position:absolute; top:5px; right:38px; width:18px; height:18px; background:url('../../images/common/icon_close.gif') no-repeat; background-size:18px 18px; }
+	header .search_head .btn_del span{font-size:0;}
+	header .search_head .btn_myCart {text-align:center;width:38px;height:28px;display:inline-block;position:absolute; top:0; right:0;background:url('../../images/common/icon_cart.png') 0 bottom no-repeat;background-size:38px 25px;overflow:hidden;}
+	header .search_head .btn_myCart span {font-size:1.125em;width:22px;color:#cc0702;font-weight:bold;display:inline-block;margin:2px 0 0 6px}
+
+	/*통합검색*/
+	#unifiedSearch .search .input_box {margin-right:36px;}
+	#unifiedSearch .search .input_box > span input {font-size:12px; padding:10px 0 10px 10px; }
+	#unifiedSearch .search .btn_del {top:7px; right:7px; width:22px; height:22px; background-size:22px 22px;}
+	#unifiedSearch .search .btn_srch{padding:8px 7px 8px 7px;width:20px;height:19px;background-size:20px 20px;}
+	#unifiedSearch .autoComplete li, #unifiedSearch .searchList li{font-size:12px;padding:8px 0 8px 20px;}
+	#unifiedSearch .autoComplete li .relevant{color:#cc0703;}
+	#unifiedSearch .btn_close{width:76px; height:22px;background-size:76px 22px;}
+	#unifiedSearch .autoComplete .listDelete{padding-left:20px;}
+	#unifiedSearch .autoComplete .listDelete button{display:inline-block;font-size:12px;text-indent:0px;line-height:100%;width:100%;height:30px;padding:0;;margin:0;}
+
+
+	.notice li a{padding:5px 0 3px;}
+	.notice li a p{width:70%;margin-left:95px;}
+	.notice .layerClose { width:15px; height:15px; font-size:0px; background:url('../../images/common/btn_close.png') no-repeat; background-size:15px 15px;position:absolute; right:7px; top:10px; }
+
+	/* MAIN - 특가복지상품 */
+	.specialPrice .rolling-container{margin:0 auto;width:90%;}
+	.specialPrice{position:relative;margin-bottom:13px;}
+	.specialPrice .rolling li .productImg {position:relative; }
+	.specialPrice .rolling li .productInfo{padding:9px 0;color:#687079; text-align:left;padding-left:12px;font-weight:bold;letter-spacing:-1px;line-height:100%;}
+	.specialPrice .rolling li .productImg .thumb img{height:120px;}
+	.specialPrice .rolling li p.tit{margin-bottom:5px;}
+	.specialPrice .rolling li p.price{color:#687079; font-size:0.875em; }
+	.specialPrice .rolling li p.price strong{ color:#cc0702; font-size:1.2em !important; margin-right:3px;}
+	.specialPrice .rolling li p.price del{margin-left:10px;color:#c0c3c6; font-size:1em !important;}
+	.specialPrice .rolling li img{vertical-align:top; }
+	.specialPrice .rolling li a { width: 98%; }	
+	.specialPrice .specialPriceControl{display:none;}
+
+	/* MAIN - 인기기획전 */
+	.popular{display:block;overflow:hidden;margin-bottom:15px;}
+	.popular{width:100%;}
+	.popular ul.tabMenu{clear:both;width:101%;overflow:hidden;z-index:999;}
+	.popular ul.tabMenu li{ width:24.66%;float:left;text-align:center;background:#fff;}
+	.popular ul.tabMenu li a{width:100%;display:inline-block;font-weight:bold;color:#889098;padding:12px 0;}
+	.popular ul.tab01 li{width:100% !important;}
+	.popular ul.tab02 li{width:49.66% !important;}
+	.popular ul.tab03 li{width:33% !important;}
+	.popular ul.tab04 li{width:24.66% !important;}
+	.popular .cont{position:relative;width:100%;height:137px;border-bottom:1px solid #323c45;background:#e0faff;overflow:hidden;display:inline-block;}
+	.popular .tab01Menu_on a{color:#176db8 !important;}
+	.popular .tab02Menu_on a{color:#176db8 !important;}
+	.popular .tab03Menu_on a{color:#176db8 !important;}
+	.popular .tab04Menu_on a{color:#176db8 !important;}
+	.popular .cont .dafault{display:inline-block;width:102px;height:138px;position:absolute;top:0;left:0;overflow:hidden;}
+	.popular .cont .dafault img{width:102px;height:138px;}
+	.popular .cont .tit {font-weight:bold;color:#323c45;display:block;margin-left:90px;padding:17px 0 11px 0; } /* 2013-11-28 background:url('../../images/common/bg_clamp.png') right 60% no-repeat;background-size:7px 10px; 수정 */
+	.popular .cont a.tit img { width:7px !important; height:10px !important; margin-left:10px;} /* 2013-11-28 추가 */
+
+	.popular .cont ul{overflow:hidden;margin-left:90px; font-size:0;line-height:0;} /* 2013-11-29 */
+	.popular .cont li{width:33%;display:inline-block;text-align:center;text-align:left;}
+	.popular .cont li a{font-weight:bold;font-size:10px;line-height:120%;text-align:center;}
+	.popular .cont li span{display:inline-block;position:relative;}
+	.popular .cont li span .loading{top:0%;left:10%;}
+	.popular .cont li img{max-width:62px;max-height:62px;}
+	.popular .cont li p{max-width:62px;width:100%;color:#687079;}
+	.popular .cont li p strong{font-size:12px;color:#cc0702;}
+	.popular .dafault .loading{top:30%;left:25%;}
+	.popular02{display:none;overflow:hidden;}
+	.lastest{display:none;overflow:hidden;}
+
+	/* MAIN - 베스트 50 */
+	.best .rolling{padding-bottom:0;margin-top:0px;}
+	.best .rolling li{width:84px;height:120px;}
+	.best .rolling li strong{margin-top:0px;}
+	.best .rolling li img {width:84px;height:84px;}
+	.best .swipe-controls{bottom:0px}
+	.best .loading{top:15%;left:20%;}
+
+	/* MAIN - 주요 서비스 */
+	.service h2{margin-bottom:10px;}
+
+
+	.service .allService{top:1px;}
+
+	/* h2 - 공통타이틀 */
+	.titleArea .moreBtn img { width:47px; height:22px; }
+
+	/* SUB - SELECT VIEW*/
+	.sub_search{padding-bottom:0;}
+	.sub_search select {width:70%; height:30px; background-size:30px 30px;}
+	.sub_search ul.btn_view { float:right; margin:0px;}
+	.sub_search ul.btn_view li { float:left; margin:0px; padding:0px;}
+	.sub_search ul.btn_view li a img { width:60px !important; }
+
+	/* 베스트 50 - 리스트형 */
+	.labelRanking { width:25px !important; height:25px !important; line-height:25px !important; font-size:12px !important;font-size:0.750em !important;; }
+	.labelLike { width:28px !important; height:28px !important; font-size:0px;}
+	/*
+	.bestProduct_list li .product { width:89px !important; height:89px !important;}
+	.bestProduct_list dl { padding-left:100px !important; width:auto !important; height:75px !important;}
+	.bestProduct_list dl dt {  line-height:16px !important; font-size:12px !important; text-overflow: ellipsis;	display: -webkit-box;-webkit-line-clamp:2; -webkit-box-orient: vertical;	word-wrap:break-word;}
+	.bestProduct_list dl dd.tip { bottom:15px !important; font-size:12px !important;}
+	.bestProduct_list dl dd.price { bottom:-5px !important; font-size:12px !important;line-height:100%;}
+	.bestProduct_list dl dd.price del { position:relative;top:2px;margin-left:3px;}
+	.bestProduct_list dl dd .won{position:relative;top:1px;font-size:0.875em; }
+	.bestProduct_list dl dd.price strong{ font-size:15px !important;}
+	*/
+
+	/* 베스트 50 - 이미지형 
+
+	.bestProduct_imgList li {width:139px;margin:0 5px 20px 10px;} 
+	.bestProduct_imgList li .product { width:139px !important; height:139px !important;}
+	.bestProduct_imgList dl dt{margin:5px auto 0 auto;width:90%;height:32px;font-size:12px !important;overflow:hidden !important;text-overflow: ellipsis !important;	display: -webkit-box !important;-webkit-line-clamp:2 !important; -webkit-box-orient: vertical !important;	word-wrap:break-word !important;}
+*/
+.bestProduct_imgList li { height:220px;} 
+.bestProduct_imgList dl dt {height:32px;overflow: hidden;text-overflow: ellipsis;	display: -webkit-box;-webkit-line-clamp:2; -webkit-box-orient: vertical;	word-wrap:break-word;}
+
+	/* 특가복지상품 - sub*/
+	.specialPrice02 {position:relative; }
+	.specialPrice02 .rolling{position:relative;overflow:hidden; border-bottom:1px solid #8f99a1;}
+	.specialPrice02 .rolling ul {overflow:hidden;width:100%;text-align:center;}
+	.specialPrice02 .rolling li { width:100% !important; margin:0px;;}
+	.specialPrice02 .rolling li a { border-top:1px solid #93989e; border-left:0px; border-right:0px; border-bottom:0px; width:100%;}
+	.specialPrice02 .rolling li p.tit{height:15px;}
+
+	/* SUB - 인기 기획전 */
+	.popular03{margin-bottom:40px;}
+	.popular03 .swipe-controls{width:100%;text-align:center;bottom:-30px}
+	.popularBanner li { float:none; width:100% !important;}
+	.popularBanner li div { width:95%; margin:0 auto; }
+	.popularBanner p.banner img { height:100%; width:145px !important; height:45px !important; }
+	.popularBanner p.banner { float:left; width:50%; line-height:0px; margin-right:1px !important; height:200ox !important;}
+	.popularBanner p.bannerData { float:right; width:50% inline-block; display:inline-block; height:100%; margin-right:-1px; }
+
+	/* 추천서비스 - wow */
+	.recommendService {position:relative; }
+	.recommendService .rolling{position:relative;overflow:hidden; }
+	.recommendService .rolling ul {overflow:hidden;width:100%;text-align:center;}
+	.recommendService .rolling li { width:100% !important; margin:0px;;}
+	.recommendService .rolling li a { border-top:1px solid #93989e; border-left:0px; border-right:0px; border-bottom:0px; width:100%;}
+	.recommendService .rolling li p.tit{min-height:8px;}
+	.viewProduct{width:100%;text-align:center;margin:0 auto;}
+	.viewProduct .productImg > img{width:100%;max-width:320px;max-height:139px;}
+	.btn_buy a, .btn_buyEnd a, .detailInfo .btn_zoom a{width:100%;}
+	.detailInfo .cont{width:100%;text-align:center;}
+	.noContent{margin-top:0px;}
+
+	/*shop 메인*/
+	 .recommend .rolling li p .tit{width:85px;overflow: hidden;text-overflow: ellipsis;	display: -webkit-box;-webkit-line-clamp:2; -webkit-box-orient: vertical;	word-wrap:break-word;}
+	.recommend .rolling li img{max-width:85px;max-height:85px;}
+
+	/*주문결제*/
+	.orderProduct p{width:80px !important; height:80px !important; }
+	.orderProduct dl { padding-left:90px !important;padding-top:5px !important;  width:auto !important; height:70px !important;}
+	.orderProduct dl dt {  line-height:16px !important; overflow: hidden;text-overflow: ellipsis;	display: -webkit-box;-webkit-line-clamp: 2; -webkit-box-orient: vertical;	word-wrap:break-word;}
+	.orderProduct dl dd.price {bottom:0px; !important; left:91px; !important;}
+	.orderProduct dl dd.price del { bottom:-5px !important; vertical-align:top;}
+	.orderProduct dl dd.price strong{ font-size:15px !important; }
+	.btn_paySelect a{width:100%;}
+
+	/*주문상품정보 확인*/
+	.orderProduct02{padding:5px 0;}
+	.orderProduct02 p{width:80px !important; height:80px !important; }
+	.orderProduct02 dl { padding-left:70px !important; width:auto !important; height:50px !important;padding-top:5px;}
+	.orderProduct02 dl dt {line-height:15px !important; font-size:12px !important;margin-left:20px;}
+	.btn_payment a{width:100%;}
+
+	/*장바구니*/
+	.interest .all span button, .lately .all span button,, .all03 span button{font-size:0.825em;padding:2px 0 !important;}
+	.interestProduct .smallBtns, .latelyProduct .smallBtns{position:absolute;right:0;top:55px;}
+	.interestProduct .smallBtns button.w80, .latelyProduct .smallBtns button.w80{width:80px;letter-spacing:-1px;}
+
+	/*라이프케어*/
+	.lifeCare .lifeCareList li .thumb{width:120px;margin-right:15px;}
+	.lifeCare .lifeCareList li .cont{padding:30px 0 0 0;}
+	.funeralList .right{padding:10px 0;}
+	.funeralList .right strong{font-size:1.250em;margin-left:50px;}
+	.funeralList .right p{margin:5px 0 0 50px;}
+	.funeralList .right .labelPrice{position:absolute;top:0;padding-top:10px;width:46px;height:40px;background:url('../../images/common/label02.png') 0 0 no-repeat;background-size:46px 40px;letter-spacing:0px; font-size:1.125em}
+
+	/*검색결과*/
+	.bookPrice .left{margin-right:10px;}
+	.bookPrice .left img{width:89px;height:128px;}
+	.bookPrice .right{margin-left:100px;padding:10px 0;}
+	.exhibition li .thumb{width:144px;height:44px;margin-right:10px;}
+	.exhibition li .tit{margin-top:5px;}
+	.exhibition li .day{margin:5px 0 0 0;letter-spacing:-1px;}
+	.byStore li .left .thumb{margin-right:10px;}
+	.byStore li .left .thumb img{width:89px;height:89px;}
+	.byStore li .left p{margin-top:5px;}
+	.byStore li .right{height:80px;padding:10px 0 10px 10px;}
+	.byStore li .right .minimum{margin-top:5px;}
+
+	/*제도안내*/
+	span.solo, span.family, span.com, span.card{font-size:0.875em;padding:0 2px;letter-spacing:-1px;}
+	span.solo img{width:21px;}
+	span.family img{width:33px;}
+	span.com img{width:25px;}
+	span.card img{width:25px;}
+
+	/* 인기상품 상세 */
+	.planListArea01 .bestProduct_imgList dl dt {height:32px;overflow: hidden;text-overflow: ellipsis;	display: -webkit-box;-webkit-line-clamp:2; -webkit-box-orient: vertical;	word-wrap:break-word;}
+	.planListArea01 .bestProduct_imgList dl dd{margin:0;padding-top:5px;}
+
+	/*주문현황*/
+	.checkList li .text { width:50%;}
+	.checkList li .money { width:50%;}
+	
+	/*상담 글쓰기*/
+	.commentList .left{width:75%;}
+
+	/*상품확대보기*/
+	.zoomInner .gall {max-width:296px;}
+	.zoomInner .big{max-width:296px;}
+	.zoomInner .big img{width:100%;height:100%;max-width:296px;max-height:278px;}
+	.zoomInner .small li img{width:70px;height:70px;}
+	#zoom-thumb .swipe-item{max-width:80px;}
+
+	/*포인트기부 메인*/
+	.point .pointText em{width:77%;}
+
+
+	/*사이트맵*/
+	.sitemapWrap .sitemapList ul{margin-left:2px;}
+
+	/*The 가족*/
+	.familyMain #familyBanner { height:129px;}
+	.familyMain #familyBanner ul li img{width:100%;max-width:320px;max-height:129px;}
+
+
+	/*상담 리스트*/
+	.familyList li .left{width:45% !important;}
+	.familyList li .right{width:55% !important;}
+
+	.pointBox  { float:none; width:100% !important; margin:0px;}
+	.saved { float:none; width:100% !important; margin:14px 0 0 0;}
+	.pointBoxArea dl{ float:none;  }
+
+}
+
+/* iPhone 세로보기 */
+@media only screen and (min-width : 320px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+	/*공지사항 팝업*/
+	.popup03 .btns a span{padding:3px 0 !important;font-size:12px !important;}
+}
+
+/* iPhone 가로보기 */
+@media only screen and (min-width : 480px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+	/*공지사항 팝업*/
+	.popup03 .btns a span{padding:7px 0 !important;font-size:12px !important;}
+
+}
+
+/*------ width - 480px -----*/
+@media only screen and (max-width:480px) { 
+	.popup03 .btns a span{padding:4px 0;font-size:14px;}
+	.popup03 .noticeClose{position:absolute;top:0;right:0;width:30px;}
+
+	/* 추천서비스 - wow */
+	.detailView .rolling li{width:100%;}
+	.detailView .rolling .rollingArea{position:relative;width:250px;height:250px;}
+	.detailView .rolling li{width:250px;}
+	.detailView .rolling img {width:250px;height:250px;}
+	.detailView .rolling .swipe-item{height:250px;}
+	/* soldout */
+	.recommendService .rolling li .soldout p{background-size:184px 51px;}
+}
+
+@media only screen and (max-width:687px) { 
+	/* 툴팁영역 */
+	.tipArea em { float:left; width:90%; line-height:16px;}
+	.tipArea span { float:right; }
+}
+@media only screen and (max-width:910px) { 
+.recommend .rolling li p .tit{max-width:120px;}
+}
+@media only screen and (max-width:1280px) {
+	#rolling-wrapper {position:relative;}
+	.subMenu.wow { margin-top:15px; }
+}
+
+@media only screen and (max-width:1286px){
+	.planListArea01 dd { padding:10px 0 0; overflow:hidden; width:100%; }
+}
+
+
+@media only screen and (max-width:840px) and (min-width:641px){
+	/* soldout */
+	.recommendService .rolling li .soldout p{background-size:180px 51px;}
+}
+
+/*썸네일형리스트 정렬*/
+@media only screen and (max-width:320px) and (min-width:1px){
+	.bestProduct_imgList li {width:140px;} 
+	.bestProduct_imgList dl dt {width:80%;}
+	.service .sitemapList ul {}
+
+}
+@media only screen and (max-width:639px) and (min-width:321px){
+	.bestProduct_imgList li {width:170px;} 
+	.bestProduct_imgList dl dt {width:80%;}
+}
+@media only screen and (max-width:1024px) and (min-width:640px){
+	.bestProduct_imgList li {width:200px;} 
+}
+
+
+
+@media only screen and (max-width:510px) and (min-width:1px){
+	/* 목록, 신청하기 버튼 */
+	.listAppBtn02 .w30{width:27% !important;}
+	.listAppBtn02 .w60{width:57% !important;}
+}
+
+
+@media only screen and (max-width:910px) and (min-width:641px){
+	.recommend .rolling li img{width:120px;height:120px;}
+	.specialPrice02 .rolling li img{height:140px;}
+}
+
+@media only screen and (max-width:1000px) and (min-width:641px){
+	.specialPrice .rolling li .productImg .thumb img{height:100px;}
+	.best .rolling li img {width:110px;height:110px;}
+}
+
+
+/* iPad 2 세로보기 */
+@media only screen and (min-width : 768px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 1){
+	/*.service .sitemapList li{width:65px !important;height:65px !important;}*/
+	.specialPrice02 .rolling li img{height:140px;}
+	.sitemapWrap .sitemapList li{width:65px !important;height:65px !important;} 
+}
+
+
+/* iPad 2 가로보기 */
+@media only screen and (min-width : 1024px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 1){
+
+}

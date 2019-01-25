@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=yes">
+<meta name="Description" content="">
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- Status bar -->
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="../../common/css/import.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../common/css/content.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../../common/css/mediaQueries.css" type="text/css" media="all" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<script type="text/javascript" src="../../common/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../../common/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="../../common/js/iscroll.js"></script>
+<script type="text/javascript" src="../../common/js/swipe.js"></script>
+<script type="text/javascript" src="../../common/js/screen.js"></script>
+<script type="text/javascript" src="../../common/js/modalpopup.js"></script>
+<title>이지웰 모바일 웹</title>
+
+</head>
+
+<body>
+
+	<!-- 글자수 초과 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop01'); return false;" >1. 글자수 초과 팝업</a><br/>
+	<div id="pop01" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>입력하신 내용은 0000byte입니다.<br/>1000byte 이상 입력할 수 없습니다.</p>
+			<button type="button" class="btn_enter first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop01'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //글자수 초과 팝업 -->
+
+	<!-- 글자수 초과 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop02'); return false;" >2. 삭제 확인 팝업</a><br/>
+	<div id="pop02" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>정말 삭제하시겠습니까?</p>
+			<button type="button" class="btn_yes first">예</button><button type="button" class="btn_no">아니오</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop02'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //글자수 초과 팝업 -->
+
+	<!-- 글자수 초과 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop03'); return false;" >3. 삭제 완료 팝업</a><br/>
+	<div id="pop03" class="popup">
+		<p class="tit">&nbsp;</p>
+		<div class="cont">
+			<p>정말 삭제하시겠습니까?</p>
+			<button type="button" class="btn_enter first">확인</button>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop03'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //글자수 초과 팝업 -->
+
+	<!-- 우편번호 찾기 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop04'); return false;" >4. 우편번호 찾기 팝업</a><br/>
+	<div id="pop04" class="popup">
+		<p class="tit">우편번호 찾기</p>
+		<div class="cont">
+			<!-- 디폴트 -->
+			<p class="tip">※ 주소의 동(읍/리/면)를 입력하신 후 검색을 누르세요.</p>
+			<div class="search">
+				<span class="areaName">지역명</span><input type="text"/><button type="button" class="btn_area"><span>지역 검색</span></button>
+			</div>
+			<!-- //디폴트 -->
+
+			<!-- 검색 결과 있을때 -->
+			<div class="address" style=";">
+				<div id="scroll">
+					<table class="formTable04">
+						<colgroup>
+							<col width="30%"/>
+							<col width="70%"/>
+						</colgroup>
+						<tbody>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						<tr>
+							<th class="lineNo">123-456</th>
+							<td class="txtL">서울 구로구 구로3동 187-10번지 코오롱 싸이언스밸리 1차 12층 이지웰페어</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- //검색 결과 있을때 -->
+
+			<!-- 검색 결과 없을때 -->
+			<div class="noSearch" style=";">
+				<img src="../../images/common/icon_noSearch.png" alt="" width="60"/>
+				<p>검색 결과가 존재하지 않습니다.</p>
+			</div>
+			<!-- //검색 결과 없을때 -->
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop04'); return false;">팝업 닫기</button>
+		<button type="button" class="btn_popClose02" onclick="HideModalPopup('pop04'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //우편번호 찾기 팝업 -->
+
+	<!-- 최근주소지 팝업 -->
+	<a href="#none" onclick="ShowModalPopup('pop05'); return false;" >5. 최근주소지 팝업</a><br/>
+	<div id="pop05" class="popup">
+		<p class="tit">최근주소지</p>
+		<div class="cont">
+			<p class="tip">※ 주소의 동(읍/리/면)를 입력하신 후 검색을 누르세요.</p>
+			<ul class="addressList">
+				<li><a href="">서울 구로구 구로3동 187-10번지 코오롱싸이언스밸리 1차 14층 이지웰페어</a></li>
+				<li><a href="">서울 강남구 도곡동 467 타워팰리스 1차 1201호</a></li>
+				<li><a href="">경기도 안산시 상록구 본오동 태진아파트 123동 123호</a></li>
+				<li><a href="">서울 구로구 구로3동 187-10번지 코오롱싸이언스밸리 1차 14층 이지웰페어</a></li>
+				<li><a href="">서울 강남구 도곡동 467 타워팰리스 1차 1201호</a></li>
+				<li><a href="">경기도 안산시 상록구 본오동 태진아파트 123동 123호</a></li>
+				<li><a href="">서울 구로구 구로3동 187-10번지 코오롱싸이언스밸리 1차 14층 이지웰페어</a></li>
+				<li><a href="">서울 강남구 도곡동 467 타워팰리스 1차 1201호</a></li>
+				<li><a href="">경기도 안산시 상록구 본오동 태진아파트 123동 123호</a></li>
+				<li><a href="">서울 구로구 구로3동 187-10번지 코오롱싸이언스밸리 1차 14층 이지웰페어</a></li>
+			</ul>
+		</div>
+		<button type="button" class="btn_popClose" onclick="HideModalPopup('pop05'); return false;">팝업 닫기</button>
+		<button type="button" class="btn_popClose02" onclick="HideModalPopup('pop05'); return false;">팝업 닫기</button>
+	</div>
+	<!-- //최근주소지 팝업 -->
+</body>
+</html>
