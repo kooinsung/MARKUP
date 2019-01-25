@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> bururu.com </title>
+	<link type="text/css" rel="stylesheet" href="common/css/ui.css"  media="all"/>
+	<script type="text/javascript" src="common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="common/js/common.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<!-- 로고, 로그인, 장바구니 -->
+			<div class="topMenu">
+				<button type="button" id="btnAllMenu"><img src="img/btn_menu.gif" alt="" width="30"/></button>
+				<h1><img src="img/img_logo.gif" alt="bururu.com" width="114"/></h1>
+				<ul>
+					<li><a href="">로그인</a></li>
+					<li><a href="">장바구니(99)</a></li>
+				</ul>
+			</div>
+			<!-- //로고, 로그인, 장바구니 -->
+
+			<!-- 검색 -->
+			<div class="srch">
+				<div class="inner">
+					<span class="inputBox">
+						<span><input type="search" id="searchWords" name="searchWords" value="" title="검색어 입력" placeholder="지니 신제품 떡투더퓨쳐 출시!" ></span>
+						<a href="javascript:search_submit();" class="btnSrch"><img src="img/btn_srch.gif" width="25"></a>
+					</span>
+				</div>
+			</div>
+			<!-- //검색 -->
+
+			<!-- 마이메뉴 -->
+			<div class="myMenu">
+				<ul>
+					<li><a href="/" >홈</a></li>
+					<li><a href="">회원가입</a></li>
+					<li><a href="">주문배송조회</a></li>
+					<li><a href="" class="last">관심상품</a></li>
+				</ul>
+			</div>
+			<!-- //마이메뉴 -->
+
+			<!-- 전체메뉴 -->
+			<div class="allMenu" >
+				<ul>
+					<li><a href="">신제품/재입고/완전특가</a></li>
+					<li><a href="">남성용품</a></li>
+					<li><a href="">여성용품</a></li>
+					<li><a href="">콘돔전문샵</a></li>
+					<li><a href="">러브로션/코스메틱</a></li>
+					<li><a href="">섹시란제리</a></li>
+					<li><a href="">색다른 명랑</a></li>
+					<li><a href="">명랑 지식창고</a></li>
+					<li><a href="">EXE</a></li>
+					<li><a href="">donma</a></li>
+					<li><a href="">king</a></li>
+					<li><a href="">acr-japan</a></li>
+					<li><a href="">sod</a></li>
+					<li><a href="">2014 zini 신제품</a></li>
+				</ul>
+			</div>
+			<!-- //전체메뉴 -->
+
+			<!-- 메뉴 -->
+			<div class="gnb">
+				<a class="menuLeft" href="#"><img src="img/btn_menuprev.png" alt="" width="35"/></a>
+				<div class="swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide " style=";">
+							<a href="">남성용품</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">여성용품</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">콘돔</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">러브로션</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">섹시란제리</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">남성용품</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">여성용품</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">콘돔</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">러브로션</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">섹시란제리</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">남성용품</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">여성용품</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">콘돔</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">러브로션</a>
+						</li>
+						<li class="swiper-slide " style=";">
+							<a href="">섹시란제리</a>
+						</li>
+					</ul>
+				</div>
+				<a class="menuRight" href="#"><img src="img/btn_menunext.png" alt="" width="35"/></a>
+			</div>
+			<!-- //메뉴 -->
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="content">
+			<!-- 로케이션 -->
+			<div class="location">
+				<div class="first">
+					<select name="" id="">
+						<option value="남성용품">남성용품</option>
+					</select>
+				</div>
+				<div class="second">
+					<select name="" id="">
+						<option value="수동자딸기구">수동자딸기구</option>
+					</select>
+				</div>
+				<div class="third">
+					<select name="" id="">
+						<option value="토이즈하트">토이즈하트</option>
+					</select>
+				</div>
+			</div>
+			<!-- //로케이션 -->
+			
+			<!-- 타이틀 -->
+			<div class="subTit">
+				<strong>남성용품</strong>
+			</div>
+			<!-- //타이틀 -->
+
+			<!-- 총 상품 개수 -->
+			<div class="prdNum">
+				<p><strong>총 293개</strong>의 상품이 있습니다.</p>
+			</div>
+			<!-- //총 상품 개수 -->
+
+			<!-- 상품정렬 -->
+			<div class="prtSort">
+				<ul>
+					<li class="active"><a href="">최신순</a></li>
+					<li><a href="">베스트순</a></li>
+					<li><a href="">최저가격순</a></li>
+					<li><a href="">최고가격순</a></li>
+					<li><a href="">상품명순</a></li>
+				</ul>
+			</div>
+			<!-- //상품정렬 -->
+
+			<!-- 상품 -->
+			<div class="prdList">
+				<ul>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<span class="thumb"><img src="img/@temp01.gif" alt=""/></span>
+							<span class="tit">[토이즈하트] deep throat</span>
+							<strong class="price"><span>89,000원</span> (4,500딸)</strong>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //상품 -->
+
+			<!-- 페이징 -->
+			<div class="paging">
+				<div class="pagingPrev">
+					<span class="btnPagingPrev01"><a href=""><img src="img/btn_pageingprev01.gif" alt="" width="15"/></a></span>
+					<span class="btnPagingPrev02"><a href=""><img src="img/btn_pageingprev02.gif" alt="" width="7"/></a></span>
+				</div>
+				<ul>
+					<li><a href="">1</a></li>
+					<li class="active"><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li><a href="">6</a></li>
+					<li><a href="">7</a></li>
+					<li><a href="">8</a></li>
+					<li><a href="">9</a></li>
+					<li><a href="">10</a></li>
+				</ul>
+				<div class="pagingNext">
+					<span class="btnPagingNext01"><a href=""><img src="img/btn_pageingnext01.gif" alt="" width="15"/></a></span>
+					<span class="btnPagingNext02"><a href=""><img src="img/btn_pageingnext02.gif" alt="" width="7"/></a></span>
+				</div>
+			</div>
+			<!-- //페이징 -->
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<div class="footer">
+			<strong class="customerCenter"><img src="img/img_intro08.gif" alt="" /></strong>
+			<div class="family">
+				<ul>
+					<li><a href=""><img src="img/img_footercompany01.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footercompany02.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footercompany03.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footercompany04.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footercompany05.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footercompany06.gif" alt="" /></a></li>
+				</ul>
+			</div>
+
+			<div class="footerMenu">
+				<ul>			
+					<li><a href=""><img src="img/img_footermenu01.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footermenu02.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footermenu03.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footermenu04.gif" alt="" /></a></li>
+					<li><a href=""><img src="img/img_footermenu05.gif" alt="" /></a></li>
+				</ul>
+			</div>
+
+			<div class="copyRight">
+				<img src="img/img_footer.gif" alt=""/>
+			</div>
+
+		</div>
+		<!-- //footer -->
+	</div>
+ </body>
+
+</html>

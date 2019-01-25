@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg 브랜드 사이트" />
+	<meta name="keywords" content="bogg" />
+	<script src="../common/js/jquery.plugin.js"></script>
+	<script>
+		$(document).ready(function(){
+			// AD 스크립트
+			$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
+					$(pager).find('a').removeClass('active').filter('a:eq('+currSlideIndex+')').addClass('active'); 
+			}; 
+			$('.main-slides').cycle({
+				fx:     'fade',
+				speed:  '1000',
+				timeout: 0,
+				pager: '.pager-nav',
+				pagerAnchorBuilder: function(idx, slide) { 
+					var img = $(slide).children().eq(0).attr("src");
+					var cation = $(slide).children().eq(0).attr("alt");
+					return '<li><a href="">' + cation + '</a><img src="' + img + '" width="116" height="150" /></li>'; 
+				}
+			});
+			var maxItems = 8;
+			$(".adThumb li").each(function(i){
+				if(i%maxItems == 0 && i>=maxItems){ $(".adThumb").append("<ul class='pager-nav'></ul>");}
+				$(".adThumb .pager-nav").last().append(this);
+			});
+			$('.adThumb').cycle({
+				fx:     'scrollHorz',
+				speed:  '1000',
+				timeout: 0,
+				prev: '.prev',
+				next: '.next',
+				nowrap:  1,
+				after: onAfter
+			});
+			$('.adThumb li:eq(5), .adThumb li:eq(6), .adThumb li:eq(7)').css('cursor','default').unbind('click').find('a').attr('href','#none'); // 이미지가 없을 경우 클릭요소 해제
+			function onAfter(curr,next,opts) {
+				var caption = (opts.currSlide + 1) + ' / ' + opts.slideCount;
+				$('.paging').html("<strong>"+(opts.currSlide + 1)+"</strong>"+"&#47;"+"<span class=totalNum>"+opts.slideCount+"</span>");
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div class="adImg">
+		<ul class="main-slides">
+			<li><img src="../images/introduce/img_AD08.jpg"  alt="경향신문</br>2012.10"/></li>
+			<li><img src="../images/introduce/img_AD10.jpg"  alt="한국경제</br>2012.10"/></li>
+			<li><img src="../images/introduce/img_AD15.jpg"  alt="조선일보</br>2012.09"/></li>
+			<li><img src="../images/introduce/img_AD20.jpg"  alt="동아일보</br>2011.09"/></li>
+			<li><img src="../images/introduce/img_AD21.jpg"  alt="조선일보</br>2011.03"/></li>
+			<li><img src="../images/introduce/img_null.gif"  alt=""/></li>
+			<li><img src="../images/introduce/img_null.gif"  alt=""/></li>
+			<li><img src="../images/introduce/img_null.gif"  alt=""/></li>
+		</ul>
+	</div>
+	<div class="adThumb">
+		<ul class="pager-nav"></ul>
+	</div>
+
+	<div class="control">
+		<span class="prev"><img src="../images/btn/btn_prev03.gif" alt="prev" /></span>
+		<span class="next"><img src="../images/btn/btn_next03.gif" alt="next" /></span>
+		<span class="paging"><strong>1</strong>/<span class="totalNum">1</span></span>
+	</div>
+</body>
+</html>

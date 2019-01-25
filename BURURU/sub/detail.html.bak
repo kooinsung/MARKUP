@@ -1,0 +1,823 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="ko" xml:lang="ko">
+ <head>
+  <title> bururu.com </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<link type="text/css" rel="stylesheet" href="../common/css/ui.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/common.js"></script>
+ </head>
+
+ <body class="sub">
+  <div class="wrap">
+
+		<!-- header -->
+		<div class="header">
+			<div class="topArea">
+				<div class="inner">
+					<!-- 로고 -->
+					<h1><img src="../img/logo.gif" alt="bururu.com"/></h1>
+					<!-- //로고 -->
+
+					<!-- 즐겨찾기 -->
+					<span class="btnFav"><a href=""><img src="../img/btn_fav.gif" alt="즐겨찾기"/></a></span>
+					<!-- //즐겨찾기 -->
+
+					<!-- 상단 배너 -->
+					<div class="smallBanner">
+						<div class="smallBannerInner">
+							<div class="smallContorl">
+									<span class="smallPrev"><img src="../img/btn_prev01.gif" alt=""/></span><span class="smallNext"><img src="../img/btn_next01.gif" alt=""/></span>
+							</div>
+							<ul class="cycle-slideshow" data-cycle-slides="> li" data-cycle-timeout="5000" data-cycle-fx="scrollHorz" data-cycle-prev=".smallPrev" data-cycle-next=".smallNext">
+								<li>
+									<img src="http://placehold.it/154x77" alt=""/>
+								</li>
+								<li>
+									<img src="http://placehold.it/154x77" alt=""/>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //상단 배너 -->
+
+					<!-- 유틸메뉴 -->
+					<div class="sMenu">
+						<ul>
+							<li class="first"><a href="">로그인</a></li>
+							<li><a href="">회원가입</a></li>
+							<li><a href="">장바구니</a></li>
+							<li><a href="">주문배송조회</a></li>
+							<li class="last"><a href="">고객중심</a></li>
+						</ul>
+					</div>
+					<!-- //유틸메뉴 -->
+
+					<!-- 검색 -->
+					<div class="srch">
+						<input type="text" />
+						<a href=""><input type="image" src="../img/btn_srch.gif" /></a>
+					</div>
+					<!-- //검색 -->
+				</div>
+			</div>
+
+			<!-- 카테고리전체보기, 브랜드전체보기, 명랑커뮤니티, 명랑매거진, 이벤트/혜택, 특가상품, sns -->
+			<div class="menu01">
+				<div class="inner">
+					<ul class="firstMenu">
+						<li>
+							<!-- 카테고리 전체 보기 -->
+							<strong><a href="" id="btnCate"><img src="../img/menu01-1_off.gif" alt="카테고리 전체보기"/></a></strong>
+							<div class="allCate">
+								<ul>
+									<li class="first">
+										<span>신상품/재입고/특가</span>
+										<ul class="depth">
+											<li class="on"><a href="">2014 신상품</a></li>
+											<li><a href="">2014 재입고</a></li>
+											<li class="last"><a href="">2014 특가</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<span>빠루타체험상품</span>
+										<ul class="depth">
+											<li><a href="">수동 자딸기구</a></li>
+											<li><a href="">쌍방향 황홀봉기획</a></li>
+											<li><a href="">콘돔세트추천</a></li>
+											<li><a href="">러브로션여성</a></li>
+											<li><a href="">섹시의류명랑</a></li>
+											<li class="last"><a href="">비법서</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<span>남성용품</span>
+										<ul class="depth">
+											<li><a href="">수동 자딸기구</a></li>
+											<li><a href="">자동 자딸기구</a></li>
+											<li><a href="">Love Body 공기인형</a></li>
+											<li><a href="">브랜드 총집합</a></li>
+											<li><a href="">단련/강화/확대</a></li>
+											<li><a href="">국산 자딸완구</a></li>
+											<li class="last"><a href="">드라이오르가즘</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<span>여성용품</span>
+										<ul class="depth">
+											<li><a href="">쌍방향 황홀봉</a></li>
+											<li><a href="">바이브레이터</a></li>
+											<li><a href="">페어리 바이브</a></li>
+											<li><a href="">미니로터/팬시바이브</a></li>
+											<li><a href="">해외명품관</a></li>
+											<li><a href="">단련/세정제</a></li>
+											<li><a href="">브랜드 총집합</a></li>
+											<li><a href="">무전동 딜도</a></li>
+											<li class="last"><a href="">레즈비언</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<span>콘돔/발기콘돔</span>
+										<ul class="depth">
+											<li><a href="">기획콘돔세트</a></li>
+											<li><a href="">브랜드콘돔</a></li>
+											<li><a href="">발기콘돔</a></li>
+											<li class="last"><a href="">콘돔케이스</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<span>러브로션/코스메틱</span>
+										<ul class="depth">
+											<li><a href="">추천 러브로션</a></li>
+											<li><a href="">러브로션 기획세트</a></li>
+											<li><a href="">명랑완구 클리너</a></li>
+											<li><a href="">남성강화/청결로션</a></li>
+											<li><a href="">S SOLUTION</a></li>
+											<li class="last"><a href="">페로몬향수</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<span>섹시란제리/의류</span>
+										<ul class="depth">
+											<li><a href="">여성 섹시의류</a></li>
+											<li><a href="">남성 섹시의류</a></li>
+											<li><a href="">ELECTRIC Lingerie</a></li>
+											<li><a href="">HUSTLER</a></li>
+											<li class="last"><a href="">LUE LINE</a></li>
+										</ul>
+									</li>
+
+									<li>
+										<span>애널/전립선/SM</span>
+										<ul class="depth">
+											<li><a href="">똥꼬교감</a></li>
+											<li><a href="">SM Lux Fetish</a></li>
+											<li><a href="">SM BLUE LINE C&B</a></li>
+											<li><a href="">Bijoux ndiscrets</a></li>
+											<li class="last"><a href="">오럴섹스 시뮬레이터</a></li>
+										</ul>
+									</li>
+
+									<li class="last">
+										<span>전문서적/DVD</span>
+										<ul class="depth">
+											<li><a href="">명랑비법서</a></li>
+											<li><a href="">명랑지식서</a></li>
+											<li><a href="">명랑DVD</a></li>
+											<li><a href="">명랑소설</a></li>
+											<li class="last"><a href="">명랑전문서</a></li>
+										</ul>
+									</li>
+								</ul>
+								<button type="button" class="btnClose"><img src="../img/btn_close.gif" alt="전체 카테고리 닫기"/></button>
+							</div>
+							<!-- //카테고리 전체 보기 -->
+						</li>
+						<li>
+							<!-- 브랜드 전체 보기 -->
+							<strong><a href="" id="btnBrand"><img src="../img/menu01-2_off.gif" alt="브랜드 전체보기"/></a></strong>
+							<div class="allBrand">
+								<ul class="brandList">
+									<li><a href=""><img src="../img/img_brand01_off.jpg" alt="ZINI"/></a></li>
+									<li><a href=""><img src="../img/img_brand02_off.jpg" alt="FUN FACTORY"/></a></li>
+									<li><a href=""><img src="../img/img_brand03_off.jpg" alt="ANEROS"/></a></li>
+									<li><a href=""><img src="../img/img_brand04_off.jpg" alt="TENGA"/></a></li>
+									<li><a href=""><img src="../img/img_brand05_off.jpg" alt="TOPS HEART"/></a></li>
+									<li><a href=""><img src="../img/img_brand06_off.jpg" alt="N.P.C"/></a></li>
+									<li><a href=""><img src="../img/img_brand07_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand08_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand09_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand10_off.jpg" alt=""/></a></li>
+
+									<li><a href=""><img src="../img/img_brand11_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand12_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand13_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand14_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand15_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand16_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand17_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand18_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand19_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand20_off.jpg" alt=""/></a></li>
+
+									<li><a href=""><img src="../img/img_brand21_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand22_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand23_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand24_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand25_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand26_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand27_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand28_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand29_off.jpg" alt=""/></a></li>
+									<li><a href=""><img src="../img/img_brand30_off.jpg" alt=""/></a></li>
+								</ul>
+
+								<ul class="brandView">
+									<li><img src="../img/img_brandview01.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview02.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview03.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview04.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview05.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview06.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview07.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview08.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview09.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview10.jpg" alt=""/></li>
+
+									<li><img src="../img/img_brandview11.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview12.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview13.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview14.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview15.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview16.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview17.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview18.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview19.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview20.jpg" alt=""/></li>
+
+									<li><img src="../img/img_brandview21.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview22.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview23.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview24.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview25.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview26.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview27.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview28.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview29.jpg" alt=""/></li>
+									<li><img src="../img/img_brandview30.jpg" alt=""/></li>
+								</ul>
+								<button type="button" class="btnClose"><img src="../img/btn_close.gif" alt="전체 카테고리 닫기"/></button>
+							</div>
+							<!-- //브랜드 전체 보기 -->
+						</li>
+						<li>
+							<a href=""><img src="../img/menu01-3.gif" alt="명랑 커뮤니티"/></a>
+							<div class="bubble">
+								<img src="../img/img_tooltip.png" alt="" />
+							</div>
+						</li>
+						<li><a href=""><img src="../img/menu01-4.gif" alt="명랑 매거진"/></a></li>
+						<li><a href=""><img src="../img/menu01-5.gif" alt="이벤트 / 혜택"/></a></li>
+						<li><a href=""><img src="../img/menu01-6.gif" alt="특가상품"/></a></li>
+						<li>
+							<div class="sns">
+								<a href=""><img src="../img/btn_facebook.png" alt="페이스북"/></a>
+								<a href=""><img src="../img/btn_twitter.png" alt="트위터"/></a>
+								<a href=""><img src="../img/btn_cy.png" alt="싸이월드"/></a>
+							</div>
+						</li>
+					<ul>
+				</div>
+			</div>
+			<!-- //카테고리전체보기, 브랜드전체보기, 명랑커뮤니티, 명랑매거진, 이벤트/혜택, 특가상품, sns -->
+
+			<!-- gnb -->
+			<div class="menu02">
+				<div class="inner">
+					<ul class="dropDownMenu">
+						<li>
+							<a href="">신상품/재입고/특가</a>
+							<ul class="m1">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">빠루타체험상품</a>
+							<ul class="m2">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="">남성용품</a>
+							<ul class="m3">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">여성용품</a>
+							<ul class="m4">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">콘돔/발기콘돔</a>
+							<ul class="m5">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">러브로션/코스메틱</a>
+							<ul class="m6">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">섹시란제리/의류</a>
+							<ul class="m7">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">애널/전립선/SM</a>
+							<ul class="m8">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">전문서적/DVD</a>
+							<ul class="m9">
+								<li>
+									<a href="">2뎁스</a>
+									<ul>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+										<li><a href="">3뎁스</a></li>
+									</ul>
+								</li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+								<li><a href="">2뎁스</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //gnb -->
+
+		</div>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="content">
+			<div class="inner">
+				<!-- 왼쪽 qr코드 -->
+				<div class="sideMenu leftSideMenu">
+					<span class="left"><img src="../img/img_mobliecon.png" alt="모바일 안내"/></span>
+				</div>
+				<!-- //왼쪽 qr코드 -->
+
+				<!-- 오른쪽 float메뉴 -->
+				<div class="sideMenu rightSideMenu">
+					<span class="right">
+						<ul>
+							<li><a href=""><img src="../img/img_rightmenu01.gif" alt="1:1상담"/></a></li>
+							<li><a href=""><img src="../img/img_rightmenu02.gif" alt="전화주문안내"/></a></li>
+							<li><a href=""><img src="../img/img_rightmenu03.gif" alt="명랑완구도매문의"/></a></li>
+							<li><a href=""><img src="../img/img_rightmenu04.gif" alt="수도권 당일배송 퀵서비스"/></a></li>
+							<li class="todayPrd">
+								<img src="../img/img_rightmenu05.gif" alt="오늘 본 상품"/><br/>
+								<div class="todayInfo"><span class="todayPrdNum">(10)</span><span class="todayPrev"><img src="../img/btn_up.gif" alt="위로"/></span><span class="todayBar"><img src="../img/icon_bar04.gif" alt="분리바"/></span><span class="todayNext"><img src="../img/btn_down.gif" alt="아래로"/></span></div>
+								<div class="prdRolling">
+									<ul class="cycle-slideshow vertical" data-cycle-fx="carousel" data-cycle-timeout="3000" data-cycle-next=".todayNext" data-cycle-prev=".todayPrev"  data-cycle-carousel-visible="2" data-cycle-carousel-vertical="true"data-cycle-slides="li" >
+										<li><img src="../img/dummy02.gif" width="80" height="55" /></li>
+										<li><img src="../img/dummy02.gif" width="80" height="55" /></li>
+										<li><img src="../img/dummy02.gif" width="80" height="55" /></li>
+										<li><img src="../img/dummy02.gif" width="80" height="55" /></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<div class="btnTop" id="btnTop"><a href=""><img src="../img/btn_top.png" alt="위로"/></a></div>
+					</span>
+				</div>
+				<!-- //오른쪽 float메뉴 -->
+
+				<div class="subWrap">
+					<!-- 로케이션 -->
+					<div class="location">
+						<span class="home"><a href="/">home</a></span>
+						<span class="icon">&#62;</span>
+						<div class="cate cate01">
+							<span class="sel">남성용품</span>
+							<ul class="selList">
+								<li><a href="">남성용품</a></li>
+								<li><a href="">여성용품</a></li>
+							</ul>
+						</div>
+						 <span class="icon">&#62;</span>
+						<div class="cate cate02">
+							<span class="sel">남성용품</span>
+							<ul class="selList">
+								<li><a href="">남성용품</a></li>
+								<li><a href="">여성용품</a></li>
+							</ul>
+						</div>
+						 <span class="icon">&#62;</span>
+						<div class="cate cate03">
+							<span class="sel">남성용품</span>
+							<ul class="selList">
+								<li><a href="">남성용품</a></li>
+								<li><a href="">여성용품</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //로케이션 -->
+
+					<!-- 빠루타 체험상품 운영 정책 -->
+					<div class="bbarutaInfo">
+						<img src="../img/img_bbarutainfo.jpg" alt=""/>
+					</div>
+					<!-- //빠루타 체험상품 운영 정책 -->
+
+					<!-- 상세정보 -->
+					<div class="detail">
+						<div class="left">
+							<!-- 제품 이미지 -->
+							<div id="slideshow-1" class="slideshow-1">
+								<ul id="cycle-1" class="cycle-slideshow" data-cycle-slides="> li" data-cycle-timeout="0" data-cycle-prev="#slideshow-1 .cycle-prev"	data-cycle-next="#slideshow-1 .cycle-next" data-cycle-fx="fade">
+										<li><img src="http://placehold.it/450x450" alt=""/></li>
+
+
+								</ul>
+								<a href="" class="btnZoom"><img src="../img/btn_zoom.png" alt="확대보기"/></a>
+							</div>
+							<div id="slideshow-2" class="slideshow-2">
+								<a href="#" class="pagerPrev"><img src="../img/btn_prev04.gif" alt="이전 이미지"/></a>
+								<div class="caroPager">
+									<ul id="cycle-2" class="cycle-slideshow" data-cycle-slides="> li" data-cycle-timeout="0" data-cycle-prev=".pagerPrev" data-cycle-next=".pagerNext" data-cycle-fx="carousel" data-cycle-carousel-visible="4" data-cycle-carousel-fluid=true data-allow-wrap="false">
+											<li>
+												<span class="thumbOver"></span>
+												<img src="http://placehold.it/80x80" alt=""/>
+											</li>
+											<li>
+												<img src="http://placehold.it/80x80" alt=""/>
+											</li>
+											<li>
+												<img src="http://placehold.it/80x80" alt=""/>
+											</li>
+											<li>
+												<img src="http://placehold.it/80x80" alt=""/>
+											</li>
+									</ul>
+								</div>
+								<a href="#" class="pagerNext"><img src="../img/btn_next04.gif" alt="다음 이미지"/></a>
+							</div>
+							<!-- //제품 이미지 -->
+
+							<!-- 관련 기획전 및 sns -->
+							<div class="detailEtc">
+								<ul>
+									<li class="tit"><img src="../img/tit_planevent02.gif" alt="관련 기획전"/></li>
+									<li class="eventSelect">
+										<span class="sel">관련 기획전 선택</span>
+										<ul class="selList">
+											<li><a href="">기획전 1</a></li>
+											<li><a href="">기획전 1</a></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="sns">
+											<li><a href=""><img src="../img/btn_twitter.gif" alt="트위터"/></a></li>
+											<li><a href=""><img src="../img/btn_facebook.gif" alt="페이스북"/></a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<!-- //관련 기획전 및 sns -->
+						</div>
+
+						<div class="right">
+							<!-- 제품 타이틀 및 코멘트 -->
+							<div class="detailTop">
+								<strong>[ZINI] 2014년 퍼팩트 래빗 ZINI 신제품 출시! 3-WAY 모터시스템 2014년 퍼팩트 래빗 ZINI 신제품 출시! 3-WAY 모터시스템</strong>
+								<p>가장 완벽한 래빗 바이브 레이터! 100% 방수설계</p>
+							</div>
+							<!-- //제품 타이틀 및 코멘트 -->
+
+							<!-- 옵션 -->
+							<div class="prdOption">
+								<ul>
+									<li><span>판매가</span><div><strong>99,999원</strong></div></li>
+									<li><span>카드혜택</span><div>삼성,롯데,국민 2~3개월 무이자 할부<button type="button"><img src="../img/btn_detailview02.gif" alt="자세히 보기"/></button></div></li>
+									<li><span>적립금</span><div>5,400딸</div></li>
+									<li><span>모델명</span><div>ZV081</div></li>
+									<li><span>상품코드</span><div>126008000032</div></li>
+									<li><span>제조사/원산지</span><div>ZINI / PRC</div></li>
+								</ul>
+								<div class="prdAmount">
+									<ul>
+										<li class="first">[ZINI] 2014년 퍼팩트 래빗 ZINI 신제품 출시! 3-WAY 모터시스템</li>
+										<li class="second"><div><input type="text" value="0"/><button type="button" class="btnUp"><img src="../img/btn_up02.gif" alt=""/></button><button type="button" class="btnDown"><img src="../img/btn_down02.gif" alt=""/></button></div></li>
+										<li class="last"><strong>99,999원</strong></li>
+									</ul>
+								</div>
+							</div>
+							<div class="totalPrice">
+								<strong>총 상품금액 <span>99,999원</span></strong>
+							</div>
+							<!-- //옵션 -->
+
+							<!-- 버튼 -->
+							<div class="detailBtns">
+								<ul>
+									<li><a href=""><img src="../img/btn_zzim.gif" alt=""/></a></li>
+									<li><a href=""><img src="../img/btn_reivew.gif" alt=""/></a></li>
+									<li><a href=""><img src="../img/btn_buy.gif" alt=""/></a></li>
+									<li><a href=""><img src="../img/btn_cart.gif" alt=""/></a></li>
+								</ul>
+							</div>
+							<!-- //버튼 -->
+						</div>
+					</div>
+					<!-- //상세정보 -->
+					
+					<!-- 이 상품과 같이 구매한 상품 -->
+					<div class="togatherPrd">
+						<strong><img src="../img/tit_togatherprd.gif" alt="이 상품과 같이 구매한 상품"/></strong>
+						<div class="customCaption" id="customCaption"></div>
+						<div class="listContorl">
+								<span class="listPrev" id="listPrev"><img src="../img/btn_prev03.gif" alt=""/></span><span class="listNext" id="listNext"><img src="../img/btn_next03.gif" alt=""/></span>
+						</div>
+						<ul class="cycle-slideshow" data-cycle-timeout="0" data-cycle-next="#listNext" data-cycle-fx="scrollHorz" data-cycle-prev="#listPrev"  data-cycle-slides="> li" data-cycle-caption="#customCaption">
+							<li>
+								<ul class="fivePrd">
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<ul class="fivePrd">
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<span class="thumb"><img src="http://placehold.it/170x170" alt=""/></span>
+											<span class="name">[ZINI]도넛 핑크도넛 핑크도넛 핑크</span>
+											<span class="comment">(실제착각 레알쾌감 타입)</span>
+											<span class="price"><del>148,000원</del> <strong>58,000원</strong></span>
+											<span class="save">9,000딸</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+					</div>
+					<!-- //이 상품과 같이 구매한 상품 -->
+
+					<!-- 상품상세정보, 상품평, 배송/반품/교환 -->
+					<div class="detailInfo">
+						<div class="detailTab">
+							<ul class="tabs">
+								<li class="active" rel="tab1"><img src="../img/ttit_prdinfo.gif" alt="상품상세정보"/></li>
+								<li rel="tab2"><img src="../img/tit_prdreview.gif" alt="상품평"/></li>
+								<li rel="tab3"><img src="../img/tit_prdinfo.gif" alt="배송/반품/교환"/></li>
+							</ul>
+						</div>
+
+						<div class="detailTab"> 
+							 <div id="tab1" class="tabContent"> 
+								 <img src="../img/detailsample.jpg" alt=""/>
+							 </div>
+
+							 <div id="tab2" class="tabContent"> 
+							 b
+							 </div>
+
+							 <div id="tab3" class="tabContent"> 
+							 c
+							 </div>
+						</div> 
+
+
+
+					</div>
+					<!-- //상품상세정보, 상품평, 배송/반품/교환 --> 
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<div class="footer">
+			<div class="inner">
+				<strong class="logo"><img src="../img/img_footerlogo.gif" alt="bururu.com"/></strong>
+				<div class="info">
+					<span class="first"><img src="../img/img_footer01.gif" alt="잠깐! 저작권을 지켜주세요."/></span><span class="second">부르르의 모든 이미지와 컨텐츠는 저작권법의 보호를 받습니다.타 업체의 상업적 목적을 위한 도용은 법적 책임이 가해지며, 개인블로그나 카페에 올릴 경우에는 명확한 출처 표기가 되어야함을 알려드립니다. 이에 관한 모든 위반시, 즉각적인 법적조치를 시행하겠습니다.</span>
+				</div>
+				<div class="familySite">
+					<ul>
+						<li><a href=""><img src="../img/img_family01.gif" alt="bururu.com"/></a></li>
+						<li><a href=""><img src="../img/img_family02.gif" alt="zini"/></a></li>
+						<li><a href=""><img src="../img/img_family03.gif" alt="msh"/></a></li>
+						<li><a href=""><img src="../img/img_family04.gif" alt="msh b2b"/></a></li>
+						<li><a href=""><img src="../img/img_family05.gif" alt="남로당"/></a></li>
+					</ul>
+				</div>
+				<div class="copyRight">
+					<div class="left"><img src="../img/img_sublogo.gif" alt=""/></div>
+					<div class="right">
+						<ul>
+							<li class="first"><a href="">회사소개</a></li>
+							<li><a href="">이용약관</a></li>
+							<li><a href="">개인정보취급방침</a></li>
+							<li><a href="">제휴/입점상담</a></li>
+							<li class="last"><a href="">광고문의</a></li>
+						</ul>
+						<p>고객센터:1661-7725 (평일:10:00~18:00 / 토요일:10:00~14:00 / 일,공휴일 제외)  이메일고객상담:mall@msharmony.co.kr</p>
+						<p>주소:100-042 서울시 중구 남산동2가 24-13 부르르빌딩 2층 (주)엠에스하모니  Tel:02-771-7725  Fax:02-771-7720</p>
+						<p>대표이사:이준  사업자등록번호:107-86-42509  통신판매신고:제 중구 03455호  <a href="" class="companyInfo">사업자정보확인</a></p>
+						<p>의료기기 판매신고:2071  개인정보관리책임자:홍광종 webjoy@msharmony.co.kr</p><br/>
+						<p>copyright(c)MSHarmony.CO.,LTD. All rights reserved. <a href="" class="moreInfo">Click here for more information</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+ </body>
+</html>

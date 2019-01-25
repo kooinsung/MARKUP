@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg 브랜드 사이트" />
+	<meta name="keywords" content="bogg" />
+	<script src="../common/js/jquery.plugin.js"></script>
+	<script>
+		$(document).ready(function(){
+			// AD 스크립트
+			$.fn.cycle.updateActivePagerLink = function(pager, currSlideIndex) { 
+					$(pager).find('a').removeClass('active').filter('a:eq('+currSlideIndex+')').addClass('active'); 
+			}; 
+			$('.main-slides').cycle({
+				fx:     'fade',
+				speed:  '1000',
+				timeout: 0,
+				pager: '.pager-nav',
+				pagerAnchorBuilder: function(idx, slide) { 
+					var img = $(slide).children().eq(0).attr("src");
+					var cation = $(slide).children().eq(0).attr("alt");
+					return '<li><a href="">' + cation + '</a><img src="' + img + '" width="116" height="150" /></li>'; 
+				}
+			});
+			var maxItems = 8;
+			$(".adThumb li").each(function(i){
+				if(i%maxItems == 0 && i>=maxItems){ $(".adThumb").append("<ul class='pager-nav'></ul>");}
+				$(".adThumb .pager-nav").last().append(this);
+			});
+			$('.adThumb').cycle({
+				fx:     'scrollHorz',
+				speed:  '1000',
+				timeout: 0,
+				prev: '.prev',
+				next: '.next',
+				nowrap:  1,
+				after: onAfter
+			});
+			$('.adThumb li:eq(15)').unbind('click').css('cursor','default').find('a').attr('href','#none'); // 이미지가 없을 경우 클릭요소 해제
+			function onAfter(curr,next,opts) {
+				var caption = (opts.currSlide + 1) + ' / ' + opts.slideCount;
+				$('.paging').html("<strong>"+(opts.currSlide + 1)+"</strong>"+"&#47;"+"<span class=totalNum>"+opts.slideCount+"</span>");
+			}
+		});
+	</script>
+</head>
+
+<body>
+	<div class="adImg">
+		<ul class="main-slides">
+			<li><img src="../images/introduce/img_AD01.jpg"  alt="스타일 조선</br>2013.03"/></li>
+			<li><img src="../images/introduce/img_AD02.jpg"  alt="여성동아 1p</br>2013.03"/></li>
+			<li><img src="../images/introduce/img_AD03.jpg"  alt="여성동아 2p</br>2013.03"/></li>
+			<li><img src="../images/introduce/img_AD04.jpg"  alt="여성중앙 1p</br>2013.03"/></li>
+			<li><img src="../images/introduce/img_AD05.jpg"  alt="여성중앙 2p</br>2013.03"/></li>
+			<li><img src="../images/introduce/img_AD06.jpg"  alt="헤렌 1p</br>2013.03"/></li>
+			<li><img src="../images/introduce/img_AD07.jpg"  alt="헤렌 2p</br>2013.03"/></li>
+			<li><img src="../images/introduce/img_AD11.jpg"  alt="세크레토 1p</br>2012.10"/></li>
+			<li><img src="../images/introduce/img_AD12.jpg"  alt="세크레토 2p</br>2012.10"/></li>
+			<li><img src="../images/introduce/img_AD13.jpg"  alt="세크레토 3p</br>2012.10"/></li>
+			<li><img src="../images/introduce/img_AD14.jpg"  alt="세크레토</br>2012.10"/></li>
+			<li><img src="../images/introduce/img_AD16.jpg"  alt="메종 1p</br>2012.09"/></li>
+			<li><img src="../images/introduce/img_AD17.jpg"  alt="메종 2p</br>2012.09"/></li>
+			<li><img src="../images/introduce/img_AD18.jpg"  alt="헤렌 1p</br>2012.09"/></li>
+			<li><img src="../images/introduce/img_AD19.jpg"  alt="헤렌 2p</br>2012.09"/></li>
+			<li><img src="../images/introduce/img_null.gif"  alt=""/></li>
+		</ul>
+	</div>
+	<div class="adThumb">
+		<ul class="pager-nav"></ul>
+	</div>
+
+	<div class="control">
+		<span class="prev"><img src="../images/btn/btn_prev03.gif" alt="prev" /></span>
+		<span class="next"><img src="../images/btn/btn_next03.gif" alt="next" /></span>
+		<span class="paging"><strong>1</strong>/<span class="totalNum">1</span></span>
+	</div>
+</body>
+</html>
