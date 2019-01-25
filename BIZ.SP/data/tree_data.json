@@ -1,0 +1,91 @@
+[{
+	"id":1,
+	"text":"Biz-Accounting",
+	"children":[{
+		"id":2,
+		"text":"결재상신",
+		"state":"open",
+		"children":[{
+			"text":"결재상신"
+		},{
+			"text":"심포지움 결제상신"
+		},{
+			"text":"공용카드 결재상신요청"
+		},{
+			"text":"진행중 문서"
+		},{
+			"text":"반려문서"
+		},{
+			"text":"완료문서"
+		}]
+	},{
+		"id":3,
+		"text":"결재할 문서",
+		"state":"open",
+		"children":[{
+			"text":"결재할 문서"
+		},{
+			"text":"완료 문서"
+		}]
+	},{
+		"id":4,
+		"text":"레포트",
+		"state":"open",
+		"children":[{
+			"text":"카드처리 현황"
+		}]
+	},{
+		"id":5,
+		"text":"카드관리",
+		"state":"open",
+		"children":[{
+			"text":"카드정보관리"
+		}, {
+			"text":"카드기간관리"
+		}]
+	},{
+		"id":6,
+		"text":"코드관리",
+		"state":"open",
+		"children":[{
+			"text":"그룹목록관리"
+		}, {
+			"text":"코드목록관리"
+		}]
+	},{
+		"id":7,
+		"text":"권한관리",
+		"state":"open",
+		"children":[{
+			"text":"권한등록"
+		}, {
+			"text":"사용자권한관리"
+		}, {
+			"text":"메뉴권한관리"
+		}]
+	},{
+		"id":8,
+		"text":"결재선관리",
+		"state":"open",
+		"children":[{
+			"text":"결재선 유형 관리"
+		}, {
+			"text":"결재선 라인 목록"
+		}]
+	},{
+		"id":9,
+		"text":"메뉴관리",
+		"state":"open"
+	},{
+		"id":10,
+		"text":"공지사항관리",
+		"state":"open"
+	},{
+		"id":11,
+		"text":"시스템관리",
+		"state":"open",
+		"children":[{
+			"text":"인터페이스 수기실행"
+		}]
+	}]
+}]
