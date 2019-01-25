@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="http://dev-one.di9.co.kr/project/bogg/collection/PatchWork.html">
+	<meta name="viewport" content="width=1044" />
+	<title>Garden Collection</title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg" />
+	<meta name="keywords" content="bogg" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<script src="../common/js/jquery-1.8.3.min.js"></script>
+	<script src="../common/js/jquery.plugin.js"></script>
+	<script src="../common/js/common.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	<script>
+		$(document).ready(function () {
+
+			// 탭메뉴 및 슬라이드 로드 스크립트
+			var aSeq = 0;
+			var imgSeq = 0;
+			$('.subTab a').each(function () {
+					aSeq++;
+				$(this).attr('href', 'javascript:fn_bindContents('+aSeq+')');
+			});
+
+			$('.subTab img').each(function () {
+				imgSeq++;
+				$(this).attr('id', 'tab' + imgSeq.toString());
+			});
+			fn_bindContents(1);
+		});
+		function fn_bindContents(index) {
+			$('.subTab img').each(function () {
+				var src = $(this).attr('src');
+				$(this).attr('src',src.replace("_on", "_off"));
+			});
+
+			if (index > 4)
+				$('#tab' + index).attr('src', '../../images/collection/gardencollection/img_gardenTab' + index + '_on.gif');
+			else
+				$('#tab' + index).attr('src', '../../images/collection/gardencollection/img_gardenTab0' + index + '_on.gif');
+
+			// 각 탭메뉴별 상단 텍스트 이미지 변경
+
+
+			if(index == 1){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/gardencollection/txt_gardencollection01.gif',
+						alt: 'Collection presented to the 2012 Masion&Objet! In <Garden Collection> International fabric artist Chang Eung-Bok&#180;s 10 works are harmonized with the modern stripe motif. Ambitiously released new pattern a painting of flowers and birds, &#39;a painting of books and study materials.&#39; Chang&#180;s special design with romantic pastel colors - 2012 trend color.'
+					});
+			}else if(index == 2){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/gardencollection/txt_gardencollection02.gif',
+						alt: 'Launching new collection by Chang Eung-Bok - made patterns through her own aesthetic taste from various patterns (pomegranate, Sipjangsaeng, bogg, a painting of flowers and birds, embroidered folding screen, piling up tea cups, clam shell, hexagon pattern, sansoo embroider) using patchwork method. Also, with a large screen printing, called &#39;MOON PARADISE,&#39; releasing WASHING SPREAD - second to modern abstract art!'
+					});
+			}else if(index == 3){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/gardencollection/txt_gardencollection03.gif',
+						alt: 'Play and game, romatic pink-colored rose garden&#180;s sentimental beauty and shadow by shining autumn sun, the setting sun and romantic glow in the sky with rose wine color, Mystic twilight blue sky, where reality and non-reality overlap each other, meets bogg&#180;s 2012 F/W pattern, bringing sentimental of England. Images of fantasy, and the repetition of grafting & Separation, and union & mixing is incorporated in a novel way in reinterpreting &#39;patchwork&#39; of Korea&#180;s traditional wrapping cloth with designer Chang&#180;s way.'
+					});
+			}else if(index == 4){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/gardencollection/txt_gardencollection04.gif',
+						alt: 'Bogg&#180;s 2012 winter product is pattern work of Dawan. Dawan is a tea cup used to drink tea. Enjoying tea and the tea set is well known in tea ceremony, giving calm and profound qi to tea drinkers. Dawan is another item that delivers calm and refined Korean beauty, and its pattern is incomplete but beautiful circular shapes of Dawan when looked down from the above in a modern way. Also, the rich image of gooes down that put into bedding cover comes as a full shape of moon-shaped jar, harmonizing with the soft image of Dawan - Korean contemporary design.'
+					});
+			}
+
+			$(".loadCont").html('<p style="position:absolute;top:50%;left:50%;"><img src="../../images/icon/ajax-loader.gif" width="32" height="32" /></p>').load('collection02/page0'+index+'.html'+'?ver2014')
+
+		 }
+	</script>
+	 <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-44417952-1', 'bogg.co.kr');
+  ga('send', 'pageview');
+</script>
+</head>
+
+<body>
+	<p class="accessibility"><a id="skipTop" href="#Content">skip nav(content)</a></p>
+	<div class="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		//<![CDATA[
+			lnbMenu01(2,6);
+		//]]>
+		</script>
+		<hr/>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<h2 class="hidden">content</h2>
+		<section class="subSection">
+			<h3><img src="../../images/collection/gardencollection/tit_gardencollection.gif" alt="Garden Collection" /></h3>
+			<p class="txt"><img src="../../images/english/collection/gardencollection/txt_gardencollection.gif" alt="2012 메종 & 오브제 출품작! 세계적인 패브릭 아티스트 장응복의 대표 10개의 작품을 모던한 스트라이프 모티브에 조화롭게 디자인한 &#60;Garden Collection&#62; 이번 시즌에 야심차게 공개한 NEW PATTERN ‘화조도’, ‘책가도’ 2012년 트렌드 칼라인 파스텔 계열의 로맨틱한 칼라로 풀어낸 장응복만의 스페셜한 디자인 " /></p>
+			<div class="content collection garden">
+				<ul class="subTab">
+					<li class="first"><a href="#none"><img src="../../images/collection/gardencollection/img_gardenTab01_on.gif" alt="Blooming Garden" /></a></li>
+					<li class="second"><a href="#none"><img src="../../images/collection/gardencollection/img_gardenTab02_off.gif" alt="Summer Breeze" /></a></li>
+					<li class="third"><a href="#none"><img src="../../images/collection/gardencollection/img_gardenTab03_off.gif" alt="English Garden" /></a></li>
+					<li class="last"><a href="#none"><img src="../../images/collection/gardencollection/img_gardenTab04_off.gif" alt="Winter Palace" /></a></li>
+				</ul>
+				<div class="loadCont"></div>
+			</div>
+		</section>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+
+	</div>
+	<p class="accessibility"><a class="accessibility" id="skipBottom" href="#skipTop">skip nav(start)</a></p>
+	</body>
+</html>

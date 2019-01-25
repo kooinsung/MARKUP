@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1044" />
+	<title>bogg 컬렉션 - PATCHWORK</title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg 브랜드 사이트" />
+	<meta name="keywords" content="bogg" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<script src="../common/js/jquery-1.8.3.min.js"></script>
+	<script src="../common/js/jquery.plugin.js"></script>
+	<script src="../common/js/common.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script>
+		$(document).ready(function () {
+
+			// 탭메뉴 및 슬라이드 로드 스크립트
+			var aSeq = 0;
+			var imgSeq = 0;
+			$('.subTab a').each(function () {
+					aSeq++;
+				$(this).attr('href', 'javascript:fn_bindContents('+aSeq+')');
+			});
+
+			$('.subTab img').each(function () {
+				imgSeq++;
+				$(this).attr('id', 'tab' + imgSeq.toString());
+			});
+			fn_bindContents(1);
+		});
+		function fn_bindContents(index) {
+			$('.subTab img').each(function () {
+				var src = $(this).attr('src');
+				$(this).attr('src',src.replace("_on", "_off"));
+			});
+
+			if (index > 2)
+				$('#tab' + index).attr('src', '../images/collection/patchwork/img_patchworkTab' + index + '_on.gif');
+			else
+				$('#tab' + index).attr('src', '../images/collection/patchwork/img_patchworkTab0' + index + '_on.gif');
+
+
+			// 각 탭메뉴별 상단 텍스트 이미지 변경
+			if(index == 1){
+				 $('.txt').find('img').attr({
+						src: '../images/collection/patchwork/txt_patchwork.gif',
+						alt: '20여 가지가 넘는 패턴이 bogg 특유의 패치워크 패턴을 통해 하나하나가 추억 조각처럼. &#39;픽셀 패치워크&#39;라 이름 붙여진 이번 패턴은 멀리서 보면 마치 사진의 일부분이 거대하게 확대되어 드러난 픽셀조각처럼 보여 현대적인 분위기를 자아내고, 그 가운데 사랑스럽게 자리한 소박한 꽃 문양들로 한국 여인의 규방 소품에서 볼 수 있듯 우아하면서도 아름다운 분위기를 우리 봄 침실에 전해준다.'
+					});
+			}else if(index == 2){
+				 $('.txt').find('img').attr({
+						src: '../images/collection/patchwork/txt_summerbliss.gif',
+						alt: '풍기인견 100% 소재로 제작된 bogg의 Summer Bliss는 열대야의 여름 침실에 낙원 같은 휴식을 선사한다. 장응복 디자이너의 여름 대표 디자인 패턴인 &#39;부채&#39;를 모티브로 감각적인 단순 배열과 농염한 색채를 통해 표현. 또한, 숲을 상징하는 간결한 선 사이를 경쾌하게 뛰어다니는 사슴과 토끼, 피리부는 소년을 등에 업은 소 등 조선시대의 후기 민화에서 차용한 &#39;flying Animal&#39; 패턴을 적용해 신화같은 신비로운 풍경속으로의 여행에 초대한다. 풍부한 색감과 서정적인 패턴을 특징으로 하는 이번 컬렉션은 보는 것 만으로도 침실에 시원한 바람을 불어 넣어주는 것 같다. '
+					});
+			}
+			$(".loadCont").html('<p style="position:absolute;top:50%;left:50%;"><img src="../images/icon/ajax-loader.gif" width="32" height="32" /></p>').load('collection01/page0'+index+'.html'+'?ver2015');
+		 }
+	</script>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-44417952-1', 'bogg.co.kr');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+	<p class="accessibility"><a id="skipTop" href="#Content">콘텐츠 바로가기</a></p>
+	<div class="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		//<![CDATA[
+			lnbMenu01(2,5);
+		//]]>
+		</script>
+		<hr/>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<h2 class="hidden">컨텐츠</h2>
+		<section class="subSection">
+			<h3><img src="../images/collection/patchwork/tit_patchwork.gif" alt="PATCHWORK" /></h3>
+			<p class="txt"><img src="../images/collection/patchwork/txt_patchwork.gif" alt="20여 가지가 넘는 패턴이 bogg 특유의 패치워크 패턴을 통해 하나하나가 추억 조각처럼. '픽셀 패치워크'라 이름 붙여진 이번 패턴은 멀리서 보면 마치 사진의 일부분이 거대하게 확대되어 드러난 픽셀조각처럼 보여 현대적인 분위기를 자아내고, 그 가운데 사랑스럽게 자리한 소박한 꽃 문양들로 한국 여인의 규방 소품에서 볼 수 있듯 우아하면서도 아름다운 분위기를 우리 봄 침실에 전해준다." /></p>
+			<div class="content collection patchwork">
+				<ul class="subTab">
+					<li class="first"><a href="#none"><img src="../images/collection/patchwork/img_patchworkTab01_on.gif" alt="Pixel Patchwork" /></a></li>
+					<li class="last"><a href="#none"><img src="../images/collection/patchwork/img_patchworkTab02_off.gif" alt="Summer Bliss" /></a></li>
+				</ul>
+				<div class="loadCont"></div>
+			</div>
+		</section>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+
+	</div>
+	<p class="accessibility"><a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a></p>
+	</body>
+</html>

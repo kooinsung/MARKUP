@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<title></title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg 브랜드 사이트" />
+	<meta name="keywords" content="bogg" />
+	<script src="../common/js/jquery-1.8.3.min.js"></script>
+	<script src="../common/js/jquery.plugin.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	<style>
+		html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+		dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed,figure, figcaption, footer, header, hgroup,menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
+		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+		ol,ul,li{list-style: none;}
+		table{border-collapse: collapse;border-spacing: 0;}
+		h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
+		input,textarea,select,td,th{vertical-align:middle;}
+		hr{display:none;}
+		a{margin:0;padding:0;border:0;background:transparent;text-decoration:none;color:#8b8c8e;font-size:100%;vertical-align:baseline;}
+		a:link,a:visited,a:hover,a:active,a:focus{text-decoration:underline;}
+		em,address{font-style:normal;}
+		caption{position:relative;display:none;}
+
+		.shopWrap{width:1024px;display:block;background:url('../../images/common/bg_main.gif') repeat;padding:40px 0;}
+		.shopTab{float:right;position: relative;left: -50%; }
+		.shopTab li{float: left;position: relative;left: 50%;padding:0 28px 17px;background:url('../../images/icon/icon_slash.gif') right 0 no-repeat;}
+		.shopTab li.tabFrist{padding-left:0;}
+		.shopTab li.tabSecond{padding-left:14px;}
+		.shopTab li.tabThird{padding-left:14px;}
+		.shopTab li.tabLast{padding-left:14px;background:none;}
+		.shopInner{clear:both;width:890px;border:1px solid #f5f0e8;background:#fff;overflow:hidden;margin:0 auto;}
+		.shopInner h4 img{vertical-align:middle;}
+		.shopTitle{width:765px;height:42px;line-height:42px;vertical-align:middle;background:#5a451a;overflow:hidden;padding-left:21px;margin:40px 0 0 51px;}
+		.tit{float:left;padding-top:12px;}
+		.top{float:right;}
+		.shopList{width:786px;overflow:hidden;margin:30px 0 0 51px;}
+		.shopList > li{position:relative;width:200px;height:260px;float:left;padding:0 46px;border-right:1px solid #d6d6d6;margin-bottom:40px;overflow:hidden;}
+		.shopList > li.first{padding-left:0;}
+		.shopList > li.last{padding-right:0;border:none;}
+		.pics img{border:1px solid #c0c0c0;}
+		.thumb {height:52px;position:absolute;bottom:0; overflow:hidden;}
+		.thumb > li { width: 50px; float: left; margin-right:10px; }
+		.thumb a { width: 50px; padding: 1px; display: block;background:#ccc; }
+		.thumb > li.activeSlide a { background: #b99765; }
+		.thumb img { border: none; display: block; }
+	</style>
+	<script>
+		$(document).ready(function(){
+
+			//갤러리 스크립트
+			$('.pics').each(function() {
+				var $this = $(this);
+				var p = $(this).parent();
+				$this.before('<ul class="thumb"></ul>').cycle({
+					speed:    'slow',
+					timeout:  0,
+					fx:       'fade',
+					slideExpr: 'img',
+					pager:$('.thumb', p), 
+					pagerEvent: 'mouseover', 
+					pauseOnPagerHover: true,
+					pagerAnchorBuilder: function(idx, slide) { 
+						return '<li><a href="#"><img src="' + slide.src + '" width="50" height="50" /></a></li>'; 
+					}
+				});
+			});
+
+		});
+	</script>
+
+</head>
+
+<body>
+	<div class="shopWrap" id="Top">
+		<div class="shopInner">
+			<h4 id="" class="shopTitle"><img src="../../images/shop/tit_sub05.gif" alt="" class="tit"/></h4>
+			<ul class="shopList">
+				<li class="first"><!-- 첫번째 li요소에 first class 추가해야 함 -->
+					<div class="pics">
+							<a href="http://www.cjmall.com/prd/detail_cate.jsp?item_cd=20718219" target="_blank"><img src="../../images/shop/img_shop20.jpg" width="200" height="200" alt="" /></a>
+							<a href="http://www.cjmall.com/prd/detail_cate.jsp?item_cd=20718219" target="_blank"><img src="../../images/shop/img_shop21.jpg" width="200" height="200" alt="" /></a>
+					</div>
+				</li>
+
+				<li class="last">
+					<div class="pics">
+							<a href="http://www.cjmall.com/prd/detail_cate.jsp?item_cd=20717960" target="_blank"><img src="../../images/shop/img_shop22.jpg" width="200" height="200" alt="" /></a>
+							<a href="http://www.cjmall.com/prd/detail_cate.jsp?item_cd=20717960" target="_blank"><img src="../../images/shop/img_shop23.jpg" width="200" height="200" alt="" /></a>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	</body>
+</html>

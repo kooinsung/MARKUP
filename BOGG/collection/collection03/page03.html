@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg 브랜드 사이트" />
+	<meta name="keywords" content="bogg" />
+	<script src="../common/js/jquery-1.8.3.min.js"></script>
+	<script src="../common/js/jquery.plugin.js"></script>
+	<script>
+$(document).ready(function(){
+
+	//이미지 슬라이드 - 컬렉션
+	$('#slideshow').cycle({
+		fx: 'fade',
+		speed: '1000',
+		timeout: 0,
+		prev: '#collectionPrev',
+		next: '#collectionNext',
+		nowrap: 1,
+		pager: '#slide-pager ul',
+		pagerAnchorBuilder: function(idx, slide) { 
+		return '#slide-pager ul li:eq(' + idx + ') a';},
+		onPrevNextEvent: function(dir, id, el) {
+			if (dir === true) {
+				if (id >= 8) {
+					$('#thumbNext02').click();
+				}
+			}else {
+				if (id >= 1) {
+				$('#thumbPrev02').click();
+				}
+			}
+		}
+	});
+	$('#slide-pager').jCarouselLite({
+		btnNext: '#thumbNext02',
+		btnPrev: '#thumbPrev02',
+		circular: false,
+		visible: 8,
+		speed: 500
+	});
+
+});
+	</script>
+</head>
+
+<body>
+	<div class="collectionWrap">
+		<a href="#none" id="collectionPrev"><img src="../images/btn/btn_collectionPrev02.gif" alt="갤러리 이전 보기"/></a>
+		<ul id="slideshow">
+			<li><img src="../images/collection/boggcollection/img_gallery01-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery02-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery03-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery04-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery05-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery06-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery07-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery08-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery09-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery10-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery11-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery12-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery13-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery14-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery15-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery16-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery17-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery18-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery19-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery20-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery21-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery22-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery23-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery24-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery25-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery26-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery27-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery28-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery29-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery30-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery31-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery32-3.jpg" alt="" /></li>
+			<li><img src="../images/collection/boggcollection/img_gallery33-3.jpg" alt="" /></li>
+		</ul>
+		<a href="#none" id="collectionNext"><img src="../images/btn/btn_collectionNext02.gif" alt="갤러리 다음 보기"/></a>
+	</div>
+
+	<div class="thumbWrap">
+		<a href="#none" id="thumbPrev02"><img src="../images/btn/btn_collectionPrev.gif" alt="썸네일 이전 보기"/></a>
+		<div id="slide-pager">
+			<ul>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery01-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery02-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery03-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery04-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery05-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery06-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery07-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery08-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery09-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery10-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery11-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery12-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery13-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery14-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery15-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery16-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery17-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery18-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery19-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery20-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery21-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery22-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery23-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery24-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery25-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery26-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery27-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery28-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery29-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery30-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery31-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery32-3.jpg" width="105" height="70" alt="" /></a></li>
+					<li><a href="#"><img src="../images/collection/boggcollection/img_gallery33-3.jpg" width="105" height="70" alt="" /></a></li>
+			</ul>
+		</div>
+		<a href="#none" id="thumbNext02"><img src="../images/btn/btn_collectionNext.gif" alt="썸네일 다음 보기"/></a>
+	</div>
+</body>
+</html>

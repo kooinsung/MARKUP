@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg" />
+	<meta name="keywords" content="bogg" />
+	<script>
+$(document).ready(function(){
+
+	//이미지 슬라이드 - 문화공감
+	$('#slideshow').cycle({
+		fx: 'fade',
+		speed: '3000',
+		timeout: 0,
+		prev: '#culturePrev',
+		next: '#cultureNext',
+		nowrap: 1,
+		pager: '#slide-pager ul',
+		pagerAnchorBuilder: function(idx, slide) { 
+		return '#slide-pager ul li:eq(' + idx + ') a';},
+		onPrevNextEvent: function(dir, id, el) {
+			if (dir === true) {
+				if (id >= 5) {
+					$('#thumbNext02').click();
+				}
+			}else {
+				if (id >= 1) {
+				$('#thumbPrev02').click();
+				}
+			}
+		}
+	});
+	$('#slide-pager').jCarouselLite({
+		btnNext: '#thumbNext02',
+		btnPrev: '#thumbPrev02',
+		circular: false,
+		visible: 5
+	});
+
+});
+	</script>
+</head>
+
+<body>
+		<a href="#none" id="culturePrev"><img src="../../images/btn/btn_boardPrev.gif" alt="슬라이드 이전이미지 보기"/></a>
+		<ul id="slideshow">
+			<li><img src="../../images/english/cultureframe/img_gallery01.jpg" alt="" /></li>
+			<li><img src="../../images/english/cultureframe/img_gallery02.jpg" alt="" /></li>
+			<li><img src="../../images/english/cultureframe/img_gallery03.jpg" alt="" /></li>
+			<li><img src="../../images/english/cultureframe/img_gallery04.jpg" alt="" /></li>
+			<li><img src="../../images/english/cultureframe/img_gallery05.jpg" alt="" /></li>
+		</ul>
+		<a href="#none" id="cultureNext"><img src="../../images/btn/btn_boardNext.gif" alt="슬라이드 다음이미지 보기"/></a>
+
+	<div class="thumbWrap">
+		<a href="#none" id="thumbPrev02"><img src="../../images/btn/btn_collectionPrev.gif" alt="썸네일 이전이미지 보기"/></a>
+		<div id="slide-pager">
+			<ul>
+				<li><a href="#"><img src="../../images/english/cultureframe/img_galleryThumg01.jpg" width="105" height="70" alt="" /></a></li>
+				<li><a href="#"><img src="../../images/english/cultureframe/img_galleryThumg02.jpg" width="105" height="70" alt="" /></a></li>
+				<li><a href="#"><img src="../../images/english/cultureframe/img_galleryThumg03.jpg" width="105" height="70" alt="" /></a></li>
+				<li><a href="#"><img src="../../images/english/cultureframe/img_galleryThumg04.jpg" width="105" height="70" alt="" /></a></li>
+				<li><a href="#"><img src="../../images/english/cultureframe/img_galleryThumg05.jpg" width="105" height="70" alt="" /></a></li>
+			</ul>
+		</div>
+		<a href="#none" id="thumbNext02"><img src="../../images/btn/btn_collectionNext.gif" alt="썸네일 다음이미지 보기"/></a>
+	</div>
+</body>
+</html>

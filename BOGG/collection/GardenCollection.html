@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1044" />
+	<title>bogg 컬렉션 - GARDEN COLLECTION</title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg 브랜드 사이트" />
+	<meta name="keywords" content="bogg" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<script src="../common/js/jquery-1.8.3.min.js"></script>
+	<script src="../common/js/jquery.plugin.js"></script>
+	<script src="../common/js/common.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	<script>
+		$(document).ready(function () {
+
+			// 탭메뉴 및 슬라이드 로드 스크립트
+			var aSeq = 0;
+			var imgSeq = 0;
+			$('.subTab a').each(function () {
+					aSeq++;
+				$(this).attr('href', 'javascript:fn_bindContents('+aSeq+')');
+			});
+
+			$('.subTab img').each(function () {
+				imgSeq++;
+				$(this).attr('id', 'tab' + imgSeq.toString());
+			});
+			fn_bindContents(1);
+		});
+		function fn_bindContents(index) {
+			$('.subTab img').each(function () {
+				var src = $(this).attr('src');
+				$(this).attr('src',src.replace("_on", "_off"));
+			});
+
+			if (index > 4)
+				$('#tab' + index).attr('src', '../images/collection/gardencollection/img_gardenTab' + index + '_on.gif');
+			else
+				$('#tab' + index).attr('src', '../images/collection/gardencollection/img_gardenTab0' + index + '_on.gif');
+
+			// 각 탭메뉴별 상단 텍스트 이미지 변경
+
+
+			if(index == 1){
+				 $('.txt').find('img').attr({
+						src: '../images/collection/gardencollection/txt_gardencollection01.gif',
+						alt: '2012 메종 & 오브제 출품작! 세계적인 패브릭 아티스트 장응복의 대표 10개의 작품을 모던한 스트라이프 모티브에 조화롭게 디자인한 &#60;Garden Collection&#62; 이번 시즌에 야심차게 공개한 NEW PATTERN &#39;화조도&#39;, &#39;책가도&#39; 2012년 트렌드 칼라인 파스텔 계열의 로맨틱한 칼라로 풀어낸 장응복만의 스페셜한 디자인'
+					});
+			}else if(index == 2){
+				 $('.txt').find('img').attr({
+						src: '../images/collection/gardencollection/txt_gardencollection02.gif',
+						alt: '장응복의 다양한 패턴을(석류, 십장생, 복, 화조도, 자수병풍, 다완쌓기, 조가비, 귀갑무늬, 산수자수 등)을 조각잇기의 방식으로 한국의 독특한 PATCHWORK를 그녀만의 심미적인 안목으로 패턴화한 뉴 컬렉션 출시! 또한 &#39;MOON PARADISE&#39;라는 대형스크린 프린트 기법으로 현대적인 감각의 추상미술에 버금가는 WASHING SPREAD 공개!'
+					});
+			}else if(index == 3){
+				 $('.txt').find('img').attr({
+						src: '../images/collection/gardencollection/txt_gardencollection03.gif',
+						alt: '놀이와 유희, 로맨틱한 핑크빛 로즈 가든의 낭만적인 아름다움과 눈부신 가을 햇살에 드리우는 그림자, 지는 해와 로제 와인빛의 낭만적인 노을, 현실과 비현실이 중첩되는 신비로운 트와일라이트 블루의 하늘은 bogg의 2012 F/W 패턴과 만나 영국의 낭만을 자아낸다. 환상의 이미지들, 접목과 분리, 그리고 결합, 혼성의 반복은 한국의 전통보자기 &#39;조각잇기&#39;를 장응복 디자이너의 방식으로 재해석하는데 신선하게 접목되면서 핸드워크 룩으로 표현되어 무엇보다 전통적이고, 무엇보다 현대적이다.'
+					});
+			}else if(index == 4){
+				 $('.txt').find('img').attr({
+						src: '../images/collection/gardencollection/txt_gardencollection04.gif',
+						alt: 'bogg 2012 겨울 제품은 다완을 패턴화한 작업이다. 다완(茶碗)은 차를 마실 때 사용하는 찻사발을 말한다. 차를 마시고 다기를 감상하는 의식은 차도에서 잘 알려진 일로, 차를 즐기는 이에게는 고요하고도 깊은 기(氣)를 전한다.	차분하고도 단아한 한국적인 미를 전하는 또 하나의 아이템인 다완을 위에서 내려다 봤을 때의 불완전하면서도 아름다운 원형을 모던하게 정렬하여 패턴화하였고 마치 달항아리의 풍만한 형태처럼 이불 커버안에 넣는 구스다운이 표출하는 충만한 이미지와 더불어 천상의 궁합을 보여주는 코리안 컨템포러리 디자인이라 할 수 있다.'
+					});
+			}
+
+			$(".loadCont").html('<p style="position:absolute;top:50%;left:50%;"><img src="../images/icon/ajax-loader.gif" width="32" height="32" /></p>').load('collection02/page0'+index+'.html'+'?ver2014')
+
+		 }
+	</script>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-44417952-1', 'bogg.co.kr');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body>
+	<p class="accessibility"><a id="skipTop" href="#Content">콘텐츠 바로가기</a></p>
+	<div class="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		//<![CDATA[
+			lnbMenu01(2,6);
+		//]]>
+		</script>
+		<hr/>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<h2 class="hidden">컨텐츠</h2>
+		<section class="subSection">
+			<h3><img src="../images/collection/gardencollection/tit_gardencollection.gif" alt="GARDEN COLLECTION" /></h3>
+			<p class="txt"><img src="../images/collection/gardencollection/txt_gardencollection.gif" alt="2012 메종 & 오브제 출품작! 세계적인 패브릭 아티스트 장응복의 대표 10개의 작품을 모던한 스트라이프 모티브에 조화롭게 디자인한 &#60;Garden Collection&#62; 이번 시즌에 야심차게 공개한 NEW PATTERN ‘화조도’, ‘책가도’ 2012년 트렌드 칼라인 파스텔 계열의 로맨틱한 칼라로 풀어낸 장응복만의 스페셜한 디자인 " /></p>
+			<div class="content collection garden">
+				<ul class="subTab">
+					<li class="first"><a href="#none"><img src="../images/collection/gardencollection/img_gardenTab01_on.gif" alt="Blooming Garden" /></a></li>
+					<li class="second"><a href="#none"><img src="../images/collection/gardencollection/img_gardenTab02_off.gif" alt="Summer Breeze" /></a></li>
+					<li class="third"><a href="#none"><img src="../images/collection/gardencollection/img_gardenTab03_off.gif" alt="English Garden" /></a></li>
+					<li class="last"><a href="#none"><img src="../images/collection/gardencollection/img_gardenTab04_off.gif" alt="Winter Palace" /></a></li>
+				</ul>
+				<div class="loadCont"></div>
+			</div>
+		</section>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+
+	</div>
+	<p class="accessibility"><a class="accessibility" id="skipBottom" href="#skipTop">처음으로 가기</a></p>
+	</body>
+</html>

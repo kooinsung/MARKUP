@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="http://dev-one.di9.co.kr/project/bogg/collection/PatchWork.html">
+	<meta name="viewport" content="width=1044" />
+	<title>Bogg Collection</title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg" />
+	<meta name="keywords" content="bogg" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<script src="../common/js/jquery-1.8.3.min.js"></script>
+	<script src="../common/js/jquery.plugin.js"></script>
+	<script src="../common/js/common.js"></script>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]--> 
+	<script>
+		$(document).ready(function () {
+
+			// 탭메뉴 및 슬라이드 로드 스크립트
+			var aSeq = 0;
+			var imgSeq = 0;
+			$('.subTab a').each(function () {
+					aSeq++;
+				$(this).attr('href', 'javascript:fn_bindContents('+aSeq+')');
+			});
+
+			$('.subTab img').each(function () {
+				imgSeq++;
+				$(this).attr('id', 'tab' + imgSeq.toString());
+			});
+			fn_bindContents(1);
+		});
+		function fn_bindContents(index) {
+			$('.subTab img').each(function () {
+				var src = $(this).attr('src');
+				$(this).attr('src',src.replace("_on", "_off"));
+			});
+
+			if (index > 4)
+				$('#tab' + index).attr('src', '../../images/collection/boggcollection/img_boggcollTab' + index + '_on.gif');
+			else
+				$('#tab' + index).attr('src', '../../images/collection/boggcollection/img_boggcollTab0' + index + '_on.gif');
+
+			// 각 탭메뉴별 상단 텍스트 이미지 변경
+			if(index == 1){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/boggcollection/txt_boggcollection01.gif',
+						alt: 'Meet 30-year patterns of designer Chang Eung-Bok, which are unique, creative, Korean, and modern. In spring of 2011, we present luxurious sensibility and her special taste with premium material made of coral orange, mint green colors reinterpreting trend colors, and skin-friendly 60 silket knitted cotton (100%).'
+					});
+			}else if(index == 2){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/boggcollection/txt_boggcollection02.gif',
+						alt: 'Summer washing bedding which will bring a &#39;sweet siesta&#39; in the afternoon under the blazing sun. Washing cotton with vintage feeling and natural creases, and irregular quilt of natural cotton give natural beauty. And it is reinterpreted with 2011 trend colors of vintage blue and lemon yellow, giving life to the bedroom.'
+					});
+			}else if(index == 3){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/boggcollection/txt_boggcollection03.gif',
+						alt: 'It gives profound and refined oriental mood by harmonizing pieces of fabric with colors of Europe in the middle ages and Korea&#180;s unique images, containing mystic, romantic Mediterranean lyrical sensibility. Printing 17 colors on a modern piece of fabric, the design consists of 460 pieces and 23 works. It is New Collection harmonizing fabric artist Chang&#180;s representative & popular works - ggotsin, pomegranate, sansoo patch, Sipjangsaeng, ssamji, yangdan peony, fan, bok-jumoney, a painting of books & study material - in modern pieces of fabric.'
+					});
+			}else if(index == 4){
+				 $('.txt').find('img').attr({
+						src: '../../images/english/collection/boggcollection/txt_boggcollection04.gif',
+						alt: 'Reflecting red and green theme, which was repeatedly highlighted in this year&#180;s FW collection, to the winter collection, the design for bogg aficionados was created. Expressing beauty of a snowy field and strong and beautiful image of grate happiness into a landscape originated from folk painting, bogg’s patchwork with numerous story was completed with contemporary Korean design.'
+					});
+			}
+
+			$(".loadCont").html('<p style="position:absolute;top:50%;left:50%;"><img src="../../images/icon/ajax-loader.gif" width="32" height="32" /></p>').load('collection03/page0'+index+'.html'+'?ver2014') 
+
+		 }
+	</script>
+	 <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-44417952-1', 'bogg.co.kr');
+  ga('send', 'pageview');
+</script>
+</head>
+
+<body>
+	<p class="accessibility"><a id="skipTop" href="#Content">skip nav(content)</a></p>
+	<div class="wrap">
+
+		<!-- header -->
+		<script src="../common/include/header.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		//<![CDATA[
+			lnbMenu01(2,7);
+		//]]>
+		</script>
+		<hr/>
+		<!-- //header -->
+
+
+		<!-- content -->
+		<h2 class="hidden">컨텐츠</h2>
+		<section class="subSection">
+			<h3><img src="../../images/collection/boggcollection/tit_boggcollection.gif" alt="Bogg Collection" /></h3>
+			<p class="txt"><img src="../../images/english/collection/boggcollection/txt_boggcollection01.gif" alt="" /></p>
+			<div class="content collection garden">
+				<ul class="subTab">
+					<li class="first"><a href="#none"><img src="../../images/collection/boggcollection/img_boggcollTab01_on.gif" alt="Spring Blossom" /></a></li>
+					<li class="second"><a href="#none"><img src="../../images/collection/boggcollection/img_boggcollTab02_off.gif" alt="Summer Siesta" /></a></li>
+					<li class="third"><a href="#none"><img src="../../images/collection/boggcollection/img_boggcollTab03_off.gif" alt="Provence Dream" /></a></li>
+					<li class="last"><a href="#none"><img src="../../images/collection/boggcollection/img_boggcollTab04_off.gif" alt="Pomegrante" /></a></li>
+				</ul>
+				<div class="loadCont"></div>
+			</div>
+		</section>
+		<hr/>
+		<!-- //content -->
+
+		<!-- footer -->
+		<script src="../common/include/footer.js"></script>
+		<!-- //footer -->
+
+	</div>
+	<p class="accessibility"><a class="accessibility" id="skipBottom" href="#skipTop">skip nav(start)</a></p>
+	</body>
+</html>

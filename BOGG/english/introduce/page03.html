@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="author" content="bogg" />
+	<meta name="description" content="bogg" />
+	<meta name="keywords" content="bogg" />
+	<script src="../common/js/jquery.plugin.js"></script>
+	<style>
+	</style>
+	<script>
+$(document).ready(function(){
+			//media 갤러리 스크립트
+			$('#mediaSlide02').hide();
+			$('.mediaPics').each(function() {
+				var $this = $(this);
+				var p = $(this).parent();
+				$this.before('<ul class="mediaThumb"></ul>').cycle({
+					speed:    'slow',
+					timeout:  0,
+					fx:       'fade',
+					pager:$('.mediaThumb', p), 
+					pagerAnchorBuilder: function(idx, slide) { 
+						return '<li><a href="#"><img src="' + slide.src + '" width="100" height="70" /></a></li>'; 
+					}
+				});
+				$('.mediaThumb li:last-child').css('margin-right','0');
+				$('#mediaSlide01 .mediaThumb li').not(':nth-child(1), :nth-child(2), :nth-child(3)').unbind('click').find('a').attr('href','#none');// 이미지가 없을 경우 클릭요소 해제
+			});
+
+			//media 아코디언 스크립트
+			$('.UpMenus > li').children('ol:first').animate({height:'285px'},400);
+			$('.UpMenus > li:first').addClass('active');
+
+			$('#mediaList01').click(function(){
+				 $('#mediaSlide01').show();
+				 $('#mediaSlide02').hide();
+			 });
+			$('#mediaList02').click(function(){
+				 $('#mediaSlide01').hide();
+				 $('#mediaSlide02').show();
+			 });
+
+			$('.UpMenus > li').click(function(){
+				var ol = $(this).children('ol');
+				var h = ol.height()?0:ol.children('li').length*285;
+				var d = 0;
+				ol.parent().parent().children('li').each(function(){
+					if (d) {
+						$(this).children('ol').animate({height:'0px'},400,function(){$(this).removeClass('Up');});
+						$(this).animate({top:'0px'},400);
+						$(this).removeClass('active');
+					} else if (!$(this).is(ol.parent())) {
+						$(this).children('ol').animate({height:'0px'},400,function(){$(this).removeClass('Up');});
+						$(this).animate({top:(h?-h:'0')+'px'},400);
+						$(this).removeClass('active');
+					} else {
+						ol.animate({height:h+'px'},400);
+						$(this).animate({top:'0px'},400,function(){if(!h){ol.removeClass('Up')}});
+						d = 1;
+						$(this).addClass('active');
+					}
+				});
+			});
+
+
+});
+	</script>
+<style>
+
+</style>
+</head>
+
+<body>
+
+	<ul class="UpMenus"> <!-- 리스트가 늘어나면 해당 클래스 top css를 수정해야함 -->
+			<li id="mediaList01">
+					The birth of a family (SBS)
+					<ol>
+							<li><img src="../../images/introduce/img_poster01.jpg" alt="가족의 탄생 포스트" width="202" height="284"/></li>
+					</ol>
+			</li>
+	</ul>
+
+<div class="tabGalleryArea" >
+
+	<div id="mediaSlide01">
+	<div class="mediaPics" >
+			<img src="../../images/introduce/img_posterGallery01-1.jpg" alt="가족의 탄생 이미지01" width="558" height="415" />
+			<img src="../../images/introduce/img_posterGallery01-2.jpg" alt="가족의 탄생 이미지01" width="558" height="415" />
+			<img src="../../images/introduce/img_posterGallery01-3.jpg" alt="가족의 탄생 이미지01" width="558" height="415" />
+			<img src="../../images/introduce/img_null02.gif" alt="가족의 탄생 이미지04" width="560" height="417" />
+			<img src="../../images/introduce/img_null02.gif" alt="가족의 탄생 이미지05" width="560" height="417" />
+	</div>
+	</div>
+
+</div>
+</body>
+</html>
