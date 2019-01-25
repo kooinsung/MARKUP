@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- 호출 내용 -->
+		<div class="smallData">
+			<strong class="tit">룸 정보 입력</strong>
+			<div class="inner">
+				<ul class="roomInfoReg">
+					<li class="first">
+						<label class="stit" for="roomNumber">룸 넘버 : </label>
+						<span class="default02"><input type="number" id="roomNumber"/></span>
+						<div class="band"><input type="checkbox" class="type02" id="band"/><label for="band">밴드 체크 활성화</label></div>
+					</li>
+					<li>
+						<label class="stit" for="waiter">담당 웨이터 : </label>
+						<span class="default02"><input type="number" id="waiter"/></span>
+					</li>
+					<li>
+						<label class="stit" for="number">입실 가능 인원 수 : </label>
+						<span class="default02"><input type="number" id="number"/></span>
+					</li>
+					<li>
+						<label class="stit" for="feature">룸 특징 : </label>
+						<span class="default02"><input type="text" id="feature"/></span>
+					</li>	
+				</ul>
+				<div class="btn">
+					<button type="button" class="btnType02 w50">입 력 완 료</button> <button type="button" class="btnType02 w50">룸 삭제</button>
+				</div>
+			</div>
+		</div>
+		<!-- //호출 내용 -->
+	</div>
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('roomDel');return false;">룸 삭제 팝업</a><Br/>
+	<a href="" onclick="showModal('contApply');return false;">내용 반영 팝업</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 룸 삭제 팝업 -->
+	<div class="layer" id="roomDel">
+		<p class="msg">정말로 룸을 삭제하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('roomDel');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('roomDel');return false;">취소</button>
+	</div>
+	<!-- //룸 삭제 팝업-->
+
+	<!-- 내용 반영 팝업 -->
+	<div class="layer" id="contApply">
+		<p class="msg">입력한 내용을 반영하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('contApply');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('contApply');return false;">취소</button>
+	</div>
+	<!-- //내용 반영 팝업-->
+ </body>
+</html>

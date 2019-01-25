@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>관리자 설정</h1>
+				<a href="" class="icon iconSetting btnSetting">setting</a>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<div class="manage">
+					<ul class="manageMenuList">
+						<!-- ID 관리 -->
+						<li>
+							<a href="">ID 관리</a>
+							<div class="idManage" >
+								<h2>사용자 등록</h2>
+								<span class="default02"><input type="text" placeholder="이름 입력"/></span>
+								<span class="default02"><input type="tel" placeholder="전화번호 입력"/></span>
+								<div class="btn">
+									<a href="" class="btnType02">어플 URL 전송</a>
+								</div>
+								<h2>사용자 수정 및 삭제</h2>
+								<div class="nameSrch">
+									<span class="default02"><input type="search"></span>
+									<span class="btnNameSrch"><button type="button" class="icon iconNameSrch">이름 검색</button></span>
+								</div>
+								<table class="horizontalTable">
+									<colgroup>
+										<col width=""/>
+										<col width=""/>
+										<col width=""/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>이름</th>
+											<th>직급</th>
+											<th>수정/삭제</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>김부장</td>
+											<td>매니저</td>
+											<td><a href="" class="btnType02">수정</a> <a href="" class="btnType02">삭제</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>매니저</td>
+											<td><a href="" class="btnType02">수정</a> <a href="" class="btnType02">삭제</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>매니저</td>
+											<td><a href="" class="btnType02">수정</a> <a href="" class="btnType02">삭제</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>매니저</td>
+											<td><a href="" class="btnType02">수정</a> <a href="" class="btnType02">삭제</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>매니저</td>
+											<td><a href="" class="btnType02">수정</a> <a href="" class="btnType02">삭제</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</li>
+						<!-- //ID 관리 -->
+
+						<!-- 출근 관리 -->
+						<li>
+							<a href="">출근 관리</a>
+							<div class="timeManage">
+								<h2>출근 기록</h2>
+								<div class="sortBtn">
+									<a href="" class="btnType02">날짜별</a> <a href="" class="btnType02">개인별</a>
+								</div>
+								<table class="horizontalTable">
+									<colgroup>
+										<col width=""/>
+										<col width=""/>
+										<col width=""/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>이름</th>
+											<th>날짜</th>
+											<th>출근승인</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>김부장</td>
+											<td>01.21 PM 06:00</td>
+											<td><a href="" class="btnType02">출근승인</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>01.21 PM 06:00</td>
+											<td><a href="" class="btnType02">출근승인</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>01.21 PM 06:00</td>
+											<td><a href="" class="btnType02">출근승인</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>01.21 PM 06:00</td>
+											<td><a href="" class="btnType02">출근승인</a></td>
+										</tr>
+										<tr>
+											<td>김부장</td>
+											<td>01.21 PM 06:00</td>
+											<td><a href="" class="btnType02">출근승인</a></td>
+										</tr>
+									</tbody>
+								</table>
+								<h2>출근 기록 입력</h2>
+								<div class="timeRecord">
+									<p class="name"><label for="name">이름 : </label> <span class="default02"><input type="text" id="name"></span></p>
+									<p class="time"><label for="time">날짜 및 시간 입력 : </label> 2015.03.30 <span class="default02"><input type="number" id="time"></span> : <span class="default02"><input type="number" ></span></p>
+									<div class="btn">
+										<a href="" class="btnType02">출 근 승 인</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!-- //출근 관리 -->
+
+						<!-- 메뉴판 관리 -->
+						<li>
+							<a href="">메뉴판 관리</a>
+							<div class="menuManage" >
+								<div class="menuAdd">
+									<h2>안주류</h2>
+									<ul>
+										<li>
+											<div><span class="default02"><input type="text" value="계절과일"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="케이준 샐러드"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="계절과일"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="케이준 샐러드"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+									</ul>
+									<div class="btn">
+										<a href="" class="icon iconAdd btnAdd">추가</a>
+									</div>
+								</div>
+								<div class="menuAdd">
+									<h2>주류 및 음료수</h2>
+									<ul>
+										<li>
+											<div><span class="default02"><input type="text" value="계절과일"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="케이준 샐러드"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="계절과일"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="케이준 샐러드"/></span> <span class="default02"><input type="text" value="\50,000"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+									</ul>
+									<div class="btn">
+										<a href="" class="icon iconAdd btnAdd">추가</a>
+									</div>
+								</div>
+								<div class="btn">
+									<a href="" class="btnType02">메뉴판 수정 완료</a>
+								</div>
+							</div>
+						</li>
+						<!-- //메뉴판 관리 -->
+
+						<!-- 호출메세지 관리 -->
+						<li>
+							<a href="">호출메세지 관리</a>
+							<div class="callManage" >
+								<div class="callAdd">
+									<h2>공통 호출 메세지</h2>
+									<ul>
+										<li>
+											<div><span class="default02"><input type="text" value="호출 합니다."/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="긴급 합니다."/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+									</ul>
+									<div class="btn">
+										<a href="" class="icon iconAdd btnAdd">추가</a>
+									</div>
+								</div>
+								<div class="callAdd">
+									<h2>공통 호출 메세지</h2>
+									<ul>
+										<li>
+											<div><span class="default02"><input type="text" value="XX룸 XX명"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="손님 호출"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+									</ul>
+									<div class="btn">
+										<a href="" class="icon iconAdd btnAdd">추가</a>
+									</div>
+								</div>
+								<div class="callAdd">
+									<h2>그룹명2 해당 메세지</h2>
+									<ul>
+										<li>
+											<div><span class="default02"><input type="text" value="XX 출차 준비"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li>
+											<div><span class="default02"><input type="text" value="XX 대리 기사"/></span></div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+									</ul>
+									<div class="btn">
+										<a href="" class="icon iconAdd btnAdd">추가</a>
+									</div>
+								</div>
+								<div class="btn">
+									<a href="" class="btnType02">호출 메세지 수정 완료</a>
+								</div>
+							</div>
+						</li>
+						<!-- //호출메세지 관리 -->
+
+						<!-- 권한 및 그룹 관리 -->
+						<li>
+							<a href="">권한 및 그룹 관리</a>
+							<div class="authManage" >
+								<h2>기능 접근 권한 설정</h2>
+								<div class="authBox">
+									<ul>
+										<li class="">
+											<div class="tit">정산서비스</div>
+											<div class="dropDown">
+												<span>그룹 <i class="icon iconArrow"></i></span>
+												<div class="list">
+													<ul>
+														<li><input type="checkbox" class="type02" id="authList01-1"> <label for="authList01-1">매니저</label></li>
+														<li><input type="checkbox" class="type02" id="authList01-2"> <label for="authList01-2">종업원</label></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class="">
+											<div class="tit">상황판</div>
+											<div class="dropDown">
+												<span>그룹 <i class="icon iconArrow"></i></span>
+												<div class="list">
+													<ul>
+														<li><input type="checkbox" class="type02" id="authList02-1"> <label for="authList02-1">매니저</label></li>
+														<li><input type="checkbox" class="type02" id="authList02-2"> <label for="authList02-2">종업원</label></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class="">
+											<div class="tit">상황판 설정</div>
+											<div class="dropDown">
+												<span>그룹 <i class="icon iconArrow"></i></span>
+												<div class="list">
+													<ul>
+														<li><input type="checkbox" class="type02" id="authList03-1"> <label for="authList03-1">매니저</label></li>
+														<li><input type="checkbox" class="type02" id="authList03-2"> <label for="authList03-2">종업원</label></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class="">
+											<div class="tit">관리자 설정</div>
+											<div class="dropDown">
+												<span>그룹 <i class="icon iconArrow"></i></span>
+												<div class="list">
+													<ul>
+														<li><input type="checkbox" class="type02" id="authList04-1"> <label for="authList04-1">매니저</label></li>
+														<li><input type="checkbox" class="type02" id="authList04-2"> <label for="authList04-2">종업원</label></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<h2>그룹 설정</h2>
+								<div class="authBox">
+									<ul>
+										<li class="">
+											<div class="tit">그룹명 1</div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li class="">
+											<div class="tit">그룹명 1</div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+										<li class="">
+											<div class="tit">그룹명 1</div>
+											<button type="button" class="icon iconMenuDel btnMenuDel">삭제</button>
+										</li>
+									</ul>
+									<div class="btn">
+										<a href="" class="icon iconAdd btnAdd">추가</a>
+									</div>
+								</div>
+								<div class="btn">
+									<a href="" class="btnType02">설 정 완 료</a>
+								</div>
+							</div>
+						</li>
+						<!-- //권한 및 그룹 관리 -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('urlSecnd');return false;">URL 전송 팝업</a><Br/>
+	<a href="" onclick="showModal('del');return false;">삭제 팝업</a><Br/>
+	<a href="" onclick="showModal('timeAuth');return false;">출근 승인 팝업</a><Br/>
+	<a href="" onclick="showModal('group-lever');return false;">그룹,직급 팝업</a><Br/>
+	<a href="" onclick="showModal('modifyApply');return false;">수정 내용 반영 팝업</a><Br/>
+	<a href="" onclick="showModal('settingApply');return false;">설정 사항 반영 팝업</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- URL 전송 팝업 -->
+	<div class="layer" id="urlSecnd">
+		<p class="msg">직급을 정해주신 후 확인을 누르시면<br/>어플 다운로드 URL이 전송됩니다.</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('urlSecnd');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('urlSecnd');return false;">취소</button>
+	</div>
+	<!-- //URL 전송 팝업-->
+
+	<!-- 삭제 팝업 -->
+	<div class="layer" id="del">
+		<p class="msg">삭제 하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('del');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('del');return false;">취소</button>
+	</div>
+	<!-- //삭제 팝업-->
+
+	<!-- 그룹,직급 팝업 -->
+	<div class="layer" id="group-lever">
+		<ul class="group-lever">
+			<li class="name">김부장</li>
+			<li class="group dropDown">
+				<span>그룹 <i class="icon iconArrow"></i></span>
+				<div class="modifyList">
+					<ul>
+						<li><input type="checkbox" class="type02" id="groupList01"> <label for="groupList01">그룹명</label></li>
+						<li><input type="checkbox" class="type02" id="groupList02"> <label for="groupList02">그룹명</label></li>
+						<li><input type="checkbox" class="type02" id="groupList03"> <label for="groupList03">그룹명</label></li>
+					</ul>
+				</div>
+			</li>
+			<li class="manager dropDown">
+				<span>매니저 <i class="icon iconArrow"></i></span>
+				<div class="modifyList">
+					<ul>
+						<li><input type="checkbox" class="type02" id="managerList01"> <label for="managerList01">매니저</label></li>
+						<li><input type="checkbox" class="type02" id="managerList02"> <label for="managerList02">종업원</label></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('group-lever');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('group-lever');return false;">취소</button>
+	</div>
+	<!-- //그룹,직급 팝업-->
+
+	<!-- 출근 승인 팝업 -->
+	<div class="layer" id="timeAuth">
+		<p class="msg">출근 승인을 하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('timeAuth');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('timeAuth');return false;">취소</button>
+	</div>
+	<!-- //출근 승인 팝업-->
+
+	<!-- 수정 내용 반영 팝업 -->
+	<div class="layer" id="modifyApply">
+		<p class="msg">수정한 내용을 반영하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('modifyApply');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('modifyApply');return false;">취소</button>
+	</div>
+	<!-- //수정 내용 반영 팝업-->
+
+	<!-- 설정 사항 반영 팝업 -->
+	<div class="layer" id="settingApply">
+		<p class="msg">설정 사항을 반영하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('settingApply');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('settingApply');return false;">취소</button>
+	</div>
+	<!-- //설정 사항 반영 팝업-->
+ </body>
+</html>

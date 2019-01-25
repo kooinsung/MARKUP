@@ -1,0 +1,50 @@
+[
+      {
+        "month": "15.01",
+        "calculate": 100
+      },
+      {
+        "month": "15.02",
+        "calculate": 90
+      },
+      {
+        "month": "15.03",
+        "calculate": 80
+      },
+      {
+        "month": "15.04",
+        "calculate": 70
+      },
+      {
+        "month": "15.05",
+        "calculate": 60
+      },
+      {
+        "month": "15.06",
+        "calculate": 50
+      },
+      {
+        "month": "15.07",
+        "calculate": 40
+      },
+      {
+        "month": "15.08",
+        "calculate": 30
+      },
+      {
+        "month": "15.09",
+        "calculate": 20
+      },
+      {
+        "month": "15.10",
+        "calculate": 10
+      },
+      {
+        "month": "15.11",
+        "calculate": 90
+      },
+      {
+        "month": "15.12",
+        "calculate": 80
+      }
+  ]

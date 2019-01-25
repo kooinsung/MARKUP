@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>회원가입</h1>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<div class="join">
+					<!-- 회원정보 입력 -->
+					<ul class="joinList">
+						<li><label for="name">이름 :</label> <span class="default02"><input type="text" id="name"></span></li>
+						<li>
+							<label for="id">ID :</label> <span class="default02"><input type="text" id="id"></span><a href="" class="btnType01 btnDouble">중복확인</a>
+							<p class="tip">* 영문, 숫자 조합 8자리 이상(대소문자 구분 안 함)</p>
+						</li>
+						<li>
+							<label for="pw">비밀번호 :</label> <span class="default02"><input type="password" id="pw"></span>
+							<p class="tip">* 영문, 숫자 조합 8자리 이상(대소문자 구분 안 함)</p>
+						</li>
+						<li class="long">
+							<label for="re">비밀번호 재입력 :</label> <span class="default02"><input type="password" id="re"></span>
+						</li>
+						<li><label for="company">업체명 :</label> <span class="default02"><input type="text" id="company"></span></li>
+						<li><label for="addr">업체 주소 :</label> <span class="default02"><input type="tel" id="addr"></span></li>
+						<li><label for="tel">전화번호 :</label> <span class="default02"><input type="tel" id="tel"></span></li>
+						<li><label for="email">E-mail :</label> <span class="default02"><input type="email" id="email"></span></li>
+					</ul>
+					<!-- //회원정보 입력 -->
+					<div class="btn">
+						<a href="" class="btnType02">가 입 완 료</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+	</div>
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('okID');return false;">중복된 ID없을때</a><Br/>
+	<a href="" onclick="showModal('noID');return false;">ID 존재</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 중복된 ID없을때 팝업 -->
+	<div class="layer" id="okID">
+		<p class="msg">중복된 ID가 없습니다.<br/>입력하신 아이디로 가입하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('okID');return false;">확인</button>
+	</div>
+	<!-- //중복된 ID없을때 팝업-->
+
+	<!-- ID존재 팝업 -->
+	<div class="layer" id="noID">
+		<p class="msg">입력하신 ID는 이미 존재합니다.<br/>새로운 ID를 입력해주세요.</p>
+		<div class="newID">
+			<label for="newID">ID : </label> <span class="default02"><input type="text"/></span>
+		</div>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('noID');return false;">확인</button>
+	</div>
+	<!-- //ID존재 팝업-->
+ </body>
+</html>

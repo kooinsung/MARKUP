@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>근태관리</h1>
+				<a href="" class="icon iconSetting btnSetting">setting</a>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container timeManageContainer">
+			<div class="content">
+				<!-- 근태 아이콘 -->
+				<div class="timeManageIcon">
+					<div class="left">
+						<span class="goWork"><i class="icon iconGoWork"></i> <strong>출근</strong></span>
+						<span class="today"><i class="icon iconToday"></i> <strong>오늘</strong></span>
+					</div>
+					<div class="right">
+						<span class="absence"><i class="icon iconAbsence"></i> <strong>결근 1회</strong></span>
+					</div>
+				</div>
+				<!-- //근태 아이콘 -->
+
+				<!-- 달력 -->
+				<div class="cal">
+					<div id="pageDatePicker" class=""></div>
+				</div>
+				<!-- //달력 -->
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('todayCheck');return false;">출근 체크 신청</a><Br/>
+	<a href="" onclick="showModal('record');return false;">출근기록 입력 신청</a><Br/>
+	<a href="" onclick="showModal('record02');return false;">출근기록 확인 신청</a><Br/>
+	<a href="" onclick="showModal('record03');return false;">출근 승인 신청 확인 신청</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 출근 체크 신청 팝업 -->
+	<div class="layer" id="todayCheck">
+		<p class="msg">출근 체크 신청을 하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('todayCheck');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('todayCheck');return false;">취소</button>
+	</div>
+	<!-- //출근 체크 신청 팝업-->
+
+	<!-- 출근기록 입력 -->
+	<div class="layer layer02" id="record">
+		<div class="smallData">
+			<strong class="tit">출근기록 입력</strong>
+			<div class="inner">
+				<p class="txt">PM 05시 00분</p>
+				<div class="btn">
+					<button type="button" class="btnType01 ">출 근 체 크</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //출근기록 입력 -->
+
+	<!-- 출근기록 확인 -->
+	<div class="layer layer02" id="record02">
+		<div class="smallData">
+			<strong class="tit">출근기록 확인</strong>
+			<div class="inner">
+				<div class="btn">
+					<button type="button" class="btnType01 w50">출 근</button> <button type="button" class="btnType01 w50">결 근</button>
+				</div>
+				<p class="txt">출근 시간 : 05시 00분 PM</p>
+			</div>
+		</div>
+	</div>
+	<!-- //출근기록 확인 -->
+
+	<!-- 출근승인 신청 확인 -->
+	<div class="layer layer02" id="record03">
+		<div class="smallData">
+			<strong class="tit">출근 승인 신청 확인</strong>
+			<div class="inner">
+				<div class="btn">
+					<button type="button" class="btnType01 w50">출 근</button> <button type="button" class="btnType01 w50">결 근</button>
+				</div>
+				<div class="btn">
+					<button type="button" class="btnType01">출 근 승 인 신 청</button></div>
+			</div>
+		</div>
+	</div>
+	<!-- //출근승인 신청 확인 -->
+ </body>
+</html>

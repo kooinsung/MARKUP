@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>1:1 문의하기</h1>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<div class="mtomView">
+					<p class="data">2015.01.20. PM 01:12</p>
+					<p class="tit">문의내용</p>
+					<strong>제목 : 주문 기능 에러 납니다.</strong>
+					<div class="viewDetail">
+						어제 주문을 처리하던 도중 에러가 발생했는데 여전히 정상적으로 작동하지 않습니다. 이럴 땐 어떤 방법으로 해결 가능한가요?
+					</div>
+				</div>
+				
+				<div class="btn">
+					<a href="" class="btnType02 w50">작 성 완 료</a>
+					<a href="" class="btnType02 w50">작 성 취 소</a>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('pwChange');return false;">작성완료 팝업</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 작성완료 팝업 -->
+	<div class="layer" id="pwChange">
+		<p class="msg">문의 내용이 정상적으로 작성되었습니다.<br/>빠른 답변 드리도록 하겠습니다.</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('pwChange');return false;">확인</button>
+	</div>
+	<!-- //작성완료 팝업 -->
+
+ </body>
+</html>

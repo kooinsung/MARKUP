@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>설정</h1>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<div class="setting">
+					<!-- 진동 사용 여부 -->
+					<div class="vibrate">
+						<div class="toggleSwitch">
+							<span class="tit">진동 사용</span>
+							<label class="switch">
+								<input type="checkbox" class="switch-input" / > <!-- checked로 제어 -->
+								<span class="switch-label" data-yes="Yes" data-no="No"></span>
+								<span class="switch-handle"></span>
+							</label>
+						</div>
+					</div>
+					<!-- //진동 사용 여부 -->
+
+					<!-- PW변경 -->
+					<div class="pwChange">
+						<h2>PW 변경</h2>
+						<ul>
+							<li><label for="defaultPW">기존 비밀번호 :</label> <span class="default02"><input type="password" id="defaultPW" /></span></li>
+							<li><label for="newPW">새로운 비밀번호 :</label> <span class="default02"><input type="password" id="newPW" /></span></li>
+							<li><label for="rePW">비밀번호 재입력 :</label> <span class="default02"><input type="password" id="rePW" /></span></li>
+						</ul>
+						<p class="tip">* 영문, 숫자 조합 8자리 이상</p>
+						<div class="btn">
+							<a href="" class="btnType02">비밀번호 변경 완료</a>
+						</div>
+					</div>
+					<!-- //PW변경 -->
+
+					<!-- 어플 잠금 여부 -->
+					<div class="appLock">
+						<div class="toggleSwitch">
+							<span class="tit">어플 잠금</span>
+							<label class="switch">
+								<input type="checkbox" class="switch-input" / > <!-- checked로 제어 -->
+								<span class="switch-label" data-yes="Yes" data-no="No"></span>
+								<span class="switch-handle"></span>
+							</label>
+						</div>
+						<ul class="firstPW">
+							<li><span class="default"><input type="text" maxlength="1" pattern="[0-9]*"/></span></li>
+							<li><span class="default"><input type="text" maxlength="1" pattern="[0-9]*"/></span></li>
+							<li><span class="default"><input type="text" maxlength="1" pattern="[0-9]*"/></span></li>
+							<li><span class="default"><input type="text" maxlength="1" pattern="[0-9]*"/></span></li>
+						</ul>
+					</div>
+					<!-- //어플 잠금 여부 -->
+
+					<!-- 1:1 문의 게시판 -->
+					<div class="btn">
+						<a href="" class="btnType02">1:1 문의 게시판</a>
+					</div>
+					<!-- //1:1 문의 게시판 -->
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+ </body>
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('pwChange');return false;">비밀번호 변경</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 비밀번호 변경 팝업 -->
+	<div class="layer" id="pwChange">
+		<p class="msg">비밀번호가 정상적으로 <br/>변경되었습니다.</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('pwChange');return false;">확인</button>
+	</div>
+	<!-- //비밀번호 변경 팝업-->
+</html>

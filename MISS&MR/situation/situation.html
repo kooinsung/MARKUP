@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack"></a>
+				<h1>
+					<span class="btnState">상황판</span>
+					<!-- 정렬메뉴 -->
+					<div class="sortMenu">
+						<ul>
+							<li><a href="" class="btnGrid"><i class="icon iconGrid"></i> <em>바둑판식</em></a></li>
+							<li><a href="" class="btnList"><i class="icon iconList"></i> <em>목록식</em></a></li>
+						</ul>
+					</div>
+					<!-- //정렬메뉴 -->					
+				</h1>
+				<a href="" class="icon iconSetting btnSetting"></a>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<!-- 룸 현황 -->
+				<div class="roomStateNum">
+					<ul>
+						<li>
+							<i class="icon iconRoomOut"></i> <strong>공실 : 27</strong>
+						</li>
+						<li>
+							<i class="icon iconRoomIn"></i> <strong>입실 : 27</strong>
+						</li>
+						<li>
+							<i class="icon iconReserve"></i> <strong>예약 : 2</strong>
+						</li>	
+						<li>
+							<i class="icon iconWaiting"></i> <strong>공실대기</strong>
+						</li>
+					</ul>
+				</div>
+				<!-- //룸 현황 -->
+
+				<!-- 룸 상황판 : 빈칸은 <span class="visibility">&nbsp;</span> 이형태로 작업부탁드립니다. -->
+				<div class="roomStateView">
+					<ul>
+						<li class="roomOut"> <!-- 공실 -->
+							<a href="">
+								<span class="visibility">&nbsp;</span>
+								<span class="">R105/5</span>
+								<span class="visibility">&nbsp;</span>
+							</a>
+						</li>
+						<li class="roomIn"> <!-- 입실 -->
+							<a href="">
+								<span class=""><i class="icon iconWaiting02"></i> S</span>
+								<span>R102/7</span>
+								<span>최부장</span>
+							</a>
+						</li>
+						<li class="roomReserve"> <!-- 예약 -->
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomOut">
+							<a href="">
+								<span class="visibility">&nbsp;</span>
+								<span>R105/5</span>
+								<span class="visibility">&nbsp;</span>
+							</a>
+						</li>
+
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomOut">
+							<a href="">
+								<span class="visibility">&nbsp;</span>
+								<span class="">R105/5</span>
+								<span class="visibility">&nbsp;</span>
+							</a>
+						</li>
+						<li class="roomOut">
+							<a href="">
+								<span class="visibility">&nbsp;</span>
+								<span>R105/5</span>
+								<span class="visibility">&nbsp;</span>
+							</a>
+						</li>
+						<li class="roomIn">
+							<a href="">
+								<span class=""><i class="icon iconWaiting02"></i> S</span>
+								<span>R102/7</span>
+								<span>최부장</span>
+							</a>
+						</li>
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomIn">
+							<a href="">
+								<span class=""><i class="icon iconWaiting02"></i> S</span>
+								<span>R102/7</span>
+								<span>최부장</span>
+							</a>
+						</li>
+						<li class="roomIn">
+							<a href="">
+								<span class=""><i class="icon iconWaiting02"></i> S</span>
+								<span>R102/7</span>
+								<span>최부장</span>
+							</a>
+						</li>
+						<li class="roomIn">
+							<a href="">
+								<span class=""><i class="icon iconWaiting02"></i> S</span>
+								<span>R102/7</span>
+								<span>최부장</span>
+							</a>
+						</li>
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomIn">
+							<a href="">
+								<span class=""><i class="icon iconWaiting02"></i> S</span>
+								<span>R102/7</span>
+								<span>최부장</span>
+							</a>
+						</li>
+						<li class="roomOut">
+							<a href="">
+								<span class="visibility">&nbsp;</span>
+								<span>R105/5</span>
+								<span class="visibility">&nbsp;</span>
+							</a>
+						</li>
+						<li class="roomIn">
+							<a href="">
+								<span class=""><i class="icon iconWaiting02"></i> S</span>
+								<span>R102/7</span>
+								<span>최부장</span>
+							</a>
+						</li>
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomOut">
+							<a href="">
+								<span class="visibility">&nbsp;</span>
+								<span>R105/5</span>
+								<span class="visibility">&nbsp;</span>
+							</a>
+						</li>
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+						<li class="roomOut">
+							<a href="">
+								<span class="visibility">&nbsp;</span>
+								<span>R105/5</span>
+								<span class="visibility">&nbsp;</span>
+							</a>
+						</li>
+						<li class="roomReserve">
+							<a href="">
+								<span>B</span>
+								<span>R103/10</span>
+								<span>조부장</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- //룸 상황판 -->
+			</div>	
+		</div>
+		<!-- //content -->
+
+		<!-- 예약 -->
+		<div class="smallData">
+			<strong class="tit"><i class="icon iconReserve"></i> 예약 : R105 / 예약 웨이터 : 최부장</strong>
+			<div class="inner">
+				<ul class="roomCont">
+					<li>예약 시간 : 20시 30분</li>
+					<li>예약 인원 : 2명</li>																
+				</ul>
+				<div class="btn">
+					<button type="button" class="btnType01 btnEnter" >입 실</button> <button type="button" class="btnType01 btnCancel" >예 약 취 소</button>				
+				</div>
+			</div>
+		</div>
+		<!-- //예약 -->
+
+
+		<!-- 입실 -->
+		<div class="smallData">
+			<strong class="tit"><i class="icon iconRoomIn"></i> 입실 : R105 / 예약 웨이터 : 최부장</strong>
+			<div class="inner">
+				<ul class="roomCont">
+					<li>입실 시간 : 20시 30분</li>
+					<li>손님 인원 : 2명</li>																
+				</ul>
+				<ul class="roomInInfo">
+					<li><button type="button" class="btnType01 btnOrder" >주문하기</button></li>
+					<li><span>밴드입실</span></li>
+					<li>
+						<div class="toggleSwitch">
+							<label class="switch">
+								<input type="checkbox" class="switch-input" / > <!-- checked로 제어 -->
+								<span class="switch-label" data-yes="Yes" data-no="No"></span>
+								<span class="switch-handle"></span>
+							</label>
+						</div>
+					</li>					
+				</ul>
+				<div class="btn">
+					<button type="button" class="btnType01 btnStandBy" >계 산 대 기</button> <button type="button" class="btnType01 btnSuccess" >결재 및 청소완료</button>				
+				</div>
+			</div>
+		</div>
+		<!-- //입실 -->
+
+		<!-- 공실 -->
+		<div class="smallData">
+			<strong class="tit"><i class="icon iconRoomOut"></i> 공실 : R105 / 10</strong>
+			<div class="inner">
+				<ul class="roomCont">
+					<li>예약 시간 : 20시 30분</li>											
+					<li><label for="reserveNum">예약 인원</label> : <span class="default02 short"><input type="number" id="reserveNum"/></span> 명</li>											
+					<li><label for="waiter">담당 웨이터</label> : <span class="default02 short"><input type="text" id="waiter"/></span></li>		
+				</ul>
+				<div class="btn">
+					<button type="button" class="btnType01 btnIn" >입 실</button> <button type="button" class="btnType01 btnReserve" >예 약</button>				
+				</div>
+			</div>
+		</div>
+		<!-- //공실 -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+ </body>
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('standByList');return false;">대기목록 팝업</a><Br/>
+	<a href="" onclick="showModal('standByCancel');return false;">대기 취소 팝업</a><Br/>
+	<a href="" onclick="showModal('standByApply');return false;">대기 신청 팝업</a><Br/>	
+	<!-- //팝업 호출 -->
+
+	<!-- 대기목록 팝업 -->
+	<div class="layer" id="standByList">
+		<div class="standBy">
+			<strong class="layerTit">대기 목록</strong>
+			<table class="horizontalTable">
+				<colgroup>
+					<col width="10%"/>
+					<col width="20%"/>
+					<col width="25%"/>
+					<col width=""/>
+					<col width="10%"/>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>No.</th>
+						<th>담당</th>
+						<th>손님 수</th>
+						<th>신청 시각</th>
+						<th>&nbsp;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>김부장</td>
+						<td>5</td>
+						<td>PM 10:10</td>
+						<td><button type="button" class="icon iconStandByDel btnStandByDel">삭제</button></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>김부장</td>
+						<td>5</td>
+						<td>PM 10:10</td>
+						<td><button type="button" class="icon iconStandByDel btnStandByDel">삭제</button></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>김부장</td>
+						<td>5</td>
+						<td>PM 10:10</td>
+						<td><button type="button" class="icon iconStandByDel btnStandByDel">삭제</button></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>김부장</td>
+						<td>5</td>
+						<td>PM 10:10</td>
+						<td><button type="button" class="icon iconStandByDel btnStandByDel">삭제</button></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>김부장</td>
+						<td>5</td>
+						<td>PM 10:10</td>
+						<td><button type="button" class="icon iconStandByDel btnStandByDel">삭제</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="paging">
+				<a href="">이전</a>
+				<ul>
+					<li><a href="">1</a></li>
+					<li><a href="" class="active">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li><a href="">6</a></li>
+					<li><a href="">7</a></li>
+					<li><a href="">8</a></li>
+					<li><a href="">9</a></li>
+					<li><a href="">10</a></li>
+				</ul>
+				<a href="">다음</a>
+			</div>
+			<br/>
+			<strong class="layerTit">대기 신청</strong>
+			<div class="guestNum">
+				<label for="guestNum">손님 수 </label> <span class="default02 short"><input type="number" id="guestNum"/></span> 명
+				<button type="button" class="btnType01 btnApply">신청</button>
+			</div>
+		</div>
+		<button type="button" class="icon iconLayerClose btnLayerClose" onclick="hideModal('standByList');return false;">닫기</button>
+	</div>
+	<!-- //대기목록 팝업 -->
+	
+	<!-- 대기 취소 팝업 -->
+	<div class="layer" id="standByCancel">
+		<p class="msg">대기를 취소하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('standByCancel');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('standByCancel');return false;">취소</button>
+	</div>
+	<!-- //대기 취소 팝업-->
+	
+	<!-- 대기 신청 팝업 -->
+	<div class="layer" id="standByApply">
+		<p class="msg">대기를 신청 하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('standByApply');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('standByApply');return false;">취소</button>
+	</div>
+	<!-- //대기 신청 팝업-->			
+	
+</html>

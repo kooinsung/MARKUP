@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+	<script>
+		$.ajax({
+				url:"data.json",dataType:"json"
+			}).fail(function(){
+				alert("failure")
+			}).done(function(data){
+					var myData = (data);
+					Array.prototype.mapProperty = function(property) {
+						return this.map(function (obj) {
+							return obj[property];
+						});
+					};
+
+				var barChartData = {
+				labels : myData.mapProperty('month'),
+					datasets : [{
+						fillColor : "rgba(24,241,202,1)",
+						data : myData.mapProperty('calculate')
+					}]
+				}
+
+				window.onload = function(){
+					var ctx = document.getElementById("chartCanvas").getContext("2d");
+					window.myBar = new Chart(ctx).Bar(barChartData, {
+						responsive : true,
+						scaleShowVerticalLines: false,
+						scaleGridLineColor : "rgba(0,108,198,.5)",
+						scaleLineColor : "rgba(0,108,198,.5)",
+						scaleFontColor : "#fff",	
+						scaleLabel : "<%= value + '%' %>" ,
+						tooltipTemplate: "<%= value + '%' %>",
+						showTooltips: true,
+						onAnimationComplete: function(){
+							this.showTooltip(this.datasets[0].bars, true);
+						},
+						tooltipEvents: []
+					});
+				}
+		});
+	</script>
+
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>정산 서비스</h1>
+				<a href="" class="icon iconSetting btnSetting">setting</a>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<div class="calculate">
+					<h2>당일 매출액 : <strong>\ 1,000,000</strong></h2>
+					<h2>기간별 매출액 조회 <button type="button" class="icon iconCheck btnCheck">조회</button></h2>
+					<div class="calculateBox">
+						<table class="horizontalTable">
+							<colgroup>
+								<col />
+								<col />
+								<col />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+								<tr>
+									<td>2015/01/01</td>
+									<td>매출액</td>
+									<td>\ 1,000,000</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<br/>
+					<h2>룸/담당종업원 매출액 조회 <button type="button" class="icon iconCheck btnCheck">조회</button></h2>
+					<h2>월별 매출액 추이</h2>
+					<div class="calculateBox noScroll">
+						<div class="chart">
+							<canvas id="chartCanvas" ></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('calLayer');return false;">달력 팝업</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 달력 팝업 -->
+	<div class="layer" id="calLayer">
+		<div class="cal">
+			<div id="" class="layerDatePicker"></div>
+			<ul class="start-end">
+				<li>
+					<label for="start">시작 일자</label>
+					<span class="default02"><input type="text" value="" id="start" class="startlayerDatePicker"/></span>
+				</li>
+				<li class="center">~</li>
+				<li>
+					<label for="end">종료 일자</label>
+					<span class="default02"><input type="text" value="" id="end" class="endlayerDatePicker"/></span>
+				</li>
+			</ul>
+		</div>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('calLayer');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('calLayer');return false;">취소</button>
+	</div>
+	<!-- //달력 팝업-->
+ </body>
+</html>

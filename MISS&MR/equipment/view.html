@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>비품 주문</h1>
+				<a href="" class="icon iconSetting btnSetting">setting</a>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<h2>상품 상세정보</h2>
+				<!-- 상품정보 상세 -->
+				<div class="equipment">
+					<table class="equipmentTable">
+						<colgroup>
+							<col style="width:100px" />
+							<col />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>업체명 : </th>
+								<td>탄산이뽁뽁</td>
+							</tr>
+							<tr>
+								<th>업체 주소 : </th>
+								<td>서울시 강남구 삼성로 1</td>
+							</tr>
+							<tr>
+								<th>상품명 : </th>
+								<td>탄산음료</td>
+							</tr>
+							<tr>
+								<th>가격 : </th>
+								<td>350(개당)</td>
+							</tr>
+							<tr>
+								<th>주문 가능 수량 : </th>
+								<td><span><strong>최소</strong>20</span> <span><strong>최대</strong>1,000</span></td>
+							</tr>
+							<tr class="">
+								<td colspan="2">
+									<strong>상품 상세 설명</strong>
+									<p class="txt">
+									탄산음료 100개 구매시 과일쥬스 10개 무료 제공
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn">
+						<a href="" onclick="showModal('orderCancel');return false;" class="btnType02">주문 전화 걸기</a>
+					</div>
+				</div>
+				<!-- //상품정보 상세 -->
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('orderCancel');return false;">통화</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 통화 팝업 -->
+	<div class="layer" id="orderCancel">
+		<p class="msg">탄산이 뽁뽁<br/>010-0000-0000</p>
+		<button type="button" class="btnType01 btnEnter" onclick="javascript:location.href='tel:0100000000'">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('orderCancel');return false;">취소</button>
+	</div>
+	<!-- //통화 팝업-->
+ </body>
+</html>

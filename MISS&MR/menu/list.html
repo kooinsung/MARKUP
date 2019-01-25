@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title> miss_mr </title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/miss_mr.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/miss_mr.js"></script>
+ </head>
+
+ <body>
+	<div class="wrap">
+		<!-- header -->
+		<div class="header">
+			<header class="headerInner">
+				<a href="" class="icon iconBack btnBack">back</a>
+				<h1>메뉴판</h1>
+				<a href="" class="icon iconSetting btnSetting">setting</a>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- content -->
+		<div class="container">
+			<div class="content">
+				<!-- 메뉴리스트 - input의 id 값과 label의 for값은 같아야 함 -->
+				<div class="orderMenu">
+					<div class="orderMenuInner">
+						<ul class="orderMenuList">
+							<li>
+								<a href="">안주류</a>
+								<ul class="menuListChild">
+									<li><input type="checkbox" class="type02" id="menuCheck01-1"><label for="menuCheck01-1">계절과일</label></li>
+									<li><input type="checkbox" class="type02" id="menuCheck01-2"><label for="menuCheck01-2">모듬튀김</label></li>
+									<li><input type="checkbox" class="type02" id="menuCheck01-3"><label for="menuCheck01-3">모듬소세지</label></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">주류</a>
+								<ul class="menuListChild">
+									<li><input type="checkbox" class="type02" id="menuCheck02-1"><label for="menuCheck02-1">양주</label></li>
+									<li><input type="checkbox" class="type02" id="menuCheck02-2"><label for="menuCheck02-2">맥주</label></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">음료</a>
+								<ul class="menuListChild">
+									<li><input type="checkbox" class="type02" id="menuCheck03-1"><label for="menuCheck03-1">콜라</label></li>
+									<li><input type="checkbox" class="type02" id="menuCheck03-2"><label for="menuCheck03-2">사이다</label></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">음료</a>
+								<ul class="menuListChild">
+									<li><input type="checkbox" class="type02" id="menuCheck03-1"><label for="menuCheck03-1">콜라</label></li>
+									<li><input type="checkbox" class="type02" id="menuCheck03-2"><label for="menuCheck03-2">사이다</label></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">음료</a>
+								<ul class="menuListChild">
+									<li><input type="checkbox" class="type02" id="menuCheck03-1"><label for="menuCheck03-1">콜라</label></li>
+									<li><input type="checkbox" class="type02" id="menuCheck03-2"><label for="menuCheck03-2">사이다</label></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="btn">
+						<a href="" class="btnType02">주 문 하 기</a>
+					</div>
+				</div>
+				<!-- //메뉴리스트 -->
+
+				<!-- 메뉴취소 - input의 id 값과 label의 for값은 같아야 함 -->
+				<div class="orderCancel">
+					<ul class="menuListChild">
+						<li><input type="checkbox" class="type02" id="cancelList01"><label for="cancelList01">양주</label> <span class="price">\ 1,000</span></li>
+						<li><input type="checkbox" class="type02" id="cancelList02"><label for="cancelList02">맥주</label> <span class="price">\ 1,000</li>
+					</ul>
+					<p class="roomTotal">룸 총 매출 \3,000</p>
+					<div class="btn">
+						<a href="" class="btnType02">주 문 취 소</a>
+					</div>
+				</div>
+				<!-- 메뉴취소 -->
+			</div>
+		</div>
+		<!-- //content -->
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footerInner">
+				<ul>
+					<li>
+						<a href=""><div><i class="icon iconMsg"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconCall"></i> <em class="iconNum">99</em></div></a>
+					</li>
+					<li>
+						<a href=""><div><i class="icon iconNotice"></i> <em class="iconNum">1</em></div></a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+
+	<!-- 팝업 호출-->
+	확인용 팝업<Br/>
+	<a href="" onclick="showModal('orderCancel');return false;">주문취소</a><Br/>
+	<!-- //팝업 호출 -->
+
+	<!-- 주문취소 팝업 -->
+	<div class="layer" id="orderCancel">
+		<p class="msg">주문을 취소하시겠습니까?</p>
+		<button type="button" class="btnType01 btnEnter" onclick="hideModal('orderCancel');return false;">확인</button><button type="button" class="btnType01 btnCancel" onclick="hideModal('orderCancel');return false;">취소</button>
+	</div>
+	<!-- //주문취소 팝업-->
+ </body>
+</html>
