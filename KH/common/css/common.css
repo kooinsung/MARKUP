@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* webfont */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/*
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot);
+  src: url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-ExtraBold.ttf) format('truetype');
+}
+*/
+
+/*RESET STYLE*/
+html, body, div, span, amediaet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+
+}
+
+body, html{height:100%;font-family:'Nanum Gothic','나눔 고딕';font-weight: 400;box-sizing: border-box;  -moz-box-sizing: border-box;-webkit-text-size-adjust:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+ol,ul,li{list-style: none;font-size:0;}
+li{list-style: none;font-size:12px;}
+table{border-collapse: collapse;border-spacing: 0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-smoothing: antialiased;text-shadow: 1px 1px 1px rgba(0,0,0,0.004);text-stroke: 0.6px;}
+input,textarea,select,td,th{vertical-align:middle;font-family:'Nanum Gothic','나눔 고딕';font-weight: 400;}
+hr{display:none;}
+a{margin:0;padding:0;border:0;background:transparent;text-decoration:none;color:#666;font-size:12px;display:inline-block;}
+a:link,a:visited,a:hover,a:active,a:focus{text-decoration:none;}
+em,address{font-style:normal;}
+fieldset{border:0; vertical-align:top;}
+legend{display:block;}
+button{font-weight: 400;font-family:'Nanum Gothic','나눔 고딕';display:inline-block; font-size:0;margin:0; padding:0; border:none; background:none; text-align:center; vertical-align:middle; white-space:nowrap; cursor:pointer;font-weight: 400;}
+i{display:inline-block;font-size:0;}
+.clear{clear:both;}
+.blind{visibility: hidden;overflow: hidden;position: absolute;top: 0;left: 0;width: 1px;height: 1px;font-size: 0;line-height: 0;}
+.floatL{float:left;}
+.floatR{float:right;}
+
