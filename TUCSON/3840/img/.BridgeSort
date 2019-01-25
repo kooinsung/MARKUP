@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<dirinfo>
+<files>
+<item key='exterior20151223192111' />
+<item key='main20151223194400' />
+<item key='interior20151223204841' />
+<item key='engine20151223213507' />
+<item key='skip_off.png20151223172804' />
+<item key='skip_on.png20151223172810' />
+<item key='btn_menu.png20151223180034' />
+<item key='logo.png20151223180524' />
+<item key='bg_default.jpg20151223180627' />
+<item key='btn_close.png20151223181319' />
+<item key='btn_menu2.png20151223181413' />
+<item key='btn_videoThumb.png20151223181515' />
+<item key='bg_menu.png20151223181632' />
+<item key='bg_menu1.png20151223181954' />
+<item key='bg.png20151223190603' />
+<item key='bg_thumbOver.png20151223191855' />
+<item key='bg_thumbOver2.png20151223212637' />
+</files>
+</dirinfo>

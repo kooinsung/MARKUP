@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+.wrap{position:Relative;width:3840px;height:2160px;background:url('../../img/bg_default.jpg') center center no-repeat;background-size:cover;overflow:hidden;}
+.logo{position:absolute;top:99px;right:150px;}
+.btnMains{position:absolute;bottom:200px;width:100%;text-align:center;}
+.btnMains ul{font-size:0;}
+.btnMains li{display:inline-block;margin:0 22px;width:636px;height:408px;}
+.btnMains li a{display:inline-block;width:100%;height:100%;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.btnMains li a.exterior{background:url('../../img/main/mainThumb1_off.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li:hover a.exterior{background:url('../../img/main/mainThumb1_on.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li a.interior{background:url('../../img/main/mainThumb2_off.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li:hover a.interior{background:url('../../img/main/mainThumb2_on.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li a.engine{background:url('../../img/main/mainThumb3_off.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li:hover a.engine{background:url('../../img/main/mainThumb3_on.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li a.safety{background:url('../../img/main/mainThumb4_off.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li:hover a.safety{background:url('../../img/main/mainThumb4_on.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li a.comfort{background:url('../../img/main/mainThumb5_off.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li:hover a.comfort{background:url('../../img/main/mainThumb5_on.png') center center no-repeat;background-size:100% 100%;}
+.btnMains li img{width:100%;}
+
+
+.slidingMenu{}
+.slidingMenu .before{position:absolute;top:0;left:0;z-index:5;width:504px;height:2160px;overflow:hidden;background:url('../../img/bg_menu1.png') center center no-repeat;}
+.slidingMenu .before .btnOpen{margin:200px 0 0 185px;}
+.slidingMenu .before .cycleMenu{font-size:0;margin-top:210px;}
+.slidingMenu .before .cycleMenu li{width:504px;text-align:center;margin-bottom:70px;}
+.slidingMenu .before .cycleMenu a{display:inline-block;width:335px;height:336px;font-size:0;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.slidingMenu .before .cycleMenu.exterior a.front{background:url('../../img/exterior/cycle1_off.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.exterior a.side{background:url('../../img/exterior/cycle2_off.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.exterior a.back{background:url('../../img/exterior/cycle3_off.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.exterior li:hover a.front{background:url('../../img/exterior/cycle1_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.exterior li.active a.front{background:url('../../img/exterior/cycle1_on.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.exterior li:hover a.side{background:url('../../img/exterior/cycle2_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.exterior li.active a.side{background:url('../../img/exterior/cycle2_on.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.exterior li:hover a.back{background:url('../../img/exterior/cycle3_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.exterior li.active a.back{background:url('../../img/exterior/cycle3_on.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.interior a.color{background:url('../../img/interior/cycle1_off.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.interior a.frontSeat{background:url('../../img/interior/cycle2_off.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.interior a.rearSeat{background:url('../../img/interior/cycle3_off.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.interior li:hover a.color{background:url('../../img/interior/cycle1_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.interior li.active a.color{background:url('../../img/interior/cycle1_on.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.interior li:hover a.frontSeat{background:url('../../img/interior/cycle2_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.interior li.active a.frontSeat{background:url('../../img/interior/cycle2_on.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.interior li:hover a.rearSeat{background:url('../../img/interior/cycle3_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.interior li.active a.rearSeat{background:url('../../img/interior/cycle3_on.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.engine a.performance{background:url('../../img/engine/cycle1_off.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.engine a.power{background:url('../../img/engine/cycle2_off.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.engine li:hover a.performance{background:url('../../img/engine/cycle1_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.engine li.active a.performance{background:url('../../img/engine/cycle1_on.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.engine li:hover a.power{background:url('../../img/engine/cycle2_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.engine li.active a.power{background:url('../../img/engine/cycle2_on.png') center center no-repeat;}
+
+.slidingMenu .before .cycleMenu.safety a.ride{background:url('../../img/safety/cycle1_off.png') center center no-repeat;}
+.slidingMenu .before .cycleMenu.safety a.safe{background:url('../../img/safety/cycle2_off.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.safety li:hover a.ride{background:url('../../img/safety/cycle1_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.safety li.active a.ride{background:url('../../img/safety/cycle1_on.png') center center no-repeat;}
+/*.slidingMenu .before .cycleMenu.safety li:hover a.safe{background:url('../../img/safety/cycle2_on.png') center center no-repeat;}*/
+.slidingMenu .before .cycleMenu.safety li.active a.safe{background:url('../../img/safety/cycle2_on.png') center center no-repeat;}
+
+.slidingMenu .after{opacity:0;position:absolute;top:0;left:-1100px;z-index:5;width:1100px;height:2160px;overflow:hidden;background:url('../../img/bg_menu2.png') center center no-repeat;}
+.slidingMenu .after .btnClose{position:absolute;top:215px;right:140px;}
+.slidingMenu .after ul{font-size:0;margin-top:410px;}
+.slidingMenu .after .video{margin-top:145px;text-align:center;}
+
+.contents{padding:200px 0 0 580px;}
+.contentsIn{position:relative;width:3090px;height:1800px;}
+.contentsIn h2{display:block;margin-left:850px;}
+.contentsIn .mainImg{position:absolute;top:193px;right:-35px;z-index:3;}
+.views {position:relative;margin-top:45px;}
+.views .thumbs{position:absolute;top:17px;left:0;}
+.views .thumbs ul{font-size:0;}
+.views .thumbs li{position:relative;margin-bottom:62px;display:block;}
+.views .thumbs li .hover{position:absolute;top:8px;left:19px;display:block;width:750px;height:452px;background:url('../../img/bg_thumbOver.png') center center no-repeat;opacity:0;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.views .thumbs li .hover2{position:absolute;top:8px;left:19px;display:block;width:750px;height:728px;background:url('../../img/bg_thumbOver2.png') center center no-repeat;opacity:0;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.views .thumbs li .hover3{position:absolute;top:8px;left:19px;display:block;width:750px;height:314px;background:url('../../img/bg_thumbOver3.png') center center no-repeat;opacity:0;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.views .thumbs li.active .hover, .views .thumbs li.active .hover2, .views .thumbs li.active .hover3{opacity:1;}
+.views .bigs{position:relative;margin:0 0 0 814px;}
+.views .bigs.bigs2{position:relative;margin:0 0 0 0;}
+.views .bigs .default{position:absolute;top:0;left:0;}
+.views .bigs li{display:none;}
+.views .bigs li:first-child{display:block;}
+
+.views .rolling{width:2340px;height:891px;position:absolute;top:395px;left:400px;}
+.views .rolling .safetyRolling li{display:block;}
+.views .rolling .bx-prev{font-size:0;width:89px;height:170px;position:absolute;top:330px;left:-240px;background:url('../../img/safety/btn_prev.png') center center no-repeat;}
+.views .rolling .bx-next{font-size:0;width:89px;height:170px;position:absolute;top:330px;right:-240px;background:url('../../img/safety/btn_next.png') center center no-repeat;}
+.views .rolling .bx-pager {margin-top:50px;margin-left:-48px;width:2540px;background:url('../../img/safety/bg_line.png') 50px 31px no-repeat;}
+.views .rolling .bx-pager a{display:inline-block;width:115px;height:119px;font-size:0;margin:0 230px;}
+.views .rolling .bx-pager a.one{background:url('../../img/safety/blt1_off.png') center center no-repeat;margin-left:0;}
+.views .rolling .bx-pager a.one.active{background:url('../../img/safety/blt1_on.png') center center no-repeat;}
+.views .rolling .bx-pager a.two{background:url('../../img/safety/blt2_off.png') center center no-repeat;}
+.views .rolling .bx-pager a.two.active{background:url('../../img/safety/blt2_on.png') center center no-repeat;}
+.views .rolling .bx-pager a.three{background:url('../../img/safety/blt3_off.png') center center no-repeat;}
+.views .rolling .bx-pager a.three.active{background:url('../../img/safety/blt3_on.png') center center no-repeat;}
+.views .rolling .bx-pager a.four{background:url('../../img/safety/blt4_off.png') center center no-repeat;}
+.views .rolling .bx-pager a.four.active{background:url('../../img/safety/blt4_on.png') center center no-repeat;}
+.views .rolling .bx-pager a.five{background:url('../../img/safety/blt5_off.png') center center no-repeat;margin-right:0;}
+.views .rolling .bx-pager a.five.active{background:url('../../img/safety/blt5_on.png') center center no-repeat;}
+
+.btnSkip{width:100%;position:absolute;bottom:300px;text-align:center;}
+.btnSkip a{display:inline-block;width:796px;height:196px;background:url('../../img/skip_off.png') center center no-repeat;font-size:0;-moz-transition: 0.5s;-o-transition: 0.5s;-webkit-transition: 0.5s;transition: 0.5s;}
+.btnSkip a:hover{background:url('../../img/skip_on.png') center center no-repeat;}
