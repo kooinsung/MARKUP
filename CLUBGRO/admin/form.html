@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>각종 폼 및 버튼</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.10.3.custom.min.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+<div class="division">
+	<h1>Form</h1>
+	<div class="default">
+		<h2>●기본형</h2>
+		<p>
+
+		<strong class="tit">select</strong>
+			<!-- select -->
+			<select style="width:50%">
+				<option value="">옵션</option>
+				<option value="" selected="selected">선택하세요</option>
+				<option value="">옵션</option>
+			</select>
+			<!-- //select -->
+		</p>
+		<p>
+		<strong class="tit">radio button</strong>
+			<!-- radio -->
+			<input type="radio" /> <label>선택항목</label>
+			<!-- //radio -->
+		</p>
+		<p>
+		<strong class="tit">check box</strong>
+			<!-- checkbox -->
+			<input type="checkbox" /> <label>선택항목</label>
+			<!-- //checkbox -->
+		</p>
+		<p>
+		<strong class="tit">input:text</strong>
+			<!-- input:text -->
+			<input type="text" style="width:50%" />
+			<!-- //input:text -->
+		</p>
+		<p>
+		<strong class="tit">input:password</strong>
+			<!-- input:password -->
+			<input type="password" style="width:50%" />
+			<!-- //input:password -->
+		</p>
+		<p>
+		<strong class="tit">input:file</strong>
+			<!-- input:file -->
+			<input type="file" style="width:50%" />
+			<!-- //input:file -->
+		</p>
+		<p>
+		<strong class="tit">textarea</strong>
+			<!-- textarea -->
+			<textarea cols="30" rows="10" style="width:50%;height:100px"></textarea>
+			<!-- //textarea -->
+		</p>
+	</div>
+	<div>
+		<h2>●첨부파일 폼1 - 복수형</h2>
+		<!-- 첨부파일 폼1 -->
+		<ul class="inputArea">
+			<li>
+				<input type="file" style="width:100%" />
+			</li>
+			<li>
+				<input type="file" style="width:100%" />
+			</li>
+		</ul>
+		<!-- //첨부파일 폼1 -->
+	</div>
+	<div>
+		<h2>●첨부파일 폼2 - 추가 복수형</h2>
+		<!-- 첨부파일 폼2 -->
+		<div class="fileZone">
+			<ul class="inputArea">
+				<li><input type="file" style="width:100%" /></li>
+			</ul>
+			<p class="btn">
+				<a href="#" class="btnAdd addBtn"><span>추가</span></a>
+				<a href="#" class="btnDel delBtn"><span>제거</span></a>
+			</p>
+		</div>
+		<!-- //첨부파일 폼2 -->
+	</div>
+	<div>
+		<h2>●첨부파일 폼3 - 대체텍스트 입력 가능한 추가 복수형</h2>
+		<!-- 첨부파일 폼3 -->
+		<div class="fileZone">
+			<ul class="inputArea">
+				<li>
+					<input type="file" style="width:100%" />
+					<span class="altValue"><strong>대체텍스트</strong> <input type="text" style="width:200px" /></span>
+				</li>
+			</ul>
+			<p class="btn">
+				<a href="#" class="btnAdd addBtn"><span>추가</span></a>
+				<a href="#" class="btnDel delBtn"><span>제거</span></a>
+			</p>
+		</div>
+		<!-- //첨부파일 폼3 -->
+	</div>
+	<div>
+		<h2>●게시판 상단 검색 영역1 - 리스트 스타일</h2>
+		<!-- 게시판 상단 검색 영역1 -->
+		<ul class="srchArea">
+			<li>
+				<strong>와인구분 :</strong>
+				<select style="width:100px">
+					<option value="">전체</option>
+				</select>
+				<strong>생산국 :</strong>
+				<select style="width:100px">
+					<option value="">전체</option>
+				</select>
+				<strong>공개유무 :</strong>
+				<select style="width:100px">
+					<option value="">전체</option>
+				</select>
+			</li>
+			<li>
+				<strong>등록일 :</strong>
+				<span class="date"><input type="text" class="datepicker" /> ~ <input type="text" class="datepicker2" /></span>
+				<a href="javascript:setDate(7);" class="btnDefault"><span>1주일</span></a>
+				<a href="javascript:setDate(1);" class="btnDefault"><span>1개월</span></a>
+				<a href="javascript:setDate(3);" class="btnDefault"><span>3개월</span></a>
+				<a href="javascript:setDate(6);" class="btnDefault"><span>6개월</span></a>
+			</li>
+			<li>
+				<strong>제품구분 :</strong>
+				<input type="checkbox" /><label>New</label>
+				<input type="checkbox" /><label>Best</label>
+			</li>
+			<li>
+				<strong>제품명 :</strong>
+				<input type="text" style="width:200px" class="valignTop" /> <a href="#" class="btnNo"><span>취소</span></a> <a href="#" class="btnSrch"><span>검색</span></a>
+			</li>
+		</ul>
+		<!-- //게시판 상단 검색 영역1 -->
+		<em class="info">* 위와 같이 input앨레먼트와 버튼을 함께 붙여 쓸때에는 상하 레이아웃을 맞춰주기 위해 input에 class="valignTop"을 추가해 주세요!</em>
+	</div>
+	<div>
+		<h2>●게시판 상단 검색 영역2 - 테이블 스타일</h2>
+		<!-- 게시판 상단 검색 영역2 -->
+		<div class="srchArea">
+			<table class="tbl_srch">
+			<colgroup>
+				<col width="15%" />
+				<col width="*" />
+				<col width="15%" />
+				<col width="*" />
+				<col width="15%" />
+				<col width="*" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th scope="row">와인구분</th>
+					<td>
+						<select style="width:100px">
+							<option value="">전체</option>
+						</select>
+					</td>
+					<th scope="row">생산국</th>
+					<td>
+						<select style="width:100px">
+							<option value="">전체</option>
+						</select>
+					</td>
+					<th scope="row">공개유무</th>
+					<td>
+						<select style="width:100px">
+							<option value="">전체</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">등록일</th>
+					<td colspan="5">
+						<span class="date"><input type="text" class="datepicker" /> ~ <input type="text" class="datepicker2" /></span>
+						<a href="javascript:setDate(7);" class="btnDefault"><span>1주일</span></a>
+						<a href="javascript:setDate(1);" class="btnDefault"><span>1개월</span></a>
+						<a href="javascript:setDate(3);" class="btnDefault"><span>3개월</span></a>
+						<a href="javascript:setDate(6);" class="btnDefault"><span>6개월</span></a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">제품구분</th>
+					<td colspan="5">
+						<input type="checkbox" /><label>New</label>
+						<input type="checkbox" /><label>Best</label>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">제품명</th>
+					<td colspan="5">
+						<input type="text" style="width:300px" />
+					</td>
+				</tr>
+			</tbody>
+			</table>
+			<p class="btnZone"><a href="#" class="btnNo"><span>취소</span></a> <a href="#" class="btnSrch"><span>검색</span></a></p>
+		</div>
+		<!-- //게시판 상단 검색 영역2 -->
+	</div>
+	<div>
+		<h2>●게시판 상단 검색결과 영역1</h2>
+		<!-- 전체건수 -->
+		<p class="txtRight">전체 건수 : <strong class="fcRed">100</strong>건</p>
+		<!-- //전체건수 -->
+	</div>
+	<div>
+		<h2>●게시판 상단 검색결과 영역2</h2>
+		<!-- 전체건수 -->
+		<p class="srchResult">
+			<span class="listNum">전체 건수 : <strong class="fcRed">100</strong>건</span>
+			<span class="btn"><span class="btn"><a href="#" class="btnDown"><span>엑셀파일 다운로드</span></a></span></span>
+		</p>
+		<!-- //전체건수 -->
+	</div>
+	<div>
+		<h2>●페이징</h2>
+		<!-- 페이징 -->
+		<div class="paging">
+			<span class="mgr"><a href="#"><img src="images/btn_pageFirst.gif" alt="처음으로" /></a></span><span><a href="#"><img src="images/btn_pagePrev.gif" alt="이전" /></a></span>
+			<a href="#" class="first">1</a>
+			<strong>2</strong>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">7</a>
+			<a href="#">8</a>
+			<a href="#">9</a>
+			<a href="#" class="last">10</a>
+			<span class="mgr"><a href="#"><img src="images/btn_pageNext.gif" alt="다음" /></a></span><span><a href="#"><img src="images/btn_pageLast.gif" alt="끝으로" /></a></span>
+		</div>
+		<!-- //페이징 -->
+	</div>
+</div>
+
+<div class="division">
+	<h1>Button</h1>
+	<div>
+		<!-- 기본 -->
+		<a href="#" class="btnDefault"><span>기본</span></a>
+		<!-- //기본 -->
+		<!-- 검색 -->
+		<a href="#" class="btnSrch"><span>검색</span></a>
+		<!-- //검색 -->
+		<!-- 목록 -->
+		<a href="#" class="btnOk"><span>목록</span></a>
+		<!-- //목록 -->
+		<!-- 취소 -->
+		<a href="#" class="btnNo"><span>취소</span></a>
+		<!-- //취소 -->
+		<!-- 등록 -->
+		<a href="#" class="btnRegist"><span>등록</span></a>
+		<!-- //등록 -->
+		<!-- 삭제 -->
+		<a href="#" class="btnDelete"><span>삭제</span></a>
+		<!-- //삭제 -->
+		<!-- 다운로드 -->
+		<a href="#" class="btnDown"><span>다운로드</span></a>
+		<!-- //다운로드 -->
+		<!-- 추가 -->
+		<a href="#" class="btnAdd"><span>추가</span></a>
+		<!-- //추가 -->
+		<!-- 제거 -->
+		<a href="#" class="btnDel"><span>제거</span></a>
+		<!-- //제거 -->
+	</div>
+</div>
+
+<div class="division">
+	<h1>Style</h1>
+	<div>
+		<h2>●텍스트 관련 스타일</h2>
+		<ul class="styleList">
+			<li><span class="fwB">볼드체</span> class="fwB"</li>
+			<li><span class="fs11">사이즈 11px</span> class="fs11"</li>
+			<li><span class="fcBlue">파란색</span> class="fcBlue"</li>
+			<li><span class="fcRed">빨간색</span> class="fcRed"</li>
+			<li><span class="fcDefault">기본색</span> class="fcDefault"</li>
+			<li><span class="fcBlack">검정색</span> class="fcBlack"</li>
+		</ul>
+	</div>
+	<div>
+		<h2>●레이아웃 관련 스타일</h2>
+		<ul class="styleList">
+			<li><span>내용 가운데 정렬(text-align:center)</span> class="txtCenter"</li>
+			<li><span>내용 왼쪽 정렬(text-align:left)</span> class="txtLeft"</li>
+			<li><span>내용 오른쪽 정렬(text-align:right)</span> class="txtRight"</li>
+			<li><span>위로 정렬(vertical-align:top)</span> class="valignTop"</li>
+			<li><span>가운데 정렬(vertical-align:middle)</span> class="valignMid"</li>
+			<li><span>블록요소로 만들기(display:block)</span> class="block"</li>
+			<li><span>숨기기(display:none)</span> class="hidden"</li>
+			<li><span>왼쪽 정렬(float:left)</span> class="fLeft"</li>
+			<li><span>오른쪽 정렬(float:right)</span> class="fRight"</li>
+			<li><span>float 해제(clear:both)</span> class="clear"</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

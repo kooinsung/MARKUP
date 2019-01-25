@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+	<title> CLUB G.R.O  - 더 라차</title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/ui.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/common.js"></script>
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script>
+	$(document).ready(function(){
+		$('.poolVillaTab li').last().click(function(){
+			 alert("준비중입니다.");
+		});
+		 //사진정보 01
+		var slideshows = $('.picRolling01 .cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+			slideshows.not(this).cycle('goto', opts.currSlide);
+		});
+		$('#smallCycle01 .cycle-slide').click(function(){
+			var index = $('#smallCycle01').data('cycle.API').getSlideIndex(this);
+			slideshows.cycle('goto', index);
+		});
+
+		 //사진정보 02
+		var slideshows02 = $('.picRolling02 .cycle-slideshow').on('cycle-next02 cycle-prev02', function(e, opts) {
+			slideshows02.not(this).cycle('goto', opts.currSlide);
+		});
+		$('#smallCycle02 .cycle-slide').click(function(){
+			var index = $('#smallCycle02').data('cycle.API').getSlideIndex(this);
+			slideshows02.cycle('goto', index);
+		});
+
+//			$(window).scroll(function () {
+//				if ($(this).scrollTop() > 735) {
+//					$('.roomList').addClass('fixed');
+//				} else {
+//					$('.roomList').removeClass('fixed');
+//				}
+//			});
+	});
+	</script>
+ </head>
+
+ <body>
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<div class="inner">
+					<h1><a href="/"><img src="../img/common/logo.gif" alt="CLUB G.R.O"/></a></h1>
+
+					<!-- 검색 -->
+					<div class="srch">
+						<div class="inner">
+							<input type="text" /><button type="button" class="btnSrch"><img src="../img/common/btn_srch.gif" alt="검색"/></button>
+						</div>
+					</div>
+					<!-- //검색 -->
+
+					<!-- 유틸메뉴 -->
+					<div class="utilMenu">
+						<ul class="menu">
+							<li><a href="util/login.html"><img src="../img/common/img_util01.gif" alt="login"/></a></li>
+							<!-- li><a href=""><img src="../img/common/img_util01-1.gif" alt="logout"/></a></li -->
+							<li><a href="util/join.html"><img src="../img/common/img_util02.gif" alt="join"/></a></li>
+							<!-- li><a href="util/info.html"><img src="../img/common/img_util02-1.gif" alt="member info"/></a></li -->
+							<li class="last"><a href="util/customer.html"><img src="../img/common/img_util03.gif" alt="customer center"/></a></li>
+						</ul>
+					</div>
+					<!-- //유틸메뉴 -->
+
+					<!-- 글로벌 사이트 -->
+					<!-- div class="global">
+						<span class="sel"><img src="../img/common/img_util04.gif" alt="korean"/></span>
+						<ul class="selList">
+							<li><a href="http://www.tenga.co.jp/"><img src="../img/common/img_util05.gif" alt=""/></a></li>
+							<li><a href="http://www.tenga.co.jp/"><img src="../img/common/img_util06.gif" alt=""/></a></li>
+						</ul>
+					</div -->
+					<!-- //글로벌 사이트 -->
+
+					<!-- gnb -->
+					<nav>
+						<div class="inner">
+							<ul class="gnb" id="gnb">
+								<li>
+									<h2><a href=""><img src="../img/common/gnb01_off.png" alt="클럽지알오 소개"/></a></h2>
+									<div class="menuCont m1">
+										<ul class="type01">
+											<li class="first"><a href="../introduce/introduce.html"><img src="../img/common/gnb01-1_off.png" alt="클럽지알오 소개"/></a></li>
+											<li><a href="../introduce/whatis.html"><img src="../img/common/gnb01-2_off.png" alt="GRO란?"/></a></li>
+											<li><a href="../introduce/introduce02.html"><img src="../img/common/gnb01-3_off.png" alt="푸켓GRO소개"/></a></li>
+											<li><a href="../introduce/program.html"><img src="../img/common/gnb01-5_off.png" alt="지알오 선택 프로그램"/></a></li>
+											<li class="last"><a href="../introduce/movie.html"><img src="../img/common/gnb01-4_off.png" alt="소개영상"/></a></li>
+										</ul>
+									</div>
+								</li>
+
+								<li>
+									<h2><a href=""><img src="../img/common/gnb02_off.png" alt="풀빌라"/></a></h2>
+									<div class="menuCont m2 type02">
+										<ul class="menuList">
+											<li><a href="../poolvilla/thevillage.html"><img src="../img/common/gnb02-2_off.png" alt="더빌리지 코코넛 아일랜드"/></a></li>
+											<li><a href="../poolvilla/theracha.html"><img src="../img/common/gnb02-1_off.png" alt="더라차"/></a></li>
+											<li><a href="../poolvilla/richmond.html"><img src="../img/common/gnb02-3_off.png" alt="리치몬드"/></a></li>
+											<li><a href="../poolvilla/chandara.html"><img src="../img/common/gnb02-4_off.png" alt="찬다라"/></a></li>
+										</ul>
+										<ul class="menuThumb">
+											<li><img src="../img/common/img_gnb02-2.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb02-1.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb02-3.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb02-4.png" alt=""/></li>
+										</ul>
+									</div>
+								</li>
+
+								<li>
+									<h2><a href=""><img src="../img/common/gnb03_off.png" alt="리조트"/></a></h2>
+									<div class="menuCont m3 type02">
+										<ul class="menuList">
+											<li><a href="../resort/uzenmaya.html"><img src="../img/common/gnb03-1_off.png" alt="유젠마야"/></a></li>
+											<li><a href="../resort/sukko.html"><img src="../img/common/gnb03-2_off.png" alt="수코"/></a></li>
+											<li><a href="../resort/thesenses.html"><img src="../img/common/gnb03-3_off.png" alt="더센스"/></a></li>
+											<li><a href="../resort/seasunsand.html"><img src="../img/common/gnb03-4_off.png" alt="유선수리"/></a></li>
+											<li><a href="../poolvilla/usunsuri.html"><img src="../img/common/gnb03-5_off.png" alt="씨썬샌드"/></a></li>
+											<li><a href="../poolvilla/banthai.html"><img src="../img/common/gnb03-6_off.png" alt="반타이"/></a></li>
+										</ul>
+										<ul class="menuThumb">
+											<li><img src="../img/common/img_gnb03-1.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-2.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-3.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-4.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-5.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-6.png" alt=""/></li>
+										</ul>
+									</div>
+								</li>
+
+								<li>
+									<h2><a href="../reservation/reservation_list.html"><img src="../img/common/gnb04_off.png" alt="예약"/></a></h2>
+								</li>
+
+								<li>
+									<h2><a href="../tourpic/tourpic_list.html"><img src="../img/common/gnb05_off.png" alt="투어사진"/></a></h2>
+									<!-- div class="menuCont m4">
+										<ul class="type01">
+											<li class="first"><a href="../thainews/Bangkok_list.html"><img src="../img/common/gnb04-1_off.png" alt="방콕"/></a></li>
+											<li class="last"><a href="../thainews/phuket_list.html"><img src="../img/common/gnb04-2_off.png" alt="푸켓"/></a></li>
+										</ul>
+									</div -->
+								</li>
+
+								<li>
+									<h2><a href=""><img src="../img/common/gnb06_off.png" alt="푸켓관광"/></a></h2>
+									<div class="menuCont m5">
+										<ul class="type01">
+											<li class="first"><a href="../tour/view.html"><img src="../img/common/gnb05-1_off.png" alt="볼거리"/></a></li>
+											<li><a href="../tour/food.html"><img src="../img/common/gnb05-2_off.png" alt="먹거리"/></a></li>
+											<li><a href="../tour/enjoy.html"><img src="../img/common/gnb05-3_off.png" alt="즐길거리"/></a></li>
+											<li class="last"><a href="../tour/facility.html"><img src="../img/common/gnb05-4_off.png" alt="편의시설"/></a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<h2><a href=""><img src="../img/common/gnb07_off.png" alt="커뮤니티"/></a></h2>
+									<div class="menuCont m6">
+										<ul class="type01">
+											<li class="first"><a href="../community/notice_list.html"><img src="../img/common/gnb06-1_off.png" alt="공지사항"/></a></li>
+											<li><a href="../community/promotion_list.html"><img src="../img/common/gnb06-5_off.png" alt="프로모션"/></a></li>
+											<li><a href="../community/tour_list.html"><img src="../img/common/gnb06-2_off.png" alt="여행후기"/></a></li>
+											<li><a href="../community/faq.html"><img src="../img/common/gnb06-3_off.png" alt="FAQ"/></a></li>
+											<li class="last"><a href="../community/qna_list.html"><img src="../img/common/gnb06-4_off.png" alt="Q&A"/></a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //gnb -->
+				</div>
+			</header>
+			<!-- //header -->
+			<hr/>
+
+			<!-- contnet -->
+			<section id="content" class="subContent">
+				<div class="inner">
+					<!-- 타이틀 & 로케이션 -->
+					<div class="tit02">
+						<h2><span>더라차</span></h2>
+						<div class="poolVillaSel">
+							<span class="sel">풀빌라 바로가기</span>
+							<ul class="selList02">
+								<li><a href="">더라차 바로가기</a></li>
+								<li><a href="">더빌리지 코코넛 아일랜드 바로가기</a></li>
+								<li><a href="">리치몬드 바로가기</a></li>
+								<li><a href="">찬다라 바로가기</a></li>
+								<li><a href="">유선수리 바로가기</a></li>
+							</ul>
+						</div>
+						<div class="location"><span class="home"><img src="../img/content/icon_home.gif" alt="home"/></span> &#62; <span>풀빌라</span> &#62; <strong class="current">더 라차</strong></div>
+					</div>
+					<!-- //타이틀 & 로케이션 -->
+
+					<!-- 더라차 -->
+					<div class="poolVilla">
+						<div class="defaultInfo">
+							<!-- 상단 롤링 -->
+							<div class="Rolling">
+								<div class="rollingPager">
+									<ul id="pager"></ul>
+								</div>
+								<div class="rollingCont">
+									<ul class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-pager="#pager">
+										<li><img src="../img/content/img_dummy.jpg" alt="" width="670"/></li>
+										<li><img src="../img/content/img_dummy.jpg" alt="" width="670"/></li>
+										<li><img src="../img/content/img_dummy.jpg" alt="" width="670"/></li>
+									</ul>
+								</div>
+							</div>
+							<!-- //상단 롤링 -->
+							<!-- 기본 정보 -->
+							<div class="poolVillaInfo">
+								<strong>The Racha</strong>
+								<table summary="이 테이블은 타입, 스타일, 위치, 이동거리, 주소, 연락처, 홈페이지의 형태로 구성되어 있습니다." class="infoType">
+									<caption>풀빌라 정보</caption>
+									<colgroup>
+										<col width="75"/>
+										<col width="225"/>
+									</colgroup>
+									<tr>
+										<th>위치</th>
+										<td>마프라오 야이 아일랜드 (코코넛 아일랜드)</td>
+									</tr>
+									<tr>
+										<th>이동거리</th>
+										<td>푸켓공항 35분 /  푸켓타운 15분 / 파통비치 40분</td>
+									</tr>
+									<tr>
+										<th>주소</th>
+										<td>42/12-13 moo 5, rawai, muang, phuket, thailand</td>
+									</tr>
+									<tr>
+										<th>연락처</th>
+										<td>Tel.+ 66 89 8663701 Fax.+ 66 76 270801</td>
+									</tr>
+									<tr>
+										<th>홈페이지</th>
+										<td><a href="http://www.theracha.com">www.theracha.com</a></td>
+									</tr>
+								</table>
+								<div class="btnReservation"><a href=""><img src="../img/content/btn_reservation.gif" alt="" /></a></div>
+							</div>
+							<!-- //기본 정보 -->
+						</div>
+
+						<div class="partInfo">
+							<div class="detailArea tab">
+								<!-- 탭 -->
+								<ul class="poolVillaTab">
+									<li><strong><a href="" class="on">소개</a></strong></li>
+									<li><strong><a href="">객실</a></strong></li>
+									<li><strong><a href="">부대시설</a></strong></li>
+									<li><strong><a href="">레스토랑 & BAR</a></strong></li>
+									<li><strong><a href="">사진정보</a></strong></li>
+									<li><strong>주변정보</strong></li><!-- li><strong><a href="">주변정보</a></strong></li 추후 수정 -->
+								</ul>
+								<!-- //탭 -->
+
+								<!-- 소개 -->
+								<div class="detail detail01">
+									<div class="logoThumb"><img src="../img/content/img_detaillogo.gif" alt=""/></div>
+									<p class="introText">섬 속에 숨어있는 태국의 최고급 리조트 더라차 리조트는 푸켓공항에서 40분정도 소요되는 찰롱부두에서 약 19km 떨어진 라차 야이섬에 위치하고 있다. 찰롱베이에서 스피드보트를 이용하여 35분정도 이동하면 눈부시게 아름다운 라차 야이섬에 도착한다. 푸켓의 몰디브, 황제의 섬 이라 불리우는 라차야이의 메인비치 바톡비치에 자리잡고 있으며, 눈부신 전경과 꿈같은 낭만의 하루하루를 보내기에 가장 적합한 곳이라 할수있다. 85개의 럭셔리 빌라들이 주변경관과 자연스러운 조화를 이루도록 디자인 되었다. 밀가루 처럼 고운 모래와 에메랄드 빛 바다, 모던하고 럭셔리한 더라차 리조트가 완벽한 파라다이스의 모습을 갖추고 있다. 푸켓에서 또 다른 몰디브를 만나볼수 있다.<br/><br/>(* 주의사항 : 푸켓 국제 공항에 도착한 당일에 더라차 리조트로 가기 위해서는, 푸켓공항에 15:30분 이전에 도착해야 한다. 15:30분 이후에 푸켓공항에 도착한 경우에는 보트 탑승시간이 늦을 수 있다.)</p>
+
+									<ul class="introMap">
+										<li>
+											<strong>더 라차 오시는길</strong>
+											<img src="../img/content/img_map.gif" alt=""/>
+										</li>
+										<li>
+											<strong>리조트 맵</strong>
+											<img src="../img/content/img_map02.gif" alt=""/>
+										</li>
+									</ul>
+								</div>
+								<!-- //소개 -->
+
+								<!-- 객실 -->
+								<div class="detail detail02">
+									<!-- 객실명 -->
+									<div class="TabList">
+										<ul>
+											<li ><a href="#TabNum01" class="active">디럭스 빌라</a></li>
+											<li><a href="#TabNum02">그랜드 디럭스 빌라</a></li>
+											<li><a href="#TabNum03">그랜드 디럭스 풀 빌라</a></li>
+											<li><a href="#TabNum04">주니어 풀 스위트</a></li>
+											<li><a href="#TabNum05">그랜드 풀 스위트</a></li>
+											<li><a href="#TabNum06">디럭스 빌라</a></li>
+											<li><a href="#TabNum07">그랜드 디럭스 빌라</a></li>
+										</ul>
+									</div>
+									<!-- //객실명 -->
+									
+									<div class="TabInfo">
+										<!-- 객실정보01 -->
+										<div class="inner"  id="TabNum01">
+											<strong>디럭스 빌라 Deluxe Villa (40채)</strong>
+											<p>2개의 빌라가 하나의 지붕의 형태를 띈 객실. 넓은 테라스와 욕실. 그랜드 디럭스 빌라 뒤편 언덕에 위치. 객실에서 바다가 한눈에 들어오지 않지만, 그랜드 디럭스 빌라 사이사이 조금의 바다를 감상하실 수 있습니다. 테라스를 제외하고 43㎡ 입니다. </p>
+											<div class="roomTop">
+												<ul>
+													<li>무료 Wireless internet 연결</li>
+													<li>LCD TV, DVD Apple iPod, Boss Sound Dock </li>
+													<li>IDD 전화 TV</li>
+													<li>개별식 에어컨</li>
+													<li>Mini Bar, Tea & Coffee</li>
+													<li>안전 금고</li>
+													<li>헤어 드라이어</li>
+													<li>실내 샤워와 욕조 / 실외 레인 샤워로 구분</li>
+												</ul>
+												<span><img src="../img/content/img_dummy05.jpg" alt=""/></span>
+											</div>
+											<div class="roomBtm">
+												<ul>
+													<li class="first"><img src="http://placehold.it/315x220"/></li>
+													<li class="last"><img src="http://placehold.it/315x220"/></li>
+												</ul>
+											</div>
+										</div>
+										<!-- //객실정보01 -->
+
+										<!-- 객실정보02 -->
+										<div class="inner" id="TabNum02">
+											<strong>그랜드 디럭스 풀 빌라 Grand Deluxe Pool Villa (1채) </strong>
+											<p>2개의 빌라가 하나의 지붕의 형태를 띈 객실. 넓은 테라스와 욕실. 그랜드 디럭스 빌라 뒤편 언덕에 위치. 객실에서 바다가 한눈에 들어오지 않지만, 그랜드 디럭스 빌라 사이사이 조금의 바다를 감상하실 수 있습니다. 테라스를 제외하고 43㎡ 입니다. </p>
+											<div class="roomTop">
+												<ul>
+													<li>무료 Wireless internet 연결</li>
+													<li>LCD TV, DVD Apple iPod, Boss Sound Dock </li>
+													<li>IDD 전화 TV</li>
+													<li>개별식 에어컨</li>
+													<li>Mini Bar, Tea & Coffee</li>
+													<li>안전 금고</li>
+													<li>헤어 드라이어</li>
+													<li>실내 샤워와 욕조 / 실외 레인 샤워로 구분</li>
+												</ul>
+												<span><img src="../img/content/img_dummy05.jpg" alt=""/></span>
+											</div>
+											<div class="roomBtm">
+												<ul>
+													<li class="first"><img src="http://placehold.it/315x220"/></li>
+													<li class="last"><img src="http://placehold.it/315x220"/></li>
+												</ul>
+											</div>
+										</div>
+										<!-- //객실정보02 -->
+
+										<!-- 객실정보03 -->
+										<div class="inner" id="TabNum03">
+											<strong>그랜드 디럭스 풀 빌라 Grand Deluxe Pool Villa (12채) </strong>
+											<p>2개의 빌라가 하나의 지붕의 형태를 띈 객실. 넓은 테라스와 욕실. 그랜드 디럭스 빌라 뒤편 언덕에 위치. 객실에서 바다가 한눈에 들어오지 않지만, 그랜드 디럭스 빌라 사이사이 조금의 바다를 감상하실 수 있습니다. 테라스를 제외하고 43㎡ 입니다. </p>
+											<div class="roomTop">
+												<ul>
+													<li>무료 Wireless internet 연결</li>
+													<li>LCD TV, DVD Apple iPod, Boss Sound Dock </li>
+													<li>IDD 전화 TV</li>
+													<li>개별식 에어컨</li>
+													<li>Mini Bar, Tea & Coffee</li>
+													<li>안전 금고</li>
+													<li>헤어 드라이어</li>
+													<li>실내 샤워와 욕조 / 실외 레인 샤워로 구분</li>
+												</ul>
+												<span><img src="../img/content/img_dummy05.jpg" alt=""/></span>
+											</div>
+											<div class="roomBtm">
+												<ul>
+													<li class="first"><img src="http://placehold.it/315x220"/></li>
+													<li class="last"><img src="http://placehold.it/315x220"/></li>
+												</ul>
+											</div>
+										</div>
+										<!-- //객실정보03 -->
+
+										<!-- 객실정보04 -->
+										<div class="inner" id="TabNum04">
+											<strong>그랜드 디럭스 풀 빌라 Grand Deluxe Pool Villa (13채) </strong>
+											<p>2개의 빌라가 하나의 지붕의 형태를 띈 객실. 넓은 테라스와 욕실. 그랜드 디럭스 빌라 뒤편 언덕에 위치. 객실에서 바다가 한눈에 들어오지 않지만, 그랜드 디럭스 빌라 사이사이 조금의 바다를 감상하실 수 있습니다. 테라스를 제외하고 43㎡ 입니다. </p>
+											<div class="roomTop">
+												<ul>
+													<li>무료 Wireless internet 연결</li>
+													<li>LCD TV, DVD Apple iPod, Boss Sound Dock </li>
+													<li>IDD 전화 TV</li>
+													<li>개별식 에어컨</li>
+													<li>Mini Bar, Tea & Coffee</li>
+													<li>안전 금고</li>
+													<li>헤어 드라이어</li>
+													<li>실내 샤워와 욕조 / 실외 레인 샤워로 구분</li>
+												</ul>
+												<span><img src="../img/content/img_dummy05.jpg" alt=""/></span>
+											</div>
+											<div class="roomBtm">
+												<ul>
+													<li class="first"><img src="http://placehold.it/315x220"/></li>
+													<li class="last"><img src="http://placehold.it/315x220"/></li>
+												</ul>
+											</div>
+										</div>
+										<!-- //객실정보04 -->
+
+										<!-- 객실정보05 -->
+										<div class="inner" id="TabNum05">
+											<strong>그랜드 디럭스 풀 빌라 Grand Deluxe Pool Villa (14채) </strong>
+											<p>2개의 빌라가 하나의 지붕의 형태를 띈 객실. 넓은 테라스와 욕실. 그랜드 디럭스 빌라 뒤편 언덕에 위치. 객실에서 바다가 한눈에 들어오지 않지만, 그랜드 디럭스 빌라 사이사이 조금의 바다를 감상하실 수 있습니다. 테라스를 제외하고 43㎡ 입니다. </p>
+											<div class="roomTop">
+												<ul>
+													<li>무료 Wireless internet 연결</li>
+													<li>LCD TV, DVD Apple iPod, Boss Sound Dock </li>
+													<li>IDD 전화 TV</li>
+													<li>개별식 에어컨</li>
+													<li>Mini Bar, Tea & Coffee</li>
+													<li>안전 금고</li>
+													<li>헤어 드라이어</li>
+													<li>실내 샤워와 욕조 / 실외 레인 샤워로 구분</li>
+												</ul>
+												<span><img src="../img/content/img_dummy05.jpg" alt=""/></span>
+											</div>
+											<div class="roomBtm">
+												<ul>
+													<li class="first"><img src="http://placehold.it/315x220"/></li>
+													<li class="last"><img src="http://placehold.it/315x220"/></li>
+												</ul>
+											</div>
+										</div>
+										<!-- //객실정보05 -->
+
+										<!-- 객실정보06 -->
+										<div class="inner" id="TabNum06">
+											<strong>그랜드 디럭스 풀 빌라 Grand Deluxe Pool Villa (15채) </strong>
+											<p>2개의 빌라가 하나의 지붕의 형태를 띈 객실. 넓은 테라스와 욕실. 그랜드 디럭스 빌라 뒤편 언덕에 위치. 객실에서 바다가 한눈에 들어오지 않지만, 그랜드 디럭스 빌라 사이사이 조금의 바다를 감상하실 수 있습니다. 테라스를 제외하고 43㎡ 입니다. </p>
+											<div class="roomTop">
+												<ul>
+													<li>무료 Wireless internet 연결</li>
+													<li>LCD TV, DVD Apple iPod, Boss Sound Dock </li>
+													<li>IDD 전화 TV</li>
+													<li>개별식 에어컨</li>
+													<li>Mini Bar, Tea & Coffee</li>
+													<li>안전 금고</li>
+													<li>헤어 드라이어</li>
+													<li>실내 샤워와 욕조 / 실외 레인 샤워로 구분</li>
+												</ul>
+												<span><img src="../img/content/img_dummy05.jpg" alt=""/></span>
+											</div>
+											<div class="roomBtm">
+												<ul>
+													<li class="first"><img src="http://placehold.it/315x220"/></li>
+													<li class="last"><img src="http://placehold.it/315x220"/></li>
+												</ul>
+											</div>
+										</div>
+										<!-- //객실정보06 -->
+
+										<!-- 객실정보07 -->
+										<div class="inner" id="TabNum07">
+											<strong>그랜드 디럭스 풀 빌라 Grand Deluxe Pool Villa (16채) </strong>
+											<p>2개의 빌라가 하나의 지붕의 형태를 띈 객실. 넓은 테라스와 욕실. 그랜드 디럭스 빌라 뒤편 언덕에 위치. 객실에서 바다가 한눈에 들어오지 않지만, 그랜드 디럭스 빌라 사이사이 조금의 바다를 감상하실 수 있습니다. 테라스를 제외하고 43㎡ 입니다. </p>
+											<div class="roomTop">
+												<ul>
+													<li>무료 Wireless internet 연결</li>
+													<li>LCD TV, DVD Apple iPod, Boss Sound Dock </li>
+													<li>IDD 전화 TV</li>
+													<li>개별식 에어컨</li>
+													<li>Mini Bar, Tea & Coffee</li>
+													<li>안전 금고</li>
+													<li>헤어 드라이어</li>
+													<li>실내 샤워와 욕조 / 실외 레인 샤워로 구분</li>
+												</ul>
+												<span><img src="../img/content/img_dummy05.jpg" alt=""/></span>
+											</div>
+											<div class="roomBtm">
+												<ul>
+													<li class="first"><img src="http://placehold.it/315x220"/></li>
+													<li class="last"><img src="http://placehold.it/315x220"/></li>
+												</ul>
+											</div>
+										</div>
+										<!-- //객실정보07 -->
+									</div>
+								</div>
+								<!-- //객실 -->
+
+								<!-- 부대시설  : 각 롤링하고 이전,다음 버튼 class네임을 따로 해주세요 -->
+								<div class="detail detail03">
+									<!-- 부대시설01 -->
+									<div class="inner">
+										<strong>메인 수영장 & 워터 슬라이드</strong>
+										<div class="facilityRolling">
+											<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-prev=".facilityPrev01" data-cycle-next=".facilityNext01" data-cycle-allow-wrap="false">
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+											</ul>
+											<div class="contorl"><span class="facilityPrev01"><img src="../img/content/btn_prev03_on.png" alt=""/></span><span class="facilityNext01"><img src="../img/content/btn_next03_on.png" alt=""/></span></div>
+										</div>
+										<div class="facilityText">
+											<p>바로 앞으로 바다가 보이는 계단식으로 된 2개의 메인 수영장에서 워터 슬라이드를 타고 시원하게 물 속으로 풍덩~!</p>
+											<ul>
+												<li>이용시간 : 07:00 ~ 19:00</li>
+												<li>이용요금 : 무료</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //부대시설01 -->
+
+									<!-- 부대시설02-->
+									<div class="inner">
+										<strong>키즈클럽</strong>
+										<div class="facilityRolling">
+											<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-prev=".facilityPrev02" data-cycle-next=".facilityNext02" data-cycle-allow-wrap="false">
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+											</ul>
+											<div class="contorl"><span class="facilityPrev02"><img src="../img/content/btn_prev03_on.png" alt=""/></span><span class="facilityNext02"><img src="../img/content/btn_next03_on.png" alt=""/></span></div>
+										</div>
+										<div class="facilityText">
+											<p>아이가 즐거워야 가족여행 성공의 지름길~! 아이를 위한 각종 프로그램으로 재미는 물론 세계 모든 어린이와 어울리며 자연스럽게 영어도 배우고 다문화를 접할수 있는 기회를 제공합니다. </p>
+											<ul>
+												<li>이용시간 : 07:00 ~ 19:00</li>
+												<li>이용요금 : 기본무료 , 석고상 및 바닥 페인팅시 재료값 300바트</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //부대시설02 -->
+
+									<!-- 부대시설03 -->
+									<div class="inner">
+										<strong>헬스장 & 스파장</strong>
+										<div class="facilityRolling">
+											<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-prev=".facilityPrev03" data-cycle-next=".facilityNext03" data-cycle-allow-wrap="false">
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+											</ul>
+											<div class="contorl"><span class="facilityPrev03"><img src="../img/content/btn_prev03_on.png" alt=""/></span><span class="facilityNext03"><img src="../img/content/btn_next03_on.png" alt=""/></span></div>
+										</div>
+										<div class="facilityText">
+											<p>간단한 운동기구가 준비 되어 있는 헬스장에서 운동하고 바로 뒤 스파장에서 시원한 맛사지를 받으면서 완전한 힐링을 꿈꿀 수 있습니다.</p>
+											<ul>
+												<li>이용시간 : 09:00 - 20:00</li>
+												<li>이용요금 : 헬스장 무료, 스파장 지알오 특별가 30% 할인</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //부대시설03 -->
+								</div>
+								<!-- //부대시설 -->
+
+								<!-- 레스토랑 & BAR  : 각 롤링하고 이전,다음 버튼 class네임을 따로 해주세요 -->
+								<div class="detail detail04">
+									<!-- 레스토랑 & BAR01 -->
+									<div class="inner">
+										<strong>타마린 레스토랑</strong>
+										<div class="facilityRolling02">
+											<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-prev=".facility02Prev01" data-cycle-next=".facility02Next01" data-cycle-allow-wrap="false">
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+											</ul>
+											<div class="contorl"><span class="facility02Prev01"><img src="../img/content/btn_prev03_on.png" alt=""/></span><span class="facility02Next01"><img src="../img/content/btn_next03_on.png" alt=""/></span></div>
+										</div>
+										<div class="facilityText02">
+											<p>레스토랑 바로 앞으로 비치와 메인 수영장이 자리를 잡고 있어 아름다운 뷰를 자랑하는 곳입니다. 조식을 제공하는 레스토랑 이기도 하며, 조식외에도 각종 태국음식을 맛볼 수 있습니다.</p>
+											<ul>
+												<li>이용시간 : 06:30 - 22:00</li>
+												<li>이용가격 : 1인당 700~1000바트 정도</li>
+												<li>메 뉴 : 뿌팟뽕커리, 얌문센 등</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //레스토랑 & BAR01 -->
+
+									<!-- 레스토랑 & BAR02 -->
+									<div class="inner">
+										<strong>델리 레스토랑</strong>
+										<div class="facilityRolling02">
+											<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-prev=".facility02Prev02" data-cycle-next=".facility02Next02" data-cycle-allow-wrap="false">
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+											</ul>
+											<div class="contorl"><span class="facility02Prev02"><img src="../img/content/btn_prev03_on.png" alt=""/></span><span class="facility02Next02"><img src="../img/content/btn_next03_on.png" alt=""/></span></div>
+										</div>
+										<div class="facilityText02">
+											<p>바로 앞으로 바다가 보이는 계단식으로 된 2개의 메인 수영장에서 워터 슬라이드를 타고 시원하게 물 속으로 풍덩~!</p>
+											<ul>
+												<li>이용시간 : 07:00 ~ 19:00</li>
+												<li>이용요금 : 무료</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //레스토랑 & BAR02 -->
+
+									<!-- 레스토랑 & BAR03 -->
+									<div class="inner">
+										<strong>비치프론트 BAR</strong>
+										<div class="facilityRolling02">
+											<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout="5000" data-cycle-slides="> li" data-cycle-prev=".facility02Prev03" data-cycle-next=".facility02Next03" data-cycle-allow-wrap="false">
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+												<li><img src="../img/content/img_dummy03.jpg" alt=""/></li>
+											</ul>
+											<div class="contorl"><span class="facility02Prev03"><img src="../img/content/btn_prev03_on.png" alt=""/></span><span class="facility02Next03"><img src="../img/content/btn_next03_on.png" alt=""/></span></div>
+										</div>
+										<div class="facilityText02">
+											<p>바로 앞으로 바다가 보이는 계단식으로 된 2개의 메인 수영장에서 워터 슬라이드를 타고 시원하게 물 속으로 풍덩~!</p>
+											<ul>
+												<li>이용시간 : 07:00 ~ 19:00</li>
+												<li>이용요금 : 무료</li>
+											</ul>
+										</div>
+									</div>
+									<!-- //레스토랑 & BAR03 -->
+								</div>
+								<!-- //레스토랑 & BAR -->
+
+								<!-- 사진정보 : 페이지 상단에 스크립트있는데, 롤링하나당 스크립트 하나씩 맞춰주어야 합니다. -->
+								<div class="detail detail05">
+									<!-- 사진정보명 -->
+									<div class="TabList02">
+										<ul>
+											<li ><a href="#picNum01" class="active">호텔전경</a></li>
+											<li><a href="#picNum02">객실</a></li>
+										</ul>
+									</div>
+									<!-- //사진정보명 -->
+
+									<div class="TabInfo02">
+										<div class="inner" id="picNum01">
+											<strong>호텔전경</strong>
+											<div class="picRolling01">
+												<div class="big">
+													<ul id="" class="cycle-slideshow"	data-cycle-slides="> li"	data-cycle-timeout="0" data-cycle-caption-template="Slide {{slideNum}} of {{slideCount}}"	data-cycle-fx="scrollHorz">
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+													</ul>
+												</div>
+
+												<div class="small">
+													<button type="button" class="cycle-prev btnPrev">이전</button>
+													<ul id="smallCycle01" class="cycle-slideshow"	data-cycle-slides="> li"	data-cycle-timeout="0" data-cycle-prev=".cycle-prev"	data-cycle-next=".cycle-next" data-cycle-caption-template="Slide {{slideNum}} of {{slideCount}}"	data-cycle-fx="carousel" data-cycle-carousel-visible="4"data-cycle-carousel-fluid=true	data-cycle-allow-wrap="false">
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+													</ul>
+													<button type="button" class="cycle-next btnNext">다음</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="inner" id="picNum02">
+											<strong>객실</strong>
+											<div class="picRolling02">
+												<div class="big">
+													<ul id="" class="cycle-slideshow"	data-cycle-slides="> li"	data-cycle-timeout="0" data-cycle-caption-template="Slide {{slideNum}} of {{slideCount}}"	data-cycle-fx="scrollHorz">
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+														<li><img src="../img/content/img_dummy02.jpg" width="670" height="380"></li>
+													</ul>
+												</div>
+
+												<div class="small">
+													<button type="button" class="cycle-prev02 btnPrev"><img src="../img/content/btn_rollingprev.gif" alt=""/></button>
+													<ul id="smallCycle02" class="cycle-slideshow"	data-cycle-slides="> li"	data-cycle-timeout="0" data-cycle-prev=".cycle-prev02"	data-cycle-next=".cycle-next02" data-cycle-caption-template="Slide {{slideNum}} of {{slideCount}}"	data-cycle-fx="carousel" data-cycle-carousel-visible="4"data-cycle-carousel-fluid=true	data-cycle-allow-wrap="false">
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+															<li>
+																<div class="thumbBorder"></div>
+																<img src="../img/content/img_dummy02.jpg" width="135" height="80">
+															</li>
+													</ul>
+													<button type="button" class="cycle-next02 btnNext"><img src="../img/content/btn_rollingnext.gif" alt=""/></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //사진정보 -->
+
+								<!-- 주변정보 -->
+								<div class="detail detail06">
+									주변정보
+								</div>
+								<!-- //주변정보 -->
+							</div>
+
+							<!-- 맵 -->
+							<div class="poolVillaMap">
+								<div class="staffInfo">
+									<span><img src="../img/common/img_picThumb.gif" alt="" width="110"/></span>
+									<ul>
+										<li><strong>담당 GRO : 나채정</strong></li>
+										<li class="staffText">찬다라 담당인 토니 지알오는 차분하고  꼼꼼한 성격을 가지고 있어 고객 대응에 있어 빈틈없는 업무처리를 자랑한다.</li>
+										<li><a href="http://blog.naver.com/kindtony1">http://blog.naver.com/kindtony1</a></li>
+									</ul>
+								</div>
+								<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.kr/maps?f=q&amp;source=s_q&amp;hl=ko&amp;geocode=&amp;q=sea+quest&amp;aq=&amp;sll=7.608998,98.370723&amp;sspn=0.009326,0.013937&amp;ie=UTF8&amp;hq=sea+quest&amp;hnear=&amp;t=m&amp;ll=7.831327,98.346777&amp;spn=0.035543,0.085745&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+							</div>
+							<!-- //맵 -->
+						</div>
+					</div>
+					<!-- //더라차 -->
+				</div>
+			</section>
+			<!-- //contnet -->
+
+			<hr/>
+			<!-- footer -->
+			<footer>
+				<div class="inner">
+					<strong class="logo"><img src="../img/common/img_footerLogo.gif" alt="클럽 지알오"/></strong>
+					<div class="right">
+						<div class="f01">
+							<p><img src="../img/common/img_footer01.gif" alt="클럽알지오 고객센터 : 070.8236.1544"/></p>
+							<ul>
+								<li><a href=""><img src="../img/common/btn_facebook.gif" alt="페이스북"/></a></li>
+								<li><a href=""><img src="../img/common/btn_twitter.gif" alt="트위터"/></a></li>
+							</ul>
+						</div>
+						<div class="f02">
+							<ul>
+								<li><a href="util/company.html"><img src="../img/common/img_footer02.gif" alt="회사소개"/></a></li>
+								
+								<li><a href="util/provision.html"><img src="../img/common/img_footer04.gif" alt="이용약관"/></a></li>
+								<li><a href="util/policy.html"><img src="../img/common/img_footer05.gif" alt="개인정보취급방침"/></a></li>
+								<li class="last"><a href="util/customer.html"><img src="../img/common/img_footer06.gif" alt="고객센터"/></a></li>
+							</ul>
+						</div>
+						<div class="f03">
+							<p><img src="../img/common/img_footer07.gif" alt=""/></p>
+						</div>
+						<div class="f04">
+							<p><img src="../img/common/img_footer08.gif" alt=""/></p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+ </body>
+
+</html>

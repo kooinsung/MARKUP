@@ -1,0 +1,540 @@
+@charset "utf-8";
+
+/*헤더*/
+header{width:100%;border-bottom:1px solid #000;text-align:center;z-index:10;height:121px;}
+header h1{padding:22px 0;}
+header > .inner{position:relative;width:1000px;margin:0 auto;}
+header .srch{position:absolute;right:0;top:37px;}
+header .srch .inner{position:relative;border:1px solid #000;width:258px;height:33px;text-align:left;}
+header .srch input[type=text]{border:0;padding:10px 0 5px 5px;width:85%;}
+header .srch .btnSrch{position:absolute;right:0;top:0;}
+header .utilMenu{position:absolute;right:0px;bottom:21px;}
+header .utilMenu ul.menu > li{position:relative;display:inline-block;zoom:1;*display:inline;padding:0 9px;background:url('../../img/common/icon_bar02.gif') right 0 no-repeat;}
+header .utilMenu ul.menu > li:first-child{padding-left:0;}
+header .utilMenu ul.menu > li.last{background:none;padding-right:0;}
+header .global{position:absolute;right:0;top:84px;}
+header .global .sel{cursor:pointer;padding-right:10px;background:url('../../img/common/icon_arrow.gif') right center no-repeat;display:inline-block;}
+header .selList{display:none;padding-right:10px;}
+header .selList li{padding:3px 0;}
+
+/*gnb*/
+nav{position:absolute;top:122px;z-index:999;}
+nav ul.gnb{border-top:3px solid #000;}
+nav ul.gnb > li{position:relative;display:inline-block;zoom:1;*display:inline;}
+nav ul.gnb > li > div{width:1000px;display:none;position:absolute;top:57px;left:0;background:url('../../img/common/bg_gnb.png') 0 0 repeat;text-align:left;}
+nav ul.gnb > li > div.m1, nav ul.gnb > li > div.m4, nav ul.gnb > li > div.m5, nav ul.gnb > li > div.m6{}
+nav ul.gnb > li > div.m1 .type01{margin-left: 13px;}
+nav ul.gnb > li > div.m2{left:-143px;}
+nav ul.gnb > li > div.m3{left:-286px;}
+nav ul.gnb > li > div.m4{left:-500px;}
+nav ul.gnb > li > div.m4 .type01{margin-left: 510px;}
+nav ul.gnb > li > div.m5{left:-714px;}
+nav ul.gnb > li > div.m5 .type01{margin-left: 575px;}
+nav ul.gnb > li > div.m6{left:-857px;}
+nav ul.gnb > li > div.m6 .type01{margin-left: 460px;}
+nav ul.gnb > li .type01{overflow:hidden;}
+nav ul.gnb > li .type01 li{float:left;padding:33px 27px;background:url('../../img/common/icon_menubar.png') right center no-repeat;}
+nav ul.gnb > li .type01 li.rist{padding-left:0;}
+nav ul.gnb > li .type01 li.last{padding-right:0;background:none;}
+nav ul.gnb > li .type02{padding:20px 0;overflow:hidden;}
+nav ul.gnb > li .type02 ul.menuList{float:left;margin:5px 0 0 60px;}
+nav ul.gnb > li .type02 ul.menuList li{padding:13px 0;}
+nav ul.gnb > li .type02 .menuThumb{float:right;display:inline-block;height:250px;padding-left:40px;padding-right:20px;background:url('../../img/common/icon_menubar02.png') left center no-repeat;}
+
+/*컨텐츠 레이아웃*/
+#content{width:100%;min-height:500px;}
+#content > .inner{width:1000px;margin:0 auto;}
+
+.mainVisual{z-index:9;position:relative;width:100%;height:628px;text-align:center;border-bottom:1px solid #cccccc;margin-bottom:30px;}
+.mainVisual .mainVisualInner{position:relative;height:628px;}
+.proMotion{position:absolute;top:-78px;left:0;z-index:10;height:50px;line-height:50px;color:#000;overflow:hidden;}
+.proMotion strong{display:inline-block;}
+.noticeList02{display:inline-block;width:350px !important;margin-left:10px;position:relative;top:0;line-height:100%;}
+.noticeList02 li{font-size:12px;width:330px !important;line-height:100%;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;padding-top:2px;}
+.proMotion  span{display:inline-block;cursor:pointer}
+.proMotion .noticeIcon{display:inline-block;margin:0 7px;position:relative;top:-1px;}
+.proMotion .noticePrev02, .proMotion .noticeNext02{position:relative;top:-2px;}
+.proMotion .noticeToggle{margin-left:10px;}
+.mainVisual .cycle-slideshow {width:100%;min-width:1000px;margin:0 auto;}
+.mainVisual .cycle-slideshow li{width:100%;}
+.mainVisual .cycle-slideshow li div{text-align:center;width:1000px;margin:0 auto;}
+.visualPager{position:absolute;left:50%;width:1000px;height:580px;margin-left:-500px;z-index:999;}
+.visualPager > ul{position:absolute;bottom:10px;right:0;z-index:999;display:inline-block;}
+.visualPager > ul li{cursor:pointer;width:16px;height:16px;background:url('../../img/common/bg_blt.png') 0 0 no-repeat;margin:6px 0;}
+.visualPager > ul li.cycle-pager-active{background-position:0 -16px;}
+.middle{width:100%;}
+.middle > .inner{width:1000px;margin:0 auto;position:relative;top:0;}
+.middle .tour{height:218px;}
+.middle .tour ul{overflow:hidden;margin-top:30px;}
+.middle .tour li{float:left;margin-right:33px;}
+.notice{position:absolute;top:-78px;right:0;z-index:10;width:440px;height:50px;line-height:50px;color:#000;overflow:hidden;}
+.notice strong{display:inline-block;}
+.noticeList{display:inline-block;width:315px;margin-left:10px;position:relative;top:0;line-height:100%;}
+.noticeList li{font-size:12px;width:315px;line-height:100%;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;padding-top:2px;}
+.notice  span{display:inline-block;cursor:pointer}
+.notice .noticeIcon{display:inline-block;margin:0 7px;position:relative;top:-1px;}
+.notice .noticePrev, .notice .noticeNext{position:relative;top:-2px;}
+.notice .noticeToggle{margin-left:10px;}
+.theme{width:380px;height:218px;position:absolute;right:0;top:0;}
+.theme strong{display:block;margin-bottom:12px;}
+.theme .themeList{position:relative;}
+.theme .contorl{position:absolute;top:-30px;right:0;}
+.theme .contorl span{display:inline-block;margin-left:5px;cursor:pointer;}
+.blog{margin:40px 0 0 0;width:590px;height:165px;color:#000;position:relative;}
+.blog strong{display:block;padding-bottom:5px;border-bottom:1px solid #cccccc;margin-bottom:20px;}
+.blog ul{overflow:hidden;}
+.blog li{position:relative;font-size:12px;line-height:100%;padding-top:10px;width:290px;height:55px;float:left;}
+.blog li.odd{margin-right:10px;}
+.blog li span{display:inline-block;position:absolute;top:0;}
+.blog li div{margin:0 0 0 65px;line-height:130%;}
+.blog li a{position:relative;top:4px;display:inline-block;width:160px;text-decoration:underline;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.blog .btnMore{position:absolute;top:0;right:0;}
+.iconMenu{position:absolute;top:258px;right:0;width:380px;height:160px;}
+.iconMenu ul{overflow:hidden;}
+.iconMenu li{float:left;}
+.iconMenu li.bottom{border-bottom:1px solid #cccccc;}
+.iconMenu li.right{border-right:1px solid #cccccc;}
+.iconMenu li.last{border-right:0;}
+.familyHotel{background:#eeeeee;width:100%;margin-top:50px;padding:30px 0;}
+.familyHotel .inner{width:1000px;margin:0 auto;text-align:center;}
+.familyHotel li{display:inline-block;zoom:1;*display:inline;vertical-align:middle;padding:0 15px;}
+.familyHotel li a{display:inline-block;}
+.subContent{padding-top:109px;padding-bottom:100px;}
+.subContent .tit{position:relative;border-bottom:1px solid #000;padding-bottom:20px;margin-bottom:40px;}
+.subContent .tit h2{font-size:32px;}
+.subContent .tit .poolVillaSel{position:absolute;left:112px;;top:0;font-size:12px;z-index:998;}
+.subContent .tit .poolVillaSel .sel{cursor:pointer;padding:10px 10px;background:url('../../img/common/icon_arrow02.gif') 200px center no-repeat;display:inline-block;border:1px solid #000;width:200px;}
+.subContent .tit .poolVillaSel .selList02{padding:15px 10px 10px 10px;width:200px;border:1px solid #000;border-top:0;background:#fff;display:none;}
+.subContent .tit .poolVillaSel .selList02 li{padding:10px 0;line-height:150%;}
+.subContent .tit .poolVillaSel .selList02 li a{font-size:12px;}
+.subContent .tit .poolVillaSel .selList02 li a:hover{text-decoration:underline;}
+
+.subContent .tit02{position:relative;border-bottom:1px solid #000;padding-bottom:20px;margin-bottom:40px;}
+.subContent .tit02 h2{font-size:32px;display:inline-block;}
+.subContent .tit02 .poolVillaSel{font-size:12px;z-index:998;display:inline-block;position:relative;top:-6px;left:10px;}
+.subContent .tit02 .poolVillaSel .sel{cursor:pointer;padding:10px 10px;background:url('../../img/common/icon_arrow02.gif') 200px center no-repeat;display:inline-block;border:1px solid #000;width:200px;}
+.subContent .tit02 .poolVillaSel .selList02{padding:15px 10px 10px 10px;width:200px;border:1px solid #000;border-top:0;background:#fff;display:none;position:absolute;z-index:998;}
+.subContent .tit02 .poolVillaSel .selList02 li{padding:10px 0;line-height:150%;}
+.subContent .tit02 .poolVillaSel .selList02 li a{font-size:12px;}
+.subContent .tit02 .poolVillaSel .selList02 li a:hover{text-decoration:underline;}
+
+.subContent .location{position:absolute;right:0;top:10px;font-size:12px;}
+.subContent .home{position:relative;top:3px;}
+
+/*faq*/
+#faq{color:#000;border-top:2px solid #000;border-bottom:1px solid #000;}
+#faq ul{display:none;}
+#faq .faqDepth01 a{border-bottom:1px solid #000;font-size:14px;font-weight:bold;display:inline-block;width:950px;height:40px;line-height:40px;background:url('../../img/content/img_q.gif') 0 0 no-repeat;padding-left:50px;}
+#faq .faqDepth01 a.selected{background:url('../../img/content/img_q.gif') 0 0 no-repeat;}
+#faq .faqDepth01 a:hover{background:url('../../img/content/img_q.gif') 0 0 no-repeat;}
+#faq .faqDepth02{line-height:150%;font-size:12px;background:#eeeeee url('../../img/content/img_a.gif') 0 0 no-repeat;padding:15px 0 30px 50px;border-bottom:1px solid #000;}
+
+/*테이블 쓰기타입*/
+.writeType{width:1000px;border-bottom:2px solid #000;font-size:12px;text-align:left;color:#454545;}
+.writeType input[type=text], .writeType input[type=password]{padding:9px 0 4px 5px;color:#454545;border:1px solid #dddddd;}
+.writeType textarea{border:1px solid #dddddd;padding:5px;}
+.writeType select{padding:5px 0;}
+.writeType tr:first-child th, .writeType tr:first-child td{border-top:2px solid #000;}
+.writeType th{color:#454545;font-weight:normal;background:#f7f7f7;text-align:left;padding-left:30px;border-bottom:1px solid #000;}
+.writeType td{color:#454545;padding:8px 0;padding-left:20px;border-bottom:1px solid #000;}
+.btns{margin:20px 0 0 0;text-align:center;}
+.btns a{margin:0 3px;}
+
+/*테이블 리스트타입*/
+.listType{width:1000px;border-top:1px solid #b2b2b2;border-bottom:2px solid #000;font-size:12px;text-align:center}
+.listType thead tr th{padding:10px 0;border-bottom:2px solid #000;}
+.listType tbody tr td{height:30px;border-bottom:1px solid #000;}
+.listType tbody tr.adminNotice td{background:#000;color:#fff;}
+.listType tbody tr.adminNotice td a{color:#fff;}
+.listType .listTit{text-align:left;}
+.listType .answerNum{margin:0 5px;}
+.listType .flog01{position:relative;top:3px;}
+.listType .flog02{position:relative;top:2px;}
+.listType .re .listTit{background:url('../../img/content/icon_re.gif') 0 center no-repeat;padding-left:20px;}
+.listType .admin{font-weight:bold;}
+.listType .re .admin{font-weight:bold;}
+.btnWrit{text-align:right;margin-top:10px;}
+
+/*비밀번호입력*/
+.pwLayer{position:relative;width:350px;border:1px solid #000;overflow:hidden;font-size:12px;color:#000;text-align:center;background:#fff;padding:46px 0 29px 0;}
+.pwLayer .pwInput{border:1px solid #000;padding:7px 0 5px 0;text-align:center;margin:20px 0;}
+.pwLayer .btnLogin{}
+
+/*테이블 뷰타입*/
+.viewTable{font-size:12px;border-top:2px solid #000;color:#000;}
+.viewTable > li{font-size:12px;line-height:100%;border-bottom:1px solid #000;}
+.viewTable .viewTitle{overflow:hidden;height:40px;line-height:40px;}
+.viewTable .viewTitle strong{float:left;margin-left:20px;}
+.viewTable .viewTitle ul{float:right;}
+.viewTable .viewTitle ul li{font-size:12px;line-height:100%;float:left;height:40px;line-height:43px;padding:0 15px;background:url('../../img/common/icon_bar.gif') right 15px no-repeat;}
+.viewTable .viewTitle ul li.first{padding-left:0;}
+.viewTable .viewTitle ul li.third{background:0;padding-right:0;}
+.viewTable .viewTitle ul li.last{padding-right:0;}
+.viewTable .viewTitle ul li.last a{position:relative;top:5px;}
+.viewTable .viewCont{padding:30px;line-height:200%;}
+.viewTable .viewAnswer{padding:20px;line-height:150%;border-bottom:2px solid #000;}
+.viewTable .writeBtns{text-align:right;padding:10px 0 28px 0;border-bottom:0;}
+.viewTable .writeBtns a{margin-left:3px;}
+.viewTable .viewComment{border-bottom:0;}
+.viewTable .viewComment > strong{display:block;margin:0 0 5px 2px;}
+.viewTable .viewComment input[type=text]{padding:9px 0 4px 5px;color:#454545;border:1px solid #000;margin-bottom:10px;}
+.viewTable textarea{border:1px solid #000;height:74px;width:890px;margin-left:2px;margin-right:12px;}
+.commentList li{font-size:12px;line-height:100%;position:relative;border-bottom:1px solid #cccccc;padding:20px 0 10px 0;}
+.commentList .time{color:#656565;}
+.commentList .btns{position:absolute;top:0;right:0;}
+.commentList .btns button{font-size:12px;padding:0 5px;}
+.commentList .btns button.btnRewrite{background:url('../../img/common/icon_bar.gif') right 2px no-repeat;}
+.commentList .btns button.btnDel{padding-right:0;}
+.commentList p{padding:10px 0 10px 0;line-height:150%;}
+.anotherList p{padding:9px 0;}
+.anotherList p a{display:inline-block;width:100%;}
+.anotherList p span{display:inline-block;margin-right:30px;}
+.anotherList .prevList{border-bottom:1px solid #000;}
+.anotherList .nextList{border-bottom:1px solid #000;}
+.viewAddFileArea{border-bottom:0 !important;}
+.viewAddFile a{font-size:12px;line-height:100%;}
+
+/* 예약 */
+.reservation .viewTable{border-top:0;}
+.reservation .btns02{text-align:right;}
+.reservation .short{width:40px;}
+.reservation .short02{width:60px;}
+.reservation .short03{width:130px;}
+.reservation .sidem{display:inline-block;margin:0 5px;}
+.reservation .etcTextArea{width:98%;height:200px;}
+.reservation .ui-datepicker-trigger{position:relative;top:5px;margin-left:5px;}
+.reservation  .reservationTip{margin:5px 0 0 0 ;}
+.reservation input, .reservation textarea, .reservation select{font-size:12px;}
+.viewType{font-size:12px;border-bottom:2px solid #000;margin-bottom:40px;}
+.viewType .first th, .viewType .first td{border-top:2px solid #000;}
+.viewType th{background:#f7f7f7;font-weight:normal;text-align:left;border-top:1px solid #000;padding-left:30px;}
+.viewType td{padding:19px 0 19px 30px;border-top:1px solid #000;}
+.viewType .etcText td{line-height:150%;}
+
+
+
+
+/*페이징*/
+.paging{font-size:12px;width:1000px;margin:20px 0 30px 0;text-align:center;}
+.paging .prev a, .paging .next a{width:auto;}
+.paging .prev a{margin-right:10px;}
+.paging .next a{margin-left:10px;}
+.paging .number a:hover{font-weight:bold;border:1px solid #000;}
+.paging a{text-align:center;display:inline-block;zoom:1;*display:inline;width:24px;height:24px;line-height:24px;}
+.paging a.on{font-weight:bold;border:1px solid #000;}
+
+/*게시물 검색*/
+.boardSrch{width:400px;margin:0 auto;}
+.boardSrch select{height:30px;}
+.boardSrch input{width:200px;padding:9px 0 4px 5px;border:1px solid #000;}
+
+/*로그인*/
+.login fieldset{width:360px;height:122px;position:relative;margin:0 auto;color:#000;font-size:12px;}
+.login .inputBox{width:260px;margin-top:3px;}
+.login input[type=text], .login input[type=password]{width:258px;border:1px solid #000;padding:16px 0 9px 5px;margin:0 0 4px 0;}
+.login .btnLogin{position:absolute;top:2px;right:0;}
+.login .etc{margin-top:5px;}
+.login .etc label{margin-right:20px;}
+.login .etc a{padding-right:15px;background:url('../../img/content/icon_arrow.gif') right 0 no-repeat;}
+.ifJoin{width:420px;margin:30px auto 0 auto;border-top:1px solid #cccccc;padding:30px 0;text-align:center;}
+.ifJoin p{margin-bottom:20px;}
+
+/*아이디&비밀번호 찾기*/
+.infoSrch{font-size:12px;color:#000;}
+.infoSrch .inner{overflow:hidden;width:860px;margin:0 auto;}
+.infoSrch .left{width:385px;float:left;}
+.infoSrch .right{width:384px;float:right;border-left:1px solid #cccccc;padding-left:45px;}
+.infoSrch strong{display:block;margin-bottom:20px;}
+.infoSrch input[type=text], .infoSrch input[type=password]{border:1px solid #000;padding:16px 0 9px 5px;margin:0 0 4px 0;}
+.infoSrch label{display:inline-block;width:44px;}
+.infoSrch .long{width:331px;}
+.infoSrch .short{width:153px;}
+.infoSrch .btnEnter{width:291px;text-align:center;margin:20px auto 0 auto;padding-left:40px;}
+.infoSrch .ifJoin{border-top:0;margin-top:50px;}
+
+/*아디&비밀번호 찾기 레이어*/
+.srchLayer{position:relative;width:495px;height:290px;border:1px solid #000;overflow:hidden;font-size:12px;color:#454545;text-align:center;background:#fff;display:none;}
+.srchLayer p{margin:77px 0 0 0;}
+.srchLayer strong{font-size:20px;display:block;width:100%;margin:24px 0 38px 0;}
+.srchLayer .btnLogin{margin-bottom:69px;}
+.srchLayer .btnClose{position:absolute;top:10px;right:10px;}
+
+/*회원가입*/
+.joinStep01{font-size:12px;color:#000;}
+.joinStep01 .provision{margin-bottom:50px;}
+.joinStep01 .policy .tab{position:relative;}
+.joinStep01 .policy .tab strong{position:absolute;top:0;height:36px;line-height:36px;text-align:center;}
+.joinStep01 .policy .tab strong a{width:100%;height:36px;display:inline-block;background:#f4f4f4;border:1px solid #d7d7d7;}
+.joinStep01 .policy .tab strong a.on{background:none;border-bottom:0;}
+.joinStep01 .policy .tab strong.policy01{left:0;width:160px;}
+.joinStep01 .policy .tab strong.policy02{left:161px;width:170px;}
+.joinStep01 .policy .tab strong.policy03{left:332px;width:190px;}
+.joinStep01 .policy .tab div{height:268px;border:1px solid #d7d7d7;overflow-y:auto;padding:50px 0 0 10px;}
+.joinStep01 .inner{height:268px;border:1px solid #d7d7d7;overflow-y:auto;padding:10px;}
+.joinStep01 .tab a{font-size:12px;color:#787878;}
+.joinStep01 .joinTit{margin-bottom:16px;display:block;width:100%;}
+.joinStep01 label{margin-top:20px;display:block;}
+.joinStep01 .btns{text-align:center;margin-top:100px;}
+.joinStep01 .btns a{margin:0 3px;}
+.joinStep02{font-size:12px;color:#000;}
+.joinStep02 .joinTit{margin-bottom:16px;display:block;width:100%;}
+.joinStep02 .writeType th{background:none;height:50px}
+.joinStep02 .writeType input, .joinStep02 .writeType select{border:1px solid #000;}
+.joinStep02 .writeType input[type=radio]{position:relative;top:-2px;border:0;}
+.joinStep02 .writeType .long{width:50%;}
+.joinStep02 .writeType .short{width:10%;}
+.joinStep02 .tip{margin:20px 0 50px 0;}
+
+/*회원가입완료 레이어*/
+.successLayer{position:relative;width:495px;height:290px;border:1px solid #000;overflow:hidden;font-size:12px;color:#000;text-align:center;background:#fff;display:none;}
+.successLayer p{margin:84px 0 34px 0;}
+.successLayer .btnLogin{margin-bottom:69px;}
+.successLayer .btnClose{position:absolute;top:10px;right:10px;}
+
+/*풀빌라*/
+.poolVilla{position:relative;width:1000px;margin:0 auto;overflow:hidden;}
+.poolVilla .defaultInfo{width:1000px;height:300px;overflow:hidden;}
+.poolVilla .defaultInfo .Rolling{float:left;}
+.poolVilla .defaultInfo .Rolling .rollingPager{position:absolute;left:0;width:670px;height:300px;z-index:888;}
+.poolVilla .defaultInfo .Rolling .rollingPager > ul{position:absolute;bottom:10px;right:10px;display:inline-block;}
+.poolVilla .defaultInfo .Rolling .rollingPager > ul li{cursor:pointer;width:13px;height:13px;background:url('../../img/common/bg_blt02.png') 0 -13px no-repeat;margin:0 3px;display:inline-block;zoom:1;*display:inline;}
+.poolVilla .defaultInfo .Rolling .rollingPager > ul li.cycle-pager-active{background-position:0 0px;}
+.poolVilla .defaultInfo .poolVillaInfo{width:300px;height:298px;border-bottom:2px solid #000;float:right;}
+.poolVilla .defaultInfo .poolVillaInfo strong{font-size:16px;display:block;margin:5px 0 10px 0;border-bottom:1px solid #b2b2b2;padding-bottom:15px;}
+.poolVilla .defaultInfo .infoType{font-size:12px;color:#000;text-align:left;}
+.poolVilla .defaultInfo .infoType th{font-weight:normal;text-align:left;padding-top:5px;vertical-align: top;}
+.poolVilla .defaultInfo .infoType td{padding:5px 0;vertical-align: top;}
+.poolVilla .defaultInfo .infoType td li{font-size:11px;line-height:100%;height:16px;line-height:16px;display:inline-block;zoom:1;*display:inline;background:url('../../img/content/bg_info.gif') 0 -16px no-repeat;padding-left:20px;margin:0 5px 5px 0;}
+.poolVilla .defaultInfo .infoType td li.check{background-position:0 0;}
+.poolVilla .defaultInfo .infoType td a{font-size:12px;text-decoration:underline;}
+.poolVilla .defaultInfo .btnReservation{margin-top:10px;}
+.poolVilla .partInfo{margin:40px 0 0 0;overflow:hidden;}
+.poolVilla .partInfo .detailArea{float:left;width:670px;}
+.poolVilla .partInfo .poolVillaTab li{display:inline-block;zoom:1;*display:inline;width:110px;height:38px;line-height:38px;border:1px solid #000;border-left:0;font-size:12px;text-align:center;cursor:pointer;}
+.poolVilla .partInfo .poolVillaTab li strong{font-weight:normal;}
+.poolVilla .partInfo .poolVillaTab li:first-child{border-left:1px solid #000;}
+.poolVilla .partInfo .poolVillaTab li a{font-size:12px;color:#000;display:inline-block;width:100%;}
+.poolVilla .partInfo .poolVillaTab li a.on{font-weight:bold;background:#eeeeee;}
+.poolVilla .partInfo .detail01 .logoThumb{text-align:center;padding:20px 0;}
+.poolVilla .partInfo .detail01 .introText{font-size:12px;line-height:150%;}
+.poolVilla .partInfo .detail01 .introMap{margin:30px 0 0 0}
+.poolVilla .partInfo .detail01 .introMap li{border-top:1px solid #cccccc;padding:30px 0;}
+.poolVilla .partInfo .detail01 .introMap li strong{font-size:14px;display:block;margin-bottom:30px;}
+.poolVilla .partInfo .detail02{padding-top:10px;overflow:hidden;}
+.poolVilla .partInfo .detail02 strong{font-size:14px;display:block;margin:30px 0 20px 0;}
+.poolVilla .partInfo .detail02 p{font-size:12px;line-height:150%;}
+.poolVilla .partInfo .detail02 .TabInfo > div{display:none;}
+.poolVilla .partInfo .TabList, .poolVilla .partInfo .TabList02{border-bottom:1px solid #cccccc;padding:15px 0;}
+.poolVilla .partInfo .TabList li, .poolVilla .partInfo .TabList02 li{line-height:100%;font-size:12px;display:inline-block;zoom:1;*display:inline;padding:5px 15px;margin:5px 0;background:url('../../img/common/icon_bar.gif') right 5px no-repeat;}
+.poolVilla .partInfo .TabList li a.active, .poolVilla .partInfo .TabList02 li a.active{background:#eeeeee;font-weight:bold;}
+.poolVilla .partInfo .roomTop{margin:25px 0;overflow:hidden;}
+.poolVilla .partInfo .roomTop ul{float:left;width:340px;}
+.poolVilla .partInfo .roomTop li{line-height:200%;font-size:12px;background:url('../../img/common/icon_blt.gif') 0 10px no-repeat;padding-left:7px;}
+.poolVilla .partInfo .roomTop span{display:block;float:right;}
+.poolVilla .partInfo .roomBtm ul{overflow:hidden;}
+.poolVilla .partInfo .roomBtm li.first{float:left;}
+.poolVilla .partInfo .roomBtm li.last{float:right;}
+.poolVilla .partInfo .detail02 .small{overflow:hidden;margin-top:20px;}
+.poolVilla .partInfo .detail02 .small button{font-size:0;display:inline-block;width:40px;height:90px;}
+.poolVilla .partInfo .detail02 .small .btnPrev{float:left;background:url('../../img/content/btn_rollingprev.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .detail02 .small .btnPrev.disabled{background:url('../../img/content/btn_rollingprev_off.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .detail02 .small ul{width:570px;float:left;margin-left:15px;}
+/*
+.poolVilla .partInfo .detail02 .small .cycle-slide .thumbBorder{position:absolute;top:0;left:0;z-index:999;width:135px;height:80px; background:none !important;}
+.poolVilla .partInfo .detail02 .small .cycle-slide-active .thumbBorder{background:url('../../img/content/bg_thumb02.png') 0 0 no-repeat !important; }
+*/
+.poolVilla .partInfo .detail02 .small .btnNext{float:right;background:url('../../img/content/btn_rollingnext.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .detail02 .small .btnNext.disabled{background:url('../../img/content/btn_rollingnext_off.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .detail03{padding-top:10px;overflow:hidden;}
+.poolVilla .partInfo .detail03 strong{font-size:14px;display:block;margin:30px 0 10px 0;}
+.poolVilla .partInfo .detail03 .inner{overflow:hidden;padding-bottom:30px;border-bottom:1px solid #cccccc;}
+.poolVilla .partInfo .detail03 .inner .facilityRolling{width:315px;height:220px;position:relative;float:left;}
+.poolVilla .partInfo .detail03 .inner .facilityRolling .contorl{position:absolute;bottom:1px;right:1px;z-index:999;height:25px;}
+.poolVilla .partInfo .detail03 .inner .facilityRolling .contorl span{display:inline-block;}
+.poolVilla .partInfo .detail03 .inner .facilityRolling .contorl span:first-child{margin-right:1px;}
+.poolVilla .partInfo .detail03 .inner .facilityRolling .contorl span.disabled{opacity: 0.5; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); filter: alpha(opacity=50);}
+.poolVilla .partInfo .detail03 .inner .facilityText{width:295px;height:220px;float:right;font-size:12px;padding:0 15px;}
+.poolVilla .partInfo .detail03 .inner .facilityText p{line-height:150%;}
+.poolVilla .partInfo .detail03 .inner .facilityText ul{margin-top:10px;}
+.poolVilla .partInfo .detail03 .inner .facilityText li{font-size:12px;line-height:150%;background:url('../../img/common/icon_blt.gif') 0 7px no-repeat;padding-left:8px;}
+.poolVilla .partInfo .detail04{padding-top:10px;overflow:hidden;}
+.poolVilla .partInfo .detail04 strong{font-size:14px;display:block;margin:30px 0 10px 0;}
+.poolVilla .partInfo .detail04 .inner{overflow:hidden;padding-bottom:30px;border-bottom:1px solid #cccccc;}
+.poolVilla .partInfo .detail04 .inner .facilityRolling02{width:315px;height:220px;position:relative;float:left;}
+.poolVilla .partInfo .detail04 .inner .facilityRolling02 .contorl{position:absolute;bottom:1px;right:1px;z-index:999;height:25px;}
+.poolVilla .partInfo .detail04 .inner .facilityRolling02 .contorl span{display:inline-block;}
+.poolVilla .partInfo .detail04 .inner .facilityRolling02 .contorl span:first-child{margin-right:1px;}
+.poolVilla .partInfo .detail04 .inner .facilityRolling02 .contorl span.disabled{opacity: 0.5; -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); filter: alpha(opacity=50);}
+.poolVilla .partInfo .detail04 .inner .facilityText02{width:295px;height:220px;float:right;font-size:12px;padding:0 15px;}
+.poolVilla .partInfo .detail04 .inner .facilityText02 p{line-height:150%;}
+.poolVilla .partInfo .detail04 .inner .facilityText02 ul{margin-top:10px;}
+.poolVilla .partInfo .detail04 .inner .facilityText02 li{font-size:12px;line-height:150%;background:url('../../img/common/icon_blt.gif') 0 7px no-repeat;padding-left:8px;}
+.poolVilla .partInfo .detail05 .picRolling{width:670px;}
+.poolVilla .partInfo .detail05 .TabInfo02 > div{display:none;}
+.poolVilla .partInfo .detail05 .inner{padding:0 0 30px 0;border-bottom:1px solid #cccccc;}
+.poolVilla .partInfo .detail05 .inner strong{font-size:14px;display:inline-block;margin:30px 0 10px 0;}
+.poolVilla .partInfo .detail05 .small{overflow:hidden;margin-top:20px;}
+.poolVilla .partInfo .detail05 .small button{font-size:0;display:inline-block;width:40px;height:90px;}
+.poolVilla .partInfo .detail05 .small .btnPrev{float:left;background:url('../../img/content/btn_rollingprev.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .detail05 .small .btnPrev.disabled{background:url('../../img/content/btn_rollingprev_off.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .detail05 .small ul{width:570px;float:left;margin-left:15px;}
+.poolVilla .partInfo .detail05 .small .cycle-slide{position:relative;}
+/*
+.poolVilla .partInfo .detail05 .small .cycle-slide .thumbBorder{position:absolute;top:0;left:0;z-index:999;width:135px;height:80px; background:none !important;}
+.poolVilla .partInfo .detail05 .small .cycle-slide-active .thumbBorder{background:url('../../img/content/bg_thumb02.png') 0 0 no-repeat !important; }
+*/
+.poolVilla .partInfo .detail05 .small .btnNext{float:right;background:url('../../img/content/btn_rollingnext.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .detail05 .small .btnNext.disabled{background:url('../../img/content/btn_rollingnext_off.gif') 0 0 no-repeat;}
+.poolVilla .partInfo .poolVillaMap{float:right;}
+.poolVilla .partInfo .poolVillaMap .staffInfo{height:115px;margin-bottom:30px;}
+.poolVilla .partInfo .poolVillaMap .staffInfo span{position:absolute;display:inline-block;}
+.poolVilla .partInfo .poolVillaMap .staffInfo ul{width:170px;margin:0 0 0 120px;}
+.poolVilla .partInfo .poolVillaMap .staffInfo ul li{line-height:150%;font-size:11px;}
+.poolVilla .partInfo .poolVillaMap .staffInfo ul li strong{font-size:12px;display:block;}
+.poolVilla .partInfo .poolVillaMap .staffInfo ul li.staffText{margin:8px 0 8px 0;}
+.poolVilla .partInfo .poolVillaMap .staffInfo ul li a{text-decoration:underline;}
+
+/*투어*/
+.tourTab{border-bottom:1px solid #000;}
+.tourTab ul{overflow:hidden;}
+.tourTab ul li{float:left;border:1px solid #000;border-bottom:0;}
+.tourTab ul li:first-child{border-right:0;}
+.tourTab ul li.active{background:#eeeeee;}
+.tourTab ul li a{display:inline-block;line-height:100%;font-size:18px;padding:15px 35px;}
+.tourMap{margin:20px 0 0 0;overflow:hidden;}
+.tourMap .map{width:610px;height:380px;float:left;}
+.tourMap .mapCanvas{width:610px;height:380px;}
+.tourMap .info{width:390px;height:380px;float:right;background:#f3f3f3;}
+.tourMap .info a{font-size:14px;}
+.tourMap .info .sideBar {margin:40px 0 0 25px;}
+.tourMap .info .sideBar li{height:21px;line-height:21px;background:url('../../img/content/icon_position_off.png') 0 0 no-repeat;padding:0 0 0 25px;margin-bottom:15px;cursor:pointer;}
+.tourMap .info .sideBar li.on{background:url('../../img/content/icon_position_on.png') 0 0 no-repeat;font-weight:bold;cursor:pointer;}
+.tourMap .sideBar li{line-height:100%;font-size:12px;}
+.tourMapInfo{overflow:hidden;}
+.reSrch{overflow:hidden;font-size:12px;padding:38px 0 17px 0;border-bottom:2px solid #000;}
+.reSrch .inner{height:20px;line-height:20px;}
+.reSrch span{float:left;display:inline-block;padding:0 15px;border-right:1px solid #000;margin-right:10px;}
+.reSrch ul{float:left;overflow:hidden;}
+.reSrch ul li{line-height:100%;font-size:12px;display:inline-block;zoom:1;*display:inline;margin-top:1px;}
+.reSrch ul li label{position:relative;top:2px;margin-right:15px;}
+.reSrch button{float:right;}
+.tourView{clear:both;font-size:12px;}
+.tourView strong{display:block;width:100%;margin:30px 0;font-size:14px;}
+.tourViewList .inner a{font-size:12px;color:#fff;}
+.tourViewList p{font-size:12px;color:#000;line-height:100%;text-align:center;margin-top:10px;}
+.tourViewList > ul{overflow:hidden;}
+.tourViewList > ul > li{width:195px;height:150px;float:left;position:relative;margin-right:5px;margin-bottom:50px;line-height:100%;}
+.tourViewList > ul > li .layer{display:none;position:absolute;top:0;left:0;width:195px;height:150px;background:url('../../img/content/bg_thumb.png') 0 0 no-repeat;}
+.tourViewList > ul > li .layer ul{}
+.tourViewList > ul > li .layer li{line-height:160%;font-size:12px;color:#fff;}
+.tourViewList > ul > li .overInner{width:140px;height:150px;display: table-cell;vertical-align: middle;padding-left:20px;}
+.tourTit{padding-bottom:20px;}
+.tourTit > ul > li{line-height:140%;display:inline-block;zoom:1;*display:inline;height:40px;}
+.tourTit li.first{font-size:20px;font-weight:bold;background:url('../../img/content/icon_tour01.gif') 0 0 no-repeat;padding:0 0 0 53px;width: 405px;}
+.tourTit li.first span{position:relative;top:8px;}
+.tourTit li .tourSel{font-size:12px;z-index:998;display:inline-block;position:relative;line-height:110%;}
+.tourTit li .tourSel .sel{cursor:pointer;padding:10px 10px;background:url('../../img/common/icon_arrow02.gif') 200px center no-repeat;display:inline-block;border:1px solid #000;width:200px;}
+.tourTit li .tourSel .selList02{padding:15px 10px 10px 10px;width:200px;border:1px solid #000;border-top:0;background:#fff;display:none;position:absolute;z-index:998;}
+.tourTit li .tourSel .selList02 li{padding:10px 0;line-height:100%;}
+.tourTit li .tourSel .selList02 li a{font-size:12px;}
+.tourTit li .tourSel .selList02 li a:hover{text-decoration:underline;}
+.tourTit li.second{}
+.tourTit li.third{margin:0 10px;}
+.tourTit li.last button{position:relative;top:-4px;}
+.tourTop{overflow:hidden;}
+.tourTop .tourPic{width:640px;height:300px;float:left;}
+.tourTop .tourPic .rollingPager{position:absolute;left:0;width:640px;height:300px;z-index:888;}
+.tourTop .tourPic .rollingPager > ul{position:absolute;bottom:10px;right:10px;display:inline-block;}
+.tourTop .tourPic .rollingPager > ul li{cursor:pointer;width:13px;height:13px;background:url('../../img/common/bg_blt02.png') 0 -13px no-repeat;margin:0 3px;display:inline-block;zoom:1;*display:inline;font-size:0;}
+.tourTop .tourPic .rollingPager > ul li.cycle-pager-active{background-position:0 0px;}
+.tourTop .tourViewMap{width:330px;height:300px;float:right;}
+.tourViewInfo{overflow:hidden;margin-top:40px;}
+.tourViewInfo .detailInfo{width:640px;float:left;border-top:1px solid #cccccc;padding:25px 0 0 0;}
+.tourViewInfo .detailInfo table{font-size:12px;margin-bottom:20px;}
+.tourViewInfo .detailInfo table th{padding:9px 0;background:#eeeeee;border:1px solid #bebebe;}
+.tourViewInfo .detailInfo table td{padding:9px 0 9px 20px;border:1px solid #bebebe;line-height:150%;}
+.tourViewInfo .detailInfo table td a{text-decoration:underline;}
+.tourViewInfo .sideList{width:330px;float:right;border-top:2px solid #000;}
+.tourViewInfo .sideList strong{display:block;font-size:14px;margin:20px 0;}
+.tourViewInfo .sideList li{line-height:100%;font-size:12px;margin-bottom:20px;}
+.tourViewInfo .sideList li span{display:block;margin-bottom:10px;}
+
+.ThemeList{background:#f3f3f3;padding:25px 0;margin-top:20px;}
+.ThemeList ul{overflow:hidden;}
+.ThemeList ul li{float:left;}
+.ThemeList ul li a{display:inline-block;height:26px;line-height:26px;font-size:14px;background:url('../../img/content/icon_tour02_on.gif') 0 0 no-repeat;padding-left:35px;margin-left:20px;}
+.ThemeList ul li.active a{font-weight:bold;background:url('../../img/content/icon_tour02_off.gif') 0 0 no-repeat;}
+.reSrch02{overflow:hidden;font-size:12px;padding:38px 0 15px 0;border-bottom:2px solid #000;}
+.reSrch02 span{float:left;display:inline-block;padding: 5px 15px 0 15px;border-right:1px solid #000;margin-right:10px;height: 50px;}
+.reSrch02 ul{float:left;overflow:hidden;width:690px;}
+.reSrch02 ul li{line-height:100%;font-size:12px;display:inline-block;zoom:1;*display:inline;padding-bottom:10px;margin-top: 3px;}
+.reSrch02 ul li label{position:relative;top:2px;margin-right:15px;}
+.reSrch02 button{float:right;}
+
+/*소개*/
+.whatis li{margin-bottom:35px;}
+.groLocation ul{overflow:hidden;}
+.groLocation li{float:left;}
+.groLocation li.first{margin-right:10px;}
+.groLocation li p{margin-bottom:25px;}
+.phuketGroList {margin:20px 0;}
+.phuketGroList li{display:inline-block;zoom:1;*display:inline;margin:0 4px 20px 0;}
+.phuketGroBlog{}
+.phuketGroBlog > li{width:500px;height:160px;line-height:100%;vertical-align: middle;font-size:12px;display:inline-block;zoom:1;*display:inline;background:url('../../img/common/icon_dot.gif') right 0 repeat-y;margin-bottom:40px;}
+.phuketGroBlog > li .GroBlogInner{position:relative;} 
+.phuketGroBlog > li .GroBlogInner > span{display:inline-block;width:132px;position:absolute;top:5px;}
+.phuketGroBlog > li .GroBlogInner ul{width:330px;margin:0 0 0 150px;}
+.phuketGroBlog > li .GroBlogInner li{line-height:200%;font-size:12px;background:url('../../img/common/icon_blt.gif') 0 10px no-repeat;padding-left:10px;overflow:hidden;}
+.phuketGroBlog > li .GroBlogInner li span{display:inline-block;width:55px;}
+.phuketGroBlog > li .GroBlogInner li span.third{vertical-align:top;}
+.phuketGroBlog > li .GroBlogInner li p{display:inline-block;vertical-align:top;width:250px;}
+.phuketGroBlog > li a{text-decoration:underline;}
+.phuketGroBlog > li .text{width:270px;margin:5px 0 10px 0;text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+.phuketGroBlog > li .btnGo{position:relative;top:3px;}
+.programMenu {overflow:hidden;}
+.programMenu li{float:left;margin-right:10px;padding:3px 15px;}
+.programMenu li.on{background:#eeeeee;padding:3px 15px;}
+.programMenu li.on a{font-weight:bold;}
+.programMenu li a{font-size:14px;line-height:150%;}
+
+/*취급방침, 약관*/
+.policyPage{width:1000px;line-height:150%;font-size:12px;overflow:hidden;}
+.provisionPage{width:1000px;line-height:150%;font-size:12px;overflow:hidden;}
+
+/*카드*/
+.tourCard{width:1000px;margin:0 auto;}
+.cardTab li{display:inline-block;zoom:1;*display:inline;}
+.cardTab li a{display:inline-block;zoom:1;*display:inline;}
+
+/*프로모션*/
+.event{}
+.event li{line-height:150%;font-size:12px;display:inline-block;zoom:1;*display:inline;margin-right:18px;margin-bottom:30px;}
+.event li span{display:block;}
+.event li span.eventTit .flog01{display:inline-block;position:relative;top:3px;}
+.event li .eventThumb{margin:10px 0 0 0;border-top:3px solid #000;}
+
+/*투어사진*/
+.tourPic{}
+.tourPic li{position:relative;text-align:center;line-height:150%;font-size:12px;display:inline-block;zoom:1;*display:inline;margin-right:12px;margin-bottom:40px;}
+.tourPic li span{display:block;}
+.tourPic li span.tourPicTit{color:#454545;}
+.tourPic li span.tourPicInfo{color:#858585;font-size:11px;}
+.tourPic li .tourPicThumb{margin:0 0 5px 0;}
+.tourPic li .thumbBorder{background:url('../../img/content/bg_thumb03.png') 0 0 no-repeat;position:absolute;top:0;left:0;z-index:999;width:240px;height:160px;}
+
+footer{width:100%;height:246px;border-top:1px solid #000;}
+footer > .inner{width:1000px;margin:0 auto;position:relative;overflow:hidden;}
+footer strong.logo{position:absolute;top:80px;left:40px;}
+footer .right{margin:20px 0 0 435px;}
+footer .f01{overflow:hidden;position:relative;height:51px;}
+footer .f01 p{margin-top:15px;}
+footer .f01 ul{position:absolute;right:165px;top:0;}
+footer .f01 li{float:left;margin:0 3px;}
+footer .f02{margin:18px 0;}
+footer .f02 ul{overflow:hidden;}
+footer .f02 li{float:left;padding:0 8px;background:url('../../img/common/icon_bar.gif') right 0 no-repeat;}
+footer .f02 li:first-child{padding-left:0;}
+footer .f02 li:last-child{padding-right:0;background:0;}
+footer .f04{margin-top:15px;}
+
+

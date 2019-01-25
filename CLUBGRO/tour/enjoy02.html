@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+	<html lang="ko">
+	<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=1024" />
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+	<title> CLUB G.R.O  - 즐길거리</title>
+	<link type="text/css" rel="stylesheet" href="../common/css/common.css"  media="all"/>
+	<link type="text/css" rel="stylesheet" href="../common/css/ui.css"  media="all"/>
+	<script type="text/javascript" src="../common/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../common/js/jquery.plugin.js"></script>
+	<script type="text/javascript" src="../common/js/common.js"></script>
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script>
+	</script>
+ </head>
+
+ <body>
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<div class="inner">
+					<h1><a href="/"><img src="../img/common/logo.gif" alt="CLUB G.R.O"/></a></h1>
+
+					<!-- 검색 -->
+					<div class="srch">
+						<div class="inner">
+							<input type="text" /><button type="button" class="btnSrch"><img src="../img/common/btn_srch.gif" alt="검색"/></button>
+						</div>
+					</div>
+					<!-- //검색 -->
+
+					<!-- 유틸메뉴 -->
+					<div class="utilMenu">
+						<ul class="menu">
+							<li><a href="util/login.html"><img src="../img/common/img_util01.gif" alt="login"/></a></li>
+							<!-- li><a href=""><img src="../img/common/img_util01-1.gif" alt="logout"/></a></li -->
+							<li><a href="util/join.html"><img src="../img/common/img_util02.gif" alt="join"/></a></li>
+							<!-- li><a href="util/info.html"><img src="../img/common/img_util02-1.gif" alt="member info"/></a></li -->
+							<li class="last"><a href="util/customer.html"><img src="../img/common/img_util03.gif" alt="customer center"/></a></li>
+						</ul>
+					</div>
+					<!-- //유틸메뉴 -->
+
+					<!-- 글로벌 사이트 -->
+					<!-- div class="global">
+						<span class="sel"><img src="../img/common/img_util04.gif" alt="korean"/></span>
+						<ul class="selList">
+							<li><a href="http://www.tenga.co.jp/"><img src="../img/common/img_util05.gif" alt=""/></a></li>
+							<li><a href="http://www.tenga.co.jp/"><img src="../img/common/img_util06.gif" alt=""/></a></li>
+						</ul>
+					</div -->
+					<!-- //글로벌 사이트 -->
+
+					<!-- gnb -->
+					<nav>
+						<div class="inner">
+							<ul class="gnb" id="gnb">
+								<li>
+									<h2><a href=""><img src="../img/common/gnb01_off.png" alt="클럽지알오 소개"/></a></h2>
+									<div class="menuCont m1">
+										<ul class="type01">
+											<li class="first"><a href="../introduce/introduce.html"><img src="../img/common/gnb01-1_off.png" alt="클럽지알오 소개"/></a></li>
+											<li><a href="../introduce/whatis.html"><img src="../img/common/gnb01-2_off.png" alt="GRO란?"/></a></li>
+											<li><a href="../introduce/introduce02.html"><img src="../img/common/gnb01-3_off.png" alt="푸켓GRO소개"/></a></li>
+											<li><a href="../introduce/program.html"><img src="../img/common/gnb01-5_off.png" alt="지알오 선택 프로그램"/></a></li>
+											<li class="last"><a href="../introduce/movie.html"><img src="../img/common/gnb01-4_off.png" alt="소개영상"/></a></li>
+										</ul>
+									</div>
+								</li>
+
+								<li>
+									<h2><a href=""><img src="../img/common/gnb02_off.png" alt="풀빌라"/></a></h2>
+									<div class="menuCont m2 type02">
+										<ul class="menuList">
+											<li><a href="../poolvilla/thevillage.html"><img src="../img/common/gnb02-2_off.png" alt="더빌리지 코코넛 아일랜드"/></a></li>
+											<li><a href="../poolvilla/theracha.html"><img src="../img/common/gnb02-1_off.png" alt="더라차"/></a></li>
+											<li><a href="../poolvilla/richmond.html"><img src="../img/common/gnb02-3_off.png" alt="리치몬드"/></a></li>
+											<li><a href="../poolvilla/chandara.html"><img src="../img/common/gnb02-4_off.png" alt="찬다라"/></a></li>
+										</ul>
+										<ul class="menuThumb">
+											<li><img src="../img/common/img_gnb02-2.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb02-1.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb02-3.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb02-4.png" alt=""/></li>
+										</ul>
+									</div>
+								</li>
+
+								<li>
+									<h2><a href=""><img src="../img/common/gnb03_off.png" alt="리조트"/></a></h2>
+									<div class="menuCont m3 type02">
+										<ul class="menuList">
+											<li><a href="../resort/uzenmaya.html"><img src="../img/common/gnb03-1_off.png" alt="유젠마야"/></a></li>
+											<li><a href="../resort/sukko.html"><img src="../img/common/gnb03-2_off.png" alt="수코"/></a></li>
+											<li><a href="../resort/thesenses.html"><img src="../img/common/gnb03-3_off.png" alt="더센스"/></a></li>
+											<li><a href="../resort/seasunsand.html"><img src="../img/common/gnb03-4_off.png" alt="유선수리"/></a></li>
+											<li><a href="../poolvilla/usunsuri.html"><img src="../img/common/gnb03-5_off.png" alt="씨썬샌드"/></a></li>
+											<li><a href="../poolvilla/banthai.html"><img src="../img/common/gnb03-6_off.png" alt="반타이"/></a></li>
+										</ul>
+										<ul class="menuThumb">
+											<li><img src="../img/common/img_gnb03-1.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-2.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-3.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-4.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-5.png" alt=""/></li>
+											<li><img src="../img/common/img_gnb03-6.png" alt=""/></li>
+										</ul>
+									</div>
+								</li>
+
+								<li>
+									<h2><a href="../reservation/reservation_list.html"><img src="../img/common/gnb04_off.png" alt="예약"/></a></h2>
+								</li>
+
+								<li>
+									<h2><a href="../tourpic/tourpic_list.html"><img src="../img/common/gnb05_off.png" alt="투어사진"/></a></h2>
+									<!-- div class="menuCont m4">
+										<ul class="type01">
+											<li class="first"><a href="../thainews/Bangkok_list.html"><img src="../img/common/gnb04-1_off.png" alt="방콕"/></a></li>
+											<li class="last"><a href="../thainews/phuket_list.html"><img src="../img/common/gnb04-2_off.png" alt="푸켓"/></a></li>
+										</ul>
+									</div -->
+								</li>
+
+								<li>
+									<h2><a href=""><img src="../img/common/gnb06_off.png" alt="푸켓관광"/></a></h2>
+									<div class="menuCont m5">
+										<ul class="type01">
+											<li class="first"><a href="../tour/view.html"><img src="../img/common/gnb05-1_off.png" alt="볼거리"/></a></li>
+											<li><a href="../tour/food.html"><img src="../img/common/gnb05-2_off.png" alt="먹거리"/></a></li>
+											<li><a href="../tour/enjoy.html"><img src="../img/common/gnb05-3_off.png" alt="즐길거리"/></a></li>
+											<li class="last"><a href="../tour/facility.html"><img src="../img/common/gnb05-4_off.png" alt="편의시설"/></a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+									<h2><a href=""><img src="../img/common/gnb07_off.png" alt="커뮤니티"/></a></h2>
+									<div class="menuCont m6">
+										<ul class="type01">
+											<li class="first"><a href="../community/notice_list.html"><img src="../img/common/gnb06-1_off.png" alt="공지사항"/></a></li>
+											<li><a href="../community/promotion_list.html"><img src="../img/common/gnb06-5_off.png" alt="프로모션"/></a></li>
+											<li><a href="../community/tour_list.html"><img src="../img/common/gnb06-2_off.png" alt="여행후기"/></a></li>
+											<li><a href="../community/faq.html"><img src="../img/common/gnb06-3_off.png" alt="FAQ"/></a></li>
+											<li class="last"><a href="../community/qna_list.html"><img src="../img/common/gnb06-4_off.png" alt="Q&A"/></a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- //gnb -->
+				</div>
+			</header>
+			<!-- //header -->
+			<hr/>
+
+			<!-- contnet -->
+			<section id="content" class="subContent">
+				<div class="inner">
+					<!-- 타이틀 & 로케이션 -->
+					<div class="tit">
+						<h2><img src="../img/content/tit_fun.gif" alt="즐길거리"/></h2>
+						<div class="location"><span class="home"><img src="../img/content/icon_home.gif" alt="home"/></span> &#62; <span>푸켓관광</span> &#62; <strong class="current">즐길거리</strong></div>
+					</div>
+					<!-- //타이틀 & 로케이션 -->
+
+					<!-- 투어 - 테마별 -->
+					<div class="tourTheme">
+						<!-- 탭메뉴 -->
+						<div class="tourTab">
+							<ul>
+								<li><a href="enjoy.html"><img src="../img/content/img_tourtab01_off.png" alt="지역별"/></a></li>
+								<li class="active"><a href="enjoy02.html"><img src="../img/content/img_tourtab02_on.png" alt="테마별"/></a></li>
+							</ul>
+						</div>
+						<!-- //탭메뉴 -->
+
+						<!-- 테마리스트 -->
+						<div class="ThemeList">
+							<ul>
+								<li class="active"><a href="">태국식 (10)</a></li>
+								<li><a href="">한식 (5)</a></li>
+								<li><a href="">아시아 (5)</a></li>
+								<li><a href="">인터내셔널 (5)</a></li>
+								<li><a href="">기타 (5)</a></li>
+							</ul>
+						</div>
+						<!-- //테마리스트 -->
+
+						<!-- //리스트영역 -->
+						<div class="tourMapInfo">
+							<!-- 라디오 선택 -->
+							<div class="reSrch02">
+								<div class="inner">
+									<span>결과 내 재검색</span>
+									<ul>
+										<li><input type="radio" name="reRadio02" id="themeCode01"><label for="themeCode01">전체</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode02"><label for="themeCode02">공항,마이카오,나이양,나이톤 (10)</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode03"><label for="themeCode03">기타지역 (5)</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode04"><label for="themeCode04">까론,까타 (5)</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode05"><label for="themeCode05">라구나,방타오,수린,까말라 (5)</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode06"><label for="themeCode06">빠통, 카투 (5)</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode07"><label for="themeCode07">찰롱,나이한,라와이 (5)</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode08"><label for="themeCode08">탈랑지역 (5)</label></li>
+										<li><input type="radio" name="reRadio02" id="themeCode09"><label for="themeCode09">푸켓타운 (5)</label></li>
+									</ul>
+									<button type="button"><img src="../img/content/btn_srch04.gif" alt="검색"/></button>
+								</div>
+							</div>
+							<!-- //라디오 선택 -->
+
+							<!-- 정보 노출 -->
+							<div class="tourView">
+								<!-- 타이틀 -->
+								<strong>공항, 마이카오, 나이양, 나이톤 (10)</strong>
+								<!-- //타이틀 -->
+
+								<!-- 리스트 -->
+								<div class="tourViewList">
+									<ul id="tourViewList">
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+										<li>
+											<a href="tourview.html">
+												<div class="inner">
+													<div class="layer">
+														<div class="overInner">
+															<ul>
+																<li>메뉴 : 이태리 전통</li>
+																<li>위치 : 다이아몬드 클리프 근처</li>
+																<li>가격 : 400~800바트</li>
+															</ul>
+														</div>
+													</div>
+													<span class="thumb"><img src="http://placehold.it/195x150"/></span>
+												</div>
+												<p>다마우리지오</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- //리스트 -->
+
+								<!-- 페이징 -->
+								<div class="paging">
+									<span class="prev"><a href=""><img src="../img/content/btn_prev.gif" alt="이전 페이지로 이동" class="overImg"/></a></span>
+									<span class="number">
+										<a href="" >1</a>
+										<a href="">2</a>
+										<a href=""class="on">3</a>
+										<a href="">4</a>
+										<a href="">5</a>
+										<a href="">6</a>
+										<a href="">7</a>
+										<a href="">8</a>
+										<a href="">9</a>
+										<a href="">10</a>
+									</span>
+									<span class="next"><a href=""><img src="../img/content/btn_next.gif" alt="다음 페이지로 이동" class="overImg"/></a></span>
+								</div>
+								<!-- //페이징 -->
+							</div>
+							<!-- //정보 노출 -->
+						</div>
+						<!-- //리스트영역 -->
+
+					</div>
+					<!-- //투어 - 테마별 -->
+				</div>
+			</section>
+			<!-- //contnet -->
+
+			<hr/>
+			<!-- footer -->
+			<footer>
+				<div class="inner">
+					<strong class="logo"><img src="../img/common/img_footerLogo.gif" alt="클럽 지알오"/></strong>
+					<div class="right">
+						<div class="f01">
+							<p><img src="../img/common/img_footer01.gif" alt="클럽알지오 고객센터 : 070.8236.1544"/></p>
+							<ul>
+								<li><a href=""><img src="../img/common/btn_facebook.gif" alt="페이스북"/></a></li>
+								<li><a href=""><img src="../img/common/btn_twitter.gif" alt="트위터"/></a></li>
+							</ul>
+						</div>
+						<div class="f02">
+							<ul>
+								<li><a href="util/company.html"><img src="../img/common/img_footer02.gif" alt="회사소개"/></a></li>
+								
+								<li><a href="util/provision.html"><img src="../img/common/img_footer04.gif" alt="이용약관"/></a></li>
+								<li><a href="util/policy.html"><img src="../img/common/img_footer05.gif" alt="개인정보취급방침"/></a></li>
+								<li class="last"><a href="util/customer.html"><img src="../img/common/img_footer06.gif" alt="고객센터"/></a></li>
+							</ul>
+						</div>
+						<div class="f03">
+							<p><img src="../img/common/img_footer07.gif" alt=""/></p>
+						</div>
+						<div class="f04">
+							<p><img src="../img/common/img_footer08.gif" alt=""/></p>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+ </body>
+
+</html>

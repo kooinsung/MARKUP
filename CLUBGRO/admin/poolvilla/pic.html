@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta name="author" content="" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>사진정보 관리</title>
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/jquery-ui-1.10.3.custom.min.css"/>
+<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery.ui.datepicker-ko.js"></script>
+
+</head>
+<body>
+<div id="wrap">
+	<div id="headerWrap">
+		<div id="header">
+			<h1><a href="#" title="홈페이지 새창 열림"><img src="../images/logo_login.jpg" alt="로고" /></a></h1>
+			<p><strong>관리자</strong>님 반갑습니다. <input type="image" src="../images/btn_logout.gif" alt="로그아웃" /></p>
+		</div>
+	</div>
+	<div id="container">
+		<div id="leftSide">
+			<!-- lnb -->
+			<ul id="lnb" class="lnb">
+				<li class="">
+					<a href="#none">메인관리</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../main/clubgro.html">클럽지알오 롤링</a></li>
+						<li><a href="../main/poolvilla.html">풀빌라 롤링</a></li>
+						<li><a href="../main/resort.html">리조트 롤링</a></li>
+						<li><a href="../main/theme.html">테마여행</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">태국뉴스</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../thainews/bangkok.html">방콕</a></li>
+						<li><a href="../thainews/phuket.html">푸켓</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">커뮤니티</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../community/faq.html">FAQ</a></li>
+						<li><a href="../community/notice.html">공지사항</a></li>
+						<li><a href="../community/qna.html">Q&A</a></li>
+						<li><a href="../community/tour.html">여행후기</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">회원관리</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../member/member.html">회원관리</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">풀빌라</a>
+					<ul class="lnbDepth2" style=";">
+						<li>
+							<a href="">더라차</a>
+							<ul class="lnbDepth3">
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">더빌리지 코코넛 아일랜드</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">리치몬드</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">찬다라</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">유선수리</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">리조트</a>
+					<ul class="lnbDepth2" style=";">
+						<li>
+							<a href="">반타이</a>
+							<ul class="lnbDepth3">
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">수코</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">더센스</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">씨썬샌드</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">더참</a>
+							<ul class="lnbDepth3" >
+								<li><a href="../poolvilla/rolling.html">대표이미지</a></li>
+								<li><a href="../poolvilla/map.html">맵</a></li>
+								<li><a href="../poolvilla/info.html">기본정보</a></li>
+								<li><a href="../poolvilla/intro.html">소개</a></li>
+								<li><a href="../poolvilla/room.html">객실</a></li>
+								<li><a href="../poolvilla/facility.html">부대시설</a></li>
+								<li><a href="../poolvilla/restaurant_bar.html">레스토랑&바</a></li>
+								<li><a href="../poolvilla/pic.html">사진정보</a></li>
+								<li><a href="../poolvilla/around.html">주변정보</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">볼거리</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../tour/tour01.html">지역목록관리</a></li>
+						<li><a href="../tour/tour02.html">테마목록관리</a></li>
+						<li><a href="../tour/tour_list.html">컨텐츠관리</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">먹거리</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../tour/tour01.html">지역목록관리</a></li>
+						<li><a href="../tour/tour02.html">테마목록관리</a></li>
+						<li><a href="../tour/tour_list.html">컨텐츠관리</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">즐길거리</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../tour/tour01.html">지역목록관리</a></li>
+						<li><a href="../tour/tour02.html">테마목록관리</a></li>
+						<li><a href="../tour/tour_list.html">컨텐츠관리</a></li>
+					</ul>
+				</li>
+				<li class="">
+					<a href="#none">편의시설</a>
+					<ul class="lnbDepth2" style=";">
+						<li><a href="../tour/tour01.html">지역목록관리</a></li>
+						<li><a href="../tour/tour02.html">테마목록관리</a></li>
+						<li><a href="../tour/tour_list.html">컨텐츠관리</a></li>
+					</ul>
+				</li>
+			</ul>
+			<!-- //lnb -->
+		</div>
+		<div id="rightSide">
+			<!-- content -->
+			<div id="content">
+				<strong class="tit">▶ 사진정보 관리</strong>
+				<!-- 컨텐츠 영역 -->
+				<!-- 게시판 상단 검색 영역2 -->
+				<div class="srchArea">
+					<table class="tbl_view">
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">풀빌라&리조트 선택</th>
+								<td>
+									<select name="" id="">
+										<option value="">더라차</option>
+										<option value="">더빌리지 코코넛 아일랜드</option>
+										<option value="">리치몬드</option>
+										<option value="">찬다라</option>
+										<option value="">유선수리</option>
+										<option value="">반타이</option>
+										<option value="">수코</option>
+										<option value="">더센스</option>
+										<option value="">씨썬샌드</option>
+										<option value="">더참</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">제목</th>
+								<td><input type="text" id="" name="" title="" style="width:99%;" value="호텔전경" /></td>
+							</tr>
+							<tr>
+								<th scope="row">이미지<br/>(640 * 380)</th>
+								<td ><input type="file" id="" name="" title="첨부파일" style="width:50%;" value="" /> <input type="button" value="추가" /></td>
+							</tr>
+							<tr>
+								<th scope="row">상태</th>
+								<td>
+									<select name="" id="">
+										<option value="">노출</option>
+										<option value="">비노출</option>
+									</select>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+						<p class="btnZone"><a href="#" class="btnSrch" onclick=";"><span>등록</span></a>
+						<a href="#" class="btnSrch" onclick=";"><span>초기화</span></a></p>
+				</div>
+				<!-- //게시판 상단 검색 영역2 -->
+
+				<!-- Board List -->
+				<table class="tbl_list ">
+					<colgroup>
+						<col width="6%" />
+						<col width="6%" />
+						<col width="*" />
+						<col width="20%" />
+						<col width="10%" />
+						<col width="12%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col"><input type="checkbox" id="allflag"/></th>
+							<th scope="col">번호</th>
+							<th scope="col">제목</th>
+							<th scope="col">풀빌라명</th>
+							<th scope="col">상태</th>
+							<th scope="col">등록일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" name="delflag" value="13"/></td>
+							<td>1</td>
+							<td class="title"><a href="#" >호텔전경</a></td>
+							<td>더 라차</td>
+							<td>노출</td>
+							<td>2014/04/02</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br/>
+				<p><a href="#" class="btnDelete" id="btnDelete"><span>선택항목을 삭제</span></a></p>
+				<!-- //Board List -->
+				<!-- 페이징 -->
+				<div class="paging">
+					<span class="mgr"><a href="#"><img src="../images/btn_pageFirst.gif" alt="처음으로" /></a></span><span><a href="#"><img src="../images/btn_pagePrev.gif" alt="이전" /></a></span>
+					<a href="#" class="first">1</a>
+					<strong>2</strong>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+					<a href="#">6</a>
+					<a href="#">7</a>
+					<a href="#">8</a>
+					<a href="#">9</a>
+					<a href="#" class="last">10</a>
+					<span class="mgr"><a href="#"><img src="../images/btn_pageNext.gif" alt="다음" /></a></span><span><a href="#"><img src="../images/btn_pageLast.gif" alt="끝으로" /></a></span>
+				</div>
+				<!-- //페이징 -->
+				<!-- //컨텐츠 영역 -->
+			</div>
+			<!-- //content -->
+		</div>
+	</div>
+	<div id="footer">
+		<address>Copyright ⓒ 2013 디나인컴즈. All Rights Reserved.</address>
+	</div>
+</div>
+</body>
+</html>
