@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+	<meta name="" content="" />
+	<title>KTA</title>
+	<link type="text/css" rel="stylesheet" href="css/kta.v1.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	<script type="text/javascript" src="js/kta.plugin.js" ></script>
+	<script type="text/javascript" src="js/kta.v1.js" ></script>
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="css/old.css">
+	<![endif]-->
+</head>
+<body class="login">
+	<div class="login_inner">
+		<h1><img src="images/login_log.png" alt="KTA - 화물공제분담금 신용카드 수납시스템" /></h1>
+
+		<!-- 로그인 유형 -->
+		<h2><img src="images/login_txt1.png" alt="LOGIN" /> <strong><em>회원유형</em>을 선택후<br>로그인하세요</strong></h2>
+		<div class="login_types">
+			<!-- 선택 -->
+			<div class="choice">
+				<ul>
+					<li class="first"><span class="radio"><input type="radio" id="login_type1" name="login_type" checked="checked" /><label for="login_type1">공제조합</label></span></li>
+					<li class="second"><span class="radio"><input type="radio" id="login_type2" name="login_type"/><label for="login_type2">조합원</label></span></li>
+					<li class="third"><span class="radio"><input type="radio" id="login_type3" name="login_type"/><label for="login_type3">위수탁차주</label></span></li>
+				</ul>
+			</div>
+			<!-- //선택 -->
+			
+			<fieldset class="login_forms">
+				<legend class="blind">로그인</legend>
+				<!-- 공제조합 -->
+				<div class="login_form login_form1" >
+					<div class="input_box">
+						<label for="id1">USER ID</label>
+						<input type="text" name="id" id="id1"/>
+					</div>
+					<div class="input_box">
+						<label for="pw1">PASSWORD</label>
+						<input type="text" name="pw" id="pw1"/>
+					</div>
+					<button type="button" title="로그인" class="btn_login">Login</button>
+				</div>
+				<!-- //공제조합 -->
+
+				<!-- 조합원 -->
+				<div class="login_form login_form2" >
+					<div class="input_box">
+						<label for="id2">USER ID</label>
+						<input type="text" name="id" id="id2"/>
+					</div>
+					<div class="input_box">
+						<label for="pw2">PASSWORD</label>
+						<input type="text" name="pw" id="pw2"/>
+					</div>
+					<button type="button" title="로그인" class="btn_login">Login</button>
+
+					<div class="btns">
+						<a href="" class="id_srch">아이디 찾기</a><a href="" class="pw_srch">비밀번호 찾기</a>
+					</div>
+				</div>
+				<!-- //조합원 -->
+
+				<!-- 위수탁차주 -->
+				<div class="login_form login_form3">
+					<div class="input_box col1">
+						<label for="car_name">차주명</label>
+						<input type="text" name="car_name" id="car_name"/>
+					</div>
+					<div class="input_box col2">
+						<label for="car_number">차량번호</label>
+						<input type="text" name="car_number" id="car_number"/>
+					</div>
+					<div class="input_box col3">
+						<label for="company_number">사업자번호</label>
+						<span class="company_inputs">
+							<input type="text" name="company_number_front" id="company_number" class="cn1"/><input type="text" name="company_number_mid"  class="cn2" /><input type="text" name="company_number_back" class="cn3" />
+						</span>
+					</div>
+					<button type="button" title="로그인" class="btn_login2">수납대상내역조회</button>
+				</div>
+				<!-- //위수탁차주 -->
+			</fieldset>
+		</div>
+		<!-- //로그인 유형 -->
+
+		<div class="login_text">
+			<strong class="t1">웹사이트 로그인</strong>
+			<p class="t2">사용중인 로그인 정보(아이디, 비밀번호)로 인증 후 <br>계약, 수납 조회 등 서비스 이용이 가능합니다.</p>
+			<p class="t3"><strong>위수탁 차주분</strong>께서는 본인인증 후 이용하여 주시기 바랍니다.</p>
+		</div>
+		<p class="copyright"><img src="images/login_txt2.png" alt="COPYRIGHT(C) kTA. All  Rights ReServed" /></p>
+	</div>
+</body>
+</html>
