@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta
+            content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, target-densitydpi=medium-dpi"
+            name="viewport">
+    <meta content="telephone=no, address=no, email=no" name="format-detection">
+    <meta content="" name="Description">
+    <meta content="" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="" property="og:url">
+    <meta content="" property="og:image">
+    <meta content="" property="og:site_name">
+    <meta content="" property="og:description">
+    <link href="" rel="icon" type="image/x-icon">
+    <link href="" rel="apple-touch-icon-precomposed">
+
+    <title>SKT RCS</title>
+    <link href="./resource/css/rcs.ui.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+    <div>
+        <!-- 메세지 리스트 -->
+        <div class="msg-list" style="display:block;">
+            <header class="header">
+                <div class="inner">
+                    <h1 class="tit">메시지</h1>
+                    <ul class="util">
+                        <li>
+                            <button type="button" class="util__srch">search</button>
+                        </li>
+                        <li>
+                            <button type="button" class="util__write">write</button>
+                        </li>
+                        <li>
+                            <button type="button" class="util__opt">option</button>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+            <div class="container">
+                <section class="content">
+                    <div class="lists">
+                        <ul>
+                            <li class="lists__item long"><!-- is-expand -->
+                                <div class="lists__inner">
+                                    <a href="javascript:;" class="lists__link link-chart2">
+                                        <span class="lists__thumb"><img src="./resource/imgs/img_thumb2.png"
+                                                                        alt=""></span>
+                                        <div class="lists__tits ">
+                                            <strong class="name">Starbucks</strong>
+                                        </div>
+                                        <div class="lists__summery">
+                                            바로 쓸 수 있는 포인트 선물이 도착했습니다. 도산가로수길점
+                                        </div>
+                                        <div class="lists__in-content" style="display:none;">
+                                            <div class="msgs type2">
+                                                <div class="msgs__txts">
+                                                    바로 쓸 수 있는 포인트 선물이<br>도착했습니다
+                                                </div>
+                                                <div class="msgs__mixed">
+                                                    <img src="./resource/imgs/img_msg2.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lists__date">오후 13:00</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="lists__item long"><!-- is-expand -->
+                                <div class="lists__inner">
+                                    <a href="javascript:;" class="lists__link link-chart3">
+                                        <span class="lists__thumb"><img src="./resource/imgs/img_thumb3.png"
+                                                                        alt=""></span>
+                                        <div class="lists__tits ">
+                                            <strong class="name">마켓컬리 </strong>
+                                        </div>
+                                        <div class="lists__summery">
+                                            (광고) 마켓컬리 빵·잼 50% 할인 고객 마켓컬리 빵·잼 50% 할인 고객
+                                        </div>
+                                        <div class="lists__in-content" style="display:none;">
+                                            <div class="msgs type3">
+                                                <div class="msgs__mixed">
+                                                    <img src="./resource/imgs/img_msg3.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lists__date">오후 13:00</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="lists__item long"><!-- is-expand -->
+                                <div class="lists__inner">
+                                    <a href="javascript:;" class="lists__link link-chart6">
+                                        <span class="lists__thumb"><img src="./resource/imgs/img_thumb47.png"
+                                                                        alt=""></span>
+                                        <div class="lists__tits ">
+                                            <strong class="name">시코르 </strong>
+                                        </div>
+                                        <div class="lists__summery">
+                                            (광고) 시크콘서트 with CHICOR
+                                        </div>
+                                        <div class="lists__in-content" style="display:none;">
+                                            <div class="msgs type3">
+                                                <div class="msgs__mixed">
+                                                    <img src="./resource/imgs/img_msg3.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lists__date">오후 13:00</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="lists__item lists__item2 long"><!-- is-expand -->
+                                <div class="lists__inner">
+                                    <a href="javascript:;" class="lists__link link-chart4">
+                                        <span class="lists__thumb"><img src="./resource/imgs/img_thumb5.png"
+                                                                        alt=""></span>
+                                        <div class="lists__tits ">
+                                            <strong class="name">신한카드</strong>
+                                        </div>
+                                        <div class="lists__summery">
+                                            (광고) 신한카드 2월 문화혜택 안내
+                                        </div>
+                                        <div class="lists__in-content" style="display:none;">
+                                            <div class="msgs type4">
+                                                <div class="msgs__txts">
+                                                    (광고)신한카드 2월의 문화혜택 안내
+                                                </div>
+                                                <div class="msgs__scroll">
+                                                    <ul>
+                                                        <li><img src="./resource/imgs/img_msg4.png" alt=""></li>
+                                                        <li><img src="./resource/imgs/img_msg5.png" alt=""></li>
+                                                        <li><img src="./resource/imgs/img_msg6.png" alt=""></li>
+                                                        <li><img src="./resource/imgs/img_msg8.png" alt=""></li>
+                                                        <li><img src="./resource/imgs/img_msg9.png" alt=""></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lists__date">어제</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="lists__item long">
+                                <div class="lists__inner">
+                                    <a href="javascript:;" class="lists__link link-chart5">
+                                        <span class="lists__thumb"><img src="./resource/imgs/img_thumb10.png"
+                                                                        alt=""></span>
+                                        <div class="lists__tits ">
+                                            <strong class="name">KB국민카드</strong>
+                                        </div>
+                                        <div class="lists__summery">
+                                            고객님의 취향과 소비 패턴에 딱 맞는 카드를 추...
+                                        </div>
+                                        <div class="lists__in-content" style="display:none;">
+                                            <div class="msgs type4">
+                                                <div class="msgs__txts">
+                                                    고개님의 취향과 소비 패턴에 딱 맞는
+                                                    카드를 추천해 드리기 위해 간단하게
+                                                    몇 가지만 질문 드리겠습니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lists__date">오후 13:00</div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- //메세지 리스트 -->
+
+        <aside class="quick">
+            <ul>
+                <li>
+                    <button type="button" class="quick__phonebook">phonebook</button>
+                </li>
+                <li>
+                    <button type="button" class="quick__list is-actived">list <!-- em class="number">7</em --></button>
+                </li>
+                <li>
+                    <button type="button" class="quick__benefit">benefit</button>
+                </li>
+            </ul>
+        </aside>
+
+    </div>
+
+
+    <!-- 채팅 - 챗봇 스타벅스 -->
+    <div class="chart sb-chart" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back">back</button>
+            <p class="tit">
+                <a href="javascript:;" class="move-brandhome-sb">
+                    <span class="thumb"><img src="./resource/imgs/img_thumb2.png" alt=""></span> <span class="name">Starbucks</span>
+                </a>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="srch">search</button>
+                    </li>
+                    <li>
+                        <button type="button" class="call">call</button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu">menu</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views">
+            <div class="charting">
+                <div class="chart-item you">
+                    <p class="txt">
+                        바로 쓸 수 있는 포인트 선물이<br>
+                        도착했습니다
+                    </p>
+                    <div class="imgs imgs2">
+                        <div class="mix-bubble">
+                            <span class="thumb link-starbucks"><img src="./resource/imgs/img_starbucks-chart.png"
+                                                                    alt=""></span>
+                            <div class="txts link-starbucks">
+                                <strong>도산가로수길점</strong>
+                                <dl>
+                                    <dt>Place</dt>
+                                    <dd>서울시 강남구 도산대로 13길 23</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Tel</dt>
+                                    <dd>02-514-7775</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Time</dt>
+                                    <dd>10:00 ~ 23:00</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Web</dt>
+                                    <dd>http://www.istarbucks.co.kr</dd>
+                                </dl>
+                            </div>
+                            <div class="bts">
+                                <a href="http://www.istarbucks.co.kr/index.do" class="link-starbucks">주문하기</a>
+                                <a href="" class="link-starbucks">포인트 이용방법</a>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="date">오후 04:22</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="msg-input-box">
+            <button type="button" class="add">add</button>
+            <span class="inputs">
+        <input type="text" placeholder="채팅">
+        <button type="button" class="emoji">emoji</button>
+      </span>
+            <button type="button" class="send">send</button>
+        </div>
+    </div>
+    <!-- //채팅 - 챗봇 스타벅스 -->
+
+    <!-- 채팅 -  스타벅스 사이트 -->
+    <div class="site sb" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back v2">back</button>
+            <p class="tit link-tit">
+                <span>스타벅스</span>
+                <em>m.www.istarbucks.co.kr</em>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="opt dark">util</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views" style="top: 54px;">
+            <div class="site-cap">
+                <img src="./resource/imgs/img_starbucks-cap.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- //채팅 - 스타벅스 사이트 -->
+
+    <!-- 채팅 - 챗봇 국민카드 -->
+    <div class="chart kb-chart" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back">back</button>
+            <p class="tit">
+                <a href="javascript:;" class="move-brandhome-kb">
+                    <span class="thumb"><img src="./resource/imgs/img_thumb10.png" alt=""></span> <span class="name">KB국민카드</span>
+                </a>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="srch">search</button>
+                    </li>
+                    <li>
+                        <button type="button" class="call">call</button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu">menu</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views">
+            <div class="charting">
+                <div class="chart-item bot">
+                    <p class="txt" style="width: 240px;">
+                        고개님의 취향과 소비 패턴에 딱 맞는<br>
+                        카드를 추천해 드리기 위해 간단하게<br>
+                        몇 가지만 질문 드리겠습니다.
+                    </p>
+                    <p class="txt" style="width: 225px;">
+                        고객님께선 카드를 선택할 때 무엇을
+                        가장 중요하게 생각하시나요?
+                    </p>
+                    <span class="date">오후 04:22</span>
+                    <div class="benefit-keyword ">
+                        <ul>
+                            <li><a href="javascript:;">혜택</a></li>
+                            <li><a href="javascript:;" class="kb-keyword2">연회비</a></li>
+                            <li><a href="javascript:;">디자인</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chart-item me kb-hidden  kb-hidden1">
+                    <p class="txt ">
+                        연회비가 적은게 좋아요
+                    </p>
+                    <span class="date">오후 04:20</span>
+                </div>
+
+                <div class="chart-item bot">
+                    <p class="txt kb-hidden kb-hidden2" style="width: 245px;">
+                        혹시 생각해둔 카드가 있으신가요?<br>
+                        어떤 카드든지 바로 안내해 드리겠습니다.
+                    </p>
+                    <span class="date kb-hidden kb-hidden2">오후 04:22</span>
+                    <div class="benefit-cards kb-hidden kb-hidden3">
+                        <div class="benefit-cards-scroll">
+                            <ul>
+                                <li><a href="javascript:;"><img src="./resource/imgs/img_kbcard-thumb1.png"
+                                                                alt="청춘대로카드"><span>청춘대로카드</span></a>
+                                </li>
+                                <li><a href="javascript:;"><img src="./resource/imgs/img_kbcard-thumb2.png"
+                                                                alt="다담카드"><span>다담카드</span></a>
+                                </li>
+                                <li><a href="javascript:;"><img src="./resource/imgs/img_kbcard-thumb3.png"
+                                                                alt="골든라이프카드"><span>골든라이프카드</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-item me  kb-hidden kb-hidden4">
+                    <p class="txt">
+                        청춘대로카드
+                    </p>
+                    <span class="date">오후 04:24</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="msg-input-box">
+            <button type="button" class="add">add</button>
+            <span class="inputs">
+        <input type="text" placeholder="채팅">
+        <button type="button" class="emoji">emoji</button>
+      </span>
+            <button type="button" class="send">send</button>
+        </div>
+    </div>
+    <!-- //채팅 - 챗봇 국민카드 -->
+
+    <!-- 채팅 - 챗봇 신한카드 -->
+    <div class="chart sh-chart" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back">back</button>
+            <p class="tit">
+                <a href="javascript:;" class="move-brandhome-sh">
+                    <span class="thumb"><img src="./resource/imgs/img_thumb5.png" alt=""></span> <span
+                        class="name">신한카드</span>
+                </a>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="srch">search</button>
+                    </li>
+                    <li>
+                        <button type="button" class="call">call</button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu">menu</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views">
+            <div class="charting">
+                <div class="chart-item you">
+                    <p class="txt">
+                        (광고)신한카드 2월의 문화혜택 안내
+                    </p>
+                    <div class="msgs__scroll">
+                        <ul>
+                            <li class="link-sb">
+                                <div class="mix-bubble">
+                                    <span class="thumb"><img src="./resource/imgs/img_sb-thumb1.png" alt=""></span>
+                                    <div class="txts">
+                                        <strong>Charlie Puth</strong>
+                                        <p>
+                                            찰리푸스 콘서트<br>
+                                            선예매 및 단독 할인 이벤트의 기회!
+                                        </p>
+                                    </div>
+                                    <div class="bts">
+                                        <a href="">예매하기</a>
+                                        <a href="">이용방법</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="link-sb">
+                                <div class="mix-bubble">
+                                    <span class="thumb"><img src="./resource/imgs/img_sb-thumb2.png" alt=""></span>
+                                    <div class="txts">
+                                        <strong>Kendrick</strong>
+                                        <p>
+                                            켄드릭라마 콘서트 첫내한 기념 할인<br>
+                                            최대 30% 할인 적용
+                                        </p>
+                                    </div>
+                                    <div class="bts">
+                                        <a href="">예매하기</a>
+                                        <a href="">이용방법</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="link-sb">
+                                <div class="mix-bubble">
+                                    <span class="thumb"><img src="./resource/imgs/img_sb-thumb3.png" alt=""></span>
+                                    <div class="txts">
+                                        <strong>Jazz Piano</strong>
+                                        <p>
+                                            겨울밤의 피아노 재즈 공연<br>
+                                            오직 페이북에서만 만나보세요
+                                        </p>
+                                    </div>
+                                    <div class="bts">
+                                        <a href="">예매하기</a>
+                                        <a href="">이용방법</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="link-sb">
+                                <div class="mix-bubble">
+                                    <span class="thumb"><img src="./resource/imgs/img_sb-thumb4.png" alt=""></span>
+                                    <div class="txts">
+                                        <strong>Musical The Lion King</strong>
+                                        <p>
+                                            뮤지컬
+                                            <라이온 킹> 인터내셔널 투어<br>
+                                                오직 신한카드에서만!
+                                        </p>
+                                    </div>
+                                    <div class="bts">
+                                        <a href="">예매하기</a>
+                                        <a href="">이용방법</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="link-sb">
+                                <div class="mix-bubble">
+                                    <span class="thumb"><img src="./resource/imgs/img_sb-thumb5.png" alt=""></span>
+                                    <div class="txts">
+                                        <strong>오이디푸스</strong>
+                                        <p>
+                                            연극 오이디푸스<br>
+                                            슬픔 가득한 가슴에 꽂힌 황정민의 절규..
+                                        </p>
+                                    </div>
+                                    <div class="bts">
+                                        <a href="">예매하기</a>
+                                        <a href="">이용방법</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <span class="date">오후 04:22</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="msg-input-box">
+            <button type="button" class="add">add</button>
+            <span class="inputs">
+        <input type="text" placeholder="채팅">
+        <button type="button" class="emoji">emoji</button>
+      </span>
+            <button type="button" class="send">send</button>
+        </div>
+    </div>
+    <!-- //채팅 - 챗봇 신한카드 -->
+
+    <!-- 채팅 -  신한카드 사이트 -->
+    <div class="site sh" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back v2">back</button>
+            <p class="tit link-tit">
+                <span>신한카드</span>
+                <em>https://www.shinhancard.com/</em>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="opt dark">util</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views" style="top: 54px;">
+            <div class="site-cap">
+                <img src="./resource/imgs/img_sb-cap.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- //채팅 - 신한카드 사이트 -->
+
+    <!-- 채팅 - 챗봇 마켓컬리 이미지　-->
+    <div class="chart mk-chart1" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back">back</button>
+            <p class="tit">
+                <a href="javascript:;" class="move-brandhome-mk1">
+                    <span class="thumb"><img src="./resource/imgs/img_thumb3.png" alt=""></span> <span
+                        class="name">마켓컬리</span>
+                </a>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="srch">search</button>
+                    </li>
+                    <li>
+                        <button type="button" class="call">call</button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu">menu</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views">
+            <div class="charting">
+                <div class="chart-item you">
+                    <div class="imgs wide">
+                        <div class="mix-bubble2">
+                            <span class="thumb link-kurly"
+                                  style="background:url(./resource/imgs/img_kurly-chart.png) 0 0 no-repeat;background-size:cover;"></span>
+                            <div class="infos">
+                                <div class="txts link-kurly">
+                                    <strong>마켓컬리 빵 50% 할인</strong>
+                                    <p>
+                                        고객님께만, 빵 카테고리
+                                        전 상품을 반 값에 구매하실 수
+                                        있도록 <span>[50% 할인 쿠폰]</span> 을
+                                        드렸어요! 쌀쌀한 날씨에 줄서서
+                                        기다리지 마시고, 집에서 편하...
+                                    </p>
+                                    <button type="button">전체보기</button>
+                                </div>
+                                <div class="bts">
+                                    <a href="" class="link-kurly">전화걸기</a>
+                                    <a href="" class="link-kurly">지도</a>
+                                    <a href="" class="link-kurly">공유</a>
+                                    <a href="" class="link-kurly">캘린더 등록</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="date">오후 04:22</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="msg-input-box">
+            <button type="button" class="add">add</button>
+            <span class="inputs">
+        <input type="text" class="reservation-chart-input" placeholder="채팅">
+        <button type="button" class="emoji">emoji</button>
+      </span>
+            <button type="button" class="send">send</button>
+        </div>
+    </div>
+    <!-- //채팅 - 챗봇 마켓컬리 이미지　-->
+
+    <!-- 채팅 -  마켓컬리 사이트 -->
+    <div class="site mk" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back v2">back</button>
+            <p class="tit link-tit">
+                <span>마켓컬리</span>
+                <em>http://www.kurly.com/m2/index.php?</em>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="opt dark">util</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views" style="top: 54px;">
+            <div class="site-cap">
+                <img src="./resource/imgs/img_kurly-cap.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- //채팅 - 마켓컬리 사이트 -->
+
+    <!-- 채팅 - 챗봇 시코르 　-->
+    <div class="chart cc-chart" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back">back</button>
+            <p class="tit">
+                <span class="thumb"><img src="./resource/imgs/img_thumb47.png" alt=""></span> <span
+                    class="name">시코르</span>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="srch">search</button>
+                    </li>
+                    <li>
+                        <button type="button" class="call">call</button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu">menu</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views">
+            <div class="charting">
+                <div class="chart-item you">
+                    <div class="imgs imgs2">
+                        <div class="mix-bubble">
+                            <div class="txts link-chi">
+                                <strong>시크콘서트 with CHICOR</strong>
+                                <div>
+                                    (광고) 시코르와 하나카드가 함께 기획한 'CHIC 콘서트'가 예정대로 12/21(금)에 진행됩니다.<br>
+                                    아래의 사항을 확인하시어 즐거운 관람 되시길 바랍니다.<br><br>
+                                    '시코르 X 하나카드' 나플라 & 루피<br>'CHIC 콘서트'
+                                </div>
+                            </div>
+                            <div class="bts">
+                                <a href="" class="link-chi">행사 일정 보러가기</a>
+                                <a href="" class="link-chi">행사 출연진 보러가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="date">오후 02:40</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="msg-input-box">
+            <button type="button" class="add">add</button>
+            <span class="inputs">
+        <input type="text" placeholder="채팅">
+        <button type="button" class="emoji">emoji</button>
+      </span>
+            <button type="button" class="send">send</button>
+        </div>
+    </div>
+    <!-- //채팅 - 챗봇 시코르  -->
+
+    <!-- 채팅 -  시코르 사이트 -->
+    <div class="site cc" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back v2">back</button>
+            <p class="tit link-tit">
+                <span>시코르</span>
+                <em>http://m.chicor.com/chicor/main.do</em>
+            </p>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="opt dark">util</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="scroll-views" style="top: 54px;">
+            <div class="site-cap">
+                <img src="./resource/imgs/img_chico-cap.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- //채팅 - 시코르 사이트 -->
+
+    <!-- 브랜드홈 - KB카드 -->
+    <div class="brandhome brandhome-kb" style="display:block;">
+        <div class="top-forms">
+            <button type="button" class="back">back</button>
+            <div class="utils">
+                <ul>
+                    <li>
+                        <button type="button" class="sns dark">sns</button>
+                    </li>
+                    <!--<li>-->
+                    <!--<button type="button" class="opt dark">option</button>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+        <div class="brand-views">
+            <div class="default-box">
+                <div class="bgs"
+                     style="background:url('./resource/imgs/img_kb-thumb0.png') center center no-repeat;background-size:cover;"></div>
+                <div class="infos type2">
+                    <span class="logo"><img src="./resource/imgs/img_thumb40.png" alt=""></span>
+                    <p class="t1">KB국민카드</p>
+                    <p class="t2">1588-1688 KB국민카드</p>
+                    <p class="t3">
+                        KB국민카드는 국민 한 사람 한 사람의 라이프 스타일에<br>
+                        맞는 현명한 생활의 방식을 창출하고 제안하여 국민 생활의<br>
+                        힘이 되어줍니다.
+                    </p>
+                    <!--<button type="button" class="add">내 브랜드 추가</button>-->
+                    <ul class="icons">
+                        <li><a href="" class="i1">icon1</a></li>
+                        <li><a href="" class="i2">icon2</a></li>
+                        <li><a href="" class="i3">icon3</a></li>
+                        <li><a href="" class="i4">icon4</a></li>
+                    </ul>
+                </div>
+                <button type="button" class="chartbot">chartbot</button>
+            </div>
+            <div class="question">
+                <p><strong>챗봇</strong>에게 물어보세요</p>
+                <ul>
+                    <li><a href="">가까운 매장찾기</a></li>
+                    <li><a href="">주문취소 방법</a></li>
+                    <li><a href="">이벤트 상품</a></li>
+                    <li><a href="">멤버십 안내</a></li>
+                    <li><a href="">서비스 소개</a></li>
+                </ul>
+            </div>
+            <div class="bh-tabs">
+                <ul>
+                    <li><a href="" class="is-actived">홈</a></li>
+                    <li><a href="">상품</a></li>
+                    <li><a href="">쿠폰</a></li>
+                    <li><a href="">소식</a></li>
+                    <li><a href="">정보</a></li>
+                </ul>
+            </div>
+            <div class="bh-row1">
+                <div class="card">
+                    <span class="thumb"><img src="./resource/imgs/img_kb-thumb1.png" alt=""></span>
+                    <div class="txts">
+                        <strong>나는 5만원, 친구는 연회비 캐시백</strong>
+                        <span>친구, 지인에게 kb국민카드를 추천하고,<br>추천인과 친구에게 캐시백을 선물합니다.</span>
+                    </div>
+                </div>
+                <div class="like pick">
+                    <button type="button"></button>
+                    <em>25,369</em>
+                </div>
+            </div>
+            <div class="bh-row2">
+                <ul class="hashtag">
+                    <li><a href="" class="bold">청춘대로톡톡카드</a></li>
+                    <li><a href="">프리미엄카드</a></li>
+                    <li><a href="">청구할인</a></li>
+                    <li><a href="">KB국민카드</a></li>
+                    <li><a href="" class="bold">스타샵적립</a></li>
+                    <li><a href="">리브메이트</a></li>
+                </ul>
+                <div class="thumbs">
+                    <a href=""><img src="./resource/imgs/img_kb-thumb2.png" alt=""></a>
+                </div>
+            </div>
+            <div class="bh-row3">
+                <p>
+                    청춘부터 골드라이프까지!<br>
+                    <strong>라이프 사이클별 kb국민 대표카드</strong>
+                </p>
+                <div class="hashtag-scroll">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <span class="thumb"><img src="./resource/imgs/img_kb-thumb3.png" alt=""></span>
+                                <div class="hashtags">
+                                    #청춘대로카드<br>
+                                    #청춘맞춤형 할인카드
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="thumb"><img src="./resource/imgs/img_kb-thumb4.png" alt=""></span>
+                                <div class="hashtags">
+                                    #다담카드(스마트 otp)<br>
+                                    #모두의 이야기를 담은 카드
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="thumb"><img src="./resource/imgs/img_kb-thumb5.png" alt=""></span>
+                                <div class="hashtags">
+                                    #골든라이프올림카드<br>
+                                    #더욱 든든해진 혜택
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //브랜드홈 - KB카드 -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/jquery.easy-autocomplete.min.js"></script>
+<script src="./resource/js/rcs.ui.min.js"></script>
+<script>
+    function numberWithCommas(x) {
+        var str = x + '';
+        return str.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function removeComma(str) {
+        n = parseInt(str.replace(/,/g, ""));
+        return n;
+    }
+
+    // function numberWithbars(x) {
+    // 	var str = x + '';
+    // 	return str.replace(/\B(?=(\d{4})+(?!\d))/g, "-");
+    // }
+
+    function numberWithbars(num) {
+        var len, point, str;
+
+        num = num + "";
+        point = num.length % 4;
+        len = num.length;
+
+        str = num.substring(0, point);
+        while (point < len) {
+            if (str != "") {
+                str += "-";
+            }
+            str += num.substring(point, point + 4);
+            point += 4;
+        }
+
+        return str;
+
+    }
+
+    $(function () {
+
+    });
+</script>
+</body>
+</html>
